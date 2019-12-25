@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Nov 27 18:19:34 BRST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-016e-ae84-e13e-000015e695b8 
+on database directory /home/fernando/Development/workspaces/eclipse-workspace/Jee_7_essentials/base/target/glassfish/domains/domain1/lib/databases/embedded_default with class loader sun.misc.Launcher$AppClassLoader@31b27882 
+Loaded from file:/home/fernando/.m2/repository/org/glassfish/main/extras/glassfish-embedded-all/4.1.2/glassfish-embedded-all-4.1.2.jar
+java.vendor=Azul Systems, Inc.
+java.runtime.version=1.7.0_201-b02
+user.dir=/home/fernando/Development/workspaces/eclipse-workspace/Jee_7_essentials/base
+os.name=Linux
+os.arch=amd64
+os.version=5.0.0-36-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

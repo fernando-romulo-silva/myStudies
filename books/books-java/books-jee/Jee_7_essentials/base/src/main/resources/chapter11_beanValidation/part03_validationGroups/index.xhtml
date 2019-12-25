@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Bean Validation in JSF</title>
+</h:head>
+<h:body>
+	<h1>Bean Validation in JSF</h1>
+	<br />
+	
+	<h:form>
+		<h:outputLabel value="Firts Name: " for="firstName" />
+		<h:inputText value="#{userMB.user.name}" id="firstName" >
+			 <f:validateBean validationGroups="br.com.fernando.chapter11_beanValidation.part03_validationGroups.ValidationGroups$GroupUserName"/>
+		</h:inputText>
+
+		<h:commandButton value="Save" type="button" action="#{userMB.save}" />
+	</h:form>
+
+</h:body>
+</html>
+

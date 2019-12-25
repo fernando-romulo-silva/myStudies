@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+
+	<!-- We define a job using a split with the logical name split1 and a step with the logical name step3 -->
+	<!-- By default, split is the last execution element in the job. -->
+	<!-- You can specify the next execution element using the next attribute. -->
+	<split id="split1" next="step3">
+
+		<!-- A split can only contain flow elements. -->
+
+		<!-- This split contains two flow elements with the logical names flow1 and flow2. -->
+
+		<!-- The flow1 has a step, step1 , and flow2 has a step, step2 -->
+		<flow id="flow1">
+			<step id="step1">
+				<batchlet ref="myBatchlet1" />
+			</step>
+		</flow>
+
+		<!-- Each flow runs on a separate thread. -->
+
+		<flow id="flow2">
+			<step id="step2">
+				<batchlet ref="myBatchlet2" />
+			</step>
+		</flow>
+
+	</split>
+
+	<!-- The split is finished after all flows complete. -->
+	<!-- When the split is finished, the entire split transitions to the next execution element. -->
+	<!-- The step3 is executed after all steps in the split1 are finished. -->
+	<step id="step3">
+		<batchlet ref="myBatchlet3" />
+	</step>
+</job>

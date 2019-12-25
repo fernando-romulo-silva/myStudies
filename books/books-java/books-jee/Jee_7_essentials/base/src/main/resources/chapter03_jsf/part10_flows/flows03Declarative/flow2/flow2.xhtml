@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <head>
+        <title>First Page in Flow 2</title>
+    </head>
+    <body bgcolor="blue">
+        <h:form prependId="false">
+            <h1>First Page in Flow 2</h1>
+            <p>Flow bean name: #{flow2Bean.name}</p>
+
+            <p><span id="param1FromFlow2">Parameter 1 value from Flow 1: #{flowScope.param1Value}</span></p>
+            <p><span id="param2FromFlow2">Parameter 2 value from Flow 1: #{flowScope.param2Value}</span></p>
+
+            <p><h:commandButton id="index" value="home" action="goHome" /></p>
+            <p><h:commandButton id="next" value="next" action="flow2a" /></p>
+            <p><h:commandButton id="nonFlow" value="nonFlow" action="/nonFlow" /></p>
+
+        </h:form>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+             
+	<!-- The persistence unit's name is examplePU -->
+	<persistence-unit name="examplePU" transaction-type="JTA">
+
+		<!-- The transaction-type attribute's value of JTA signifies that a JTA data source is provided -->
+		<!-- The jta-data-source element defines the global JNDI name of the JTA data source defined in the container. -->
+		<!-- In a Java EE environment, this ensures that all the database configuration information, such -->
+		<!-- as host, port, username, and password, are specified in the container, and just the JTA data source name is used in the application -->
+		<jta-data-source>java:comp/DefaultDataSource</jta-data-source>
+		<!-- The Java EE 7 platform defines a new default DataSource that must be provided by a Java EE 7−compliant runtime. -->
+
+		<!-- You can specify an explicit list of entity classes to be managed using multiple class elements, or include all the -->
+		<!-- entities (as above) by specifying the exclude-unlisted-classes element. -->
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+		<!-- The <properties> element is used to specify both standard and vendor-specific properties. -->
+		<!-- The following standard properties may be specified: -->
+		<properties />
+
+		<!-- The <properties> element is used to specify both standard and vendor-specific properties. -->
+		<!-- The following standard properties may be specified: -->
+		<!-- javax.persistence.jdbc.driver -->
+		<!-- javax.persistence.jdbc.url -->
+		<!-- javax.persistence.jdbc.user -->
+		<!-- javax.persistence.jdbc.password -->
+	</persistence-unit>             
+
+</persistence>

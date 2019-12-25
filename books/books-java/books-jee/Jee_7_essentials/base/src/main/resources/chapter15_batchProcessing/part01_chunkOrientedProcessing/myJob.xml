@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The job element identifies a job. It has a logical name id and is used for identification purposes. -->
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+	<!-- A job may contain any number of steps identified by the step element. -->
+	<!-- Each step has a logical name id and is used for identification purposes. -->
+	<step id="myStep">
+		<!-- The chunk element defines a chunk type step. -->
+		<!-- A chunk type step is periodically checkpointed according to a configured checkpoint policy -->
+		<!-- By default, the check‐point policy is “item,” which means the chunk is checkpointed after a specified number of items are read/processed/written. -->
+		<!-- item-count specifies the number of items to process per chunk. -->
+		<!-- The default valueis 10. This attribute is ignored for the “custom” checkpoint policy. -->
+		<!-- This value is used to define the transaction boundary as well. -->
+		<chunk item-count="3">
+
+			<!-- myItemReader is identified as the reader; its value is the CDI bean name of a class implementing the ItemReader interface or extending AbstractItemReader. -->
+			<reader ref="myItemReader" /> <!-- bean name or class br.com.fernando.chapter15_batchProcessing.part01_chunkOrientedProcessing.MyItemReader -->
+
+			<!-- myItemProcessor is identified as the processor; its value is the CDI bean name of a class implementing the ItemProcessor interface. -->
+			<!-- This is an optional element. If this item is not specified, then all the elements from the item reader are passed to the item writer for aggregation. -->
+			<processor ref="myItemProcessor" />
+
+			<!-- myItemWriter is identified as the writer; its value is the CDI bean name of a class implementing the ItemWriter interface or extending the AbstractItemWriter class. -->
+			<writer ref="myItemWriter" />
+
+		</chunk>
+	</step>
+</job>
+

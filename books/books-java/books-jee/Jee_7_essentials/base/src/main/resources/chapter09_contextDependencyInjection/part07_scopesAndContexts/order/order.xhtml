@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Order - Selected item quantity</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputText value="Item quantity: " />
+		<br />
+		<h:inputText value="#{orderBean.itemCount}" />
+		<br />
+		<h:commandButton value="Proceed" action="order-address" />
+	</h:form>
+</h:body>
+</html>

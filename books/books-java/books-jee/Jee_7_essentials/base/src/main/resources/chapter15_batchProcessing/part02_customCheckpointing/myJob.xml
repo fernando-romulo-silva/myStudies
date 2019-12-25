@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+
+	<step id="myStep">
+		<!-- The checkpoint-policy value is specified to custom, indicating that a custom checkpoint algorithm is used -->
+		<chunk item-count="3" checkpoint-policy="custom">
+			<reader ref="myItemReader" />
+			<processor ref="myItemProcessor" />
+			<writer ref="myItemWriter" />
+			<!-- checkpoint-algorithm is a subelement within the chunk step whose value is a CDI bean name implementing the CheckpointAlgorithm -->
+			<!-- interface or extending the AbstractCheckpointAlgorithm class. -->
+			<checkpoint-algorithm ref="myCheckpointAlgorithm" />
+		</chunk>
+	</step>
+</job>
+

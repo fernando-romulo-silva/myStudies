@@ -1,0 +1,30 @@
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd" version="1.1" bean-discovery-mode="annotated">
+
+	<!-- beans.xml can define exclude filters to exclude beans and package names from discovery. -->
+
+	<!-- You define these by using <exclude> elements as children of the <scan> element -->
+	<scan>
+		<exclude name="br.com.fernando.chapter09_contextDependencyInjection.part01_discoveryBeans.exclude01.*">
+
+		</exclude>
+
+		<!-- In this code, all beans in the br.com.fernando.chapter09_contextDependencyInjection.part01_discoveryBeans.exclude02.* package -->
+		<!-- are excluded if the br.com.fernando.chapter09_contextDependencyInjection.part01_discoveryBeans.exclude02.FancyGreeting class is not found. -->
+		<exclude name="br.com.fernando.chapter09_contextDependencyInjection.part01_discoveryBeans.exclude02.*">
+			<if-class-not-available name="br.com.fernando.chapter09_contextDependencyInjection.part01_discoveryBeans.exclude02.FancyGreeting" />
+		</exclude>
+
+		<!-- Package names can be excluded if a system property is not defined for a particular name or a system property is not defined with a particular value -->
+		<exclude name="br.com.fernando.chapter09_contextDependencyInjection.part01_discoveryBeans.exclude02.*">
+			<if-system-property name="myProperty" value="myValue" />
+		</exclude>
+
+		<!-- In this code, all beans in the br.com.fernando.chapter09_contextDependencyInjection.part01_discoveryBeans.exclude02.* -->
+		<!-- package and subpackages are excluded if a system property with the name exclude-beans is set. -->
+		<exclude name="br.com.fernando.chapter09_contextDependencyInjection.part01_discoveryBeans.exclude02.**">
+			<if-system-property name="exclude-beans" />
+		</exclude>
+
+	</scan>
+
+</beans>

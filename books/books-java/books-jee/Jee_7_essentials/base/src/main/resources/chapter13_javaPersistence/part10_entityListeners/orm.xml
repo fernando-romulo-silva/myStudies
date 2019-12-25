@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+        http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd" version="2.1">
+
+	<persistence-unit-metadata>
+
+		<!-- Default entity listeners can be specified by way of the XML descriptor. --> 
+		<!-- The callback methods from such a listener class will apply to all entities in the persistence unit: -->
+		<persistence-unit-defaults>
+			<entity-listeners>
+				<entity-listener class="br.com.fernando.chapter13_javaPersistence.part10_entityListeners.EntityListeners03$MyListener">
+					<post-remove method-name="deleteObjectAlertAfter" />
+				</entity-listener>
+			</entity-listeners>
+		</persistence-unit-defaults>
+
+	</persistence-unit-metadata>
+
+
+	<!-- You can define the callback listeners using the XML descriptors bundled -->
+	<entity class="br.com.fernando.chapter13_javaPersistence.part10_entityListeners.EntityListeners03$Movie">
+		<entity-listeners>
+			<entity-listener class="br.com.fernando.chapter13_javaPersistence.part10_entityListeners.EntityListeners03$MovieListener">
+				<post-load method-name="newMovieLoad" />
+			</entity-listener>
+		</entity-listeners>
+	</entity>
+	
+	<!-- The order specified in the XML descriptor overrides the order specified via metadata annotations, either in the entity class or through @EntityListeners. -->
+
+</entity-mappings>

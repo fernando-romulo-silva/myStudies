@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      
+      xmlns:mc="http://xmlns.jcp.org/jsf/composite/ezcomp">
+      
+<!-- The namespace of the composite component is constructed by concatenating http://xmlns.jcp.org/jsf/composite/ and azcomp .  -->
+<!-- The tag name is the filename without the .xhtml suffix in the using page -->
+<body>
+
+	<ui:composition template="./WEB-INF/template.xhtml">
+
+		<ui:define name="content">
+
+			<!-- The user , password , and actionListener are then passed as required attributes in the using page: -->
+			<mc:login name="#{user.name}" password="#{user.password}" actionListener="#{userService.register()}" />
+			
+		</ui:define>
+
+	</ui:composition>
+
+</body>
+</html>

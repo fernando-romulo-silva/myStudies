@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JavaSE8Programmer_I_CasaCodigo">
+	<import>
+		<javaresource classpath="allset-config-ant-1.0.0.jar" name="target/maven/maven-scm-git.xml" />
+	</import>
+</project>

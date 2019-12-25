@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+
+	<step id="myStep">
+
+		<chunk item-count="3">
+
+			<reader ref="myItemReader">
+				<properties>
+					<property name="start" value="#{partitionPlan['start']}" />
+					<property name="end" value="#{partitionPlan['end']}" />
+				</properties>
+			</reader>
+
+			<processor ref="myItemProcessor" />
+			<writer ref="myItemWriter" />
+		</chunk>
+
+		<partition>
+		
+			<!-- The <mapper> element provides a programmatic means for calculating the number of partitions and threads for a partitioned step. -->
+			<!-- The ref attribute refers to the CDI bean name of a class implementing PartitionMapper interface. -->
+			<!-- The <mapper> element and the <plan> element are mutually exclusive. -->
+			<!-- Please look at MyMapper class -->
+			<mapper ref="myMapper" />
+
+			<!-- The partitions of a partitioned step may need to share results with a control point to decide the overall outcome of the step. -->
+			<!-- This element specifies a batch artifact that sends intermediary results from each partition to a partition analyzer. --> 
+			<!-- The batch artifact sends the intermediary results after each checkpoint for chunk steps and at the end of the step for task steps. --> 
+			<!-- The batch artifact is an implementation of the PartitionCollector interface. -->
+			<collector ref="myCollector" />
+			
+			<!-- This element specifies a batch artifact that analyzes the intermediary results from the partition collector instances. --> 
+			<!-- The batch artifact is an implementation of the PartitionAnalyzer interface -->
+			<analyzer ref="myAnalyzer" />
+			
+			<!-- This element specifies a batch artifact that receives control when a partitioned step begins, ends, or rolls back. --> 
+			<!-- The batch artifact enables you to merge results from different partitions and perform other related operations. --> 
+			<!-- The batch artifact is an implementation of the PartitionReducer interface -->
+			<reducer ref="myReducer" />
+			
+		</partition>
+
+	</step>
+
+</job>

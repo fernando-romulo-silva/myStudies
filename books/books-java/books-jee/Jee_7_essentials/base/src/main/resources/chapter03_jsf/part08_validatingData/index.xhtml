@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>JSF and Bean Validation</title>
+    </h:head>
+    <h:body>
+        <h1>JSF and Bean Validation</h1>
+        At least 3 characters in name, 25 >= age >= 18, zip is 5 digit numeral<br/><br/>
+        <h:form prependId="false">
+            Name: <h:inputText id="nameInputText" value="#{myBean.name}"/>
+            Age: <h:inputText id="ageInputText" value="#{myBean.age}"/>
+            Zip: <h:inputText id="zipInputText" value="#{myBean.zip}"/>
+            <h:commandButton id="submitButton" value="Submit"/>
+            
+            <h:message for="nameInputText" id="nameMessage"/>
+            <h:message for="ageInputText" id="ageMessage"/>
+            <h:message for="zipInputText" id="zipMessage"/>
+            
+            <br />
+            <br />
+            <br />
+            
+            Address: <h:inputText value="#{myBean.address}" id="address"> 
+ 						<f:validateBean validationGroups= "br.com.fernando.chapter03_jsf.part08_validatingData.ValidatingData$Page1Group, br.com.fernando.chapter03_jsf.part08_validatingData.ValidatingData$OtherGroup" />
+                    </h:inputText>
+        </h:form>
+    </h:body>
+</html>
+

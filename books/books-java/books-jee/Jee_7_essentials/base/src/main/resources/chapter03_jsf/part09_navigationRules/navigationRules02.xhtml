@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>Navigation Rules 02</title>
+</head>
+<body>
+	<h1>Navigation Rules 02</h1>
+
+	<h:form prependId="false">
+		<p>
+		    <h:selectOneRadio value="#{navigation02Bean.premium}">
+				<f:selectItem itemValue="#{true}" itemLabel="Yes" />
+				<f:selectItem itemValue="#{false}" itemLabel="No" />
+			</h:selectOneRadio>
+			<!-- Implicit navigation rules look for the outcome of an action (e.g., a click on a link or a button). -->
+			<!-- If a Facelets page matching the action outcome is found, that page is then rendered -->
+			<h:commandButton id="start1" value="Go to Navigation 02" action="success" />
+		</p>
+	</h:form>
+</body>
+</html>

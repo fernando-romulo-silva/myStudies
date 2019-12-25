@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glassfish-ejb-jar PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 EJB 3.1//EN" "http://glassfish.org/dtds/glassfish-ejb-jar_3_1-1.dtd">
+<glassfish-ejb-jar>
+
+	<!-- https://blogs.oracle.com/chengfang/glassfish-to-glassfish-remote-ejb-invocation -->
+	<disable-nonportable-jndi-names>true</disable-nonportable-jndi-names>
+
+	<enterprise-beans>
+		<ejb>
+			<ejb-name>BahnPM</ejb-name>
+			<ejb-ref>
+				<ejb-ref-name>FahrradService</ejb-ref-name>
+				<jndi-name>java:global/MyRemoteBeanModule/MyRemoteBean</jndi-name>
+			</ejb-ref>
+		</ejb>
+	</enterprise-beans>
+
+	<enterprise-beans>
+		<ejb>
+			<ejb-name>BetaLocalSessionBean</ejb-name>
+			<ejb-ref>
+				<ejb-ref-name>ejb/alphaSessionBean</ejb-ref-name>
+				<jndi-name>corbaname:iiop:alphaServerUrl:11637#java:global/AlphaApplication/AlphaApplication-ejb/AlphaSessionBean</jndi-name>
+			</ejb-ref>
+		</ejb>
+	</enterprise-beans>
+
+</glassfish-ejb-jar>

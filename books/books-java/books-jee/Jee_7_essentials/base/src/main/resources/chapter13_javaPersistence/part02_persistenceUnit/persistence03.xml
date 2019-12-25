@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<!-- For Java Programs, you are creating your connection -->
+	<persistence-unit name="myPU" transaction-type="RESOURCE_LOCAL">
+		
+		<class>br.com.fernando.chapter13_javaPersistence.part02_persistenceUnit.PersistenceUnit$Person</class>
+	
+		<properties>
+			<property name="javax.persistence.schema-generation.database.action" value="create" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost:2527/embeddedJeeContainerTestDB" />
+			<property name="javax.persistence.jdbc.user" value="ROOT" />
+			<property name="javax.persistence.jdbc.password" value="ROOT" />
+			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+		</properties>
+
+	</persistence-unit>
+
+</persistence>

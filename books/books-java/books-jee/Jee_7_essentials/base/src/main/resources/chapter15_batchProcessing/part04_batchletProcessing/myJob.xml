@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The job element identifies a job. It has a logical name id and is used for identification purposes. -->
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+    
+    <!-- A job may contain any number of steps identified by the step element. --> 
+    <!-- It has a logical name id and is used for identification purposes. -->
+    <step id="myStep" >
+    	<!-- The batchlet element defines the batchlet type step. -->
+    	<!-- It is mutually exclusive with the chunk element. -->
+    	<!-- The ref attribute is identified as the CDI bean name of a class implementing the Batchlet interface or extending AbstractBatchlet -->
+        <batchlet ref="myBatchlet"/>
+    </step>
+    
+</job>
+

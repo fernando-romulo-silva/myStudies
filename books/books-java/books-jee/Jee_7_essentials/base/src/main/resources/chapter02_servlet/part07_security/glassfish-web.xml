@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glassfish-web-app PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN" "http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd">
+<glassfish-web-app>
+
+	<context-root>/embeddedJeeContainerTest</context-root>
+
+	<security-role-mapping>
+		<role-name>ROLE01</role-name>
+		<group-name>GROUP01</group-name>
+	</security-role-mapping>
+
+	<security-role-mapping>
+		<role-name>ROLE02</role-name>
+		<group-name>GROUP02</group-name>
+	</security-role-mapping>
+
+	<security-role-mapping>
+		<role-name>ROLE03</role-name>
+		<group-name>GROUP03</group-name>
+	</security-role-mapping>
+
+	<security-role-mapping>
+		<role-name>ROLE04</role-name>
+		<group-name>GROUP04</group-name>
+	</security-role-mapping>
+
+	<security-role-mapping>
+		<role-name>ROLE05</role-name>
+		<group-name>GROUP05</group-name>
+	</security-role-mapping>
+
+	<security-role-mapping>
+		<role-name>ROLE06</role-name>
+		<group-name>GROUP06</group-name>
+	</security-role-mapping>
+
+</glassfish-web-app>

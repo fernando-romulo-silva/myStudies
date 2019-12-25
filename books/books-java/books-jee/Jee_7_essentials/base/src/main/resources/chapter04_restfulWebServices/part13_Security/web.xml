@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>WEB_RESOURCE_01</web-resource-name>
+			<url-pattern>/webresources/*</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>DELETE</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>ROLE01</role-name>
+			<role-name>ROLE02</role-name>
+			<role-name>ROLE03</role-name>
+			<role-name>ROLE04</role-name>
+			<role-name>ROLE05</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE01</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE02</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE03</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE04</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE05</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE06</role-name>
+	</security-role>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>myRealm</realm-name>
+	</login-config>
+
+</web-app>

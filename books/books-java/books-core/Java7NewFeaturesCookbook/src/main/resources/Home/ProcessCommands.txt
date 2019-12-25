@@ -1,0 +1,6 @@
+cd C:\
+dir
+cd vb
+dir
+mkdir "Test Directory"
+dir

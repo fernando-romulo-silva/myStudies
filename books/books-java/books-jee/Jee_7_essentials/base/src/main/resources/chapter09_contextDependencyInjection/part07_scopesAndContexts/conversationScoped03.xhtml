@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Third step</title>
+</h:head>
+<h:body>
+	<h:outputText value="Third step"></h:outputText>
+	<br />
+	<br />
+	<h:outputText value="#{conversationBean.counter}"></h:outputText>
+	<br />
+	<br />
+	<h:form>
+		<h:commandLink action="#{conversationBean.endConversation}" value="End conversation" />
+	</h:form>
+</h:body>
+</html>

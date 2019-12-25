@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/ejb-jar_3_2.xsd" version="3.2">
+
+	<module-name>embeddedJeeContainerTest01</module-name>
+
+	<enterprise-beans>
+		<session>
+			<ejb-name>MyTimer</ejb-name>
+			<ejb-class>br.com.fernando.chapter08_enterpriseJavaBeans.part09_timers.Timers02$MyTimerXml</ejb-class>
+			<session-type>Stateless</session-type>
+			<timer>
+				<schedule>
+					<second>*/10</second>
+					<minute>*</minute>
+					<hour>*</hour>
+					<month>*</month>
+					<year>*</year>
+				</schedule>
+				<timeout-method>
+					<method-name>timeout</method-name>
+					<method-params>
+						<method-param>javax.ejb.Timer</method-param>
+					</method-params>
+				</timeout-method>
+			</timer>
+		</session>
+	</enterprise-beans>
+
+</ejb-jar>

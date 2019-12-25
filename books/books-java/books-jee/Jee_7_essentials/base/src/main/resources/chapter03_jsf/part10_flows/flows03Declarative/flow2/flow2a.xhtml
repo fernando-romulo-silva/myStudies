@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <head>
+        <title>Second Page in Flow 2</title>
+    </head>
+    <body bgcolor="blue">
+        <h:form prependId="false">
+            <h1>Second Page in Flow 2</h1>
+            <p>Flow bean name: #{flow2Bean.name}</p>
+
+            <p>value: <h:inputText id="input" value="#{flowScope.value}" /></p>
+
+            <p><h:commandButton id="start" value="start" action="flow2" /></p>
+            <p><h:commandButton id="back" value="back" action="flow2" /></p>
+            <p><h:commandButton id="next" value="next" action="flow2b" /></p>
+            <p><h:commandButton id="index" value="home" action="goHome" /></p>
+
+        </h:form>
+    </body>
+</html>

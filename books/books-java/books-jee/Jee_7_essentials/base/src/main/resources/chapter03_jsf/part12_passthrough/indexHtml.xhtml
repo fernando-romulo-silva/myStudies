@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+<head>
+<meta charset="UTF-8" />
+	<title>Teste de Página</title>
+</head>
+<body>
+	<h5>Only Html5</h5>
+	<p>
+		<i>Example</i>
+	</p>
+
+	<form jsf:id="form" jsf:prependId="false">
+		<fieldset>
+			<label> 
+				<span class="block input-icon input-icon-right"> 
+					<input type="text" class="span12" placeholder="Usuário" jsf:id="usr" jsf:value="#{loginBean.user}" /> 
+					<i class="icon-user"></i>
+				</span>
+			</label> 
+			
+			<label> 
+				<span class="block input-icon input-icon-right"> 
+					<input type="password" class="span12" placeholder="Senha" jsf:id="pwd" jsf:value="#{loginBean.password}" /> 
+					<i class="icon-lock"></i>
+				</span>
+			</label>
+
+			<div class="space"></div>
+
+			<div class="clearfix">
+				<button jsf:id="btn" jsf:action="#{loginBean.doLogin()}" class="width-35 pull-right btn btn-small btn-primary">
+					<i class="icon-key"></i> Login
+				</button>
+			</div>
+
+			<div class="space-4"></div>
+		</fieldset>
+	</form>
+</body>
+</html>

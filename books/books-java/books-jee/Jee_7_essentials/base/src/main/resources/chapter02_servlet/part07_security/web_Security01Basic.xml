@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+
+
+	<!-- =========================================================================================================================== -->
+	<!-- Declared Roles -->
+	<!-- =========================================================================================================================== -->
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE01</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE02</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE03</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE04</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE05</role-name>
+	</security-role>
+
+	<security-role>
+		<description>This is a Role</description>
+		<role-name>ROLE06</role-name>
+	</security-role>
+
+	<!-- =========================================================================================================================== -->
+	<!-- Describe and implement four authentication models -->
+	<!-- =========================================================================================================================== -->
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>myRealm</realm-name> <!-- name as defined in the console) -->
+	</login-config>
+
+	<!-- BASIC: HTTP, Base64 - weak, HTTP standard, all browsers support it -->
+	<!-- DIGEST: HTTP, Stronger - but not SSL, Optional for HTTP and JEE containers -->
+	<!-- FORM: JEE, Very weak no encryption, Allows a custom login screen -->
+	<!-- CLIENT-CERT: JEE, Strong - public key (PKC), Strong but users must have certifcates -->
+
+</web-app>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+              
+    <application>
+        
+        <!-- • WEB-INF/faces-config.xml defines the usage of the contract: -->
+        <resource-library-contracts>
+            <!-- A contract is applied based upon the URL pattern invoked. Based upon the configuration specified here, --> 
+            
+            <!-- the red contract will be applied to /index.xhtml -->
+            <contract-mapping>
+                <url-pattern>*</url-pattern>
+                <contracts>red</contracts>
+            </contract-mapping>
+            
+            <!-- and the blue contract will be applied to /user/index.xhtml -->
+            <contract-mapping>
+                <url-pattern>/user/*</url-pattern>
+                <contracts>blue</contracts>
+            </contract-mapping>       
+                 
+        </resource-library-contracts>
+        
+    </application>
+</faces-config>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Java8PraticoLambdasStreamsNovosRecursos">
+	<import>
+		<javaresource classpath="allset-config-ant.jar" name="target/maven/maven-scm-git.xml" />
+	</import>
+</project>

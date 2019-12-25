@@ -1,0 +1,16 @@
+TODO
+
+
+https://www.google.com/search?q=ejb+role+jax-rs&rlz=1C1GCEU_pt-BRBR822BR822&oq=ejb+role+jax-rs&aqs=chrome..69i57.2483j0j7&sourceid=chrome&ie=UTF-8
+
+https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform/6/html/development_guide/sect-jax-rs_application_security#Enable_Role-Based_Security_for_a_RESTEasy_JAX-RS_Web_Service-1
+
+
+https://www.google.com/search?q=role+runAss+ejb+rest&rlz=1C1GCEU_pt-BRBR822BR822&oq=role+runAss+ejb+rest&aqs=chrome..69i57.10776j1j7&sourceid=chrome&ie=UTF-8
+
+Using a secured EJB from a JAX-RS web service
+
+https://stackoverflow.com/questions/19855125/using-a-secured-ejb-from-a-jax-rs-web-service
+
+https://stackoverflow.com/questions/34763961/correct-way-to-use-ejb-asynchronous-methods
+

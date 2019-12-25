@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>Navigation Rules 01</title>
+</head>
+<body>
+	<h1>Navigation Rules 01</h1>
+
+	<h:form prependId="false">
+		<p>
+			<!-- Implicit navigation rules look for the outcome of an action (e.g., a click on a link or a button). -->
+			<!-- If a Facelets page matching the action outcome is found, that page is then rendered -->
+			<h:commandButton id="start1" value="Go to Navigation 02 - By ManagedBean" action="#{navigation01Bean.next}" /> 
+			<br />
+			<br />
+			<!-- Here, when start2 button is clicked, JSF will resolve the view name, navigationRules02 as navigationRules02.xhtml extension, --> 
+			<!-- and find the corresponding view file navigationRules02.xhtml in the current directory  -->
+			<h:commandButton id="start2" value="Go to Navigation 02 - By Xhtml" action="navigationRules02" />
+			<br />
+			<br />
+			<h:commandButton id="start3" value="Go to Navigation 02 - By Xhtml, full name" action="/navigationRules02.xhtml" />
+		</p>
+	</h:form>
+</body>
+</html>

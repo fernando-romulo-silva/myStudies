@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Java7NewFeaturesCookbook">
+	<import>
+		<javaresource classpath="allset-config-ant.jar" name="target/maven/maven-scm-git.xml" />
+	</import>
+</project>

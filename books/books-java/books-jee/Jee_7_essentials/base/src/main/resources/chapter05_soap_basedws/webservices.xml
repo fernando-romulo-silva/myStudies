@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webservices xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://www.ibm.com/webservices/xsd/javaee_web_services_1_2.xsd">
+
+	<webservice-description>
+		<webservice-description-name>HelloService</webservice-description-name>
+		
+		<port-component>
+			<port-component-name>Hello</port-component-name>
+			<wsdl-service xmlns:ns1="http://samples/">ns1:HelloService</wsdl-service>
+			<wsdl-port xmlns:ns1="http://samples/">ns1:HelloPort</wsdl-port>
+			<service-impl-bean>
+				<servlet-link>Hello</servlet-link>
+			</service-impl-bean>
+			
+			<handler-chains>
+				<handler-chain>
+					<handler>
+						<handler-name>myhandler</handler-name>
+						<handler-class>ImprovedHelloHandler</handler-class>
+					</handler>
+				</handler-chain>
+			</handler-chains>
+		</port-component>
+		
+	</webservice-description>
+	
+	
+</webservices>

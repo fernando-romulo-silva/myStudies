@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+
+	<!-- We define a job using a step with the logical name step1, a decision execution element with the logical name decider1, -->
+	<!-- and another step with the logical name step2 -->
+	<step id="step1" next="decider1">
+		<batchlet ref="myBatchlet1" />
+	</step>
+
+	<!-- A decision element is the target of the next attribute from a job-level step, flow, split, or another decision. -->
+	<!-- In this case, decider1 is specified as the value of the next attribute of step1 -->
+
+	<!-- This element has a reference to the Decider batch artifact. -->
+	<!-- A decider receives control as part of a decision element in a job and decides the next transition. -->
+	<decision id="decider1" ref="myDecider">
+		<!-- The decision execution element uses the next transition element to transfer the control to step3 if the exit status is foobar. -->
+		<next on="foobar" to="step3" />
+		<!--<fail on="foobar" exit-status="foobar2"/> -->
+		
+		<!-- The job is terminated via the end transition element if the exit status is foobar -->
+		<!--<end on="foobar" exit-status="foobar2"/> -->
+	
+		<!-- Fail, end, and stop are terminating elements, because they cause a job execution to terminate -->
+		<stop on="foobar2" exit-status="foobar3" restart="step3" />
+	</decision>
+
+	<!-- The decision element follows a step, flow, or split execution element. -->
+
+	<step id="step2">
+		<batchlet ref="myBatchlet2" />
+	</step>
+
+	<step id="step3">
+		<batchlet ref="myBatchlet3" />
+	</step>
+</job>
+

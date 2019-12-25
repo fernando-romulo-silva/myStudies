@@ -1,0 +1,1 @@
+Nail    34Bolt    12Drill   22Hammer  24Auger   24

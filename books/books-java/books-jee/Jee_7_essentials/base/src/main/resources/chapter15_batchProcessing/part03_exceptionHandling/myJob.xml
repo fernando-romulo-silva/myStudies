@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+
+	<step id="myStep">
+		<listeners>
+			<listener ref="mySkipReadListener" />
+			<listener ref="mySkipProcessorListener" />
+			<listener ref="mySkipWriteListener" />
+			<listener ref="myRetryReadListener" />
+			<listener ref="myRetryProcessorListener" />
+			<listener ref="myRetryWriteListener" />
+		</listeners>
+
+		<!-- skip-limit specifies the number of exceptions this step will skip. -->
+		<!-- skip-limit and retry-limit should have values greater than 0 to perform the expected behaviour -->
+		<chunk checkpoint-policy="item" item-count="3" skip-limit="3" retry-limit="3">
+			<reader ref="myItemReader" />
+			<processor ref="myItemProcessor" />
+			<writer ref="myItemWriter" />
+
+			<!-- skippable-exception-class specifies a set of exceptions that chunk processing will skip. -->
+			<skippable-exception-classes>
+				<!-- include specifies a fully qualified class name of an exception or exception superclass to skip or retry. -->
+				<!-- Multiple include elements may be specified. -->
+				<include class="java.lang.RuntimeException" />
+				<include class="java.lang.UnsupportedOperationException" />
+				<!-- exclude specifies a fully qualified class name of an exception or exception superclass to not skip or retry. -->
+				<!-- Multiple exclude elements may be specified. -->
+				<!-- Classes specified here reduce the number of exceptions eligible to skip or retry as specified by include -->
+			</skippable-exception-classes>
+
+			<!-- retryable-exception-class specifies a set of exceptions that chunk processing will retry. -->
+			<retryable-exception-classes>
+				<include class="java.lang.IllegalArgumentException" />
+				<include class="java.lang.UnsupportedOperationException" />
+			</retryable-exception-classes>
+		</chunk>
+
+	</step>
+</job>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+
+	<!-- We define a job using a flow with the logical name flow1 and a step with the logical name step3 -->
+	<flow id="flow1" next="step3">
+		<!-- We define flow1 using two steps: step1 and step2 . Within the flow, step1 is followed by step2 -->
+
+		<!-- A flow may contain any of the execution elements. -->
+		<!-- The execution elements within a flow may only transition among themselves; they may not transition to elements outside of the flow. -->
+		<step id="step1" next="step2">
+			<batchlet ref="myBatchlet1" />
+		</step>
+
+		<step id="step2">
+			<chunk item-count="3">
+				<reader ref="myItemReader" />
+				<writer ref="myItemWriter" />
+			</chunk>
+		</step>
+
+	</flow>
+
+	<!-- By default, flow is the last execution element in the job. We can specify the next execution element using the next attribute. -->
+	<!-- The step3 is executed after all steps in flow1 are finished. -->
+	<!-- The value of the next attribute can be a logical name of a step, flow, split, or decision. -->
+	<step id="step3">
+		<batchlet ref="myBatchlet2" />
+	</step>
+
+</job>
+

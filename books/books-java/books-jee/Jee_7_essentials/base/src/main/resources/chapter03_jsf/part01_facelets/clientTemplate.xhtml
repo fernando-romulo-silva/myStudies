@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      
+	<body>
+		<!-- ui:composition -->
+		<!-- Defines a page layout that optionally uses a template. If the template attribute is used, the children of this tag define the template layout. -->
+		<!-- If not, it’s just a group of elements—a composition—that can be inserted anywhere. Content outside of this tag is ignored. --> 
+		<ui:composition template="./WEB-INF/templates/template.xhtml">
+			<!-- ui:define -->
+			<!-- Used in a template client page; defines content that replaces the content defined in a template with a matching ui:insert tag. -->
+			<ui:define name="content">
+				<h:dataTable value="#{customerSessionBean.customerNames}" var="c">
+					<h:column>#{c.value}</h:column>
+				</h:dataTable>
+			</ui:define>
+		</ui:composition>
+	</body>
+	
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Second step</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputText value="Second step"></h:outputText>
+		<br />
+		<br />
+		<h:commandButton value="Increment" type="submit">
+			<f:ajax execute="@form" listener="#{conversationBean.increment}" render="@form" />
+		</h:commandButton>
+		<br />
+		<br />
+		<h:outputText value="#{conversationBean.counter}"></h:outputText>
+		<br />
+		<br />
+		<h:link outcome="/conversationScoped03.xhtml" value="Go to step 3">
+			<f:param name="cid" value="#{conversationBean.conversation.id}" />
+		</h:link>
+	</h:form>
+</h:body>
+</html>

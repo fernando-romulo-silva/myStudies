@@ -1,0 +1,13 @@
+https://www.traininghott.com/Courses/Refactoring-Legacy-Code-Java-Training-Course.htm
+
+
+http://www.mastertheboss.com/
+http://www.itbuzzpress.com/
+
+http://www.itbuzzpress.com/various/top-5-opensource-application-servers.html
+http://www.itbuzzpress.com/weblogic-tutorials/weblogic-pools-configuration.html
+
+http://www.mastertheboss.com/soa-cloud/quarkus/building-container-ready-native-applications-with-quarkus
+
+
+https://technology.amis.nl/2018/12/09/jvm-performance-openj9-uses-least-memory-graalvm-most-openjdk-distributions-differ/

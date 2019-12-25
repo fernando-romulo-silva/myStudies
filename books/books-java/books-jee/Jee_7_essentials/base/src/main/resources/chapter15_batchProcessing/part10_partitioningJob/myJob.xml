@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+    
+    <step id="myStep" >
+        
+        <chunk item-count="3">
+            <reader ref="myItemReader">
+                <properties>
+                    <property name="start" value="#{partitionPlan['start']}"  />
+                    <property name="end" value="#{partitionPlan['end']}"  />
+                </properties>                
+            </reader> 
+            <processor ref="myItemProcessor"/>
+            <writer ref="myItemWriter"/>
+        </chunk>
+        
+        <!-- <partition>, an optional element, is used to specify that a <step> is a partitioned step. --> 
+        <!-- The partition plan is specified for a chunk step but can be specified for a batchlet step as well -->
+        <partition>
+			<!-- By default, the number of threads is equal to the number of partitions. -->
+        	<!-- Each <partition> has a plan that specifies the number of partitions via the partitions attribute, --> 
+        	<!-- the number of partitions to execute concurrently via the threads attribute, -->
+            <plan partitions="2">
+            	<!-- and the properties for each partition via the <properties> element -->
+                <properties partition="0">
+                	<!-- The partition to which the properties belong is specified via the partition attribute. -->
+                	<!-- Unique property values are passed to each partition via the property element. -->
+                	
+                	<!-- If these properties need to be accessed in the item reader, -->
+                	<!-- then they are specified with #{partitionPlan['<PROPERTY-NAME']} where PROPERTY-NAME is the name of the property. -->
+                    <property name="start" value="1"/>
+                    <property name="end" value="10"/>
+                </properties>
+                <properties partition="1">
+                	<!-- Each partition specifies two properties, start and end , -->
+                	<!-- which are then made available to the item reader as #{partitionPlan['start']} and #{partitionPlan['end']}  -->
+                	<!-- Loot at MyItemReader class -->
+                    <property name="start" value="11"/>
+                    <property name="end" value="20"/>
+                </properties>
+            </plan>
+        </partition>
+        
+        <!-- Each thread runs a separate copy of the step: chunking and checkpointing occur independently on each thread for chunk type steps. -->
+    </step>
+    
+</job>
+

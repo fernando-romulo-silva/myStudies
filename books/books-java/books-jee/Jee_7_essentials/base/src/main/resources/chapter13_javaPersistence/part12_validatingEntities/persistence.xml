@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<persistence-unit name="defaultPU" transaction-type="JTA">
+		<jta-data-source>jdbc/embeddedJeeContainerTestDS</jta-data-source>
+
+		<!-- Life-cycle validation of entities. -->
+		<!-- An error is reported if no Bean Validation provider is found. -->
+		<!-- <validation-mode>CALLBACK</validation-mode> -->
+
+		<!-- Automatic validation of entities; this is the default behavior. -->
+		<!-- No validation takes place if no Bean Validation provider is found. -->
+		<validation-mode>AUTO</validation-mode>
+
+		<!-- No validation is performed. -->
+		<!-- <validation-mode>NONE</validation-mode> -->
+
+		<properties>
+			<property name="javax.persistence.schema-generation.database.action" value="create" />
+
+			<!-- You can override this default behavior by specifying the target groups using the following validation properties in persistence.xml: -->
+			
+			<property name="javax.persistence.validation.group.pre-update" value="br.com.fernando.chapter13_javaPersistence.part12_validatingEntities.ValidatingEntities$GroupName" />
+			<property name="javax.persistence.validation.group.pre-persist" value="br.com.fernando.chapter13_javaPersistence.part12_validatingEntities.ValidatingEntities$GroupGrade" />
+			<property name="javax.persistence.validation.group.pre-remove" value="br.com.fernando.chapter13_javaPersistence.part12_validatingEntities.ValidatingEntities$GroupAddress" />
+			
+			
+		</properties>
+	</persistence-unit>
+</persistence>

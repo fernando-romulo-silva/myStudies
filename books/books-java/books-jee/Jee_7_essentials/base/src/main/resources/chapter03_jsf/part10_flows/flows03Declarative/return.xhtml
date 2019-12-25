@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>Page navigated to upon return from any flow</title>
+    </head>
+    <body>
+        <h1>Page navigated to upon return from any flow</h1>
+        
+    <h:form prependId="false">
+        <p>Has a flow: #{null != facesContext.application.flowHandler.currentFlow}.</p>
+        
+        <p>flowScope value (should be empty): #{flowScope.value}.</p>
+
+        <p><h:commandButton id="index" value="home" action="/index" /></p>
+        
+    </h:form>
+</body>
+</html>

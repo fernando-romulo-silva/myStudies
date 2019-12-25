@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Order - Confirmation</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputText value="You have ordered #{orderBean.itemCount} items" />
+		<br />
+		<h:outputText
+			value="The items will be delivered at: #{orderBean.address}" />
+		<br />
+		<h:commandButton value="Exit" action="returnFromOrderFlow" />
+	</h:form>
+</h:body>
+</html>

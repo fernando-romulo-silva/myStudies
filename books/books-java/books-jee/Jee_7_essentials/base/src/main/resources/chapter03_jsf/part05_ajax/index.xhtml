@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>JSF 2 Ajax</title>
+</h:head>
+<h:body>
+	<h1>Ajax in JSF</h1>
+        Username and password must be same for login to succeed, otherwise it fails.
+        <br />
+	<br />
+	
+	
+	<!-- The command button has an actionListener identifying the method in the backing bean to be invoked when the button is clicked. -->
+	<!-- Instead of the usual response rendering and displaying a different page, jsf.ajax.request sends an asynchronous request to the server.  --> 
+	<!-- This request is made on the command button’s on click event.execute and render provide a space-separated identifier of the components.  -->
+	
+	<!-- Lists the possible values of the render attribute. -->
+	<!-- @all - All components on the page -->
+	<!-- @none - No components on the page; this is the default value -->
+	<!-- @this - Element that triggered the request -->
+	<!-- @form - All components within the enclosing form -->
+	<!-- IDs - Space-separated identifiers of the components -->
+	<!-- EL expression - EL expression that resolves to a collection of strings -->
+	
+	
+	<h2>Ajax using JavaScript</h2>
+	<!-- Programmatic Ajax integration is enabled through the resource handling mechanism. -->
+    <!-- The jsf.js file is a predefined resource in the javax.faces library.  --> 
+    <!-- This resource contains the JavaScript API that facilitates Ajax interaction with JSF pages. -->
+    <!-- You can make it available in pages using the outputScript tag: -->
+	<h:outputScript name="jsf.js" library="javax.faces" target="body" />
+	
+	<!-- The form has prependId set to false to ensure that the id of each element is preserved as mentioned in the form. --> 
+	<!-- Otherwise, JSF prepends the form’s id to the id of its children. -->
+	<h:form prependId="false">
+         Name: <h:inputText value="#{user.name}" id="name" />
+		<br />
+         Password: <h:inputText value="#{user.password}" id="password" />
+		<br />
+		
+	    <!-- You can also make an asynchronous request to the server: -->
+		<h:commandButton value="Login" type="button" actionListener="#{user.login}" 
+		                 onclick="jsf.ajax.request(this, event, {execute:'name password', render: 'status'}); return false;" />
+		 
+		<!-- Display the status -->                 
+		<h:outputText value="#{user.status}" id="status" />
+	</h:form>
+	
+	
+	<h2>Declarative Ajax</h2>
+	<h:form prependId="false">
+            Name: <h:inputText value="#{user.name}" id="name2" />
+		<br />
+            Password: <h:inputText value="#{user.password}" id="password2" />
+		<br />
+		
+		<h:commandButton value="Login" type="button" actionListener="#{user.login}">
+		    <!-- we use f:ajax to specify the list of input elements using the execute attribute, and the output elements to be rendered using the render attribute. --> 
+		    <!-- By default, if f:ajax is nested within a single component and no event is specified, --> 
+		    <!-- the asynchronous request is fired based upon the default event for the parent component  -->
+			<f:ajax execute="name2 password2" render="status2" />
+		</h:commandButton>
+		
+		
+		<h:outputText value="#{user.status}" id="status2" />
+	</h:form>
+	
+</h:body>
+</html>
+
