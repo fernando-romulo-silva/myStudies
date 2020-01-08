@@ -4,18 +4,17 @@
 
     <persistence-unit name="testPU">
 
-        <!-- This data source is defined from within the application via the data-source element in application.xml of the ear's
-            META_INF folder. For the EJB variant of this test, the structure looks as follows:
-            
-            EAR
-                META-INF
-                    application.xml (defines data source)
-                test.jar (EJB module)
-                    META-INF
-                        persistence.xml (this file: connects data source to persistence unit)
-                    org.javaee7.jpa.datasourcedefinition_applicationxml_pu.service.TestService (injects PU via @PersistenceContext)
-            
-         -->
+        <!-- This data source is defined from within the application via the data-source element in application.xml of the ear's      -->
+        <!-- META_INF folder. For the EJB variant of this test, the structure looks as follows:                                       -->
+        <!--                                                                                                                          -->
+        <!-- EAR                                                                                                                      -->
+        <!--     META-INF                                                                                                             -->
+        <!--         application.xml (defines data source)                                                                            -->
+        <!--     test.jar (EJB module)                                                                                                -->
+        <!--         META-INF                                                                                                         -->
+        <!--             persistence.xml (this file: connects data source to persistence unit)                                        -->
+        <!--         org.javaee7.jpa.datasourcedefinition_applicationxml_pu.service.TestService (injects PU via @PersistenceContext)  -->
+        
         <jta-data-source>java:app/MyApp/MyDS</jta-data-source>
 
         <properties>
