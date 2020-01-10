@@ -49,8 +49,8 @@ public class SwaggerConfig {
 	/**
 	 * <pre>
 	 * 
-	 * &#64;ApiOperation(value = "Retrieve a list of books.", responseContainer = "List")
-	 * &#64;RequestMapping(value = "/books", method = RequestMethod.GET, produces = { "application/json" })
+	 * @ApiOperation(value = "Retrieve a list of books.", responseContainer = "List")
+	 * @RequestMapping(value = "/books", method = RequestMethod.GET, produces = { "application/json" })
 	 * public List<Book> listBooks() {
 	 *     LOGGER.debug("Received request to list all books");
 	 *     return bookService.getList();
