@@ -9,14 +9,16 @@ public class Part01 {
 	//
 	// The CMD instruction syntax can have two forms:
 	//
-	// CMD ["executable","parameter1","parameter2"]:
+	// CMD ["executable","parameter1","parameter2"]
+	//
 	// This is a so called exec form. It's also the preferred and recommended form.
 	// The parameters are JSON array, and they need to be enclosed in square brackets.
 	// The important note is that the exec form does not invoke a command shell when the container is run.
 	// It just runs the executable provided as the first parameter.
 	// If the ENTRYPOINT instruction is present in the Dockerfile, CMD provides a default set of parameters for the ENTRYPOINT instruction.
 	//
-	// CMD command parameter1 parameter2:
+	// CMD command parameter1 parameter2
+	//
 	// This a shell form of the instruction.
 	// This time, the shell (if present in the image) will be processing the provided command.
 	// The specified binary will be executed with an invocation of the shell using /bin/sh -c.
@@ -38,7 +40,7 @@ public class Part01 {
 	//
 	// $ docker build . -t rest-example
 	//
-	// Anmd run the container:
+	// And run the container:
 	// 
 	// $ docker run -it rest-example 
 
