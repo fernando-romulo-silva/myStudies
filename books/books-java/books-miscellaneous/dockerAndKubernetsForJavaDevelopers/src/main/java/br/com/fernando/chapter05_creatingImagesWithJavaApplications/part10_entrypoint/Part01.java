@@ -33,10 +33,22 @@ public class Part01 {
 	// Also, your command will not be PID 1, because it will be executed by the shell.
 	// As a result, if you then run docker stop <container>, the container will not exit cleanly, and the stop command will be forced to send a SIGKILL after the timeout.
 	//
-	//  Overriding the ENTRYPOINT in the Dockerfile allows you to have a different command processing your arguments when the container is run. 
+	// Overriding the ENTRYPOINT in the Dockerfile allows you to have a different command processing your arguments when the container is run. 
 	// If you need to change the default shell in your image, you can do this by changing an ENTRYPOINT:
 	//
 	// FROM ubuntu
 	// ENTRYPOINT ["/bin/bash"]
+	//
+	// From now on, all parameters from CMD, or provided when starting the container using docker run, will be 
+	// processed by the Bash shell instead of the default /bin/sh -c.
+	//
+	// A Dockerfile should specify at least one CMD or ENTRYPOINT instruction
+	//
+	// Only the last CMD and ENTRYPOINT in a Dockerfile will be used
+	//
+	// ENTRYPOINT should be defined when using the container as an executable
+	//
+	// You should use the CMD instruction as a way of defining default arguments for the command defined as ENTRYPOINT or 
+	// for executing an ad-hoc command in a container
 	
 }
