@@ -27,8 +27,9 @@ public class Part01 {
     // The base image is small and fast to download. Our FROM instruction will look the same as this:
     //
     // FROM jeanblanchard/java:8
-    
-    
+    //
+    //
     // You can run it with:
-    // docker build -t some_name .
+	//
+    // $ docker build --tag yourImageName:yourTag .
 }
