@@ -2,6 +2,8 @@ package br.com.fernando.chapter07_introduction_to_kubernets.part02_basicConcepts
 
 public class Part01 {
 
+	// Basic Concepts
+	//
 	// A cluster is a group of nodes; they can be physical servers or virtual machines that have the Kubernetes platform installed. 
 	// The basic Kubernetes architecture is presented in the following diagram:
 	//
@@ -10,11 +12,11 @@ public class Part01 {
 	/**
 	 * <pre>
 	 * 
-	 *                             |========================================================|
-	 *                             |                      Master                            |
-	 *                             |                                                        | 
-	 *                             | etcd      API server   Schedule and Controller Manager |
-	 *                             |========================================================|
+	 *                                           |========================================================|
+	 *                                           |                      Master                            |
+	 *                                           |                                                        | 
+	 *                                           | etcd      API server   Schedule and Controller Manager |
+	 *                                           |========================================================|
 	 *                             
 	 *         
 	 * |======================================|            |======================================|            |======================================|                    
