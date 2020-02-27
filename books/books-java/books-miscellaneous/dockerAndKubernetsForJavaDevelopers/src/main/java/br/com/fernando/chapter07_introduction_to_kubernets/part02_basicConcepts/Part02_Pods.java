@@ -1,6 +1,6 @@
 package br.com.fernando.chapter07_introduction_to_kubernets.part02_basicConcepts;
 
-public class Part02 {
+public class Part02_Pods {
 
 	// Pods
 	// The Pod consists of one or more Docker containers. 

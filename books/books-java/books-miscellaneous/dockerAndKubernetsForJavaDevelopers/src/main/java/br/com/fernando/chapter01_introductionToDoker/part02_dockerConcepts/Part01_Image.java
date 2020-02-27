@@ -1,6 +1,6 @@
 package br.com.fernando.chapter01_introductionToDoker.part02_dockerConcepts;
 
-public class Part01Image {
+public class Part01_Image {
 
     // Think of an image as a read-only template which is a base foundation to create a container from.
     // Every image starts from a base image; for example, Ubuntu; a Linux image.

@@ -1,6 +1,6 @@
 package br.com.fernando.chapter07_introduction_to_kubernets.part02_basicConcepts;
 
-public class Part03 {
+public class Part03_Pods {
 
 	// The Pod's definition is a JSON or YAML file called a Pod manifest.
 	// Take a look at a simple example with one container:
@@ -11,12 +11,14 @@ public class Part03 {
 	 *  kind: Pod
 	 *  metadata:
 	 *     name: rest_service
+	 *     labels:
+	 *        name: rest_service 
 	 *  spec:
-	 *     containers:
-	 *        name: rest_service
-	 *        image: rest_service
-	 *           ports:
-	 *    - containerPort: 8080
+	 *    containers:
+	 *    - name: rest_service
+	 *      image: rest_service
+	 *      ports:
+	 *      - containerPort: 8080
 	 * 
 	 * </pre>
 	 */
@@ -29,7 +31,7 @@ public class Part03 {
 	 *    "apiVersion": "v1", 
 	 *    "kind": "Pod",
 	 *    "metadata":{
-	 *       "name": ”rest_service”,
+	 *       "name": "rest_service",
 	 *       "labels": {
 	 *          "name": "rest_service"
 	 *       }

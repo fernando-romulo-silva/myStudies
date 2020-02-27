@@ -1,6 +1,6 @@
 package br.com.fernando.chapter01_introductionToDoker.part02_dockerConcepts;
 
-public class Part04RegisterAndRepositoryAndIndex {
+public class Part04_RegisterAndRepositoryAndIndex {
 
     // The Docker registry is a service (an application, in fact) that is storing your Docker images.
     // The Docker Hub is an example of the publicly available registry; it's free and serves a huge, constantly growing collection of existing images.

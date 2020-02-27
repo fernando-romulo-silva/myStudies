@@ -1,6 +1,6 @@
 package br.com.fernando.chapter01_introductionToDoker.part02_dockerConcepts;
 
-public class Part03Container {
+public class Part03_Container {
 
     // A running instance of an image is called a container. Docker launches them using the Docker images as read-only templates.
     // If you start an image, you have a running container of this image.

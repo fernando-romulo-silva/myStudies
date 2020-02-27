@@ -1,6 +1,6 @@
 package br.com.fernando.chapter07_introduction_to_kubernets.part02_basicConcepts;
 
-public class Part01 {
+public class Part01_BasicConcepts {
 
 	// Basic Concepts
 	//

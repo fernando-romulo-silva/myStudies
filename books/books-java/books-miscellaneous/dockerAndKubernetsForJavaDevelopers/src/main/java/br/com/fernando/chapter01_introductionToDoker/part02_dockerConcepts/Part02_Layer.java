@@ -1,6 +1,6 @@
 package br.com.fernando.chapter01_introductionToDoker.part02_dockerConcepts;
 
-public class Part02Layer {
+public class Part02_Layer {
 
     // Each image consists of a series of layers which are stacked, one on top of the another.
     // In fact, every layer is an intermediate image.
