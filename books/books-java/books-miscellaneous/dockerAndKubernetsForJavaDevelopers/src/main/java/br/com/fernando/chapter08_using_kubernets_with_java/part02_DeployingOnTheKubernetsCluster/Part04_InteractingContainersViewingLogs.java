@@ -21,8 +21,19 @@ public class Part04_InteractingContainersViewingLogs {
 	// -f is Stream pod logs (stdout)
 	//
 	//
-	// As you already know, Pods and containers are fragile. 
-	// They can crash or be killed. 
+	// As you already know, Pods and containers are fragile.
+	// They can crash or be killed.
 	// You can use kubectl logs to retrieve logs from a previous instantiation of a container with the --previous flag, in case the container has crashed.
+	//
+	//
+	// Get a shell to the running Container:
+	//
+	// $ kubectl exec -it rest-example-6dd89cf8cd-qfmfr -- /bin/bash
+	//
+	//
+	// If a Pod has more than one Container, use --container or -c to specify a Container in the kubectl exec command. 
+	// For example, suppose you have a Pod named my-pod, and the Pod has two containers named main-app and helper-app. 
+	// The following command would open a shell to the main-app Container.
+	//
+	// $ kubectl exec -it my-pod --container main-app -- /bin/bash
 }
-
