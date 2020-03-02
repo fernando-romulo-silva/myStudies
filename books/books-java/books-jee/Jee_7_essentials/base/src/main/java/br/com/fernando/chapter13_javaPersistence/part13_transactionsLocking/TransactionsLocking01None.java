@@ -252,7 +252,7 @@ public class TransactionsLocking01None {
 	    executor.execute(new Runnable() {
 		@Override
 		public void run() {
-		    firstService.updateMovie(3, "INCEPTION UR");
+		    firstService.updateMovie(3, "FirstService INCEPTION UR");
 		}
 	    });
 
@@ -266,7 +266,7 @@ public class TransactionsLocking01None {
 	    executor.execute(new Runnable() {
 		@Override
 		public void run() {
-		    secondService.updateMovie(3, "New Movie"); // secondService end the operation first, the firstService update won't rollback
+		    secondService.updateMovie(3, "SecondService New Movie"); // secondService end the operation first, the firstService update won't rollback
 		    updateCountDownLatch.countDown();
 		}
 	    });

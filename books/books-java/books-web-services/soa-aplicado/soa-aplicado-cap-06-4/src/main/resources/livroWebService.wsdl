@@ -1,0 +1,64 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservices.view.fernando.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="LivroWebServiceImpService" targetNamespace="http://webservices.view.fernando.com.br/">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.view.fernando.com.br/" elementFormDefault="unqualified" targetNamespace="http://webservices.view.fernando.com.br/" version="1.0">
+
+			<xs:element name="listarLivros" type="tns:listarLivros" />
+
+			<xs:element name="listarLivrosResponse" type="tns:listarLivrosResponse" />
+
+			<xs:complexType name="listarLivros">
+				<xs:sequence />
+			</xs:complexType>
+
+			<xs:complexType name="listarLivrosResponse">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="livro" type="tns:livro" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="livro">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="anoDePublicacao" type="xs:int" />
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="autores" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="editora" type="xs:string" />
+					<xs:element minOccurs="0" name="nome" type="xs:string" />
+					<xs:element minOccurs="0" name="resumo" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="listarLivros">
+		<wsdl:part element="tns:listarLivros" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="listarLivrosResponse">
+		<wsdl:part element="tns:listarLivrosResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="livroWebService">
+		<wsdl:operation name="listarLivros">
+			<wsdl:input message="tns:listarLivros" name="listarLivros">
+			</wsdl:input>
+			<wsdl:output message="tns:listarLivrosResponse" name="listarLivrosResponse">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="LivroWebServiceImpServiceSoapBinding" type="tns:livroWebService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="listarLivros">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="listarLivros">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="listarLivrosResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="LivroWebServiceImpService">
+		<wsdl:port binding="tns:LivroWebServiceImpServiceSoapBinding" name="livroWebServicePort">
+			<soap:address location="http://localhost:8080/soa-aplicado/livroWebService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

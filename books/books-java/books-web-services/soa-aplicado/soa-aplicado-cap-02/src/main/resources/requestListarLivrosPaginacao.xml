@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+                  xmlns:app="http://application.server.fernando.com.br/">
+	<!-- Cabecalho -->
+	<soapenv:Header />
+	
+	<!-- Corpo -->
+	<soapenv:Body>
+		<app:listarLivrosPaginacao>
+			<numeroDaPagina>0</numeroDaPagina>
+			<tamanhoDaPagina>10</tamanhoDaPagina>
+		</app:listarLivrosPaginacao>
+	</soapenv:Body>
+	
+</soapenv:Envelope>

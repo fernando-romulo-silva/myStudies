@@ -127,12 +127,10 @@ public class HelloAsyncImpl implements AsyncProvider<Source> {
     public static class Hello_Type {
 
         public String getExtra() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         public String getArgument() {
-            // TODO Auto-generated method stub
             return null;
         }
 

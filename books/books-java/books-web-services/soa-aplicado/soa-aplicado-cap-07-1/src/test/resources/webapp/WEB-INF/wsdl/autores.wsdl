@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Lembrando que estou definindo um webservice neste xml, mas sera gerado somente a infra estrutura eas interfaces -->
+<!-- Logo eu devo implementar com as regras... -->
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                  xmlns:tns="http://fernando.com.br/server/application/autores/v1" 
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="autores" 
+                  targetNamespace="http://fernando.com.br/server/application/autores/v1">
+
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://fernando.com.br/server/application/autores/v1" xmlns:estoque="http://fernando.com.br/core/estoque/v1">
+
+			<!-- importando os namespace dos dados estoque e usuarios -->
+			<xsd:import namespace="http://fernando.com.br/core/estoque/v1" schemaLocation="../schemas/estoque_v1_0.xsd" />
+			<xsd:import namespace="http://fernando.com.br/core/usuarios/v1" schemaLocation="../schemas/usuarios_v1_0.xsd" />
+
+			<!-- Mensagens do web service -->
+			<xsd:element name="listarAutores">
+				<xsd:complexType />
+			</xsd:element>
+
+			<xsd:element name="listarAutoresResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="autor" type="estoque:autor" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="listarAutoresRequest">
+		<wsdl:part element="tns:listarAutores" name="parameters" />
+	</wsdl:message>
+
+	<wsdl:message name="listarAutoresResponse">
+		<wsdl:part element="tns:listarAutoresResponse" name="parameters" />
+	</wsdl:message>
+
+	<!-- Definindo port Type -->
+	<wsdl:portType name="autores">
+		<wsdl:operation name="listarAutores">
+			<wsdl:input message="tns:listarAutoresRequest" />
+			<wsdl:output message="tns:listarAutoresResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="autoresSOAP" type="tns:autores">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+
+		<wsdl:operation name="listarAutores">
+			<soap:operation soapAction="autores/ListarAutores" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<!-- Aqui eu defino o autores -->
+	<wsdl:service name="autores">
+		<wsdl:port binding="tns:autoresSOAP" name="autoresSOAP">
+			<soap:address location="http://localhost:8080/autores" />
+		</wsdl:port>
+	</wsdl:service>
+
+</wsdl:definitions>

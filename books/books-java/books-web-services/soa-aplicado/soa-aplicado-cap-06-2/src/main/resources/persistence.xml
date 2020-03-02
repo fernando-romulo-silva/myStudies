@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
+	<persistence-unit name="soa-aplicadoPU" transaction-type="JTA">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+		<jta-data-source>jdbc/soa-aplicadoDS</jta-data-source>
+
+		<properties>
+			<property name="eclipselink.logging.level" value="INFO" />
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.logging.level.sql" value="FINEST" />
+			<property name="eclipselink.logging.parameters" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"	
+	xmlns:tns="http://fernando.com.br/server/application/autores/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" 
+	xmlns:wsp="http://www.w3.org/ns/ws-policy"
+	name="autores" targetNamespace="http://fernando.com.br/server/application/autores/v1">
+	
+<!-- O receptor da mensagem -->
+<!-- O receptor das mensagens será um web service simples, com duas alterações: --> 
+<!-- O método que receberá o resultado da requisição (ou seja, o callback) não deve pos- --> 
+<!-- suir retorno (ou seja, a declaração output) e a mensagem de entrada deve ser igual à -->	 
+	
+	<wsdl:types>
+		
+		<xsd:schema targetNamespace="http://fernando.com.br/server/application/autores/v1"
+			xmlns:estoque="http://fernando.com.br/core/estoque/v1" >
+			
+			<xsd:import namespace="http://fernando.com.br/core/estoque/v1" schemaLocation="../schemas/estoque_v1_0.xsd" />
+			<xsd:import namespace="http://fernando.com.br/core/usuarios/v1" schemaLocation="../schemas/usuarios_v1_0.xsd" />
+			
+			<xsd:element name="solicitarRelacaoDeAutoresResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="autor" type="estoque:autor" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="solicitarRelacaoDeAutoresResponse">
+		<wsdl:part  element="tns:solicitarRelacaoDeAutoresResponse" name="parameters" />
+	</wsdl:message>
+	
+	<wsdl:portType name="autoresCallback">
+		<wsdl:operation name="solicitarRelacaoDeAutoresCallback">
+			<wsdl:input message="tns:solicitarRelacaoDeAutoresResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="autoresCallbackSOAP" type="tns:autoresCallback">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />	
+		
+		<wsdl:operation name="solicitarRelacaoDeAutoresCallback">
+			
+			<soap:operation	soapAction="" />
+			
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+		</wsdl:operation>		
+	</wsdl:binding>
+	
+	<wsdl:service name="autoresCallback">
+		<wsdl:port binding="tns:autoresCallbackSOAP" name="autoresCallbackSOAP">
+			<soap:address location="http://localhost:8080/soa-aplicado/autoresCallback" />
+		</wsdl:port>		
+	</wsdl:service>
+	
+</wsdl:definitions>

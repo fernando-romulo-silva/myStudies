@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+                  xmlns:app="http://application.server.fernando.com.br/">
+	
+	<soapenv:Header />
+	
+	<soapenv:Body>
+		<app:listarLivros />
+	</soapenv:Body>
+	
+</soapenv:Envelope>

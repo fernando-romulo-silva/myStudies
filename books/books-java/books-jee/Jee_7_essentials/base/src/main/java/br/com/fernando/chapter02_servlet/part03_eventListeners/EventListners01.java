@@ -163,7 +163,6 @@ public class EventListners01 {
     // ==================================================================================================================================================================
     // 5 - The HttpSessionActivationListener is used to listen for events when the session is passivated or activated:
     // You don't need to put @WebListener or web.xml, how use it? 
-    // TODO how it works?
     public static class MyHttpSessionActivationListener implements HttpSessionActivationListener, Serializable {
 
         private static final long serialVersionUID = 1L;

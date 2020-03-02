@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxws-config xmlns="urn:jboss:jbossws-jaxws-config:4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="urn:jboss:jbossws-jaxws-config:4.0 schema/jbossws-jaxws-config_4_0.xsd">
+
+	<endpoint-config>
+		<config-name>Endpoint WS-Security</config-name>
+
+		<property>
+			<property-name>ws-security.callback-handler</property-name>
+			<property-value>br.com.fernando.server.application.security.CallbackSeguranca</property-value>
+		</property>
+	</endpoint-config>
+</jaxws-config>
+
+
+http://java.dzone.com/articles/working-jax-ws-web-services
+
+https://today.java.net/pub/a/today/2006/06/13/web-services-with-jax-ws-2.0.html
+
+http://www.mkyong.com/webservices/jax-ws/deploy-jax-ws-web-services-on-tomcat/
+
+https://www.google.com.br/search?client=ubuntu&channel=fs&q=sun-jaxws.xml+endpoint+glassfish&ie=utf-8&oe=utf-8&gfe_rd=cr&ei=ucyVU66pKIzAgATb_4H4BQ
+
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+	<endpoint name='fromjava' implementation='fromjava.server.AddNumbersImpl' url-pattern='/addnumbers' />
+</endpoints>

@@ -1,0 +1,33 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+
+	<!-- Ao fazermos uma requisao para url='http://localhost:8080/soa-aplicado/livros' eh gerada esta resposta -->
+	<!-- Estou usando o programa Soap Ui para pegar o corpo requisicao! -->
+
+	<S:Body>
+		<ns2:listarLivrosResponse xmlns:ns2="http://application.server.fernando.com.br/">
+			
+			<livro>
+				<anoDePublicacao>2012</anoDePublicacao>
+				<autores>
+					<autor>Paulo Silveira</autor>
+					<autor>Adriano Almeida</autor>
+				</autores>
+				<editora>Casa do Código</editora>
+				<nome>Guia do Programador</nome>
+				<resumo>Vá do "nunca programei" ...</resumo>
+			</livro>
+			
+			<livro>
+				<anoDePublicacao>2012</anoDePublicacao>
+				<autores>
+					<autor>Vinícius Baggio Fuentes</autor>
+				</autores>
+				<editora>Casa do Código</editora>
+				<nome>Ruby on Rails</nome>
+				<resumo>Crie rapidamente aplicações web</resumo>
+			</livro>
+			
+		</ns2:listarLivrosResponse>
+	</S:Body>
+	
+</S:Envelope>

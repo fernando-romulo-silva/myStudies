@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.fernando</groupId>
+	<artifactId>soa-aplicado-cap-05</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>soa-aplicado</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<!-- JEE API -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- LOG DEPENDENCIES -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.6</version>
+		</dependency>
+
+		<!-- EMBEDDED HSQLDB -->
+		<dependency>
+			<groupId>br.com.fernando</groupId>
+			<artifactId>embedded-hsqldb-java-7</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>guava</artifactId>
+					<groupId>com.google.guava</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- PACKAGE EMBEDDED -->
+		<dependency>
+			<groupId>br.com.fernando</groupId>
+			<artifactId>embedded-package-java-7</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>guava</artifactId>
+					<groupId>com.google.guava</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- EMBEDDED GLASSFISH -->
+ 		<dependency>
+			<groupId>br.com.fernando</groupId>
+			<artifactId>embedded-glassfish-java-7</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency> 
+	
+		<dependency>
+			<groupId>br.com.caelum.stella</groupId>
+			<artifactId>caelum-stella-core</artifactId>
+			<version>1.2</version>
+		</dependency>		
+		
+		<!-- Dependências de testes -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- 
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>2.3.2.Final</version>
+			<scope>test</scope>
+		</dependency>
+       -->
+				
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -47,7 +47,6 @@ public class EventListners02 {
     // ==================================================================================================================================================================
     // 6 - The HttpSessionBindingListener is used to listen to events when an object is bound to or unbound from a session:
     // You don't need to put @WebListener or web.xml, how use it?
-    // TODO how it works?
     public class MyHttpSessionBindingListener implements HttpSessionBindingListener {
 
         @Override
@@ -73,7 +72,6 @@ public class EventListners02 {
     // ==================================================================================================================================================================
     // 7 - AsyncListener is used to manage async events such as completed, timed out, or an error.
     // You don't need to put @WebListener or web.xml, how use it?
-    // TODO how it works?
     public static class MyAsyncListener implements AsyncListener {
 
         @Override
@@ -109,7 +107,6 @@ public class EventListners02 {
     // ==================================================================================================================================================================
     // 8 - The ServletRequestListener listens to the events from resources in that request:
     // You don't need to put @WebListener or web.xml, how use it?
-    // TODO how it works?
     public class MyRequestListener implements ServletRequestListener {
 
         @Override

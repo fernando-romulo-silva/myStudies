@@ -1,0 +1,4 @@
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+	<endpoint name="livros" implementation="br.com.fernando.server.application.LivrosService" url-pattern="/livros" />
+	<endpoint name="autores" implementation="br.com.fernando.server.application.AutoresService" url-pattern="/autores" />
+</endpoints>

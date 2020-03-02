@@ -32,7 +32,7 @@ public class ExecuteBatchEJB {
             if (stepExecution.getStepName().equals("myStep")) {
                 final Map<MetricType, Long> metricsMap = BatchTestHelper.getMetricsMap(stepExecution.getMetrics());
 
-                // TODO: Both WildFLy and Payara have a 2 here, but the test originally tested
+                // Both WildFLy and Payara have a 2 here, but the test originally tested
                 // for 1. Needs investigation.
 
                 final long skipCount = metricsMap.get(PROCESS_SKIP_COUNT).longValue();

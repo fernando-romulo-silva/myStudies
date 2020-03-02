@@ -43,6 +43,8 @@ import org.myembedded.pack.EmbeddedWar;
 import org.myembedded.pack.JeeVersion;
 
 public class Transactions04 {
+    
+    // Rollback Transactions in EJB
 
     @Stateful
     @TransactionManagement(value = TransactionManagementType.CONTAINER)

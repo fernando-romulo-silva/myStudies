@@ -38,6 +38,7 @@ import org.myembedded.pack.EmbeddedWar;
 import org.myembedded.pack.JeeVersion;
 
 public class Transactions01 {
+    // https://emmanuelneri.com.br/2016/04/03/abrindo-novas-transacoes-dentro-de-metodos-transacionais/
 
     /**
      * Container-Managed Transaction Demarcation
@@ -59,7 +60,7 @@ public class Transactions01 {
      *  | Asynchronous Method | TX[RE, RN, NS] | TX[RE, RN, NS] | TX[RE, RN, NS] | XX             |  |
      *  +---------------------+----------------+----------------+----------------+----------------+--+
      * 
-     * UT - Unspecifified Transaction Contex
+     * UT - Unspecifified Transaction Context
      * TX - Transaction Context
      * 
      * RN - Requires New 
@@ -71,107 +72,121 @@ public class Transactions01 {
 
     // ==================================================================================================================================================================
     //
-    // The @TransactionManagement annotation is used to declare whether the session bean or message-driven bean uses a bean-managed or container-managed transaction.
+    // The @TransactionManagement annotation is used to declare whether the session
+    // bean or message-driven bean uses a bean-managed or container-managed
+    // transaction.
     // The value of this annotation is either CONTAINER (the default) or BEAN.
     //
-    // A bean may use programmatic transaction in the bean code, which is called a beanmanaged transaction.
+    // A bean may use programmatic transaction in the bean code, which is called a
+    // beanmanaged transaction.
     @Stateless
     @TransactionManagement(TransactionManagementType.BEAN) // Bean Managed Transaction ( BMT )
     public static class AccountSessionBean {
 
-        // A bean-managed transaction requires you to specify @TransactionManagement(BEAN) on the class and use the javax.transaction.UserTransaction interface.
-        @Resource
-        private UserTransaction transaction;
+	// A bean-managed transaction requires you to specify
+	// @TransactionManagement(BEAN) on the class and use the
+	// javax.transaction.UserTransaction interface.
+	@Resource
+	private UserTransaction transaction;
 
-        // Within the business method, a transaction is started with UserTransaction.begin and committed with UserTransaction.commit:
-        public float deposit() throws NotSupportedException, SystemException, SecurityException, IllegalStateException, RollbackException, HeuristicMixedException, HeuristicRollbackException {
+	// Within the business method, a transaction is started with
+	// UserTransaction.begin and committed with UserTransaction.commit:
+	public float deposit() throws NotSupportedException, SystemException, SecurityException, IllegalStateException,
+		RollbackException, HeuristicMixedException, HeuristicRollbackException {
 
-            transaction.begin();
+	    transaction.begin();
 
-            System.out.println("In Transaction!");
+	    System.out.println("In Transaction!");
 
-            transaction.commit();
+	    transaction.commit();
 
-            return 0.0f;
-        }
+	    return 0.0f;
+	}
     }
 
-    // Alternatively, a declarative transaction may be used in which the transactions are managed automatically by the container; this is called a containermanaged transaction.
+    // Alternatively, a declarative transaction may be used in which the
+    // transactions are managed automatically by the container; this is called a
+    // containermanaged transaction.
     // By default, transactions in a bean are container-managed.
     //
-    // Container-managed transaction is the default and does not require you to specify any additional annotations on the class.
-    // The EJB container implements all the low-level transaction protocols, such as the two-phase commit protocol between a transaction manager and a database system
-    // or messaging provider, to honor the transactional semantics. The changes to the underlying resources are all committed or rolled back.
+    // Container-managed transaction is the default and does not require you to
+    // specify any additional annotations on the class.
+    // The EJB container implements all the low-level transaction protocols, such as
+    // the two-phase commit protocol between a transaction manager and a database
+    // system
+    // or messaging provider, to honor the transactional semantics. The changes to
+    // the underlying resources are all committed or rolled back.
     @Stateless
     @TransactionManagement(TransactionManagementType.CONTAINER) // Container Managed Transaction ( CMT )
     public static class UserBean {
 
-        public void showUser() {
-            System.out.println("Show User!");
-        }
+	public void showUser() {
+	    System.out.println("Show User!");
+	}
     }
 
     // ==================================================================================================================================================================
     @WebServlet("/ServletPrincipal")
     public static class ServletPrincipal extends HttpServlet {
 
-        private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-        @EJB
-        private AccountSessionBean accountSessionBean;
+	@EJB
+	private AccountSessionBean accountSessionBean;
 
-        @EJB
-        private UserBean userBean;
+	@EJB
+	private UserBean userBean;
 
-        @Override
-        protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
 
-            try {
+	    try {
 
-                accountSessionBean.deposit();
+		accountSessionBean.deposit();
 
-                userBean.showUser();
+		userBean.showUser();
 
-            } catch (final Exception e) {
-                throw new ServletException(e);
-            }
-        }
+	    } catch (final Exception e) {
+		throw new ServletException(e);
+	    }
+	}
     }
 
     // ==================================================================================================================================================================
     public static void main(final String[] args) throws Exception {
-        startVariables();
+	startVariables();
 
-        try (final MyEmbeddedJeeContainer embeddedJeeServer = new MyEmbeddedJeeContainer()) {
+	try (final MyEmbeddedJeeContainer embeddedJeeServer = new MyEmbeddedJeeContainer()) {
 
-            final EmbeddedWar war = new EmbeddedWar(EMBEDDED_JEE_TEST_APP_NAME);
-            war.addWebInfFiles(EmbeddedResource.add("beans.xml", "src/main/resources/beans.xml"));
-            war.addClasses(ServletPrincipal.class);
+	    final EmbeddedWar war = new EmbeddedWar(EMBEDDED_JEE_TEST_APP_NAME);
+	    war.addWebInfFiles(EmbeddedResource.add("beans.xml", "src/main/resources/beans.xml"));
+	    war.addClasses(ServletPrincipal.class);
 
-            final EmbeddedEjb ejb = new EmbeddedEjb(EMBEDDED_JEE_TEST_APP_NAME);
-            ejb.addMetaInfFiles(EmbeddedResource.add("beans.xml", "src/main/resources/beans.xml"));
-            ejb.addClasses(AccountSessionBean.class, UserBean.class);
+	    final EmbeddedEjb ejb = new EmbeddedEjb(EMBEDDED_JEE_TEST_APP_NAME);
+	    ejb.addMetaInfFiles(EmbeddedResource.add("beans.xml", "src/main/resources/beans.xml"));
+	    ejb.addClasses(AccountSessionBean.class, UserBean.class);
 
-            final EmbeddedEar ear = new EmbeddedEar(EMBEDDED_JEE_TEST_APP_NAME, JeeVersion.JEE_7);
-            ear.addModules(war);
-            ear.addModules(ejb);
+	    final EmbeddedEar ear = new EmbeddedEar(EMBEDDED_JEE_TEST_APP_NAME, JeeVersion.JEE_7);
+	    ear.addModules(war);
+	    ear.addModules(ejb);
 
-            final File earFile = ear.exportToFile(APP_FILE_TARGET);
+	    final File earFile = ear.exportToFile(APP_FILE_TARGET);
 
-            embeddedJeeServer.start(HTTP_PORT);
+	    embeddedJeeServer.start(HTTP_PORT);
 
-            embeddedJeeServer.deploy(EMBEDDED_JEE_TEST_APP_NAME, earFile.getAbsolutePath());
+	    embeddedJeeServer.deploy(EMBEDDED_JEE_TEST_APP_NAME, earFile.getAbsolutePath());
 
-            final HttpClient httpClient = HttpClientBuilder.create().build();
-            final HttpResponse response = httpClient.execute(new HttpGet("http://localhost:" + HTTP_PORT + "/" + EMBEDDED_JEE_TEST_APP_NAME + "/ServletPrincipal"));
+	    final HttpClient httpClient = HttpClientBuilder.create().build();
+	    final HttpResponse response = httpClient.execute(new HttpGet(
+		    "http://localhost:" + HTTP_PORT + "/" + EMBEDDED_JEE_TEST_APP_NAME + "/ServletPrincipal"));
 
-            System.out.println(response);
+	    System.out.println(response);
 
-        } catch (final IOException ex) {
-            System.out.println(ex);
-        }
+	} catch (final IOException ex) {
+	    System.out.println(ex);
+	}
 
-        downVariables();
+	downVariables();
     }
 
 }

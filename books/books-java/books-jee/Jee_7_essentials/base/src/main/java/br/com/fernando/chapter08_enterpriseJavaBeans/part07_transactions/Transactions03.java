@@ -54,9 +54,6 @@ import org.myembedded.pack.JeeVersion;
 public class Transactions03 {
 
     // ==================================================================================================================================================================
-    // https://examples.javacodegeeks.com/enterprise-java/ejb3/transactions/ejb-transaction-management-example/
-    //
-    //
     // Transaction Management Type in EJB
     //
     // The Enterprise Bean Provider and the client application programmer are not

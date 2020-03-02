@@ -1,0 +1,55 @@
+<xs:schema xmlns:tns="http://application.server.fernando.com.br/" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" 
+           targetNamespace="http://application.server.fernando.com.br/">
+
+	<!-- Quem faz a conversao Java/Xml eh o JAXB -->
+	<!-- Ele utilza a classe Livro, as classes sao mapeadas para 'complexTypes', nao para xml direto -->
+
+	<!-- As mensagens -->
+	<xs:element name="listarLivros" type="tns:listarLivros" />
+	<xs:element name="listarLivrosPaginacao" type="tns:listarLivrosPaginacao" />
+	<xs:element name="listarLivrosPaginacaoResponse" type="tns:listarLivrosPaginacaoResponse" />
+	<xs:element name="listarLivrosResponse" type="tns:listarLivrosResponse" />
+
+
+	<xs:complexType name="listarLivrosPaginacao">
+		<xs:sequence>
+			<xs:element name="numeroDaPagina" type="xs:int" />
+			<xs:element name="tamanhoDaPagina" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="listarLivrosPaginacaoResponse">
+		<xs:sequence>
+			<xs:element name="livro" type="tns:livro" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="listarLivros">
+		<xs:sequence />
+	</xs:complexType>
+	
+	<xs:complexType name="listarLivrosResponse">
+		<xs:sequence>
+			<xs:element name="livro" type="tns:livro" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>	
+
+	<!-- Os dados da mensagem -->
+	<xs:complexType name="livro">
+		<xs:sequence>
+			<xs:element name="anoDePublicacao" type="xs:int" minOccurs="0" />
+			<xs:element name="autores" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="autor" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="editora" type="xs:string" minOccurs="0" />
+			<xs:element name="nome" type="xs:string" minOccurs="0" />
+			<xs:element name="resumo" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

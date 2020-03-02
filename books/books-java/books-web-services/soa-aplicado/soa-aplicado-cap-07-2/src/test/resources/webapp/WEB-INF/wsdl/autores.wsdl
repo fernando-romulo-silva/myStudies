@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Agora adicionamos duas definitions novas a wsam e wsp -->
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                  xmlns:tns="http://fernando.com.br/server/application/autores/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"                  
+                  xmlns:wsp="http://www.w3.org/ns/ws-policy" name="autores"
+                  targetNamespace="http://fernando.com.br/server/application/autores/v1">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://fernando.com.br/server/application/autores/v1" xmlns:estoque="http://fernando.com.br/core/estoque/v1">
+
+			<!-- importando os namespace -->
+			<xsd:import namespace="http://fernando.com.br/core/estoque/v1" schemaLocation="../schemas/estoque_v1_0.xsd" />
+			<xsd:import namespace="http://fernando.com.br/core/usuarios/v1" schemaLocation="../schemas/usuarios_v1_0.xsd" />
+
+			<xsd:element name="listarAutores">
+				<xsd:complexType />
+			</xsd:element>
+
+			<xsd:element name="listarAutoresResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="autor" type="estoque:autor" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<!-- Novas mensagens para o webservice -->
+			<xsd:element name="solicitarRelacaoDeAutores">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="desde" type="xsd:date" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="solicitarRelacaoDeAutoresResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="autor" type="estoque:autor" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>			
+
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="listarAutoresRequest">
+		<wsdl:part element="tns:listarAutores" name="parameters" />
+	</wsdl:message>
+
+	<wsdl:message name="listarAutoresResponse">
+		<wsdl:part element="tns:listarAutoresResponse" name="parameters" />
+	</wsdl:message>
+	
+	<wsdl:message name="solicitarRelacaoDeAutoresRequest">
+		<wsdl:part element="tns:solicitarRelacaoDeAutores" name="parameters" />
+	</wsdl:message>
+	
+	<wsdl:message name="solicitarRelacaoDeAutoresResponse">
+		<wsdl:part element="tns:solicitarRelacaoDeAutoresResponse" name="parameters" />
+	</wsdl:message>	
+
+	<wsdl:portType name="autores">
+		<!-- definição de listagem de autores, que permanece inalterada -->
+		<wsdl:operation name="listarAutores">
+			<wsdl:input message="tns:listarAutoresRequest" />
+			<wsdl:output message="tns:listarAutoresResponse" />
+		</wsdl:operation>
+
+		<!-- mensagems assincronas sao definidas assim -->
+		<wsdl:operation name="solicitarRelacaoDeAutores">
+			<wsdl:input message="tns:solicitarRelacaoDeAutoresRequest" wsam:Action="autores/solicitarRelacaoDeAutores" />
+			<wsdl:output message="tns:solicitarRelacaoDeAutoresResponse" wsam:Action="autores/solicitarRelacaoDeAutoresResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="autoresSOAP" type="tns:autores">
+		
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+
+		<wsdl:operation name="listarAutores">
+			<soap:operation soapAction="autores/ListarAutores" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="solicitarRelacaoDeAutores">
+			<!-- Note que a definição do atributo soapAction , aqui, deve ser mantida vazia. --> 
+			<!-- Isto porque pode haver conflitos entre esta informação e as definições de  WS-Addressing. -->
+			<soap:operation soapAction="" />
+			
+			<wsaw:UsingAddressing required="true" />
+			
+			<wsp:PolicyReference URI="#WSAddressingAutoresSoapBinding_WSAM_Addressing_Policy" />
+			
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			
+		</wsdl:operation>		
+		
+	</wsdl:binding>
+
+	<wsdl:service name="autores">
+		<wsdl:port binding="tns:autoresSOAP" name="autoresSOAP">
+			<soap:address location="http://localhost:8080/soa-aplicado/autores" />
+		</wsdl:port>
+	</wsdl:service>
+	
+	<!-- Assim como em WS-Security , WS-Addressing também requer a definição -->
+    <!-- de uma política para uso. No entanto, esta é bem mais simples: basta declarar o -->
+    <!--  elemento Addressing na política --> 
+	
+	<wsp:Policy
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		wsu:Id="WSAddressingAutoresSoapBinding_WSAM_Addressing_Policy">
+		
+		<wsam:Addressing wsp:Optional="true">
+			<wsp:Policy />
+		</wsam:Addressing>
+	</wsp:Policy>	
+
+</wsdl:definitions>

@@ -291,7 +291,7 @@ public class TransactionsLocking02Optimistic {
 		@Override
 		public void run() {
 		    try {
-			firstService.updateMovieLock(3, "INCEPTION UR");
+			firstService.updateMovieLock(3, "FirstService INCEPTION UR");
 		    } catch (Exception e) { // Should throw an javax.persistence.OptimisticLockException? The Exception is wrapped around an javax.ejb.EJBException
 			System.out.println("OptimisticLockException in firstService.update " + e.getClass());
 		    }
@@ -323,7 +323,7 @@ public class TransactionsLocking02Optimistic {
 		public void run() {
 
 		    try {
-			secondService.updateMovie(3, "New Movie");
+			secondService.updateMovie(3, "SecondService New Movie");
 		    } catch (Exception e) { // Should throw an javax.persistence.OptimisticLockException? The Exception is wrapped around an javax.ejb.EJBException
 			System.out.println("OptimisticLockException in secondService.update " + e.getClass());
 		    }

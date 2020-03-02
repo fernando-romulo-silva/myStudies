@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Este XML Schema é feito antes do desenvolvimento do sistema. Isto porque  -->
+<!-- o padrão canonico dá prioridade para a interação entre as aplicações envolvidas, ao invés de   -->
+<!-- preferir a facilidade da geração de documentos de forma automatizada. Isso fará   -->
+<!-- com que o desenvolvedor tenha pleno controle das interações necessárias entre os   -->
+<!-- serviços, reduzindo custos de transformações de dados.   -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://fernando.com.br/core/estoque/v1"
+        xmlns:usuarios="http://fernando.com.br/core/usuarios/v1" 
+        targetNamespace="http://fernando.com.br/core/estoque/v1">
+        
+   <annotation>
+      <documentation>
+   	     Schema canônico para o sistema de estoque, versão 1.0
+   	  </documentation>   
+   </annotation>
+   
+   <import 
+      namespace="http://fernando.com.br/core/usuarios/v1" 
+      schemaLocation="usuarios_v1_0.xsd" />
+   
+   <complexType name="autor">
+      <sequence>
+      	<element name="id" type="long" minOccurs="0"/>
+      	<element name="dataNascimento" type="date" />
+      	<element name="nome" type="string" />
+      	<element name="usuario" type="usuarios:usuario" />
+      </sequence>
+   </complexType>
+</schema>
