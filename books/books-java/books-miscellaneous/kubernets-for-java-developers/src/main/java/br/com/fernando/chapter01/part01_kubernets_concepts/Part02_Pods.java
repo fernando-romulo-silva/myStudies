@@ -1,7 +1,7 @@
 package br.com.fernando.chapter01.part01_kubernets_concepts;
 
 public class Part02_Pods {
-    
+
     // Pod
     //
     // A pod is the smallest deployable unit that can be created, scheduled, and managed.
@@ -14,6 +14,26 @@ public class Part02_Pods {
     // For example, a WildFly pod can be defined with the configuration file shown in:
     /**
      * <pre>
+     * 
+     * apiVersion: v1
+     * kind: Pod
+     * metadata:
+     *   name: wildfly-pod  
+     *   labels:
+     *     name: wildfly-pod
+     * spec:
+     *   containers:
+     *   - name: wildfly
+     *     image: jboss/wildfly:10.1.0.Final
+     *     ports:
+     *     - containerPort: 8080
+     * 
+     * </pre>
+     */
+
+    /**
+     * <pre>
+     * 
      * apiVersion: v1 -> defines the version of the Kubernetes API. This is now fixed at v1 and allows for the API to evolve in the future.
      * 
      * kind: Pod -> defines the type of this resource—in this example, that value is Pod.
@@ -39,8 +59,10 @@ public class Part02_Pods {
      *     ports: ->  define the list of ports to expose from the container. WildFly runs on port 8080, and thus that port is listed here. 
      *                This allows other resources in Kubernetes to access this container on this port.
      *     - containerPort: 8080
+     * 
      * </pre>
      */
     //
-    //
+    // In addition, restartPolicy can be used to define the restart policy of all containers within the pod.
+    // volumes[] can be used to list volumes that can be mounted by containers belonging to the pod.
 }
