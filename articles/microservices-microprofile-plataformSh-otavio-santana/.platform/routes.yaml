@@ -1,0 +1,27 @@
+# The routes of the project.
+#
+# Each route describes how an incoming URL is going
+# to be processed by Platform.sh.
+
+"https://{default}/conferences":
+    id: conference
+    type: upstream
+    upstream: "conference:http"
+
+"https://{default}/sessions":
+    id: session
+    type: upstream
+    upstream: "session:http"
+
+"https://{default}/speakers":
+    id: speaker
+    type: upstream
+    upstream: "speaker:http"
+
+"https://{default}/":
+  type: upstream
+  upstream: "client:http"
+
+"https://www.{default}/":
+  type: redirect
+  to: "https://{default}/"

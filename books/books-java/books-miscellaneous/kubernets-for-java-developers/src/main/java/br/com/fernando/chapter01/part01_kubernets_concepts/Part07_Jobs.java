@@ -39,4 +39,8 @@ public class Part07_Jobs {
     //
     // Parallel jobs: A predefined number of pods successfully completes. 
     // Alternatively, a work queue pattern can be implemented where pods can coordinate among themselves or with an external service to determine what each should work on.
+    //
+    // Cron Jobs: CronJob allows you to manage time-based jobs. Run jobs once at a specified point in time and Run jobs repeatedly at a specified point in time.
+
+
 }

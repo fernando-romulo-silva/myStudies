@@ -17,7 +17,7 @@ public class Part01_Cluster {
      *                             
      *         
      * |======================================|            |======================================|            |======================================|                    
-     * |                 Node                 |            |                 Node                 |            |                 Node                 |     
+     * |                 Node (worker)        |            |                 Node (worker)        |            |                 Node (worker)        |     
      * |                                      |            |                                      |            |                                      |     
      * |  Kubelet    Proxy                    |            |  Kubelet    Proxy                    |            |  Kubelet    Proxy                    |     
      * |                                      |            |                                      |            |                                      |     
