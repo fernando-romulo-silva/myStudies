@@ -1,4 +1,4 @@
-package br.com.fernando.chapter01.part01_kubernets_concepts;
+package br.com.fernando.chapter01.part06_services;
 
 public class Part06_Services {
 

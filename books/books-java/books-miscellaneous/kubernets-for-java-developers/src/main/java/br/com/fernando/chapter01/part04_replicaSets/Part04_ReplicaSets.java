@@ -1,4 +1,4 @@
-package br.com.fernando.chapter01.part01_kubernets_concepts;
+package br.com.fernando.chapter01.part04_replicaSets;
 
 public class Part04_ReplicaSets {
 

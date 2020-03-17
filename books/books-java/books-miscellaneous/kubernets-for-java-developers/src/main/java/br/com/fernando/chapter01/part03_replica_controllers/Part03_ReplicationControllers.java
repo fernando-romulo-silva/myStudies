@@ -1,4 +1,4 @@
-package br.com.fernando.chapter01.part01_kubernets_concepts;
+package br.com.fernando.chapter01.part03_replica_controllers;
 
 public class Part03_ReplicationControllers {
 

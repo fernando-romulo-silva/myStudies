@@ -2,6 +2,11 @@ package br.com.fernando.chapter00_dashboardMenu.part01_overall;
 
 public class Part00_Architecture {
 
+    // Service: A service can be defined as a logical set of pods.
+    // It can be defined as an abstraction on the top of the pod which provides a single IP address and DNS name by which pods can be accessed.
+    // With Service, it is very easy to manage load balancing configuration.
+    // It helps pods to scale very easily.Types: ClusterIP, Load Balancer, NodePort, ExternalName
+    //
     // A Kubernetes cluster is a set of physical or virtual machines and other infrastructure resources that are used to run your applications.
     //
     // Each machine is called a node.
@@ -34,6 +39,9 @@ public class Part00_Architecture {
     //
     // Docker Container: Docker Engine is the container runtime running on each node.
     // It understands the Docker image format and knows how to run Docker containers.
+    //
+    //
+    //
 
     /**
      * <pre>
@@ -42,11 +50,11 @@ public class Part00_Architecture {
      *                                                                                           |
      *                                                                                           |
      *                                                                                           V                                                                          
-     *                                                                                |=====================|
-     *                                                                                |                     |
-     *                                                                                |    Load Balancer    |
-     *                                                                                |                     | 
-     *                                                                                |=====================|  
+     *                                                                                |======================|
+     *                                                                                |                      |
+     *                                                                                |       Service        |
+     *                                                                                |                      |
+     *                                                                                |======================|  
      *                                                                                             +    +
      *                                                                                             +    +++++++++++++++++++++++++++++++++++
      *                                                                                             +                                      +
