@@ -1,4 +1,4 @@
-package br.com.fernando.chapter01.part02_Pods;
+package br.com.fernando.chapter01_kubernets_concepts.part02_Pods;
 
 public class Part02_Pods {
 

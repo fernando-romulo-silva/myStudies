@@ -1,4 +1,4 @@
-package br.com.fernando.chapter01.part01_kubernets_concepts;
+package br.com.fernando.chapter01_kubernets_concepts.part01_kubernets_concepts;
 
 public class Part01_Intro {
 

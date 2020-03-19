@@ -1,4 +1,4 @@
-package br.com.fernando.chapter01.part07_jobs;
+package br.com.fernando.chapter01_kubernets_concepts.part07_jobs;
 
 public class Part07_Jobs {
 

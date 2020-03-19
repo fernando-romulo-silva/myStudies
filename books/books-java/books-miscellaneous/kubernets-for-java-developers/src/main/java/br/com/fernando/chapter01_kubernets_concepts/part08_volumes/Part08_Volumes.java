@@ -1,4 +1,4 @@
-package br.com.fernando.chapter01.part08_volumes;
+package br.com.fernando.chapter01_kubernets_concepts.part08_volumes;
 
 public class Part08_Volumes {
 

@@ -1,4 +1,4 @@
-package br.com.fernando.chapter01.part05_deployments;
+package br.com.fernando.chapter01_kubernets_concepts.part05_deployments;
 
 public class Part05_Deployments {
     
