@@ -13,5 +13,9 @@ public class Part04_Config_And_Storage {
     // A claim is a block storage volume in the underlying IaaS provider that's durable and offers persistent storage, enabling your data to remain intact, regardless of
     // whether the containers that the storage is connected to are terminated.
     //
-    // * Secretes: Secrets store sensitive data like passwords, tokens, or keys. They may contain one or more key value pairs.
+    // What is the difference between persistent volume (PV) and persistent volume claim (PVC) in simple terms?
+    // So a persistent volume (PV) is the "physical" volume on the host machine that stores your persistent data. 
+    // A persistent volume claim (PVC) is a request for the platform to create a PV for you, and you attach PVs to your pods via a PVC.
+    //
+    // * Secretes: Secrets store sensitive data like passwords, tokens, or keys. They may contain one or more key value pairs.}
 }

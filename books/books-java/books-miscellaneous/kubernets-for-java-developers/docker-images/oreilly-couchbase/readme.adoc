@@ -1,0 +1,7 @@
+= Pre-configured Couchbase Docker Container
+
+These are the artifacts to create a pre-configured Couchbase Docker image.
+
+== Build the image
+
+$ docker build -t fernando/oreilly-couchbase .

@@ -28,6 +28,7 @@ public class Part03_Container {
     //
     // $ docker stop $(docker ps -a -q)
     //
+    //
     // To remove a container, you can just use the docker rm command:
     //
     // $ docker rm $(docker ps -a -q -f status=exited)

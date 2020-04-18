@@ -1,0 +1,26 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+   name: couchbase-pv
+spec:
+   storageClassName: standard
+   capacity:
+      storage: 1Gi
+   accessModes:
+   - ReadWriteOnce # the volume can be mounted as read-write by a single node  (minikube supports only it)
+# ReadOnlyMany – the volume can be mounted read-only by many nodes
+# ReadWriteMany – the volume can be mounted as read-write by many nodes
+   hostPath:
+      path: /data/pv-couchbase/ # The directory on the cluster’s Node.
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+   name: couchbase-pvc
+spec:
+   storageClassName: standard
+   accessModes:
+   - ReadWriteOnce
+   resources:
+      requests:
+         storage: 1Gi

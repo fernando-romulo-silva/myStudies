@@ -1,0 +1,77 @@
+apiVersion: v1
+kind: Service
+metadata:
+   name: couchbase-service
+spec:
+   selector:
+      app: couchbase-rc-pod
+   ports:
+   -  name: admin
+      port: 8091
+   -  name: views
+      port: 8092
+   -  name: query
+      port: 8093
+   -  name: memcached
+      port: 11210
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+   name: couchbase
+spec:
+   selector:
+      matchLabels:
+         app: couchbase-rc-pod
+   serviceName: couchbase
+   replicas: 3
+   template:
+      metadata:
+         labels:
+            app: couchbase-rc-pod
+      spec:
+         terminationGracePeriodSeconds: 0
+         containers:
+         -  name: couchbase
+            image: arungupta/couchbase:k8s-statefulset
+            ports:
+            -  containerPort: 8091
+            volumeMounts:
+            -  name: couchbase-data
+               mountPath: /opt/couchbase/var
+            env:
+            -  name: COUCHBASE_MASTER
+               value: 'couchbase-0.couchbase.default.svc.cluster.local'
+            -  name: AUTO_REBALANCE
+               value: 'false'
+            -  name: COUCHBASE_USERNAME
+               value: 'admin'
+            -  name: COUCHBASE_PASSWORD
+               value: '123456'   
+                   
+   volumeClaimTemplates:
+   -  metadata:
+         name: couchbase-data
+      spec:
+         accessModes:
+         - ReadWriteOnce
+         resources:
+            requests:
+               storage: 1Gi
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+   name: bootiful-couchbase
+   labels:
+      name: bootiful-couchbase-pod
+spec:
+   template:
+      metadata:
+         name: bootiful-couchbase-pod
+      spec:
+         containers:
+         -  name: bootiful-couchbase
+            image: fernando/bootiful-couchbase-cluster
+            imagePullPolicy: IfNotPresent
+         restartPolicy: Never               

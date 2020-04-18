@@ -6,7 +6,7 @@ public class part01Networking {
     //
     // There are three different network types Docker delivers out of the box. To list them, execute the docker network ls command:
     //
-    // docker network ls
+    // $ docker network ls
     //
     //
     // There are tree types:

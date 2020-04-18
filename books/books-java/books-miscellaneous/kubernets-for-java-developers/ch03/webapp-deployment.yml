@@ -14,4 +14,3 @@ spec:
         image: arungupta/wildfly-app:1
         ports:
         - containerPort: 8080
-

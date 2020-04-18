@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+   name: couchbase-service
+spec:
+   selector:
+      app: couchbase-rc-pod # (1) you need repeat the app selector (couchbase-rc-pod) on the pod that will use it
+   ports:
+   -  name: admin
+      port: 8091
+   -  name: views
+      port: 8092
+   -  name: query
+      port: 8093
+   -  name: memcached
+      port: 11210
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+   name: couchbase-rc
+spec:
+   replicas: 1
+   template:
+      metadata:
+         labels:
+            app: couchbase-rc-pod # (2) Same on the service
+      spec:
+         containers:
+         -  name: couchbase
+            image: arungupta/oreilly-couchbase # fernando/oreilly-couchbase don't work :(
+            ports:
+            -  containerPort: 8091
+            -  containerPort: 8092
+            -  containerPort: 8093
+            -  containerPort: 11210
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+   name: bootiful-couchbase
+   labels:
+      name: bootiful-couchbase-pod
+spec:
+   template:
+      metadata:
+         name: bootiful-couchbase-pod
+      spec:
+         containers:
+         -  name: bootiful-couchbase
+            image: fernando/bootiful-couchbase
+            imagePullPolicy: IfNotPresent
+         restartPolicy: Never               
