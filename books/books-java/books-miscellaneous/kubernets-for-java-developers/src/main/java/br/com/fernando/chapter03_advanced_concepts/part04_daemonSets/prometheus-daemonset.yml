@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Service
+metadata:
+   name: prom-exporter
+spec:
+   selector:
+      app: prom-exporter
+   ports:
+   -  name: http
+      port: 9100
+      nodePort: 31672
+      protocol: TCP
+   type: NodePort
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+   name: prom-exporter
+   labels:
+      app: wildfly # any Pods with matching labels are included in this Daemon Set
+      tier: monitor
+spec:
+   selector:
+      matchLabels:
+         name: prom-exporter
+   template:
+      metadata:
+         labels:
+            tier: monitoring
+            name: prom-exporter
+      spec:
+         containers:
+         -  name: prometheus
+            image: prom/node-exporter
+            ports:
+            -  containerPort: 9100
+               protocol: TCP
+               name: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: wildfly
+spec:
+   selector:
+      matchLabels:
+         app: wildfly
+   template:
+      metadata:
+         labels:
+            app: wildfly
+      spec:
+         containers:
+         -  name: wildfly
+            image: jboss/wildfly
+            ports:
+            -  containerPort: 8080

@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+   name: my-namespace # 
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+   name: quota
+   namespace: my-namespace
+spec:
+   hard:
+     # cpu: '8' don't work minikube
+     # memory: 8Gi don't work minikube
+      pods: '10'
+      replicationcontrollers: '20'
+      services: '5'
+---
+apiVersion: v1
+kind: Service
+metadata:
+   name: wildfly-service
+   namespace: my-namespace
+spec:
+   selector:
+      app: wildfly
+   ports:
+   -  name: web
+      port: 8080
+---      
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: wildfly   
+   namespace: my-namespace
+spec:
+   selector:
+      matchLabels:
+         app: wildfly
+   replicas: 2         
+   template:
+      metadata:
+         labels:
+            app: wildfly
+      spec:
+         containers:
+         -  name: wildfly
+            image: jboss/wildfly
+            ports:
+            -  containerPort: 8080

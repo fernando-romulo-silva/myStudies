@@ -5,6 +5,7 @@ metadata:
 spec:
    selector:
       app: couchbase-rc-pod # (1) you need repeat the app selector (couchbase-rc-pod) on the pod that will use it
+   type: NodePort # For minikube        
    ports:
    -  name: admin
       port: 8091
@@ -14,6 +15,7 @@ spec:
       port: 8093
    -  name: memcached
       port: 11210
+    
 ---
 apiVersion: v1
 kind: ReplicationController

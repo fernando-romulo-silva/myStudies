@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: wildfly
+spec:
+   selector:
+      matchLabels:
+         app: wildfly
+   template:
+      metadata:
+         labels:
+            app: wildfly
+      spec:
+         containers:
+         -  name: wildfly
+            image: jboss/wildfly
+            ports:
+            -  containerPort: 8080
+            livenessProbe:
+               httpGet: # an http probe
+                  path: /index.html
+                  port: 8080
+               initialDelaySeconds: 30
+               timeoutSeconds: 1
+            readinessProbe:
+               exec:
+                  command:
+                  - /bin/sh
+                  - -c
+                  - /opt/jboss/wildfly/bin/jboss-cli.sh --connect --commands='ls deployment' | grep 'hello.war'

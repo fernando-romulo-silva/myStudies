@@ -22,13 +22,13 @@ metadata:
 spec:
    selector:
       matchLabels:
-         app: couchbase-rc-pod
+         app: couchbase-rc-pod # (1) has to match .spec.template.metadata.labels
    serviceName: couchbase
-   replicas: 3
+   replicas: 3  # by default is 1
    template:
       metadata:
          labels:
-            app: couchbase-rc-pod
+            app: couchbase-rc-pod # (1) has to match .spec.selector.matchLabels
       spec:
          terminationGracePeriodSeconds: 0
          containers:
