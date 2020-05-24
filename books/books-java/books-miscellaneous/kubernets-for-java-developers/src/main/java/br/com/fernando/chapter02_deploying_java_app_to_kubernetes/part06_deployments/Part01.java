@@ -1,4 +1,4 @@
-package br.com.fernando.chapter02_deploying_java_app_to_kubernetes.part05_deployments;
+package br.com.fernando.chapter02_deploying_java_app_to_kubernetes.part06_deployments;
 
 public class Part01 {
 

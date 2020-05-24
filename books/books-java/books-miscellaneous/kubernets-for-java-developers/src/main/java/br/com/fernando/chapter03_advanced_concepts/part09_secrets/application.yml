@@ -1,0 +1,33 @@
+apiVersion: v1 
+kind: Secret 
+metadata:
+  name: mysecret
+  resourceVersion: "164619"
+type: Opaque  
+data:
+  username: YWRtaW4= # echo -n 'admin' | base64
+  password: MWYyZDFlMmU2N2Rm # echo -n '1f2d1e2e67df' | base64
+stringData:
+  username: administrator
+---    
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: pod-env-sec 
+spec:
+  containers:
+    - name: command-demo-container
+      image: debian
+      command: ["printenv"]
+      args: ["SECRET_USERNAME", "|", "base64", "--decode"]
+      env: # Define the environment variable
+        - name: SECRET_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: username
+        - name: SECRET_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: password

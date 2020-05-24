@@ -2,10 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
    name: couchbase-service
+   annotations:
+     service.beta.kubernetes.io/oci-load-balancer-ssl-ports: "443"
+     service.beta.kubernetes.io/oci-load-balancer-tls-secret: ssl-certificate-secret
+     service.beta.kubernetes.io/oci-load-balancer-connection-idle-timeout: 90   
 spec:
    selector:
-      app: couchbase-rc-pod # (1) you need repeat the app selector (couchbase-rc-pod) on the pod that will use it
-   type: NodePort       
+      app: couchbase-rc-pod
+   type: LoadBalancer # LoadBalancer (type: LoadBalancer) that balances http traffic on port 8091, 8092, 8093, 11210 for the couchbase app.      
    ports:
    -  name: admin
       port: 8091
@@ -26,11 +30,11 @@ spec:
    template:
       metadata:
          labels:
-            app: couchbase-rc-pod # (2) Same on the service
+            app: couchbase-rc-pod
       spec:
          containers:
          -  name: couchbase
-            image: arungupta/oreilly-couchbase # fernando/oreilly-couchbase don't work :(
+            image: arungupta/oreilly-couchbase
             ports:
             -  containerPort: 8091
             -  containerPort: 8092
