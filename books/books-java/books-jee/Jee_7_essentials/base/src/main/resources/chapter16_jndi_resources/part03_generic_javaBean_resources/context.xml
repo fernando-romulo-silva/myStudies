@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+        
+	 <Resource name="bean/MyBeanFactory" auth="Container"                                                                
+	           type="br.com.fernando.chapter16_jndi_resources.part03_generic_javaBean_resources.Part01$MyBean"           
+	           factory="br.com.fernando.chapter16_jndi_resources.part03_generic_javaBean_resources.Part01$MyBeanFactory"   
+	           bar="23"/>                                                                                         
+	                          
+</Context>

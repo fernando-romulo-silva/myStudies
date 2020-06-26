@@ -215,15 +215,19 @@ public class PortableGlobalJndiNames01 {
     //
     // The ejb-jar file may be deployed by itself or packaged within an .ear file. The beans packaged in this ejb-jar can be accessed remotely.
     //
+    //
+    //
     // You can access this EJB using a portable global JNDI name with the following syntax:
     //
     // java:global[/<app-name>]/<module-name>/<bean-name>[!<fully-qualified-interface-name>]
     //
     // <app-name> applies only if the session bean is packaged with an .ear file.
     //
-    // <module-name> is the name of the module in which the session bean is packaged.
+    // <module-name> is the name of the module in which the session bean is jar packaged.
     //
     // <bean-name> is the ejb-name of the enterprise bean.
+    //
+    //
     //
     // If the bean exposes only one client interface (or alternatively has only a no-interface view), the bean is also exposed with an additional JNDI
     // name using the following syntax:
