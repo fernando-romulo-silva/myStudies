@@ -3,11 +3,11 @@ package br.com.fernando.chapter16_jndi_resources.part02_resources;
 public class Part01 {
     // Configuring Java Resources
     //
-    // A resource reference is an element in a deployment descriptor that identifies the component’s coded name for the resource.
+    // A resource reference is an element in a deployment descriptor on the server (or aplication) that identifies the component’s coded name for the resource.
     //
-    // For Wildfly is standalone.xml;
-    // For Tomcat is contex.xml;
-    // For Glassfish is domain.xml;
+    // For Wildfly is standalone.xml (context.xml);
+    // For Tomcat is contex.xml (contex.xml);
+    // For Glassfish is domain.xml (glassfish-resources.xml);
     //
     //
     // For example, jdbc/SavingsAccountDB. More specifically, the coded name references a connection factory for the resource.
@@ -29,5 +29,4 @@ public class Part01 {
     // JDBC data source (java:comp/env/jdbc)
     // JavaMail session (java:comp/env/mail)
     // JavaBeans resource (java:comp/env/bean)
-    //
 }
