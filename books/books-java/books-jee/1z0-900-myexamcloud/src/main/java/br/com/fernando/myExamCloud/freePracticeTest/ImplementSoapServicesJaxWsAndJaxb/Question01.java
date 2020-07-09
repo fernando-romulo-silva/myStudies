@@ -26,10 +26,4 @@ public class Question01 {
    // HTTP based sessions The session management mechanism must support HTTP cookies and URL rewriting.
    // 
    // SOAP based sessions The session management mechanism must support SOAP based session information.
-    
-    
-    
-    
-    
-    
 }

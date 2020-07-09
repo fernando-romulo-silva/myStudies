@@ -28,5 +28,4 @@ public class Question03 {
     //
     // The class javax.xml.bind.JAXBContext provides a framework for validating, marshaling and un-marshaling XML into (and from) 
     // Java objects and  it is the entry point to the JAXB API.
-
 }

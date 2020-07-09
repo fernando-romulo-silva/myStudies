@@ -19,5 +19,4 @@ public class Question02 {
     // JAX-RS works with Enterprise JavaBeans technology (enterprise beans) and Contexts and Dependency Injection for the Java EE Platform (CDI).
     //
     // The @Path annotation can be used with stateless session and singleton session beans.
-   
 }
