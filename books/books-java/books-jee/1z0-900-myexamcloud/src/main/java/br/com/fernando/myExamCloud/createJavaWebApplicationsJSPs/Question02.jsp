@@ -6,9 +6,9 @@
 	<%
 	    request.setAttribute("orderNumber", "12345");
 
-	String orderID = (String) pageContext //
-		.getRequest() //
-		.getAttribute("orderNumber");
+	    String orderID = (String) pageContext //
+	    	.getRequest() //
+	    	.getAttribute("orderNumber");
 	%>
 
 </body>
