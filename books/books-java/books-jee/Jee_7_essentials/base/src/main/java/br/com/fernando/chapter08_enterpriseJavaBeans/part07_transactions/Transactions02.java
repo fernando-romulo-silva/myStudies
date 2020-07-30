@@ -34,7 +34,7 @@ import org.myembedded.pack.EmbeddedWar;
 import org.myembedded.pack.JeeVersion;
 
 /**
- * @see br.com.fernando.chapter12_javaTransaction.part02_containerManagedTransactions.ContainerManagedTransactions
+ * @see br.com.fernando.chapter12_javaTransaction.part02_containerManagedTransactions.ContainerManagedTransactions01
  */
 public class Transactions02 {
 

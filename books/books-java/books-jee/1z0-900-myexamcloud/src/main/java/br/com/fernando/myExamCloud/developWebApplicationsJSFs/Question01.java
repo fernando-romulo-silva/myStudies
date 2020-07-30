@@ -10,7 +10,7 @@ public class Question01 {
     //
     // Choice C - Invoke Application Phase
     //
-    // Choice D - Restore View Phase]
+    // Choice D - Restore View Phase
     //
     // Choice E - Render Response Phase
     //
@@ -18,10 +18,21 @@ public class Question01 {
     //
     //
     //
-    // Correct Answer :
-    // Choice D
+    // 
+    // 
     //
-    // Explanation :
+    //
+    //
+    //
+    // 
+    // 
+    //    
+    //
+    //
+    //
+    // 
+    // 
+    //
     // Choice D is correct.
     //
     // When a request for a JavaServer Faces page is made, usually by an action such as when a link or a button component is clicked, the JavaServer Faces

@@ -1,61 +1,35 @@
+
 package br.com.fernando.myExamCloud.developWebApplicationsJSFs;
 
 public class Question03 {
 
-    // Given code :
-    // index.xhtml
-    /**
-     * <pre>
-     *       <h:commandLink action="examBoatSearch">                
-     *       	   <h:outputText value="Proceed to ExamBoat Search Page"/>
-     *       </h:commandLink>
-     * </pre>
-     */
-    //
-    // Which navigation rule correctly defines examBoatSearch?
-    // (Assume that ExamBoat search page is search.jsp.)
+    // JSF Facelets features includes the following except.
     //
     // Choice A
-    /**
-     * <pre>
-     *    <navigation-rule>    
-     *    <from-view-id>/index.xhtml</from-view-id>    
-     *        <navigation-case>    
-     *            <from-action>examBoatSearch</from-action>    
-     *            <to-view-id>/search.jsp</to-view-id>    
-     *        </navigation-case>    
-     *    </navigation-rule>
-     * </pre>
-     **/
+    // Facelets Tag libraries in addition to JSF JSTL tag libraries
     //
     // Choice B
-    /**
-     * <pre>
-     *     <navigation-rule>                                      
-     *     <from-view-id>/index.xhtml</from-view-id>            
-     *         <navigation-case>                                
-     *             <from-outcome>examBoatSearch</from-outcome>  
-     *             <to-view-id>/search.jsp</to-view-id>         
-     *         </navigation-case>                               
-     *     </navigation-rule>
-     * </pre>
-     */
+    // Expression Language (EL) support
     //
     // Choice C
-    /**
-     * <pre>
-     *      <navigation-rule>                                                  
-     *          <from-view-id>/index.xhtml</from-view-id>                       
-     *              <navigation-case>                                           
-     *                  <from-action>#{ManagedBean.actionMethod}</from-action>  
-     *              <to-view-id>/search.jsp</to-view-id>}                      
-     *          </navigation-case>                                             
-     *      </navigation-rule>
-     * </pre>
-     */
+    // Use of XML for creating web pages
     //
     // Choice D
-    // None of the above, Both from-action and from-outcome are required.
+    // Templating for components and pages
+    //
+    // Choice E
+    // Use of XHTML for creating web pages
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //
@@ -67,14 +41,15 @@ public class Question03 {
     //
     //
     //
+    // Choice C is correct.
     //
-    // Explanation :
-    // Choice B is correct.
+    // Facelets is a powerful but lightweight page declaration language that is used to build JavaServer Faces views using HTML
+    // style templates and to build component trees. Facelets features include the following:
     //
-    // The form-action element along with from-outcome is needed for dynamic navigation where the output of the action method
-    // specified in the from-action element is compared to the from-outcome value.
-    // Here it is static navigation where we just need to call next page.
-    // For this static navigation, this is the navigation from-outcome
-    // value i.e. examBoatSearch that will map to search.xhtml in the navigation rule.
-
+    // Use of XHTML for creating web pages
+    // Support for Facelets tag libraries in addition to JavaServer Faces and JSTL tag libraries
+    // Support for the Expression Language (EL)
+    // Templating for components and pages
+    //
+    // Hence Choice C is correct answer for this question.
 }

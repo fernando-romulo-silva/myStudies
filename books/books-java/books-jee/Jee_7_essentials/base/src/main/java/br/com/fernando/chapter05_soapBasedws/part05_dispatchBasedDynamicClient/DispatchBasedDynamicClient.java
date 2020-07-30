@@ -4,22 +4,16 @@ import static br.com.fernando.Util.sourceToXMLString;
 
 import java.io.StringReader;
 import java.net.URL;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.concurrent.Future;
 
 import javax.xml.namespace.QName;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.ws.AsyncHandler;
-import javax.xml.ws.BindingProvider;
 import javax.xml.ws.Dispatch;
 import javax.xml.ws.Endpoint;
 import javax.xml.ws.Response;
 import javax.xml.ws.Service;
-import javax.xml.ws.handler.MessageContext;
 
 public class DispatchBasedDynamicClient {
 

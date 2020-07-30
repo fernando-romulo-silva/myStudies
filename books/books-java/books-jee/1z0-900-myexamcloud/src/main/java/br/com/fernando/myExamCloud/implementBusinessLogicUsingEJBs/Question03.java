@@ -11,9 +11,11 @@ import javax.ejb.TransactionManagementType;
 public class Question03 {
 
     public class CreditValidationException extends Exception {
+	private static final long serialVersionUID = 1L;
     }
 
     public class DatabaseException extends SQLException {
+	private static final long serialVersionUID = 1L;
     }
 
     public class LicenseInfo {
