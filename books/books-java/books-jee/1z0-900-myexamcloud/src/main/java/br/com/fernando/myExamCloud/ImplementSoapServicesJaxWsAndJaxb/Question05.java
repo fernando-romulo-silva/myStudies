@@ -2,27 +2,59 @@ package br.com.fernando.myExamCloud.ImplementSoapServicesJaxWsAndJaxb;
 
 public class Question05 {
 
-    // Which of the following session management mechanisms JAX-WS can support?
+    // Given:
+
+    public class ProcessOrder {
+
+	public boolean saveOrder(Order order) {
+	    boolean isSaved = false;
+	    // Save order
+
+	    return isSaved;
+	}
+
+	public boolean isValidOrder(String orderNumber) {
+	    boolean isValidOrder = false;
+	    // Verify order
+	    return isValidOrder;
+	}
+    }
+
+    public class Order {
+    }
+
+    // A developer wants to convert all ProcessOrder methods into Web services.
+    // What changes can achieve this?
     //
     //
-    // Choice A - HTTP cookies
+    // Choice A
+    // Import javax.jws.WebService and extend WebService
     //
-    // Choice B - URL rewriting
     //
-    // Choice C - SOAP based
+    // Choice B
+    // Import javax.jws.WebService and use @WebService at line 2.
     //
-    // Choice D - Java Servlet HTTP Session
+    //
+    // Choice C
+    // Import javax.jws.WebService and use @WebService at line 5 and line 11.
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     // Explanation :
-    // Choice A, B and C are correct answers.
+    // Choice B is correct.
     //
-    // JAX-WS specification supports the following session management mechanisms:
-    //
-    // * Session APIs: Definition of a session interface and methods to obtain the session interface and initiate sessions
-    // for handlers and service endpoint implementations.
-    //
-    // * HTTP based sessions: The session management mechanism must support HTTP cookies and URL rewriting.
-    //
-    // * SOAP based sessions: The session management mechanism must support SOAP based session information.
+    // To export these methods, we must add two things: an import statement for the javax.jws.WebService package
+    // and a @WebService annotation at the beginning that tells the Java interpreter that we intend to publish
+    // the methods of this class as a web service.
+
 }

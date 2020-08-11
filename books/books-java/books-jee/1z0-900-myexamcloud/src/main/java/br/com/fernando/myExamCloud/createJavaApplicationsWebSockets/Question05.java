@@ -7,7 +7,6 @@ public class Question05 {
     // Which of the following classes are valid?
     // Choose two
     //
-    //
     // Choice A
     @ServerEndpoint("/hello")
     public abstract class HelloServerA {

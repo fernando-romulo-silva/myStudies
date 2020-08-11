@@ -12,9 +12,9 @@ public class Question04 {
     // Code here
     public class Customer {
 
-	private String name;
-	private String address;
-	private String mobileNumber;
+	String name;
+	String address;
+	String mobileNumber;
 
 	@XmlElement(name = "Customer_Name", required = true)
 	public void setName(String name) {
@@ -40,7 +40,15 @@ public class Question04 {
     //
     // Choice C - @XmlMainElement(name = "Customer")
     //
-    // Explanation :
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    //     
     //
     // Choice B is correct.
     //

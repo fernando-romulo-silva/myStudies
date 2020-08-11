@@ -13,6 +13,16 @@ public class Question02 {
     // Choice D - Message-driven Bean
     //
     // 
+    //
+    // 
+    //
+    // 
+    //
+    //
+    // 
+    //
+    //     
+    //     
     // Explanation :
     // Choice A and C are correct answers.
     // 

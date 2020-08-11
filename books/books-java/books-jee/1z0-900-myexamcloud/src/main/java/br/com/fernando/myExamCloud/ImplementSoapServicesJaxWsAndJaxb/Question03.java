@@ -23,7 +23,17 @@ public class Question03 {
     // JAXBContext jaxbContext = JAXBContext.createCustomer.class);
     // Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
     //
+    // 
     //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    //     
     // Choice B is correct.
     //
     // The class javax.xml.bind.JAXBContext provides a framework for validating, marshaling and un-marshaling XML into (and from) 

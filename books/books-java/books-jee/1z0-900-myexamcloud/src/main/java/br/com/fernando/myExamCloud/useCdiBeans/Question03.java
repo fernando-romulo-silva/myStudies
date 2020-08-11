@@ -23,7 +23,6 @@ public class Question03 {
     }
 
     // And
-
     @Alternative
     public class SmsHandler implements GenericMessenger {
 	public void handleMessage(Message msg) {
@@ -33,7 +32,7 @@ public class Question03 {
 
     // And the next fragment from beans.xml:
     // <alternatives>
-    // <class> com.myexamcloud.SmsHandler</class>
+    //    <class>com.myexamcloud.SmsHandler</class>
     // </alternatives>
     //
     // And this injection point:

@@ -5,15 +5,16 @@ public class Question05 {
     // Given the code fragment:
     /**
      * <pre>
-     *  
      *     <servlet-mapping>
      *       <servlet-name>firstServlet</servlet-name>
      *       <url-pattern>/*</url-pattern>
      *     </servlet-mapping>
+     *     
      *     <servlet-mapping>
      *       <servlet-name>secondServlet</servlet-name>
      *       <url-pattern>/</url-pattern>
      *     </servlet-mapping>
+     *     
      *     <servlet-mapping>
      *       <servlet-name>thirdServlet</servlet-name>
      *       <url-pattern>/</url-pattern>

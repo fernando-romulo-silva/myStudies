@@ -5,5 +5,76 @@
          version="3.2">
 
 	<module-name>embeddedJeeContainerTest02Ejb03</module-name>
+	
+	<assembly-descriptor>
+		
+		<method-permission>
+			<description>
+				The employee and temp-employee roles may access any method of the EmployeeService bean
+			</description>
+			<role-name>employee</role-name>
+			<role-name>temp-employee</role-name>
+			<method>
+				<ejb-name>EmployeeService</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+		
+		<method-permission>
+			<description>
+				The employee role may access the findByPrimaryKey, getEmployeeInfo, and the updateEmployeeInfo(String) method of the AardvarkPayroll bean 
+			</description>
+			
+			<role-name>employee</role-name>
+			<method>
+				<ejb-name>AardvarkPayroll</ejb-name>
+				<method-name>findByPrimaryKey</method-name>
+			</method>
+			<method>
+				<ejb-name>AardvarkPayroll</ejb-name>
+				<method-name>getEmployeeInfo</method-name>
+			</method>
+			<method>
+				<ejb-name>AardvarkPayroll</ejb-name>
+				<method-name>updateEmployeeInfo</method-name>
+				<method-params>
+					<method-param>java.lang.String</method-param>
+				</method-params>
+			</method>
+		</method-permission>
+		
+		<method-permission>
+			<description>
+				The admin role may access any method of the EmployeeServiceAdmin bean
+			</description>
+			<role-name>admin</role-name>
+			<method>
+				<ejb-name>EmployeeServiceAdmin</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+		
+		<method-permission>
+			<description>
+				Any authenticated user may access any method of the EmployeeServiceHelp bean
+			</description>
+			<unchecked />
+			<method>
+				<ejb-name>EmployeeServiceHelp</ejb-name>
+				<method-name>*</method-name>
+			</method>
+		</method-permission>
+		
+		<exclude-list>
+			<description>
+				No fireTheCTO methods of the EmployeeFiring bean may be used in this deployment
+			</description>
+			<method>
+				<ejb-name>EmployeeFiring</ejb-name>
+				<method-name>fireTheCTO</method-name>
+			</method>
+		</exclude-list>
+		
+	</assembly-descriptor>	
 
 </ejb-jar>

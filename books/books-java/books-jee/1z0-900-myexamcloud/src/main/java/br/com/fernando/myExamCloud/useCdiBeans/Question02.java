@@ -4,7 +4,6 @@ public class Question02 {
 
     // Which of the following elements cannot be injected by using an @Inject annotation?
     //
-    //
     // Choice A - static fields
     //
     // Choice B - instance fields declared final
@@ -18,11 +17,16 @@ public class Question02 {
     //
     //
     //
+    //    
     //
     //
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
     // Choice B and D are correct answers.
     //
     // The @Inject annotation may apply to static as well as instance members.

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/ejb-jar_3_2.xsd"
+         version="3.2">
+         
+	<assembly-descriptor>
+		
+		<method-permission>
+			<description>
+				The employee and temp-employee roles may access any method of the EmployeeService bean
+			</description>
+			<role-name>employee</role-name>
+			<role-name>temp-employee</role-name>
+			<method>
+			    <ejb-name>EJBNAME</ejb-name>
+			    <method-name>*</method-name>
+			</method>
+		</method-permission>
+		
+		
+	</assembly-descriptor>
+</ejb-jar>

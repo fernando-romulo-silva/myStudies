@@ -28,12 +28,12 @@ import org.myembedded.pack.EmbeddedWar;
 // The fully qualified class name is the default servlet name, and may be overridden using
 // the name attribute of the annotation. The servlet may be deployed at multiple URLs:
 @WebServlet( //
-        // The fully qualified class name is the default servlet name, and may be overridden using
-        // the name attribute of the annotation. The servlet may be deployed at multiple URLs:
-        urlPatterns = { "/account02", "/accountServlet02" }, //
-        //
-        // The @WebInitParam can be used to specify an initialization parameter:
-        initParams = { @WebInitParam(name = "type", value = "checking") }
+	// The fully qualified class name is the default servlet name, and may be overridden using
+	// the name attribute of the annotation. The servlet may be deployed at multiple URLs:
+	urlPatterns = { "/account02", "/accountServlet02" }, //
+	//
+	// The @WebInitParam can be used to specify an initialization parameter:
+	initParams = { @WebInitParam(name = "type", value = "checking") }
 
 )
 public class Servlet02 extends javax.servlet.http.HttpServlet {
@@ -46,70 +46,94 @@ public class Servlet02 extends javax.servlet.http.HttpServlet {
 
     @Override
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response) {
-        // * The HttpServletRequest and HttpServletResponse capture the request/response with the web client.
-        //
-        // * The request parameters; HTTP headers; different parts of the path such as host, port, and context; and much more information is
-        // available from HttpServletRe quest.
+	// * The HttpServletRequest and HttpServletResponse capture the request/response with the web client.
+	//
+	// * The request parameters; HTTP headers; different parts of the path such as host, port, and context; and much more information is
+	// available from HttpServletRe quest.
 
-        try (PrintWriter out = response.getWriter()) {
-            out.println("<html><head>");
-            out.println("<title>MyServlet</title>");
-            out.println("</head><body>");
-            out.println("<h1>My First Servlet</h1>");
-            out.println("</body></html>");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-        }
+	try (PrintWriter out = response.getWriter()) {
+	    out.println("<html><head>");
+	    out.println("<title>MyServlet</title>");
+	    out.println("</head><body>");
+	    out.println("<h1>My First Servlet</h1>");
+	    out.println("</body></html>");
+	} catch (IOException e) {
+	    e.printStackTrace();
+	} finally {
+	}
 
-        // Request parameters may be passed in GET and POST requests. In a GET request, these parameters are passed in the query string as
-        // name/value pairs. Here is a sample URL to invoke the servlet explained earlier with request parameters
-        // . . ./account?tx=10
-        //
-        String txValue = request.getParameter("tx");
-        System.out.println("request parameter \"txValue\":" + txValue);
+	// Request parameters may be passed in GET and POST requests. In a GET request, these parameters are passed in the query string as
+	// name/value pairs. Here is a sample URL to invoke the servlet explained earlier with request parameters
+	// . . ./account?tx=10
+	//
+	String txValue = request.getParameter("tx");
+	System.out.println("request parameter \"txValue\":" + txValue);
     }
 
-    // Initialization parameters, also known as init params, may be defined on a servlet to store startup and configuration information. 
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	PrintWriter out = res.getWriter();
+	out.print("Service() method called.");
+    }
+
+    // Initialization parameters, also known as init params, may be defined on a servlet to store startup and configuration information.
     // As explained earlier, @WebInitParam is used to specify init params for a servlet:
     @Override
     public void init(ServletConfig config) throws ServletException {
-        type = config.getInitParameter("type");
-        System.out.println("init param \"type\":" + type);
+	type = config.getInitParameter("type");
+	System.out.println("init param \"type\":" + type);
     }
+
+    @Override
+    public void destroy() {
+	super.destroy();
+    }
+
+    // A servlet life cycle can be defined as the entire process from its creation till the destruction.
+    // The following are the paths followed by a servlet.
+    //
+    // * The servlet is initialized by calling the init() method.
+    //
+    // * The servlet calls service() method to process a client's request.
+    // Each time the server receives a request for a servlet, the server spawns a new thread and calls service.
+    // The service() method checks the HTTP request type (GET, POST, PUT, DELETE, etc.) and calls doGet, doPost, doPut, doDelete, etc. methods as appropriate.
+    //
+    // * The servlet is terminated by calling the destroy() method.
+    //
+    // Finally, servlet is garbage collected by the garbage collector of the JVM.
 
     String type = null;
 
     // ==================================================================================================================================================================
     public static void execute() throws Exception {
-        startVariables();
+	startVariables();
 
-        try (final MyEmbeddedJeeContainer embeddedJeeServer = new MyEmbeddedJeeContainer();) {
+	try (final MyEmbeddedJeeContainer embeddedJeeServer = new MyEmbeddedJeeContainer();) {
 
-            final EmbeddedWar war = new EmbeddedWar(EMBEDDED_JEE_TEST_APP_NAME);
-            war.addClasses(Servlet02.class);
-            final File warFile = war.exportToFile(APP_FILE_TARGET);
+	    final EmbeddedWar war = new EmbeddedWar(EMBEDDED_JEE_TEST_APP_NAME);
+	    war.addClasses(Servlet02.class);
+	    final File warFile = war.exportToFile(APP_FILE_TARGET);
 
-            embeddedJeeServer.start(HTTP_PORT);
-            embeddedJeeServer.deploy(EMBEDDED_JEE_TEST_APP_NAME, warFile.getAbsolutePath());
+	    embeddedJeeServer.start(HTTP_PORT);
+	    embeddedJeeServer.deploy(EMBEDDED_JEE_TEST_APP_NAME, warFile.getAbsolutePath());
 
-            final HttpClient httpClient01 = HttpClientBuilder.create().build();
-            final HttpResponse response01 = httpClient01.execute(new HttpGet("http://localhost:" + HTTP_PORT + "/" + EMBEDDED_JEE_TEST_APP_NAME + "/account02?tx=10"));
-            System.out.println(response01);
+	    final HttpClient httpClient01 = HttpClientBuilder.create().build();
+	    final HttpResponse response01 = httpClient01.execute(new HttpGet("http://localhost:" + HTTP_PORT + "/" + EMBEDDED_JEE_TEST_APP_NAME + "/account02?tx=10"));
+	    System.out.println(response01);
 
-            final HttpClient httpClient02 = HttpClientBuilder.create().build();
-            final HttpResponse response02 = httpClient02.execute(new HttpGet("http://localhost:" + HTTP_PORT + "/" + EMBEDDED_JEE_TEST_APP_NAME + "/accountServlet02?tx=10"));
-            System.out.println(response02);
+	    final HttpClient httpClient02 = HttpClientBuilder.create().build();
+	    final HttpResponse response02 = httpClient02.execute(new HttpGet("http://localhost:" + HTTP_PORT + "/" + EMBEDDED_JEE_TEST_APP_NAME + "/accountServlet02?tx=10"));
+	    System.out.println(response02);
 
-        } catch (final IOException ex) {
-            System.out.println(ex);
-        }
+	} catch (final IOException ex) {
+	    System.out.println(ex);
+	}
 
-        downVariables();
+	downVariables();
     }
 
     // ==================================================================================================================================================================
     public static void main(String[] args) throws Exception {
-        execute();
+	execute();
     }
 }

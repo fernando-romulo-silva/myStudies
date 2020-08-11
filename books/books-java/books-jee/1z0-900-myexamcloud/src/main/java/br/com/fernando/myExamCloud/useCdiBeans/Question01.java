@@ -19,7 +19,6 @@ public class Question01 {
 
     // How many qualifiers are defined Customer and product beans?
     //
-    //
     // Choice A - Customer bean has one qualifier and Product bean has none
     //
     // Choice B - Both Customer and Product bean has only one qualifier
@@ -29,7 +28,18 @@ public class Question01 {
     // Choice D - Both Customer and Product bean has three qualifiers
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
     //
     // Choice C is correct.
     // Every bean has the built-in qualifier @Any, even if it does not explicitly declare this qualifier, except for the special @New qualified beans 
