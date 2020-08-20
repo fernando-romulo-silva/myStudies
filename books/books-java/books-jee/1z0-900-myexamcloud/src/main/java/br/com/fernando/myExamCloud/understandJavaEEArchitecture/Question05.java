@@ -33,6 +33,16 @@ public class Question05 {
     // Database
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B and C are correct answers.
     //
     @WebServlet(urlPatterns = { "/blockIoServlet" }, asyncSupported = true)
@@ -40,6 +50,7 @@ public class Question05 {
 
 	private static final long serialVersionUID = 1L;
 	
+	@SuppressWarnings("unused")
 	@Inject
 	private ServletContext context;
 

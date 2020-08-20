@@ -61,16 +61,15 @@ public class Question01 {
 
     // Which JSL correctly defines chunk-style step for these batch jobs?
     //
-    //
     // Choice A
     /**
      * <pre>
      * <job id="PayrollJob" xmlns=http://xmlns.jcp.org/xml/ns/javaee version="1.0">
      *     <step id="process">
      *         <chunk item-count="2">
-     *             <reader ref="simpleItemReader/>
-     *             <processor ref="simpleItemProcessor/>
-     *             <writer ref="simpleItemWriter/>
+     *             <reader ref="simpleItemReader"/>
+     *             <processor ref="simpleItemProcessor"/>
+     *             <writer ref="simpleItemWriter"/>
      *         </chunk>
      *     </step>
      * </job>
@@ -83,9 +82,9 @@ public class Question01 {
      * <job id="PayrollJob" xmlns=http://xmlns.jcp.org/xml/ns/javaee version="1.0">
      *     <step id="process">
      *         <chunk item-count="2">
-     *             <reader class="SimpleItemReader/>
-     *             <processor class="SimpleItemProcessor/>
-     *             <writer class="SimpleItemWriter/>
+     *             <reader class="SimpleItemReader"/>
+     *             <processor class="SimpleItemProcessor"/>
+     *             <writer class="SimpleItemWriter"/>
      *         </chunk>
      *     </step>
      * </job>
@@ -98,15 +97,23 @@ public class Question01 {
      *  <job id="PayrollJob" xmlns=http://xmlns.jcp.org/xml/ns/javaee version="1.0">
      *      <step id="process">
      *          <chunk item-count="2">
-     *              <reader name="simpleItemReader/>
-     *              <processor name="simpleItemProcessor/>
-     *              <writer name="simpleItemWriter/>
+     *              <reader name="simpleItemReader"/>
+     *              <processor name="simpleItemProcessor"/>
+     *              <writer name="simpleItemWriter"/>
      *          </chunk>
      *      </step>
      *  </job>
      * </pre>
      */
-    // Explanation :
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
     //
     // Choice A is correct.
     //

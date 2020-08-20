@@ -15,11 +15,14 @@ public class Question01 {
     // Choice D - Two messages read from the same queue may be processed at the same time within the same EJB container.
     //
     //
-    // Correct Answer :
-    // Choice B
-    // Choice D
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
     // Choice B and D are correct answers.
     //
     // A message-driven bean is an enterprise bean that allows Java EE applications to process messages asynchronously.

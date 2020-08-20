@@ -17,7 +17,18 @@ public class Question02 {
     // Choice D - CDI Beans
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A and C are correct answers.
     //
     // The functionality of Java EE web tier is to handle HTTP / HTTPS requests and generate dynamic contents.
