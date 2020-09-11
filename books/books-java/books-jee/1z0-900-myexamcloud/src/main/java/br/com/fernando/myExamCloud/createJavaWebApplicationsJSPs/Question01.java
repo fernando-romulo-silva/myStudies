@@ -5,10 +5,41 @@ public class Question01 {
     // Which of the following syntax is used to embed a Java scriptlet in a JSP page?
     //
     // Your answer is :
-    // Choice A <%@ ... %>
-    // Choice B <% ... %>
-    // Choice C <%= %>
-    // Choice D <%! ... %>
+    //
+    // Choice A 
+    // <%@ ... %>
+    //
+    // Choice B 
+    // <% ... %>
+    //
+    // Choice C 
+    // <%= %>
+    //
+    // Choice D 
+    //<%! ... %>
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     // Choice B is correct

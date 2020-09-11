@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Question01 {
 
-//    Given the code fragment:
+    // Given the code fragment:
 
     @WebServlet(urlPatterns = { "/blockIoServlet" }, asyncSupported = true)
     public static class BlockIoServlet extends HttpServlet {
@@ -44,7 +44,16 @@ public class Question01 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

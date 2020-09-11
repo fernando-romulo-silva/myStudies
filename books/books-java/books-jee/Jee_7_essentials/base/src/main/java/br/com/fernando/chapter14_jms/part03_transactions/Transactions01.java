@@ -167,6 +167,7 @@ public class Transactions01 {
                     @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"), // 
             } //
     )
+    // The default transaction attribute is REQUIRED
     public static class JMSListener implements MessageListener {
 
         private static final Logger logger = Logger.getLogger(JMSListener.class.getName());
@@ -174,6 +175,7 @@ public class Transactions01 {
         @EJB
         private DeliveryStats deliveryStats;
 
+        // The REQUIRED transaction attribute, is the default for the onMessage() 
         @Override
         public void onMessage(final Message message) {
             try {

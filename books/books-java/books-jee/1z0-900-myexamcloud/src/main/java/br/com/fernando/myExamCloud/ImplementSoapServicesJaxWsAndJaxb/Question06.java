@@ -81,7 +81,7 @@ public class Question06 {
     //
     // Requirements of a JAX-WS Endpoint
     //
-    // JAX-WS endpoints must follow these requirements.
+    // JAX-WS endpoints must follow these requirements:
     //
     // * The implementing class must be annotated with either the javax.jws.WebService or the javax.jws.WebServiceProvider annotation.
     //
@@ -91,9 +91,20 @@ public class Question06 {
     // * The business methods of the implementing class must be public and must not be declared static or final.
     //
     //
-    // Business methods that are exposed to web service clients must be annotated with javax.jws.WebMethod.
+    // A valid endpoint implementation class must meet the following requirements:
     //
-    // Business methods that are exposed to web service clients must have JAXB-compatible parameters and return types. See the two tables of JAXB default data type bindings in Types Supported by JAX-WS.
+    // 1. It MUST carry a javax.jws.WebService annotation (see JSR 181).
+    // 2. Any of its methods MAY carry a javax.jws.WebMethod annotation.
+    // 3. All of its methods MAY throw java.rmi.RemoteException in addition to any service-specific exceptions.
+    // 4. All method parameters and return types MUST be compatible with the JAXB 2.0 Java to XML Schema mapping definition.
+    // 5. A method parameter or return value type MUST not implement the java.rmi.Remote interface either directly or indirectly.
+    // 
+    //
+    //
+    // Business methods that are exposed to web service clients MAY be annotated with javax.jws.WebMethod.
+    //
+    // Business methods that are exposed to web service clients MUST have JAXB-compatible parameters and return types. 
+    // See the two tables of JAXB default data type bindings in Types Supported by JAX-WS.
     //
     // * The implementing class must not be declared final and must not be abstract.
     // * The implementing class must have a default public constructor.

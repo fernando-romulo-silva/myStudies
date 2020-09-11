@@ -1,6 +1,7 @@
 package br.com.fernando.myExamCloud.createJavaApplicationsWebSockets;
 
 import java.io.IOException;
+import java.nio.ByteBuffer;
 
 import javax.websocket.DecodeException;
 import javax.websocket.Decoder;
@@ -8,6 +9,7 @@ import javax.websocket.EncodeException;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 import javax.websocket.OnMessage;
+import javax.websocket.PongMessage;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
@@ -44,8 +46,7 @@ public class Question04 {
     //
     //
     //
-    // Explanation :
-    // Choice D is correct.
+    // Choice D is correct if text and binary is on SAME MESSAGE.
     //
     // This method level annotation can be used to make a Java method receive incoming web socket messages.
     // Each websocket endpoint may only have one message handling method for each of the native websocket
@@ -54,6 +55,7 @@ public class Question04 {
     // Methods using this annotation are allowed to have parameters of types described below, otherwise
     // the container will generate an error at deployment time.
 
+    @SuppressWarnings("unused")
     public class Message {
 	private String from;
 	private String to;
@@ -113,6 +115,30 @@ public class Question04 {
 	@OnMessage
 	public void onMessage(final Session session, final Message message) throws IOException {
 
+	}
+    }
+
+
+    // Choice A is correct if text and binary is on DIFFERENT MESSAGE.
+    //
+    // The OnMessage annotation designates methods that handle incoming messages. 
+    // You can have at most three methods annotated with @OnMessage in an endpoint, one for each message type: text, binary, and pong. 
+    // The following example demonstrates how to designate methods to receive all three types of messages:
+    @ServerEndpoint("/receive")
+    public class ReceiveEndpoint {
+	@OnMessage
+	public void textMessage(Session session, String msg) {
+	    System.out.println("Text message: " + msg);
+	}
+
+	@OnMessage
+	public void binaryMessage(Session session, ByteBuffer msg) {
+	    System.out.println("Binary message: " + msg.toString());
+	}
+
+	@OnMessage
+	public void pongMessage(Session session, PongMessage msg) {
+	    System.out.println("Pong message: " + msg.getApplicationData().toString());
 	}
     }
 }

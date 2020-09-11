@@ -77,6 +77,21 @@ public class Question06 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct.
     //
     // The JSP page (index.jsp) uses GuestBean as specified by jsp:useBean action. On submitting the HTML form, index.jsp is invoked.

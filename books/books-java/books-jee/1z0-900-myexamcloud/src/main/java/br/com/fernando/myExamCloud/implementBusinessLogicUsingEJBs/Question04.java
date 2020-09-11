@@ -30,7 +30,7 @@ public class Question04 {
     //
     //
     //
-    //    
+    //
     //
     //
     //
@@ -39,8 +39,8 @@ public class Question04 {
     //
     // Choice D is correct.
     //
-    // The getTimerService method returns the javax.ejb.TimerService interface. 
-    // Only stateless session beans and singleton session beans can use this method. 
+    // The getTimerService method returns the javax.ejb.TimerService interface.
+    // Only stateless session beans and singleton session beans can use this method.
     // Stateful session beans cannot be timed objects.
 
     @Stateless
@@ -51,27 +51,27 @@ public class Question04 {
 	    System.out.println("MyTimer.printTime!");
 	}
     }
-    
-    @Stateful
-    public static class MyTimer02 {
+
+    @Singleton
+    public static class MyTimer04 {
 
 	@Schedule(year = "*", month = "*", hour = "*", minute = "*", second = "*/10", persistent = false) // Timers are persistent by default.
 	public void printTime() {
 	    System.out.println("MyTimer.printTime!");
 	}
     }
-    
-    @StatefulTimeout(unit = TimeUnit.MINUTES, value = 0)
-    public static class MyTimer03 {
 
-	@Schedule(year = "*", month = "*", hour = "*", minute = "*", second = "*/10", persistent = false) // Timers are persistent by default.
+    @Stateful // error
+    public static class MyTimer02 {
+
+	@Schedule(year = "*", month = "*", hour = "*", minute = "*", second = "*/10", persistent = false) //
 	public void printTime() {
 	    System.out.println("MyTimer.printTime!");
 	}
-    }    
-    
-    @Singleton
-    public static class MyTimer04 {
+    }
+
+    @StatefulTimeout(unit = TimeUnit.MINUTES, value = 0) // error
+    public static class MyTimer03 {
 
 	@Schedule(year = "*", month = "*", hour = "*", minute = "*", second = "*/10", persistent = false) // Timers are persistent by default.
 	public void printTime() {

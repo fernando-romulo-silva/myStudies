@@ -45,6 +45,16 @@ public class Question01 {
     // D - GenericMessenger
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
     // Answer A is correct 
     // Since the bean annotated with @Alternative is specified in <alternatives> element of beans.xml, it will be used.
 

@@ -11,10 +11,10 @@
   <c:set var="bookId" value="${param.Remove}"/>
 	
   <table>
-    <c:forEach var="employee" items="$employees" status="status">                                       
+    <c:forEach var="employee" items="${employees}" status="status">                                       
       <tr>
-        <td><c:expr value="$status.count"/></td>
-        <td><c:expr value="$employee.name"/></td>
+        <td><c:expr value="${status.count}"/></td>
+        <td><c:expr value="${employee.name}"/></td>
       </tr>
     </c:forEach>
   </table>

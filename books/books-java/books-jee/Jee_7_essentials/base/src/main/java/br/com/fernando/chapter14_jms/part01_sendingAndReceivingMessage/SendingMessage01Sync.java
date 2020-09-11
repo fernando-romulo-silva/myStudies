@@ -210,7 +210,8 @@ public class SendingMessage01Sync {
         @Inject
         @JMSPasswordCredential(userName = Resources.NAME, password = Resources.PASSWORD)
         @JMSConnectionFactory(Resources.SYNC_CONTAINER_MANAGED_CONNECTION_FACTORY_JNDI_QUEUE)
-        // JMSContext provides the main entry to the simplified API. It provides a combination of Connection and Session from the classic API.
+        // JMSContext provides the main entry to the simplified API. 
+        // It provides a combination of Connection and Session from the classic API.
         private JMSContext context;
 
         @Resource(mappedName = Resources.SYNC_CONTAINER_MANAGED_DESTINATION_JNDI_QUEUE)

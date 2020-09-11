@@ -12,7 +12,30 @@ public class Question03 {
     // Choice C - applicationScope
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     // Choice C is correct
     //

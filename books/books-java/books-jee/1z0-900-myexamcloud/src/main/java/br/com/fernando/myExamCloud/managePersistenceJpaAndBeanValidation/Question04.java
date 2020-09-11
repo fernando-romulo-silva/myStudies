@@ -14,7 +14,6 @@ public class Question04 {
     //
     // Select the correct Entity declaration for entity A.
     //
-    //
     class B {
 
     }
@@ -68,6 +67,13 @@ public class Question04 {
     }
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //

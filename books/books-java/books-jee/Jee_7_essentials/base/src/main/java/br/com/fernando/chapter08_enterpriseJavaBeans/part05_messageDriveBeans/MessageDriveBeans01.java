@@ -111,7 +111,8 @@ public class MessageDriveBeans01 {
     // EJB 3.2 allows a message-driven bean to implement a listener interface with no methods.
     // A bean that implements a no-method interface exposes as message listener methods all public methods of the bean class and of any superclasses
     // except the java.lang.Object.
-
+    // The default transaction attribute is REQUIRED
+    //
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public static class MessageReceiverAsync implements MessageListener {
 	// A single message-driven bean can process messages from multiple clients concurrently.

@@ -3,7 +3,7 @@ package br.com.fernando.myExamCloud.createJavaWebApplicationsJSPs;
 public class Question10 {
 
     // Which of the following error-page declaration is syntactically correct.
-
+    //
     // Choice A
     /**
      * <pre>
@@ -17,7 +17,6 @@ public class Question10 {
     // Choice B
     /**
      * <pre>
-     *  
      *       <error-page>
      *           <exception>com.epractizelabs.web.WebException</exception>
      *           <location>/ServletErrorPage</location>
@@ -28,7 +27,6 @@ public class Question10 {
     // Choice C
     /**
      * <pre>
-     *  
      *       <error-page>
      *           <exception>com.epractizelabs.web.WebException</exception>
      *           <location>ServletErrorPage</location>
