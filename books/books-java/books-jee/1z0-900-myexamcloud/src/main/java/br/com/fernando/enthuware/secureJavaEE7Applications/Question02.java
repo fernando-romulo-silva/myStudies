@@ -1,6 +1,6 @@
-package br.com.fernando.myExamCloud.secureJavaEE7Applications;
+package br.com.fernando.enthuware.secureJavaEE7Applications;
 
-public class Question03 {
+public class Question02 {
 
     // Which two capabilities are provided by the Java Authentication and Authorization Services (JAAS) API?
     // [ Choose two ]

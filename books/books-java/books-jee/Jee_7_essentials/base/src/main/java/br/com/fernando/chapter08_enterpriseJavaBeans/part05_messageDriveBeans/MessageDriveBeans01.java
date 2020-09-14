@@ -8,6 +8,7 @@ import static br.com.fernando.Util.startVariables;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -140,6 +141,13 @@ public class MessageDriveBeans01 {
 	    try {
 		TextMessage tm = (TextMessage) message;
 		System.out.println("Message received async (from MessageReceiverAsync): " + tm.getText());
+		
+		Enumeration<String> props = message.getPropertyNames();
+
+		System.out.println(props);
+
+		System.out.println(message.getStringProperty("messageSelector"));
+		
 	    } catch (JMSException ex) {
 		mdc.setRollbackOnly();
 		Logger.getLogger(MessageReceiverAsync.class.getName()).log(Level.SEVERE, null, ex);

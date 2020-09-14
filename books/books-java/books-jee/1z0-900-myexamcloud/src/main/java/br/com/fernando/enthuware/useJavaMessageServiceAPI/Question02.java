@@ -1,5 +1,6 @@
-package br.com.fernando.enthuware.implementBusinessLogicUsingEJBs;
+package br.com.fernando.enthuware.useJavaMessageServiceAPI;
 
+import java.util.Enumeration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -14,22 +15,30 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
-public class Question03 {
+public class Question02 {
 
-    // What is true about Message-Driven Beans (MDBs)?
-    // Select 1 option(s):
+    // Given the code fragment:
+    public void onMessage(Message msg) {
+	try {
+	    // get property names
+	} catch (Exception e) {
+	}
+    }
+
+    // How can you get all property names of a JMS message in the JMS consumer onMessage operation?
+    // You had to select 1 option
     //
     // A
-    // MDBs can participate in transactions.
+    // String[] props = msg.getPropertyNames();
     //
     // B
-    // MDBs are invoked synchronously.
+    // Enumeration props = msg.getPropertyNames();
     //
     // C
-    // Each MDBs can process messages only from a single client.
+    // Iterator props = msg.getPropertyNames();
     //
     // D
-    // MDBs retain data caches between client calls.
+    // List<String> props = msg.getProperties();
     //
     //
     //
@@ -38,11 +47,17 @@ public class Question03 {
     //
     //
     //
-    // The correct answer is A
-    // Only the NOT_SUPPORTED and REQUIRED transaction attributes may be used for message-driven bean message listener methods.
-    // The use of the other transaction attributes is not meaningful for message driven bean message listener methods because
-    // there is no pre-existing client transaction context (REQUIRES_NEW, SUPPORTS) and no client to handle exceptions (MANDATORY, NEVER).
-
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // The correct answer is B
+    // Enumeration getPropertyNames() Returns an Enumeration of all the property names.
+    // This is only method in JMSMessage that provides you a way to go through all the properties.
     public static final String CONTAINER_MANAGED_DESTINATION_JNDI = "jms/myContainerQueue"; // java:app/
 
     @MessageDriven(mappedName = CONTAINER_MANAGED_DESTINATION_JNDI, activationConfig = { //
@@ -58,11 +73,8 @@ public class Question03 {
 	    @ActivationConfigProperty( //
 		    propertyName = "destinationType", //
 		    propertyValue = "javax.jms.Queue"), //
-
-	    // Use an annotation @ActivationConfigProperty(propertyName="transactionTimeout", propertyValue="xxx") to specify custom transaction timeout for MDB like
-	    @ActivationConfigProperty(propertyName = "transactionTimeout", propertyValue = "500"),
-
-    })
+	    //
+	    @ActivationConfigProperty(propertyName = "transactionTimeout", propertyValue = "500"), })
     //
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public static class MessageReceiverAsync implements MessageListener {
@@ -75,10 +87,18 @@ public class Question03 {
 	    try {
 		TextMessage tm = (TextMessage) message;
 		System.out.println("Message received async (from MessageReceiverAsync): " + tm.getText());
+
+		Enumeration<String> props = message.getPropertyNames();
+
+		System.out.println(props);
+
+		System.out.println(message.getStringProperty("messageSelector"));
+
 	    } catch (JMSException ex) {
 		mdc.setRollbackOnly();
 		Logger.getLogger(MessageReceiverAsync.class.getName()).log(Level.SEVERE, null, ex);
 	    }
 	}
     }
+
 }

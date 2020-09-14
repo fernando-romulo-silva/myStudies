@@ -39,7 +39,7 @@ public class Question05 {
     //
     // Choice A
     // Replace Line 1 with:
-    // <h:inputText id="createDate"value="#{searchCustomer.searchCustomerForm.date}"converter="java.util.Date"/>
+    // <h:inputText id="createDate"value="#{searchCustomer.searchCustomerForm.date}" converter="java.util.Date"/>
     //
     // Choice B
     // Enclose the code fragment within the <f:view/> tag
@@ -50,7 +50,7 @@ public class Question05 {
     // Choice D
     // Replace Line 1 with:
     // <h:inputText id="createDate"value="#{searchCustomer.searchCustomerForm.date}">
-    // <f:convertDateTime pattern="dd-mmyyyy"/>
+    //    <f:convertDateTime pattern="dd-mmyyyy"/>
     // </h:inputText>
     //
     //
@@ -72,8 +72,8 @@ public class Question05 {
     // Choice A is incorrect. The converter type must be javax.faces.convert.Converter.
     // Choice B is incorrect. The view tag will be used to display values and not for user inputs.
     // 
-    // <f:viewParam name =" date" value ="#{ searchCustomerForm.date}" >
-    // <f:convertDateTime pattern =" dd-MM-yyyy" />
+    // <f:viewParam name =" date" value ="#{searchCustomerForm.date}" >
+    //     <f:convertDateTime pattern =" dd-MM-yyyy" />
     // </f:viewParam >
     // 
     // Choice C is incorrect. Just inserting <f:convertDateTime"/> will not work instead we need to add this into body of <h:inputText> tag.    

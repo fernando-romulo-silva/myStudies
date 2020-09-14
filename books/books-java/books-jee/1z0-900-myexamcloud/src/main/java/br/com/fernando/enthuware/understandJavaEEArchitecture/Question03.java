@@ -1,6 +1,6 @@
-package br.com.fernando.myExamCloud.understandJavaEEArchitecture;
+package br.com.fernando.enthuware.understandJavaEEArchitecture;
 
-public class Question06 {
+public class Question03 {
 
     // Understand Java EE Architecture
     //

@@ -19,7 +19,7 @@ public class Question02 {
     /**
      * <pre>
      *    <navigation-rule>    
-     *    <from-view-id>/index.xhtml</from-view-id>    
+     *        <from-view-id>/index.xhtml</from-view-id>    
      *        <navigation-case>    
      *            <from-action>examBoatSearch</from-action>    
      *            <to-view-id>/search.jsp</to-view-id>    
@@ -32,7 +32,7 @@ public class Question02 {
     /**
      * <pre>
      *     <navigation-rule>                                      
-     *     <from-view-id>/index.xhtml</from-view-id>            
+     *         <from-view-id>/index.xhtml</from-view-id>            
      *         <navigation-case>                                
      *             <from-outcome>examBoatSearch</from-outcome>  
      *             <to-view-id>/search.jsp</to-view-id>         
@@ -46,9 +46,9 @@ public class Question02 {
      * <pre>
      *      <navigation-rule>                                                  
      *          <from-view-id>/index.xhtml</from-view-id>                       
-     *              <navigation-case>                                           
-     *                  <from-action>#{ManagedBean.actionMethod}</from-action>  
-     *              <to-view-id>/search.jsp</to-view-id>}                      
+     *          <navigation-case>                                           
+     *               <from-action>#{ManagedBean.actionMethod}</from-action>  
+     *               <to-view-id>/search.jsp</to-view-id>}                      
      *          </navigation-case>                                             
      *      </navigation-rule>
      * </pre>
