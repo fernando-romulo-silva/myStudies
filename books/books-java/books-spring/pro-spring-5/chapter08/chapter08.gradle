@@ -1,0 +1,24 @@
+subprojects {
+	group 'com.apress.prospring5.ch08'
+	apply plugin: 'java'
+
+	/*Task that copies all the dependencies under build/libs */
+	task copyDependencies(type: Copy) {
+		from configurations.compile
+		into 'build/libs'
+	}
+
+	dependencies {
+		//we specify these dependencies for all submodules, except the boot module, that defines its own
+		if (!project.name.contains("boot")) {
+			compile (spring.contextSupport) {
+				exclude  module: 'spring-context'
+				exclude  module: 'spring-beans'
+				exclude  module: 'spring-core'
+			}
+			compile spring.orm, spring.context, misc.slf4jJcl, misc.logback, db.h2, misc.lang3,
+					 hibernate.em
+		}
+		testCompile testing.junit
+	}
+}

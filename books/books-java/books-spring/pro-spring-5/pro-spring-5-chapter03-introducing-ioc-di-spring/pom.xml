@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>pro-spring-5-chapter03-introducing-ioc-di-spring</artifactId>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>pro-spring-5</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>pro-spring-5-chapter03-part01-dependency-pull</module>
+		<module>pro-spring-5-chapter03-part02-contextualized-dependency-lookup</module>
+		<module>pro-spring-5-chapter03-part03-dependency-injection</module>
+		<module>pro-spring-5-chapter03-part04-constructor-dependency-injection</module>
+		<module>pro-spring-5-chapter03-part05-setter-injection</module>
+		<module>pro-spring-5-chapter03-part06-field-injection</module>
+		<module>pro-spring-5-chapter03-part07-simple-types</module>
+		<module>pro-spring-5-chapter03-part08-nesting</module>
+		<module>pro-spring-5-chapter03-part09-inject-collections</module>
+		<module>pro-spring-5-chapter03-part10-method-injection</module>
+		<module>pro-spring-5-chapter03-part11-method-replacement</module>
+		<module>pro-spring-5-chapter03-part12-bean-naming</module>
+		<module>pro-spring-5-chapter03-part13-bean-instantiation-mode</module>
+	</modules>
+
+	<!-- Bean Name Aliasing -->
+
+</project>

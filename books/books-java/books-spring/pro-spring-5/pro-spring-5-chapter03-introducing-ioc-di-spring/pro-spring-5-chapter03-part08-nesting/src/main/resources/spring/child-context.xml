@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="song1" class="com.apress.prospring5.ch3.Song"
+          p:title-ref="parentTitle"/> <!-- from parent-context -->
+
+    <bean id="song2" class="com.apress.prospring5.ch3.Song"
+          p:title-ref="childTitle"/> <!-- from child-context -->
+
+    <bean id="song3" class="com.apress.prospring5.ch3.Song">
+        <property name="title">
+            <ref parent="childTitle"/> <!-- from parent-context -->
+            <!-- Because song3 is using the parent attribute of the <ref> tag, the childTitle instance declared in the child ApplicationContext is ignored completely. -->
+        </property> 
+    </bean>
+    
+    <!-- Notice that we have defined four beans here.  -->
+    <!-- childTitle in this code is similar to childTitle in the parent except that the String it represents has a different value, -->
+
+    <bean id="childTitle" class="java.lang.String" c:_0="No Such Thing"/>
+</beans>

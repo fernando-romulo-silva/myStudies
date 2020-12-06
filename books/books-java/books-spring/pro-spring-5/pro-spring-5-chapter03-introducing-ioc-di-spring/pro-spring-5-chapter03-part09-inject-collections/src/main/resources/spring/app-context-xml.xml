@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="lyricHolder" class="com.apress.prospring5.ch3.xml.LyricHolder"/>
+    
+    <!-- Map<String,LyricHolder> map property -->
+    <bean id="injectCollection" class="com.apress.prospring5.ch3.xml.CollectionInjection">
+        <property name="map">
+        	<!-- his entry value can be any value you can inject into a property separately; --> 
+        	<!-- this example shows the use of the <value> and <ref> tags to add a String value and a bean reference to the Map.  -->
+            <map>
+                <entry key="someValue" value="It's a Friday, we finally made it"/>
+                <entry key="someBean" value-ref="lyricHolder"/>
+            </map>
+        </property>
+        
+        <!-- For the props property, we use the <props> tag to create an instance of java.util.Properties and populate it using <prop> tags.  -->
+        <property name="props">
+            <props>
+                <prop key="firstName">John</prop>
+                <prop key="secondName">Mayer</prop>
+            </props>
+        </property>
+        
+        <!-- Both the <list> and <set> tags work in the same way: --> 
+        <!-- you specify each element by using any of the individual value tags such as <value> and <ref> that are used to inject a single value into a property -->
+        
+        <property name="set">
+            <set>
+                <value>I can't believe I get to see your face</value>
+                <ref bean="lyricHolder"/>
+            </set>
+        </property>
+        
+        <property name="list">
+            <list>
+                <value>You've been working and I've been waiting</value>
+                <ref bean="lyricHolder"/>
+            </list>
+        </property>
+    </bean>
+</beans>

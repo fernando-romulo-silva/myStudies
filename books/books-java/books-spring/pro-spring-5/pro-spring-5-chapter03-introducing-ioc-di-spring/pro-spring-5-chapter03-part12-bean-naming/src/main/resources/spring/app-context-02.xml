@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Spring allows a bean to have more than one name. You can achieve this by specifying a space-, comma-, --> 
+	<!-- or semicolon-separated list of names in the name attribute of the bean’s <bean> tag. -->
+    <bean id="john" name="jon johnny,jonathan;jim" class="java.lang.String"/>
+	
+	<!-- Besides using the name attribute, you can use the <alias> tag for defining aliases for Spring bean names. -->
+    <alias name="john" alias="ion"/>
+    
+    <!-- As you can see, we have defined six names: one using the id attribute and the other four as a list using -->
+    <!-- all allowed bean name delimiters in the name attribute -->
+</beans>

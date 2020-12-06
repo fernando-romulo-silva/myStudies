@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/context 
+          http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- The <context:component-scan> tag tells Spring to scan the code for injectable beans annotated with -->
+    <!-- @Component, @Controller, @Repository, and @Service as well as supporting the @Autowired, @Inject, and @Resource annotations under the package -->
+    <context:component-scan 
+          base-package="com.apress.prospring5.ch3.annotated">
+          
+          <!-- This tag tells Spring to scan the package as specified but omit the classes that were assignable --> 
+          <!-- to the type as specified in the expression (can be either a class or an interface). --> 
+          <!-- Besides the exclude filter, you can also use an include filter -->
+          <context:exclude-filter type="assignable"
+            expression="com.example.NotAService"/>
+          
+    </context:component-scan>      
+</beans>
