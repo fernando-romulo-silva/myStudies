@@ -1,12 +1,10 @@
 package br.com.fernando;
 
 import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.URI;
@@ -28,12 +26,6 @@ import javax.websocket.ContainerProvider;
 import javax.websocket.DeploymentException;
 import javax.websocket.Session;
 import javax.websocket.WebSocketContainer;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.stream.StreamResult;
 
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
@@ -309,23 +301,5 @@ public class Util {
 
         System.out.println("Connecting to: " + uri);
         return container.connectToServer(endpoint, uri);
-    }
-
-    public static String sourceToXMLString(final Source result) {
-        String xmlResult = null;
-        try {
-            final TransformerFactory factory = TransformerFactory.newInstance();
-            final Transformer transformer = factory.newTransformer();
-            transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-            transformer.setOutputProperty(OutputKeys.METHOD, "xml");
-            final OutputStream out = new ByteArrayOutputStream();
-            final StreamResult streamResult = new StreamResult();
-            streamResult.setOutputStream(out);
-            transformer.transform(result, streamResult);
-            xmlResult = streamResult.getOutputStream().toString();
-        } catch (final TransformerException e) {
-            e.printStackTrace();
-        }
-        return xmlResult;
     }
 }

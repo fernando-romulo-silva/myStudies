@@ -7,8 +7,6 @@ import javax.batch.runtime.BatchRuntime;
 
 public class Question03 {
 
-    public static final String JOB_NAME = "ProductLoadJob";
-
     // Given a JSL document describing a batch job:
     /**
      * <pre>
@@ -55,11 +53,12 @@ public class Question03 {
     //
     //
     //
-    // Choice A is correct.   
+    // Choice C is correct.   
     //
     // Note that the mere presence of a job XML file or other batch artifacts (such as ItemReader) doesn't mean that a batch job is automatically
-    // started when the application is deployed. A batch job must be initiated explicitly, say, from a servlet or from an Enterprise JavaBeans (EJB) timer
-    // or an EJB business method.
+    // started when the application is deployed. 
+    //
+    // A batch job must be initiated explicitly, say, from a servlet or from an Enterprise JavaBeans (EJB) timer or an EJB business method.
     //
     // In our payroll application, we use a servlet (named PayrollJobSubmitterServlet) to submit a batch job.
     // The servlet displays an HTML page that presents to the user a form containing two buttons.
@@ -71,7 +70,7 @@ public class Question03 {
 	JobOperator jobOperator = BatchRuntime.getJobOperator();
 	Properties props = new Properties();
 	props.setProperty("payrollInputDataFileName", payrollInputDataFileName);
-	return jobOperator.start(JOB_NAME, props);
+	return jobOperator.start("ProductLoadJob", props);
     }
 
     // The first step is to obtain an instance of JobOperator. This can be done by calling the following:

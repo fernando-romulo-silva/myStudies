@@ -5,6 +5,7 @@ import javax.enterprise.inject.Default;
 
 public class Question01 {
 
+    // Given the code sample:
     public class Message {
 
     }
@@ -40,9 +41,13 @@ public class Question01 {
     // Which type would be injected at run time and referenced by the messageHandler variable?
     //
     // A - SmsHandler
+    //
     // B - MsgHandler
+    //
     // C - None of the above. An exception would be thrown due to ambiguous bean references.
+    //
     // D - GenericMessenger
+    //
     //
     //
     //
@@ -54,8 +59,12 @@ public class Question01 {
     //
     //    
     //
+    //    
+    //    
+    //
     //
     // Answer A is correct 
+    //
     // Since the bean annotated with @Alternative is specified in <alternatives> element of beans.xml, it will be used.
 
    

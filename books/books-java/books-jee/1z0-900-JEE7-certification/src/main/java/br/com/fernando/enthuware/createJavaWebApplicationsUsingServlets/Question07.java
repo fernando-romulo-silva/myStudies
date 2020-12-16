@@ -56,9 +56,17 @@ public class Question07 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     // The correct answer is B
+    //
     protected void processRequestB(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 	// it is not clear what do they mean by "assign it to the request input stream". You can do something like this:
 	AsyncContext ac = req.startAsync();

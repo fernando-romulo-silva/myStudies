@@ -47,7 +47,7 @@ public class Question04 {
     // 
     // B is correct because when this annotation, along with javax.inject.Named is found on a class, the runtime must place the bean in a CDI scope such that 
     // it remains active as long as NavigationHandler.handleNavigation(javax.faces.context.FacesContext, java.lang.String, java.lang.String) does not cause 
-    // a navigation to a view with a viewId that is different than the viewId of the current view.
+    // a navigation to a view with a viewId that is different than the viewId of the current view. (javax.faces.view.ViewScoped) (CDI view for JSF)
     //
     // C is corrrect because this scope exists longer that the view scope but will do the job in this case.
 

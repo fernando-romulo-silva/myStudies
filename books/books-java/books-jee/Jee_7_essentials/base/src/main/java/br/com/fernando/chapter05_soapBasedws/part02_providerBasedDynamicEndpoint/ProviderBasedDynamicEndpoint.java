@@ -4,7 +4,7 @@ import static br.com.fernando.Util.APP_FILE_TARGET;
 import static br.com.fernando.Util.EMBEDDED_JEE_TEST_APP_NAME;
 import static br.com.fernando.Util.HTTP_PORT;
 import static br.com.fernando.Util.downVariables;
-import static br.com.fernando.Util.sourceToXMLString;
+import static br.com.fernando.Util2.sourceToXMLString;
 import static br.com.fernando.Util.startVariables;
 
 import java.io.File;

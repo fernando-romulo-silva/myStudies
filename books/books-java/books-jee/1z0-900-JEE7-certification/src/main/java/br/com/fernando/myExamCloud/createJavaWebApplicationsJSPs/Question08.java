@@ -46,7 +46,10 @@ public class Question08 {
     // Thus, ${pageContext.errorData.statusCode} retrieves the status code, and ${pageContext.errorData.throwable} retrieves the exception.
     //
     // The directive tag <%@ page errorPage="file-name" %> at the beginning of JSP page helps the container to forward control to an error page if an exception occurs.
+    //
     // The <%= requestScope['javax.servlet.error'] !=null %> will not compile.
+    //
     // The <c:set var="errorHandler" value="true"/> tag EL version of setProperty action.
+    //
     // The tag is helpful because it evaluates an expression and uses the results to set a value of a JavaBean or a java.util.Map object.
 }

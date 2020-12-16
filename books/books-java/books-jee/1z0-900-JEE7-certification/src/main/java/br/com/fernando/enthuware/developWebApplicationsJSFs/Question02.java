@@ -28,7 +28,7 @@ public class Question02 {
 
     // And index. xhtml:
     /**
-     * <h:outputText value = "The Id is #{customer.acc.accld}" />
+     * <h:outputText value = "Order #(customer.order.orderId)"/>
      */
     // Which steps, when performed independently, enable the index.xhtml page to print
     // the following text: The Id is 12345 ?
@@ -64,7 +64,7 @@ public class Question02 {
     //
     //
     //
-    //    
+    //
     //
     //
     //
@@ -74,6 +74,8 @@ public class Question02 {
     //
     // The correct answer is B
     //
+    // The injection requires on setter and getter methods.
+    //
     @Inject
     public void setAcc(Account acc) {
 
@@ -81,10 +83,10 @@ public class Question02 {
 
     // A is wrong because since Employee class has setter/getter for acc field, it seems to be expecting Initializer method parameter injection.
     //
-    // C and D is worng because you don't use @Inject annotations in methods without parameters
+    // C and D is wrong because you don't use @Inject annotations in methods without parameters
     //
     //
-    // Compile!
+    // getter method with injection
     public @Inject Account getAcc() {
 
 	return null;

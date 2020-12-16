@@ -10,15 +10,22 @@ import javax.json.JsonObject;
 import javax.json.JsonReader;
 
 public class Question07 {
+
     // Which class do you use to handle an incoming JSON Message as a stream?
     //
     // A - JsonReader
     //
     // B - JsonObjectBuilder
     //
-    // C- JsonParser
+    // C - JsonParser
     //
-    // D -JsonObject
+    // D - JsonObject
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -30,6 +37,16 @@ public class Question07 {
     //
     //
     // The correct answer is A
+    //
+    // The javax.json package contains a reader interface, a writer interface, and a model builder interface for the object model.
+    //
+    // The javax.json.JsonReader reads JSON data from a stream and creates an object model in memory.
+    //
+    // Choice B is incorrect. JsonObjectBuilder create an object model or an array model in memory by adding elements from application code.
+    //
+    // Choice C is incorrect. javax.json.stream.JsonParser represents an event-based parser that can read JSON data from a stream or from an object model.
+    //
+    // Choice D is incorrect. JsonObject represent an object in JSON data. It is subtype of JsonStructure.
     public static void main(String a[]) {
 
 	File jsonInputFile = new File("/Users/java2novice/jsonInput.txt");

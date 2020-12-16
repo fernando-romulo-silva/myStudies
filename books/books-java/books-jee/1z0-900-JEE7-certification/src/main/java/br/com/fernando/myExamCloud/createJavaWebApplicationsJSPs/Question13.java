@@ -81,7 +81,7 @@ public class Question13 {
      *	    </web-app>
      * </pre>
      */
-    // Here, if the HTTP ERROR 404 (not found) is generated, ErrorPage.html will be serviced. Similarly if any servlet
-    // throws servlet exception while processing a request, this page will be serviced.
+    // Here, if the HTTP ERROR 404 (not found) is generated, ErrorPage.html will be serviced. 
+    // Similarly if any servlet throws servlet exception while processing a request, this page will be serviced.
 
 }

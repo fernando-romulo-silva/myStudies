@@ -31,11 +31,25 @@ public class Question04 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //    
     //
     //
     //
-    // Choice C and D are correct answers.
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    // Choice C and D are correct answers. (B e C are correct answer)
     //
     // For a web application to use a bean that injects another bean class, the bean needs to be able to hold state over the duration of the user’s interaction
     // with the application. The way to define this state is to give the bean a scope.

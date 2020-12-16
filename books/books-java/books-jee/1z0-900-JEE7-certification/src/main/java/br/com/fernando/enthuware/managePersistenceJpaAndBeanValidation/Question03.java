@@ -57,6 +57,7 @@ public class Question03 {
     //
     // 'B' is wrong because A lock with LockModeType.PESSIMISTIC_READ can be used to query data using repeatable-read semantics without
     // the need to reread the data at the end of the transaction to obtain a lock, and without blocking other transactions reading the data.
+    //
     // A lock with LockModeType.PESSIMISTIC_WRITE can be obtained on an entity instance to force serialization among transactions attempting to update the entity data.
     // A lock with LockModeType.PESSIMISTIC_WRITE can be used when querying data and there is a high likelihood of deadlock or update failure among concurrent updating transactions.
     //

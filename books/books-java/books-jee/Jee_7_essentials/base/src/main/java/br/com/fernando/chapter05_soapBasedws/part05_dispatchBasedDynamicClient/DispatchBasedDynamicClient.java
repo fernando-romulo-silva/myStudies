@@ -1,6 +1,6 @@
 package br.com.fernando.chapter05_soapBasedws.part05_dispatchBasedDynamicClient;
 
-import static br.com.fernando.Util.sourceToXMLString;
+import static br.com.fernando.Util2.sourceToXMLString;
 
 import java.io.StringReader;
 import java.net.URL;

@@ -38,6 +38,22 @@ public class Question03 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is A
     //
     // Only the NOT_SUPPORTED and REQUIRED transaction attributes may be used for message-driven bean message listener methods.

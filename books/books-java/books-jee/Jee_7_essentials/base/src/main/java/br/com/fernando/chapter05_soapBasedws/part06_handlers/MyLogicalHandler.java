@@ -1,6 +1,6 @@
 package br.com.fernando.chapter05_soapBasedws.part06_handlers;
 
-import static br.com.fernando.Util.sourceToXMLString;
+import static br.com.fernando.Util2.sourceToXMLString;
 
 import javax.xml.transform.Source;
 import javax.xml.ws.LogicalMessage;

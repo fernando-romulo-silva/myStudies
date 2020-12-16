@@ -25,6 +25,7 @@ public class Question07 {
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	    // super.service(req, res); // 14 
 	    PrintWriter out = res.getWriter();
 	    out.print("Service() method called.");
 	}
@@ -41,7 +42,7 @@ public class Question07 {
 	}
     }
     // Choice A
-    // Service() method called.
+    // Service() method called. 
     //
     // Choice B
     // Service() method called.Get() method called.
@@ -61,7 +62,7 @@ public class Question07 {
     //
     //
     //
-    // Choice B is correct.
+    // Choice A is correct. // If 14 is commented or B not
     //
     // A servlet life cycle can be defined as the entire process from its creation till the destruction. 
     // The following are the paths followed by a servlet.

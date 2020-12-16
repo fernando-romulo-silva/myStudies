@@ -99,6 +99,21 @@ public class InjectionPoints {
             System.out.println(greeting.greet("John"));
         }
     }
+    
+    
+    @Stateless
+    public static class GreetingService04 {
+
+        private Greeting greeting;
+
+        public @Inject Greeting getGreeting() {
+            return greeting;
+        }
+        
+        public void doGreet() {
+            System.out.println(getGreeting().greet("John"));
+        }
+    }
 
     // Here is the bean initialization sequence:
     //
@@ -124,12 +139,16 @@ public class InjectionPoints {
 
         @EJB
         private GreetingService03 service03;
+        
+        @EJB
+        private GreetingService04 service04;
 
         @Override
         protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
             service01.doGreet();
             service02.doGreet();
             service03.doGreet();
+            service04.doGreet();
         }
     }
 
@@ -145,7 +164,7 @@ public class InjectionPoints {
             final EmbeddedWar war = new EmbeddedWar(EMBEDDED_JEE_TEST_APP_NAME);
             war.addMetaInfFiles(EmbeddedResource.add("beans.xml", "src/main/resources/beans.xml"));
 
-            war.addClasses(ServletTest.class, GreetingService01.class, GreetingService02.class, GreetingService03.class, //
+            war.addClasses(ServletTest.class, GreetingService01.class, GreetingService02.class, GreetingService03.class, GreetingService04.class, //
                     Greeting.class, SimpleGreeting.class //
             );
 

@@ -32,7 +32,7 @@ public class Question02 {
     //
     //
     //
-    // Choice D is correct.
+    // Choice B is correct.
 
     @WebService(targetNamespace = "http://simplewebservice.com.br")
     public interface SimpleEndpointInterface {

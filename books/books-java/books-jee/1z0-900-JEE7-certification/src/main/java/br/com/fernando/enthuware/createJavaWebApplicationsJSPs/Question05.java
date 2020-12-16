@@ -22,6 +22,15 @@ public class Question05 {
     //
     //
     //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
     //    
     //    
     //
@@ -33,6 +42,7 @@ public class Question05 {
     //
     //
     // The correct answer is B
+    //
     // It is not clear whether it is talking about the error page or not. But this will work either way.
     // 
     // A is wrong because 'message' is not a public variable in exception.

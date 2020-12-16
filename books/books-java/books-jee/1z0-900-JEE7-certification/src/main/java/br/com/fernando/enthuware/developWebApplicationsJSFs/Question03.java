@@ -47,6 +47,10 @@ public class Question03 {
     //
     //
     // The correct answer is B
-    // The actionListeners are always invoked before the action in the same order as they are been declared in the view and attached to the component.
+    //
+    // ActionListeners are invoked in the order they're registered.
+    //
+    // Action is executed after all ActionListeners.
+    //
     // While an f:ajax listener is always invoked before any action listener.
 }

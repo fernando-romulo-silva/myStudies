@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fooOne" class="com.apress.prospring5.ch3.xml.Foo"/>
+    <bean id="barOne" class="com.apress.prospring5.ch3.xml.Bar"/>
+    
+    <!--  Moreover, the lazy-init attribute is set to true to inform Spring to instantiate the bean only when it is first requested, --> 
+    <!--  rather than at startup, so that we can output the result in the correct place in the testing program. -->
+    
+    <!-- Target.fooOne; Target.fooTwo; Target.bar  -->
+    <bean id="targetByName" autowire="byName" class="com.apress.prospring5.ch3.xml.Target"
+        lazy-init="true"/>
+
+    <bean id="targetByType" autowire="byType" class="com.apress.prospring5.ch3.xml.Target"
+        lazy-init="true"/>
+
+    <bean id="targetConstructor" autowire="constructor" 
+        class="com.apress.prospring5.ch3.xml.Target" lazy-init="true"/>
+        
+        
+</beans>

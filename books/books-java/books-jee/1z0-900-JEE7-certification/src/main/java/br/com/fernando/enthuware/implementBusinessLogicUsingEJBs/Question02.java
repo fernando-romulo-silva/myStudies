@@ -42,6 +42,24 @@ public class Question02 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is D
     // The Bean Provider may optionally specify that concurrent client requests to a stateful session bean are prohibited.
     //

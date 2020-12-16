@@ -1,0 +1,329 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.fernando</groupId>
+	<artifactId>understanding-quarkus</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- Quarkus -->
+		<quarkus-plugin.version>1.9.0.Final</quarkus-plugin.version>
+		<quarkus.platform.version>1.9.0.Final</quarkus.platform.version>
+		<!-- Other -->
+		<version.javafaker>1.0.2</version.javafaker>
+		<version.health-ui>1.1.0</version.health-ui>
+		<testcontainers.version>1.15.0-rc2</testcontainers.version>
+		<!-- Test -->
+		<!-- Core Maven Plugins -->
+		<version.antrun.plugin>1.8</version.antrun.plugin>
+		<version.archetype.plugin>3.0.1</version.archetype.plugin>
+		<version.assembly.plugin>3.1.0</version.assembly.plugin>
+		<version.clean.plugin>3.0.0</version.clean.plugin>
+		<version.compiler.plugin>3.8.1</version.compiler.plugin>
+		<version.dependency.plugin>3.0.2</version.dependency.plugin>
+		<version.deploy.plugin>2.8.2</version.deploy.plugin>
+		<version.enforcer.plugin>3.0.0-M1</version.enforcer.plugin>
+		<version.exec.plugin>1.6.0</version.exec.plugin>
+		<version.failsafe.plugin>${version.surefire.plugin}</version.failsafe.plugin>
+		<version.help.plugin>2.2</version.help.plugin>
+		<version.install.plugin>2.5.2</version.install.plugin>
+		<version.invoker.plugin>3.0.1</version.invoker.plugin>
+		<version.jar.plugin>3.0.2</version.jar.plugin>
+		<version.javadoc.plugin>3.0.0</version.javadoc.plugin>
+		<version.plugin.plugin>3.5</version.plugin.plugin>
+		<version.resources.plugin>3.0.2</version.resources.plugin>
+		<version.shade.plugin>3.1.0</version.shade.plugin>
+		<version.site.plugin>3.6</version.site.plugin>
+		<version.source.plugin>3.0.1</version.source.plugin>
+		<version.surefire.plugin>3.0.0-M5</version.surefire.plugin>
+		<version.version.plugin>2.5</version.version.plugin>
+		<version.war.plugin>3.2.0</version.war.plugin>
+		<!-- Plugins flag -->
+		<javadoc.disabled>true</javadoc.disabled>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+
+		<!-- Project -->
+		<maven.compiler.parameters>true</maven.compiler.parameters>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.quarkus</groupId>
+				<artifactId>quarkus-universe-bom</artifactId>
+				<version>${quarkus.platform.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- tag::adocSkip[] -->
+			<dependency>
+				<groupId>com.github.javafaker</groupId>
+				<artifactId>javafaker</artifactId>
+				<version>${version.javafaker}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.microprofile-ext.health-ext</groupId>
+				<artifactId>health-ui</artifactId>
+				<version>${version.health-ui}</version>
+			</dependency>
+			<!-- end::adocSkip[] -->
+		</dependencies>
+	</dependencyManagement>
+	<!-- end::adocBom[] -->
+
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Quarkus -->
+				<plugin>
+					<groupId>io.quarkus</groupId>
+					<artifactId>quarkus-maven-plugin</artifactId>
+					<version>${quarkus-plugin.version}</version>
+				</plugin>
+
+				<!-- All core Maven plugins ordered by shortname (antrun, assembly ...) -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>${version.antrun.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>${version.archetype.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${version.assembly.plugin}</version>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<appendAssemblyId>false</appendAssemblyId>
+						<descriptors>
+							<descriptor>assembly.xml</descriptor>
+						</descriptors>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${version.clean.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${version.compiler.plugin}</version>
+					<inherited>true</inherited>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${version.dependency.plugin}</version>
+					<configuration>
+						<!-- Perfs improvements - PAR-191 -->
+						<useJvmChmod>true</useJvmChmod>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${version.deploy.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-enforcer-plugin</artifactId>
+					<version>${version.enforcer.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>${version.exec.plugin}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>java</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${version.failsafe.plugin}</version>
+					<configuration>
+						<argLine>-Duser.language=en -Duser.country=EN</argLine>
+						<reuseForks>false</reuseForks>
+					</configuration>
+					<executions>
+						<execution>
+							<id>integration-test</id>
+							<goals>
+								<goal>integration-test</goal>
+								<goal>verify</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-help-plugin</artifactId>
+					<version>${version.help.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${version.install.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-invoker-plugin</artifactId>
+					<version>${version.invoker.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${version.jar.plugin}</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<manifestEntries>
+								<Date>${maven.build.timestamp}</Date>
+								<Specification-Title>${project.name}</Specification-Title>
+								<Specification-Version>${project.version}</Specification-Version>
+								<Implementation-Title>${project.name}</Implementation-Title>
+								<Implementation-Version>${project.version}</Implementation-Version>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>${version.javadoc.plugin}</version>
+					<configuration>
+						<!-- Javadoc disabled - not used -->
+						<skip>${javadoc.disabled}</skip>
+						<archive>
+							<manifest>
+								<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<manifestEntries>
+								<Date>${maven.build.timestamp}</Date>
+								<Specification-Title>${project.name}</Specification-Title>
+								<Specification-Version>${project.version}</Specification-Version>
+								<Implementation-Title>${project.name}</Implementation-Title>
+								<Implementation-Version>${project.version}</Implementation-Version>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>${version.plugin.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${version.resources.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-shade-plugin</artifactId>
+					<version>${version.shade.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${version.site.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${version.source.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${version.surefire.plugin}</version>
+					<configuration>
+						<argLine>-Duser.language=en -Duser.country=EN</argLine>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>${version.version.plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${version.war.plugin}</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<manifestEntries>
+								<Date>${maven.build.timestamp}</Date>
+								<Specification-Title>${project.name}</Specification-Title>
+								<Specification-Version>${project.version}</Specification-Version>
+								<Implementation-Title>${project.name}</Implementation-Title>
+								<Implementation-Version>${project.version}</Implementation-Version>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+
+
+	<modules>
+		<module>understanding-quarkus-chapter01-first-step</module>
+		<module>understanding-quarkus-chapter02-getting-started</module>
+		<module>understanding-quarkus-chapter03-core</module>
+	</modules>
+</project>

@@ -36,6 +36,17 @@ public class Question01 {
     //    
     // Answer C is correct
     //
+    // JAX-RS is a Java programming language API designed to make it easy to develop applications that use the REST architecture. 
+    // Root resource classes are "plain old Java objects" (POJOs) that are either annotated with @Path or have at least one method annotated 
+    // with @Path or a request method designator, such as @GET, @PUT, @POST, or @DELETE.
+    //
+    // Choice A is incorrect. The javax.ws.rs.core.Application class can be used to define the URL mapping for the application and it is 
+    // not mandatory for JAX-RS root class. 
+    // 
+    // Choice B is incorrect. According to JAX-RS specifications, a resource can be a @Singleton or @Stateless EJB.
+    //
+    // Choice D is incorrect. The JAX-RS resource class can be final.
+    //
     // Resource classes are POJOs that have at least one method annotated with @Path or a request method designator.
 
     /**

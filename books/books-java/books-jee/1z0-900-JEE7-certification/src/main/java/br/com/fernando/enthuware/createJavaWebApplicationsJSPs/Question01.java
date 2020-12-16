@@ -42,6 +42,7 @@ public class Question01 {
     //
     //
     // The correct answer is A
+    //
     // JSTL defines the uri http://java.sun.com/jsp/jstl/sql for sql related tags.
     //
     // B and C are invalid directives

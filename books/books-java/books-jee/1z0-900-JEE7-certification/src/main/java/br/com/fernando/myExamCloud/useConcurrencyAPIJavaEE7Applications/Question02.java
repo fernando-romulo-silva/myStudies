@@ -64,6 +64,7 @@ public class Question02 {
     // <T> Future<T> submit(Callable<T> task)
     //
     // Submits a value-returning task for execution and returns a Future representing the pending results of the task.
+    //
     // The Future's get method will return the task's result upon successful completion.
     //
     // If you would like to immediately block waiting for a task, you can use constructions of the form result = exec.submit(aCallable).get();

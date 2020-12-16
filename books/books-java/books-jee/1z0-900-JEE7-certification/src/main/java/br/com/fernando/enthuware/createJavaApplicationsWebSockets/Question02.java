@@ -24,7 +24,16 @@ public class Question02 {
     //
     //
     //
+    //    
+    //
+    //
+    //    
+    //    
+    //
+    //
+    //
     // The answer B is correct
+    //
     // Any WebSocket implementation must use HTTP for the initial handshake as mandated by the WebSocket protocol specification, RFC 6455.
     //
     // A is wrong because:

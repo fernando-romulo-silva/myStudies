@@ -3,6 +3,7 @@ package br.com.fernando.myExamCloud.createJavaApplicationsWebSockets;
 public class Question07 {
 
     // Which statement is true about the relationship between HTTP and WebSockets?
+    // Select 1 option(s):
     //
     // Choice A
     // A WebSocket connection is a bi-directional HTTP session with message-handling support.

@@ -69,9 +69,11 @@ public class Question09 {
     //
     //
     //
-    // Choice C is correct.
+    // Choice C is correct. (B is the correct)
     // 
     // In JAX-RS, an incoming HTTP HEAD request is handled by a target resource method successfully if:
-    // The resource method is annotated with @HEAD.
-    // The resource method annotated with @GET, any returned entity is discarded for HTTP HEAD request, but for HTTP GET request, it will function normally.
+    //
+    // * The resource method is annotated with @HEAD.
+    //
+    // * The resource method annotated with @GET, any returned entity is discarded for HTTP HEAD request, but for HTTP GET request, it will function normally.
 }

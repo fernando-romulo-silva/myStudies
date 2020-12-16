@@ -10,6 +10,7 @@
 		<module>pro-spring-5-chapter01-introducing-spring</module>
 		<module>pro-spring-5-chapter02-getting-started</module>
 		<module>pro-spring-5-chapter03-introducing-ioc-di-spring</module>
+		<module>pro-spring-5-chapter04-config-detail-spring-boot</module>
 	</modules>
 
 	<properties>
@@ -20,6 +21,8 @@
 
 		<junit-platform.version>5.7.0</junit-platform.version>
 	</properties>
+
+	<!-- Hooking into Bean Destruction -->
 
 	<dependencies>
 
@@ -68,6 +71,19 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${springframework.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
 

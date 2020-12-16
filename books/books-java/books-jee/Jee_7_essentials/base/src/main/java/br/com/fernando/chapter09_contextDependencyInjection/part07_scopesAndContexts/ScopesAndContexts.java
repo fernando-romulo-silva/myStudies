@@ -60,12 +60,13 @@ public class ScopesAndContexts {
     //
     // -------------------------------------------------------------------------------------------------------------------------------------------------------
     //
-    // # javax.faces.flow.@ViewScoped - View scoped beans have the same life time as the view which initially referenced them.
+    // # javax.faces.view.@ViewScoped - View scoped beans have the same life time as the view which initially referenced them.
     // This means that their scope is shorter that session, but greater than request.
     // As soon as a view references a view scoped bean, the CDI container will create a new bean instance and reuse it across the view life time.
     //
     // http://localhost:18080/embeddedJeeContainerTest/viewScoped.xhtml
     //
+    // javax.faces.bean.ViewScoped is deprecated
     @Named
     @ViewScoped
     public static class TestViewScopedBean implements Serializable {

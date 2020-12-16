@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>br.com.fernando</groupId>
+    <artifactId>understanding-quarkus</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>understanding-quarkus-chapter02-getting-started</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>understanding-quarkus-chapter02-part01-gernerating-code</module>
+  	<module>understanding-quarkus-chapter02-part02-artist-resource</module>
+  </modules>
+</project>

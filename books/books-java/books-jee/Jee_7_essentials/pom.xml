@@ -13,10 +13,10 @@
 	</modules>
 
 	<properties>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
-		<maven.compiler.testSource>1.7</maven.compiler.testSource>
-		<maven.compiler.testTarget>1.7</maven.compiler.testTarget>
+		<!-- <maven.compiler.source>1.7</maven.compiler.source> <maven.compiler.target>1.7</maven.compiler.target> -->
+
+		<maven.compiler.source>14</maven.compiler.source>
+		<maven.compiler.target>14</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -27,7 +27,32 @@
 			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>javax.activation-api</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+
 	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<fork>true</fork>
+					<compilerArgs>
+						<arg>--enable-preview</arg>
+						<arg>--add-modules=ALL-SYSTEM</arg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
 
 </project>

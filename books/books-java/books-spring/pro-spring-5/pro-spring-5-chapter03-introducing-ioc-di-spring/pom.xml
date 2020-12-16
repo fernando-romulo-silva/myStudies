@@ -23,6 +23,8 @@
 		<module>pro-spring-5-chapter03-part11-method-replacement</module>
 		<module>pro-spring-5-chapter03-part12-bean-naming</module>
 		<module>pro-spring-5-chapter03-part13-bean-instantiation-mode</module>
+		<module>pro-spring-5-chapter03-part14-bean-autowiring</module>
+		<module>pro-spring-5-chapter03-part15-bean-inheritance</module>
 	</modules>
 
 	<!-- Bean Name Aliasing -->

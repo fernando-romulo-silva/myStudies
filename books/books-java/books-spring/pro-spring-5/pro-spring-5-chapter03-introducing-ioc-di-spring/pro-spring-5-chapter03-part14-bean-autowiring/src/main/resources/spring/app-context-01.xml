@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Following the principle of DRY (Don't Repeat Yourself) the same classes can be used for the XML and Annotated example. -->
+	<!-- If component scanning is not enabled, the annotations are ignored. -->
+	<bean id="johnMayer" class="com.apress.prospring5.ch3.annotated.Singer" depends-on="gopher" />
+	<bean id="gopher" class="com.apress.prospring5.ch3.annotated.Guitar" />
+
+	<!-- In this configuration, we are asserting that bean johnMayer depends on bean gopher. -->
+	<!-- Spring should take this into consideration when instantiating the beans and ensure that gopher is created before johnMayer. -->
+	<!-- To do this, though, johnMayer needs to access ApplicationContext. -->
+	<!-- Thus, we also have to tell Spring to inject this reference, so when the johnMayer.sing() method will be called, it can be used to procure the gopher bean. -->
+
+
+</beans>

@@ -27,6 +27,18 @@ public class Question06 {
     //
     //
     //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct.
     //
     // A is wrong because QUERY parameters. 

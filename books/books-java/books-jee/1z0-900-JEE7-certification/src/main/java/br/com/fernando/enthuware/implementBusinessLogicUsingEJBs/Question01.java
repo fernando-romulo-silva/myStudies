@@ -63,16 +63,18 @@ public class Question01 {
     // The following expression represents every 10 minutes within the hour:
     //
     // minute="*/10"
-    // It is equivalent to:
-    //
+    // It is equivalent to: 
     // minute="0,10,20,30,40,50"
+    //
     // The following expression represents every 2 hours starting at noon:
     // hour="12/2"
+    //
     //
     // Specifying Range
     //
     // Use a dash character (–) to specify an inclusive range of values for an attribute.
     // Members of a range cannot be wildcards, lists, or intervals.
+    //
     // A range of the form x–x, is equivalent to the single-valued expression x.
     // A range of the form x–y where x is greater than y is equivalent to the expression x–maximum value, minimum value–y.
     // That is, the expression begins at x, rolls over to the beginning of the allowable values, and continues up to y.
@@ -83,7 +85,8 @@ public class Question01 {
     // The following expression represents Friday through Monday:
     // dayOfWeek="5–1"
     //
-    // The following expression represents the twenty-fifth day of the month to the end of the month, and the beginning of the month to the fifth day of the month:
+    // The following expression represents the twenty-fifth day of the month to the end of the month, 
+    // and the beginning of the month to the fifth day of the month:
     // dayOfMonth="25–5"
     //
     // It is equivalent to the following expression:

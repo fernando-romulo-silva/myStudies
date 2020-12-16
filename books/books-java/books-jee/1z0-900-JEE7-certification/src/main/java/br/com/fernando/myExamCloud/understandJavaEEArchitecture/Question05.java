@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 public class Question05 {
 
     // Your web application requires logic to remember items that a user placed into a shopping cart.
+    //
     // Which two Java EE web tier mechanisms should you use to associate that information with the user?
     // [ Choose two ]
     //
@@ -79,10 +80,11 @@ public class Question05 {
 
     // An object of ServletContext is created by the web container at time of deploying the project.
     // We can use setAttribute(String name, Object value) to save user cart info within ServletContext object.
+    //
     // HttpSession provides a way to identify a user across more than one page request or visit to a Web site and to store information about that use.
     // The shopping cart information can be saved in session object.
+    //
     // We cannot store any information in HttpServletResponse between page navigations, hence Choice A is incorrect.
     //
     // We can save cart information in database using JPA/JDBC, however the questions asks you to choose Java EE web tier mechanisms, hence choice D is also incorrect.
-
 }

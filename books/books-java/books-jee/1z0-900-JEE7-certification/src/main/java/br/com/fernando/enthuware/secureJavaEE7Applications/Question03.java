@@ -27,6 +27,12 @@ public class Question03 {
     //
     //
     //
+    //
+    //    
+    //
+    //
+    //
+    //    
     //    
     //
     //
@@ -36,6 +42,13 @@ public class Question03 {
     //
     //
     // The correct answer is D
+    //
+    // By default, the identity of the caller of the intermediate component is propagated to the target enterprise bean.
+    //
+    // The @RunAs annotation defines the role of the application during execution in a Java EE container. 
+    // It can be specified on a class, allowing developers to execute an application under a particular role. 
+    // The role must map to the user/group information in the container’s security realm. 
+    // The value element in the annotation is the name of a security role of the application during execution in a Java EE container.
     //
     // Defines the identity of the application during execution in a J2EE container.
     // This allows developers to execute under a particular role.

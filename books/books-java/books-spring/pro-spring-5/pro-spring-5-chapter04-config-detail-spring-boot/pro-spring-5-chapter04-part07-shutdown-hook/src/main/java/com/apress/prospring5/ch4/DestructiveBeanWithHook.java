@@ -1,0 +1,54 @@
+package com.apress.prospring5.ch4;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import java.io.File;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class DestructiveBeanWithHook {
+    private File file;
+    private String filePath;
+
+    @PostConstruct
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Initializing Bean");
+
+        if (filePath == null) {
+            throw new IllegalArgumentException(
+                    "You must specify the filePath property of " +
+                    DestructiveBeanWithHook.class);
+        }
+
+        this.file = new File(filePath);
+        this.file.createNewFile();
+
+        System.out.println("File exists: " + file.exists());
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("Destroying Bean");
+
+        if(!file.delete()) {
+            System.err.println("ERROR: failed to delete file.");
+        }
+
+        System.out.println("File exists: " + file.exists());
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    public static void main(String... args) throws Exception {
+        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+        ctx.load("classpath:spring/app-context-annotation.xml");
+        // Java allows you to create a shutdown hook , which is a thread that is executed just before the application shuts down. 
+        ctx.registerShutdownHook();
+        ctx.refresh();
+
+        ctx.getBean(DestructiveBeanWithHook.class);
+
+        ctx.close();
+    }
+}

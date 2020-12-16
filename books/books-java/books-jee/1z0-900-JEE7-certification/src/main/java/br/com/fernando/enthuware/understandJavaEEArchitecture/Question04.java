@@ -9,10 +9,10 @@ public class Question04 {
     //
     /**
      * <pre>
-     *       @<XXXX>( { 
-     *  	   @Resource(name="aFactory", 
+     *       &#64;<XXXX>( { 
+     *  	   &#64;Resource(name="aFactory", 
      *  	                     type="javax.jms.ConnectionFactory"),
-     *  	   @Resource(name="aSession",
+     *  	   &#64;Resource(name="aSession",
      *  	                     type="javax.mail.Session")
      *  	})
      * </pre>
@@ -46,6 +46,10 @@ public class Question04 {
     //
     //
     // The correct answer is A
+    //
+    // The @Resources annotation is used to group together multiple @Resource declarations for class-based injection.
+    // The code above shows the @Resources annotation containing two @Resource declarations.
+    // One is a JMS message queue, and the other is a JavaMail session.
     //
     // Declaring Multiple Resources
     // The @Resources annotation is used to group together multiple @Resource declarations for class-based injection.
