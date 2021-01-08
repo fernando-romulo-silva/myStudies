@@ -2,10 +2,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>br.com.fernando</groupId>
-		<artifactId>understanding-quarkus-chapter03-core</artifactId>
+		<artifactId>understanding-quarkus-chapter04-core</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>understanding-quarkus-chapter03-part01-cdi-injection</artifactId>
+	<artifactId>understanding-quarkus-chapter04-part01-cdi-injection</artifactId>
 
 	<dependencies>
 		<dependency>
