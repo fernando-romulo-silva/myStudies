@@ -32,10 +32,30 @@ public class Question06 {
     //
     //
     //     
+    //
+    //
+    //     
+    //
+    //
+    //
+    //     
+    //
+    //
+    //
+    //     
     //    
     //
     //
     //     
     //
     // The correct answers is B and D
+    //
+    // Java Servlet is server-side technology used to extend the capabilities of web servers by providing support for dynamic response.
+    // Entry door for most Java EE applications.
+    //
+    // * Handles client requests.
+    //
+    // * JavaServer Pages (JSP) is a technology for developing web pages that support dynamic content which helps developers insert
+    // java code in HTML pages by making use of special JSP tags.
+    // It has same information like Java Servlets (request, response, session, etc).
 }

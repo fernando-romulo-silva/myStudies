@@ -43,6 +43,36 @@ public class Question08 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A is correct.
     //
     // Based on the requirements, CMT with REQUIRED transaction attribute is the correct answer.

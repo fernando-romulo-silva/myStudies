@@ -52,10 +52,13 @@ public class Question06 {
     //
     //
     //
-    // Choice A and D are correct answers.
+    // Choice A and C are correct answers.
     //
     // The JSP provides an option to load ResourceBundle into a java.util.Map and stores it in the scoped namespace.
     //
-    // Here myapplication resouce bundle is loaded into myLabels map variable. We can access localized content using the normal value expression syntax.
+    // Here myapplication resouce bundle is loaded into myLabels map variable.
+    //
+    // We can access localized content using the normal value expression syntax.
+    //
     // <h:outputText value="#{myLabels.pageTitle}" />
 }

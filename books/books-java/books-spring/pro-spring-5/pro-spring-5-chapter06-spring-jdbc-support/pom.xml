@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>pro-spring-5-chapter06-spring-jdbc-support</artifactId>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>pro-spring-5</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>pro-spring-5-chapter06-part01-plain-jdbc</module>
+		<module>pro-spring-5-chapter06-part02-spring-jdbc-annotations</module>
+		<module>pro-spring-5-chapter06-part03-spring-jdbc-embedded</module>
+		<module>pro-spring-5-chapter06-part04-spring-jdbc-namedparam</module>
+		<module>pro-spring-5-chapter06-part05-spring-jdbc-rowmapper</module>
+		<module>pro-spring-5-chapter06-part06-spring-jdbc-resultsetextractor</module>
+		<module>pro-spring-5-chapter06-part07-spring-boot-jdbc</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

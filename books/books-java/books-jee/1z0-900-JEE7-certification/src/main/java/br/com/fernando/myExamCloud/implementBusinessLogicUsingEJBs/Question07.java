@@ -64,6 +64,24 @@ public class Question07 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct.
     //
     // The TransactionAttribute annotation specifies whether the container is to invoke a business method within a transaction context.
@@ -74,6 +92,7 @@ public class Question07 {
     // and the bean uses container managed transaction demarcation, the semantics of the REQUIRED transaction attribute are assumed.
     //
     // Here, the default transaction attribute REQUIRED applies to all methods.
+    //
     // The purchase method will runs within a transaction if already started or create new transaction if none exists.
     // Both sendConfirmation() and reserve() will run within the same transaction context since it uses REQUIRED default transaction attribute.
 }

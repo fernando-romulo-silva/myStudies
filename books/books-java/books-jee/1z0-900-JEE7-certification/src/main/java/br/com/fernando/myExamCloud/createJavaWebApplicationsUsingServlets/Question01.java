@@ -45,6 +45,28 @@ public class Question01 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice D is correct
     //
     // In the Web application deployment descriptor, the following syntax is used to define mappings:
@@ -59,4 +81,26 @@ public class Question01 {
     // All other strings are used for exact matches only.
     // Since in our case the <url-pattern> specifies a path mapping without a leading "/", the
     // web application would fail to load. Hence choice D is correct while choices A, B, and C are incorrect.
+    
+    /**
+     * 
+     *  <web-app>
+     *   
+     *       <servlet>
+     *       	<servlet-name>ManageProfile</servlet-name>
+     *       	<servlet-class>com.ManageProfileClass</servlet-class>
+     *       </servlet>
+     *  
+     * 	     <servlet-mapping>                              
+     * 	         <servlet-name>ManageProfile</servlet-name> 
+     * 	         <url-pattern>ManageProfile</url-pattern> <!-- wrong way -->   
+     * 	     </servlet-mapping>
+     *                              
+     * 	     <servlet-mapping>
+     * 	     	 <servlet-name>ManageProfile</servlet-name>
+     * 	     	 <url-pattern>/ManageProfile</url-pattern> <!--Correct way -->
+     * 	     </servlet-mapping>
+     * 
+     *  <web-app>
+     */
 }

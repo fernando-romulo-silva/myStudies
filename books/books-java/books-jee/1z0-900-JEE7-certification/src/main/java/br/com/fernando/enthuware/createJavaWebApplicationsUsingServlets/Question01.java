@@ -18,6 +18,11 @@ public class Question01 {
 
 	private static final long serialVersionUID = 1L;
 
+	@Override
+	public void init() throws ServletException {
+	    super.init();
+	}
+	
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 	    PrintWriter out = res.getWriter();
 	    out.print("Service() method called.");
@@ -26,6 +31,11 @@ public class Question01 {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 	    PrintWriter owt = res.getWriter();
 	    owt.print("Get() method called.");
+	}
+	
+	@Override
+	public void destroy() {
+	    super.destroy();
 	}
     }
 
@@ -39,6 +49,19 @@ public class Question01 {
     //
     // D - Get() method called.
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //
@@ -65,5 +88,22 @@ public class Question01 {
     //
     // Therefore, only "service() method called" will be printed. doGet() will not be executed.
     // That is why, the service(HttpServletRequest req, HttpServletResponse res) method of a Servlet is almost never overridden.
+    
+    @WebServlet(urlPatterns = { "/blockIoServlet" }, asyncSupported = true)
+    public static class BlockIoServletResponse extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	    PrintWriter out = res.getWriter();
+	    out.print("Service() method called.");
+	    super.service(req, res); // NOW IT'LL CALL GET
+	}
+
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	    PrintWriter owt = res.getWriter();
+	    owt.print("Get() method called.");
+	}
+    }
 
 }

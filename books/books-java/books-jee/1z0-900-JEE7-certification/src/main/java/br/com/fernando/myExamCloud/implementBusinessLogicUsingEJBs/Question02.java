@@ -18,7 +18,7 @@ public class Question02 {
     //
     // A - The TimerService interface is unavailable to stateless session beans.
     //
-    // B - The TimerService interface is unavailable to stteful session beans.
+    // B - The TimerService interface is unavailable to steful session beans.
     //
     // C - The TimerService interface is unavailable to singleton session beans.
     //

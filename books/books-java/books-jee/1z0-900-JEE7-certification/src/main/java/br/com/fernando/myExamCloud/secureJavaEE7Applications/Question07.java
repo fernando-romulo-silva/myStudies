@@ -9,6 +9,7 @@ public class Question07 {
     // Which two statements about the EJBContext.isCallerInRole method are correct?
     // [ Choose two ]
     //
+    //
     // Choice A
     // Message-driven beans must NOT call the isCallerInRole method.
     //
@@ -22,6 +23,24 @@ public class Question07 {
     // The isCallerInRole method can be called in the PostConstruct and PreDestroy lifecycle callback methods of a stateless session bean.
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //    
     //
     //
     //

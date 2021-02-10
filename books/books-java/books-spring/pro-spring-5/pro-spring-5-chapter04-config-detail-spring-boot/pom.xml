@@ -30,6 +30,11 @@
 		<module>pro-spring-5-chapter04-part18-profiles</module>
 		<module>pro-spring-5-chapter04-part19-environment</module>
 		<module>pro-spring-5-chapter04-part20-property-placeholder</module>
+		<module>pro-spring-5-chapter04-part21-property-jsr330</module>
+		<module>pro-spring-5-chapter04-part22-groovy-config-java</module>
+		<module>pro-spring-5-chapter04-part23-groovy-config</module>
+		<module>pro-spring-5-chapter04-part24-boot-simple</module>
+		<module>pro-spring-5-chapter04-part25-boot-web</module>
 	</modules>
 
 	<!-- message-source -->

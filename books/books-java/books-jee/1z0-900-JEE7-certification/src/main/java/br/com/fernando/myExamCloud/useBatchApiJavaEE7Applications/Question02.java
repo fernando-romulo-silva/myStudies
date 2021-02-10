@@ -44,25 +44,35 @@ public class Question02 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct.
     //
-    // When a batch job is submitted, the batch runtime creates an instance of JobExecution to track it. 
-    // JobExecution has methods to obtain various details such as the job start time, job completion time, job exit status, and so on. 
+    // When a batch job is submitted, the batch runtime creates an instance of JobExecution to track it.
+    //
+    // JobExecution has methods to obtain various details such as the job start time, job completion time, job exit status, and so on.
+    //
     // To obtain the JobExecution for an execution ID, you can use the JobOperator.getJobExecution(executionId) method.
-    
+
     public void executeBatch() {
-        final JobOperator jobOperator = BatchRuntime.getJobOperator();
+	final JobOperator jobOperator = BatchRuntime.getJobOperator();
 
-        // You can restart the job using the JobOperator.restart method:
-        final Properties properties = new Properties();
+	// You can restart the job using the JobOperator.restart method:
+	final Properties properties = new Properties();
 
-        final Long executionId = jobOperator.start("myJob", properties); // Convention name myJob.xml
+	final Long executionId = jobOperator.start("myJob", properties); // Convention name myJob.xml
 
-        final JobExecution jobExecution = jobOperator.getJobExecution(executionId);
+	final JobExecution jobExecution = jobOperator.getJobExecution(executionId);
     }
-    
-    
+
     // Listing shows the definition of JobExecution:
 
     public interface JobExampleExecution {

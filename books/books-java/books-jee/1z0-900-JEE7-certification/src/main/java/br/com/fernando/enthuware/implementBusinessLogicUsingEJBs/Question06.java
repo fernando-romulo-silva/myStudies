@@ -30,6 +30,30 @@ public class Question06 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is B
     //
     // 'A' is wrong because On the contrary, only a session bean with container managed transaction demarcation can call it

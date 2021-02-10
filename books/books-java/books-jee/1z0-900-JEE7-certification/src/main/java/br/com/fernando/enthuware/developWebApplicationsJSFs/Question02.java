@@ -86,10 +86,22 @@ public class Question02 {
     // C and D is wrong because you don't use @Inject annotations in methods without parameters
     //
     //
-    // getter method with injection
-    public @Inject Account getAcc() {
+    // Constructor injection
+    public class Customer2 {
+   	
+	private Account acc;
 
-	return null;
+	@Inject
+	public Customer2(Account acc) {
+	    super();
+	    this.acc = acc;
+	} 
     }
-
+    //
+    // Field injection
+    public class Customer3 {
+   	
+	@Inject
+	private Account acc;
+    }
 }

@@ -23,7 +23,6 @@ public class Question08 {
     //
     // D
     // Configure SessionTrackingMode.SSL on the ServletContext object.
-    //    
     //
     //
     //
@@ -38,7 +37,18 @@ public class Question08 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -50,14 +60,14 @@ public class Question08 {
     // The correct answer is A
     //
     // public void setSecure(boolean flag) Indicates to the browser whether the cookie should only be sent using a secure protocol, such as HTTPS or SSL.
-    // The default value is false. If true, sends the cookie from the browser to the server only when using a secure protocol; 
+    // The default value is false. If true, sends the cookie from the browser to the server only when using a secure protocol;
     // if false, sent on any protocol
     //
     // D is wrong because This is a way to ensure that session is tracked using a particular mechanism. i.e. using COOKIE, using URL rewriting, or using SSL.
-    // It is possible to invoke ServletContext.setSessionTrackingMode(SessionTrackingMode.SSL); . 
+    // It is possible to invoke ServletContext.setSessionTrackingMode(SessionTrackingMode.SSL); .
     // This will ensure all data including cookies will be sent over SSL.
     //
-    // 
+    //
     public class FirstServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -73,7 +83,7 @@ public class Question08 {
 
 		Cookie cookie = new Cookie("key", "value"); // creating cookie object
 		cookie.setSecure(true); // sends the cookie from the browser to the server only when using a secure protocol;
-		
+
 		response.addCookie(cookie);// adding cookie in the response
 
 		// creating submit button
@@ -88,6 +98,5 @@ public class Question08 {
 	    }
 	}
     }
-    
-    
+
 }

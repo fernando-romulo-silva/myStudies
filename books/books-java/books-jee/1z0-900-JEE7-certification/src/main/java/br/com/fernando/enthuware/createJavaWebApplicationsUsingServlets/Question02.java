@@ -45,6 +45,21 @@ public class Question02 {
     //    
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
     // The correct answer is A
     //
     // B is wrong because Attributes stored in the session are shared only while the session is alive and only with the resources that are participating in the session.

@@ -10,6 +10,7 @@
 		<servlet-name>AccountServlet</servlet-name>
 		<servlet-class>br.com.fernando.chapter02_servlet.part01_servlets.Servlet03</servlet-class>
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>AccountServlet</servlet-name>
 		<url-pattern>/account03</url-pattern>

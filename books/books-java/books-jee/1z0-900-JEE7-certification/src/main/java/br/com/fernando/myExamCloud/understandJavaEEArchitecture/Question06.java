@@ -7,27 +7,45 @@ public class Question06 {
     // A Java EE application that uses an EJB container must communicate with a legacy system developed using non-Java technologies.
     // Which two Java EE technologies can be used in the integration tier of the application?
     //
-    //  Choice A 	
-    //  JMS
+    // Choice A
+    // JMS
     //
-    //  Choice B 	
-    //  JSF
+    // Choice B
+    // JSF
     //
-    //  Choice C 	
-    //  JPA
+    // Choice C
+    // JPA
     //
-    //  Choice D 	
-    //  JCA
-    //
-    //
-    //    
+    // Choice D
+    // JCA
     //
     //
     //
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -37,7 +55,7 @@ public class Question06 {
     //
     // The 'A' is correct because JMS (Java Message Service) is an API that provides the facility to create, send and read messages.
     // It provides loosely coupled, reliable and asynchronous communication. JMS is also known as a messaging service.
-    // It is possible for an MDB to interface with a legacy application. 
+    // It is possible for an MDB to interface with a legacy application.
     // The new Java application can remain decoupled with the legacy application by sending messages to the MDB.
     //
     // The 'D' is correct because Java EE Connector Architecture (JCA) is a Java-based technology solution for connecting application servers and enterprise information systems (EIS) as part of

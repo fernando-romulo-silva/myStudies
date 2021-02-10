@@ -31,6 +31,12 @@ public class Question07 {
     //
     //
     //
+    //        
+    //
+    //
+    //
+    //
+    //
     //
     //    
     //
@@ -46,8 +52,15 @@ public class Question07 {
     //
     //
     //
+    //    
     //
-    // Choice A is correct.
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice B is correct.
     //
     // Requirements for Entity Classes
     //
@@ -74,7 +87,7 @@ public class Question07 {
     }
 
     @Entity
-    public class Article {
+    public abstract class Article {
 
 	Article() {
 

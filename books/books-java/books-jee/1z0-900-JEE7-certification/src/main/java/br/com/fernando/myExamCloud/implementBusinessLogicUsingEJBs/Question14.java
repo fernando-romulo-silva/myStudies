@@ -1,7 +1,9 @@
 package br.com.fernando.myExamCloud.implementBusinessLogicUsingEJBs;
 
+import javax.annotation.Resource;
 import javax.ejb.ApplicationException;
 import javax.ejb.EJB;
+import javax.ejb.EJBContext;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -64,6 +66,18 @@ public class Question14 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -98,6 +112,9 @@ public class Question14 {
 
 	@EJB
 	OrderManager orderManager;
+	
+	@Resource
+	EJBContext context;
 
 	public void callAddOrder1() { // this method commit transaction
 
@@ -110,6 +127,7 @@ public class Question14 {
 	    } catch (MyApplicationException e) {
 		// nothing, just logging
 		e.printStackTrace();
+		// context.setRollbackOnly();
 	    }
 	}
     }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.agoncal.fascicle.quarkus</groupId>
+	<artifactId>understanding-quarkus-chapter06-http</artifactId>
+	<packaging>pom</packaging>
+	<name>Quarkus :: HTTP Microservices</name>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>understanding-quarkus</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>understanding-quarkus-chapter06-part01-jaxrs-exposing</module>
+	    <module>understanding-quarkus-chapter06-part02-jaxrs-invoking</module>
+	    <module>understanding-quarkus-chapter06-part03-open-api-v3spec</module>
+	    <module>understanding-quarkus-chapter06-part04-open-api-default</module>
+	    <module>understanding-quarkus-chapter06-part05-open-api-custom</module>
+	    <module>understanding-quarkus-chapter06-part06-open-api-advanced</module>
+	    <!-- 
+	    <module>jsonb-advanced</module>
+	    <module>jsonb-custom</module>
+	    <module>jsonb-default</module>
+	    <module>jsonp</module>
+	    <module>open-api-advanced</module>
+	    <module>open-api-custom</module>
+	    <module>open-api-default</module>
+	    <module>open-api-v3spec</module>
+	    <module>panache-rest</module>
+	     -->
+  	</modules>
+
+</project>

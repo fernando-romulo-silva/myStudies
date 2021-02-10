@@ -74,6 +74,7 @@ public class Question06 {
     //         <filter-name>MyFilter</filter-name>
     //         <servlet-name>MyServlet</servlet-name>
     //     </filter-mapping>
+    //
     // Whenever MyServlet is accessed, the request goes through the MyFilter.
     //
     // * Mapped to groups of servlets and static content using the <url-pattern> For example,

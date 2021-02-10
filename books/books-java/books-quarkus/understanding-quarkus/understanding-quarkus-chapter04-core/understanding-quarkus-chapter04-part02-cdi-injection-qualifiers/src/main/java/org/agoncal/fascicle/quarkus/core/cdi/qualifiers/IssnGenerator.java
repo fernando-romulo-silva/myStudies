@@ -8,7 +8,7 @@ import java.util.Random;
  * http://www.antoniogoncalves.org
  * --
  */
-// tag::adocSnippet[]
+
 @EightDigits
 @ApplicationScoped
 public class IssnGenerator implements NumberGenerator {
@@ -17,4 +17,4 @@ public class IssnGenerator implements NumberGenerator {
     return "8-" + Math.abs(new Random().nextInt());
   }
 }
-// end::adocSnippet[]
+

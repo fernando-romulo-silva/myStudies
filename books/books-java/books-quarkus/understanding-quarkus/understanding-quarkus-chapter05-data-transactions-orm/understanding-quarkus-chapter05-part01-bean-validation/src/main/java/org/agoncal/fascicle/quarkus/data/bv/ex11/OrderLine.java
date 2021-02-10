@@ -1,0 +1,55 @@
+package org.agoncal.fascicle.quarkus.data.bv.ex11;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
+
+/**
+ * @author Antonio Goncalves http://www.antoniogoncalves.org --
+ */
+
+public class OrderLine {
+
+    public String item;
+
+    @NotNull
+    @PositiveOrZero
+    public Double unitPrice;
+
+    @NotNull
+    @Positive
+    public Integer quantity;
+
+    // tag::adocSkip[]
+    // @formatter:on
+
+    public OrderLine() {
+    }
+
+    public OrderLine(String item, Double unitPrice, Integer quantity) {
+	this.item = item;
+	this.unitPrice = unitPrice;
+	this.quantity = quantity;
+    }
+
+    // ======================================
+    // = Getters & Setters =
+    // ======================================
+
+    public OrderLine item(String item) {
+	this.item = item;
+	return this;
+    }
+
+    public OrderLine unitPrice(Double unitPrice) {
+	this.unitPrice = unitPrice;
+	return this;
+    }
+
+    public OrderLine quantity(Integer quantity) {
+	this.quantity = quantity;
+	return this;
+    }
+    // end::adocSkip[]
+}
+

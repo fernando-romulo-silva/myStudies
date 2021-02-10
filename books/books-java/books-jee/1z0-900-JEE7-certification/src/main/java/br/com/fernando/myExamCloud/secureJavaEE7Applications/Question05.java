@@ -47,11 +47,23 @@ public class Question05 {
     //
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice D is correct.
     //
-    // The HttpServletRequest method java.security.Principal getUserPrincipal() Returns a java.security.Principal object containing the name of the current authenticated
-    // user. If the user has not been authenticated, the method returns null.
+    // The HttpServletRequest method java.security.Principal getUserPrincipal() Returns a java.security.
+    // Principal object containing the name of the current authenticated user. 
+    // If the user has not been authenticated, the method returns null.
     //
     // The SessionContext java.security.Principal getCallerPrincipal() method obtain the java.security.Principal that identifies the caller.
     // Note that in web tier user directly interact with web page, so remember getUserPrincipal method for HttpServletRequest.

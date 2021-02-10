@@ -35,6 +35,22 @@ public class Question06 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //    
     //
     //
@@ -44,12 +60,14 @@ public class Question06 {
     // If a bean does not explicitly declare a qualifier other than @Named or @Any, the bean has exactly one additional qualifier, of type @Default. 
     // This is called the default qualifier.
     //
-    // Both declarations result in a bean with two qualifiers: @Any and @Default. 
+    // Both declarations result in a bean with two qualifiers: @Any and @Default.
+    //
     // The following declaration results in a bean with three qualifiers: @Any, @Default and @Named("ord").
+    //
     // The following declarations are equivalent:
     @Any
-    @Named
     @Default
+    @Named("order")
     public class Order02 { }
     
 }

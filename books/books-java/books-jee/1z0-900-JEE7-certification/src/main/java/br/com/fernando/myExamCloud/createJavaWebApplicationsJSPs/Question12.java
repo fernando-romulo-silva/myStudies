@@ -38,6 +38,20 @@ public class Question12 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -45,5 +59,47 @@ public class Question12 {
     //
     //
     // Choice A and B are correct answers.
+    //
+    // * There are 11 types of Standard Action Tags as following:
+    //
+    // jsp:useBean
+    // jsp:include
+    // jsp:setProperty
+    // jsp:getProperty
+    // jsp:forward
+    // jsp:plugin
+    // jsp:attribute
+    // jsp:body
+    // jsp:text
+    // jsp:param
+    // jsp:attribute
+    // jsp:output
+    //
+    //
+    //
+    // * JSP Expression Language (EL) makes it possible to easily access application data stored in JavaBeans components.
+    //
+    // <jsp:setProperty name = "box" property = "perimeter" value = "${2*box.width+2*box.height}" />
+    //
+    //
+    //
+    // * A scriptlet tag is used to execute java source code in JSP. Syntax is as follows:
+    //
+    // <% out.print("welcome to jsp"); %>  
+    //
+    //
+    //
+    // * Directives provide directions and instructions to the container, telling it how to handle certain aspects of the JSP processing.
+    //
+    // <%@ directive attribute = "value" %>
+    //
+    // There are three types of directive tag
+    //
+    // <%@ page ... %> : Defines page-dependent attributes, such as scripting language, error page, and buffering requirements.
+    //
+    // <%@ include ... %> : Includes a file during the translation phase.
+    //
+    // <%@ taglib ... %> : <jsp:directive.page attribute = "value" />
+
 
 }

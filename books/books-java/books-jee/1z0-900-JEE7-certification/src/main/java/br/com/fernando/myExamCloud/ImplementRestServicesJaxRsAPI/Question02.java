@@ -50,12 +50,36 @@ public class Question02 {
     //
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A is correct.
     //
     // The @PathParam annotation lets you use variable URI path fragments when you call a method.
+    //
     // In this example, the @Path annotation defines the URI variables (or path parameters) {firstname}, {lastname}, and {domain}.
+    //
     // The @PathParam in the method parameter of the request method extracts the domain from the email address.
+    //
     // If your HTTP request is GET /customers/brian.christopher@epractizelabs.com, the value, “epractizelabs” is injected into {domain}.
     //
 

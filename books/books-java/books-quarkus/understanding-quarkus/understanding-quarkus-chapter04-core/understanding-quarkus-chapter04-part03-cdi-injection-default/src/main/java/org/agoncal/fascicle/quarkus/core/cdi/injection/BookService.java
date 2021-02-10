@@ -15,10 +15,10 @@ public class BookService {
   // =             Attributes             =
   // ======================================
 
-  // tag::adocSnippet[]
+  
   @Inject
   NumberGenerator numberGenerator;
-  // end::adocSnippet[]
+  
 
   // ======================================
   // =          Business methods          =

@@ -15,7 +15,8 @@ public class Question11 {
     // You are assigned to develop WebSocket server endpoint to accept text messages.
     //
     // Which of the following are valid server endpoint to accept text messages? [ Choose two ]
-
+    //
+    //
     // Choice A
     /**
      * <pre>
@@ -24,6 +25,7 @@ public class Question11 {
      *    	@Override
      *    	public void onOpen(Session session, EndpointConfig ec) {
      *    	    final RemoteEndpoint.Basic remote = session.getBasicRemote();
+     *    
      *    	    session.addMessageHandler(String.class, new MessageHandler.Whole<String>() {
      *    		public void onMessage(String text) {
      *    		    try {
@@ -43,7 +45,8 @@ public class Question11 {
      * <pre>
      *      @WebSocket("/hello")
      *      public class TextWebSocketB {
-     *  	@OnMessage
+     *  	
+     *          @OnMessage
      *  	public String handleMessage(String message) {
      *  	    return "Got your message (" + message + "). Thanks !";
      *  	}
@@ -56,6 +59,7 @@ public class Question11 {
      * <pre>
      *       @ServerEndpoint("/hello")
      *       public class TextWebSocketC {
+     *       
      *   	@OnMessage
      *   	public String handleMessage(String message) {
      *   	    return "Got your message (" + message + "). Thanks !";
@@ -68,10 +72,12 @@ public class Question11 {
     /**
      * <pre>
      *       public class TextWebSocketD extends WebSocket {
-     *   	@Override
+     *   	
+     *          @Override
      *   	public void onOpen(Session session, EndpointConfig ec) {
      *   	    final RemoteEndpoint.Basic remote = session.getBasicRemote();
-     *   	    session.addMessageHandler(String.class, new MessageHandler.Whole<String>() {
+     *   	    
+     *              session.addMessageHandler(String.class, new MessageHandler.Whole<String>() {
      *   		public void onMessage(String text) {
      *   		    try {
      *   			remote.sendText("Got your message (" + text + "). Thanks !");
@@ -86,11 +92,38 @@ public class Question11 {
      */
     //
     // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    //     
+    //
+    // 
+    //
+    //     
     // Choice A and C are correct answers.
     //
-    // Both are valid answers. 
+    // Both are valid answers.
+    //
     // Choice A uses only the API classes.
-    // Choice B uses annotations in the API. 
+    //
+    // Choice B uses annotations in the API.
+    //
     // The class level @ServerEndpoint annotation indicates that a Java class is to become a websocket endpoint at runtime.
     public class TextWebSocketA extends Endpoint {
 
@@ -112,11 +145,11 @@ public class Question11 {
     
     @ServerEndpoint("/hello")
     public class TextWebSocketC {
+	
 	@OnMessage
 	public String handleMessage(String message) {
 	    return "Got your message (" + message + "). Thanks !";
 	}
     }
-    
     
 }

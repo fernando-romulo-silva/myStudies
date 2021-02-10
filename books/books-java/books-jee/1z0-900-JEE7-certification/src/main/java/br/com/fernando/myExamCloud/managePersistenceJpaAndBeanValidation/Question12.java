@@ -11,6 +11,7 @@ public class Question12 {
     class Customer {
 	@Id
 	int id;
+	
 	@OneToOne
 	Address address;
     }
@@ -19,6 +20,7 @@ public class Question12 {
     class Address {
 	@Id
 	int id;
+	
 	@OneToOne(mappedBy = "address")
 	Customer customer;
     }
@@ -55,12 +57,32 @@ public class Question12 {
     //
     //
     //
-    // Choice C is correct.
+    // Choice A is correct.
     //
     // The annotation @OneToOne defines a single-valued association to another entity that has one-to-one multiplicity. 
+    //
     // It is not normally necessary to specify the associated target entity explicitly since it can usually be inferred from the type of the object being referenced.
     //
-    // mappedBy - The field that owns the relationship. 
+    // mappedBy - The field that owns the relationship. So, in this case Customer.address. The foreign key is on CUSTOMER table.
     //
     // This element is only specified on the inverse (non-owning) side of the association. Hence Choice C is correct.
+    //
+    //
+    // 00000000000000000000000000000000000000000000000
+    // 000||=========||0000000000||==============||000
+    // 000||0ADDRESS0||0000000000||000CUSTOMER000||000
+    // 000||=========||I--------I||==============||000
+    // 000||ID0000000||0000000000||ID000000000000||000
+    // 000||=========||0000000000||ADDRESS_ID0000||000
+    // 00000000000000000000000000||==============||000
+    // 00000000000000000000000000000000000000000000000
+    //    
+    // Remember: MappedBy is a property of the relationship annotations whose purpose is to generate a mechanism to relate two entities which by 
+    // default they do by creating a join table. MappedBy halts that process in one direction.
+    //
+    // To start considering a bi-directional OneToOne relationship, you do not require two foreign keys, one in each table, 
+    // so a single foreign key in the OWNING side of the relationship is sufficient.
+    //
+    // In JPA the inverse OneToOne must use the mappedBy attribute (with some exceptions), this makes the JPA provider use the foreign key 
+    // and mapping information in the source mapping to define the target mapping.
 }

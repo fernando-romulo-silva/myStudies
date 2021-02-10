@@ -44,6 +44,22 @@ public class Question05 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //    
     //
     //
@@ -69,12 +85,21 @@ public class Question05 {
     //
     // <url-pattern>/</url-pattern>
     //
-    // It only replaces the servletcontainer's built in default servlet for all requests which doesn't match any other registered servlet.
+    // It only replaces the servlet container's built in default servlet for all requests which doesn't match any other registered servlet.
     //
     // This is normally only invoked on static resources (CSS/JS/image/etc) and directory listings.
     //
     // In contrast, no two servlet-mapping elements in the same application may use the same url-pattern.
     //
     // If the web.xml file contains two identical mappings to different servlets, the container makes no guarantees 
-    // about which servlet the container calls for a given request, hence must fail the deployment.    
+    // about which servlet the container calls for a given request, hence must fail the deployment.   
+    
+    /**
+     * <pre>
+     *     <servlet-mapping>
+     *     	<servlet-name>AccountServlet</servlet-name>
+     *     	<url-pattern>/account03</url-pattern>
+     *     </servlet-mapping>
+     * </pre>
+     */
 }

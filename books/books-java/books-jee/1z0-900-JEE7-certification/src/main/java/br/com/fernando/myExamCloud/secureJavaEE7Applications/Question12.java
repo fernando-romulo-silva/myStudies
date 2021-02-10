@@ -56,5 +56,5 @@ public class Question12 {
     // Requirement given:  There are three distinct roles known at development time: "admin", "examinee", and "trainee". 
     // The majority of the methods will be used by role "admin". All methods must have role permissions active and roles may be added or changed in the future.
     //
-    // Hence the following statements are valid.    
+    // Hence the C and D statements are valid.    
 }

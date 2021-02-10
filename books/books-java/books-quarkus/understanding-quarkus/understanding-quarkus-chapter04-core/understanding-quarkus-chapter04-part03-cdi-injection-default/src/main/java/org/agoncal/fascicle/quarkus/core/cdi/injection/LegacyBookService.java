@@ -17,10 +17,10 @@ public class LegacyBookService {
   // =             Attributes             =
   // ======================================
 
-  // tag::adocSnippet[]
+  
   @Inject @Default
   NumberGenerator numberGenerator;
-  // end::adocSnippet[]
+  
 
   // ======================================
   // =          Business methods          =

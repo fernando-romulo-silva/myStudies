@@ -57,7 +57,6 @@ public class Question09 {
     //
     //
     //
-    //    
     //
     //
     //
@@ -65,12 +64,33 @@ public class Question09 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
     // Choice C is correct. (B is the correct)
-    // 
+    //
     // In JAX-RS, an incoming HTTP HEAD request is handled by a target resource method successfully if:
     //
     // * The resource method is annotated with @HEAD.

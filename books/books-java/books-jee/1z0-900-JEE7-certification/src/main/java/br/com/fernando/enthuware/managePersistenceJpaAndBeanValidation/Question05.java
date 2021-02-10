@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.naming.Context;
+import javax.naming.InitialContext;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.ServletException;
@@ -11,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.transaction.UserTransaction;
 
 public class Question05 {
 
@@ -47,10 +50,10 @@ public class Question05 {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 	    String badgeld = req.getParameter("badge");
 	    String name = req.getParameter("name");
-	    
+
 	    Employee emp = hrService.findEmployee(badgeld);
 	    emp.setName(name);
-	    
+
 	    hrService.updateEmployee(emp);
 	}
     }
@@ -66,7 +69,7 @@ public class Question05 {
     // utx.begin();
     // entityManager.merge(emp);
     // utx.entityManager.lock(emp);
-    // entityManager.merge(emp);    
+    // entityManager.merge(emp);
     //
     // Choice C
     // entityManager.getTransaction().begin();
@@ -88,12 +91,64 @@ public class Question05 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice C is correct.
+    //
     // The state of persistent entities is synchronized to the database at transaction commit.
     // This synchronization involves writing to the database any updates to persistent entities and their relationships.
-    // An update to the state of an entity includes both the assignment of a new value to a persistent property or field of the entity 
+    // An update to the state of an entity includes both the assignment of a new value to a persistent property or field of the entity
     // as well as the modification of a mutable value of a persistent property or field.
-    // Therefore, for a managed entity, no code is necessary to save changes to the database. 
+    //
+    // Therefore, for a managed entity, no code is necessary to save changes to the database.
     // However, if you want to save a detached entity, then you need to call merge.
     // Further, if you want to persist the changes immediately, then you should either call flush() on the entityManager or commit the transaction.
+    //
+    // Ideally, no code is required. However, that is not an option.
+    // Further, since the object refered to by emp is already a managed entity object, call to merge is definitely not required.
+    // At the most, you could call flush if you want the changes to be persisted immediately but that is not given as an option either.
+
+    @Stateless
+    public class HRServiceResponse {
+
+	@PersistenceContext(unitName = "HRApp-PU")
+	EntityManager entityManager;
+
+	private Employee findEmployee(String customerId) {
+	    return entityManager.find(Employee.class, customerId);
+	}
+
+	public void updateEmployee(Employee emp) {
+
+	    entityManager.getTransaction().begin();
+	    entityManager.merge(emp);
+	    entityManager.getTransaction().commit();
+	}
+    }
+
+    @WebServlet(name = "HR", urlPatterns = { "/hr" })
+    public class HRServletrResponse extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	@EJB
+	private HRServiceResponse hrService;
+
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	    String badgeld = req.getParameter("badge");
+	    String name = req.getParameter("name");
+
+	    Employee emp = hrService.findEmployee(badgeld);
+	    emp.setName(name);
+
+	    hrService.updateEmployee(emp);
+	}
+    }
 }

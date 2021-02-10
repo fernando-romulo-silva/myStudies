@@ -10,7 +10,7 @@ import java.util.Random;
  * http://www.antoniogoncalves.org
  * --
  */
-// tag::adocSnippet[]
+
 @Default
 @ApplicationScoped
 public class IsbnGenerator implements NumberGenerator {
@@ -19,4 +19,4 @@ public class IsbnGenerator implements NumberGenerator {
     return "13-84356-" + Math.abs(new Random().nextInt());
   }
 }
-// end::adocSnippet[]
+

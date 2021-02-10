@@ -14,7 +14,7 @@ import static org.hamcrest.core.Is.is;
  * --
  */
 // @formatter:off
-// tag::adocSnippet[]
+
 @QuarkusTest
 public class AuthorResourceTest {
 
@@ -45,4 +45,4 @@ public class AuthorResourceTest {
         .body(is("Isaac Asimov"));
   }
 }
-// end::adocSnippet[]
+

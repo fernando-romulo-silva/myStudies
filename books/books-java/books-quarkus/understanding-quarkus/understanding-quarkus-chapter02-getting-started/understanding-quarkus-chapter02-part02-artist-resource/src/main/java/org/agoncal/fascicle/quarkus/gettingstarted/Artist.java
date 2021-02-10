@@ -10,7 +10,7 @@ import java.util.UUID;
  * http://www.antoniogoncalves.org
  * --
  */
-// tag::adocSnippet[]
+
 public class Artist {
 
   @JsonbTransient
@@ -94,4 +94,4 @@ public class Artist {
   }
   // end::adocSkip[]
 }
-// end::adocSnippet[]
+

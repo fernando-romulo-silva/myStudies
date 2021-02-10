@@ -41,13 +41,21 @@ public class Question10 {
     // <base url>/Orders/1234
     //
     // Choice B
-    // <base url>/ Orders /a1234
+    // <base url>/Orders/A1234
     //
     // Choice C
-    // <base url>/ Orders /id:a1234
+    // <base url>/Orders/id:a1234
     //
     // Choice D
-    // <base url>/ Orders /id/a1234
+    // <base url>/Orders/id/a1234
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -63,10 +71,13 @@ public class Question10 {
     //
     //
     //
-    // Choice A is correct.
-    // @Path support complex URI matching with regular expression, via following expression : {" variable-name [ ":" regular-expression ] "} .
+    // Choice B is correct.
     //
-    // Choice B is incorrect, URI Pattern "<base url>/Orders/a1234" , failed, don’t match.
+    // @Path support complex URI matching with regular expression:
+    // id:[A-Z] [0-9]+ implies that id must match the regular expression [A-Z] [0-9]+.
+    // Any string that starts with a capital letter from A to Z and then numbers, matches this regular expression.
+    //
+    // Choice A is incorrect, URI Pattern "<base url>/Orders/1234" , failed, don’t match.
     // Choice C is incorrect, URI Pattern "<base url>/Orders/id:a1234" , failed, don’t match.
     // Choice D is incorrect, URI Pattern "<base url>/Orders/id/a1234" , failed, don’t match.
 

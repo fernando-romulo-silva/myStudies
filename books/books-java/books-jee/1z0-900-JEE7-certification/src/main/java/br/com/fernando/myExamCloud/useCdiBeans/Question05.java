@@ -1,9 +1,10 @@
 package br.com.fernando.myExamCloud.useCdiBeans;
 
+import static javax.enterprise.event.Reception.IF_EXISTS;
+
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Event;
 import javax.enterprise.event.Observes;
-import javax.enterprise.event.Reception;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -32,11 +33,11 @@ public class Question05 {
     public static class OrderActivityService {
 
 	// line3
-	public void notifPayment(OrderEvent oe) {
+	public void notifPayment(OrderEvent oe) { // 4
 	}
 
 	// line 6
-	public void notifyRefund(OrderEvent oe) {
+	public void notifyRefund(OrderEvent oe) { // 7
 	}
     }
 
@@ -44,7 +45,7 @@ public class Question05 {
     // only if an instance of OrderActivityService is already instantiated in the current context?
     //
     // Choice A
-    // @Observes(notifyObserver=IF_EXISTS) on line 3 and line 6
+    // @Observes(notifyObserver=IF_EXISTS) on line 4 and line 7
     //
     // Choice B
     // @Observes(during=IN_PROGRESS) on line 1
@@ -63,6 +64,24 @@ public class Question05 {
     //
     //
     //
+    // 
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //     
+    //
+    //
+    //
+    //
+    //
+    //
+    // The correct answer is D
+    //
     // A conditional observer method is notified of an event only if an instance of the bean that defines the
     // observer method already exists in the current context.
     //
@@ -72,11 +91,16 @@ public class Question05 {
     public static class OrderActivityServiceResponse {
 
 	// line3
-	public void notifPayment(@Observes(notifyObserver = Reception.IF_EXISTS) OrderEvent oe) {
+	public void notifPayment(@Observes(notifyObserver = IF_EXISTS) OrderEvent oe) { // 4
 	}
 
 	// line 6
-	public void notifyRefund(@Observes(notifyObserver = Reception.IF_EXISTS) OrderEvent oe) {
+	public void notifyRefund(@Observes(notifyObserver = IF_EXISTS) OrderEvent oe) { // 7
+	}
+	
+	// line3
+	// @Observes(notifyObserver = IF_EXISTS) // error: The annotation @Observes is disallowed for this location
+	public void notifPayment2(OrderEvent oe) {
 	}
     }
 }

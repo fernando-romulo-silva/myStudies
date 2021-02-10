@@ -51,10 +51,42 @@ public class Question07 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
     //
     // The correct answer is C and D
+    //
     // C is correct because In this approach we are using HTML's placeholder attribute and enhancing the HTML input tag with jsf using jsp:id and jsf:value attributes.
     //
-    // D
     // D is correct Since xmins:pt="http://xmlns.jep.org/jsf/passthrough" is included, pt:placeholder will work.
+    //
+    //
+    // We can use a place holder as follows:
+    //
+    // xmlns:f5 ="http://xmlns.jcp.org/jsf/passthrough" ...
+    //
+    // <h:inputText id="email" value="#{userBean.email}" validator="emailValidator" f5:placeholder="Enter your email..." f5:type="email"/>
+    //
+    // Other ways
+    //
+    // <h:inputText id="email" value="#{bean.email}">
+    //     <f:passThroughAttributes value="#{bean.atributos}" />
+    // </h:inputText>
+    //
+    //
+    // <h:inputText id="email" value="#{bean.email}">
+    //    <f:passThroughAttributes value="#{bean.atributos}" /> // map 
+    // </h:inputText>
 }

@@ -29,7 +29,32 @@ public class Question11 {
     //
     //
     //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct
+    //
     // Why?
     // The auth-constraint indicates the user roles that should be permitted access to a resource collection.
     // It is defined as follows.
@@ -40,8 +65,9 @@ public class Question11 {
      *          <web-resource-collection>
      *              <web-resource-name>admin</web-resource-name>
      *              <url-pattern>/admin/*</url-pattern>
-     *          </web-resource-collection> <auth-constraint>
-     *          <role-name>ADMIN</role-name>
+     *          </web-resource-collection> 
+     *          <auth-constraint>
+     *              <role-name>ADMIN</role-name>
      *          </auth-constraint>
      *      </security-constraint>
      * </pre>

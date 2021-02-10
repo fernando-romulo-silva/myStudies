@@ -21,9 +21,38 @@ public class Question08 {
     //
     //
     //
-    // The correct answer is A and B
-    // A because using the forEach tag
-    // C Using the if tag.
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // The correct answer is A and C
+    //
     // D is wrong because Tags for I18N capable formatting are in http://java.sun.com/jsp/jstl/fmt
     //
     // FunctionalArea ------------ URI ------------------------------------ Prefix
@@ -33,4 +62,29 @@ public class Question08 {
     // I18N capable formatting --- http://java.sun.com/jsp/jstl/fmt ------- fmt
     // relational db access (SQL)- http://java.sun.com/jsp/jstl/sql ------- sql
     // Functions ----------------- http://java.sun.com/jsp/jstl/functions - fn
+
+    /**
+     * <pre>
+     *      <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+     *      <html>
+     *         <head>
+     *            <title>Example</title>
+     *         </head>
+     *      
+     *         <body>
+     *    
+     *            <c:set var = "salary" scope = "session" value = "${2000*2}"/>
+     *            
+     *            <c:if test = "${salary > 2000}">
+     *               <p>My salary is:  <c:out value = "${salary}"/><p>
+     *            </c:if>
+     *         
+     *            <c:forEach var = "i" begin = "1" end = "5">         
+     *               Item <c:out value = "${i}"/><p>         
+     *            </c:forEach>
+     *            
+     *         </body>
+     *      </html>
+     * </pre>
+     */
 }

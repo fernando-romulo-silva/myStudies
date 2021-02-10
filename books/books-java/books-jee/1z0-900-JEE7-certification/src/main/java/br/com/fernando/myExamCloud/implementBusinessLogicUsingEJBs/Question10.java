@@ -61,7 +61,7 @@ public class Question10 {
     //
     //
     //
-    // The correct answer B
+    // The correct answer B and D
 
     @Stateless
     public class AlarmManager2 {
@@ -71,8 +71,28 @@ public class Question10 {
 
 	public void createAlarm(Date alarmDate) {
 	    TimerConfig config = new TimerConfig();
-	    config.setInfo(1);
-	    timerService.createSingleActionTimer(alarmDate, config);
+
+	    Integer info = 1;
+
+	    config.setInfo(info);
+
+	    // ONCE
+	    timerService.createSingleActionTimer(alarmDate, config); // Create a single-action timer that expires at a given point in time.
+
+	    timerService.createTimer(alarmDate, info); // Create a single-action timer that expires at a given point in time.
+
+	    // INTERVAL
+	    //
+	    // Create an interval timer whose first expiration occurs at a given point in time and whose subsequent expirations occur after a specified interval.
+	    timerService.createIntervalTimer(alarmDate, 0, config);
+	    //
+	    //
+	    // Create a calendar-based timer based on the input schedule expression.
+	    timerService.createCalendarTimer(null);
+	    //
+	    //
+	    // Create an interval timer whose first expiration occurs at a given point in time and whose subsequent expirations occur after a specified interval.
+	    timerService.createTimer(alarmDate, -1L, info);
 	}
 
 	@Timeout

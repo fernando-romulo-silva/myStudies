@@ -66,10 +66,24 @@ public class Question07 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct
     @Inject
     @Synchronous // qualifier
     PaymentProcessor paymentProcessorCorrect;
-    
+
     // Qualifier types are applied to injection points to distinguish which implementation is required by the client.
 }

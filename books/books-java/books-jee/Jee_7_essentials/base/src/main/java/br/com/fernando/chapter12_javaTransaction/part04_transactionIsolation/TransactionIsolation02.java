@@ -22,6 +22,7 @@ public class TransactionIsolation02 {
     //
     // When this level is set, the transaction can read uncommitted data resulting in the Dirty Read problem.
     // With this isolation level, we allow a transaction to read the data which is being updated by other transaction and not yet committed.
+    //
     // Use this on a one-user system, on systems in which the likelihood of two transactions accessing the same resources is nil or almost nil, 
     // or when using the Rowversion data type to control concurrency.
     //
@@ -30,21 +31,35 @@ public class TransactionIsolation02 {
     // joins that can easily escalate to table locks. 
     // In such a scenario, the primary DML operations might be inserts only and often not part of the queries.
     // 
-    // 
     //
-    // Read Committed
+    //
+    //
+    // * Read Committed* 
+    //
     // This prevents Dirty Read. When this level is set, the transaction can not read the data that is being modified by the current transaction.
     // This will force user to wait for the current transaction to finish up its job.
     // Suppose User A is trying to read a row which is being updated by User B. 
     // Here, we are asking User A to wait for the User B to finish its update task, and giving the updated/correct data to User A.
     // But the problem with this level is - it can't resolve Phantom Read or Inconsistency Analysis i.e it asks User A to wait for Read but not for update or insert.
     //
-    // Repeatable Read
+    //
+    //
+    //
+    //
+    // * Repeatable Read *
+    //
     // This level does every work that Read Committed does. but it has one additional benefit. 
     // User A will wait for the transaction being executed by User B to execute it's Update query as well, like Read Query. 
     // But Insert query doesn't wait, this also creates Phantom Read problem.
-    // 
-    // Serializable
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    // * Serializable *
+    //
     // This is the maximum level of Isolation level provided by SQL Server transaction. 
     // We can prevent Phantom Read problem by implementing this level of isolation. 
     // It asks User A to wait for the current transaction for any kind of operation he wants to perform.

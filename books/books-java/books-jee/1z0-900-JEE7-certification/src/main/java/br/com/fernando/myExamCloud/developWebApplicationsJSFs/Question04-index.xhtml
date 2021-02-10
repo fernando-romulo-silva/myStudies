@@ -12,11 +12,13 @@
 	<h:form id="searchForm">
 		<!-- Line 1 -->
 		<input jsf:id="search" placeholder="Search here" jsf:value="#(searchMB.query)"></input>
-		
+
 		<h:commandButton value="Search" action="#{searchMB.search}" />
-		
+
 		<input id="search" jsf:placeholder="Search Here" value="$(searchMB.query)"></input>
-		
+
+		<h:inputText pt:placeholder="Search Here" value="#(searchMB.query)" />
+
 	</h:form>
 
 </body>

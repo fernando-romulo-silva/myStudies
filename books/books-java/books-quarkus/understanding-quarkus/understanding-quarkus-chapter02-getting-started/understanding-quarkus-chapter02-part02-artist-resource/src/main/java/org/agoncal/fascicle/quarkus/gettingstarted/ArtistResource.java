@@ -11,7 +11,7 @@ import java.util.UUID;
 /**
  * @author Antonio Goncalves http://www.antoniogoncalves.org --
  */
-// tag::adocSnippet[]
+
 @Path("/artists")
 public class ArtistResource {
 
@@ -55,4 +55,4 @@ public class ArtistResource {
 	return artists.size();
     }
 }
-// end::adocSnippet[]
+

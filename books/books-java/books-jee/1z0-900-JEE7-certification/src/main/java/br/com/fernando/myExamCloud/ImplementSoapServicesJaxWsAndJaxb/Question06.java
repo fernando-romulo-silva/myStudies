@@ -32,7 +32,31 @@ public class Question06 {
     //
     //
     //
-    // Choice D is correct. (correct answer is B)
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice B is correct
 
     @WebService(targetNamespace = "http://simplewebservice.com.br")
     public interface SimpleEndpointInterface {

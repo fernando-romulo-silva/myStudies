@@ -48,8 +48,19 @@ public class Question08 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     // Choice A is correct.
+    //
     // At line #17 the session is invalidated.
     // The method getAttribute will throw java.lang.IllegalStateException hence the call is from invalidated session.
 

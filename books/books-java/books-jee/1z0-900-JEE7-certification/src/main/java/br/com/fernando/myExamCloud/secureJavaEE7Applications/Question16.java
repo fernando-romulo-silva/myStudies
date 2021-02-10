@@ -24,6 +24,34 @@ public class Question16 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice C is correct.
     //
     // Web Services Security: SOAP Message Security (WS-Security) is an international standard for interoperable Web Services Security that was collaboratively developed

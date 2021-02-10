@@ -1,5 +1,10 @@
 package br.com.fernando.myExamCloud.useBatchApiJavaEE7Applications;
 
+import java.util.Properties;
+
+import javax.batch.operations.JobOperator;
+import javax.batch.runtime.BatchRuntime;
+
 public class Question04 {
 
     // Which of the following obtain JobOperator?
@@ -17,6 +22,15 @@ public class Question04 {
     // JobOperator jobOperator = JobOperator.getJobOperator();
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //
@@ -53,4 +67,15 @@ public class Question04 {
     //
     // The properties parameter serves to pass any input data to the job. 
     // The Properties object (containing the name of the payroll input file) is made available to other batch artifacts (such as ItemReader, ItemProcessor, and so on) through the JobContext interface.
+    
+    public long startNewBatchJob() throws Exception {
+	String payrollInputDataFileName = "payrollInputDataFileName";
+
+	JobOperator jobOperator = BatchRuntime.getJobOperator(); // answer B
+	
+	Properties props = new Properties();
+	props.setProperty("payrollInputDataFileName", payrollInputDataFileName);
+	
+	return jobOperator.start("ProductLoadJob", props);
+    }
 }

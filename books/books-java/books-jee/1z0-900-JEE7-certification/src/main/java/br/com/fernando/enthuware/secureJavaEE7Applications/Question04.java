@@ -26,10 +26,20 @@ public class Question04 {
     //
     //
     //
+    //    
     //
-    // A e B are corrects
+    //
+    //
+    //
+    //
+    //
+    // 
+    // Choice A and B are correct answers.
+    //
+    // The WS-Security specification defines the use of various security tokens including X.509 certificates, SAML assertions, and username/password
+    // tokens to authenticate and encrypt SOAP web services messages
     //
     // SAML 2.0 is an XML-based protocol that uses security tokens
     //
-    // X.509 chaves públicas.
+    // X.509 public keys
 }    

@@ -54,6 +54,40 @@ public class Question05 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice C is correct.
     //
     // The http://host:port/context will not match with any of these servlets. It may work if the URL appended with '/'.
@@ -69,7 +103,7 @@ public class Question05 {
     //
     // <url-pattern>/</url-pattern>
     //
-    // It only replaces the servletcontainer's built in default servlet for all requests which doesn't match any other registered servlet.
+    // It only replaces the servlet container's built in default servlet for all requests which doesn't match any other registered servlet.
     //
     // This is normally only invoked on static resources (CSS/JS/image/etc) and directory listings.
     //

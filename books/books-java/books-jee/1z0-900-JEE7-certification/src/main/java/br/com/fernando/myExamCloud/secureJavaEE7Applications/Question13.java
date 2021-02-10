@@ -35,9 +35,31 @@ public class Question13 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice D is correct.
     //
     // Strong authentication is any form of authentication in which the verification is accomplished without the transmission of a password.
+    //
     // Strong authentication is associated with two-factor authentication or more generally multi-factor authentication.
+    //
     // Provide a digital certificate that is signed by a Certificate Authority would be a better choice for this design.
 }

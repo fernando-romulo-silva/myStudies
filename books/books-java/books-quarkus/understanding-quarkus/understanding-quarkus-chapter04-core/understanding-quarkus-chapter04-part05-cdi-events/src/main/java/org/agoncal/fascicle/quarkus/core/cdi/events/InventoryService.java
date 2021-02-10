@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  *         http://www.antoniogoncalves.org
  *         --
  */
-// tag::adocSnippet[]
+
 @Singleton
 public class InventoryService {
 
@@ -30,4 +30,4 @@ public class InventoryService {
     inventory.add(book);
   }
 }
-// end::adocSnippet[]
+

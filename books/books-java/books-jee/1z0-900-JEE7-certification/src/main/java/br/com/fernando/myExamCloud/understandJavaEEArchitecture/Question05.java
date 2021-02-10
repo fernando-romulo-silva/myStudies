@@ -18,8 +18,7 @@ public class Question05 {
 
     // Your web application requires logic to remember items that a user placed into a shopping cart.
     //
-    // Which two Java EE web tier mechanisms should you use to associate that information with the user?
-    // [ Choose two ]
+    // Which two Java EE WEB TIER mechanisms should you use to associate that information with the user?
     //
     // Choice A
     // HttpServletResponse objects
@@ -35,6 +34,22 @@ public class Question05 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //

@@ -23,17 +23,31 @@ public class Question02 {
     //
     //
     //
-    //
-    //
-    //
     //    
     //
     //
     //
     //
-    //    
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -41,7 +55,15 @@ public class Question02 {
     //
     // The B and C are the correct answer.
     //
-    // A will not compile
+    // Choice B is correct. The code will print current date. This is the JSP scriptlet tag where Java code can be used.
+    //
+    // Choice C is correct. This is the JSP expression tag.
+    // The code placed within JSP expression tag is written to the output stream of the response.
+    // So you need not write out.print() to write data.
+    //
+    // It is mainly used to print the values of variable or method.
+    //
+    // A will not compile, void type will not be used in <%= %> tag.
     //
     // D Will print the date in the servlet log
 

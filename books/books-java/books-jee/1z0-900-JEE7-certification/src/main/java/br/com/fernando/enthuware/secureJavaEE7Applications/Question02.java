@@ -31,7 +31,33 @@ public class Question02 {
     //
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // 
     // Choice B and D are correct answers.
     //
     // JAAS can be used for two purposes:

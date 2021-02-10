@@ -41,6 +41,8 @@ public class Question07 {
 	    super.destroy();
 	}
     }
+    // What output will be returned when this servlet is called a GET request? 
+    // 
     // Choice A
     // Service() method called. 
     //
@@ -52,6 +54,18 @@ public class Question07 {
     //
     // Choice D
     // GET() method called.
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

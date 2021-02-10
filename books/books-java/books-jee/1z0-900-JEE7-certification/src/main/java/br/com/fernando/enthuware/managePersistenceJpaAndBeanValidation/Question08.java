@@ -30,7 +30,30 @@ public class Question08 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is D
+    //
     // A transaction-type of RESOURCE_LOCAL assumes that a non-JTA datasource will be provided.
     // This means, the container won't be managing transactions for this resource and that you, the programmer, has to manage transactions for it programmatically.
     //

@@ -9,13 +9,8 @@ import javax.ejb.TransactionManagementType;
 
 public class Question05 {
 
-    // A session bean TestManager uses container-managed transactions,
+    // A session bean TestManager uses container-managed transactions (it not guarantee that use transaction),
     // The container throws a javax.transaction.TransactionRolledBackException (Rollback) when the associateTest method runs.
-    //
-    // public class TransactionRolledbackException extends RemoteException, Hmmm Remote client
-    //
-    // This exception indicates that the transaction associated with processing of the request has been rolled back (rollback), or marked to roll back.
-    // Thus the requested operation either could not be performed or was not performed because further computation on behalf of the transaction would be fruitless
     //
     // Which transaction attribute can the associateTest method have for this to occur?
     //
@@ -30,9 +25,56 @@ public class Question05 {
     //
     // Choice D
     // NOT_SUPPORTED
-
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice B is correct.
+    //
+    //
+    // public class TransactionRolledbackException extends RemoteException, Hmmm it's a REMOTE CLIENT
+    //
+    // This exception indicates that the transaction associated with processing of the request has been rolled back (rollback), or marked to roll back.
+    // Thus the requested operation either could not be performed or was not performed because further computation on behalf of the transaction would be fruitless
+    //
+    // The transaction attribute Mandatory requires the container to invoke a bean's method in a client's transaction context.
+    //
+    // If the client is not associated with a transaction context when calling this method, the container throws javax.transaction.TransactionRequiredException
+    //
+    // if the client is a remote client or javax.ejb.TransactionRequiredLocalException if the client is a local client.
+    //
+    // If the calling client has a transaction context, the case is treated as Required by the container.
+    //
     @Stateless
-    @TransactionManagement(TransactionManagementType.CONTAINER)
+    @TransactionManagement(TransactionManagementType.CONTAINER) // DEFAULT
     public static class TestManager {
 
 	// ?
@@ -80,8 +122,9 @@ public class Question05 {
 	private TestManager testManager;
 
 	// ?
+	@TransactionAttribute(TransactionAttributeType.SUPPORTS) // maybe it
 	public void associateTestClient() {
-
+	    testManager.method2();
 	}
     }
 

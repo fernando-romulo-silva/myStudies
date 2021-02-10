@@ -28,9 +28,9 @@ public class Question13 {
 	RemoteEndpoint.Async remote = session.getAsyncRemote();
 	Customer customer = new Customer("Brian Christoper");
 	customer.setActive(true);
-	
+
 	// send customer object here
-	
+
 	session.close(new CloseReason(CloseReason.CloseCodes.NORMAL_CLOSURE, "Goodbye"));
     }
 
@@ -48,14 +48,21 @@ public class Question13 {
     // Choice D
     // remote.sendObject(customer);
     //
-    // 
     //
     //
     //
     //
     //
     //
-    // 
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -66,6 +73,36 @@ public class Question13 {
     // Choice D is correct.
     //
     // The RemoteEndpoint.Async.sendObject() initiates the asynchronous transmission of Customer object.
+    //
+    public static void test02() throws Exception {
+
+	URI uri = new URI("ws://www.example.com/api/employee");
+	WebSocketContainer container = ContainerProvider.getWebSocketContainer();
+	Session session = container.connectToServer(new SocketHandler(), uri);
+
+	RemoteEndpoint.Async remote = session.getAsyncRemote();
+
+	Employee employee = new Employee("Nina Taylor");
+	employee.setStatus(Status.FULLTIME);
+
+	// send employee object
+	remote.sendObject(employee); // correct answer
+
+	session.close(new CloseReason(CloseReason.CloseCodes.NORMAL_CLOSURE, "Goodbye"));
+    }
+
+    public static enum Status {
+	FULLTIME
+    }
+
+    public static class Employee {
+
+	public Employee(String string) {
+	}
+
+	public void setStatus(Status fulltime) {
+	}
+    }
     //
     // Choice A is incorrect. There is no method named post in javax.websocket.Session.
     //

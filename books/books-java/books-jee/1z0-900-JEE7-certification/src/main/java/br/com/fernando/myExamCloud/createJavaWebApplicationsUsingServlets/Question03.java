@@ -30,13 +30,33 @@ public class Question03 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
     //
     //    
     //
-    // Explanation :
+    //
+    //    
+    //
     // Choice C is correct.
     //
     // Where to Use Servlets?

@@ -1,5 +1,7 @@
 package br.com.fernando.myExamCloud.ImplementSoapServicesJaxWsAndJaxb;
 
+import javax.jws.WebService;
+
 public class Question05 {
 
     // Given:
@@ -50,11 +52,46 @@ public class Question05 {
     //
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
     // Choice B is correct.
     //
     // To export these methods, we must add two things: an import statement for the javax.jws.WebService package
     // and a @WebService annotation at the beginning that tells the Java interpreter that we intend to publish
     // the methods of this class as a web service.
+    //
+    // import javax.jws.WebService;
+    @WebService
+    public class ProcessOrderResponse {
+
+	public boolean saveOrder(Order order) {
+	    boolean isSaved = false;
+	    // Save order
+
+	    return isSaved;
+	}
+
+	public boolean isValidOrder(String orderNumber) {
+	    boolean isValidOrder = false;
+	    // Verify order
+	    return isValidOrder;
+	}
+    }    
 
 }

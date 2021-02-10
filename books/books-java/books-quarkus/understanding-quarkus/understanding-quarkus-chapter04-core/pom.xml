@@ -1,19 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>br.com.fernando</groupId>
-    <artifactId>understanding-quarkus</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>understanding-quarkus-chapter04-core</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>understanding-quarkus-chapter04-part01-cdi-injection</module>
-  	<module>understanding-quarkus-chapter04-part02-cdi-injection-qualifiers</module>
-  	<module>understanding-quarkus-chapter04-part03-cdi-injection-default</module>
-  	<module>understanding-quarkus-chapter04-part04-cdi-injection-alternatives</module>
-  	<module>understanding-quarkus-chapter04-part05-cdi-events</module>
-  	<module>understanding-quarkus-chapter04-part06-cdi-events-qualifiers</module>
-  	<module>understanding-quarkus-chapter04-part07-config</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>understanding-quarkus</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>understanding-quarkus-chapter04-core</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>understanding-quarkus-chapter04-part01-cdi-injection</module>
+		<module>understanding-quarkus-chapter04-part02-cdi-injection-qualifiers</module>
+		<module>understanding-quarkus-chapter04-part03-cdi-injection-default</module>
+		<module>understanding-quarkus-chapter04-part04-cdi-injection-alternatives</module>
+		<module>understanding-quarkus-chapter04-part05-cdi-events</module>
+		<module>understanding-quarkus-chapter04-part06-cdi-events-qualifiers</module>
+		<module>understanding-quarkus-chapter04-part07-config</module>
+		<module>understanding-quarkus-chapter04-part08-config-yaml</module>
+		<module>understanding-quarkus-chapter04-part09-config-quarkus</module>
+		<module>understanding-quarkus-chapter04-part10-profiles</module>
+		<module>understanding-quarkus-chapter04-part11-logging</module>
+		<module>understanding-quarkus-chapter04-part12-lifecycle-main</module>
+		<module>understanding-quarkus-chapter04-part13-lifecycle-mainide</module>
+		<module>understanding-quarkus-chapter04-part14-lifecycle</module>
+	</modules>
 </project>

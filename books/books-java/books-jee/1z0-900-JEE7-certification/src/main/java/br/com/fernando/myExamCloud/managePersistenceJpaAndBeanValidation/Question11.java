@@ -34,9 +34,34 @@ public class Question11 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice C is correct.
     //
     // A persistence context(PC) is a set of managed entity instances in which for any persistent entity identity there is a unique entity instance.
+    //
     // An Entity Manager(EM) provides the necesarry APIs to interact with a persistence context.
     //
     // There is often a need to access the entities in the same PC in different components (say multiple EJBs or web component and EJB etc.) involved in processing of a request.

@@ -33,6 +33,30 @@ public class Question13 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //    
     // Answer C is correct
     //
@@ -53,7 +77,8 @@ public class Question13 {
      * Root resource (exposed at "helloworld" path)
      */
     @Path("helloworld")
-    public class HelloWorld {
+    public final class HelloWorld {
+	
 	@Context
 	private UriInfo context;
 

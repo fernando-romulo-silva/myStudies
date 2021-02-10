@@ -93,7 +93,6 @@ public class Question02 {
     //
     //
     //    
-    // Explanation :
     // Choice B is correct.
     //
     // Why

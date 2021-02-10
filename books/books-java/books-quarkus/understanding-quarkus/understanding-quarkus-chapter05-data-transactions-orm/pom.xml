@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>understanding-quarkus</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>understanding-quarkus-chapter05-data-transactions-orm</artifactId>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>understanding-quarkus-chapter05-part01-bean-validation</module>
+		<module>understanding-quarkus-chapter05-part02-jpa-default</module>
+		<module>understanding-quarkus-chapter05-part03-jpa-query</module>
+		<module>understanding-quarkus-chapter05-part04-jpa-advanced</module>
+		<module>understanding-quarkus-chapter05-part05-jpa-custom</module>
+		<module>understanding-quarkus-chapter05-part06-panache-entities</module>
+		<module>understanding-quarkus-chapter05-part07-panache-repositories</module>
+	</modules>
+</project>

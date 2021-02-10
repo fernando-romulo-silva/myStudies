@@ -13,7 +13,7 @@ import static org.hamcrest.CoreMatchers.is;
  * --
  */
 
-// tag::adocSnippet[]
+
 @QuarkusTest
 public class ArtistResourceTest {
 
@@ -41,4 +41,4 @@ public class ArtistResourceTest {
         .body(is("4"));
   }
 }
-// end::adocSnippet[]
+

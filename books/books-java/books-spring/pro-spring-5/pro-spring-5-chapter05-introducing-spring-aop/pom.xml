@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>pro-spring-5-chapter05-introducing-spring-aop</artifactId>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>pro-spring-5</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>pro-spring-5-chapter05-part01-aop-hello-world</module>
+		<module>pro-spring-5-chapter05-part02-simple-before-advice</module>
+		<module>pro-spring-5-chapter05-part03-security</module>
+		<module>pro-spring-5-chapter05-part04-simple-after-returning-advice</module>
+		<module>pro-spring-5-chapter05-part05-after-returning-advice-keygen</module>
+		<module>pro-spring-5-chapter05-part05-simple-around-advice</module>
+		<module>pro-spring-5-chapter05-part06-simple-throws-advice</module>
+		<module>pro-spring-5-chapter05-part07-static-pointcut</module>
+		<module>pro-spring-5-chapter05-part08-dynamic-pointcut</module>
+		<module>pro-spring-5-chapter05-part09-simple-name-matching</module>
+		<module>pro-spring-5-chapter05-part10-regex-pointcuts</module>
+		<module>pro-spring-5-chapter05-part11-aspectj-regex-pointcuts</module>
+		<module>pro-spring-5-chapter05-part12-annotation-pointcut</module>
+		<module>pro-spring-5-chapter05-part13-cglib-performance</module>
+		<module>pro-spring-5-chapter05-part14-cflow-pointcuts</module>
+		<module>pro-spring-5-chapter05-part15-composable-pointcut</module>
+		<module>pro-spring-5-chapter05-part16-modification-introduction</module>
+		<module>pro-spring-5-chapter05-part17-proxyfactorybean</module>
+		<module>pro-spring-5-chapter05-part18-proxyfactorybean-introduction</module>
+		<module>pro-spring-5-chapter05-part19-aop-namespace</module>
+		<module>pro-spring-5-chapter05-part20-aspectj-annotations</module>
+		<module>pro-spring-5-chapter05-part21-aspectj-boot</module>
+		<module>pro-spring-5-chapter05-part22-aspectj-aspects</module>
+	</modules>
+
+</project>

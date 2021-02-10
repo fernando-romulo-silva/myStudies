@@ -41,6 +41,13 @@ public class Question05 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -49,6 +56,7 @@ public class Question05 {
     //
     //
     // The correct answer is D
-    // "bean" is a Non contextual instance and it exists untill the containing bean is destroyed.
+    //
+    // The "bean" is a Non contextual instance and it exists untill the containing bean is destroyed.
     // In this case, the Service object itself is a contextual object and will last for the lifetime of the session.
 }

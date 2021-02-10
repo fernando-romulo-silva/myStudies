@@ -2,6 +2,7 @@ package br.com.fernando.enthuware.secureJavaEE7Applications;
 
 import javax.annotation.Resource;
 import javax.annotation.security.RolesAllowed;
+import javax.annotation.security.RunAs;
 import javax.ejb.EJBContext;
 import javax.ejb.Stateless;
 
@@ -22,6 +23,20 @@ public class Question03 {
     // @RunAs
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //    
     //
     //
     //
@@ -56,12 +71,13 @@ public class Question03 {
     // It's value is the name of a security role.
 
     @Stateless
+    @RunAs("god") // when it execute, it will be execute with "god" role
     public class StudentService {
 
 	@Resource
 	private EJBContext context;
 
-	@RolesAllowed({ "admin", "guest" })
+	@RolesAllowed({ "admin", "guest" }) // two roles are permited, but 'god' is not permited!
 	public Student addStudent(final Student student) {
 	    System.out.println(context.isCallerInRole("admin"));
 	    return student;

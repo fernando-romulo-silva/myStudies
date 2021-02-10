@@ -9,7 +9,7 @@ public class Question14 {
     // <jsp:include page="orderDisplay.jsp" />
     //
     // orderDisplay.jsp
-    // Your order number : <jsp:getProperty name="licenseBean" property="orderNumber" /><br>
+    // Your order number: <jsp:getProperty name="licenseBean" property="orderNumber" /><br>
     // Your Email ID: <jsp:getProperty name="licenseBean" property="email" />
     //
     // A developer wants to display order number and email address in orderDisplay.jsp.
@@ -40,10 +40,30 @@ public class Question14 {
     // 
     // 
     // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
+    //     
+    // 
+    // 
+    // 
+    // 
     //
     // Choice B is correct.
     //
-    // By default, the scope of a bean is page, so the bean will not be available in the dynamically included page.So choice A is incorrect.
+    // By default, the scope of a bean is page, so the bean will not be available in the dynamically included page.
+    //
+    // So choice A is incorrect.
     //
     // In a static inclusion (include directive), the two pages become one translation unit. 
     // So the bean will be available in the included page when the include directive is used. Hence choice B is correct.
@@ -62,7 +82,7 @@ public class Question14 {
      *     </head>
      *     <body> 
      *     	<b>index.jsp Page</b><br>
-     *     	<jsp:include page="Page2.jsp" /> 
+     *     	<jsp:include page="Page2.jsp" />
      *     </body> 
      *     </html>
      * </pre>
@@ -95,7 +115,7 @@ public class Question14 {
      *     	<title>JSP Include Directive example</title>
      *     </head>
      *     <body> 
-     *     	<%@ include file="Page2.jsp" %>  
+     *     	<%@ include file="Page2.jsp" %>
      *     </body> 
      *     </html>
      * </pre>

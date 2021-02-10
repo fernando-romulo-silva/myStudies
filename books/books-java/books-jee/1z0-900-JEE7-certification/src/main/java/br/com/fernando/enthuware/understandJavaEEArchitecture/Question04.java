@@ -9,10 +9,10 @@ public class Question04 {
     //
     /**
      * <pre>
-     *       &#64;<XXXX>( { 
-     *  	   &#64;Resource(name="aFactory", 
+     *       @<XXXX>( { 
+     *  	   @Resource(name="aFactory", 
      *  	                     type="javax.jms.ConnectionFactory"),
-     *  	   &#64;Resource(name="aSession",
+     *  	   @Resource(name="aSession",
      *  	                     type="javax.mail.Session")
      *  	})
      * </pre>
@@ -29,6 +29,33 @@ public class Question04 {
     //
     // D - @ResourceCollection
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //

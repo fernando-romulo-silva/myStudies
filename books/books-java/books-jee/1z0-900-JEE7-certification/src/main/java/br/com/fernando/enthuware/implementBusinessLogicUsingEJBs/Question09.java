@@ -1,5 +1,7 @@
 package br.com.fernando.enthuware.implementBusinessLogicUsingEJBs;
 
+import javax.jws.HandlerChain;
+import javax.jws.WebService;
 import javax.xml.ws.WebServiceRef;
 
 public class Question09 {
@@ -16,6 +18,40 @@ public class Question09 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
     // The correct answer is C
     //
     // The following example illustrates how a JAX-WS client obtains a reference to a web service endpoint,
@@ -28,6 +64,8 @@ public class Question09 {
     // StockQuoteProvider sqp = stockQuoteService.getStockQuoteProviderPort();
     // float quotePrice = sqp.getLastTradePrice("ACME");
 
+    @WebService
+    @HandlerChain(file = "handler-chain.xml")
     interface StockQuoteService {
 
     }

@@ -38,7 +38,6 @@ public class Question01 {
 	//
 	//
 	//
-	//	
 	//
 	//
 	//
@@ -47,7 +46,17 @@ public class Question01 {
 	//
 	//
 	//
-	// Explanation :
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	// Choice B and D are correct answers.
 	//
 	// Call to getEJBObject is not valid, since the bean is local.

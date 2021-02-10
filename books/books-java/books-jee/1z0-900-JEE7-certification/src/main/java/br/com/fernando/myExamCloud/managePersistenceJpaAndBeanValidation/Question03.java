@@ -34,7 +34,7 @@ public class Question03 {
     //
     // Choice B
     @Entity
-    public class QuestionB {
+    public class QuestionB { // Table Question
 	private QImageB questionImage;
 
 	@OneToOne
@@ -49,7 +49,7 @@ public class Question03 {
     }
 
     @Entity
-    public class QImageB {
+    public class QImageB { // table Q_IMAGE
 	// ...
     }
 

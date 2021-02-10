@@ -49,12 +49,23 @@ public class Question01 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is A and C
     //
     // A is correct because of:
-    @ServletSecurity(httpMethodConstraints = { //
-	    @HttpMethodConstraint(value = "GET", rolesAllowed = "R1"), //
-	    @HttpMethodConstraint(value = "POST", rolesAllowed = "R2") //
+    @ServletSecurity(httpMethodConstraints = { // Two separate @HttpMethodConstraints
+	    @HttpMethodConstraint(value = "GET", rolesAllowed = { "MANAGER", "WORKER" }), //
+	    @HttpMethodConstraint(value = "POST", rolesAllowed = "SALES") //
     })
     @WebServlet(name = "MyFooServlet", urlPatterns = { "/thatFoo" })
     public class FooServlet extends HttpServlet {
@@ -72,32 +83,39 @@ public class Question01 {
     // C is correct because of
     /**
      * <pre>
+     *      <!-- Two <web-resource-collection> with different <http-method> --> 
+     *      
      *      <security-constraint>
      *        
      *        <web-resource-collection>    
-     *          <web-resource-name>wholesale</web-resource-name>    
-     *          <url-pattern>/acme/wholesale/*</url-pattern>    
-     *          <http-method>POST</http-method>    
+     *           <web-resource-name>wholesale</web-resource-name>    
+     *           <url-pattern>/acme/wholesale/*</url-pattern>    
+     *           <http-method>POST</http-method>    
      *        </web-resource-collection>    
      *        
      *        <auth-constraint>    
-     *          <role-name>SALES</role-name>    
+     *           <role-name>SALES</role-name>    
      *        </auth-constraint>    
+     *        
      *      </security-constraint>    
      *          
      *      <security-constraint>    
      *        
      *        <web-resource-collection>    
-     *          <web-resource-name>wholesale</web-resource-name>    
-     *          <url-pattern>/acme/wholesale/*</url-pattern>    
-     *          <http-method>GET</http-method>    
+     *           <web-resource-name>wholesale</web-resource-name>    
+     *           <url-pattern>/acme/wholesale/*</url-pattern>    
+     *           <http-method>GET</http-method>    
      *        </web-resource-collection>    
      *        
      *        <auth-constraint>    
-     *          <role-name>MANAGER</role-name>    
-     *        </auth-constraint>    
+     *           <role-name>MANAGER</role-name>    
+     *        </auth-constraint>
+     *        
+     *        <auth-constraint>    
+     *           <role-name>WORKER</role-name>    
+     *        </auth-constraint>
+     *           
      *      </security-constraint>
      * </pre>
      */
-
 }

@@ -52,6 +52,18 @@ public class Question15 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice C is correct.
     @Stateful
     @TransactionAttribute(TransactionAttributeType.SUPPORTS)

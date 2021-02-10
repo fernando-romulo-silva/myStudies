@@ -52,7 +52,33 @@ public class Question05 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is C
+    //
+    // The RemoteEndpoint.Async.sendObject() initiates the asynchronous transmission of Customer object.
+    //
+    public static void test02() throws Exception {
+
+	URI uri = new URI("ws://www.example.com/api/employee");
+	WebSocketContainer container = ContainerProvider.getWebSocketContainer();
+	Session session = container.connectToServer(new SocketHandler(), uri);
+
+	RemoteEndpoint.Async remote = session.getAsyncRemote();
+
+	Employee employee = new Employee("Nina Taylor");
+	employee.setStatus(Status.FULLTIME);
+	
+	// send employee object
+	remote.sendObject(employee); // correct answer
+
+	session.close(new CloseReason(CloseReason.CloseCodes.NORMAL_CLOSURE, "Goodbye"));
+    }
 
     public static enum Status {
 	FULLTIME
@@ -66,4 +92,11 @@ public class Question05 {
 	public void setStatus(Status fulltime) {
 	}
     }
+    //
+    // Choice A is incorrect. There is no method named post in javax.websocket.Session.
+    //
+    // Choice B is incorrect. There is no method named send in javax.websocket.WebSocketContainer.
+    //
+    // Choice C is incorrect. There is no method named send in javax.websocket.Session.
+
 }

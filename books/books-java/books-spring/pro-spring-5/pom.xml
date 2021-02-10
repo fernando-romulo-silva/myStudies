@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.fernando</groupId>
 	<artifactId>pro-spring-5</artifactId>
@@ -11,13 +13,18 @@
 		<module>pro-spring-5-chapter02-getting-started</module>
 		<module>pro-spring-5-chapter03-introducing-ioc-di-spring</module>
 		<module>pro-spring-5-chapter04-config-detail-spring-boot</module>
+		<module>pro-spring-5-chapter05-introducing-spring-aop</module>
+		<module>pro-spring-5-chapter06-spring-jdbc-support</module>
+		<module>pro-spring-5-chapter07-using-hibernate-spring</module>
+		<module>pro-spring-5-chapter08-introducing-jpa-2-1</module>
+		<module>pro-spring-5-chapter09-transaction-management</module>
 	</modules>
 
 	<properties>
 		<maven.compiler.source>14</maven.compiler.source>
 		<maven.compiler.target>14</maven.compiler.target>
 
-		<springframework.version>5.3.1</springframework.version>
+		<springframework.version>5.2.12.RELEASE</springframework.version>
 
 		<junit-platform.version>5.7.0</junit-platform.version>
 	</properties>
@@ -95,6 +102,12 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -104,11 +117,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
-				<configuration>
-					<compilerArgs>
-						--enable-preview
-					</compilerArgs>
-				</configuration>
 			</plugin>
 		</plugins>
 

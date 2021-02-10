@@ -29,6 +29,18 @@ public class Question10 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
     //
     //
     //
@@ -45,6 +57,8 @@ public class Question10 {
     // JAX-WS allows developers to write message-oriented as well as RPC-oriented web services.
     //
     // With JAX-WS, clients and web services have a big advantage: the platform independence of the Java programming language.
+    //
     // In addition, JAX-WS is not restrictive: a JAX-WS client can access a web service that is not running on the Java platform, and vice versa.
+    //
     // This flexibility is possible because JAX-WS uses technologies defined by the World Wide Web Consortium (W3C): HTTP, SOAP, and the Web Service Description Language (WSDL)
 }

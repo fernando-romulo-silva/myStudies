@@ -55,7 +55,18 @@ public class Question05 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is B
+    //
     // Enumeration getPropertyNames() Returns an Enumeration of all the property names.
     // This is only method in JMSMessage that provides you a way to go through all the properties.
     public static final String CONTAINER_MANAGED_DESTINATION_JNDI = "jms/myContainerQueue"; // java:app/
@@ -88,6 +99,7 @@ public class Question05 {
 		TextMessage tm = (TextMessage) message;
 		System.out.println("Message received async (from MessageReceiverAsync): " + tm.getText());
 
+		@SuppressWarnings("unchecked")
 		Enumeration<String> props = message.getPropertyNames();
 
 		System.out.println(props);

@@ -1,7 +1,7 @@
-// tag::adocSnippet[]
+
 package org.agoncal.fascicle;
 
-// end::adocSnippet[]
+
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import javax.inject.Inject;
@@ -14,7 +14,7 @@ import javax.inject.Singleton;
  */
 @Singleton
 // @formatter:off
-// tag::adocSnippet[]
+
 public class Invoice {
 
   Float subtotal;
@@ -31,4 +31,4 @@ public class Invoice {
   @Inject @ConfigProperty
   String penalties;
 }
-// end::adocSnippet[]
+

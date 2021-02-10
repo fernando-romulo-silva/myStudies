@@ -45,6 +45,18 @@ public class Question11 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is D
     //
     // A cookie is a small piece of information that is persisted between the multiple client requests.

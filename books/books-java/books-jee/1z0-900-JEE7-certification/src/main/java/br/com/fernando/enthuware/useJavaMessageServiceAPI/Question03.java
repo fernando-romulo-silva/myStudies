@@ -32,6 +32,34 @@ public class Question03 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is D
     //
     // A is wrong because, Since the question mentions that the message needs to be sent in a transaction, the first parameter has to be true.
@@ -45,14 +73,16 @@ public class Question03 {
     // Note that there is only one method in QueueConnection interface to create QueueSession:
     //
     // public QueueSession createQueueSession(boolean transacted, int acknowledgeMode) throws JMSException
+    //
     // Parameters:
     // transacted - if true, the session is transacted.
     // acknowledgeMode - indicates whether the consumer or the client will acknowledge any messages it receives.
     // This parameter will be ignored if the session is transacted. Legal values are Session.AUTO_ACKNOWLEDGE, Session.CLIENT_ACKNOWLEDGE and Session.DUPS_OK_ACKNOWLEDGE.
+    //
     // Returns:
     // a newly created queue session.
     //
-    // In this question, since the message needs to be sent in a transaction, the first parameter is has to be true and so the second parameter will be ignored.
+    // In this question, since the message needs to be sent in a transaction, the first parameter is has to be 'true' and so the second parameter will be ignored.
     @Resource(mappedName = "java:/JmsXA")
     private QueueConnectionFactory queueConnectionFactory;
 
@@ -60,7 +90,7 @@ public class Question03 {
 
 	try {
 	    final QueueConnection queueConnection = queueConnectionFactory.createQueueConnection();
-	    final QueueSession qsession = queueConnection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);
+	    final QueueSession qsession = queueConnection.createQueueSession(true, Session.CLIENT_ACKNOWLEDGE);
 
 	    return qsession;
 

@@ -50,6 +50,22 @@ public class Question14 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice D is correct.
     //
     // JAX-RS annotations MAY be used on the methods of a super-class or an implemented interface.
@@ -59,4 +75,16 @@ public class Question14 {
     // Annotations on a super-class take precedence over those on an implemented interface.
     //
     // If a subclass or implementation method has any JAX-RS annotations then all of the annotations on the super class or interface method are ignored.
+    //
+    // The rule is "..subclass or implementation method has any JAX-RS annotations then all of the annotations on the super class or interface method are ignored.." 
+    
+    @Path("feed")
+    public class MyFeedGenericService implements FeedService {
+        
+	// in this case, inherits from FeedService
+	public Feed getFeed() {
+	    return null;
+	}
+    }
+    
 }

@@ -70,8 +70,23 @@ public class Question10 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     // The correct answer is D
+    //
     // By default, if a TransactionAttribute annotation is not specified for a method of an enterprise bean with container-managed transaction demarcation,
     // the value of the transaction attribute for the method is defined to be REQUIRED.
     //

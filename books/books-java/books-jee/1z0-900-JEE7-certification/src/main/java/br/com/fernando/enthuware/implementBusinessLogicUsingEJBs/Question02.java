@@ -61,6 +61,7 @@ public class Question02 {
     //
     //
     // The correct answer is D
+    //
     // The Bean Provider may optionally specify that concurrent client requests to a stateful session bean are prohibited.
     //
     // This is done using the AccessTimeout annotation or the access-timeout deployment descriptor element with a value of 0.

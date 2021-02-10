@@ -57,12 +57,36 @@ public class Question17 {
     //
     //
     //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice C is correct.
     //
     // The load-on-startup element indicates that the Servlet should be loaded (instantiated and have its init() called) on the startup of the web application.
     //
     // The optional contents of these elements must be an integer indicating the order in which the servlet should be loaded.
-    // If the value is a negative integer, or the element is not present, the container is free to load the servlet whenever it chooses.
+    // If the value is a NEGATIVE integer, or the element is not present, the container is free to load the servlet whenever it chooses.
     // Hence choice C is correct while choice B is incorrect.
     //
     // The container must guarantee that servlets marked with lower integers are loaded before servlets marked with higher integers.

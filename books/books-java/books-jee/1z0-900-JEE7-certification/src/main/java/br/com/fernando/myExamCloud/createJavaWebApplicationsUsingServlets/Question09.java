@@ -48,12 +48,19 @@ public class Question09 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct.
     //
     // You can indeed not define the filter execution order using @WebFilter annotation.
     // However we can achieve by web.xml filter mappings.
     // If using annotations (@WebFilter) the order seems to be undefined - you still have to declare the <filter-mapping> entries in web.xml.
-    
+
     @WebFilter(urlPatterns = "/*")
     public static class AuthorizationFilter implements javax.servlet.Filter {
 
@@ -83,7 +90,7 @@ public class Question09 {
 	public void destroy() {
 	    System.out.println("I'm here! {LoggingFilter.destroy} ");
 	}
-    }    
+    }
 
     @WebFilter(urlPatterns = "/*")
     public static class NarrowingFilter implements javax.servlet.Filter {

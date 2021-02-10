@@ -19,6 +19,39 @@ public class Question07 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answers are D and C
     //
     // 'A' is a declaration
@@ -27,21 +60,91 @@ public class Question07 {
     //
     // 'C' is an expression.
     //
+    // -------------------------------------------------------------------------------------------------------
     // Directives start with <%@.
     //
     // There are 3 types of directives:
     //
     // 1. page : Affects the overall properties of the jsp page.
-    // Here is a list of page directives to refresh your memory:
     // <%@ page attribute = "value" %>
     //
     // 2. taglib :
     // The set of significant tags a JSP container interprets can be extended through a "tag library".
     // The taglib directive in a JSP page declares that the page uses a tag library, uniquely identifies the tag library using a URI and associates a tag prefix
-    // that will distinguish usage of the actions in the library.
+    // that will distinguish usage of the actions in the library:
     // <%@ taglib prefix="c" uri="http://xmlns.jcp.org/jsp/jstl/core" %>
     //
     // 3. include :
     // The include directive is used to substitute text and/or code at JSP page translation-time.
     // Syntax: <%@ include file="relativeURLspec" %>
+    //
+    // -------------------------------------------------------------------------------------------------------
+    // In JSP, java code can be written inside the jsp page using the scriptlet tag.
+    //
+    /**
+     * <pre>
+     * 
+     *    <html>  
+     *    <body> 
+     *        <form> 
+     *           <%  
+     *              String name=request.getParameter("uname");  
+     *              out.print("welcome "+name);  
+     *           %>  
+     *        </form>  
+     *    </body>  
+     *    </html>
+     * 
+     * </pre>
+     */
+    //
+    //
+    // -------------------------------------------------------------------------------------------------------
+    // The JSP declaration tag is used to declare fields and methods.
+    //
+    /**
+     * <pre>
+     * 
+     *    <html>  
+     *    <body>  
+     * 		<%! int data=50; %>  
+     *          <%= "Value of the variable is:"+data %>  
+     *    </body>  
+     *    </html>
+     * 
+     * </pre>
+     */
+
+    /**
+     * <pre>
+     * 
+     *    <html>  
+     *    <body>  
+     *         <%!   
+     *             int cube(int n){  
+     *                 return n*n*n*;  
+     *             }  
+     *         %>  
+     *         
+     *         <%= "Cube of 3 is:"+cube(3) %>  
+     *    </body>  
+     *    </html>
+     * 
+     * </pre>
+     */
+    //
+    //
+    // -------------------------------------------------------------------------------------------------------
+    // The code placed within JSP expression tag is written to the output stream of the response.
+    /**
+     * <pre>
+     * 
+     *   <html>  
+     *   <body>  
+     * 	     <%= "welcome to jsp" %>  
+     *   </body>  
+     *   </html>
+     * 
+     * </pre>
+     */
 }

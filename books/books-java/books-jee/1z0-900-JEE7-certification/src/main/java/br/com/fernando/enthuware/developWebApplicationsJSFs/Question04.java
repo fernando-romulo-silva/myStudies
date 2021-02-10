@@ -74,9 +74,27 @@ public class Question04 {
     //
     //
     //
+    //
+    //
+    //    
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
     // The correct answer is C and D are correct
     //
     // The item 'A' is wrong because You cannot go from goodbye to list-widgets
     // The item 'B' is wrong because Can't go from home to add-widget.
+    //
+    // Just pay attention on to-view-id
 
 }

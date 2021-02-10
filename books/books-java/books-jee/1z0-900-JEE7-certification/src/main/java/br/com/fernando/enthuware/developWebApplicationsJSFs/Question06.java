@@ -26,13 +26,11 @@ public class Question06 {
      *             <h:inputText id="name" value="#{widgetEditor.widget.name}" />
      *             <h:outputLabel for="createdDate" value"Created Date:"/>
      * 
-     *             <h:inputText id="createdDate"
-     *                   value="#{widgetEditor.widget.createdDate}"/> <!-- Line 1 -->
+     *             <h:inputText id="createdDate" value="#{widgetEditor.widget.createdDate}"/> <!-- Line 1 -->
      * 
      *             <h:outputLabel for="approved" value="Approved:"/'>
      *             
-     *             <h:selectBooleanCheckbox id="approved"
-     *                   value="#{widgetEditor.widget.approved}" />
+     *             <h:selectBooleanCheckbox id="approved" value="#{widgetEditor.widget.approved}" />
      *             <h:commandButton value="Save" action="#{widgetEditor.save}"'>
      *       </h:form>
      * </pre>
@@ -74,6 +72,37 @@ public class Question06 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     // The correct answer is D    
+    // 
+    // The f:convertDateTime tag is used to convert a string value to a date of required format. It also acts as a validator, a required date format.
+    // 
+    // Choice A is incorrect. The converter type must be javax.faces.convert.Converter.
+    // Choice B is incorrect. The view tag will be used to display values and not for user inputs.
+    // 
+    // <f:viewParam name =" date" value ="#{searchCustomerForm.date}" >
+    //     <f:convertDateTime pattern =" dd-MM-yyyy" />
+    // </f:viewParam >
+    // 
+    // Choice C is incorrect. Just inserting <f:convertDateTime"/> will not work instead we need to add this into body of <h:inputText> tag. 
 }

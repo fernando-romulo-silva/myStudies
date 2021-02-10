@@ -10,7 +10,7 @@ import javax.inject.Inject;
  * --
  */
 // @formatter:off
-// tag::adocSnippet[]
+
 @ApplicationScoped
 public class BookService {
 
@@ -34,4 +34,4 @@ public class BookService {
     bookRemovedEvent.fire(book);
   }
 }
-// end::adocSnippet[]
+

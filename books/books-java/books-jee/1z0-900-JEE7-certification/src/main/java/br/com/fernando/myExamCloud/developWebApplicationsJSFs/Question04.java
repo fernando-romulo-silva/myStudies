@@ -49,14 +49,54 @@ public class Question04 {
      * 
      * </pre>
      */
-    // Choice C and E are correct answers. C is Pass Through Elements
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //    
+    // Choice C and D are correct answers. 
+    // 
+    // D is Pass Through Elements nad C is html5
     //
     // The placeholder attribute specifies a short hint that describes the expected value of an html input field, not a jsf input text!
     //
     // We can use a place holder as follows:
     //
-    // xmlns:f5 =" http:// xmlns.jcp.org/ jsf/passthrough" ...
+    // xmlns:f5 ="http://xmlns.jcp.org/jsf/passthrough" ...
     //
-    // <h:inputText id="email" value="#{userBean.email}" validator="emailValidator" f5:placeholder="Enter your email..."/>
-
+    // <h:inputText id="email" value="#{userBean.email}" validator="emailValidator" f5:placeholder="Enter your email..." f5:type="email"/>
+    //
+    // Other ways
+    //
+    // <h:inputText id="email" value="#{bean.email}">
+    //     <f:passThroughAttributes value="#{bean.atributos}" />
+    // </h:inputText>
+    //
+    //
+    // <h:inputText id="email" value="#{bean.email}">
+    //    <f:passThroughAttributes value="#{bean.atributos}" /> // map 
+    // </h:inputText>
 }

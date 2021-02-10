@@ -28,6 +28,16 @@ public class Question09 {
     //
     //    
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
     //
     //
     //
@@ -50,7 +60,7 @@ public class Question09 {
     //
     // If we write an error page in JSTL, the above properties can be accessed like this:
     // <c: out value = "$ {requestScope ['javax.servlet.error.message']}" />
-    // <c: out value = "$ {requestScope ['javax.servlet.error. exception]}" />
+    // <c: out value = "$ {requestScope ['javax.servlet.error.exception]}" />
     //
     // Choice A is incorrect. The code will not compile.
     // Choice C is incorrect. This is the scriptlet tag and it will not print anything on the page output.

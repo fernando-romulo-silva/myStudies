@@ -49,10 +49,51 @@ public class Question10 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A is correct.
     //
     // The error-page contains a mapping between an error code or an exception type to the path of a resource in the Web application.
     // The sub-element exception-type contains a fully qualified class name of a Java exception type.
     // The sub-element location element contains the location of the resource in the web application relative to the root of the web application.
     // The value of the location must have a leading '/'.
+    //
+    // You can specify the error page in a deployment descriptor in 2 ways:
+    /**
+     * <pre>
+     *	    <web-app>
+     *	      ...
+     *	      <error-page>
+     *	        <error-code>404</error-code>
+     *	        <location>/html/ErrorPage.html</location>
+     *	      </error-page>
+     *
+     *	      <error-page>
+     *	        <exception-type>javax.servlet.ServletException</exception-type>
+     *	        <location>/html/ErrorPage.html</location>
+     *	      </error-page>
+     *         
+     *        <!-- all errors --> 
+     *        <error-page>
+     *            <location>/general-error.html</location>
+     *        </error-page>
+     *
+     *	       ...
+     *	    </web-app>
+     * </pre>
+     **/
 }

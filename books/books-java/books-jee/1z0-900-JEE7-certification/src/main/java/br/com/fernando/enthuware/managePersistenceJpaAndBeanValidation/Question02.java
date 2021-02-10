@@ -4,9 +4,11 @@ import java.util.Date;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Convert;
+import javax.persistence.Converter;
 import javax.persistence.Converts;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
 
 public class Question02 {
 
@@ -67,7 +69,36 @@ public class Question02 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is C
+    //
     // If the autoApply element is specified as true, the persistence provider must automatically apply the converter to all mapped attributes of
     // the specified target type for all entities in the persistence unit except for attributes for which conversion is overridden by means of the
     // Convert annotation (or XML equivalent).
@@ -75,8 +106,23 @@ public class Question02 {
     // The Convert annotation may be applied to an entity class that extends a mapped superclass to specify or override a conversion mapping
     // for an inherited basic or embedded attribute.
 
+    @Converter(autoApply = true)
+    public class DataConverter2 implements AttributeConverter<LocalDate, Date> {
+
+	// implementations
+	@Override
+	public Date convertToDatabaseColumn(LocalDate attribute) {
+	    return null;
+	}
+
+	@Override
+	public LocalDate convertToEntityAttribute(Date dbData) {
+	    return null;
+	}
+    }
+
     @Entity
-    @Convert(converter = DataConverter.class, attributeName = "birthday")
+    @Convert(converter = DataConverter2.class, attributeName = "birthday")
     // or
     @Converts({ //
 	    @Convert(attributeName = "startDate", converter = DataConverter.class), //
@@ -87,8 +133,13 @@ public class Question02 {
 	@Id
 	private long id;
 
-	@Convert(converter = DataConverter.class)
+	@Convert(converter = DataConverter2.class)
 	private LocalDate birthday;
+	
+	private LocalDate startDate;
+	
+	private LocalDate endDate;
+	
 	// ...
     }
 

@@ -99,9 +99,40 @@ public class Question12 {
      * </pre>
      */
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A is correct.
     //
-    // The saveOrder method is annotated as @POST. 
-    // The @POST annotation is a request method designator and corresponds to the similarly named HTTP method. 
+    // The saveOrder method is annotated as @POST.
+    // The @POST annotation is a request method designator and corresponds to the similarly named HTTP method.
     // The @Path annotation’s value is a relative URI path indicating where the Java class will be hosted. Hence Choice A is correct.
 }

@@ -49,10 +49,19 @@ public class Question04 {
     //
     //
     //
-    // Choice C and D are correct answers. (B e C are correct answer)
+    // B e C are correct answer
     //
+    // B is correct because when this annotation, along with javax.inject.Named is found on a class, the runtime must place the bean in a CDI scope such that 
+    // it remains active as long as NavigationHandler.handleNavigation(javax.faces.context.FacesContext, java.lang.String, java.lang.String) does not cause 
+    // a navigation to a view with a viewId that is different than the viewId of the current view. (javax.faces.view.ViewScoped) (CDI view for JSF)
+    //
+    // C is corrrect because this scope exists longer that the view scope but will do the job in this case.
+    // 
     // For a web application to use a bean that injects another bean class, the bean needs to be able to hold state over the duration of the user’s interaction
     // with the application. The way to define this state is to give the bean a scope.
+    //
+    //
+    // View -> @ViewScoped :  @ViewScoped annotation for CDI.
     //
     // Request -> @RequestScoped : A user’s interaction with a web application in a single HTTP request.
     //
@@ -64,6 +73,7 @@ public class Question04 {
     // and has the same lifecycle as that client (bean).
     //
     // Conversation -> @ConversationScoped: A user’s interaction with a JavaServer Faces application, within explicit developer-controlled
-    // boundaries that extend the scope across multiple invocations of the JavaServer Faces lifecycle. All long-running conversations are scoped to a particular HTTP servlet session and may not cross session boundaries.
+    // boundaries that extend the scope across multiple invocations of the JavaServer Faces lifecycle. 
+    // All long-running conversations are scoped to a particular HTTP servlet session and may not cross session boundaries.
 
 }

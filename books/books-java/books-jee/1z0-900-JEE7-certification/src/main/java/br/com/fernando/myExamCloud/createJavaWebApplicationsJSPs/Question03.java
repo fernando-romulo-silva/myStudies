@@ -37,7 +37,39 @@ public class Question03 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice C is correct
     //
     // "applicationScope" is a java.util.Map that maps application-scoped attributes stored in the ServletContext object.
+    //
+    // Using jstl you can directly get application object in jsp:
+    /**
+     * ${applicationScope['attributeNames']}
+     */
+    //
+    // Or using scriptlet also can get application object in jsp:
+    /**
+     * <pre>
+     *      <%
+     *      
+     *           ServletContext sc = request.getServletContext();
+     *           sc.getAttribute("attributeName");
+     *      
+     *      %>
+     * </pre>
+     */
+    
 }

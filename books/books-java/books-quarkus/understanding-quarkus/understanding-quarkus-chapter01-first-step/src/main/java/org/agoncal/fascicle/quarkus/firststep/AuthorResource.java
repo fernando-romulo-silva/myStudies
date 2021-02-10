@@ -6,7 +6,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-// tag::adocSnippet[]
+
 @Path("/authors")
 @Produces(MediaType.TEXT_PLAIN)
 public class AuthorResource {
@@ -24,4 +24,4 @@ public class AuthorResource {
     return scifiAuthors[index];
   }
 }
-// end::adocSnippet[]
+

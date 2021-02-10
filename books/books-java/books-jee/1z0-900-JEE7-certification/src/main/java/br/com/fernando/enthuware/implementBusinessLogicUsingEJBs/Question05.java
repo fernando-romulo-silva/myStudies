@@ -69,7 +69,6 @@ public class Question05 {
     // This session mode instructs the JMSContext's session to deliver and consume messages in a local transaction which will be subsequently
     // committed by calling commit or rolled back by calling rollback.
     //
-    //
     // A is wrong because is not connection factory determine the transaction
 
 }

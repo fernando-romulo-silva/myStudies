@@ -11,7 +11,7 @@ import javax.inject.Singleton;
  * --
  */
 @Singleton
-// tag::adocSnippet[]
+
 public class Invoice {
 
   Float subtotal;
@@ -43,4 +43,4 @@ public class Invoice {
   @ConfigProperty(name = "invoice.penalties")
   String penalties;
 }
-// end::adocSnippet[]
+

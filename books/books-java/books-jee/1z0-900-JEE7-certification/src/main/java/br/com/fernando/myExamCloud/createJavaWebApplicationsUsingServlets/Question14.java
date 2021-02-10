@@ -1,5 +1,15 @@
 package br.com.fernando.myExamCloud.createJavaWebApplicationsUsingServlets;
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 public class Question14 {
 
     // EPractize Labs Online Skill Evaluation Lab uses descriptive type questions to support image and text answer input.
@@ -21,6 +31,19 @@ public class Question14 {
     //
     // Choice E
     // The method request.getParameterValues(String reqParameter) should be used to retrieve the file data
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -71,4 +94,16 @@ public class Question14 {
      * 
      * </pre>
      */
+
+    @MultipartConfig
+    @WebServlet("/uploadServlet")
+    public static class UploadServlet extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	    InputStream filecontent = request.getInputStream();
+	    // ...
+	}
+    }
 }

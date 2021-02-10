@@ -27,7 +27,7 @@ public class Question06 {
      * public class GuestBean {
      *     private String guestName;
      * 
-     *     public MyBean(){}
+     *     public GuestBean(){}
      * 
      *     public String getGuestName() {
      * 	       return guestName;
@@ -58,7 +58,7 @@ public class Question06 {
     /**
      * <pre>
      *       <jsp:useBean id="guestBean" scope="request" class="com.epractizelabs.site.GuestBean" >
-     *         <jsp:setProperty name="guestBean" property="guestName" /> 
+     *          <jsp:setProperty name="guestBean" property="guestName" /> 
      *       </jsp:useBean>
      *       <html> 
      *         <body> 
@@ -68,7 +68,15 @@ public class Question06 {
      * </pre>
      */
     //
-    // What will be the output if a user enters Brain Christopher in the HTML form and clicks the Enter Site button?
+    // What will be the output if a user enters 'Brain Christopher' in the HTML form and clicks the Enter Site button?
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

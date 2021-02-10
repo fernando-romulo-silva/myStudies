@@ -56,7 +56,23 @@ public class Question13 {
     //
     //
     //
-    // The correct answer is B
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // The correct answer is D
     //
     // You can use the standard webapp configuration file located in webapp/WEB-INF/web.xml to map errors to specific URLs with the error-page element.
     // This element creates a mapping between the error-code or exception-type to the location of a resource in the web application.
@@ -77,6 +93,12 @@ public class Question13 {
      *	        <exception-type>javax.servlet.ServletException</exception-type>
      *	        <location>/html/ErrorPage.html</location>
      *	      </error-page>
+     *         
+     *        <!-- all errors --> 
+     *        <error-page>
+     *            <location>/general-error.html</location>
+     *        </error-page>
+     *
      *	       ...
      *	    </web-app>
      * </pre>

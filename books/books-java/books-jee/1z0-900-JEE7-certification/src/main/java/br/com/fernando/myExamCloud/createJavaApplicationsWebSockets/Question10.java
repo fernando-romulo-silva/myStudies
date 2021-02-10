@@ -41,7 +41,25 @@ public class Question10 {
     //
     //
     //
-    // Choice B, C, E and F are correct answers.
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice B, D, F and G are correct answers.
 
     @ServerEndpoint(value = "/websocket")
     public static class MyEndpoint {
@@ -54,16 +72,16 @@ public class Question10 {
 	public String echoText(String data) {
 	    return data;
 	}
-
-	@OnClose // Connection error
-	public void onClose(CloseReason reason) {
-	    System.out.println("CLOSED: " + reason.getCloseCode() + ", " + reason.getReasonPhrase());
-	}
-
+	
 	@OnError // Connection closed
 	public void onError(Throwable t) {
 	    t.printStackTrace();
 	}
+	
+	@OnClose // Connection error
+	public void onClose(CloseReason reason) {
+	    System.out.println("CLOSED: " + reason.getCloseCode() + ", " + reason.getReasonPhrase());
+	}	
     }
 
 }

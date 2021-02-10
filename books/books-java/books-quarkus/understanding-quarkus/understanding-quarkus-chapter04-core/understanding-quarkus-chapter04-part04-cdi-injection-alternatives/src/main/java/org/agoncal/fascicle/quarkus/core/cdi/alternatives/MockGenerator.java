@@ -10,7 +10,7 @@ import javax.enterprise.inject.Default;
  * http://www.antoniogoncalves.org
  * --
  */
-// tag::adocSnippet[]
+
 @Alternative
 // tag::adocSkip[]
 @Default
@@ -22,4 +22,4 @@ public class MockGenerator implements NumberGenerator {
     return "MOCK";
   }
 }
-// end::adocSnippet[]
+

@@ -21,17 +21,39 @@ public class Question07 {
     //
     //
     //
-    //    
-    //
-    //    
     //
     //
     //
-    //    
     //
     //
     //
-    // Choice D is correct.
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice B is correct.
     //
     // The websocket is a communication protocol which provides bi-directional, full duplex communication channel between a server and client.
     // Once, a websocket connection is established between a client and a server, both the parties can exchange information endlessly untill

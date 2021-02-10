@@ -2,6 +2,8 @@ package br.com.fernando.myExamCloud.developWebApplicationsJSFs;
 
 import javax.inject.Inject;
 
+import br.com.fernando.enthuware.developWebApplicationsJSFs.Question02.Account;
+
 public class Question10 {
 
     // Given the code fragment:
@@ -66,20 +68,55 @@ public class Question10 {
     //
     //
     //
-    // Choice A and D are correct answers.
     //
-    public @Inject Order getOrder() { // yeah, it works
-	return null;
-    }
-
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice A and C are correct answers.
+    //
+    // The injection requires on setter and getter methods for jsf
+    //
+    // C is wrong because since Order class has setter/getter for acc field, it seems to be expecting Initializer method parameter injection.
+    //
     @Inject // The injection requires on setter and getter methods.
     public void setOrder(Order order) {
 
     }
 
+    // Constructor injection
+    public class Customer2 {
+   	
+	private Account acc;
+
+	@Inject
+	public Customer2(Account acc) {
+	    super();
+	    this.acc = acc;
+	} 
+    }  
     //
-    // The injection requires on setter and getter methods for jsf
-    //
-    // C is wrong because since Order class has setter/getter for acc field, it seems to be expecting Initializer method parameter injection.
+    // Field injection
+    public class Customer3 {
+   	
+	@Inject
+	private Account acc;
+    }
+    
 
 }

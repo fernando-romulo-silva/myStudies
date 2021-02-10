@@ -55,7 +55,7 @@ public class Question08 {
     //
     //
     //
-    // The correct answer is B (D is the correct)
+    // The correct answer is D
     //
     // If transaction T1 calls for a lock of type LockModeType.PESSIMISTIC_READ or LockModeType.PESSIMISTIC_WRITE on an object, 
     // the entity manager must ensure that neither of the following phenomena can occur:

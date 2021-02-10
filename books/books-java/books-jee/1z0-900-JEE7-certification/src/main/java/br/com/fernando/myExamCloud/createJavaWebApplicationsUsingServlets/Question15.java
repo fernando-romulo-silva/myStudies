@@ -59,6 +59,10 @@ public class Question15 {
     // If there is a match, the matching part of the request URI is the servlet path and the remaining part is the path info.
     //
     // In this case, when the servlet encounters any request with the path "/app/hello/hello", it maps that request to HelloServlet. 
-    // In choices A, B, and C this path is present, hence they are serviced by HelloServlet. Choices D and E do not have this complete path, so they are not serviced. 
+    //
+    // In choices A, B, and C this path is present, hence they are serviced by HelloServlet.
+    //
+    // Choices D and E do not have this complete path, so they are not serviced.
+    //
     // Hence choices D and E are correct while choices A, B, and C are incorrect.
 }

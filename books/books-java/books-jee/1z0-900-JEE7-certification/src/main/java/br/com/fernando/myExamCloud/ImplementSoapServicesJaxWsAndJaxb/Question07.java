@@ -3,7 +3,6 @@ package br.com.fernando.myExamCloud.ImplementSoapServicesJaxWsAndJaxb;
 public class Question07 {
 
     // Which of the following statements would talk in favor of using JAXB for binding XML documents to Java classes?
-    // [ Choose three ]
     //
     // Choice A
     // The XML content tree has to be processed several times.
@@ -20,6 +19,30 @@ public class Question07 {
     // Choice E
     // XML elements need to be accessed in a random manner.
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //    
     //
     //
     //
