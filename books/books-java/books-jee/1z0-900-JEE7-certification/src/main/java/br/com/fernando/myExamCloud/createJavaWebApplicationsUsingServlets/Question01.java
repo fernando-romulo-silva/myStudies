@@ -79,6 +79,7 @@ public class Question01 {
     //
     // In this case the servlet path is the request URI minus the context path and the path info is null.
     // All other strings are used for exact matches only.
+    //
     // Since in our case the <url-pattern> specifies a path mapping without a leading "/", the
     // web application would fail to load. Hence choice D is correct while choices A, B, and C are incorrect.
     

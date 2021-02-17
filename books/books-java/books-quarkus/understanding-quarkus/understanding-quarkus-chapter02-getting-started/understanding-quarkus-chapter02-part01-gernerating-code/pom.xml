@@ -10,7 +10,6 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
     
-  <groupId>org.agoncal.fascicle.quarkus</groupId>
   <artifactId>understanding-quarkus-chapter02-part01-gernerating-code</artifactId>
 
   <properties>

@@ -21,6 +21,38 @@ public class Question02 {
     //
     //
     //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //    
+    //
     // Choice A is correct
     // 
     // Message-driven beans (MDBs) support concurrent processing for both topics and queues. 

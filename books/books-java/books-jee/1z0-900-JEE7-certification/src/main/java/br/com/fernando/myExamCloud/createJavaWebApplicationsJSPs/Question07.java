@@ -24,7 +24,32 @@ public class Question07 {
     public static class OrderBean {
 	
     }
-    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //
@@ -76,7 +101,11 @@ public class Question07 {
     // * beanName - The name of a Bean, as you would supply to instantiate() method in the java.beans.Beans class.
     // This attribute can also be a request time expression.
     //
-    // *type - This optional attribute specifies the type of the class, and follows standard Java casting rules.
+    // * type - This optional attribute specifies the type of the class, and follows standard Java casting rules.
     // The type must be a superclass, an interface, or the class itself.
     // The default value is the same as the value of the class attribute.
+    
+    // <jsp:useBean id="message" class="com.java.Message" scope="request"/>
+    //
+    // <jsp:useBean id="message" type="com.java.Message" scope="request"/>
 }

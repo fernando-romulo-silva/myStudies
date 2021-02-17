@@ -3,6 +3,7 @@ package br.com.fernando.myExamCloud.useJavaMessageServiceAPI;
 public class Question01 {
 
     // Which of the following statements are true about Java EE 7 JMS message-driven bean with bean-managed transactions?
+    // [ Choose two ]
     //
     // Choice A - The message receipt is part of the user transaction.
     //
@@ -14,6 +15,16 @@ public class Question01 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //

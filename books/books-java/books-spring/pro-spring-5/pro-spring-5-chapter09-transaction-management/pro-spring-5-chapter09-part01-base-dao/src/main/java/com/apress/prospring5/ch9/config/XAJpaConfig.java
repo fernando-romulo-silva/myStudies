@@ -57,8 +57,8 @@ public class XAJpaConfig {
 	xaProp.put("databaseName", "musicdb_a");
 	xaProp.put("user", "prospring5_A");
 	xaProp.put("password", "prospring5_A");
-	xaProp.put("useSSL", "false");
-	xaProp.put("allowPublicKeyRetrieval", "true");
+//	xaProp.put("useSSL", "false");
+//	xaProp.put("allowPublicKeyRetrieval", "true");
 	return xaProp;
     }
 
@@ -83,8 +83,8 @@ public class XAJpaConfig {
 	xaProp.put("databaseName", "musicdb_b");
 	xaProp.put("user", "prospring5_B");
 	xaProp.put("password", "prospring5_B");
-	xaProp.put("useSSL", "false");
-	xaProp.put("allowPublicKeyRetrieval", "true");
+//	xaProp.put("useSSL", "false");
+//	xaProp.put("allowPublicKeyRetrieval", "true");
 	return xaProp;
     }
 

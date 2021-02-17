@@ -17,19 +17,24 @@ public class Question04 {
     class B {
 
     }
+    
+    class A {
+
+    }    
 
     // Choice A
     @Entity
-    public class A1 {
-	private B b;
+    public class B1 {
+	
+	private A a;
 
 	@OneToMany
-	public B getB() {
-	    return b;
+	public A getA() {
+	    return a;
 	}
 
-	public void setB(B b) {
-	    this.b = b;
+	public void setA(A a) {
+	    this.a = a;
 	}
 	// ...
     }
@@ -37,6 +42,7 @@ public class Question04 {
     // Choice B
     @Entity
     public class A2 {
+	
 	private B b;
 
 	@ManyToOne

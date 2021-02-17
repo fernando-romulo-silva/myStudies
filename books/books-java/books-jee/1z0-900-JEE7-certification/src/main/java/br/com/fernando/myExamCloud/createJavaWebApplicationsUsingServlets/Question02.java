@@ -87,6 +87,18 @@ public class Question02 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -95,7 +107,6 @@ public class Question02 {
     //    
     // Choice B is correct.
     //
-    // Why
     // Each <servlet> element defines a servlet for the web application.
     // The servlet-name defines the name of the servlet and servlet-class specifies the Java class that should be used by the servlet.
     // The servlet-name must occur before the servlet-class, so choice A is incorrect. 
@@ -103,5 +114,21 @@ public class Question02 {
     //
     // Choice D is incorrect because the tag names are wrong.
     // Choice B has all the elements correct and hence is correct.
+    /**
+     * 
+     *  <web-app>
+     *   
+     *       <servlet>
+     *       	<servlet-name>ManageProfile</servlet-name>
+     *       	<servlet-class>com.ManageProfileClass</servlet-class>
+     *       </servlet>
+     *  
+     * 	     <servlet-mapping>
+     * 	     	 <servlet-name>ManageProfile</servlet-name>
+     * 	     	 <url-pattern>/ManageProfile</url-pattern>
+     * 	     </servlet-mapping>
+     * 
+     *  <web-app>
+     */    
 
 }

@@ -51,6 +51,19 @@ public class Question03 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -83,7 +96,10 @@ public class Question03 {
     @Logged
     @Interceptor
     @Priority(Interceptor.Priority.APPLICATION)
-    public class LoggedInterceptor implements Serializable {  }
+    public class LoggedInterceptor implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+    }
     
     @Named
     private class Service01 {

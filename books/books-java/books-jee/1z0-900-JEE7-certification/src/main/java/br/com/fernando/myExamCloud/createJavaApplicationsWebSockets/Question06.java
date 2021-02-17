@@ -35,6 +35,26 @@ public class Question06 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
     //
     // Choice A and C are correct answers.
     //

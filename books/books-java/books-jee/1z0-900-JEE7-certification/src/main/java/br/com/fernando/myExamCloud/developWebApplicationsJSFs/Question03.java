@@ -29,7 +29,31 @@ public class Question03 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -52,7 +76,7 @@ public class Question03 {
     // Templating for components and pages
     //
     // Hence Choice C is correct answer for this question.
-    
+
     /**
      * <pre>
      *      // commonLayout.xhtml

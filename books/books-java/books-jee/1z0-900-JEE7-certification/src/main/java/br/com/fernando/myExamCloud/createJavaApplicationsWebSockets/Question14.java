@@ -65,6 +65,7 @@ public class Question14 {
     // Choice B is correct.
     //
     // The decoders attribute contains a (possibly empty) list of Java classes that are to act as decoder components for this endpoint.
+    //
     // These classes must implement some form of the Decoder interface, and have public no-arg constructors and be visible within the
     // classpath of the application that this websocket endpoint is part of.
     //

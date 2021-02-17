@@ -4,7 +4,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.agoncal.fascicle.quarkus</groupId>
 	<artifactId>understanding-quarkus-chapter06-http</artifactId>
 	<packaging>pom</packaging>
 	<name>Quarkus :: HTTP Microservices</name>
@@ -22,17 +21,11 @@
 	    <module>understanding-quarkus-chapter06-part04-open-api-default</module>
 	    <module>understanding-quarkus-chapter06-part05-open-api-custom</module>
 	    <module>understanding-quarkus-chapter06-part06-open-api-advanced</module>
-	    <!-- 
-	    <module>jsonb-advanced</module>
-	    <module>jsonb-custom</module>
-	    <module>jsonb-default</module>
-	    <module>jsonp</module>
-	    <module>open-api-advanced</module>
-	    <module>open-api-custom</module>
-	    <module>open-api-default</module>
-	    <module>open-api-v3spec</module>
-	    <module>panache-rest</module>
-	     -->
+	    <module>understanding-quarkus-chapter06-part07-jsonb-default</module>
+	    <module>understanding-quarkus-chapter06-part08-jsonb-custom</module>
+	    <module>understanding-quarkus-chapter06-part09-jsonb-advanced</module>
+	    <module>understanding-quarkus-chapter06-part10-jsonp</module>
+	    <module>understanding-quarkus-chapter06-part11-panache-rest</module>
   	</modules>
 
 </project>

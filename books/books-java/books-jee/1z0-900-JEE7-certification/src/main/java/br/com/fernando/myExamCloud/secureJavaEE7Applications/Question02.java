@@ -13,7 +13,9 @@ public class Question02 {
      */
     //
     // Choice A - NONE
+    //
     // Choice B - CONFIDENTIAL
+    //
     // Choice C - INTEGRAL
     //
     //
@@ -48,7 +50,7 @@ public class Question02 {
     //
     //
     //
-    // Choice C is the correct answer.
+    // Choice B is the correct answer.
     //
     // The transport-guarantee element specifies that the communication between client and server should be NONE, INTEGRAL, or CONFIDENTIAL.
     //

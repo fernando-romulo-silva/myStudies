@@ -1,13 +1,7 @@
 package br.com.fernando.enthuware.createJavaApplicationsWebSockets;
 
-import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import javax.websocket.DecodeException;
-import javax.websocket.Decoder;
-import javax.websocket.EncodeException;
-import javax.websocket.Encoder;
-import javax.websocket.EndpointConfig;
 import javax.websocket.OnMessage;
 import javax.websocket.PongMessage;
 import javax.websocket.Session;

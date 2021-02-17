@@ -41,6 +41,34 @@ public class Question04 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice D is correct.
     //
     // The error-page element contains a mapping between an error code or exception type and the path of a resource in the web application.

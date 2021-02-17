@@ -11,7 +11,7 @@
 
 	<parent>
 		<groupId>br.com.fernando</groupId>
-		<artifactId>understanding-quarkus</artifactId>
+		<artifactId>understanding-quarkus-chapter06-http</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

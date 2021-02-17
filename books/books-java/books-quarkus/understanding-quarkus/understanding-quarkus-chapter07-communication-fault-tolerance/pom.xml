@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>understanding-quarkus-chapter07-communication-fault-tolerance</artifactId>
+	<packaging>pom</packaging>
+	<name>Quarkus :: Communication</name>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>understanding-quarkus</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>fault-tolerance-book</module>
+		<module>fault-tolerance-number</module>
+		<module>rest-client-book</module>
+		<module>rest-client-isbn</module>
+		<module>rest-client-issn</module>
+	</modules>
+
+</project>

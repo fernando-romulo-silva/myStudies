@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>pro-spring-5-chapter10-validation-conversion-formatting</artifactId>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>pro-spring-5</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>pro-spring-5-chapter10-part01-property-editor</module>
+		<module>pro-spring-5-chapter10-part02-converter</module>
+		<module>pro-spring-5-chapter10-part03-converter-multiple-types</module>
+		<module>pro-spring-5-chapter10-part04-custom-formatter</module>
+		<module>pro-spring-5-chapter10-part05-spring-validator</module>
+		<module>pro-spring-5-chapter10-part06-jsr349</module>
+		<module>pro-spring-5-chapter10-part07-jsr349-custom</module>
+		<module>pro-spring-5-chapter10-part08-jsr349-assertTrue</module>
+	</modules>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.10.10</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.7.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>javax.el</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>29.0-jre</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jadira.usertype/usertype.core -->
+		<dependency>
+			<groupId>org.jadira.usertype</groupId>
+			<artifactId>usertype.core</artifactId>
+			<version>6.0.1.GA</version>
+		</dependency>
+		
+
+	</dependencies>
+
+</project>

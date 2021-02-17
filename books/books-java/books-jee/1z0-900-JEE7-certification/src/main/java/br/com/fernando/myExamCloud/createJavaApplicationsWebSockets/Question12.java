@@ -1,6 +1,7 @@
 package br.com.fernando.myExamCloud.createJavaApplicationsWebSockets;
 
 public class Question12 {
+    
     // Identify valid WebSocket message types for which you can register handlers.
     // You had to select 2 options
     //

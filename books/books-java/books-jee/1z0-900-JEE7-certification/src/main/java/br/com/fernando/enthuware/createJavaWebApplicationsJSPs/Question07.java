@@ -52,7 +52,7 @@ public class Question07 {
     //
     //
     //
-    // The correct answers are D and C
+    // The correct answers are D and E
     //
     // 'A' is a declaration
     //

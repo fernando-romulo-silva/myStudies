@@ -69,7 +69,7 @@
 		<dependency>
 			<groupId>com.atomikos</groupId>
 			<artifactId>transactions-jdbc</artifactId>
-			<version>5.0.8</version>
+			<version>4.0.6</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>hibernate</artifactId>
@@ -81,17 +81,18 @@
 		<dependency>
 			<groupId>com.atomikos</groupId>
 			<artifactId>transactions-jta</artifactId>
-			<version>5.0.8</version>
+			<version>4.0.4</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.atomikos/atomikos-transactions-essentials -->
 		<dependency>
 			<groupId>com.atomikos</groupId>
 			<artifactId>atomikos-transactions-essentials</artifactId>
-			<version>5.0.8</version>
+			<version>4.0.6</version>
 			<type>pom</type>
 		</dependency>
-
+		
+		
 
 	</dependencies>
 

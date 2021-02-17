@@ -4,8 +4,6 @@ public class Question01 {
 
     // Which of the following syntax is used to embed a Java scriptlet in a JSP page?
     //
-    // Your answer is :
-    //
     // Choice A 
     // <%@ ... %>
     //
@@ -17,6 +15,24 @@ public class Question01 {
     //
     // Choice D 
     //<%! ... %>
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

@@ -15,49 +15,49 @@ public class Question14 {
     // A developer wants to display order number and email address in orderDisplay.jsp.
     // What modification should be made in licenseRequest.jsp to make the employee bean accessible within orderDisplay.jsp?
     //
-    // Choice A 	
+    // Choice A
     // No modification is needed; the bean will be available in the included page also.
     //
-    // Choice B 	
+    // Choice B
     // Modify the code to use the include directive instead of the include action.
     //
-    // Choice C 	
+    // Choice C
     // Change the scope of the bean to request.
     //
-    // Choice D 	
+    // Choice D
     // Change the scope of the bean to session.
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    // 
-    //     
-    // 
-    // 
-    // 
-    // 
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     // Choice B is correct.
     //
@@ -65,28 +65,14 @@ public class Question14 {
     //
     // So choice A is incorrect.
     //
-    // In a static inclusion (include directive), the two pages become one translation unit. 
+    // In a static inclusion (include directive), the two pages become one translation unit.
     // So the bean will be available in the included page when the include directive is used. Hence choice B is correct.
     //
-    // Choices C and D are incorrect because even if the scope of the bean is changed to session or request, the bean instance would be 
+    // Choices C and D are incorrect because even if the scope of the bean is changed to session or request, the bean instance would be
     // available in the included jsp file only if that bean also contains a useBean declaration identical to the one in the including file.
     //
-    // JSP include action tag (non static incluse) 
+    // Example:
     //
-    // index.jsp
-    /**
-     * <pre>
-     *     <html> 
-     *     <head>
-     *     	<title>JSP Include Action example</title>
-     *     </head>
-     *     <body> 
-     *     	<b>index.jsp Page</b><br>
-     *     	<jsp:include page="Page2.jsp" />
-     *     </body> 
-     *     </html>
-     * </pre>
-     */
     // Page2.jsp
     /**
      * <pre>
@@ -104,8 +90,25 @@ public class Question14 {
     //
     //
     //
+    // JSP include action tag (non static incluse)
     //
-    // Jsp Include Directive (static incluse) 
+    // index.jsp
+    /**
+     * <pre>
+     *     <html> 
+     *     <head>
+     *     	<title>JSP Include Action example</title>
+     *     </head>
+     *     <body> 
+     *     	<b>index.jsp Page</b><br>
+     *     	<jsp:include page="Page2.jsp" />
+     *     </body> 
+     *     </html>
+     * </pre>
+     */
+    //
+    //
+    // Jsp Include Directive (static incluse)
     //
     // index.jsp
     /**
@@ -120,7 +123,4 @@ public class Question14 {
      *     </html>
      * </pre>
      */
-
-    
-
 }

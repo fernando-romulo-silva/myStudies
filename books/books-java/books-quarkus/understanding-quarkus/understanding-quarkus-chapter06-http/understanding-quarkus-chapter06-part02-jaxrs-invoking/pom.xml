@@ -7,12 +7,11 @@
 
 	<groupId>org.agoncal.fascicle.quarkus.http</groupId>
 	<artifactId>understanding-quarkus-chapter06-part02-jaxrs-invoking</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>Quarkus :: HTTP Microservices :: JAX-RS :: Invoking</name>
 
 	<parent>
 		<groupId>br.com.fernando</groupId>
-		<artifactId>understanding-quarkus</artifactId>
+		<artifactId>understanding-quarkus-chapter06-http</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

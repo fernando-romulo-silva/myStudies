@@ -325,8 +325,8 @@
 		<module>understanding-quarkus-chapter01-first-step</module>
 		<module>understanding-quarkus-chapter02-getting-started</module>
 		<module>understanding-quarkus-chapter04-core</module>
-		<module>
-			understanding-quarkus-chapter05-data-transactions-orm
-		</module>
+		<module>understanding-quarkus-chapter05-data-transactions-orm</module>
+		<module>understanding-quarkus-chapter06-http</module>
+		<module>understanding-quarkus-chapter07-communication-fault-tolerance</module>
 	</modules>
 </project>

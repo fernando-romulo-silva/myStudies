@@ -69,11 +69,12 @@ public class Question04 {
     // The correct answer is C
     //
     // You can use the standard webapp configuration file located in webapp/WEB-INF/web.xml to map errors to specific URLs with the error-page element.
+    //
     // This element creates a mapping between the error-code or exception-type to the location of a resource in the web application.
     //
     // If an error-page element in the deployment descriptor does not contain an exception-type or an error-code element, the error page is a default error page.
     //
-    // You can specify the error page in a deployment descriptor in 2 ways:
+    // You can specify the error page in a deployment descriptor in 3 ways:
     /**
      * <pre>
      *	    <web-app>
