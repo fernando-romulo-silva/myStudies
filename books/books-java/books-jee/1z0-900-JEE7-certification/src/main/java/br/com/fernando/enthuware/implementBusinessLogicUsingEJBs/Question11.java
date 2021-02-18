@@ -1,7 +1,6 @@
 package br.com.fernando.enthuware.implementBusinessLogicUsingEJBs;
 
 import javax.annotation.Resource;
-import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;

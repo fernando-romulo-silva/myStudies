@@ -27,7 +27,7 @@ public class Question14 {
     // The client request must be "POST"
     //
     // Choice D
-    // The method request.getInputStream() should be used to retrieve the file data]
+    // The method request.getInputStream() should be used to retrieve the file data
     //
     // Choice E
     // The method request.getParameterValues(String reqParameter) should be used to retrieve the file data
@@ -63,11 +63,20 @@ public class Question14 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice C and D are correct answers.
     //
     // "GET" uses the URL to transfer the parameters and hence can be used only for textual data.
-    // Also the amount of data that can be sent by "GET" is limited. On the other hand "POST" uses the body of the request to send the
-    // data and there is no limit in the size of the data that can be transferred. So "POST" is ideal for file uploads.
+    // Also the amount of data that can be sent by "GET" is limited.
+    //
+    // On the other hand "POST" uses the body of the request to send the data and there is no limit in the size of the data that can be transferred. 
+    // So "POST" is ideal for file uploads.
     //
     //
     // The ServletRequest has the following two methods, which can be used to read the body of the request:
@@ -98,6 +107,8 @@ public class Question14 {
     @MultipartConfig
     @WebServlet("/uploadServlet")
     public static class UploadServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

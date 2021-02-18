@@ -25,7 +25,6 @@ public class Question07 {
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-	    // super.service(req, res); // 14 
 	    PrintWriter out = res.getWriter();
 	    out.print("Service() method called.");
 	}
@@ -99,5 +98,32 @@ public class Question07 {
     // * The servlet is terminated by calling the destroy() method.
     //
     // Finally, servlet is garbage collected by the garbage collector of the JVM.
+    @WebServlet(urlPatterns = { "/blockIoServlet" }, asyncSupported = true)
+    public static class BlockIoServlet2 extends HttpServlet {
 
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public void init() throws ServletException {
+	    super.init();
+	}
+	
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	    super.service(req, res); // 14 
+	    PrintWriter out = res.getWriter();
+	    out.print("Service() method called.");
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	    PrintWriter out = res.getWriter();
+	    out.print("Get() method called.");
+	}
+	
+	@Override
+	public void destroy() {
+	    super.destroy();
+	}
+    }
 }

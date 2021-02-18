@@ -72,7 +72,7 @@ public class Question04 {
     //
     //
     //
-    // The correct answer is D (A is the correct answer)
+    // The correct answer is A
     //
     // This question has a problem.
     // Assuming that AppException is an application exception, it is not given whether this exception is specified as causing rollback.
@@ -98,7 +98,7 @@ public class Question04 {
 	@EJB
 	CustomerService orderManager;
 
-	public void callAddOrder1() { // this method commit transaction
+	public void callAddOrder1() { // this method commit transaction because CustomerService.addCustomer throw a AppException, not annotated exception
 
 	    Customer orderEntity = new Customer();
 

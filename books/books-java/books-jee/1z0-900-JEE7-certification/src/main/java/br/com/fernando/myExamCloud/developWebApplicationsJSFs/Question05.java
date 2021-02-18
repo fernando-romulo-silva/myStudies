@@ -49,7 +49,7 @@ public class Question05 {
     //
     // Choice D
     // Replace Line 1 with:
-    // <h:inputText id="createDate"value="#{searchCustomer.searchCustomerForm.date}">
+    // <h:inputText id="createDate" value="#{searchCustomer.searchCustomerForm.date}">
     //    <f:convertDateTime pattern="dd-mmyyyy"/>
     // </h:inputText>
     //

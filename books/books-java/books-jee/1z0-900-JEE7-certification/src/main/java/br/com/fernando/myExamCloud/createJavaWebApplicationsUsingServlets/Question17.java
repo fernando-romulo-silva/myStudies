@@ -9,7 +9,7 @@ public class Question17 {
      *        <servlet>
      *            <servlet-name>aServlet</servlet-name>
      *            <servlet-class>com.epractizelabs.web.AServlet</servlet-class>
-     *        <load-on-startup>3<load-on-startup>
+     *            <load-on-startup>3<load-on-startup>
      *        <servlet>
      *        <servlet>
      *            <servlet-name>bServlet</servlet-name>

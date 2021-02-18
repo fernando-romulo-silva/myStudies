@@ -62,7 +62,9 @@ public class Question07 {
     // Choice D is correct.
     //
     // Passivation and Activation only apply to EJBs that have state, namely stateful session beans and entity beans.
+    //
     // Passivation is the process by which any state a given bean has is moved into storage.
+    //
     // Activation is the process by which any state that a given bean previously had is loaded from storage.
     //
     // passivationCapable Specifies whether this stateful session bean is passivation capable.

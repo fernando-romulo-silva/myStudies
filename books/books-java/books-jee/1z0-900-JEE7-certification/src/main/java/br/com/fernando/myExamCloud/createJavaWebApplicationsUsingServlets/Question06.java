@@ -5,7 +5,7 @@ public class Question06 {
     // A web application wants the filter "MyFilter" to be invoked whenever the servlet "MyServlet" is accessed.
     // MyServlet has been mapped to the url "/MyServlet" and is implemented by the class "com.epractizelabs.web.MyServlet".
     //
-    // Which of the following deployment descriptor fragments to do the same?
+    // Which of the following deployment descriptor fragments to do the same? (select two)
     //
     /**
      * <pre>
@@ -43,6 +43,23 @@ public class Question06 {
      * </pre>
      */
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //

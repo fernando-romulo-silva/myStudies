@@ -23,6 +23,7 @@ public class Question07 {
      */
     // On line 1, you are asked to insert a search box that displays the text "Search Here" via a placeholder.
     // Assuming that searchMB is a valid Managed Bean, which of the following options enable you to create a search box with a placeholder?
+    // select two
     //
     // A
     // <h:inputText value="#(searchMB.query)"><f:param name="placeholder" value="Search Here" /></h:inputText>

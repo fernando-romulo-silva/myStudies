@@ -24,6 +24,7 @@ public class Question04 {
 
     // On Line 1, you are asked to insert a search box that displays the text "Search Here" via a placeholder.
     // Assume searchMB is a valid Managed Bean.
+    //
     // Which two options enable you to create a search box with a placeholder attribute on Line 1?
     // [ Choose two ]
 

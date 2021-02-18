@@ -48,6 +48,14 @@ public class Question15 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice D and E are correct answers.
     //
     // To match a request URI with a servlet, the servlet container identifies the context path and then evaluates the remaining part of the
@@ -61,6 +69,7 @@ public class Question15 {
     // In this case, when the servlet encounters any request with the path "/app/hello/hello", it maps that request to HelloServlet. 
     //
     // In choices A, B, and C this path is present, hence they are serviced by HelloServlet.
+    //
     //
     // Choices D and E do not have this complete path, so they are not serviced.
     //

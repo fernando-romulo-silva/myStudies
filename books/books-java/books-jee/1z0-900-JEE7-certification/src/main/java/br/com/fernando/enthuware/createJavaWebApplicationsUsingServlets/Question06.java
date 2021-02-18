@@ -65,7 +65,7 @@ public class Question06 {
     //
     //
     //
-    // B and D is the correct answer
+    // B and C is the correct answer
     //
     @WebServlet(urlPatterns = { "/blockIoServlet" }, asyncSupported = true)
     public static class BlockIoServlet extends HttpServlet {
@@ -106,9 +106,6 @@ public class Question06 {
     //
     // Information stored in a ServletContext remains as long as the servlet exists.
     // So, you could potentially store a map of userid and list of items in the servlet context.
-    //
-    // C is wrong because If you storing items for a user in a session object, it will be available only until the user session is alive. 
-    // But the requirement is to remember the items for later use.
     //
     //
     // ** We can save cart information in database using JPA/JDBC, however the questions asks you to choose Java EE web tier mechanisms, hence choice D is also incorrect.

@@ -67,6 +67,7 @@ public class Question01 {
     //
     // The forward slash (/) constrains an attribute to a starting point and an interval and is used to specify every N seconds, minutes,
     // or hours within the minute, hour, or day.
+    //
     // For an expression of the form x/y, x represents the starting point and y represents the interval.
     // The wildcard character may be used in the x position of an interval and is equivalent to setting x to 0.
     //
