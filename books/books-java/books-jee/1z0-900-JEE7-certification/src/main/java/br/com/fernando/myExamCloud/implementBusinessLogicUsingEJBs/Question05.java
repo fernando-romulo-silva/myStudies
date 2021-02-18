@@ -67,9 +67,9 @@ public class Question05 {
     //
     // The transaction attribute Mandatory requires the container to invoke a bean's method in a client's transaction context.
     //
-    // If the client is not associated with a transaction context when calling this method, the container throws javax.transaction.TransactionRequiredException
+    // If the LOCAL client is not associated with a transaction context when calling this method, the container throws javax.transaction.TransactionRequiredException
     //
-    // if the client is a remote client or javax.ejb.TransactionRequiredLocalException if the client is a local client.
+    // if the client is a REMOTE client or javax.ejb.TransactionRequiredLocalException if the client is a local client.
     //
     // If the calling client has a transaction context, the case is treated as Required by the container.
     //

@@ -14,7 +14,7 @@ public class Question01 {
     @Resource
     private SessionContext sessionCtx;
 
-    // Which two operations are allowed in a business method of the bean?
+    // Which two operations are allowed in a business method of the bean? (select two)
     //
     public void method() {
 	// Choice A
@@ -31,6 +31,13 @@ public class Question01 {
 	//
 	// Choice E
 	// sessionCtx.getEJBLocalObject
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//

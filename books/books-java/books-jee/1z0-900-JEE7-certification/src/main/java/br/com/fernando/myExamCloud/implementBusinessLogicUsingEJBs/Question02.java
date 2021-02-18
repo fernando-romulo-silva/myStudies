@@ -30,6 +30,42 @@ public class Question02 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct:
     //
     // A stateless session bean or singleton session bean can be registered with the EJB Timer Service for time-based event notifications.
