@@ -1,63 +1,100 @@
 package br.com.fernando.myExamCloud.ImplementSoapServicesJaxWsAndJaxb;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.jws.WebService;
 
 public class Question04 {
 
-    // Given in the below code snippet
-    //
-    @XmlType(propOrder = { "name", "address", "mobileNumber" })
-    // Code here
-    public class Customer {
+    // Given:
+    // 2
+    public class ProcessOrder {
 
-	String name;
-	String address;
-	String mobileNumber;
+	// line 5
+	public boolean saveOrder(Order order) {
+	    boolean isSaved = false;
+	    // Save order
 
-	@XmlElement(name = "Customer_Name", required = true)
-	public void setName(String name) {
-	    this.name = name;
+	    return isSaved;
 	}
 
-	@XmlElement(name = "Customer_Address")
-	public void setAddress(String address) {
-	    this.address = address;
-	}
-
-	@XmlAttribute(name = "mobileNumber", required = true)
-	public void setMobileNumber(String mobileNumber) {
-	    this.mobileNumber = mobileNumber;
+	// line 11
+	public boolean isValidOrder(String orderNumber) {
+	    boolean isValidOrder = false;
+	    // Verify order
+	    return isValidOrder;
 	}
     }
 
-    // Which of the following JAXB marshal annotation convert Employee object as valid XML?
+    public class Order {
+    }
+
+    // A developer wants to convert all ProcessOrder methods into Web services.
+    // What changes can achieve this?
     //
-    // Choice A - @XmlElement(name = "Employee")
     //
-    // Choice B - @XmlRootElement(name = "Employee")
+    // Choice A
+    // Import javax.jws.WebService and extend WebService
     //
-    // Choice C - @XmlMainElement(name = "Employee")
     //
-    // 
+    // Choice B
+    // Import javax.jws.WebService and use @WebService at line 2.
     //
-    // 
     //
-    // 
+    // Choice C
+    // Import javax.jws.WebService and use @WebService at line 5 and line 11.
     //
-    // 
     //
-    //     
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
     //
     // Choice B is correct.
     //
-    // The process of converting Java Objects into XML files are marshalling.
-    // The JAXB @XmlRootElement annotation denotes as root element and it is defined just before class starts.
+    // To export these methods, we must add two things: an import statement for the javax.jws.WebService package
+    // and a @WebService annotation at the beginning that tells the Java interpreter that we intend to publish
+    // the methods of this class as a web service.
     //
-    // @XmlElement in combination with setter methods.
+    // import javax.jws.WebService;
     //
-    // @XmlAttribute to pass attributes to the XML nodes. These attributes can have properties like to be required or not.
-    //
-    // @XmlType to indicate special options like to order of appearance in the XML.
+    @WebService
+    public class ProcessOrderResponse {
+
+	public boolean saveOrder(Order order) {
+	    boolean isSaved = false;
+	    // Save order
+
+	    return isSaved;
+	}
+
+	public boolean isValidOrder(String orderNumber) {
+	    boolean isValidOrder = false;
+	    // Verify order
+	    return isValidOrder;
+	}
+    }    
+
 }

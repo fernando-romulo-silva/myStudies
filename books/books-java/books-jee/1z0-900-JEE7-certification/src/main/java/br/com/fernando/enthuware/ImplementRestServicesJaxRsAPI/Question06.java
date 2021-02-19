@@ -27,9 +27,9 @@ public class Question06 {
     //
     // B - u.setProperty(Schema)
     //
-    // C - u.setEventHandler(ValidationEventHandler)
+    // C - u.setEventHandler(validationEventHandler)
     //
-    // D - u.setAdapter(XmlAdapter)
+    // D - u.setAdapter(xmlAdapter)
     //
     //
     //

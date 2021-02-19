@@ -77,7 +77,7 @@ public class Question13 {
      * Root resource (exposed at "helloworld" path)
      */
     @Path("helloworld")
-    public final class HelloWorld {
+    public final class HelloWorld { // it's can be final
 	
 	@Context
 	private UriInfo context;

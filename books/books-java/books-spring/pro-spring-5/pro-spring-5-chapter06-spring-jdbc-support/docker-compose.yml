@@ -13,9 +13,12 @@ services:
       MYSQL_ROOT_HOST: '%'
     volumes:
       - '/var/lib/mysql:/var/lib/mysql'
-  micro:
-    image: payara/micro
-  server-full:
-    image: payara/server-full
+  hornetq:
+    image: mansante/hornetq
+    restart: always
+    ports:
+      - '5445:5445'
+      - '5455:5455'
+    
 volumes:
   musicdb: null

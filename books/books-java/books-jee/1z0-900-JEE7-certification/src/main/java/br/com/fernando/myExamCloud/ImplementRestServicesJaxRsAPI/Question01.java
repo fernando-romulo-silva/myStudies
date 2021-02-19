@@ -36,7 +36,7 @@ public class Question01 {
 
     @ApplicationScoped
     @Path("{lastname}")
-    public final class CustomerDetailsA { // final class, wrong
+    public final class CustomerDetailsA { //
 	// ...
     }
 
@@ -114,6 +114,7 @@ public class Question01 {
     // Choice C is correct
     //
     // JAX-RS and CDI have slightly different component models.
+    //
     // By default, JAX-RS root resource classes are managed in the request scope, and no annotations are required for specifying the scope.
     //
     // CDI can't be final class

@@ -55,8 +55,8 @@ public class Question01 {
     // Web Services Security (WS-Security, WSS) is an extension to SOAP to apply security to Web services.
     //
     // The protocol specifies how integrity and confidentiality can be enforced on messages and allows the communication of various security token formats,
-    // such as Security Assertion Markup Language (SAML), Kerberos, and X.509. Its main focus is the use of XML Signature and XML Encryption to provide
-    // end-to-end security.
+    // such as Security Assertion Markup Language (SAML), Kerberos, and X.509. 
+    // Its main focus is the use of XML Signature and XML Encryption to provide end-to-end security.
     //
     // The following summarize the Web service security requirements:
     //

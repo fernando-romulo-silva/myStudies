@@ -33,6 +33,7 @@ public class Question04 {
     }
 
     public class OrderResource {
+	
 	public OrderResource(String id) {
 	    // ...
 	}

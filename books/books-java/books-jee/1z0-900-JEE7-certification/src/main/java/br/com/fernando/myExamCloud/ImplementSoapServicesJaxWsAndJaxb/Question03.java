@@ -1,47 +1,46 @@
 package br.com.fernando.myExamCloud.ImplementSoapServicesJaxWsAndJaxb;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
 public class Question03 {
 
-    // Assume that you have defined Employee class with valid JAXB marshal annotations.
+    // Given in the below code snippet
     //
-    // Employee customer = new Employee();
-    // customer.setName("Joe Pop");
-    // customer.setAddress(“919 Smart Street Phase I, Gandhi Nagar, Chennai”);
-    // customer.setMobileNumber(“9000000”);
+    @XmlType(propOrder = { "name", "address", "mobileNumber" })
+    // Code here
+    public class Customer {
+
+	String name;
+	String address;
+	String mobileNumber;
+
+	@XmlElement(name = "Customer_Name", required = true)
+	public void setName(String name) {
+	    this.name = name;
+	}
+
+	@XmlElement(name = "Customer_Address")
+	public void setAddress(String address) {
+	    this.address = address;
+	}
+
+	@XmlAttribute(name = "mobileNumber", required = true)
+	public void setMobileNumber(String mobileNumber) {
+	    this.mobileNumber = mobileNumber;
+	}
+    }
+
+    // Which of the following JAXB marshal annotation convert Employee object as valid XML?
     //
-    // Which of the following code initiate JAXB marshaller?
+    // Choice A - @XmlElement(name = "Employee")
     //
-    // Choice A
-    // JAXBContext jaxbContext = JAXBContext.newInstance(Employee.class);
-    // Marshaller jaxbMarshaller = jaxbContext.initMarshaller();
+    // Choice B - @XmlRootElement(name = "Employee")
     //
-    // Choice B
-    // JAXBContext jaxbContext = JAXBContext.newInstance(Employee.class);
-    // Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-    //
-    // Choice C
-    // JAXBContext jaxbContext = JAXBContext.createCustomer.class);
-    // Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+    // Choice C - @XmlMainElement(name = "Employee")
     //
     // 
-    //
-    // 
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
     //
     // 
     //
@@ -50,8 +49,37 @@ public class Question03 {
     // 
     //
     //     
+    //
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    //     
+    //    
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    // 
+    //
+    //     
+    //
     // Choice B is correct.
     //
-    // The class javax.xml.bind.JAXBContext provides a framework for validating, marshaling and un-marshaling XML into (and from) 
-    // Java objects and  it is the entry point to the JAXB API.
+    // The process of converting Java Objects into XML files are marshalling.
+    // The JAXB @XmlRootElement annotation denotes as root element and it is defined just before class starts.
+    //
+    // @XmlElement in combination with setter methods.
+    //
+    // @XmlAttribute to pass attributes to the XML nodes. These attributes can have properties like to be required or not.
+    //
+    // @XmlType to indicate special options like to order of appearance in the XML.
 }

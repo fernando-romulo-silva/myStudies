@@ -29,18 +29,18 @@ public class Question13 {
     public class LicenseProcessBean {
 
 	public void processLicense() {
-	    throw new EJBException("unexpected error..."); // 12 unchecked exception
+	    throw new EJBException("unexpected error..."); // 12 
 	}
     }
     // Which statement is true about the result of this method invocation assuming execution reaches Line 12?
     //
     // A. The container might roll back the transaction
     //
-    // B. The BarBean bean instance is in the ready state for the next invocation.
+    // B. The LicenseProcessBean bean instance is in the ready state for the next invocation.
     //
-    // C.FooBean.foo method receives javax.ejb.EJBTransactionRollbackedException
+    // C. OrderBean.processOrder method receives javax.ejb.EJBTransactionRollbackedException
     //
-    // D. FooBean.foo method receives javax.transaction.InvalidTransactionException.
+    // D. OrderBean.processOrder method receives javax.transaction.InvalidTransactionException.
     //
     //
     //
@@ -68,8 +68,8 @@ public class Question13 {
     //
     // Choice C is correct.
     //
-    // The container catch EJBException and throws EJBTransactionRolledbackException to mark the transaction associated
-    // with processing of the request has been rolled back, or marked to roll back.
+    // The container catch EJBException (unchecked exception) and throws EJBTransactionRolledbackException (unchecked exception remote) 
+    // to mark the transaction associated with processing of the request has been rolled back, or marked to roll back.
     //
     // Thus the requested operation either could not be performed or was not performed because further computation
     // on behalf of the transaction would be fruitless.

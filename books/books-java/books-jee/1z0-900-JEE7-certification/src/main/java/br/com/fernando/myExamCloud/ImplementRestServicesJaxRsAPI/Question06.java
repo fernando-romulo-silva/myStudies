@@ -66,4 +66,5 @@ public class Question06 {
     // D is wrong because of MATRIX Parameters
     // These parameters also go in the request URL.
     // They reside between the resource path and QUERY parameters, and are separated from the resource path by a semicolon (;).
+    // http://myserver.com/books/2011;author=mkyong;country=malaysia
 }

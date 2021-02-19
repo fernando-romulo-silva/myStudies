@@ -2,38 +2,25 @@ package br.com.fernando.myExamCloud.ImplementSoapServicesJaxWsAndJaxb;
 
 public class Question09 {
 
-    // A SOAP-based Web service must be created and deployed in an environment where many customers will use it.
-    // These customers will be responsible for developing their own clients, based on the published WSDL.
+    // Which of the following statements are true? [ Choose two ]
     //
-    // Which approach is correct to use first in this situation?
+    // Choice A
+    // JAX-WS allows developers to write message-oriented web services
     //
-    // Choice A - Java, because the WSDL generated later will be more accurate
+    // Choice B
+    // JAX-WS client can NOT access a web service that is not running on the Java platform
     //
-    // Choice B - WSDL, because the service and customers can benefit from the strongly typed schema
+    // Choice C
+    // JAX-WS API hides RESTful Web services complexity from the application developer
     //
-    // Choice C - Java, because the service must be efficient to support many customers
-    //
-    // Choice D - WSDL, because tools allow existing classes to be easily mapped without modification
-    //
-    //
-    //
+    // Choice D
+    // JAX-WS allows developers to write RPC-oriented web services
     //
     //
     //
     //
     //
     //
-    //
-    //
-    //    
-    //    
-    //
-    //
-    //
-    //    
-    //
-    //    
-    //    
     //
     //
     //
@@ -52,13 +39,40 @@ public class Question09 {
     //
     //
     //
+    //    
     //
-    // Choice B is correct.
     //
-    // WSDL, because the service and customers can benefit from the strongly typed schema.
     //
-    // SOAP, originally defined as Simple Object Access Protocol, is a protocol specification for exchanging structured information
-    // in the implementation of Web Services in computer networks.
+    //    
     //
-    // The Web Services Description Language (WSDL) is an XML-based language that provides a model for describing Web services.
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice A and D are correct answers.
+    //
+    // JAX-WS is a technology for building web services and clients that communicate using XML.
+    // JAX-WS allows developers to write message-oriented as well as RPC-oriented web services.
+    //
+    // With JAX-WS, clients and web services have a big advantage: the platform independence of the Java programming language.
+    //
+    // In addition, JAX-WS is not restrictive: a JAX-WS client can access a web service that is not running on the Java platform, and vice versa.
+    //
+    // This flexibility is possible because JAX-WS uses technologies defined by the World Wide Web Consortium (W3C): HTTP, SOAP, and the Web Service Description Language (WSDL)
 }

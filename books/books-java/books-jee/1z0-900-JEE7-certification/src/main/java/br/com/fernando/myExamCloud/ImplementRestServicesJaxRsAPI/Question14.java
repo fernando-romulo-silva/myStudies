@@ -35,7 +35,7 @@ public class Question14 {
     // Only @GET
     //
     // Choice C
-    // @Only @Produces
+    // Only @Produces
     //
     // Choice D
     // None of the above

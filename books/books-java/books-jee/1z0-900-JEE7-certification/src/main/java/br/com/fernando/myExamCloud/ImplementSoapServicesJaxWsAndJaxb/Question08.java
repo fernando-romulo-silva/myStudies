@@ -1,35 +1,19 @@
 package br.com.fernando.myExamCloud.ImplementSoapServicesJaxWsAndJaxb;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.helpers.DefaultValidationEventHandler;
-
 public class Question08 {
 
-    // Given the code fragment:
-    public static void test01() throws Exception {
-
-	/* 1. */ JAXBContext jo = JAXBContext.newInstance("com.xyz.foo");
-	/* 2. */ Unmarshaller u = jo.createUnmarshaller();
-	/*  */
-	/* 3. */ // INSERT CODE HERE
-	/*  */
-	/* 4. */ InputStream in = new FileInputStream("fooStuft.xml");
-	/* 5. */ Object o = u.unmarshal(in);
-    }
-
-    // Which method should be used on line 3 to enable default validation mechanism?
+    // A SOAP-based Web service must be created and deployed in an environment where many customers will use it.
+    // These customers will be responsible for developing their own clients, based on the published WSDL.
     //
-    // A - u.setProperty(String, Object)
+    // Which approach is correct to use first in this situation?
     //
-    // B - u.setProperty(Schema)
+    // Choice A - Java, because the WSDL generated later will be more accurate
     //
-    // C - u.setEventHandler(ValidationEventHandler)
+    // Choice B - WSDL, because the service and customers can benefit from the strongly typed schema
     //
-    // D - u.setAdapter(XmlAdapter)
+    // Choice C - Java, because the service must be efficient to support many customers
+    //
+    // Choice D - WSDL, because tools allow existing classes to be easily mapped without modification
     //
     //
     //
@@ -41,6 +25,7 @@ public class Question08 {
     //
     //
     //
+    //    
     //
     //
     //
@@ -52,24 +37,40 @@ public class Question08 {
     //
     //
     //
+    //    
+    //    
     //
     //
     //
-    // The correct answer is C
+    //    
     //
-    // unmarshaller.setEventHandler(new DefaultValidationEventHandler());
+    //    
+    //    
     //
-    // The ValidationEventHandler will be called by the JAXB Provider if any validation errors are encountered during calls to any of the unmarshal methods.
-    // If the client application does not register a ValidationEventHandler before invoking the unmarshal methods, then ValidationEvents will be
-    // handled by the default event handler which will terminate the unmarshal operation after the first error or fatal error is encountered.
-    public static void test02() throws Exception {
-
-	JAXBContext jo = JAXBContext.newInstance("com.xyz.foo");
-	Unmarshaller u = jo.createUnmarshaller();
-
-	u.setEventHandler(new DefaultValidationEventHandler());
-
-	InputStream in = new FileInputStream("fooStuft.xml");
-	Object o = u.unmarshal(in);
-    }
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice B is correct.
+    //
+    // WSDL, because the service and customers can benefit from the strongly typed schema.
+    //
+    // SOAP, originally defined as Simple Object Access Protocol, is a protocol specification for exchanging structured information
+    // in the implementation of Web Services in computer networks.
+    //
+    // The Web Services Description Language (WSDL) is an XML-based language that provides a model for describing Web services.
 }

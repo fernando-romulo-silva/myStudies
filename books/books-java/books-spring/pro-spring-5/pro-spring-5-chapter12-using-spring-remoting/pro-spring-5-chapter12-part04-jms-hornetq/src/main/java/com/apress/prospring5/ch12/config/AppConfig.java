@@ -28,7 +28,7 @@ public class AppConfig {
 
     @Bean
     HornetQQueue prospring5() {
-	return new HornetQQueue("prospring5");
+	return new HornetQQueue("DLQ"); // DLQ default queu test
     }
 
     @Bean

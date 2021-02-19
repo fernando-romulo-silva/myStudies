@@ -14,8 +14,7 @@ public class Question10 {
     public class OrderManager {
 
 	public Order findOrder(String id) {
-	    // TODO Auto-generated method stub
-	    return null;
+	    return new Order();
 	}
 
     }

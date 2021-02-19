@@ -1,6 +1,6 @@
 package br.com.fernando.myExamCloud.ImplementRestServicesJaxRsAPI;
 
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -12,13 +12,18 @@ import javax.ws.rs.core.MediaType;
 public class Question09 {
 
     public class Employee {
+	String name;
 
+	Employee(String name) {
+	    super();
+	    this.name = name;
+	}
     }
 
     public class EmployeeManager {
 
 	List<Employee> findAllEmployees() {
-	    return Collections.EMPTY_LIST;
+	    return Arrays.asList(new Employee("A"), new Employee("B"));
 	}
     }
 
@@ -89,7 +94,7 @@ public class Question09 {
     //
     //
     //
-    // Choice C is correct. (B is the correct)
+    // Choice B is correct
     //
     // In JAX-RS, an incoming HTTP HEAD request is handled by a target resource method successfully if:
     //
