@@ -10,6 +10,7 @@ public class Question03 {
     // Table QUESTION contains a foreign key to table Q_IMAGE.
     // The business requirement states that each question must have exactly one image.
     //
+    // --------------------------------------------------------------------------------------------------------------------
     // Choice A
     @Entity
     public class QImageA {
@@ -31,7 +32,7 @@ public class Question03 {
 	// ...
     }
 
-    //
+    // --------------------------------------------------------------------------------------------------------------------
     // Choice B
     @Entity
     public class QuestionB { // Table Question
@@ -53,7 +54,7 @@ public class Question03 {
 	// ...
     }
 
-    //
+    // --------------------------------------------------------------------------------------------------------------------
     // Choice C
     @Entity
     public class QuestionC {
@@ -86,7 +87,6 @@ public class Question03 {
     //
     //
     //
-    //    
     //
     //
     //
@@ -95,7 +95,16 @@ public class Question03 {
     //
     //
     //
-    // Explanation
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     // Choice B is correct.
     //

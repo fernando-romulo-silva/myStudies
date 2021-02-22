@@ -31,27 +31,46 @@ public class Question02 {
     //
     //
     //
-    //    
-    //
-    //
-    //
-    //    
     //
     //
     //
     //
     //
     //
-    // Explanation
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     // Choice B is correct
+    //
     // By default, all queries are polymorphic.
     //
     // That is, the FROM clause of a query designates not only instances of the specific entity class(es) to which it explicitly refers,
     // but subclasses as well.
     //
     // The instances returned by a query include instances of the subclasses that satisfy the query conditions.
+    //
     // The following query returns all customer, including subtypes of Employee, such as PersonalCustomer and CorporateCustomer.
     //
-    //  select c from Employee c where c.orderTotal > 500
+    // select c from Employee c where c.orderTotal > 500
 }

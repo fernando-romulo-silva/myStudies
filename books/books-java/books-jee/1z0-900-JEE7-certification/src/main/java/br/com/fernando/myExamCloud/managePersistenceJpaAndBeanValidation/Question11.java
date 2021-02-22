@@ -2,7 +2,8 @@ package br.com.fernando.myExamCloud.managePersistenceJpaAndBeanValidation;
 
 public class Question11 {
 
-    // The Java Persistence API defines a notion of propagation of a persistence context Which statement is correct?
+    // The Java Persistence API defines a notion of propagation of a persistence context. 
+    // Which statement is correct?
     //
     // Choice A
     // Persistence context propagation is NOT supported for message-driven beans.

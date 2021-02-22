@@ -90,6 +90,22 @@ public class Question07 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct.
     //
     // The state of persistent entities is synchronized to the database at transaction commit.

@@ -74,6 +74,19 @@ public class Question09 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is C
     //
     // If the autoApply element is specified as true, the persistence provider must automatically apply the converter to all mapped attributes of
@@ -112,10 +125,10 @@ public class Question09 {
 
 	@Convert(converter = DataConverter2.class)
 	private LocalDate birthday;
-	
+
 	private LocalDate startDate;
-	
-	private LocalDate endDate;	
+
+	private LocalDate endDate;
 	// ...
     }
 

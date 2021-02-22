@@ -20,19 +20,58 @@ public class Question01 {
     //
     //
     //
-    //    
-    //
-    //
-    //    
-    //
-    //
-    //
-    //    
     //
     //
     //
     //
-    // Explanation :
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B and D are correct answers.
     //
     // Entities support inheritance, polymorphic associations, and polymorphic queries.

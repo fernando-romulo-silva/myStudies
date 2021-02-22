@@ -43,12 +43,24 @@ public class Question06 {
     //
     //
     //
-    //    
     //
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -57,9 +69,7 @@ public class Question06 {
     //
     // The JPA entities are plain Java objects with setter and getter methods for a business domain objects.
     //
-    // There are some situations where it needs to be passed as parameters or return values of remote EJB 
+    // There are some situations where it needs to be passed as parameters or return values of remote EJB
     // in that case it must implements Serializable interface.
-
-
 
 }

@@ -16,13 +16,10 @@
 
 	<modules>
 		<module>understanding-quarkus-chapter07-part01-rest-client-isbn</module>
-		<module>understanding-quarkus-chapter07-part02-fault-tolerance-book</module>	
-		<!--  
-		<module>fault-tolerance-number</module>
-		<module>rest-client-book</module>
-		<module>rest-client-isbn</module>
-		<module>rest-client-issn</module>
-		-->
+		<module>understanding-quarkus-chapter07-part02-rest-client-issn</module>
+		<module>understanding-quarkus-chapter07-part03-rest-client-book</module>
+		<module>understanding-quarkus-chapter07-part04-fault-tolerance-book</module>
+		<module>understanding-quarkus-chapter07-part05-fault-tolerance-number</module>
 	</modules>
 
 </project>

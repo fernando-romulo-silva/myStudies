@@ -60,6 +60,23 @@ public class Question03 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is D
     //
     // 'A' is wrong because The lock mode type values READ and WRITE are synonyms of OPTIMISTIC and OPTIMISTIC_FORCE_INCREMENT respectively.
