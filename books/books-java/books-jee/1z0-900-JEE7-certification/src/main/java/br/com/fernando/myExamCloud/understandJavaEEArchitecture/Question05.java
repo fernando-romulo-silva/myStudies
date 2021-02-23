@@ -18,7 +18,7 @@ public class Question05 {
 
     // Your web application requires logic to remember items that a user placed into a shopping cart.
     //
-    // Which two Java EE WEB TIER mechanisms should you use to associate that information with the user?
+    // Which two Java EE WEB TIER mechanisms should you use to associate that information with the user? (select two)
     //
     // Choice A
     // HttpServletResponse objects
@@ -49,7 +49,15 @@ public class Question05 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -65,7 +73,7 @@ public class Question05 {
     public static class BlockIoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@SuppressWarnings("unused")
 	@Inject
 	private ServletContext context;
@@ -74,7 +82,6 @@ public class Question05 {
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
 	    PrintWriter out = response.getWriter();
 	    out.print("Get() method called.");
-
 
 	    ServletContext ctx = request.getServletContext();
 	    ctx.setAttribute("map", Collections.singletonMap(7, "Seven"));
@@ -85,9 +92,9 @@ public class Question05 {
 	    Map<Integer, String> map = (Map<Integer, String>) ctx.getAttribute("map");
 	    String value = map.get(7); // "Seven"
 	    System.out.println(value);
-	    
+
 	    // or
-	    
+
 	    HttpSession session = request.getSession();
 	    session.setAttribute("MySessionVariable", "myParam");
 	}

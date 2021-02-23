@@ -30,8 +30,9 @@
 		<springframework.version>5.2.12.RELEASE</springframework.version>
 
 		<junit-platform.version>5.7.0</junit-platform.version>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version> <!-- 2.3.7.RELEASE, 2.4.1  -->
 	</properties>
-
+	
 	<!-- Hooking into Bean Destruction -->
 
 	<dependencies>

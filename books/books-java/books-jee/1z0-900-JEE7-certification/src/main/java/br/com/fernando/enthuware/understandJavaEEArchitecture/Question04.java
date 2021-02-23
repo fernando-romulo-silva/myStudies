@@ -18,8 +18,7 @@ public class Question04 {
      * </pre>
      */
     //
-    // Which annotation do you use to group multiple @Resource declarations together for class-based injection,
-    // replacing <XXXX> in the code above?
+    // Which annotation do you use to group multiple @Resource declarations together for class-based injection, replacing <XXXX> in the code above?
     //
     // A - @Resources
     //

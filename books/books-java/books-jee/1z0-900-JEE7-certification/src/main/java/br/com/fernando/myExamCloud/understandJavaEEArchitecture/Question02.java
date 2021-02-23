@@ -5,7 +5,6 @@ public class Question02 {
     // You are developing a Java EE application where most of the user interface page requires responsive HTML output.
     // The page must populate navigation menu based on logged in role.
     //
-    //
     // Which of the following Java EE web components can achieve this goal? [ Choose two ]
     //
     // Choice A - Java Servlet
@@ -29,10 +28,39 @@ public class Question02 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A and C are correct answers.
     //
     // The functionality of Java EE web tier is to handle HTTP / HTTPS requests and generate dynamic contents.
-    // The Java EE web components are 1. Java Servlet, 2. Java Server Pages(JSP).They will run inside web container.
+    // The Java EE web components are: 1. Java Servlet, 2. Java Server Pages(JSP).
+    // They will run inside web container.
     //
     // Choice B is incorrect.
     // JavaServer Faces(JSF) is a web application framework and it is not a Java EE component.

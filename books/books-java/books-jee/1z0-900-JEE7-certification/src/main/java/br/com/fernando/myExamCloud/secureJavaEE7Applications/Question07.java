@@ -29,7 +29,6 @@ public class Question07 {
     //
     //
     //
-    //    
     //
     //
     //
@@ -38,16 +37,26 @@ public class Question07 {
     //
     //
     //
-    //    
-    //
-    //    
     //
     //
     //
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -60,6 +69,7 @@ public class Question07 {
     // tend to operate in different environments.
     //
     // The security methods--getCallerPrincipal() and isCallerInRole()-- throw a RuntimeException if invoked on a MessageDrivenContext.
+    //
     // Session beans can use this method.
 
     @Stateless

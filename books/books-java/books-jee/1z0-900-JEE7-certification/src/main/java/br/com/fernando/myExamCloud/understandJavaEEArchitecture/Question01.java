@@ -26,7 +26,7 @@ public class Question01 {
     @Stateless
     @Local(CartSession.class)
     public class TransientCartSession implements CartSession {
-	// code here
+	
 	@Override
 	public HashMap<String, String> getCartItems(int userId) {
 	    HashMap<String, String> cartItems = new HashMap<>();
@@ -43,6 +43,7 @@ public class Question01 {
     public class CartServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+	
 	// code here
     }
 
@@ -59,6 +60,33 @@ public class Question01 {
     // Choice C
     // @EJB(type = "TransientCartSession")
     // CartSession session;
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //

@@ -53,12 +53,18 @@ public class Question11 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice B is correct
     //
-    // Why?
     // The auth-constraint indicates the user roles that should be permitted access to a resource collection.
-    // It is defined as follows.
-    // Example authorization: Only ADMIN role can access applications with the url "/admin/*".
+    // It is defined as follows: Only ADMIN role can access applications with the url "/admin/*".
     /**
      * <pre>
      *      <security-constraint>

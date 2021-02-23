@@ -4,7 +4,6 @@ public class Question06 {
 
     // Java EE's support for WS-Security includes handling which two types of security credentials?
     //
-    //
     // Choice A
     // X.509 certificates
     //
@@ -29,14 +28,38 @@ public class Question06 {
     //
     //
     //
-    //    
     //
     //
     //
     //
     //
     //
-    // 
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A and B are correct answers.
     //
     // The WS-Security specification defines the use of various security tokens including X.509 certificates, SAML assertions, and username/password

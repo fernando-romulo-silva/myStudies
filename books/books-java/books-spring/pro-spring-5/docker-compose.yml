@@ -1,0 +1,31 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: '123'
+      MYSQL_USER: prospring5
+      MYSQL_PASSWORD: prospring5
+      MYSQL_DATABASE: musicdb
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - '/var/lib/mysql:/var/lib/mysql'
+  hornetq:
+    image: mansante/hornetq
+    restart: always
+    ports:
+      - '5445:5445'
+      - '5455:5455'
+  artemis-docker:
+    image: vromero/activemq-artemis:2.12.0-alpine
+    ports:
+      - '5672:5672'
+      - '61617:61617'
+      - '8161:8161'
+    environment:
+      ANONYMOUS_LOGIN: 'true'
+volumes:
+  musicdb: null

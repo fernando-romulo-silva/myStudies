@@ -54,6 +54,15 @@ public class Question09 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is D
     //
     // The "bean" is a Non contextual instance and it exists untill the containing bean is destroyed.

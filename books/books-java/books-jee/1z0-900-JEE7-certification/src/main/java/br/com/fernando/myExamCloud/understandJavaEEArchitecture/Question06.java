@@ -5,7 +5,7 @@ public class Question06 {
     // Understand Java EE Architecture
     //
     // A Java EE application that uses an EJB container must communicate with a legacy system developed using non-Java technologies.
-    // Which two Java EE technologies can be used in the integration tier of the application?
+    // Which two Java EE technologies can be used in the integration tier of the application? (select two)
     //
     // Choice A
     // JMS
