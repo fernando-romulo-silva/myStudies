@@ -57,6 +57,30 @@ public class Question03 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A is correct.
     //
     // The alternative version of the bean is used by the application only if that version is declared as follows in the beans.xml file:

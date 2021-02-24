@@ -2,7 +2,7 @@ package br.com.fernando.enthuware.useCdiBeans;
 
 public class Question02 {
 
-    // Which of the following elements cannot be injected by using an @Inject annotation?
+    // Which of the following elements cannot be injected by using an @Inject annotation? (select two answers)
     //
     // Choice A - static fields
     //

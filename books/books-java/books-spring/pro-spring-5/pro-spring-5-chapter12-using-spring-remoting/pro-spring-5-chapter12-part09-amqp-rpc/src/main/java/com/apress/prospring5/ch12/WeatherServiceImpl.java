@@ -8,16 +8,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class WeatherServiceImpl {
 
-	private static Logger logger = LoggerFactory.getLogger(WeatherServiceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(WeatherServiceImpl.class);
 
-	@RabbitListener(containerFactory="rabbitListenerContainerFactory", queues="forecasts")
-	public void getForecast(String stateCode) {
-		if ("FL".equals(stateCode)) {
-			logger.info("Hot");
-		} else if ("MA".equals(stateCode)) {
-			logger.info("Cold");
-		} else {
-			logger.info("Not available at this time");
-		}
+    @RabbitListener(containerFactory = "rabbitListenerContainerFactory", queues = "forecasts")
+    public void getForecast(String stateCode) {
+	if ("FL".equals(stateCode)) {
+	    logger.info("Hot");
+	} else if ("MA".equals(stateCode)) {
+	    logger.info("Cold");
+	} else {
+	    logger.info("Not available at this time");
 	}
+    }
 }

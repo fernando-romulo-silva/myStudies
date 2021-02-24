@@ -19,12 +19,9 @@
 		<module>pro-spring-5-chapter12-part05-boot-jms</module>
 		<module>pro-spring-5-chapter12-part06-rest</module>
 		<module>pro-spring-5-chapter12-part07-secure-rest</module>
-		
-		<!-- 
 		<module>pro-spring-5-chapter12-part08-boot-rest</module>
 		<module>pro-spring-5-chapter12-part09-amqp-rpc</module>
 		<module>pro-spring-5-chapter12-part10-boot-amqp</module>
-		 -->
 	</modules>
 
 	<dependencies>

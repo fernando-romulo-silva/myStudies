@@ -73,6 +73,30 @@ public class Question01 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Explanation :
     // Choice C is correct.
     //
@@ -82,11 +106,13 @@ public class Question01 {
     //
     @Resource(name = "concurrent/MyAppTasksExecutor")
     ManagedExecutorService mes;
-    
-    public void doSomething() {
-	ReportTask reportTask = new ReportTask();        
-	Future reportFuture = mes.submit(reportTask);  
-	
+
+    public void doSomething() throws Exception {
+	ReportTask reportTask = new ReportTask();
+	Future<?> reportFuture = mes.submit(reportTask);
+
+	reportFuture.get();
+
     }
 
 }

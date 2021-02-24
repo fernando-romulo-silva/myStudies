@@ -22,6 +22,7 @@ import com.apress.prospring5.ch12.services.SingerService;
 @Controller
 @RequestMapping(value = "/singer")
 public class SingerController {
+    
     final Logger logger = LoggerFactory.getLogger(SingerController.class);
 
     @Autowired

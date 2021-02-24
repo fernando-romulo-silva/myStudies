@@ -1,11 +1,12 @@
 package com.apress.prospring5.ch12.repos;
 
-import com.apress.prospring5.ch12.entities.Singer;
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
+import com.apress.prospring5.ch12.entities.Singer;
 
 public interface SingerRepository extends CrudRepository<Singer, Long> {
 
-	List<Singer> findByFirstName(String firstName);
+    List<Singer> findByFirstName(String firstName);
 }

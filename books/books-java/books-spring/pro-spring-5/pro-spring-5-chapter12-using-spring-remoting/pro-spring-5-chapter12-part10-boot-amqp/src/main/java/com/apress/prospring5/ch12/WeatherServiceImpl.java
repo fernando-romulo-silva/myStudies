@@ -10,15 +10,15 @@ public class WeatherServiceImpl {
 
     private static Logger logger = LoggerFactory.getLogger(WeatherServiceImpl.class);
 
-    @RabbitListener(queues="forecasts")
+    @RabbitListener(queues = "forecasts")
     public void getForecast(String stateCode) {
 
-        if ("FL".equals(stateCode)) {
-            logger.info("Hot");
-        } else if ("MA".equals(stateCode)) {
-            logger.info("Cold");
-        } else {
-            logger.info("Not available at this time");
-        }
+	if ("FL".equals(stateCode)) {
+	    logger.info("Hot");
+	} else if ("MA".equals(stateCode)) {
+	    logger.info("Cold");
+	} else {
+	    logger.info("Not available at this time");
+	}
     }
 }

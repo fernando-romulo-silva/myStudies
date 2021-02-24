@@ -3,7 +3,10 @@ package br.com.fernando.enthuware.useCdiBeans;
 import static javax.enterprise.event.Reception.IF_EXISTS;
 
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.event.Event;
 import javax.enterprise.event.Observes;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import br.com.fernando.myExamCloud.useCdiBeans.Question05.OrderEvent;
 
@@ -20,7 +23,22 @@ public class Question06 {
 	public void notifyCredit(BankEvent be) { // 7
 	} // 8
     } // 9
+    
+    @Named
+    public static class ImportantEventSource {
 
+	// The producer bean can specify a set of qualifiers when injecting the event:
+	@Inject
+	private Event<BankEvent> importantMessageEvent;
+
+	public void fireEvent() {
+	    BankEvent oe = new BankEvent("");
+
+	    importantMessageEvent.fire(oe);
+	}
+    }
+
+    // Event
     public static class BankEvent {
 
 	private final String eventMessage;
@@ -44,6 +62,32 @@ public class Question06 {
     // C - Add @Observes(during=AFTER COMPLETION) on line 1
     //
     // D - Add @Observes(notifyObserver=IF_EXISTS) on line 4 and line 7 before method parameter declaration
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

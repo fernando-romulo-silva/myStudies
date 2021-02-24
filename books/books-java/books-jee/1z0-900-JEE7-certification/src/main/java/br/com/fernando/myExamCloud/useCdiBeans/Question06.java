@@ -57,6 +57,7 @@ public class Question06 {
     // Choice C is correct.
     // 
     // Every bean has the built-in qualifier @Any, even if it does not explicitly declare this qualifier, except for the special @New. 
+    //
     // If a bean does not explicitly declare a qualifier other than @Named or @Any, the bean has exactly one additional qualifier, of type @Default. 
     // This is called the default qualifier.
     //

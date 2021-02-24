@@ -13,8 +13,10 @@ public class Question02 {
 	@Resource(name = "java:comp/env/concurrent/TaskExecutor")
 	ManagedExecutorService mes;
 
-	public void createTask() {
+	public void createTask() throws Exception {
 	    Future<Integer> result = mes.submit(new MyCallable());
+
+	    result.get();
 	}
     }
 
@@ -22,7 +24,6 @@ public class Question02 {
 
 	@Override
 	public Integer call() throws Exception {
-	    // TODO Auto-generated method stub
 	    return null;
 	}
     }
@@ -49,7 +50,27 @@ public class Question02 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

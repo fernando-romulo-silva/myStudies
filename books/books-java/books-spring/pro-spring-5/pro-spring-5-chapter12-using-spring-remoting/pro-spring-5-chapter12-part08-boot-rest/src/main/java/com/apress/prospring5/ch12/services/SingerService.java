@@ -1,18 +1,18 @@
 package com.apress.prospring5.ch12.services;
 
-import com.apress.prospring5.ch12.entities.Singer;
-
 import java.util.List;
+
+import com.apress.prospring5.ch12.entities.Singer;
 
 public interface SingerService {
 
-	List<Singer> findAll();
+    List<Singer> findAll();
 
-	List<Singer> findByFirstName(String firstName);
+    List<Singer> findByFirstName(String firstName);
 
-	Singer findById(Long id);
+    Singer findById(Long id);
 
-	Singer save(Singer singer);
+    Singer save(Singer singer);
 
-	void delete(Singer singer);
+    void delete(Singer singer);
 }

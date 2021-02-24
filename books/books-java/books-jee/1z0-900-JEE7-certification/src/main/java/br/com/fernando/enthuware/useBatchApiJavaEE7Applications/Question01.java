@@ -38,6 +38,16 @@ public class Question01 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //    
     //
     //
@@ -50,5 +60,22 @@ public class Question01 {
     //
     //
     // The correct Answer D
+    
+    /**
+     * <pre>
+     *      <job id="PayrollBatchJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+     *          <step id="process">
+     *              <chunk item-count="10">
+     *                   <reader ref="reader"/>
+     *                   <processor ref="processor"/>
+     *                   <writer ref="writer"/>
+     *               </chunk>
+     *           </step>
+     *           <step id="email">
+     *           	<batchlet ref="emailBatchLet" />
+     *           </step>
+     *      </job>
+     * </pre>
+     */
 
 }

@@ -2,6 +2,7 @@ package br.com.fernando.enthuware.useCdiBeans;
 
 import javax.enterprise.inject.Alternative;
 import javax.enterprise.inject.Default;
+import javax.inject.Inject;
 
 public class Question01 {
 
@@ -28,6 +29,7 @@ public class Question01 {
 	public void handleMessage(Message msg) {
 	}
     }
+
     //
     // And the next fragment from beans.xml:
     // <alternatives>
@@ -36,7 +38,8 @@ public class Question01 {
     //
     // And this injection point:
     //
-    // @Inject GenericMessenger messageHandler;
+    @Inject
+    GenericMessenger messageHandler;
     //
     // Which type would be injected at run time and referenced by the messageHandler variable?
     //
@@ -47,6 +50,16 @@ public class Question01 {
     // C - None of the above. An exception would be thrown due to ambiguous bean references.
     //
     // D - GenericMessenger
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

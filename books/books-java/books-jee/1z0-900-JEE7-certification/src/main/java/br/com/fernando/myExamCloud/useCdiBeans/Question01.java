@@ -1,5 +1,6 @@
 package br.com.fernando.myExamCloud.useCdiBeans;
 
+import javax.enterprise.inject.Any;
 import javax.enterprise.inject.Default;
 
 public class Question01 {
@@ -37,8 +38,6 @@ public class Question01 {
     //
     //
     //
-    //    
-    //    
     //
     //
     //
@@ -48,18 +47,44 @@ public class Question01 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
     // Choice C is correct.
     //
-    // Every bean has the built-in qualifier @Any, even if it does not explicitly declare this qualifier, except for the special @New qualified beans 
+    // Every bean has the built-in qualifier @Any, even if it does not explicitly declare this qualifier, except for the special @New qualified beans
     // defined in @New qualified beans.
     //
-    // If a bean does not explicitly declare a qualifier other than @Named or @Any, the bean has exactly one additional qualifier, of type @Default. 
+    // If a bean does not explicitly declare a qualifier other than @Named or @Any, the bean has exactly one additional qualifier, of type @Default.
     // This is called the default qualifier.
     //
     // Both Employee and Product declarations result in a bean with two qualifiers: @Any and @Default.
+    // The following declarations are equivalent:
+    @Any
+    @Default
+    public class Customer2 {
+    }
+    
+    @Any
+    @Default
+    public class Product2 {
+    }
 
 }

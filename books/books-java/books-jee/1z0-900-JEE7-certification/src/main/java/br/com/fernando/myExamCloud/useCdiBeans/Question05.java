@@ -64,7 +64,6 @@ public class Question05 {
     //
     //
     //
-    // 
     //
     //
     //
@@ -73,7 +72,34 @@ public class Question05 {
     //
     //
     //
-    //     
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -97,7 +123,7 @@ public class Question05 {
 	// line 6
 	public void notifyRefund(@Observes(notifyObserver = IF_EXISTS) OrderEvent oe) { // 7
 	}
-	
+
 	// line3
 	// @Observes(notifyObserver = IF_EXISTS) // error: The annotation @Observes is disallowed for this location
 	public void notifPayment2(OrderEvent oe) {

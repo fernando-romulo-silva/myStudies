@@ -27,5 +27,10 @@ services:
       - '8161:8161'
     environment:
       ANONYMOUS_LOGIN: 'true'
+  rabbitmq:
+      image: rabbitmq:management
+      ports:
+        - '5673:5672'
+        - '15672:15672'      
 volumes:
   musicdb: null

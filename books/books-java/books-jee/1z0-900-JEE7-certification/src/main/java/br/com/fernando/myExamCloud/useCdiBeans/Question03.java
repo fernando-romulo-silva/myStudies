@@ -32,7 +32,7 @@ public class Question03 {
 
     // And the next fragment from beans.xml:
     // <alternatives>
-    //    <class>com.myexamcloud.SmsHandler</class>
+    // <class>com.myexamcloud.SmsHandler</class>
     // </alternatives>
     //
     // And this injection point:
@@ -66,7 +66,10 @@ public class Question03 {
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
     //
     //
     //

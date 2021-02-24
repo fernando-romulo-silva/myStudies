@@ -18,47 +18,53 @@ import org.springframework.context.annotation.Configuration;
 @EnableRabbit
 public class RabbitMQConfig {
 
-	final static String queueName = "forecasts";
-	final static String exchangeName = "weather";
+    final static String queueName = "forecasts";
+    final static String exchangeName = "weather";
 
-	@Bean CachingConnectionFactory connectionFactory() {
-		return new CachingConnectionFactory("127.0.0.1");
-	}
+    @Bean
+    CachingConnectionFactory connectionFactory() {
+	return new CachingConnectionFactory("127.0.0.1");
+    }
 
-	@Bean RabbitTemplate amqpTemplate() {
-		RabbitTemplate rabbitTemplate = new RabbitTemplate();
-		rabbitTemplate.setConnectionFactory(connectionFactory());
-		rabbitTemplate.setReplyTimeout(2000);
-		rabbitTemplate.setRoutingKey(queueName);
-		rabbitTemplate.setExchange(exchangeName);
-		return rabbitTemplate;
-	}
+    @Bean
+    RabbitTemplate amqpTemplate() {
+	RabbitTemplate rabbitTemplate = new RabbitTemplate();
+	rabbitTemplate.setConnectionFactory(connectionFactory());
+	rabbitTemplate.setReplyTimeout(2000);
+	rabbitTemplate.setRoutingKey(queueName);
+	rabbitTemplate.setExchange(exchangeName);
+	return rabbitTemplate;
+    }
 
-	@Bean Queue forecasts() {
-		return new Queue(queueName, true);
-	}
+    @Bean
+    Queue forecasts() {
+	return new Queue(queueName, true);
+    }
 
-	@Bean Binding dataBinding(DirectExchange directExchange, Queue queue) {
-		return BindingBuilder.bind(queue).to(directExchange).with(queueName);
-	}
+    @Bean
+    Binding dataBinding(DirectExchange directExchange, Queue queue) {
+	return BindingBuilder.bind(queue).to(directExchange).with(queueName);
+    }
 
-	@Bean RabbitAdmin admin() {
-		RabbitAdmin admin =  new RabbitAdmin(connectionFactory());
-		admin.declareQueue(forecasts());
-		admin.declareBinding(dataBinding(weather(), forecasts()));
-		return admin;
-	}
+    @Bean
+    RabbitAdmin admin() {
+	RabbitAdmin admin = new RabbitAdmin(connectionFactory());
+	admin.declareQueue(forecasts());
+	admin.declareBinding(dataBinding(weather(), forecasts()));
+	return admin;
+    }
 
-	@Bean DirectExchange weather() {
-		return new DirectExchange(exchangeName, true, false);
-	}
+    @Bean
+    DirectExchange weather() {
+	return new DirectExchange(exchangeName, true, false);
+    }
 
-	@Bean
-	public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory() {
-		SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
-		factory.setConnectionFactory(connectionFactory());
-		factory.setMaxConcurrentConsumers(5);
-		return factory;
-	}
+    @Bean
+    public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory() {
+	SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
+	factory.setConnectionFactory(connectionFactory());
+	factory.setMaxConcurrentConsumers(5);
+	return factory;
+    }
 
 }

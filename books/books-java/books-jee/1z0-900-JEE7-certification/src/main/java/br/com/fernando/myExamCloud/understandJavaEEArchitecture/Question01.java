@@ -100,6 +100,7 @@ public class Question01 {
     //
     // The existence of two implementations of the CartSession @Local interface breaks the convention and throws an exception during deployment
     // when we use @EJB annotation without beasnName attribute.
+    //
     // Enhancement of the @EJB annotation with the beanName attribute fixes the problem.
     //
     // The value of the beanName attribute is the simple name(getSimpleName) of the desired bean:
