@@ -21,6 +21,7 @@ services:
       - '5455:5455'
   artemis-docker:
     image: vromero/activemq-artemis:2.12.0-alpine
+    restart: always
     ports:
       - '5672:5672'
       - '61617:61617'
@@ -29,6 +30,7 @@ services:
       ANONYMOUS_LOGIN: 'true'
   rabbitmq:
       image: rabbitmq:management
+      restart: always
       ports:
         - '5673:5672'
         - '15672:15672'      

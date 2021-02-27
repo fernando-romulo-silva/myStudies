@@ -28,15 +28,20 @@ public class NumberResource {
     @Path("/issn")
     public JsonObject generateIssn() throws InterruptedException {
 	LOGGER.info("Waiting for " + secondsToSleep + " seconds");
+
 	TimeUnit.SECONDS.sleep(secondsToSleep);
 
 	JsonObject issnNumber = Json.createObjectBuilder() //
-		.add("isbn10", new Faker().code().isbn10()) //
+		.add("isbn10", //
+			new Faker() //
+				.code()//
+				.isbn10() //
+		) //
 		.add("generatedAt", String.valueOf(Instant.now())) //
 		.build();
 
 	LOGGER.info("Generated ISSN number: " + issnNumber.toString());
-	
+
 	return issnNumber;
     }
 

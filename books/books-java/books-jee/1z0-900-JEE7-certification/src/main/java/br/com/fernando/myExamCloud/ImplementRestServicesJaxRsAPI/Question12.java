@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 public class Question12 {
 
     // Given: Resource class
-    @Path("/epractizelabs")
+    @Path("/eplorder")
     public class OrderResource {
 
 	@Path("/id")
@@ -35,7 +35,7 @@ public class Question12 {
      *    </servlet>
      * 
      *    <servlet-mapping>
-     *        <servlet-name> MyResourceHandler</ servlet-name>
+     *        <servlet-name>MyResourceHandler</servlet-name>
      *        <url-pattern>/eplorder</url-pattern>
      *    </servlet-mapping>
      *    

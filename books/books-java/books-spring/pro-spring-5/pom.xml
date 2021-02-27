@@ -21,6 +21,7 @@
 		<module>pro-spring-5-chapter10-validation-conversion-formatting</module>
 		<module>pro-spring-5-chapter11-task-scheduling</module>
 		<module>pro-spring-5-chapter12-using-spring-remoting</module>
+		<module>pro-spring-5-chapter13-spring-testing</module>
 	</modules>
 
 	<properties>

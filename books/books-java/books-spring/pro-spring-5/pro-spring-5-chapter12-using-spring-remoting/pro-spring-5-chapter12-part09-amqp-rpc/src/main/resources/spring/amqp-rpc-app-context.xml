@@ -23,8 +23,7 @@
         </rabbit:bindings>
     </rabbit:direct-exchange>
 
-    <bean id="weatherServiceProxy"
-          class="org.springframework.amqp.remoting.client.AmqpProxyFactoryBean">
+    <bean id="weatherServiceProxy" class="org.springframework.amqp.remoting.client.AmqpProxyFactoryBean">
         <property name="amqpTemplate" ref="amqpTemplate" />
         <property name="serviceInterface" value="com.apress.prospring5.ch12.WeatherService" />
     </bean>
@@ -33,8 +32,7 @@
         <rabbit:listener ref="weatherServiceExporter" queue-names="forecasts" />
     </rabbit:listener-container>
 
-    <bean id="weatherServiceExporter"
-          class="org.springframework.amqp.remoting.service.AmqpInvokerServiceExporter">
+    <bean id="weatherServiceExporter" class="org.springframework.amqp.remoting.service.AmqpInvokerServiceExporter">
         <property name="amqpTemplate" ref="amqpTemplate" />
         <property name="serviceInterface" value="com.apress.prospring5.ch12.WeatherService" />
         <property name="service">
