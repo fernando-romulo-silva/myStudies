@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>understanding-quarkus-chapter08-part01-mutiny-uni-multi</artifactId>
+	<name>Quarkus :: Reactive Microservices :: Mutiny :: Uni Multi</name>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>understanding-quarkus-chapter08-reactive</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<!-- tag::adocExtension[] -->
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-mutiny</artifactId>
+		</dependency>
+		<!-- end::adocExtension[] -->
+		<!-- Test -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+		</dependency>
+	</dependencies>
+</project>

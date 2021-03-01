@@ -22,7 +22,6 @@ public class Question03 {
 
     // Which one is true?
     //
-    //
     // Choice A
     // Websocket implementations part of the Java EE platform are required to support field, method, and constructor injection using the
     // javax.inject.Inject annotation into all websocket endpoint classes, as well as the use of interceptors for these classes.

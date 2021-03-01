@@ -54,6 +54,7 @@ public class SingerControllerTest {
 	newSinger.setLastName("Vaughan");
 
 	SingerService singerService = mock(SingerService.class);
+	
 	when(singerService.save(newSinger)).thenAnswer(invocation -> {
 	    singers.add(newSinger);
 	    return newSinger;

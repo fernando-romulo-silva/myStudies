@@ -14,6 +14,8 @@
 	<modules>
 		<module>pro-spring-5-chapter13-part01-base-test</module>
 		<module>pro-spring-5-chapter13-part02-mvc-unit-test</module>
+		<module>pro-spring-5-chapter13-part03-integration-test</module>
+		<module>pro-spring-5-chapter13-part04-junit5-test</module>
 	</modules>
 
 	<dependencies>

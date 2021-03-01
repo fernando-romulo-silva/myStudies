@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>understanding-quarkus-chapter08-reactive</artifactId>
+	<packaging>pom</packaging>
+	<name>Quarkus :: Reactive</name>
+
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>understanding-quarkus</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>understanding-quarkus-chapter08-part01-mutiny-uni-multi</module>
+		<module>understanding-quarkus-chapter08-part02-messages-synch</module>
+		<module>understanding-quarkus-chapter08-part03-messages-asynch</module>
+		<module>understanding-quarkus-chapter08-part04-messages-kafka</module>
+	</modules>
+
+</project>

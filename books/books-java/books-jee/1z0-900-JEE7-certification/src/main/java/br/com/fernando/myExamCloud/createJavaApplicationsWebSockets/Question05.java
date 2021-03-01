@@ -37,29 +37,49 @@ public class Question05 {
 	public HelloServerD() {
 	}
     }
-
-    //
-    //
-    //
-    //    
     //
     //
     //
     //
     //
-    //    
     //
     //
     //
     //
     //
-    //    
     //
     //
     //
     //
     //
-    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     // Choice C and D are correct answers.
@@ -67,7 +87,7 @@ public class Question05 {
     // @ServerEndpoint
     //
     // This class level annotation signifies that the Java class it decorates must be deployed by the implementation as a websocket server endpoint and
-    // made available in the URI-space of the websocket implementation. 
+    // made available in the URI-space of the websocket implementation.
     //
     // The class must be public, concrete, and have a public no-args constructor.
     //
