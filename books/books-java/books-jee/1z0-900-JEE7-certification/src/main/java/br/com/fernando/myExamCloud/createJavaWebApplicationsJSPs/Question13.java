@@ -1,109 +1,126 @@
 package br.com.fernando.myExamCloud.createJavaWebApplicationsJSPs;
 
 public class Question13 {
-    // How do you specify a default error page in your web.xml file?
+
+    // Given:
+    //
+    // licenseRequest.jsp
+    // <jsp:useBean id="licenseBean" class="LicenseBean" />
+    // <jsp:include page="orderDisplay.jsp" />
+    //
+    // orderDisplay.jsp
+    // Your order number: <jsp:getProperty name="licenseBean" property="orderNumber" /><br>
+    // Your Email ID: <jsp:getProperty name="licenseBean" property="email" />
+    //
+    // A developer wants to display order number and email address in orderDisplay.jsp.
+    // What modification should be made in licenseRequest.jsp to make the employee bean accessible within orderDisplay.jsp?
     //
     // Choice A
-    /**
-     * <pre>
-     *       <on-error>
-     *          <location>/general-error.html<location>
-     *       </on-error>
-     * </pre>
-     */
-
+    // No modification is needed; the bean will be available in the included page also.
+    //
     // Choice B
-    /**
-     * <pre>
-     *     <error-page>
-     *        <error-code>*</error-code>
-     *        <location>/general-error.html</location>
-     *     </error-page>
-     * </pre>
-     */
-
+    // Modify the code to use the include directive instead of the include action.
+    //
     // Choice C
-    /**
-     * <pre>
-     *      <on-error>
-     *         <error-code>*</error-code>
-     *         <location>/general-error.html</location>
-     *      </on-error>
-     * </pre>
-     */
+    // Change the scope of the bean to request.
     //
     // Choice D
+    // Change the scope of the bean to session.
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // Choice B is correct.
+    //
+    // By default, the scope of a bean is page, so the bean will not be available in the dynamically included page.
+    //
+    // So choice A is incorrect.
+    //
+    // In a static inclusion (include directive), the two pages become one translation unit.
+    // So the bean will be available in the included page when the include directive is used. Hence choice B is correct.
+    //
+    // Choices C and D are incorrect because even if the scope of the bean is changed to session or request, the bean instance would be
+    // available in the included jsp file only if that bean also contains a useBean declaration identical to the one in the including file.
+    //
+    // Example:
+    //
+    // Page2.jsp
     /**
      * <pre>
-     *      <error-page> 
-     *        <location>/general-error.html</location>
-     *      </error-page>
+     *     <html> 
+     *     <head>
+     *     	<title>JSP Include example</title>
+     *     </head>
+     *     <body> 
+     *     	<b>Page2.jsp</b><br>
+     *     	<i> This is the content of Page2.jsp page</i>
+     *     </body> 
+     *     </html>
      * </pre>
      */
     //
     //
     //
+    // JSP include action tag (non static incluse)
     //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    // The correct answer is D
-    //
-    // You can use the standard webapp configuration file located in webapp/WEB-INF/web.xml to map errors to specific URLs with the error-page element.
-    // This element creates a mapping between the error-code or exception-type to the location of a resource in the web application.
-    //
-    // If an error-page element in the deployment descriptor does not contain an exception-type or an error-code element, the error page is a default error page.
-    //
-    // You can specify the error page in a deployment descriptor in 2 ways:
+    // index.jsp
     /**
      * <pre>
-     *	    <web-app>
-     *	      ...
-     *	      <error-page>
-     *	        <error-code>404</error-code>
-     *	        <location>/html/ErrorPage.html</location>
-     *	      </error-page>
-     *
-     *	      <error-page>
-     *	        <exception-type>javax.servlet.ServletException</exception-type>
-     *	        <location>/html/ErrorPage.html</location>
-     *	      </error-page>
-     *         
-     *        <!-- all errors --> 
-     *        <error-page>
-     *            <location>/general-error.html</location>
-     *        </error-page>
-     *
-     *	       ...
-     *	    </web-app>
+     *     <html> 
+     *     <head>
+     *     	<title>JSP Include Action example</title>
+     *     </head>
+     *     <body> 
+     *     	<b>index.jsp Page</b><br>
+     *     	<jsp:include page="Page2.jsp" />
+     *     </body> 
+     *     </html>
      * </pre>
      */
-    // Here, if the HTTP ERROR 404 (not found) is generated, ErrorPage.html will be serviced. 
-    // Similarly if any servlet throws servlet exception while processing a request, this page will be serviced.
-
+    //
+    //
+    // Jsp Include Directive (static incluse)
+    //
+    // index.jsp
+    /**
+     * <pre>
+     *     <html> 
+     *     <head>
+     *     	<title>JSP Include Directive example</title>
+     *     </head>
+     *     <body> 
+     *     	<%@ include file="Page2.jsp" %>
+     *     </body> 
+     *     </html>
+     * </pre>
+     */
 }

@@ -62,6 +62,15 @@ public class Question02 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice D is correct
     //
     // Because PageContext extends JspContext to provide useful context information for when JSP technology is used in a Servlet environment.

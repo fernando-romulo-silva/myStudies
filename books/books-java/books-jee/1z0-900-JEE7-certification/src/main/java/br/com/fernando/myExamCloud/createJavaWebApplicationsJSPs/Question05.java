@@ -64,7 +64,7 @@ public class Question05 {
     // JSTL is the standard tag library that provides tags to control the JSP page behaviour.
     // JSTL tags can be used for iteration and control statements, formatation, SQL etc.
     //
-    // message localization = internationalisation
+    // message formatation = internationalisation
 
     /**
      * <pre>

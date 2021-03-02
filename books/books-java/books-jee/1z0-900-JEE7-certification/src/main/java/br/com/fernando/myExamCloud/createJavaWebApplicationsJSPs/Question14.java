@@ -2,30 +2,20 @@ package br.com.fernando.myExamCloud.createJavaWebApplicationsJSPs;
 
 public class Question14 {
 
-    // Given:
+    // Which of the following approaches would result in the current date being added to the output of a JSP?
+    // You had to select two options(s)
     //
-    // licenseRequest.jsp
-    // <jsp:useBean id="licenseBean" class="LicenseBean" />
-    // <jsp:include page="orderDisplay.jsp" />
+    // A
+    // <%= out.printIn(new java.util.Date()) %>
     //
-    // orderDisplay.jsp
-    // Your order number: <jsp:getProperty name="licenseBean" property="orderNumber" /><br>
-    // Your Email ID: <jsp:getProperty name="licenseBean" property="email" />
+    // B
+    // <% out.printIn(new java.util.Date()); %>
     //
-    // A developer wants to display order number and email address in orderDisplay.jsp.
-    // What modification should be made in licenseRequest.jsp to make the employee bean accessible within orderDisplay.jsp?
+    // C
+    // <%=new java.util.Date()%>
     //
-    // Choice A
-    // No modification is needed; the bean will be available in the included page also.
-    //
-    // Choice B
-    // Modify the code to use the include directive instead of the include action.
-    //
-    // Choice C
-    // Change the scope of the bean to request.
-    //
-    // Choice D
-    // Change the scope of the bean to session.
+    // D
+    // <%System.out.printIn(new java.util.Date());%>
     //
     //
     //
@@ -59,68 +49,19 @@ public class Question14 {
     //
     //
     //
-    // Choice B is correct.
-    //
-    // By default, the scope of a bean is page, so the bean will not be available in the dynamically included page.
-    //
-    // So choice A is incorrect.
-    //
-    // In a static inclusion (include directive), the two pages become one translation unit.
-    // So the bean will be available in the included page when the include directive is used. Hence choice B is correct.
-    //
-    // Choices C and D are incorrect because even if the scope of the bean is changed to session or request, the bean instance would be
-    // available in the included jsp file only if that bean also contains a useBean declaration identical to the one in the including file.
-    //
-    // Example:
-    //
-    // Page2.jsp
-    /**
-     * <pre>
-     *     <html> 
-     *     <head>
-     *     	<title>JSP Include example</title>
-     *     </head>
-     *     <body> 
-     *     	<b>Page2.jsp</b><br>
-     *     	<i> This is the content of Page2.jsp page</i>
-     *     </body> 
-     *     </html>
-     * </pre>
-     */
     //
     //
     //
-    // JSP include action tag (non static incluse)
+    // The B and C are the correct answer.
     //
-    // index.jsp
-    /**
-     * <pre>
-     *     <html> 
-     *     <head>
-     *     	<title>JSP Include Action example</title>
-     *     </head>
-     *     <body> 
-     *     	<b>index.jsp Page</b><br>
-     *     	<jsp:include page="Page2.jsp" />
-     *     </body> 
-     *     </html>
-     * </pre>
-     */
+    // Choice B is correct. The code will print current date. This is the JSP scriptlet tag where Java code can be used.
     //
+    // Choice C is correct. This is the JSP expression tag. 
+    // The code placed within JSP expression tag is written to the output stream of the response.
+    // So you need not write out.print() to write data. 
+    // It is mainly used to print the values of variable or method.
     //
-    // Jsp Include Directive (static incluse)
+    // A will not compile, void type will not be used in <%= %> tag.
     //
-    // index.jsp
-    /**
-     * <pre>
-     *     <html> 
-     *     <head>
-     *     	<title>JSP Include Directive example</title>
-     *     </head>
-     *     <body> 
-     *     	<%@ include file="Page2.jsp" %>
-     *     </body> 
-     *     </html>
-     * </pre>
-     */
+    // D Will print the date in the servlet log
 }

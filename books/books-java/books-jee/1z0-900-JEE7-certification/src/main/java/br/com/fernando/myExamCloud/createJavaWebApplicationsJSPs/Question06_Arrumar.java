@@ -39,20 +39,6 @@ public class Question06_Arrumar {
      * }
      * </code>
      */
-    public static class GuestBean {
-	private String guestName;
-
-	public GuestBean() {
-	}
-
-	public String getGuestName() {
-	    return guestName;
-	}
-
-	public void setGuestName(String guestNameIn) {
-	    guestName = guestNameIn;
-	}
-    }
     //
     // index.jsp
     /**

@@ -2,66 +2,68 @@ package br.com.fernando.myExamCloud.createJavaWebApplicationsJSPs;
 
 public class Question15 {
 
-    // Which of the following approaches would result in the current date being added to the output of a JSP?
-    // You had to select two options(s)
+    // Select the folder to store tag library files.
     //
-    // A
-    // <%= out.printIn(new java.util.Date()) %>
+    // Choice A
+    // WEB-INF/public_html
     //
-    // B
-    // <% out.printIn(new java.util.Date()); %>
+    // Choice B
+    // WEB-INF/classes
     //
-    // C
-    // <%=new java.util.Date()%>
+    // Choice C
+    // WEB-INF
     //
-    // D
-    // <%System.out.printIn(new java.util.Date());%>
-    //
+    // Choice D
+    // WEB-INF/lib
     //
     //
     //
     //
-    //
+    //    
     //
     //
     //
     //
     //
+    //    
     //
     //
     //
     //
     //
+    //    
     //
     //
     //
     //
     //
+    //    
     //
     //
+    //    
     //
     //
-    //
-    //
-    //
-    //
-    //
+    //    
     //
     //
     //
     //
     //
     //
-    // The B and C are the correct answer.
     //
-    // Choice B is correct. The code will print current date. This is the JSP scriptlet tag where Java code can be used.
     //
-    // Choice C is correct. This is the JSP expression tag. 
-    // The code placed within JSP expression tag is written to the output stream of the response.
-    // So you need not write out.print() to write data. 
-    // It is mainly used to print the values of variable or method.
     //
-    // A will not compile, void type will not be used in <%= %> tag.
+    // Choice D is correct.
     //
-    // D Will print the date in the servlet log
+    // The top-level directory of a WAR is the document root of the application.
+    // The document root contains a subdirectory called WEB-INF, which contains the following files and directories:
+    //
+    // /WEB-INF/web.xml deployment descriptor.
+    //
+    // /WEB-INF/classes directory for servlet and utility classes.
+    // The classes in this directory are available to the application class loader.
+    //
+    // /WEB-INF/lib directory for Java Archive files.
+    // These files contain servlets, beans, and other utility classes like tag libraries.
+
 }
