@@ -8,7 +8,7 @@ public class Question02 {
     //
     //
     // Choice A
-    // select c,p,d from Employee c, PersonalCustomer p, CorporateCustomer d where c.orderTotal > 500 AND p. orderTotal > 500 and d. orderTotal > 500
+    // select c,p,d from Employee c, PersonalCustomer p, CorporateCustomer d where c.orderTotal > 500 AND p.orderTotal > 500 and d.orderTotal > 500
     //
     // Choice B
     // select c from Employee c where c.orderTotal > 500

@@ -136,6 +136,7 @@ public class Question02 {
 	@Convert(converter = DataConverter2.class)
 	private LocalDate birthday;
 	
+	// @Convert(DataConverter2.class) // don't compile
 	private LocalDate startDate;
 	
 	private LocalDate endDate;

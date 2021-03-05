@@ -32,13 +32,28 @@ public class Question12 {
     // The relationship is mapped to a foreign key in the CUSTOMER table.
     //
     // Choice B
-    // The relationship is mapped using a join table CUSTOMER_ ADDRESS.
+    // The relationship is mapped using a join table CUSTOMER_ADDRESS.
     //
     // Choice C
     // The relationship is mapped to a foreign key in the ADDRESS table.
     //
     // Choice D
     // The relationship is mapped to foreign keys in both CUSTOMER and ADDRESS tables.
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

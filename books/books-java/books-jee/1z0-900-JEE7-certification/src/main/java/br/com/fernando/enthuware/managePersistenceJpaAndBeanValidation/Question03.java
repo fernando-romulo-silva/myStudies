@@ -93,5 +93,38 @@ public class Question03 {
     //
     // When the lock cannot be obtained, and the database locking failure results in only statement-level rollback, the provider must throw
     // the LockTimeoutException (and must not mark the transaction for rollback).
-
+    //
+    //
+    //
+    // There are two types of locks we can retain: an exclusive lock and a shared lock.
+    //
+    // We could read but not write in data when someone else holds a SHARED LOCK.
+    // In order to modify or delete the reserved data, we need to have an EXCLUSIVE LOCK.
+    //
+    //
+    // JPA specification defines three pessimistic lock modes which we're going to discuss:
+    //
+    // * PESSIMISTIC_READ – allows us to obtain a SHARED LOCK and prevent the data from being UPDATED or DELETED
+    // $$ Other transactions won't be able to make any updates or deletes though $$
+    //
+    // * PESSIMISTIC_WRITE – allows us to obtain an EXCLUSIVE LOCK and prevent the data from being READ, UPDATED or DELETED
+    // $$ It will prevent other transactions from reading, updating or deleting the data $$
+    //
+    // * PESSIMISTIC_FORCE_INCREMENT – works like PESSIMISTIC_WRITE and it additionally increments a version attribute of a versioned entity
+    // $$ Acquiring that lock results in updating the version column $$
+    //
+    // All of them are static members of the LockModeType class and allow transactions to obtain a database lock.
+    // They all are retained until the transaction commits or rolls back.
+    //
+    //
+    // Exceptions
+    //
+    // It's good to know which exception may occur while working with pessimistic locking. JPA specification provides different types of exceptions:
+    //
+    // * PessimisticLockException – indicates that obtaining a lock or converting a shared to exclusive lock fails and results in a transaction-level rollback
+    //
+    // * LockTimeoutException – indicates that obtaining a lock or converting a shared lock to exclusive times out and results in a statement-level rollback
+    //
+    // * PersistanceException – indicates that a persistence problem occurred. PersistanceException and its subtypes, 
+    // except NoResultException, NonUniqueResultException, LockTimeoutException, and QueryTimeoutException, marks the active transaction to be rolled back.
 }

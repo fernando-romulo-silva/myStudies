@@ -13,7 +13,7 @@ public class Question03 {
     // --------------------------------------------------------------------------------------------------------------------
     // Choice A
     @Entity
-    public class QImageA {
+    public class QImageA { // Table Image
 	private QuestionA question;
 
 	@OneToOne
@@ -28,7 +28,7 @@ public class Question03 {
     }
 
     @Entity
-    public class QuestionA {
+    public class QuestionA { // Table Question
 	// ...
     }
 
@@ -50,14 +50,14 @@ public class Question03 {
     }
 
     @Entity
-    public class QImageB { // table Q_IMAGE
+    public class QImageB { // Table Image
 	// ...
     }
 
     // --------------------------------------------------------------------------------------------------------------------
     // Choice C
     @Entity
-    public class QuestionC {
+    public class QuestionC { // Table Question
 	private QImageC questionImage;
 
 	public QImageC getQuestionImagee() {
@@ -71,7 +71,7 @@ public class Question03 {
     }
 
     @Entity
-    public class QImageC {
+    public class QImageC { // Table Image
 	// ...
     }
     //

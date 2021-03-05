@@ -133,7 +133,7 @@ public class Question06 {
       private int version;
     }
     
-    public class MyKey2 implements Serializable {
+    public class MyKey2 implements Serializable { // must implement Serializable
 	private int id;
 	private int version;
     }
