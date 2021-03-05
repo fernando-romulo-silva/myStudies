@@ -14,6 +14,7 @@ public class Question10 {
     // Given:
     @Stateless
     public class AlarmManager {
+	
 	@Resource
 	private TimerService timerService;
 
@@ -31,7 +32,7 @@ public class Question10 {
     // You are creating an Alarm management system.
     // When you create a new alarm, you want it to create an alert that is triggered once at the specified time.
     //
-    // Which method should you call on Line 9 to create the timer?
+    // Which method should you call on Line 9 to create the timer? (select two answers)
     //
     // A - timerService.createCalendarTimer(alarmDate, config);
     //

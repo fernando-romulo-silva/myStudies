@@ -14,24 +14,28 @@ import javax.sql.DataSource;
  */
 
 @Configuration
-@ComponentScan(basePackages={"com.apress.prospring5.ch13"},
-		excludeFilters =  {@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,
-				value = DBInitializer.class)
-		})
+@ComponentScan( //
+	basePackages = { "com.apress.prospring5.ch13" }, //
+	excludeFilters = { //
+		@ComponentScan.Filter( //
+			type = FilterType.ASSIGNABLE_TYPE, //
+			value = DBInitializer.class //
+		) //
+	})
 @Profile("test")
 public class SimpleTestConfig {
 
-	private static Logger logger = LoggerFactory.getLogger(SimpleTestConfig.class);
+    private static Logger logger = LoggerFactory.getLogger(SimpleTestConfig.class);
 
-	@Bean
-	public DataSource dataSource() {
-		try {
-			EmbeddedDatabaseBuilder dbBuilder = new EmbeddedDatabaseBuilder();
-			return dbBuilder.setType(EmbeddedDatabaseType.H2).build();
-		} catch (Exception e) {
-			logger.error("Embedded DataSource bean cannot be created!", e);
-			return null;
-		}
+    @Bean
+    public DataSource dataSource() {
+	try {
+	    EmbeddedDatabaseBuilder dbBuilder = new EmbeddedDatabaseBuilder();
+	    return dbBuilder.setType(EmbeddedDatabaseType.H2).build();
+	} catch (Exception e) {
+	    logger.error("Embedded DataSource bean cannot be created!", e);
+	    return null;
 	}
+    }
 
 }

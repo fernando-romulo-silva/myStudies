@@ -60,6 +60,17 @@ public class Question05 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // The correct answer is D
     //
     // If sessionMode is set to JMSContext.SESSION_TRANSACTED then the session will use a local transaction which may subsequently be committed

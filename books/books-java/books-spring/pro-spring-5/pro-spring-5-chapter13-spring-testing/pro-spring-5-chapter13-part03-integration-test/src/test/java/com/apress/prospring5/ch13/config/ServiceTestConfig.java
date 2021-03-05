@@ -12,34 +12,33 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 @Configuration
-@ComponentScan(basePackages={"com.apress.prospring5.ch13"},
-        excludeFilters =  {@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,
-                value = DBInitializer.class)
-})
+@ComponentScan( //
+	basePackages = { "com.apress.prospring5.ch13" }, //
+	excludeFilters = { @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = DBInitializer.class) } //
+)
 @Profile("test")
 public class ServiceTestConfig {
     private static Logger logger = LoggerFactory.getLogger(ServiceTestConfig.class);
 
     @Bean
     public DataSource dataSource() {
-        try {
-            EmbeddedDatabaseBuilder dbBuilder = new EmbeddedDatabaseBuilder();
-            return dbBuilder.setType(EmbeddedDatabaseType.H2).build();
-        } catch (Exception e) {
-            logger.error("Embedded DataSource bean cannot be created!", e);
-            return null;
-        }
+	try {
+	    EmbeddedDatabaseBuilder dbBuilder = new EmbeddedDatabaseBuilder();
+	    return dbBuilder.setType(EmbeddedDatabaseType.H2).build();
+	} catch (Exception e) {
+	    logger.error("Embedded DataSource bean cannot be created!", e);
+	    return null;
+	}
     }
 
-    @Bean(name="databaseTester")
+    @Bean(name = "databaseTester")
     public DataSourceDatabaseTester dataSourceDatabaseTester() {
-        DataSourceDatabaseTester databaseTester =
-                new DataSourceDatabaseTester(dataSource());
-        return databaseTester;
+	DataSourceDatabaseTester databaseTester = new DataSourceDatabaseTester(dataSource());
+	return databaseTester;
     }
 
-    @Bean(name="xlsDataFileLoader")
+    @Bean(name = "xlsDataFileLoader")
     public XlsDataFileLoader xlsDataFileLoader() {
-        return new XlsDataFileLoader();
+	return new XlsDataFileLoader();
     }
 }

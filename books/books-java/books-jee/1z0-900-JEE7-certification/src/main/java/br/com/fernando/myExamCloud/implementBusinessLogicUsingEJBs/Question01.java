@@ -64,6 +64,17 @@ public class Question01 {
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	// Choice B and D are correct answers.
 	//
 	// Call to getEJBObject is not valid, since the bean is local.

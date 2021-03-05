@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/lang
+        http://www.springframework.org/schema/lang/spring-lang.xsd">
+
+
+    <lang:groovy id="ruleFactory"
+                 script-source="file:/home/fernando/Development/workspaces/eclipse-workspace/myStudies/books/books-java/books-spring/pro-spring-5/pro-spring-5-chapter14-scripting-support/pro-spring-5-chapter14-part03-groovy-spring/rules/RuleFactoryImpl.groovy"/>
+                 
+    <context:component-scan base-package="com.apress.prospring5.ch14" />
+</beans>
+
+    			<!--
+    			                refresh-check-delay="5000"
+    			    			script-source="classpath:com/apress/prospring5/ch14/RuleEngineImpl.groovy" /> 
+                 -->

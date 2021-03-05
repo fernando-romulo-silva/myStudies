@@ -22,6 +22,7 @@
 		<module>pro-spring-5-chapter11-task-scheduling</module>
 		<module>pro-spring-5-chapter12-using-spring-remoting</module>
 		<module>pro-spring-5-chapter13-spring-testing</module>
+		<module>pro-spring-5-chapter14-scripting-support</module>
 	</modules>
 
 	<properties>

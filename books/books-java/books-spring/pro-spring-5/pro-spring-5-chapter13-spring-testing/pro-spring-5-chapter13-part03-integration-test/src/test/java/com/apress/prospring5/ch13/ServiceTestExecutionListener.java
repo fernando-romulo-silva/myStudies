@@ -15,9 +15,9 @@ public class ServiceTestExecutionListener implements TestExecutionListener {
 
     @Override
     public void afterTestMethod(TestContext arg0) throws Exception {
-        if (databaseTester != null) {
-            databaseTester.onTearDown();
-        }
+	if (databaseTester != null) {
+	    databaseTester.onTearDown();
+	}
     }
 
     @Override
@@ -26,24 +26,22 @@ public class ServiceTestExecutionListener implements TestExecutionListener {
 
     @Override
     public void beforeTestMethod(TestContext testCtx) throws Exception {
-        DataSets dataSetAnnotation = testCtx.getTestMethod().getAnnotation(DataSets.class);
+	DataSets dataSetAnnotation = testCtx.getTestMethod().getAnnotation(DataSets.class);
 
-        if (dataSetAnnotation == null ) {
-            return;
-        }
+	if (dataSetAnnotation == null) {
+	    return;
+	}
 
-        String dataSetName = dataSetAnnotation.setUpDataSet();
+	String dataSetName = dataSetAnnotation.setUpDataSet();
 
-        if (!dataSetName.equals("") ) {
-            databaseTester = (IDatabaseTester)
-                    testCtx.getApplicationContext().getBean("databaseTester");
-            XlsDataFileLoader xlsDataFileLoader = (XlsDataFileLoader)
-                    testCtx.getApplicationContext().getBean("xlsDataFileLoader");
-            IDataSet dataSet = xlsDataFileLoader.load(dataSetName);
+	if (!dataSetName.equals("")) {
+	    databaseTester = (IDatabaseTester) testCtx.getApplicationContext().getBean("databaseTester");
+	    XlsDataFileLoader xlsDataFileLoader = (XlsDataFileLoader) testCtx.getApplicationContext().getBean("xlsDataFileLoader");
+	    IDataSet dataSet = xlsDataFileLoader.load(dataSetName);
 
-            databaseTester.setDataSet(dataSet);
-            databaseTester.onSetup();
-        }
+	    databaseTester.setDataSet(dataSet);
+	    databaseTester.onSetup();
+	}
     }
 
     @Override

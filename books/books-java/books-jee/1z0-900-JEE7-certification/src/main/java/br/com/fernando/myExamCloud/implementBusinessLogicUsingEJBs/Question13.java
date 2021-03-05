@@ -49,6 +49,15 @@ public class Question13 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -69,7 +78,8 @@ public class Question13 {
     // Choice C is correct.
     //
     // The container catch EJBException (unchecked exception) and throws EJBTransactionRolledbackException (unchecked exception remote) 
-    // to mark the transaction associated with processing of the request has been rolled back, or marked to roll back.
+    // or TransactionRolledbackLocalException (unchecked exception local) to mark the transaction associated with processing of the request 
+    // has been rolled back, or marked to roll back.
     //
     // Thus the requested operation either could not be performed or was not performed because further computation
     // on behalf of the transaction would be fruitless.

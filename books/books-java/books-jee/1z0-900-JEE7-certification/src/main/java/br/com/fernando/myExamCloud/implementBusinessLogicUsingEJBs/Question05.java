@@ -9,8 +9,8 @@ import javax.ejb.TransactionManagementType;
 
 public class Question05 {
 
-    // A session bean TestManager uses container-managed transactions (it not guarantee that use transaction),
-    // The container throws a javax.transaction.TransactionRolledBackException (Rollback) when the associateTest method runs.
+    // A session bean TestManager uses container-managed transactions,
+    // The container throws a javax.transaction.TransactionRolledBackException when the associateTest method runs.
     //
     // Which transaction attribute can the associateTest method have for this to occur?
     //
@@ -60,7 +60,12 @@ public class Question05 {
     // Choice B is correct.
     //
     //
+    // "A session bean TestManager uses container-managed transactions" (it not guarantee that use transaction)
+    //
+    // javax.transaction.TransactionRolledBackException = Rollback
+    //
     // public class TransactionRolledbackException extends RemoteException, Hmmm it's a REMOTE CLIENT
+    //
     //
     // This exception indicates that the transaction associated with processing of the request has been rolled back (rollback), or marked to roll back.
     // Thus the requested operation either could not be performed or was not performed because further computation on behalf of the transaction would be fruitless
@@ -84,7 +89,7 @@ public class Question05 {
 
 	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
 	public void method1() {
-	    // Here the container will always start a new transaction
+	    // Here the container will always start a new transaction, suspend the actual transaction
 	    // and run the method inside its scope
 	}
 

@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>pro-spring-5-chapter13-spring-testing</artifactId>
+	<artifactId>pro-spring-5-chapter14-scripting-support</artifactId>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -12,10 +12,9 @@
 	</parent>
 
 	<modules>
-		<module>pro-spring-5-chapter13-part01-base-test</module>
-		<module>pro-spring-5-chapter13-part02-mvc-unit-test</module>
-		<module>pro-spring-5-chapter13-part03-integration-test</module>
-		<module>pro-spring-5-chapter13-part04-junit5-test</module>
+		<module>pro-spring-5-chapter14-part01-script-engines</module>
+		<module>pro-spring-5-chapter14-part02-base-groovy</module>
+		<module>pro-spring-5-chapter14-part03-groovy-spring</module>
 	</modules>
 
 	<dependencies>
@@ -44,21 +43,18 @@
 			<version>3.5</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.11.4</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-oxm -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
 			<version>5.0.4.RELEASE</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -135,7 +131,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.dbunit/dbunit -->
 		<dependency>
 			<groupId>org.dbunit</groupId>
 			<artifactId>dbunit</artifactId>
@@ -143,24 +138,18 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>3.17</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<version>1.10.19</version>
 			<scope>test</scope>
 		</dependency>
-
-
-
-
 
 	</dependencies>
 

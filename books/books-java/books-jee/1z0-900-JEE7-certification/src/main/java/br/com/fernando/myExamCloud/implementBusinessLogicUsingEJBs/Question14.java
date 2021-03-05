@@ -24,6 +24,8 @@ public class Question14 {
     }
 
     public class MyApplicationException extends Exception {
+
+	private static final long serialVersionUID = 1L;
     }
 
     @Stateless
@@ -66,7 +68,7 @@ public class Question14 {
     //
     //
     //
-    //    
+    //
     //
     //
     //
@@ -104,6 +106,7 @@ public class Question14 {
     @ApplicationException(rollback = true)
     public class NotEnoughMoneyOnYourAccountException extends Exception {
 
+	private static final long serialVersionUID = 1L;
     }
     // If your program throws a RuntimeException, it will be sent to the client wrapped as a RemoteException, and your transaction will be rolled back.
     // These are less excepted than business exceptions, therefore we usually don't catch them at EJB side.
@@ -112,7 +115,7 @@ public class Question14 {
 
 	@EJB
 	OrderManager orderManager;
-	
+
 	@Resource
 	EJBContext context;
 
@@ -127,7 +130,7 @@ public class Question14 {
 	    } catch (MyApplicationException e) {
 		// nothing, just logging
 		e.printStackTrace();
-		// context.setRollbackOnly();
+		// context.setRollbackOnly(); // if you remove the comment, rollback the transaction
 	    }
 	}
     }

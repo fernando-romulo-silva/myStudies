@@ -71,6 +71,8 @@ public class Question09 {
     @ApplicationException(rollback = true)
     public class NotEnoughMoneyOnYourAccountException extends RuntimeException {
 
+	private static final long serialVersionUID = 1L;
+
     }
     // If your program throws a RuntimeException, it will be sent to the client wrapped as a RemoteException, and your transaction will be rolled back.
     // These are less excepted than business exceptions, therefore we usually don't catch them at EJB side.
