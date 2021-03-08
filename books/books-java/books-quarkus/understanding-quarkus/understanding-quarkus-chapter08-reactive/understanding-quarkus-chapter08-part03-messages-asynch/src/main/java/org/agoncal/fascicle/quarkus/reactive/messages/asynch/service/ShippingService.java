@@ -11,24 +11,20 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class ShippingService {
 
-  private static final Logger LOGGER = Logger.getLogger(ShippingService.class);
+    private static final Logger LOGGER = Logger.getLogger(ShippingService.class);
 
-  // tag::adocSnippet[]
-  @Incoming("po-validated")
-  public void prepareShipping(PurchaseOrder po) {
-    // tag::adocSkip[]
-    LOGGER.info("Preparing shipping");
-    // end::adocSkip[]
+    @Incoming("po-validated")
+    public void prepareShipping(PurchaseOrder po) {
+	LOGGER.info("Preparing shipping");
 
-    for (OrderLine orderLine : po.orderLines) {
-      orderLine.status = Status.SHIPPING;
+	for (OrderLine orderLine : po.orderLines) {
+	    orderLine.status = Status.SHIPPING;
+	}
+
+	shipItems(po);
     }
 
-    shipItems(po);
-  }
-  // end::adocSnippet[]
+    private void shipItems(PurchaseOrder po) {
 
-  private void shipItems(PurchaseOrder po) {
-
-  }
+    }
 }

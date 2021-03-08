@@ -13,12 +13,18 @@ import java.util.List;
 public class PurchaseOrder {
 
   public Long id;
+  
   public LocalDate date;
+  
   @JsonbProperty("purchase_order_content")
   public List<OrderLine> orderLines;
+  
   @JsonbProperty("credit_card")
+  
   public CreditCard creditCard;
+  
   public Customer customer;
+  
   public Status status;
 
   public PurchaseOrder() {

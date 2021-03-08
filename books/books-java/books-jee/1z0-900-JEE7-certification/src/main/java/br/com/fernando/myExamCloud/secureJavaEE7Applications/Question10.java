@@ -91,7 +91,9 @@ public class Question10 {
     //
     // The @RunAs annotation defines the role of the application during execution in a Java EE container. 
     // It can be specified on a class, allowing developers to execute an application under a particular role. 
+    //
     // The role must map to the user/group information in the container’s security realm. 
     // The value element in the annotation is the name of a security role of the application during execution in a Java EE container.
+    //
     // Hence the caller is not part of ADMIN role an exception is thrown at Line 25.
 }

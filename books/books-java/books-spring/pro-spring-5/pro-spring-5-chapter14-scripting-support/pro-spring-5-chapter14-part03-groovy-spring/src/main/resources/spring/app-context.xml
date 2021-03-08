@@ -12,12 +12,13 @@
 
 
     <lang:groovy id="ruleFactory"
+                 refresh-check-delay="5000"
                  script-source="file:/home/fernando/Development/workspaces/eclipse-workspace/myStudies/books/books-java/books-spring/pro-spring-5/pro-spring-5-chapter14-scripting-support/pro-spring-5-chapter14-part03-groovy-spring/rules/RuleFactoryImpl.groovy"/>
                  
     <context:component-scan base-package="com.apress.prospring5.ch14" />
 </beans>
 
     			<!--
-    			                refresh-check-delay="5000"
+    			                
     			    			script-source="classpath:com/apress/prospring5/ch14/RuleEngineImpl.groovy" /> 
                  -->

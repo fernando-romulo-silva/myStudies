@@ -65,7 +65,6 @@ public class Question15 {
     //
     // HTTP Client authentication is a stronger method of authentication than Basic, Form and Digest authentication.
     // It uses HTTP over Secure Sockets Layer (SSL), in which the server and, optionally, the client authenticate one another with Public Key Certificates.
-    //
     // SSL provides data encryption, server authentication, message integrity, and optional client authentication for a TCP/IP connection.
     //
     // HTTP Form Based authentication is exactly similar to HTTP Basic authentication except for the feature that login screen can be customized using custom pages.

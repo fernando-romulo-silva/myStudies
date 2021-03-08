@@ -329,5 +329,6 @@
 		<module>understanding-quarkus-chapter06-http</module>
 		<module>understanding-quarkus-chapter07-communication-fault-tolerance</module>
 		<module>understanding-quarkus-chapter08-reactive</module>
+		<module>understanding-quarkus-chapter09-observability</module>
 	</modules>
 </project>
