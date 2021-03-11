@@ -24,6 +24,7 @@
 		<module>pro-spring-5-chapter13-spring-testing</module>
 		<module>pro-spring-5-chapter14-scripting-support</module>
 		<module>pro-spring-5-chapter15-application-monitoring</module>
+		<module>pro-spring-5-chapter16-web-applications</module>
 	</modules>
 
 	<properties>
@@ -134,6 +135,12 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>1.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
 		</dependency>
 
 	</dependencies>

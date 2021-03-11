@@ -18,7 +18,7 @@ public class Question04 {
 	private EmployeeManager em;
 
 	@GET
-	@Path("{id:[A-Z] [0-9]+}")
+	@Path("{id:[A-Z][0-9]+}")
 	public Response getCustomerById(@PathParam("id") String id) {
 	    return Response.status(200).entity("getUserById is called, id : " + id).build();
 	}

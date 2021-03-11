@@ -3,6 +3,7 @@ package br.com.fernando.enthuware.ImplementRestServicesJaxRsAPI;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 
 import javax.json.Json;
@@ -50,7 +51,7 @@ public class Question07 {
     //
     //
     //
-    //    
+    //
     //
     //
     //
@@ -81,8 +82,7 @@ public class Question07 {
 
 	File jsonInputFile = new File("/Users/java2novice/jsonInput.txt");
 
-	try {
-	    InputStream is = new FileInputStream(jsonInputFile);
+	try (InputStream is = new FileInputStream(jsonInputFile)) {
 
 	    // Create JsonReader from Json.
 	    JsonReader reader = Json.createReader(is);
@@ -101,7 +101,7 @@ public class Question07 {
 	    JsonObject addrObj = empObj.getJsonObject("address");
 
 	    System.out.println("City: " + addrObj.getString("city"));
-	} catch (FileNotFoundException e) {
+	} catch (IOException e) {
 	    e.printStackTrace();
 	}
     }

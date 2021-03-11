@@ -1,5 +1,6 @@
 package br.com.fernando.myExamCloud.ImplementRestServicesJaxRsAPI;
 
+import javax.ejb.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -77,6 +78,7 @@ public class Question13 {
      * Root resource (exposed at "helloworld" path)
      */
     @Path("helloworld")
+    @Singleton // or @Stateless
     public final class HelloWorld { // it's can be final
 	
 	@Context

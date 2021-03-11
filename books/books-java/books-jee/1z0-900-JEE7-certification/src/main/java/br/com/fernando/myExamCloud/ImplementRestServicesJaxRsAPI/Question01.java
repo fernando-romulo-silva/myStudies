@@ -23,6 +23,7 @@ public class Question01 {
     // A developer wants to convert this resource class scope as application.
     // Which CDI managed bean code can achieve this?
     //
+    // -----------------------------------------------------------------------------------
     // Choice A
     @ApplicationScoped
     @Path("/customer/{id}")

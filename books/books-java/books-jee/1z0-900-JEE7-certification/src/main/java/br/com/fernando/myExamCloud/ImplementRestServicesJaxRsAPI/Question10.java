@@ -28,7 +28,7 @@ public class Question10 {
 	private OrderManager orderManager;
 
 	@GET
-	@Path("{id:[A-Z] [0-9]+}")
+	@Path("{id:[A-Z][0-9]+}")
 	public Order getOrder(@PathParam("id") String id) {
 	    return orderManager.findOrder(id);
 	}
@@ -47,6 +47,17 @@ public class Question10 {
     //
     // Choice D
     // <base url>/Orders/id/a1234
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //
     //
     //

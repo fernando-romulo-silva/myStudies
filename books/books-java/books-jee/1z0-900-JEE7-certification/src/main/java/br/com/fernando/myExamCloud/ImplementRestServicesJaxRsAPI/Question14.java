@@ -10,6 +10,7 @@ public class Question14 {
 
     }
 
+    // @Path("feed")
     public interface FeedService {
 
 	@GET
@@ -54,6 +55,15 @@ public class Question14 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     //    
     //
     //
@@ -78,7 +88,6 @@ public class Question14 {
     //
     // The rule is "..subclass or implementation method has any JAX-RS annotations then all of the annotations on the super class or interface method are ignored.." 
     
-    @Path("feed")
     public class MyFeedGenericService implements FeedService {
         
 	// in this case, inherits from FeedService
