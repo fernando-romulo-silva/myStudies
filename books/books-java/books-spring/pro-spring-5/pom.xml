@@ -25,6 +25,8 @@
 		<module>pro-spring-5-chapter14-scripting-support</module>
 		<module>pro-spring-5-chapter15-application-monitoring</module>
 		<module>pro-spring-5-chapter16-web-applications</module>
+		<module>pro-spring-5-chapter17-websocket</module>
+		<module>pro-spring-5-chapter18-batch-integration-xd-and-more</module>
 	</modules>
 
 	<properties>

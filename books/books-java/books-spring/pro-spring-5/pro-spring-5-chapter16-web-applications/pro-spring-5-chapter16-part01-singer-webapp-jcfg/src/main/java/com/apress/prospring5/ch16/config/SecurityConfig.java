@@ -24,7 +24,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) {
 	try {
 	    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-	    auth.inMemoryAuthentication().passwordEncoder(passwordEncoder).withUser("user").password(passwordEncoder.encode("user")).roles("USER");
+	    auth.inMemoryAuthentication() //
+		    .passwordEncoder(passwordEncoder) //
+		    .withUser("user") //
+		    .password(passwordEncoder.encode("user")) //
+		    .roles("USER");
+
 	} catch (Exception e) {
 	    e.printStackTrace();
 	}
@@ -32,7 +37,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-	http.authorizeRequests().antMatchers("/*").permitAll().and().formLogin().usernameParameter("username").passwordParameter("password").loginProcessingUrl("/login").loginPage("/singers").failureUrl("/security/loginfail").defaultSuccessUrl("/singers").permitAll().and().logout().logoutUrl("/logout").logoutSuccessUrl("/singers").and().csrf().disable();
+	http.authorizeRequests() //
+		.antMatchers("/*")//
+		//
+		.permitAll() //
+		.and() //
+		//
+		.formLogin() //
+		.usernameParameter("username") //
+		.passwordParameter("password") //
+		.loginProcessingUrl("/login") //
+		.loginPage("/singers") //
+		.failureUrl("/security/loginfail") //
+		.defaultSuccessUrl("/singers") //
+		//
+		.permitAll() //
+		.and() //
+		//
+		.logout()//
+		.logoutUrl("/logout") //
+		.logoutSuccessUrl("/singers").and() //
+		//
+		.csrf().disable();
 	// csrfTokenRepository(repo());
     }
 
