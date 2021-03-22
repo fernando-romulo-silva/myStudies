@@ -18,7 +18,7 @@ public class Question01 {
 	// ...
     }
 
-    // How many qualifiers are defined Employee and product beans?
+    // How many qualifiers are defined Employee and Product beans?
     //
     // Choice A - Employee bean has one qualifier and Product bean has none
     //

@@ -16,6 +16,12 @@
 		<module>pro-spring-5-chapter18-part02-batch-cfg</module>
 		<module>pro-spring-5-chapter18-part03-batch-jsr352</module>
 		<module>pro-spring-5-chapter18-part04-batch-boot</module>
+		<module>pro-spring-5-chapter18-part05-integration</module>
+		<module>pro-spring-5-chapter18-part06-integration-cfg</module>
+		<module>pro-spring-5-chapter18-part07-xd</module>
+		<module>pro-spring-5-chapter18-part08-webflux</module>
+		<module>pro-spring-5-chapter18-part09-webflux-boot</module>
+		<module>pro-spring-5-chapter18-part10-boot-tests</module>
 	</modules>
 
 	<dependencies>

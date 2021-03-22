@@ -118,6 +118,7 @@ public class Question06 {
     // Observer methods can also be conditional or transactional:
     //
     // A conditional observer method is notified of an event only if an instance of the bean that defines the observer method already exists in the current context.
+    //
     // To declare a conditional observer method, specify notifyObserver=IF_EXISTS as an argument to @Observes:
 
     @RequestScoped // line 1

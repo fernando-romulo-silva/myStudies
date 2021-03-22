@@ -1,16 +1,17 @@
 package com.apress.prospring5.ch18.config;
 
-import javax.sql.DataSource;
-
+import com.apress.prospring5.ch18.Singer;
+import com.apress.prospring5.ch18.SingerItemProcessor;
+import com.apress.prospring5.ch18.StepExecutionStatsListener;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.launch.support.SimpleJobLauncher;
-import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.batch.item.ItemProcessor;
-import org.springframework.batch.item.ItemReader;
+import org.springframework.batch.core.configuration.annotation.StepScope;
+import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;
@@ -19,15 +20,14 @@ import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.io.ResourceLoader;
 
-import com.apress.prospring5.ch18.Singer;
-import com.apress.prospring5.ch18.StepExecutionStatsListener;
+import javax.sql.DataSource;
 
 /**
  * Created by iuliana.cosmina on 7/30/17.
@@ -38,67 +38,62 @@ import com.apress.prospring5.ch18.StepExecutionStatsListener;
 @ComponentScan("com.apress.prospring5.ch18")
 public class BatchConfig {
 
+    private static Logger logger = LoggerFactory.getLogger(BatchConfig.class);
+    
     @Autowired
     private JobBuilderFactory jobs;
-
+    
+    @Autowired
+    private JobLauncher jobLauncher;
+    
     @Autowired
     private StepBuilderFactory steps;
-
+    
     @Autowired
     DataSource dataSource;
-
+    
+    @Autowired
+    StepExecutionStatsListener executionStatsListener;
+    
+    @Autowired
+    SingerItemProcessor itemProcessor;
+    
     @Autowired
     ResourceLoader resourceLoader;
 
-    @Autowired
-    StepExecutionStatsListener executionStatsListener;
-
     @Bean
-    public Job job(@Qualifier("step1") Step step1) {
-	return jobs.get("singerJob").start(step1).build();
+    public Job singerJob() {
+	return jobs.get("singerJob").start(step1()).build();
     }
 
     @Bean
-    protected Step step1(ItemReader<Singer> reader, ItemProcessor<Singer, Singer> itemProcessor, ItemWriter<Singer> writer) {
-	return steps.get("step1") //
-		.listener(executionStatsListener).<Singer, Singer>chunk(10) //
-		.reader(reader).processor(itemProcessor) //
-		.writer(writer) //
-		.build();
+    protected Step step1() {
+	return steps.get("step1").listener(executionStatsListener).<Singer, Singer>chunk(10).reader(itemReader(null)).processor(itemProcessor).writer(itemWriter()).build();
     }
 
     @Bean
-    public ItemReader itemReader() {
+    @StepScope
+    public FlatFileItemReader itemReader(@Value("file://#{jobParameters['file.name']}") String filePath) {
 	FlatFileItemReader itemReader = new FlatFileItemReader();
-	itemReader.setResource(resourceLoader.getResource("classpath:support/test-data.csv"));
+	itemReader.setResource(resourceLoader.getResource(filePath));
 	DefaultLineMapper lineMapper = new DefaultLineMapper();
-
 	DelimitedLineTokenizer tokenizer = new DelimitedLineTokenizer();
 	tokenizer.setNames("firstName", "lastName", "song");
 	tokenizer.setDelimiter(",");
 	lineMapper.setLineTokenizer(tokenizer);
-
 	BeanWrapperFieldSetMapper<Singer> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
 	fieldSetMapper.setTargetType(Singer.class);
 	lineMapper.setFieldSetMapper(fieldSetMapper);
-
 	itemReader.setLineMapper(lineMapper);
 	return itemReader;
     }
 
     @Bean
-    public ItemWriter itemWriter() {
+    public ItemWriter<Singer> itemWriter() {
 	JdbcBatchItemWriter<Singer> itemWriter = new JdbcBatchItemWriter<>();
 	itemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>());
 	itemWriter.setSql("INSERT INTO singer (first_name, last_name, song) VALUES (:firstName, :lastName, :song)");
 	itemWriter.setDataSource(dataSource);
 	return itemWriter;
-    }
-    
-    @Bean
-    public SimpleJobLauncher jobLauncher(JobRepository jobRepository) {
-        SimpleJobLauncher launcher = new SimpleJobLauncher();
-        launcher.setJobRepository(jobRepository);
-        return launcher;
     }
 }

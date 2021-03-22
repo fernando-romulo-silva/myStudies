@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>pro-spring-5-chapter18-part03-batch-jsr352</artifactId>
+	<artifactId>pro-spring-5-chapter18-part07-xd</artifactId>
 	<packaging>jar</packaging>
 
 	<parent>
@@ -15,10 +15,11 @@
 
 	<properties>
 		<spring.batch.version>4.2.5.RELEASE</spring.batch.version>
+		<commons.dbcp.version>1.4</commons.dbcp.version>
 		<commons.io.version>2.4</commons.io.version>
+		<h2.version>1.3.172</h2.version>
 		<log4j.version>1.2.17</log4j.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<hsqldb.version>2.3.1</hsqldb.version>
 	</properties>
 
 	<dependencies>
@@ -42,22 +43,34 @@
 			<artifactId>spring-batch-infrastructure</artifactId>
 			<version>${spring.batch.version}</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.springframework.batch</groupId>
+			<artifactId>spring-batch-integration</artifactId>
+			<version>${spring.batch.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-file</artifactId>
+			<version>5.2.10.RELEASE</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-dbcp2</artifactId>
 			<version>2.8.0</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>${commons.io.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>${hsqldb.version}</version>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
