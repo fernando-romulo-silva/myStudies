@@ -13,81 +13,79 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Table(name = "singer")
 public class Singer implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "ID")
-	private Long id;
+    private static final long serialVersionUID = 1L;
 
-	@Version
-	@Column(name = "VERSION")
-	private int version;
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "ID")
+    private Long id;
 
-	@Column(name = "FIRST_NAME")
-	private String firstName;
+    @Version
+    @Column(name = "VERSION")
+    private int version;
 
-	@Column(name = "LAST_NAME")
-	private String lastName;
+    @Column(name = "FIRST_NAME")
+    private String firstName;
 
-	@JsonFormat
-			(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-	@Temporal(TemporalType.DATE)
-	@Column(name = "BIRTH_DATE")
-	private Date birthDate;
+    @Column(name = "LAST_NAME")
+    private String lastName;
 
-	public Singer() {
-	}
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
+    @Column(name = "BIRTH_DATE")
+    private Date birthDate;
 
-	public Singer(String firstName, String lastName,
-			Date birthDate) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthDate = birthDate;
-	}
+    public Singer() {
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Singer(String firstName, String lastName, Date birthDate) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.birthDate = birthDate;
+    }
 
-	public int getVersion() {
-		return version;
-	}
+    public Long getId() {
+	return id;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public int getVersion() {
+	return version;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public String getFirstName() {
+	return firstName;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public String getLastName() {
+	return lastName;
+    }
 
-	public void setVersion(int version) {
-		this.version = version;
-	}
+    public void setId(Long id) {
+	this.id = id;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setVersion(int version) {
+	this.version = version;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setFirstName(String firstName) {
+	this.firstName = firstName;
+    }
 
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
-	}
+    public void setLastName(String lastName) {
+	this.lastName = lastName;
+    }
 
-	public Date getBirthDate() {
-		return birthDate;
-	}
+    public void setBirthDate(Date birthDate) {
+	this.birthDate = birthDate;
+    }
 
-	@Override
-	public String toString() {
-		return "Singer - Id: " + id + ", First name: " + firstName
-				+ ", Last name: " + lastName + ", Birthday: " +
-				new SimpleDateFormat("yyyy-MM-dd").format(birthDate);
-	}
+    public Date getBirthDate() {
+	return birthDate;
+    }
+
+    @Override
+    public String toString() {
+	return "Singer - Id: " + id + ", First name: " + firstName + ", Last name: " + lastName + ", Birthday: " + new SimpleDateFormat("yyyy-MM-dd").format(birthDate);
+    }
 }

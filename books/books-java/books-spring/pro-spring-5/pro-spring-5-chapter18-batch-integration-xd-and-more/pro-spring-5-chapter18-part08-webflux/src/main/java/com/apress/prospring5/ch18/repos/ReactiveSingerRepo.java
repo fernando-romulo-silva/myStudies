@@ -6,9 +6,9 @@ import reactor.core.publisher.Mono;
 
 public interface ReactiveSingerRepo {
 
-	Mono<Singer> findById(Long id);
+    Mono<Singer> findById(Long id);
 
-	Flux<Singer> findAll();
+    Flux<Singer> findAll();
 
-	Mono<Void> save(Mono<Singer> singer);
+    Mono<Void> save(Mono<Singer> singer);
 }

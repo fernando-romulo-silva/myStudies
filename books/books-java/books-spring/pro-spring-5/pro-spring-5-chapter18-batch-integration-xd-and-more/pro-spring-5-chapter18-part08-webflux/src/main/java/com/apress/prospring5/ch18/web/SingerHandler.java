@@ -10,7 +10,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
-import static org.springframework.web.reactive.function.BodyInserters.fromObject;
+import static org.springframework.web.reactive.function.BodyInserters.*;
 
 /**
  * Created by iuliana.cosmina on 7/16/17.
@@ -18,19 +18,20 @@ import static org.springframework.web.reactive.function.BodyInserters.fromObject
 @Component
 public class SingerHandler {
 
-	@Autowired ReactiveSingerRepo reactiveSingerRepo;
+    @Autowired
+    ReactiveSingerRepo reactiveSingerRepo;
 
-	public HandlerFunction<ServerResponse> list = serverRequest -> ServerResponse.ok()
-			.contentType(APPLICATION_JSON).body(reactiveSingerRepo.findAll(), Singer.class);
+    public HandlerFunction<ServerResponse> save = serverRequest -> ServerResponse.ok().build(reactiveSingerRepo.save(serverRequest.bodyToMono(Singer.class)));
 
-	public Mono<ServerResponse> show(ServerRequest request) {
-		Mono<Singer> singerMono = reactiveSingerRepo.findById(Long.valueOf(request.pathVariable("id")));
-		Mono<ServerResponse> notFound = ServerResponse.notFound().build();
-		return singerMono
-				.flatMap(singer -> ServerResponse.ok().contentType(APPLICATION_JSON).body(fromObject(singer)))
-				.switchIfEmpty(notFound);
-	}
+    public HandlerFunction<ServerResponse> list = serverRequest -> ServerResponse.ok().contentType(APPLICATION_JSON).body(reactiveSingerRepo.findAll(), Singer.class);
 
-	public HandlerFunction<ServerResponse> save = serverRequest -> ServerResponse.ok()
-			.build(reactiveSingerRepo.save(serverRequest.bodyToMono(Singer.class)));
+    public Mono<ServerResponse> show(ServerRequest request) {
+
+	Mono<Singer> singerMono = reactiveSingerRepo.findById(Long.valueOf(request.pathVariable("id")));
+
+	Mono<ServerResponse> notFound = ServerResponse.notFound().build();
+
+	return singerMono.flatMap(singer -> ServerResponse.ok().contentType(APPLICATION_JSON).body(fromValue(singer))).switchIfEmpty(notFound);
+    }
+
 }

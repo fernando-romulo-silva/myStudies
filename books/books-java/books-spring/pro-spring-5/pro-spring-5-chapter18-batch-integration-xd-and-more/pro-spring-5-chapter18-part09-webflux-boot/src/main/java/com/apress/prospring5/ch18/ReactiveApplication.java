@@ -32,46 +32,44 @@ import java.util.HashMap;
 @RestController
 public class ReactiveApplication {
 
-	private static Logger logger = LoggerFactory.getLogger(ReactiveApplication.class);
-	@Autowired ReactiveSingerRepo reactiveSingerRepo;
+    private static Logger logger = LoggerFactory.getLogger(ReactiveApplication.class);
+    @Autowired
+    ReactiveSingerRepo reactiveSingerRepo;
 
-	@GetMapping(value = "/all", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-	public Flux<Singer> oneByOne() {
-		Flux<Singer> singers = reactiveSingerRepo.findAll();
-		Flux<Long> periodFlux = Flux.interval(Duration.ofSeconds(2));
-		return Flux.zip(singers, periodFlux).map(Tuple2::getT1);
-	}
+    @GetMapping(value = "/all", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<Singer> oneByOne() {
+	Flux<Singer> singers = reactiveSingerRepo.findAll();
+	Flux<Long> periodFlux = Flux.interval(Duration.ofSeconds(2));
+	return Flux.zip(singers, periodFlux).map(Tuple2::getT1);
+    }
 
-	@GetMapping(value = "/one/{id}")
-	public Mono<Singer> one(@PathVariable Long id) {
-		return reactiveSingerRepo.findById(id);
-	}
+    @GetMapping(value = "/one/{id}")
+    public Mono<Singer> one(@PathVariable Long id) {
+	return reactiveSingerRepo.findById(id);
+    }
 
-	public static void main(String... args) throws Exception {
-		ConfigurableApplicationContext ctx = new SpringApplicationBuilder(ReactiveApplication.class)
-				.properties(
-						new HashMap<String, Object>() {{
-							put("server.port", "8080");
-							put("spring.jpa.hibernate.ddl-auto", "create-drop");
-						}}
-				).run(args);
-		assert (ctx != null);
-		logger.info("Application started...");
-		System.in.read();
-		ctx.close();
-	}
+    public static void main(String... args) throws Exception {
+	ConfigurableApplicationContext ctx = new SpringApplicationBuilder(ReactiveApplication.class).properties(new HashMap<String, Object>() {
+	    {
+		put("server.port", "8080");
+		put("spring.jpa.hibernate.ddl-auto", "create-drop");
+	    }
+	}).run(args);
+	assert (ctx != null);
+	logger.info("Application started...");
+	System.in.read();
+	ctx.close();
+    }
 
+    @Bean
+    WebClient client() {
+	return WebClient.create("http://localhost:8080");
+    }
 
-	@Bean WebClient client() {
-		return WebClient.create("http://localhost:8080");
-	}
-
-	@Bean CommandLineRunner clr(WebClient client) {
-		return args -> {
-			client.get().uri("/all")
-					.accept(MediaType.TEXT_EVENT_STREAM)
-					.exchange()
-					.flatMapMany(cr -> cr.bodyToFlux(Singer.class)).subscribe(System.out::println);
-		};
-	}
+    @Bean
+    CommandLineRunner clr(WebClient client) {
+	return args -> {
+	    client.get().uri("/all").accept(MediaType.TEXT_EVENT_STREAM).exchange().flatMapMany(cr -> cr.bodyToFlux(Singer.class)).subscribe(System.out::println);
+	};
+    }
 }

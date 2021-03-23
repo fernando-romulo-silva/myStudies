@@ -12,15 +12,15 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @Configuration
 public class TestConfig {
 
-	@Autowired
-	Server server;
+    @Autowired
+    Server server;
 
-	@Bean
-	WebTestClient testClient(){
-		return WebTestClient.bindToRouterFunction(server.routingFunction())
-				.configureClient()
-				.baseUrl("http://localhost/singers")
-				.build();
-	}
+    @Bean
+    WebTestClient testClient() {
+	return WebTestClient.bindToRouterFunction(server.routingFunction()) //
+		.configureClient() //
+		.baseUrl("http://localhost/singers") //
+		.build(); //
+    }
 
 }

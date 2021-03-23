@@ -22,6 +22,9 @@
 		<module>pro-spring-5-chapter18-part08-webflux</module>
 		<module>pro-spring-5-chapter18-part09-webflux-boot</module>
 		<module>pro-spring-5-chapter18-part10-boot-tests</module>
+		<module>pro-spring-5-chapter18-part08-webflux</module>
+		<module>pro-spring-5-chapter18-part09-webflux-boot</module>
+		<module>pro-spring-5-chapter18-part10-boot-tests</module>
 	</modules>
 
 	<dependencies>

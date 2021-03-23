@@ -12,20 +12,21 @@ import reactor.core.publisher.Mono;
 @Service
 public class ReactiveSingerRepoImpl implements ReactiveSingerRepo {
 
-	@Autowired
-	SingerRepository singerRepository;
+    @Autowired
+    SingerRepository singerRepository;
 
-	@Override public Mono<Singer> findById(Long id) {
-		return Mono.justOrEmpty(singerRepository.findById(id));
-	}
+    @Override
+    public Mono<Singer> findById(Long id) {
+	return Mono.justOrEmpty(singerRepository.findById(id));
+    }
 
-	@Override public Flux<Singer> findAll() {
-		return Flux.fromIterable(singerRepository.findAll());
-	}
+    @Override
+    public Flux<Singer> findAll() {
+	return Flux.fromIterable(singerRepository.findAll());
+    }
 
-	@Override public Mono<Void> save(Mono<Singer> singerMono) {
-		return singerMono.doOnNext(singer ->
-				singerRepository.save(singer)
-		).thenEmpty((Mono.empty()));
-	}
+    @Override
+    public Mono<Void> save(Mono<Singer> singerMono) {
+	return singerMono.doOnNext(singer -> singerRepository.save(singer)).thenEmpty((Mono.empty()));
+    }
 }

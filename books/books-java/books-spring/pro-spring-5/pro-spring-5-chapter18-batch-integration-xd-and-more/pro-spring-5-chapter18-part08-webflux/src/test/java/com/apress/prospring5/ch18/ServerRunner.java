@@ -11,15 +11,16 @@ import org.springframework.context.support.GenericApplicationContext;
  */
 public class ServerRunner {
 
-	private static Logger logger = LoggerFactory.getLogger(ServerRunner.class);
+    private static Logger logger = LoggerFactory.getLogger(ServerRunner.class);
 
-	public static void main(String... args) throws Exception {
-		GenericApplicationContext ctx = new AnnotationConfigApplicationContext(ServerConfig.class);
-		Server server = ctx.getBean(Server.class);
-		server.startTomcatServer();
-		logger.info("Application started...");
+    public static void main(String... args) throws Exception {
+	GenericApplicationContext ctx = new AnnotationConfigApplicationContext(ServerConfig.class);
+	Server server = ctx.getBean(Server.class);
+//	server.startTomcatServer();
+	server.startReactorServer();
+	logger.info("Application started...");
 
-		System.in.read();
-		ctx.close();
-	}
+	System.in.read();
+	ctx.close();
+    }
 }

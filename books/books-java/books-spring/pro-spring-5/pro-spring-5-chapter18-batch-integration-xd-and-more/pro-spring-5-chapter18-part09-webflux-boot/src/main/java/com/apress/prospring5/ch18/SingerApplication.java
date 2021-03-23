@@ -19,7 +19,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 
 import java.util.HashMap;
 
-import static org.springframework.web.reactive.function.BodyInserters.fromObject;
+import static org.springframework.web.reactive.function.BodyInserters.fromValue;
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
@@ -33,43 +33,38 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 @SpringBootApplication
 public class SingerApplication {
 
-	private static Logger logger = LoggerFactory.getLogger(SingerApplication.class);
+    private static Logger logger = LoggerFactory.getLogger(SingerApplication.class);
 
-	@Autowired
-	SingerHandler singerHandler;
+    @Autowired
+    SingerHandler singerHandler;
 
-	public RouterFunction<ServerResponse> routingFunction() {
-		return route(GET("/test"), serverRequest -> ok().body(fromObject("works!")))
-				.andRoute(GET("/singers"), singerHandler.list)
-				.andRoute(GET("/singers/{id}"), singerHandler::show)
-				.andRoute(POST("/singers"), singerHandler.save)
-				.filter((request, next) -> {
-					logger.info("Before handler invocation: " + request.path());
-					return next.handle(request);
-				});
-	}
+    public RouterFunction<ServerResponse> routingFunction() {
+	return route(GET("/test"), serverRequest -> ok().body(fromValue("works!"))).andRoute(GET("/singers"), singerHandler.list).andRoute(GET("/singers/{id}"), singerHandler::show).andRoute(POST("/singers"), singerHandler.save).filter((request, next) -> {
+	    logger.info("Before handler invocation: " + request.path());
+	    return next.handle(request);
+	});
+    }
 
-	@Bean
-	public ServletRegistrationBean servletRegistrationBean() throws Exception {
-		HttpHandler httpHandler = RouterFunctions.toHttpHandler(routingFunction());
-		ServletRegistrationBean registrationBean = new ServletRegistrationBean<>(new ServletHttpHandlerAdapter(httpHandler), "/");
-		registrationBean.setLoadOnStartup(1);
-		registrationBean.setAsyncSupported(true);
-		return registrationBean;
-	}
+    @Bean
+    public ServletRegistrationBean servletRegistrationBean() throws Exception {
+	HttpHandler httpHandler = RouterFunctions.toHttpHandler(routingFunction());
+	ServletRegistrationBean registrationBean = new ServletRegistrationBean<>(new ServletHttpHandlerAdapter(httpHandler), "/");
+	registrationBean.setLoadOnStartup(1);
+	registrationBean.setAsyncSupported(true);
+	return registrationBean;
+    }
 
-	public static void main(String... args) throws Exception {
-		ConfigurableApplicationContext ctx = new SpringApplicationBuilder(SingerApplication.class)
-				.properties(
-						new HashMap<String, Object>() {{
-							put("server.port", "8080");
-							put("spring.jpa.hibernate.ddl-auto", "create-drop");
-						}}
-				).run(args);
-		assert (ctx != null);
-		logger.info("Application started...");
+    public static void main(String... args) throws Exception {
+	ConfigurableApplicationContext ctx = new SpringApplicationBuilder(SingerApplication.class).properties(new HashMap<String, Object>() {
+	    {
+		put("server.port", "8080");
+		put("spring.jpa.hibernate.ddl-auto", "create-drop");
+	    }
+	}).run(args);
+	assert (ctx != null);
+	logger.info("Application started...");
 
-		System.in.read();
-		ctx.close();
-	}
+	System.in.read();
+	ctx.close();
+    }
 }
