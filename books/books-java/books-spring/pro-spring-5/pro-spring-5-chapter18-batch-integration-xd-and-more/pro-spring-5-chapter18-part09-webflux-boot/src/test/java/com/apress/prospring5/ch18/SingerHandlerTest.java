@@ -3,11 +3,14 @@ package com.apress.prospring5.ch18;
 import com.apress.prospring5.ch18.entities.Singer;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.ClientRequest;
 import org.springframework.web.reactive.function.client.ClientResponse;
@@ -26,6 +29,8 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Created by iuliana.cosmina on 8/3/17.
  */
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class SingerHandlerTest {
 
     private static Logger logger = LoggerFactory.getLogger(SingerHandlerTest.class);

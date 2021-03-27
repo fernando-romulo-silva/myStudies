@@ -1,6 +1,6 @@
 package com.apress.prospring5.ch18.web;
 
-import static org.springframework.web.reactive.function.BodyInserters.*;
+import static org.springframework.web.reactive.function.BodyInserters.fromValue;
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
@@ -39,14 +39,15 @@ public class Server {
 
     public RouterFunction<ServerResponse> routingFunction() {
 
-	return route(GET("/test"), serverRequest -> ok().body(fromValue("works!"))) //
-		.andRoute(GET("/singers"), singerHandler.list) //
-		.andRoute(GET("/singers/{id}"), singerHandler::show) //
-		.andRoute(POST("/singers"), singerHandler.save) //
-		.filter((request, next) -> {
-		    logger.info("Before handler invocation: " + request.path());
-		    return next.handle(request);
-		});
+	return route(GET("/test"), serverRequest -> ok() //
+		.body(fromValue("works!"))) //
+			.andRoute(GET("/singers"), singerHandler.list) //
+			.andRoute(GET("/singers/{id}"), singerHandler::show) //
+			.andRoute(POST("/singers"), singerHandler.save) //
+			.filter((request, next) -> {
+			    logger.info("Before handler invocation: " + request.path());
+			    return next.handle(request);
+			});
     }
 
     public void startReactorServer() throws InterruptedException {

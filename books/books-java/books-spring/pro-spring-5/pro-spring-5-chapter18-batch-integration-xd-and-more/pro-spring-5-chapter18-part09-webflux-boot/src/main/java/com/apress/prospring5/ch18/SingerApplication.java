@@ -39,10 +39,15 @@ public class SingerApplication {
     SingerHandler singerHandler;
 
     public RouterFunction<ServerResponse> routingFunction() {
-	return route(GET("/test"), serverRequest -> ok().body(fromValue("works!"))).andRoute(GET("/singers"), singerHandler.list).andRoute(GET("/singers/{id}"), singerHandler::show).andRoute(POST("/singers"), singerHandler.save).filter((request, next) -> {
-	    logger.info("Before handler invocation: " + request.path());
-	    return next.handle(request);
-	});
+	return route( //
+		GET("/test"), serverRequest -> ok().body(fromValue("works!"))) //
+			.andRoute(GET("/singers"), singerHandler.list) //
+			.andRoute(GET("/singers/{id}"), singerHandler::show) //
+			.andRoute(POST("/singers"), singerHandler.save) //
+			.filter((request, next) -> {
+			    logger.info("Before handler invocation: " + request.path());
+			    return next.handle(request);
+			});
     }
 
     @Bean

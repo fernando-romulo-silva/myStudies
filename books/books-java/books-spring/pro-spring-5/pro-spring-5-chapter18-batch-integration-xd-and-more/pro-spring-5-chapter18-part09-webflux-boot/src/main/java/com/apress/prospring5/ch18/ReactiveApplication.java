@@ -28,11 +28,12 @@ import java.util.HashMap;
  */
 // Uncomment the @SpringBootApplication annotation here and comment all in the SingerApplication class, before running this class,
 // to use this RestController class
-//@SpringBootApplication
+// @SpringBootApplication
 @RestController
 public class ReactiveApplication {
 
     private static Logger logger = LoggerFactory.getLogger(ReactiveApplication.class);
+
     @Autowired
     ReactiveSingerRepo reactiveSingerRepo;
 

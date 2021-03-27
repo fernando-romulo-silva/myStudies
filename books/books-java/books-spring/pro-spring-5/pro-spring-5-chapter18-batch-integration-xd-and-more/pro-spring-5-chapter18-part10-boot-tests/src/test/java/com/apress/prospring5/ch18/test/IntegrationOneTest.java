@@ -16,27 +16,26 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class IntegrationOneTest {
 
-	private final Logger logger = LoggerFactory.getLogger(IntegrationOneTest.class);
-	@Autowired FluxGenerator fluxGenerator;
+    private final Logger logger = LoggerFactory.getLogger(IntegrationOneTest.class);
+    
+    @Autowired
+    FluxGenerator fluxGenerator;
 
-	@Test
-	public void test1One() {
-		fluxGenerator.generate("1", "2", "3").collectList().block().forEach(s ->
-			executeSlow(2000, s)
-		);
-	}
+    @Test
+    public void test1One() {
+	fluxGenerator.generate("1", "2", "3").collectList().block().forEach(s -> executeSlow(2000, s));
+    }
 
-	@Test
-	public void test2One() {
-		fluxGenerator.generate("11", "22", "33").collectList().block().forEach(s -> executeSlow(1000, s));
-	}
+    @Test
+    public void test2One() {
+	fluxGenerator.generate("11", "22", "33").collectList().block().forEach(s -> executeSlow(1000, s));
+    }
 
-	private void executeSlow(int duration, String s) {
-		try {
-			Thread.sleep(duration);
-			logger.info(s);
-		} catch (InterruptedException e) {
-		}
+    private void executeSlow(int duration, String s) {
+	try {
+	    Thread.sleep(duration);
+	    logger.info(s);
+	} catch (InterruptedException e) {
 	}
+    }
 }
-

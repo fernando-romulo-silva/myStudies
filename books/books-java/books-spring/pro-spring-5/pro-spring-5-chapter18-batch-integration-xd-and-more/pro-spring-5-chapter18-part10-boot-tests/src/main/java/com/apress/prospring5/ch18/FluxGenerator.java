@@ -9,8 +9,8 @@ import reactor.core.publisher.Flux;
 @Component
 public class FluxGenerator {
 
-	public Flux<String> generate(String... args){
-		return  Flux.just(args);
-	}
+    public Flux<String> generate(String... args) {
+	return Flux.just(args);
+    }
 
 }

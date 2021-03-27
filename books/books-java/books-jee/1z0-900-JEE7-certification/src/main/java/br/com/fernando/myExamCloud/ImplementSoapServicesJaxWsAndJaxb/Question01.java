@@ -66,10 +66,10 @@ public class Question01 {
     //
     // JAX-WS specification supports the following session management mechanisms.
     //
-    // Session APIs Definition of a session interface and methods to obtain the session interface and initiate sessions for handlers and service
+    // Session APIs - Definition of a session interface and methods to obtain the session interface and initiate sessions for handlers and service
     // endpoint implementations.
     //
-    // HTTP based sessions The session management mechanism must support HTTP cookies and URL rewriting.
+    // HTTP based sessions - The session management mechanism must support HTTP cookies and URL rewriting.
     //
-    // SOAP based sessions The session management mechanism must support SOAP based session information.
+    // SOAP based sessions - The session management mechanism must support SOAP based session information.
 }

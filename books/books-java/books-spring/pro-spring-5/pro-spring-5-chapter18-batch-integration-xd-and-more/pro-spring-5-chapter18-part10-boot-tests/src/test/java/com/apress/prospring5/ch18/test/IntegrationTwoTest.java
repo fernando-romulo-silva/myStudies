@@ -15,17 +15,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class IntegrationTwoTest {
-	private final Logger logger = LoggerFactory.getLogger(IntegrationTwoTest.class);
+    private final Logger logger = LoggerFactory.getLogger(IntegrationTwoTest.class);
 
-	@Autowired FluxGenerator fluxGenerator;
+    @Autowired
+    FluxGenerator fluxGenerator;
 
-	@Test
-	public void test1Two() {
-		fluxGenerator.generate("a", "b", "c").collectList().block().forEach(logger::info);
-	}
+    @Test
+    public void test1Two() {
+	fluxGenerator.generate("a", "b", "c").collectList().block().forEach(logger::info);
+    }
 
-	@Test
-	public void test2Two() {
-		fluxGenerator.generate( "aa", "bb", "cc").collectList().block().forEach(logger::info);
-	}
+    @Test
+    public void test2Two() {
+	fluxGenerator.generate("aa", "bb", "cc").collectList().block().forEach(logger::info);
+    }
 }
