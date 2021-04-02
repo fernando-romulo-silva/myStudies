@@ -9,13 +9,13 @@ public class Question10 {
     // Given the code fragment:
     // Order.java:
     public class Order {
-	private int orderId = 12345;
+    	private int orderId = 12345;
 	// getters and setters
     }
 
     // Customer.java:
     public class Customer {
-	private Order order; // line 1
+    	private Order order; // line 1
 
 	public void setOrder(Order order) { // line 2
 	    this.order = order;
@@ -31,7 +31,7 @@ public class Question10 {
      * <h:outputText value = "Order #(customer.order.orderId)"/>
      */
     //
-    // Which two steps, when performed independently, enable the index.xhtml page to print the following text: Order 12345?
+    // Which two steps, when performed independently, enable the index.xhtml page to print the following text: Order 12345? (select two)
     //
     //
     // Choice A

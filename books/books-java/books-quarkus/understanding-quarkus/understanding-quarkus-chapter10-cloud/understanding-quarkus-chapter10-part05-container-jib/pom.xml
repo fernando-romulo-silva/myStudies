@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>understanding-quarkus-chapter10-part04-container-jib</artifactId>
+	<artifactId>understanding-quarkus-chapter10-part05-container-jib</artifactId>
 	<name>Quarkus :: Cloud :: Container :: JIB</name>
 
 	<parent>

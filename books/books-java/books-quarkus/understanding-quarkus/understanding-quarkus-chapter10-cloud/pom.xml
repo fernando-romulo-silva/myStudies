@@ -20,6 +20,8 @@
 		<module>understanding-quarkus-chapter10-part03-container-docker</module>
 		<module>understanding-quarkus-chapter10-part04-container-dockerfiles</module>
 		<module>understanding-quarkus-chapter10-part05-container-jib</module>
+		<module>understanding-quarkus-chapter10-part06-orchestrator-kubernetes</module>
+		<module>understanding-quarkus-chapter10-part07-orchestrator-minikube</module>
 	</modules>
 
 </project>

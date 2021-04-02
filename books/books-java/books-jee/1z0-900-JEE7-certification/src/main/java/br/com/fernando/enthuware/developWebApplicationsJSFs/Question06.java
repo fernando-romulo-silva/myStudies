@@ -12,9 +12,9 @@ public class Question06 {
     // Given the code fragment from the Widget class:
 
     public class Widget implements Serializable {
-	private String name;
-	private Date createdDate;
-	private boolean approved;
+    	private String name;
+    	private Date createdDate;
+    	private boolean approved;
     }
 
     // Given the code fragment from the Facelet page:
@@ -42,7 +42,7 @@ public class Question06 {
     //
     // A
     // Replace Line 1 with: 
-    // <h:inputText id="createDate' value="#{widgetEditor.widget.createdDate}"converter="java.util.Date''/>
+    // <h:inputText id="createDate' value="#{widgetEditor.widget.createdDate}"converter="java.util.Date" />
     //
     // B
     // Enclose the code fragment within the <f:view/> tag

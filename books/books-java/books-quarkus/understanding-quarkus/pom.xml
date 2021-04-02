@@ -331,5 +331,7 @@
 		<module>understanding-quarkus-chapter08-reactive</module>
 		<module>understanding-quarkus-chapter09-observability</module>
 		<module>understanding-quarkus-chapter10-cloud</module>
+		<module>understanding-quarkus-chapter11-testing</module>
+		<module>understanding-quarkus-chapter12-putting-together</module>
 	</modules>
 </project>

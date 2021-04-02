@@ -11,9 +11,9 @@ public class Question05 {
     //
     // Given the code fragment from the SearchCustomer class:
     public class SearchCustomer implements Serializable {
-	private String userName;
-	private Date date;
-	private boolean premiumUser;
+		private String userName;
+		private Date date;
+		private boolean premiumUser;
     }
     //
     // Given the code fragment from the Facelet page:
@@ -24,9 +24,8 @@ public class Question05 {
      *      <h:outputLabel for="name" value="Name:"/>
      *      <h:inputText id="name" value="#{searchCustomer.searchCustomerForm.name}"/>
      *      <h:outputLabel for="joinedDate" value="Joined Date:"/>
-     *      <h:inputText id="joinedDate" value="#{searchCustomer.searchCustomerForm. searchCustomer.date}"/>
-     *    
-     *      <!-- Line 1 -->
+     *      <h:inputText id="joinedDate" value="#{searchCustomer.searchCustomerForm. searchCustomer.date}"/> <!-- Line 1 -->
+     *      
      *      <h:outputLabel for=" premiumUser" value="PremiumUser:"/>
      *      <h:selectBooleanCheckbox id="premiumUser" value="#{searchCustomer.searchCustomerForm.premiumUser}"/>
      *      <h:commandButton value="Save" action="#{searchCustomer.save}"/>
