@@ -18,5 +18,8 @@
 		<module>understanding-quarkus-chapter11-part01-test-junit</module>
 		<module>understanding-quarkus-chapter11-part02-test-jvm-native-mode</module>
 		<module>understanding-quarkus-chapter11-part03-test-profile</module>
+		<module>understanding-quarkus-chapter11-part04-test-transactional</module>
+		<module>understanding-quarkus-chapter11-part05-test-restassured</module>
+		<module>understanding-quarkus-chapter11-part06-test-hamcrest</module>
 	</modules>
 </project>
