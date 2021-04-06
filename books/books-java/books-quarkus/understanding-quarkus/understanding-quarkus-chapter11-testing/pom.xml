@@ -21,5 +21,6 @@
 		<module>understanding-quarkus-chapter11-part04-test-transactional</module>
 		<module>understanding-quarkus-chapter11-part05-test-restassured</module>
 		<module>understanding-quarkus-chapter11-part06-test-hamcrest</module>
+		<module>understanding-quarkus-chapter11-part07-test-testcontainers</module>
 	</modules>
 </project>
