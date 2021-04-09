@@ -9,7 +9,7 @@ import java.util.Map;
 public class FrenchTestProfile implements QuarkusTestProfile {
   @Override
   public Map<String, String> getConfigOverrides() {
-    Map<String, String> config = new HashMap();
+    Map<String, String> config = new HashMap<>();
     config.put("org.agoncal.fascicle.Invoice.vatRate", "20");
     config.put("org.agoncal.fascicle.Invoice.discount", "true");
     return config;

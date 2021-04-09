@@ -84,7 +84,7 @@ public class Question07 {
     //
     //
     //
-    // Choice A is correct. // If 14 is commented or B not
+    // Choice A is correct.
     //
     // A servlet life cycle can be defined as the entire process from its creation till the destruction. 
     // The following are the paths followed by a servlet.

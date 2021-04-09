@@ -22,5 +22,10 @@
 		<module>understanding-quarkus-chapter11-part05-test-restassured</module>
 		<module>understanding-quarkus-chapter11-part06-test-hamcrest</module>
 		<module>understanding-quarkus-chapter11-part07-test-testcontainers</module>
+		<module>understanding-quarkus-chapter11-part08-test-resources</module>
+		<module>understanding-quarkus-chapter11-part09-mock</module>
+		<module>understanding-quarkus-chapter11-part10-mock-alternative</module>
+		<module>understanding-quarkus-chapter11-part11-mock-inject</module>
+		<module>understanding-quarkus-chapter11-part12-test-profiletest</module>
 	</modules>
 </project>

@@ -92,8 +92,6 @@ public class Question10 {
     //
     // The injection requires on setter and getter methods for jsf
     //
-    // C is wrong because since Order class has setter/getter for acc field, it seems to be expecting Initializer method parameter injection.
-    //
     @Inject // The injection requires on setter and getter methods.
     public void setOrder(Order order) {
 

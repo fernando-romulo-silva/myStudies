@@ -9,7 +9,7 @@ public class Question07 {
      *        xmins:h="http://samlns.jcep.org/jsf/html"
      *        xmins:pt="http://xmlns.jep.org/jsf/passthrough"
      *        xmins:f="http://xmlns.jep.org,jsf/core"
-     *        xmilns:jsf="http://amlns.jep.org/jst"
+     *        xmilns:jsf="http://amlns.jep.org/jsf"
      *        xmins:ui="http://java.sun.com/jsf/facelets">
      *    
      *        <h:form id="searchForm">
