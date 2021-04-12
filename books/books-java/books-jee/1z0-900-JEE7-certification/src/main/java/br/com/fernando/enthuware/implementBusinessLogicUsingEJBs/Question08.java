@@ -40,7 +40,7 @@ public class Question08 {
     //
     // C - timerService.createIntervalTimer(alarmDate, -1, config);
     //
-    // D - timerService.createTimer(alarmDate, -1, config);
+    // D - timerService.createTimer(alarmDate, -1);
     //
     //
     //
@@ -115,7 +115,7 @@ public class Question08 {
 	    //
 	    //
 	    // Create an interval timer whose FIRST expiration occurs at a given point in time and whose subsequent expirations occur after a specified interval.
-	    timerService.createTimer(alarmDate, -1L, info);
+	    timerService.createTimer(alarmDate, 10L, info);
 	}
 
 	@Timeout

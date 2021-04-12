@@ -18,6 +18,7 @@ public class Question01 {
     // Given the following code sample:
     @Singleton
     public class TimerService {
+	
 	@EJB
 	HelloService helloService;
 

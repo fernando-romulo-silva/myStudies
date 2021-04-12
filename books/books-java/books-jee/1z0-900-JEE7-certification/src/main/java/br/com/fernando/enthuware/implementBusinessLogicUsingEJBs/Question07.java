@@ -9,6 +9,7 @@ public class Question07 {
     // Given
     // line 1
     public class MyMapper {
+	
 	@PrePassivate
 	public void setPinDrop() {
 	}

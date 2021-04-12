@@ -40,7 +40,7 @@ public class Question10 {
     //
     // C - timerService.createIntervalTimer(alarmDate, -1, config);
     //
-    // D - timerService.createTimer(alarmDate, -1, config);
+    // D - timerService.createTimer(alarmDate, -1);
     //
     //
     //
