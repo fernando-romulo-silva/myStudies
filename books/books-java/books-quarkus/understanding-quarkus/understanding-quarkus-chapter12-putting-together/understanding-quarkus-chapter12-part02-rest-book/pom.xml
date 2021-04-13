@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>understanding-quarkus-chapter12-part01-rest-book</artifactId>
+	<artifactId>understanding-quarkus-chapter12-part02-rest-book</artifactId>
 	<name>Quarkus :: Putting It All Together :: REST Book</name>
 
 	<parent>
