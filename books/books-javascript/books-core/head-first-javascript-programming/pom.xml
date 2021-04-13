@@ -146,4 +146,9 @@
 
 	</build>
 
+	<modules>
+		<module>
+			head-first-javascript-programming-chapter01-getting-your-feet-wet
+		</module>
+	</modules>
 </project>

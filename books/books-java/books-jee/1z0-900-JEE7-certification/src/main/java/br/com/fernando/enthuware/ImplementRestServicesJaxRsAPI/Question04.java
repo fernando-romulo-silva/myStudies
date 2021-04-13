@@ -27,10 +27,10 @@ public class Question04 {
     // Which URL triggers the invocation of the getEmployee () method?
     //
     // Choice A
-    //  <base url>/Employees/997122
+    // <base url>/Employees/997122
     //
     // Choice B
-    //  <base url>/Employees/G6666
+    // <base url>/Employees/G6666
     //
     // Choice C
     // <base url>/Employees/id:b777
