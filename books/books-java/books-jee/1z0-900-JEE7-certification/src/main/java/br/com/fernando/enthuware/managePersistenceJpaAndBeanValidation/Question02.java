@@ -18,7 +18,7 @@ public class Question02 {
 
     // Given the code fragment:
 
-    // line1
+    // line 1
     public class DataConverter implements AttributeConverter<LocalDate, Date> {
 
 	// implementations

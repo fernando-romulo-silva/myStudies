@@ -12,8 +12,7 @@ public class Question01 {
     // select pub.title, pub.author, pub.pages FROM Publisher pub
     //
     // Which clauses can you add to this JPQL query to retrieve only those books with between 500 and 750 total pages?
-    //
-    // You had to select 2 options
+    // (You had to select 2 options)
     //
     // A
     // WHERE MIN(pages) >= 500 AND MAX(pages) <= 750

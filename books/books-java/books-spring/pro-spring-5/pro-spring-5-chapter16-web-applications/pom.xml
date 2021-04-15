@@ -13,6 +13,8 @@
 
 	<modules>
 		<module>pro-spring-5-chapter16-part01-singer-webapp-jcfg</module>
+		<module>pro-spring-5-chapter16-part02-singer-webapp-boot</module>
+		<module>pro-spring-5-chapter16-part03-singer-webapp-xml</module>
 	</modules>
 
 	<dependencies>
