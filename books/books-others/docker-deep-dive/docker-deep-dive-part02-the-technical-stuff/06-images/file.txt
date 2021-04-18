@@ -1,0 +1,9 @@
+docker image pull redis:latest
+
+docker image pull alpine:latest
+
+docker image pull <repository>:<tag>
+
+
+docker image pull <url-register>/<repository>:<tag>
+docker image pull gcr.io/google-containers/git-sync:v3.1.5

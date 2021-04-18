@@ -1,0 +1,14 @@
+docker image pull ubuntu:latest
+
+docker container run -it ubuntu:latest /bin/bash
+
+ps -elf
+
+
+docker container exec -it wizardly_panini bash
+
+cd psweb
+
+docker image build -t test:latest .
+
+docker container run -d --name web1 --publish 8080:8080 test:latest

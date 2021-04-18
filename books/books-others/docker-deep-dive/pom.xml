@@ -4,4 +4,8 @@
 	<artifactId>docker-deep-dive</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<modules>
+		<module>docker-deep-dive-part01-the-big-picture-stuff</module>
+		<module>docker-deep-dive-part02-the-technical-stuff</module>
+	</modules>
 </project>

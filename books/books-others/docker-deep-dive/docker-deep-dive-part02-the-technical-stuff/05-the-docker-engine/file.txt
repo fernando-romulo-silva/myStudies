@@ -1,0 +1,8 @@
+docker container run --name ctr1 -it alpine:latest sh
+
+openssl genrsa -aes256 -out ca-key.pem 4096
+
+openssl req -new -x509 -days 730 -key ca-key.pem -sha256 -out ca.pem
+
+
+docker version
