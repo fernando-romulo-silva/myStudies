@@ -19,6 +19,7 @@
 	<modules>
 		<module>head-first-javascript-programming-chapter01-getting-your-feet-wet</module>
 
+		<module>head-first-javascript-programming-chapter02-going-further</module>
 	</modules>
 
 	<dependencies>
