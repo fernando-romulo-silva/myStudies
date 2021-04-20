@@ -62,12 +62,12 @@ public class Question04 {
     //
     // The requirements of a message-driven bean class:
     //
-    // * It must implement the MessageDrivenBean and MessageListener interfaces.
-    // * The class must be defined as public.
-    // * The class cannot be defined as abstract or final.
-    // * It must implement one onMessage method.
-    // * It must contain a public constructor with no arguments.
-    // * It must not define the finalize method.
+    // 1 It must implement the MessageDrivenBean and MessageListener interfaces.
+    // 2 The class must be defined as public.
+    // 3 The class cannot be defined as abstract or final.
+    // 4 It must implement one onMessage method.
+    // 5 It must contain a public constructor with no arguments.
+    // 6 It must not define the finalize method.
     //
     // Unlike session and entity beans, message-driven beans do not have the remote or local interfaces that define client access.
     // Client components do not locate message-driven beans and invoke methods on them.
@@ -78,10 +78,12 @@ public class Question04 {
     @MessageDriven(mappedName = CONTAINER_MANAGED_DESTINATION_JNDI)
     public static class MessageReceiverAsync implements MessageListener { // 1, 2 & 3
 
+	// 5
+	
 	// 6
 
 	@Override
-	public void onMessage(final Message message) { // 4 & 7
+	public void onMessage(final Message message) { // 4
 	    try {
 		TextMessage tm = (TextMessage) message;
 		System.out.println("Message received async (from MessageReceiverAsync): " + tm.getText());

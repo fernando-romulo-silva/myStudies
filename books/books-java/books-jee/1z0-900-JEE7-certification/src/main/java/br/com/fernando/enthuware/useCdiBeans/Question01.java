@@ -33,7 +33,7 @@ public class Question01 {
     //
     // And the next fragment from beans.xml:
     // <alternatives>
-    // <class>com.acme.SmsHandler</ class>
+    // <class>com.acme.SmsHandler</class>
     // </alternatives>
     //
     // And this injection point:

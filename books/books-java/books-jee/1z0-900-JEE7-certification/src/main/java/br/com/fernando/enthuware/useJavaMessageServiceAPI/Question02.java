@@ -25,8 +25,7 @@ public class Question02 {
 	}
     }
 
-    // How can you get all property names of a JMS message in the JMS consumer
-    // onMessage operation?
+    // How can you get all property names of a JMS message in the JMS consumer onMessage operation?
     // You had to select 1 option
     //
     // A
@@ -43,6 +42,18 @@ public class Question02 {
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //    
     //
     //
     //
