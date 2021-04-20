@@ -7,3 +7,6 @@ docker image pull <repository>:<tag>
 
 docker image pull <url-register>/<repository>:<tag>
 docker image pull gcr.io/google-containers/git-sync:v3.1.5
+
+
+docker image ls --filter=reference="*:latest"
