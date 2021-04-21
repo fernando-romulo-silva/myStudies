@@ -10,3 +10,11 @@ docker image pull gcr.io/google-containers/git-sync:v3.1.5
 
 
 docker image ls --filter=reference="*:latest"
+
+
+docker image pull alpine@sha256:69e70a79f2d41ab5d637de98c1e0b055206ba40a8145e7bddb55ccc04e13cf8f
+
+
+docker image rm $(docker image ls -q) -f
+
+docker image inspect ubuntu:latest
