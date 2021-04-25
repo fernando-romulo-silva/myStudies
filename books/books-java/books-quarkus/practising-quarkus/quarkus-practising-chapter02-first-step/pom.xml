@@ -11,7 +11,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>quarkus-practising-chapter01-first-step</artifactId>
+	<artifactId>quarkus-practising-chapter02-first-step</artifactId>
 	<name>Practising Quarkus :: First Step</name>
 
 	<properties>

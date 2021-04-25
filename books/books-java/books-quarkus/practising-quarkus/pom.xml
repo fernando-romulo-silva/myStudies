@@ -11,7 +11,7 @@
 	<name>Practising Quarkus</name>
 
 	<modules>
-		<module>quarkus-practising-chapter01-first-step</module>
+		<module>quarkus-practising-chapter02-first-step</module>
 		<module>quarkus-practising-chapter03-application</module>
 	</modules>
 </project>
