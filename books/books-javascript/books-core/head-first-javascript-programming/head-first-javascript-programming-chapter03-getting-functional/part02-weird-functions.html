@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bark</title>
+</head>
+<body>
+</body>
+<script>
+	function makeTea(cups, tea) {
+
+		console.log("Brewing " + cups + "cups of " + tea);
+
+	}
+
+	makeTea(3); // Brewing 3 cups of undefined
+
+	makeTea(3, "Earl Grey", "he ma!", 42); // works fine, the function ignores extras
+
+	function barkAtTheMoon() {
+		console.log("Woooooooooooooo!");
+	}
+	
+	barkAtTheMoon(); // Woooooooooooooo!
+</script>
+</body>
+</html>
