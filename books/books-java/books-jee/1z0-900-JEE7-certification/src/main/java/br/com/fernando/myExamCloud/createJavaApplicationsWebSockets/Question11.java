@@ -6,6 +6,7 @@ import javax.websocket.Endpoint;
 import javax.websocket.EndpointConfig;
 import javax.websocket.MessageHandler;
 import javax.websocket.OnMessage;
+import javax.websocket.PongMessage;
 import javax.websocket.RemoteEndpoint;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
@@ -20,114 +21,114 @@ public class Question11 {
     // Choice A
     /**
      * <pre>
-     *        public class TextWebSocketA extends Endpoint {
-     *        
-     *    	@Override
-     *    	public void onOpen(Session session, EndpointConfig ec) {
-     *    	    final RemoteEndpoint.Basic remote = session.getBasicRemote();
-     *    
-     *    	    session.addMessageHandler(String.class, new MessageHandler.Whole<String>() {
-     *    		public void onMessage(String text) {
-     *    		    try {
-     *    			remote.sendText("Got your message (" + text + "). Thanks !");
-     *    		    } catch (IOException ioe) {
-     *    			ioe.printStackTrace();
-     *    		    }
-     *    		}
-     *    	    });
-     *    	}
-     *        }
+     * public class TextWebSocketA extends Endpoint {
+     * 
+     *     &#64;Override
+     *     public void onOpen(Session session, EndpointConfig ec) {
+     * 	final RemoteEndpoint.Basic remote = session.getBasicRemote();
+     * 
+     * 	session.addMessageHandler(String.class, new MessageHandler.Whole<String>() {
+     * 	    public void onMessage(String text) {
+     * 		try {
+     * 		    remote.sendText("Got your message (" + text + "). Thanks !");
+     * 		} catch (IOException ioe) {
+     * 		    ioe.printStackTrace();
+     * 		}
+     * 	    }
+     * 	});
+     *     }
+     * }
      * </pre>
      */
     //
     // Choice B
     /**
      * <pre>
-     *      @WebSocket("/hello")
-     *      public class TextWebSocketB {
-     *  	
-     *          @OnMessage
-     *  	public String handleMessage(String message) {
-     *  	    return "Got your message (" + message + "). Thanks !";
-     *  	}
-     *      }
+     * &#64;WebSocket("/hello")
+     * public class TextWebSocketB {
+     * 
+     *     &#64;OnMessage
+     *     public String handleMessage(String message) {
+     * 	return "Got your message (" + message + "). Thanks !";
+     *     }
+     * }
      * </pre>
      */
     //
     // Choice C
     /**
      * <pre>
-     *       @ServerEndpoint("/hello")
-     *       public class TextWebSocketC {
-     *       
-     *   	@OnMessage
-     *   	public String handleMessage(String message) {
-     *   	    return "Got your message (" + message + "). Thanks !";
-     *   	}
-     *       }
+     * &#64;ServerEndpoint("/hello")
+     * public class TextWebSocketC {
+     * 
+     *     &#64;OnMessage
+     *     public String handleMessage(String message) {
+     * 	return "Got your message (" + message + "). Thanks !";
+     *     }
+     * }
      * </pre>
      */
-     //
-     // Choice D
+    //
+    // Choice D
     /**
      * <pre>
-     *       public class TextWebSocketD extends WebSocket {
-     *   	
-     *          @Override
-     *   	public void onOpen(Session session, EndpointConfig ec) {
-     *   	    final RemoteEndpoint.Basic remote = session.getBasicRemote();
-     *   	    
-     *              session.addMessageHandler(String.class, new MessageHandler.Whole<String>() {
-     *   		public void onMessage(String text) {
-     *   		    try {
-     *   			remote.sendText("Got your message (" + text + "). Thanks !");
-     *   		    } catch (IOException ioe) {
-     *   			ioe.printStackTrace();
-     *   		    }
-     *   		}
-     *   	    });
-     *   	}
-     *       }
+     * public class TextWebSocketD extends WebSocket {
+     * 
+     *     &#64;Override
+     *     public void onOpen(Session session, EndpointConfig ec) {
+     * 	final RemoteEndpoint.Basic remote = session.getBasicRemote();
+     * 
+     * 	session.addMessageHandler(String.class, new MessageHandler.Whole<String>() {
+     * 	    public void onMessage(String text) {
+     * 		try {
+     * 		    remote.sendText("Got your message (" + text + "). Thanks !");
+     * 		} catch (IOException ioe) {
+     * 		    ioe.printStackTrace();
+     * 		}
+     * 	    }
+     * 	});
+     *     }
+     * }
      * </pre>
      */
     //
     //
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    //     
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    // 
     //
-    //     
     //
-    // 
     //
-    //     
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // Choice A and C are correct answers.
     //
     // Both are valid answers.
@@ -153,15 +154,24 @@ public class Question11 {
 		}
 	    });
 	}
-    }                                 
-    
+    }
+
     @ServerEndpoint("/hello")
     public class TextWebSocketC {
-	
+
 	@OnMessage
 	public String handleMessage(String message) {
 	    return "Got your message (" + message + "). Thanks !";
 	}
+
+	@OnMessage
+	public void onPong(PongMessage pongMessage, Session session) {
+	    try {
+		session.getBasicRemote().sendText("PONG_RECEIVED");
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+	}
     }
-    
+
 }

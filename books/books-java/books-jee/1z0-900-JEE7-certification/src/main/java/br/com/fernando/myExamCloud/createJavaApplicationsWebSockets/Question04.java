@@ -1,5 +1,6 @@
 package br.com.fernando.myExamCloud.createJavaApplicationsWebSockets;
 
+import java.io.IOException;
 import java.nio.ByteBuffer;
 
 import javax.websocket.OnMessage;
@@ -59,8 +60,8 @@ public class Question04 {
     //
     // Choice A is correct
     //
-    // The OnMessage annotation designates methods that handle incoming messages. 
-    // You can have at most three methods annotated with @OnMessage in an endpoint, one for each message type: text, binary, and pong. 
+    // The OnMessage annotation designates methods that handle incoming messages.
+    // You can have at most three methods annotated with @OnMessage in an endpoint, one for each message type: text, binary, and pong.
     // The following example demonstrates how to designate methods to receive all three types of messages:
     @ServerEndpoint("/receive")
     public class ReceiveEndpoint {
@@ -77,6 +78,15 @@ public class Question04 {
 	@OnMessage
 	public void pongMessage(Session session, PongMessage msg) {
 	    System.out.println("Pong message: " + msg.getApplicationData().toString());
+	}
+
+	@OnMessage
+	public void onPong(PongMessage pongMessage, Session session) {
+	    try {
+		session.getBasicRemote().sendText("PONG_RECEIVED");
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
 	}
     }
 }
