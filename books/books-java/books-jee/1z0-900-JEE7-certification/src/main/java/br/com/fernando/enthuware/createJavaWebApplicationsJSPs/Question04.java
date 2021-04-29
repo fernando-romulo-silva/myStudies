@@ -6,9 +6,9 @@ public class Question04 {
     // Choice A
     /**
      * <pre>
-     *       <on-error>
-     *          <location>/general-error.html<location>
-     *       </on-error>
+     *     <on-error>
+     *         <location>/general-error.html<location>
+     *     </on-error>
      * </pre>
      */
 
