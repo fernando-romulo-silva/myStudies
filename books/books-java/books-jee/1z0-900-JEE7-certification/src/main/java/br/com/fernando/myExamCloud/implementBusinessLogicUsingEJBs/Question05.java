@@ -32,6 +32,12 @@ public class Question05 {
     //
     //
     //
+    //    
+    //
+    //
+    //
+    //
+    //
     //
     //
     //
@@ -86,30 +92,30 @@ public class Question05 {
 	public void associateTest() {
 
 	}
-
-	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-	public void method1() {
-	    // Here the container will always start a new transaction, suspend the actual transaction
-	    // and run the method inside its scope
-	}
-
+	
 	@TransactionAttribute(TransactionAttributeType.MANDATORY)
-	public void method2() {
+	public void method1() {
 	    // Here the container will allow only clients that already startd
 	    // a transaction to call this method
 	}
 
-	@TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
-	public void method3() {
-	    // Here the container will make sure that the method
-	    // will run in no transaction scope and will suspend any
-	    // transaction started by the client
+	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+	public void method2() {
+	    // Here the container will always start a new transaction, suspend the actual transaction
+	    // and run the method inside its scope
 	}
 
 	@TransactionAttribute(TransactionAttributeType.SUPPORTS)
-	public void method4() {
+	public void method3() {
 	    // Here the container will allow the method to be called
 	    // by a client whether the client already has a transaction or not
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+	public void method4() {
+	    // Here the container will make sure that the method
+	    // will run in no transaction scope and will suspend any
+	    // transaction started by the client
 	}
 
 	@TransactionAttribute(TransactionAttributeType.NEVER)

@@ -106,10 +106,10 @@ public class Question08 {
     //
     // JPA specification defines three pessimistic lock modes which we're going to discuss:
     //
-    // * PESSIMISTIC_READ – allows us to obtain a SHARED LOCK and prevent the data from being UPDATED or DELETED
+    // * PESSIMISTIC_READ – allows us to obtain a SHARED LOCK and prevent the data from being UPDATED or DELETED for others
     // $$ Other transactions won't be able to make any updates or deletes though $$
     //
-    // * PESSIMISTIC_WRITE – allows us to obtain an EXCLUSIVE LOCK and prevent the data from being READ, UPDATED or DELETED
+    // * PESSIMISTIC_WRITE – allows us to obtain an EXCLUSIVE LOCK and prevent the data from being READ, UPDATED or DELETED for others
     // $$ It will prevent other transactions from reading, updating or deleting the data $$
     //
     // * PESSIMISTIC_FORCE_INCREMENT – works like PESSIMISTIC_WRITE and it additionally increments a version attribute of a versioned entity

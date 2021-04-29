@@ -10,10 +10,6 @@ import javax.ejb.Stateless;
 
 public class Question02 {
 
-    // Implement Business Logic by Using EJBs
-    //
-    // Question 1
-    //
     // What is true about TimerService infertace?
     //
     // A - The TimerService interface is unavailable to stateless session beans.

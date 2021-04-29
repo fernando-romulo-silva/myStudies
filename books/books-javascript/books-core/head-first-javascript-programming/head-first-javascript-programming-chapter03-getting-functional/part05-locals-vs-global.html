@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bake (with return)</title>
+  </head>
+  <body>
+  </body>
+  <script>
+
+    // shadow of the local variable
+	var beanCounter = 10; // we've got a global and a local!
+	
+	function getNumberOfItems(orderType) {
+		var beanCounter = 0; // we've got a global and a local!
+		
+		if (orderType == "order") {
+			// do some stuff with beanCounter ...
+		}
+		
+		return beanCounter;
+	}
+
+  </script>
+</body>
+</html>

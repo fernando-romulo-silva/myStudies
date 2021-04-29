@@ -78,6 +78,7 @@ public class Question01 {
 	// Choice B and D are correct answers.
 	//
 	// Call to getEJBObject is not valid, since the bean is local.
+	sessionCtx.getEJBObject(); // only for remote interfaces!
 	// IllegalStateException - Thrown if the instance invokes this method while the instance is in a state that does not allow the instance
 	// to invoke this method, or if the instance does not have a remote interface.
 	//

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bake (with return)</title>
+  </head>
+  <body>
+  </body>
+  <script>
+
+    // JS assumes that we meant for points to be global because we forgot to use "var" on line 13,
+    // and behaves as if points were declared at the global level
+  	// var points = 0; // same 
+  
+  	function playTurn(player, location) {
+  		
+  	    // we forgot to declare points with 'var' before we used it. So points is automatically global
+  		points = 0;  // line 13
+  		
+  		if (location == 1) {
+  			points = points + 100;
+  		}
+  		
+  		return points;
+  	}
+  	
+  	var total = playTurn("Jai", 1);
+  	
+  	// That means we can use points outside the function!
+  	// The value doesn't go away (like it should) when the function is done executing
+  	alert(points);
+  
+
+  </script>
+</body>
+</html>
