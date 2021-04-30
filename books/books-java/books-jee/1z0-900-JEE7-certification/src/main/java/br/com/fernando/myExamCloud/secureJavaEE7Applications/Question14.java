@@ -11,7 +11,7 @@ public class Question14 {
     // Which annotation allows a request to be executed with another Principal's identity?
     //
     // A
-    // Itis not possible to execute a request with another Principal's identity.
+    // It is not possible to execute a request with another Principal's identity.
     //
     // B
     // @Useldentity
