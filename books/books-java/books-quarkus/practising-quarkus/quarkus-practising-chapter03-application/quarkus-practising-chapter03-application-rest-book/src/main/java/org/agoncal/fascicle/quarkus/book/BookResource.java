@@ -1,17 +1,13 @@
 package org.agoncal.fascicle.quarkus.book;
 
-import org.eclipse.microprofile.metrics.MetricUnits;
-import org.eclipse.microprofile.metrics.annotation.Counted;
-import org.eclipse.microprofile.metrics.annotation.Timed;
-import org.eclipse.microprofile.openapi.annotations.Operation;
-import org.eclipse.microprofile.openapi.annotations.enums.SchemaType;
-import org.eclipse.microprofile.openapi.annotations.media.Content;
-import org.eclipse.microprofile.openapi.annotations.media.Schema;
-import org.eclipse.microprofile.openapi.annotations.parameters.Parameter;
-import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
-import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
-import org.jboss.logging.Logger;
+import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static javax.ws.rs.core.Response.Status.NOT_FOUND;
+import static org.eclipse.microprofile.metrics.MetricUnits.MILLISECONDS;
+import static org.eclipse.microprofile.openapi.annotations.enums.SchemaType.ARRAY;
+
+import java.net.URI;
+import java.util.List;
+import java.util.Optional;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -28,28 +24,35 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.UriInfo;
-import java.net.URI;
-import java.util.List;
-import java.util.Optional;
 
-import static javax.ws.rs.core.Response.Status.NOT_FOUND;
+import org.eclipse.microprofile.metrics.annotation.Counted;
+import org.eclipse.microprofile.metrics.annotation.Timed;
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.media.Content;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+import org.eclipse.microprofile.openapi.annotations.parameters.Parameter;
+import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
+import org.jboss.logging.Logger;
 
 @Path("/api/books")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "Book Endpoint")
 public class BookResource {
+    
+    private static final Logger LOGGER = Logger.getLogger(BookResource.class);
 
     @Inject
-    BookService service;
+    private BookService service;
 
-    private static final Logger LOGGER = Logger.getLogger(BookResource.class);
 
     @Operation(summary = "Returns a random book")
     @APIResponse(responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Book.class)))
     //
     @Counted(name = "countGetRandomBook", description = "Counts how many times the getRandomBook method has been invoked")
-    @Timed(name = "timeGetRandomBook", description = "Times how long it takes to invoke the getRandomBook method", unit = MetricUnits.MILLISECONDS)
+    @Timed(name = "timeGetRandomBook", description = "Times how long it takes to invoke the getRandomBook method", unit = MILLISECONDS)
     //
     @GET
     @Path("/random")
@@ -60,11 +63,11 @@ public class BookResource {
     }
 
     @Operation(summary = "Returns all the books from the database")
-    @APIResponse(responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Book.class, type = SchemaType.ARRAY)))
+    @APIResponse(responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Book.class, type = ARRAY)))
     @APIResponse(responseCode = "204", description = "No books")
     //
     @Counted(name = "countGetAllBooks", description = "Counts how many times the getAllBooks method has been invoked")
-    @Timed(name = "timeGetAllBooks", description = "Times how long it takes to invoke the getAllBooks method", unit = MetricUnits.MILLISECONDS)
+    @Timed(name = "timeGetAllBooks", description = "Times how long it takes to invoke the getAllBooks method", unit = MILLISECONDS)
     //
     @GET
     public Response getAllBooks() {
@@ -74,11 +77,11 @@ public class BookResource {
     }
 
     @Operation(summary = "Returns a book for a given identifier")
-    @APIResponse(responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Book.class)))
+    @APIResponse(responseCode = "200", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Book.class)))
     @APIResponse(responseCode = "404", description = "The book is not found for the given identifier")
     //
     @Counted(name = "countGetBook", description = "Counts how many times the getBook method has been invoked")
-    @Timed(name = "timeGetBook", description = "Times how long it takes to invoke the getBook method", unit = MetricUnits.MILLISECONDS)
+    @Timed(name = "timeGetBook", description = "Times how long it takes to invoke the getBook method", unit = MILLISECONDS)
     //
     @GET
     @Path("/{id}")
@@ -94,14 +97,14 @@ public class BookResource {
     }
 
     @Operation(summary = "Creates a valid book")
-    @APIResponse(responseCode = "201", description = "The URI of the created book", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = URI.class)))
+    @APIResponse(responseCode = "201", description = "The URI of the created book", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = URI.class)))
     //
     @Counted(name = "countCreateBook", description = "Counts how many times the createBook method has been invoked")
-    @Timed(name = "timeCreateBook", description = "Times how long it takes to invoke the createBook method", unit = MetricUnits.MILLISECONDS)
+    @Timed(name = "timeCreateBook", description = "Times how long it takes to invoke the createBook method", unit = MILLISECONDS)
     //
     @POST
     public Response createBook(//
-		    @RequestBody(required = true, content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Book.class))) 
+		    @RequestBody(required = true, content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Book.class))) 
 		    @Valid Book book, //
 		    @Context UriInfo uriInfo) {
 	
@@ -112,13 +115,13 @@ public class BookResource {
     }
 
     @Operation(summary = "Updates an existing  book")
-    @APIResponse(responseCode = "200", description = "The updated book", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Book.class)))
+    @APIResponse(responseCode = "200", description = "The updated book", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Book.class)))
     //
     @Counted(name = "countUpdateBook", description = "Counts how many times the updateBook method has been invoked")
-    @Timed(name = "timeUpdateBook", description = "Times how long it takes to invoke the updateBook method", unit = MetricUnits.MILLISECONDS)
+    @Timed(name = "timeUpdateBook", description = "Times how long it takes to invoke the updateBook method", unit = MILLISECONDS)
     //
     @PUT
-    public Response updateBook(@RequestBody(required = true, content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Book.class))) @Valid Book book) {
+    public Response updateBook(@RequestBody(required = true, content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Book.class))) @Valid Book book) {
 	book = service.updateBook(book);
 	LOGGER.debug("Book updated with new valued " + book);
 	return Response.ok(book).build();
@@ -128,7 +131,7 @@ public class BookResource {
     @APIResponse(responseCode = "204", description = "The book has been successfully deleted")
     //
     @Counted(name = "countDeleteBook", description = "Counts how many times the deleteBook method has been invoked")
-    @Timed(name = "timeDeleteBook", description = "Times how long it takes to invoke the deleteBook method", unit = MetricUnits.MILLISECONDS)
+    @Timed(name = "timeDeleteBook", description = "Times how long it takes to invoke the deleteBook method", unit = MILLISECONDS)
     //
     @DELETE
     @Path("/{id}")

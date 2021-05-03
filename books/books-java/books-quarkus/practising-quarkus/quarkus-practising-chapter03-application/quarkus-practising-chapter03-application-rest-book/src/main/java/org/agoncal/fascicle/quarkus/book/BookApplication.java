@@ -9,7 +9,6 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-// tag::adocSnippet[]
 @ApplicationPath("/")
 @OpenAPIDefinition(
   info = @Info(title = "Book API",
