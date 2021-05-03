@@ -1,18 +1,19 @@
 package org.agoncal.fascicle.quarkus.data.panacherepository.service;
 
-import io.quarkus.hibernate.orm.panache.Panache;
-import org.agoncal.fascicle.quarkus.data.panacherepository.model.Publisher;
-import org.agoncal.fascicle.quarkus.data.panacherepository.repository.PublisherRepository;
+import static javax.transaction.Transactional.TxType.REQUIRED;
+import static javax.transaction.Transactional.TxType.SUPPORTS;
+
+import java.util.List;
+import java.util.Optional;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import java.util.List;
-import java.util.Optional;
 
-import static javax.transaction.Transactional.TxType.REQUIRED;
-import static javax.transaction.Transactional.TxType.SUPPORTS;
+import org.agoncal.fascicle.quarkus.data.panacherepository.model.Publisher;
+import org.agoncal.fascicle.quarkus.data.panacherepository.repository.PublisherRepository;
 
+import io.quarkus.hibernate.orm.panache.Panache;
 
 @ApplicationScoped
 @Transactional(SUPPORTS)
@@ -56,4 +57,3 @@ public class PublisherService {
     }
     // end::adocSkip[]
 }
-

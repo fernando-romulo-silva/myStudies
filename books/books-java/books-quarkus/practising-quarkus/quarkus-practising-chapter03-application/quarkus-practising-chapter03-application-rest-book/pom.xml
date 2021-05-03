@@ -54,17 +54,13 @@
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-smallrye-metrics</artifactId>
 		</dependency>
-		<!-- end::adocDependencyObservability[] -->
-		<!-- tag::adocDependencyDocker[] -->
+		
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-container-image-docker</artifactId>
 		</dependency>
-		<!-- end::adocDependencyDocker[] -->
-		<!-- end::adocDependency[] -->
 
 		<!-- Test -->
-		<!-- tag::adocDependencyTest[] -->
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-junit5</artifactId>
@@ -93,10 +89,9 @@
 			<version>${testcontainers.version}</version>
 			<scope>test</scope>
 		</dependency>
+		
 	</dependencies>
-	<!-- end::adocDependencyTest[] -->
-
-	<!-- tag::adocBuild[] -->
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -110,9 +105,11 @@
 					</execution>
 				</executions>
 			</plugin>
+			
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 			</plugin>
+			
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
@@ -121,11 +118,12 @@
 					</systemProperties>
 				</configuration>
 			</plugin>
+			
 		</plugins>
 	</build>
-	<!-- end::adocBuild[] -->
-	<!-- tag::adocProfile[] -->
+	
 	<profiles>
+		
 		<profile>
 			<id>native</id>
 			<activation>
@@ -157,6 +155,7 @@
 				<quarkus.package.type>native</quarkus.package.type>
 			</properties>
 		</profile>
+		
 	</profiles>
-	<!-- end::adocProfile[] -->
+	
 </project>

@@ -1,37 +1,35 @@
 package org.agoncal.fascicle.quarkus.data.panacherepository.repository;
 
-import io.quarkus.hibernate.orm.panache.Panache;
-import io.quarkus.hibernate.orm.panache.PanacheRepository;
-import io.quarkus.panache.common.Parameters;
+import java.util.List;
+
+import javax.enterprise.context.ApplicationScoped;
+
 import org.agoncal.fascicle.quarkus.data.panacherepository.model.Book;
 import org.agoncal.fascicle.quarkus.data.panacherepository.model.Language;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.transaction.Transactional;
-import java.util.List;
-
-import static javax.transaction.Transactional.TxType.REQUIRED;
+import io.quarkus.hibernate.orm.panache.Panache;
+import io.quarkus.hibernate.orm.panache.PanacheRepository;
+import io.quarkus.panache.common.Parameters;
 
 @ApplicationScoped
 public class BookRepository implements PanacheRepository<Book> {
 
-  public Book update(Book book) {
-    return Panache.getEntityManager().merge(book);
-  }
+    public Book update(Book book) {
+	return Panache.getEntityManager().merge(book);
+    }
 
-  public List<Book> findEnglishBooks() {
-    List<Book> books = list("language", Language.ENGLISH);
-    return books;
-  }
+    public List<Book> findEnglishBooks() {
+	List<Book> books = list("language", Language.ENGLISH);
+	return books;
+    }
 
-  public long countEnglishBooks() {
-    long nbBooks = count("language", Language.ENGLISH);
-    return nbBooks;
-  }
+    public long countEnglishBooks() {
+	long nbBooks = count("language", Language.ENGLISH);
+	return nbBooks;
+    }
 
-  public List<Book> findBetweenPrices(Float min, Float max) {
-    List<Book> books = list("unitCost between :min and :max",
-      Parameters.with("min", min).and("max", max));
-    return books;
-  }
+    public List<Book> findBetweenPrices(Float min, Float max) {
+	List<Book> books = list("unitCost between :min and :max", Parameters.with("min", min).and("max", max));
+	return books;
+    }
 }

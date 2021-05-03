@@ -1,54 +1,56 @@
 package org.agoncal.fascicle.quarkus.data.panacherepository.service;
 
-import io.quarkus.hibernate.orm.panache.Panache;
-import org.agoncal.fascicle.quarkus.data.panacherepository.model.Author;
-import org.agoncal.fascicle.quarkus.data.panacherepository.repository.AuthorRepository;
+import static javax.transaction.Transactional.TxType.REQUIRED;
+import static javax.transaction.Transactional.TxType.SUPPORTS;
+
+import java.util.List;
+import java.util.Optional;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import java.util.List;
-import java.util.Optional;
 
-import static javax.transaction.Transactional.TxType.REQUIRED;
-import static javax.transaction.Transactional.TxType.SUPPORTS;
+import org.agoncal.fascicle.quarkus.data.panacherepository.model.Author;
+import org.agoncal.fascicle.quarkus.data.panacherepository.repository.AuthorRepository;
+
+import io.quarkus.hibernate.orm.panache.Panache;
 
 @ApplicationScoped
 @Transactional(SUPPORTS)
 public class AuthorService {
 
-  @Inject
-  AuthorRepository repository;
+    @Inject
+    AuthorRepository repository;
 
-  @Transactional(REQUIRED)
-  public Author persist(Author author) {
-    repository.persist(author);
-    return author;
-  }
+    @Transactional(REQUIRED)
+    public Author persist(Author author) {
+	repository.persist(author);
+	return author;
+    }
 
-  public List<Author> findAll() {
-    return repository.listAll();
-  }
+    public List<Author> findAll() {
+	return repository.listAll();
+    }
 
-  public Optional<Author> findByIdOptional(Long id) {
-    return repository.findByIdOptional(id);
-  }
+    public Optional<Author> findByIdOptional(Long id) {
+	return repository.findByIdOptional(id);
+    }
 
-  @Transactional(REQUIRED)
-  public Author update(Author author) {
-    return Panache.getEntityManager().merge(author);
-  }
+    @Transactional(REQUIRED)
+    public Author update(Author author) {
+	return Panache.getEntityManager().merge(author);
+    }
 
-  @Transactional(REQUIRED)
-  public void deleteById(Long id) {
-    repository.deleteById(id);
-  }
+    @Transactional(REQUIRED)
+    public void deleteById(Long id) {
+	repository.deleteById(id);
+    }
 
-  public Optional<Author> findByName(String name) {
-    return repository.findByName(name);
-  }
+    public Optional<Author> findByName(String name) {
+	return repository.findByName(name);
+    }
 
-  public List<Author> findAllOrderByName() {
-    return repository.findAllOrderByName();
-  }
+    public List<Author> findAllOrderByName() {
+	return repository.findAllOrderByName();
+    }
 }

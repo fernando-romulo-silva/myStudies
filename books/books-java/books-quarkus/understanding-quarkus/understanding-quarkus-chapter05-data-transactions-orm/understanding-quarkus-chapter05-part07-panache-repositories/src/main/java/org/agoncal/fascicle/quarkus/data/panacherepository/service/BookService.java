@@ -1,62 +1,64 @@
 package org.agoncal.fascicle.quarkus.data.panacherepository.service;
 
-import io.quarkus.hibernate.orm.panache.Panache;
-import org.agoncal.fascicle.quarkus.data.panacherepository.model.Book;
-import org.agoncal.fascicle.quarkus.data.panacherepository.repository.BookRepository;
+import static javax.transaction.Transactional.TxType.REQUIRED;
+import static javax.transaction.Transactional.TxType.SUPPORTS;
+
+import java.util.List;
+import java.util.Optional;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import java.util.List;
-import java.util.Optional;
 
-import static javax.transaction.Transactional.TxType.REQUIRED;
-import static javax.transaction.Transactional.TxType.SUPPORTS;
+import org.agoncal.fascicle.quarkus.data.panacherepository.model.Book;
+import org.agoncal.fascicle.quarkus.data.panacherepository.repository.BookRepository;
+
+import io.quarkus.hibernate.orm.panache.Panache;
 
 @ApplicationScoped
 @Transactional(SUPPORTS)
 public class BookService {
 
-  @Inject
-  BookRepository repository;
+    @Inject
+    BookRepository repository;
 
-  @Transactional(REQUIRED)
-  public Book persist(Book book) {
-    repository.persist(book);
-    return book;
-  }
+    @Transactional(REQUIRED)
+    public Book persist(Book book) {
+	repository.persist(book);
+	return book;
+    }
 
-  public List<Book> findAll() {
-    return repository.listAll();
-  }
+    public List<Book> findAll() {
+	return repository.listAll();
+    }
 
-  public Optional<Book> findByIdOptional(Long id) {
-    return repository.findByIdOptional(id);
-  }
+    public Optional<Book> findByIdOptional(Long id) {
+	return repository.findByIdOptional(id);
+    }
 
-  @Transactional(REQUIRED)
-  public Book update(Book book) {
-    return Panache.getEntityManager().merge(book);
-  }
+    @Transactional(REQUIRED)
+    public Book update(Book book) {
+	return Panache.getEntityManager().merge(book);
+    }
 
-  @Transactional(REQUIRED)
-  public void deleteById(Long id) {
-    repository.deleteById(id);
-  }
+    @Transactional(REQUIRED)
+    public void deleteById(Long id) {
+	repository.deleteById(id);
+    }
 
-  public long count() {
-    return repository.count();
-  }
+    public long count() {
+	return repository.count();
+    }
 
-  public List<Book> findEnglishBooks(){
-    return repository.findEnglishBooks();
-  }
+    public List<Book> findEnglishBooks() {
+	return repository.findEnglishBooks();
+    }
 
-  public long countEnglishBooks(){
-    return repository.countEnglishBooks();
-  }
+    public long countEnglishBooks() {
+	return repository.countEnglishBooks();
+    }
 
-  public List<Book> findBetweenPrices(Float min, Float max) {
-    return repository.findBetweenPrices(min, max);
-  }
+    public List<Book> findBetweenPrices(Float min, Float max) {
+	return repository.findBetweenPrices(min, max);
+    }
 }

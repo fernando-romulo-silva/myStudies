@@ -1,17 +1,16 @@
 package org.agoncal.fascicle.quarkus.data.panacherepository.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
- * @author Antonio Goncalves
- * http://www.antoniogoncalves.org
- * --
+ * @author Antonio Goncalves http://www.antoniogoncalves.org --
  */
 // @formatter:off
 
@@ -33,4 +32,3 @@ public class CD extends Item {
   )
   public Set<Musician> musicians = new HashSet<>();
 }
-

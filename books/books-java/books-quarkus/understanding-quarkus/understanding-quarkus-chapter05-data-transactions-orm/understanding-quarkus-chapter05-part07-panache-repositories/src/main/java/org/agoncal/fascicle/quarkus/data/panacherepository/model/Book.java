@@ -1,5 +1,9 @@
 package org.agoncal.fascicle.quarkus.data.panacherepository.model;
 
+import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -8,14 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import java.time.Instant;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
- * @author Antonio Goncalves
- * http://www.antoniogoncalves.org
- * --
+ * @author Antonio Goncalves http://www.antoniogoncalves.org --
  */
 // @formatter:off
 
@@ -45,4 +44,3 @@ public class Book extends Item {
   @JoinColumn(name = "publisher_pk")
   public Publisher publisher;
 }
-
