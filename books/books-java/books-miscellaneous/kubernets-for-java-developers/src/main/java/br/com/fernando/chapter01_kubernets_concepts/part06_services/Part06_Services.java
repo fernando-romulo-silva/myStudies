@@ -40,4 +40,12 @@ public class Part06_Services {
      *             - containerPort: 8080
      * </pre>
      */
+    
+    // As long as kube-dns is running (which I believe is "always unless you disable it"), all Service objects have an in cluster DNS name of 
+    // service_name +"."+ service_namespace + ".svc.cluster.local" so all other things would address your backendapi in the default 
+    // namespace as (to use your port numbered example) Ex: 
+    //
+    // http://backendapi.default.svc.cluster.local:8080 
+    //
+    // That fact is the very reason Kubernetes forces all identifiers to be a "dns compatible" name (no underscores or other goofy characters).
 }
