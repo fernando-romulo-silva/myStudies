@@ -1,0 +1,5 @@
+docker network ls
+
+docker network inspect bridge
+
+docker network create -d bridge localnet
