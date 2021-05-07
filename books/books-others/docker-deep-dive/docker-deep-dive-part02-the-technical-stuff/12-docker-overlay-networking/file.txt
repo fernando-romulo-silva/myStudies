@@ -1,0 +1,3 @@
+docker swarm init --advertise-addr=172.31.1.5 --listen-addr=172.31.1.5:2377
+
+docker swarm join --token SWMTKN-1-0hz2ec...2vye 172.31.1.5:2377
