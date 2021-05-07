@@ -28,10 +28,10 @@ public class Endpoint {
   private Supplier<Map<String, Object>> templates;
   private Supplier<Entity> entity;
 
-  private Endpoint(final String path,
-                   final String method,
-                   final Supplier<Map<String, Object>> templates,
-                   final Supplier<Entity> entity) {
+  private Endpoint(final String path, //
+                   final String method, //
+                   final Supplier<Map<String, Object>> templates, //
+                   final Supplier<Entity> entity) { //
     this.path = path;
     this.method = method;
     this.templates = templates;

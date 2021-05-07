@@ -47,11 +47,13 @@ var taxi = {
 };
 
 function prequal(car) {
+	
     if (car.mileage > 10000) {
         return false;
     } else if (car.year > 1960) {
         return false;
     }
+    
     return true;
 }
 
@@ -67,12 +69,16 @@ if (worthALook) {
 // add a function to make it easier to generate the console output!
 //
 function isWorthALook(didQualify, car) {
+	
 	if (didQualify) {
 		console.log("You gotta check out this " + car.make + " " + car.model);
 	} else {
     	console.log("You should really pass on the " + car.make + " " + car.model);
 	}
+	
 }
+
+
 isWorthALook(prequal(taxi), taxi);
 isWorthALook(prequal(cadi), cadi);
 isWorthALook(prequal(chevy), chevy);
