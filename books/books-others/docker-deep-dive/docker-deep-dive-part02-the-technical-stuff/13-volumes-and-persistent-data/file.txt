@@ -1,3 +1,23 @@
-docker swarm init --advertise-addr=172.31.1.5 --listen-addr=172.31.1.5:2377
+docker volume create myvol
 
-docker swarm join --token SWMTKN-1-0hz2ec...2vye 172.31.1.5:2377
+docker volume ls
+
+docker volume inspect myvol
+
+docker volume prune
+
+docker container run -dit --name voltainer --mount source=bizvol,target=/vol alpine
+
+docker volume rm bizvol
+
+docker container exec -it voltainer sh
+
+docker container rm voltainer -f
+ 
+ls -l /var/lib/docker/volumes/bizvol/_data/
+ 
+cat /var/lib/docker/volumes/bizvol/_data/file1
+ 
+docker container run -dit --name hellcat --mount source=bizvol,target=/vol alpine
+
+docker container exec -it 3dd7c0b8cdd2 sh

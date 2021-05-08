@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>
+
+// 'cadi' reference value
+var cadi = {
+		make: "Chevy",
+		model: "Bel Air",
+		year: 1957, 
+		color: "red",
+		passengers: 2,
+		convertible: false,
+		mileage: 1021		
+}
+
+// 'bla' has the value "bla bla";
+var bla = "bla bla";
+
+var fiat = {
+		make: "Fiat",
+		model: "500",
+		year: 1957,
+		color: "Medium Blue",
+		passenger: 2,
+		convertible: false,
+		mileage: 88000
+};
+
+if (fiat.mileage < 2000) {
+	buyIt();
+}
+
+// access the properties
+fiat.mileage = 2200;
+
+// add new property
+fiat.needWashing = true;
+
+
+delete fiat.color;
+
+
+// undefined
+console.log(fiat.someProperty);
+
+
+function buyIt() {
+	console.log("Buy it!")
+}
+
+function washIt() {
+	console.log("Wash it!");
+}
+
+</script>
+</head>
+<body></body>
+</html>
