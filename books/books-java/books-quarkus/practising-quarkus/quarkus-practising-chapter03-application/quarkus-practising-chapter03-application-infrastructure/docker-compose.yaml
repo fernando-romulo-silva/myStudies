@@ -12,8 +12,8 @@ services:
     container_name: "books-monitoring"
     ports:
       - 9090:9090
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    # extra_hosts:
+    #  - "host.docker.internal:host-gateway"
     volumes:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
 
