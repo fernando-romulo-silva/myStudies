@@ -14,19 +14,23 @@ var fiat = {
 	convertible: false,
 	mileage: 88000,
 	started: false,
+	
 	start: function() {
 		this.started = true;
 	},
+	
 	stop: function() {
 		this.started = false;
 	},
+	
 	drive: function() {
+		
 		if (this.started) {
-			alert(this.make + " " + 
-			      this.model + " goes zoom zoom!");
+			alert(this.make + " " + this.model + " goes zoom zoom!");
 		} else {
 			alert("You need to start the engine first.");
 		}
+		
 	}
 };
 
@@ -39,12 +43,15 @@ var cadi = {
 	convertible: false,
 	mileage: 12892,
 	started: false,
+	
 	start: function() {
 		this.started = true;
 	},
+	
 	stop: function() {
 		this.started = false;
 	},
+	
 	drive: function() {
 		if (this.started) {
 			alert(this.make + " " + 
@@ -65,19 +72,23 @@ var chevy = {
 	convertible: false,
 	mileage: 1021,
 	started: false,
+	
 	start: function() {
 		this.started = true;
 	},
+	
 	stop: function() {
 		this.started = false;
 	},
+	
 	drive: function() {
+		
 		if (this.started) {
-			alert(this.make + " " + 
-			      this.model + " goes zoom zoom!");
+			alert(this.make + " " + this.model + " goes zoom zoom!");
 		} else {
 			alert("You need to start the engine first.");
 		}
+		
 	}
 };
 
@@ -92,16 +103,19 @@ var taxi = {
     convertible: false,
     mileage: 281341,
 	started: false,
+	
 	start: function() {
 		this.started = true;
 	},
+	
 	stop: function() {
 		this.started = false;
 	},
+	
 	drive: function() {
+		
 		if (this.started) {
-			alert(this.make + " " + 
-			      this.model + " goes zoom zoom!");
+			alert(this.make + " " + this.model + " goes zoom zoom!");
 		} else {
 			alert("You need to start the engine first.");
 		}

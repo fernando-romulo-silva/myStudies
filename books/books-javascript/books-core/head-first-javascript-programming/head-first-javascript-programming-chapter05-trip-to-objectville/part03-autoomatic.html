@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Object-o-matic</title>
-  <script>
+<meta charset="utf-8">
+<title>Object-o-matic</title>
+<script>
 	function makeCar() {
-		var makes = ["Chevy", "GM", "Fiat", "Webville Motors", "Tucker"];
-		var models = ["Cadillac", "500", "Bel-Air", "Taxi", "Torpedo"];
-		var years = [1955, 1957, 1948, 1954, 1961];
-		var colors = ["red", "blue", "tan", "yellow", "white"];
-		var convertible = [true, false];
+		var makes = [ "Chevy", "GM", "Fiat", "Webville Motors", "Tucker" ];
+		var models = [ "Cadillac", "500", "Bel-Air", "Taxi", "Torpedo" ];
+		var years = [ 1955, 1957, 1948, 1954, 1961 ];
+		var colors = [ "red", "blue", "tan", "yellow", "white" ];
+		var convertible = [ true, false ];
 
 		var rand1 = Math.floor(Math.random() * makes.length);
 		var rand2 = Math.floor(Math.random() * models.length);
@@ -19,14 +19,15 @@
 		var rand6 = Math.floor(Math.random() * 2);
 
 		var car = {
-			make: makes[rand1],
-			model: models[rand2],
-			year: years[rand3],
-			color: colors[rand4],
-			passengers: rand5,
-			convertible: convertible[rand6],
-			mileage: 0
+			make : makes[rand1],
+			model : models[rand2],
+			year : years[rand3],
+			color : colors[rand4],
+			passengers : rand5,
+			convertible : convertible[rand6],
+			mileage : 0
 		};
+
 		return car;
 	}
 
@@ -36,8 +37,7 @@
 
 	var carToSell = makeCar();
 	displayCar(carToSell);
-
-  </script>
+</script>
 </head>
 <body></body>
 </html>

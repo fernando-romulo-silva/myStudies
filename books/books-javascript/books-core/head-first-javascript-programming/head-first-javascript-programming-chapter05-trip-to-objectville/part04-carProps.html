@@ -24,9 +24,9 @@ var fiat = {
 	},
 
     drive: function() {
+    	
 		if (this.started) {
-			alert(this.make + " " +
-					this.model + " goes zoom zoom!");
+			alert(this.make + " " + this.model + " goes zoom zoom!");
 		} else {
 			alert("You need to start the engine first.");
 		}
@@ -39,6 +39,8 @@ fiat.drive();
 for (prop in fiat) {
 	console.log(prop + ": " + fiat[prop]);
 }
+
+console.log(fiat["make"]);
 
 </script>
 </head>
