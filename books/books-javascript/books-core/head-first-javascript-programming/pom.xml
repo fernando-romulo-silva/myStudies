@@ -27,6 +27,9 @@
 			head-first-javascript-programming-chapter04-arrays
 		</module>
 		<module>head-first-javascript-programming-chapter05-trip-to-objectville</module>
+		<module>
+			head-first-javascript-programming-chapter06-getting-know-DOM
+		</module>
 	</modules>
 
 	<dependencies>
