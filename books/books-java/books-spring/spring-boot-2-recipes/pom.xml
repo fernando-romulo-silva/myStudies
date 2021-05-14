@@ -114,5 +114,8 @@
 		<module>
 			spring-boot-2-recipes-chapter01-spring-boot-introduction
 		</module>
+		<module>
+			spring-boot-2-recipes-chapter02-spring-boot-basics
+		</module>
 	</modules>
 </project>

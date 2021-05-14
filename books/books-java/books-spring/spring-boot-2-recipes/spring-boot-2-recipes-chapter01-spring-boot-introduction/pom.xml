@@ -13,8 +13,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>spring-boot-2-recipes-chapter01-recipe-1-1-i</module>
-		<module>spring-boot-2-recipes-chapter01-recipe-1-1-ii</module>
-		<module>spring-boot-2-recipes-chapter01-recipe-1-2-i</module>
+		<module>spring-boot-2-recipes-chapter01-recipe-1-1-create-springboot-maven-i</module>
+		<module>spring-boot-2-recipes-chapter01-recipe-1-1-create-springboot-maven-ii</module>
+		<module>spring-boot-2-recipes-chapter01-recipe-1-2-create-springboot-gradle-i</module>
 	</modules>
 </project>

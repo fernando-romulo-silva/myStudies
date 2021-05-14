@@ -10,7 +10,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-// https://ftp.unicamp.br/pub/apache/tomcat/tomcat-10/v10.0.5/bin/apache-tomcat-10.0.5.tar.gz
 public class EmailListServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -28,8 +27,11 @@ public class EmailListServlet extends HttpServlet {
 
 	// perform action and set URL to appropriate page
 	if (action.equals("join")) {
+	    
 	    url = "/index.html"; // the "join" page
+	    
 	} else if (action.equals("add")) {
+	    
 	    // get parameters from the request
 	    String firstName = request.getParameter("firstName");
 	    String lastName = request.getParameter("lastName");
