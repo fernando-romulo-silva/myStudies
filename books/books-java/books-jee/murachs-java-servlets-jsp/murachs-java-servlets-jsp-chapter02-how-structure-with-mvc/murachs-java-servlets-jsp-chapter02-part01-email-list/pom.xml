@@ -12,13 +12,6 @@
 	<artifactId>murachs-java-servlets-jsp-chapter02-part01-email-list</artifactId>
 	<packaging>war</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>16</maven.compiler.source>
-		<maven.compiler.target>16</maven.compiler.target>
-		<java.version>16</java.version>
-	</properties>
-
 	<build>
 		<plugins>
 
