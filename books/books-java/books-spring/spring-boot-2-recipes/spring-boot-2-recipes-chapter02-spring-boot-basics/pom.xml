@@ -14,5 +14,14 @@
   	<module>
   		spring-boot-2-recipes-chapter02-recipe-2-1-i-configure-bean
   	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter02-recipe-2-1-ii-configure-bean
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter02-recipe-2-1-iii-configure-bean
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter02-recipe-2-2-externalize-properties
+  	</module>
   </modules>
 </project>
