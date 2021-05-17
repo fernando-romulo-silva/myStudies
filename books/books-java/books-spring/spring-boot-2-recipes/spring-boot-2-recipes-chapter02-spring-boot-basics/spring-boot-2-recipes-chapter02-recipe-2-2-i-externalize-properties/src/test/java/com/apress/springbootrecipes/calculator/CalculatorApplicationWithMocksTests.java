@@ -17,7 +17,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 @ExtendWith(OutputCaptureExtension.class)
 @SpringBootTest(classes = CalculatorApplication.class)
-public class CalculatorApplicationTests {
+public class CalculatorApplicationWithMocksTests {
 
     @MockBean(name = "division")
     private Operation mockOperation;

@@ -23,5 +23,8 @@
   	<module>
   		spring-boot-2-recipes-chapter02-recipe-2-2-externalize-properties
   	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter02-recipe-2-2-i-externalize-properties
+  	</module>
   </modules>
 </project>
