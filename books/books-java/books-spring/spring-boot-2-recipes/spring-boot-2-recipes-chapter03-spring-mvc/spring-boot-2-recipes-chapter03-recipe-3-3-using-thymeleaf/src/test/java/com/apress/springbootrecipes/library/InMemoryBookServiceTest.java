@@ -40,5 +40,7 @@ public class InMemoryBookServiceTest {
 	service.create(book2);
 
 	assertThat(service.findAll()).containsExactly(book1, book2);
+
     }
+
 }
