@@ -13,6 +13,9 @@
 		<maven.compiler.target>16</maven.compiler.target>
 		<java.version>16</java.version>
 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
 		<junit-platform.version>5.7.0</junit-platform.version>
 		<spring-boot.version>2.4.5</spring-boot.version> <!-- 2.3.7.RELEASE, 2.4.1 -->
 	</properties>
@@ -102,35 +105,30 @@
 			</plugin>
 
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>enforce-versions</id>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<requireJavaVersion>
-									<version>${java.version}</version>
-								</requireJavaVersion>
-							</rules>
-						</configuration>
-					</execution>
-				</executions>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<!-- latest version (2.20.1) does not work well with JUnit5 -->
+				<version>2.19.1</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-surefire-provider</artifactId>
+						<version>1.0.3</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.jupiter</groupId>
+						<artifactId>junit-jupiter-engine</artifactId>
+						<version>${junit-platform.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
+
 		</plugins>
 
 	</build>
 
 	<modules>
-		<module>
-			spring-boot-2-recipes-chapter01-spring-boot-introduction
-		</module>
-		<module>
-			spring-boot-2-recipes-chapter02-spring-boot-basics
-		</module>
+		<module>spring-boot-2-recipes-chapter01-spring-boot-introduction</module>
+		<module>spring-boot-2-recipes-chapter02-spring-boot-basics</module>
 		<module>spring-boot-2-recipes-chapter03-spring-mvc</module>
 	</modules>
 </project>
