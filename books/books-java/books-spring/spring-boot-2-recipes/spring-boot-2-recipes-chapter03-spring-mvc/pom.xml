@@ -15,6 +15,12 @@
   	<module>spring-boot-2-recipes-chapter03-recipe-3-2-exposing-rest-resources-spring-mvc</module>
   	<module>spring-boot-2-recipes-chapter03-recipe-3-3-using-thymeleaf</module>
   	<module>spring-boot-2-recipes-chapter03-recipe-3-4-handle-exceptions</module>
+  	<module>
+  		spring-boot-2-recipes-chapter03-recipe-3-5-internationalizing-your-application
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter03-recipe-3-6-resolving-user-locales
+  	</module>
   </modules>
   
 </project>
