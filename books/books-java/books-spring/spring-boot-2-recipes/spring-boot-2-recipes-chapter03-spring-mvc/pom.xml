@@ -21,6 +21,8 @@
   	<module>
   		spring-boot-2-recipes-chapter03-recipe-3-6-resolving-user-locales
   	</module>
+  	<module>spring-boot-2-recipes-chapter03-recipe-3-7-selecting-configuring-embedded-server</module>
+  	<module>spring-boot-2-recipes-chapter03-recipe-3-8-configuring-SSL-for-webcontainer</module>
   </modules>
   
 </project>
