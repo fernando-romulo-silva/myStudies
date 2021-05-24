@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Testing typeof</title>
+  <script>
+  
+  var x;
+
+  if (x == undefined) {
+     // 
+     console.log("x ins't defined! just deal with it!");
+  }
+
+  var customer = {
+    name: "Jenny"    
+  } 
+
+  // you can check to see if a property is undefined, again by comparing it to the value undefined
+  if (customer.phoneNumber == undefined) {
+     console.log("Ge the customer's phone, but is undefined!")
+  }
+
+  var killerObjectSomeday = null; 
+
+  console.log("The killerObjectSomeday is " + null);
+
+
+  var weather = document.getElementById("weatherDiv");
+
+  if (weather != null) {
+    console.log("Create content for the weather div")
+  }
+
+  // “Not a Number”
+  // Number that can’t be represented”
+  var myNum = NaN;
+
+  if (isNaN(myNum)) {
+    myNum = 0;
+  }
+
+  // Comparing a number and a string: the string is converted into a number, and the two numbers are then compared. 
+  var testMe = "99";
+
+  if (testMe == 99) {
+    console.log("good things happen");
+  }
+
+
+  </script>
+</head>
+<body>
+</body>
+</html>
