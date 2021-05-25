@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Testing typeof</title>
+  <script>
+  
+
+  // Comparing a number and a string: the string is converted into a number, and the two numbers are then compared. 
+  var testMe = "99";
+
+  if (testMe == 99) {
+    console.log("good things happen");
+  }
+
+  // Comparing a boolean with any other type: In this case, we convert the boolean to a number, and compare.
+  
+  // were comparing a number and a boolean. The true value is converted to 1
+  if (true == 1) {
+    console.log("true == 1 is equal to 1 == 1");
+  }
+
+  // this time a boolean is compared to a string. Notice how more steps are needed.
+  if (true == "1") {
+    console.log("true == '1' is equal 1 == 1");
+  } 
+
+
+  // Comparing null and undefined
+  if (null == undefined) {
+    console.log("undefined and null always are equal.");
+  }
+
+  // Others
+  if (0 == "") {
+    console.log("We comparing string with number.");
+  }
+
+  // Two values are strictly equal only if they have the same type and the same value
+  if (0 === "") {
+    console.log("We comparing string with number.");
+  }
+
+
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,3 +1,4 @@
+# init the swarm
 docker swarm init
 
 # remote swarms
@@ -11,3 +12,22 @@ docker swarm join-token worker
 
 # join to worker
 docker swarm join --token SWMTKN-1-4xu4ynixcp845ujizgnch3bi2w05mbxui3kl67mis0tb9ol3zi-6ef5o6hep2mr7iprbqp36fwxf 192.168.0.108:2377
+
+
+# lock the cluster
+docker swarm update --autolock=true  #SWMKEY-1-QgrR0oqilemN+bb6dWbI+Z2Mn+l8awAQB/MNinPxkMA
+
+# restart the seervice
+service docker restart
+
+# create a service
+docker service create --name web-fe -p 8080:8080 --replicas 5 nigelpoulton/pluralsight-docker-ci
+
+# check the services
+docker service ls
+
+# check the service's nodes
+docker service ps web-fe
+
+# check more details
+docker service inspect --pretty web-fe

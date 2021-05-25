@@ -130,5 +130,6 @@
 		<module>spring-boot-2-recipes-chapter01-spring-boot-introduction</module>
 		<module>spring-boot-2-recipes-chapter02-spring-boot-basics</module>
 		<module>spring-boot-2-recipes-chapter03-spring-mvc</module>
+		<module>spring-boot-2-recipes-chapter04-spring-mvc-async</module>
 	</modules>
 </project>
