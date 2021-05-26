@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Testing typeof</title>
+  <script>
+    var chevy = {
+      make: "Chevy",
+      model: "Bel Air"
+    };
+
+    var taxi = {
+      make : "Webville Motors",
+      model: "taxi"
+    };
+
+    var fiat1 = {
+      make: "Fiat",
+      model: "500"
+    };
+
+    var fiat2 = {
+      make: "Fiat",
+      model: "500"
+    };
+
+    var fiat3 = fiat1;
+
+    if (fiat1 === fiat3) {
+      console.log("fiat1 equals to fiat3")
+    }
+
+    if (fiat1 === fiat2) {
+      console.log("fiat1 equals to fiat3")
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

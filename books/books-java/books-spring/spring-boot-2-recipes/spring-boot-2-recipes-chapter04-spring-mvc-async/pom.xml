@@ -5,11 +5,18 @@
 		<artifactId>spring-boot-2-recipes</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
+	
 	<artifactId>spring-boot-2-recipes-chapter04-spring-mvc-async</artifactId>
 	<packaging>pom</packaging>
+	
 	<modules>
 		<module>spring-boot-2-recipes-chapter04-recipe-4-1-i-asynchronous-request-handling-controllers-taskExecutor</module>
 		<module>spring-boot-2-recipes-chapter04-recipe-4-1-ii-asynchronous-request-handling-controllers-taskExecutor</module>
 		<module>spring-boot-2-recipes-chapter04-recipe-4-1-iii-asynchronous-request-handling-controllers-taskExecutor</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-2-i-response-writers</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-2-ii-response-writers</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-2-iii-response-writers</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-3-websockets</module>
 	</modules>
+	
 </project>

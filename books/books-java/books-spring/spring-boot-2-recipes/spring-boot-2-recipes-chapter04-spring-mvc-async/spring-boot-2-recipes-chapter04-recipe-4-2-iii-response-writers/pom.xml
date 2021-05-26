@@ -5,7 +5,7 @@
 		<artifactId>spring-boot-2-recipes-chapter04-spring-mvc-async</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>spring-boot-2-recipes-chapter04-recipe-4-1-iii-asynchronous-request-handling-controllers-taskExecutor</artifactId>
+	<artifactId>spring-boot-2-recipes-chapter04-recipe-4-2-iii-response-writers</artifactId>
 
 	<dependencyManagement>
 		<dependencies>
@@ -42,4 +42,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
