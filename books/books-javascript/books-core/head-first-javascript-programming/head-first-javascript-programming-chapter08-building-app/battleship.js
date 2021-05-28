@@ -176,10 +176,14 @@ function parseGuess(guess) {
 		var column = guess.charAt(1);
 		
 		if (isNaN(row) || isNaN(column)) {
+			
 			alert("Oops, that isn't on the board.");
+
 		} else if (row < 0 || row >= model.boardSize ||
 		           column < 0 || column >= model.boardSize) {
+
 			alert("Oops, that's off the board!");
+			
 		} else {
 			return row + column;
 		}

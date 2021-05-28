@@ -131,5 +131,6 @@
 		<module>spring-boot-2-recipes-chapter02-spring-boot-basics</module>
 		<module>spring-boot-2-recipes-chapter03-spring-mvc</module>
 		<module>spring-boot-2-recipes-chapter04-spring-mvc-async</module>
+		<module>spring-boot-2-recipes-chapter05-spring-webflux</module>
 	</modules>
 </project>
