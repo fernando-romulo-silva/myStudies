@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Testing typeof</title>
+  <script>
+    var emot = "XO|xx|xOO";
+    var hugs = 0;
+    var kisses = 0;
+
+    emot = emot.trim();
+    emot = emot.toUpperCase();
+
+    for(var i = 0; i < emot.length; i++) {
+      if (emot.charAt(i) == "X") {
+        hugs++;
+      } else if (emot.charAt(i) == "O") {
+        kisses++;
+      }
+    }
+
+    var emot2 = emot.split("|");
+    console.log("The value of emot split is ", emot2);
+
+  </script>
+</head>
+<body>
+</body>
+</html>

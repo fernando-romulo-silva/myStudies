@@ -1,6 +1,9 @@
 # init the swarm
 docker swarm init
 
+# leave the swarm
+docker swarm leave --f
+
 # remote swarms
 docker swarm init --advertise-addr 10.0.0.1:2377 --listen-addr 10.0.0.1:2377
 
@@ -31,3 +34,15 @@ docker service ps web-fe
 
 # check more details
 docker service inspect --pretty web-fe
+
+# delete 
+docker service rm web-fe
+
+
+
+
+docker service create --name uber-svc --network uber-net -p 80:80 --replicas 12 nigelpoulton/tu-demo:v1
+
+docker service update --image nigelpoulton/tu-demo:v2 --update-parallelism 2 --update-delay 20s uber-svc
+
+docker service inspect --pretty uber-svc

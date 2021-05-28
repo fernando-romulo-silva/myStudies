@@ -1,0 +1,9 @@
+docker swarm init
+
+docker stack deploy -c docker-stack.yml seastack
+
+docker stack ls
+
+docker stack ps seastack
+
+docker stack rm seastack

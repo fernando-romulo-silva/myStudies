@@ -16,7 +16,11 @@
 		<module>spring-boot-2-recipes-chapter04-recipe-4-2-i-response-writers</module>
 		<module>spring-boot-2-recipes-chapter04-recipe-4-2-ii-response-writers</module>
 		<module>spring-boot-2-recipes-chapter04-recipe-4-2-iii-response-writers</module>
-		<module>spring-boot-2-recipes-chapter04-recipe-4-3-websockets</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-2-iv-response-writers</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-3-i-websockets</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-3-ii-websockets</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-4-i-webSockets-with-STOMP</module>
+		<module>spring-boot-2-recipes-chapter04-recipe-4-4-ii-webSockets-with-STOMP</module>
 	</modules>
 	
 </project>

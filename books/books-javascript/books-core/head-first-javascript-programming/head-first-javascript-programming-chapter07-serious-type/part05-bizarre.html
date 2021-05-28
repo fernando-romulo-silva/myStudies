@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Testing typeof</title>
+  <script>
+    // undefined is falsey.
+    var testThis;
+    if (testThis) {
+      console.log("do something testThis");
+    }
+    
+    // null is falsey.
+    var element = document.getElementById("elementDoesntExist");
+    if (element) {
+      console.log("do something element");
+    }
+
+    // 0 is falsey.
+    if (0) {
+      console.log("do something 0");
+    }
+
+    // The empty string is falsey.
+    if ("") {
+      console.log("do something \"");
+    }
+
+    // NaN is falsey.
+    if (NaN) {
+      console.log("do something NaN");
+    }
+
+    //============================================================================================
+
+    // [] is truey
+    if ([]) {
+      console.log("[] is true")
+    }
+
+    // element that exist is truey
+    var element = document.getElementById("elementDoesExist");
+    if (element) {
+      console.log("element exists is true");
+    }
+
+    // 1 is truey
+    if (1) {
+      console.log("1 exists is true");
+    }
+
+    // "mercy me" is truey
+    if ("mercy me") {
+      console.log("String filled is true");
+    }
+
+  </script>
+</head>
+<body>
+</body>
+</html>
