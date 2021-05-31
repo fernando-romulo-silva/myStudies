@@ -30,7 +30,9 @@ var model = {
 			if (ship.hits[index] === "hit") {
 				
 				view.displayMessage("Oops, you already hit that location!");
+				
 				return true;
+
 			} else if (index >= 0) {
 				
 				ship.hits[index] = "hit";
@@ -69,7 +71,9 @@ var model = {
 		for (var i = 0; i < this.numShips; i++) {
 			
 			do {
+				
 				locations = this.generateShip();
+
 			} while (this.collision(locations));
 			
 			this.ships[i].locations = locations;
