@@ -25,24 +25,24 @@ public class OrderControllerSliceWithSpyTest {
   @Test
   public void listOrders() {
 
-      webTestClient.get().uri("/orders") //
-		      .exchange() //
-		      .expectStatus().isOk() //
-		      .expectBodyList(Order.class).hasSize(25); //
+    webTestClient.get().uri("/orders")
+            .exchange()
+              .expectStatus().isOk()
+              .expectBodyList(Order.class).hasSize(25);
   }
 
   @Test
   public void addAndGetOrder() {
-    Order order = new Order("test1", BigDecimal.valueOf(1234.56));
+    var order = new Order("test1", BigDecimal.valueOf(1234.56));
 
-    webTestClient.post().uri("/orders").bodyValue(order)  //
-            .exchange()                                   //
-              .expectStatus().isOk()                      //
-              .expectBody(Order.class).isEqualTo(order);  //
+    webTestClient.post().uri("/orders").bodyValue(order)
+            .exchange()
+              .expectStatus().isOk()
+              .expectBody(Order.class).isEqualTo(order);
 
-    webTestClient.get().uri("/orders/{id}", order.getId())//
-            .exchange()                                   //
-            .expectStatus().isOk()                        //
-            .expectBody(Order.class).isEqualTo(order);    //
+    webTestClient.get().uri("/orders/{id}", order.getId())
+            .exchange()
+            .expectStatus().isOk()
+            .expectBody(Order.class).isEqualTo(order);
   }
 }

@@ -1,18 +1,35 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>br.com.fernando</groupId>
-    <artifactId>spring-boot-2-recipes</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-  </parent>
-  <artifactId>spring-boot-2-recipes-chapter05-spring-webflux</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>spring-boot-2-recipes</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>spring-boot-2-recipes-chapter05-spring-webflux</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>
   		spring-boot-2-recipes-chapter05-recipe-5-1-developing-reactive-spring-webflux
   	</module>
-  	<module>
+		<module>
   		spring-boot-2-recipes-chapter05-recipe-5-2-i-publising-consuming-reactive-rest-services
   	</module>
-  </modules>
+		<module>
+  		spring-boot-2-recipes-chapter05-recipe-5-2-ii-publising-consuming-reactive-rest-services
+  	</module>
+		<module>
+			spring-boot-2-recipes-chapter05-recipe-5-2-iii-publising-consuming-reactive-rest-services
+		</module>
+		<module>
+			spring-boot-2-recipes-chapter05-recipe-5-3-i-use-thymeleaf-template-engine
+		</module>
+		<module>
+			spring-boot-2-recipes-chapter05-recipe-5-3-ii-use-thymeleaf-template-engine
+		</module>
+		<module>
+			spring-boot-2-recipes-chapter05-recipe-5-4-webflux-and-websockets
+		</module>
+	</modules>
 </project>

@@ -1,6 +1,7 @@
 package com.apress.springbootrecipes.order.web;
 
-import java.math.BigDecimal;
+import com.apress.springbootrecipes.order.Order;
+import com.apress.springbootrecipes.order.OrderService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +10,7 @@ import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-import com.apress.springbootrecipes.order.Order;
-import com.apress.springbootrecipes.order.OrderService;
+import java.math.BigDecimal;
 
 @WebFluxTest(OrderController.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
@@ -33,16 +33,16 @@ public class OrderControllerSliceWithSpyTest {
 
   @Test
   public void addAndGetOrder() {
-    Order order = new Order("test1", BigDecimal.valueOf(1234.56));
+    var order = new Order("test1", BigDecimal.valueOf(1234.56));
 
-    webTestClient.post().uri("/orders").bodyValue(order)  //
-            .exchange()                                   //
-              .expectStatus().isOk()                      //
-              .expectBody(Order.class).isEqualTo(order);  //
+    webTestClient.post().uri("/orders").bodyValue(order) // 
+            .exchange()                                  // 
+              .expectStatus().isOk()                     // 
+              .expectBody(Order.class).isEqualTo(order); // 
 
-    webTestClient.get().uri("/orders/{id}", order.getId())//
-            .exchange()                                   //
-            .expectStatus().isOk()                        //
-            .expectBody(Order.class).isEqualTo(order);    //
+    webTestClient.get().uri("/orders/{id}", order.getId()) // 
+            .exchange()                                    // 
+            .expectStatus().isOk()                         // 
+            .expectBody(Order.class).isEqualTo(order);     // 
   }
 }
