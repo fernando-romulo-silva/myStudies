@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>br.com.fernando</groupId>
+    <artifactId>spring-boot-2-recipes</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>spring-boot-2-recipes-chapter06-spring-security</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>spring-boot-2-recipes-chapter06-recipe-6-1-i-enable-security-spring-boot</module>
+  	<module>spring-boot-2-recipes-chapter06-recipe-6-1-ii-enable-security-spring-boot</module>
+  </modules>
+</project>
