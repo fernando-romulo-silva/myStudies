@@ -10,5 +10,8 @@
   <modules>
   	<module>spring-boot-2-recipes-chapter06-recipe-6-1-i-enable-security-spring-boot</module>
   	<module>spring-boot-2-recipes-chapter06-recipe-6-1-ii-enable-security-spring-boot</module>
+  	<module>
+  		spring-boot-2-recipes-chapter06-recipe-6-2-i-logging-web-applications
+  	</module>
   </modules>
 </project>

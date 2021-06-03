@@ -1,0 +1,39 @@
+vagrant up
+
+vagrant ssh standalone
+
+sudo yum remove docker*
+
+sudo yum install -y yum-utils   device-mapper-persistent-data   lvm2
+
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+sudo yum install -y docker-ce docker-ce-cli containerd.io
+
+sudo systemctl enable docker
+
+sudo systemctl enable docker
+
+sudo systemctl start docker
+
+sudo docker container run hello-world
+
+docker container ls
+
+sudo usermod -a -G docker $USER
+
+newgrp docker
+
+exit the machine
+
+sudo systemctl status docker
+
+docker run -d nginx:alpine
+
+ps -efa|grep -v grep|egrep -e containerd -e nginx
+
+sudo ls -laRt /var/run/docker/runtime-runc/moby
+
+docker container exec 2d8ef53aff54d8d9844d8b6c61103f98e802142888ef420931703e071d84c5f5 ps -ef
+
+sudo lsns
