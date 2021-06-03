@@ -7,9 +7,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>
-			murachs-java-servlets-jsp-chapter02-how-structure-with-mvc
-		</module>
+		<module>murachs-java-servlets-jsp-chapter02-how-structure-with-mvc</module>
+		<module>murachs-java-servlets-jsp-chapter04-crash-course-html5-and-css</module>
 	</modules>
 
 	<properties>
