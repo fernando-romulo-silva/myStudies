@@ -1,0 +1,9 @@
+docker container run -ti debian
+
+apt-get install postfix
+
+exit
+
+docker container commit 95fcb33b2247 debian-with-postfix
+
+docker image ls

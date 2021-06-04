@@ -37,3 +37,9 @@ sudo ls -laRt /var/run/docker/runtime-runc/moby
 docker container exec 2d8ef53aff54d8d9844d8b6c61103f98e802142888ef420931703e071d84c5f5 ps -ef
 
 sudo lsns
+
+
+
+docker container run --rm -it alpine sh -c "chown nobody /etc/passwd; ls -l /etc/passwd" -rw-r--r-- 1 nobody root 1230 Jun 17 09:00 /etc/passwd
+
+docker container run --rm -it --cap-drop=ALL alpine sh -c "chown nobody /etc/passwd; ls -l /etc/passwd"
