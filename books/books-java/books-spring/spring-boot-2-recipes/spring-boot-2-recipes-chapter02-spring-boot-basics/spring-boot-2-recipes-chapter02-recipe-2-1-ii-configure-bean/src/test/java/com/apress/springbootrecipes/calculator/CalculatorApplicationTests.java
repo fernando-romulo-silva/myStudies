@@ -1,6 +1,6 @@
 package com.apress.springbootrecipes.calculator;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(classes = CalculatorApplication.class)

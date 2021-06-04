@@ -8,6 +8,7 @@
 	img { margin: 20px; }
   </style>
   <script>
+  
 	window.onload = function() {
 		var images = document.getElementsByTagName("img");
 		for (var i = 0; i < images.length; i++) {
@@ -15,6 +16,7 @@
 			images[i].onmouseout = reblur;
 		}
 	};
+	
 	function showAnswer(eventObj) {
 		var image = eventObj.target;
 		var name = image.id;
@@ -28,6 +30,7 @@
 		name = name + "blur.jpg";
 		image.src = name;
 	}
+	
   </script>
 </head>
 <body>

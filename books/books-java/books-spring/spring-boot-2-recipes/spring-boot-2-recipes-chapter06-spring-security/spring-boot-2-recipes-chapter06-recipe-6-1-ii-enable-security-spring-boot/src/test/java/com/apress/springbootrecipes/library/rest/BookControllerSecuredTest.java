@@ -34,6 +34,20 @@ public class BookControllerSecuredTest {
 
     @MockBean
     private BookService bookService;
+    
+
+    @Test
+    public void shouldAddBook() throws Exception {
+
+	when(bookService.create(any(Book.class))).thenReturn(new Book("123456789", "Test Book Stored", "T. Author"));
+
+	mockMvc.perform(post("/books")//
+		.contentType(MediaType.APPLICATION_JSON)//
+		.content("{ \"isbn\" : \"123456789\"}, \"title\" : \"Test Book\", \"authors\" : [\"T. Author\"]")//
+		.with(csrf()))//
+		.andExpect(status().isCreated())//
+		.andExpect(header().string("Location", "http://localhost/books/123456789"));
+    }
 
     @Test
     public void shouldReturnListOfBooks() throws Exception {
@@ -68,18 +82,4 @@ public class BookControllerSecuredTest {
 		.andExpect(MockMvcResultMatchers.jsonPath("$.isbn", Matchers.equalTo("123")))//
 		.andExpect(MockMvcResultMatchers.jsonPath("$.title", Matchers.equalTo("Spring 5 Recipes")));
     }
-
-    @Test
-    public void shouldAddBook() throws Exception {
-
-	when(bookService.create(any(Book.class))).thenReturn(new Book("123456789", "Test Book Stored", "T. Author"));
-
-	mockMvc.perform(post("/books")//
-		.contentType(MediaType.APPLICATION_JSON)//
-		.content("{ \"isbn\" : \"123456789\"}, \"title\" : \"Test Book\", \"authors\" : [\"T. Author\"]")//
-		.with(csrf()))//
-		.andExpect(status().isCreated())//
-		.andExpect(header().string("Location", "http://localhost/books/123456789"));
-    }
-
 }

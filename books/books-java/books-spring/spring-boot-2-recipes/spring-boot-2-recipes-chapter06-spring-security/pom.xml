@@ -13,5 +13,6 @@
   	<module>
   		spring-boot-2-recipes-chapter06-recipe-6-2-i-logging-web-applications
   	</module>
+  	<module>spring-boot-2-recipes-chapter06-recipe-6-3-i-authenticating-users</module>
   </modules>
 </project>

@@ -25,22 +25,31 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 	http.securityContext() //
-			.and().exceptionHandling() //
-			.and().servletApi() //
-			.and().httpBasic() //
-			.and().logout().logoutSuccessUrl("/").and().headers() //
-			.and().csrf() //
-			//
-			.and().anonymous().principal("guest").authorities("ROLE_GUEST") //
-			.and().rememberMe() //
-			//
-			.and().formLogin() //
-			.loginPage("/login.html").defaultSuccessUrl("/") //
-			//
-			.failureUrl("/login.html?error=true").permitAll() //
-			.and().authorizeRequests() //
-			.mvcMatchers("/").permitAll() //
-			.anyRequest().authenticated(); //
+		.and().exceptionHandling() //
+		.and().servletApi() //
+		.and().httpBasic() //
+		//
+		.and().logout()
+		/*-*/.logoutSuccessUrl("/") //
+		//
+		.and().headers() //
+		.and().csrf() //
+		//
+		.and().anonymous() //
+		/*-*/.principal("guest") //
+		/*-*/.authorities("ROLE_GUEST") //
+		//
+		.and().rememberMe() //
+		//
+		.and().formLogin() //
+		/*-*/.loginPage("/login.html")
+		/*-*//*-*/.defaultSuccessUrl("/") //
+		/*-*//*-*/.failureUrl("/login.html?error=true")
+		/*-*/.permitAll() //
+		//
+		.and().authorizeRequests() //
+		/*-*/.mvcMatchers("/").permitAll() //
+		/*-*/.anyRequest().authenticated(); //
     }
 
     @Bean
@@ -52,7 +61,7 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
 
     @Override
     public void configure(final WebSecurity web) throws Exception {
-        super.configure(web);
-        web.httpFirewall(allowUrlEncodedSlashHttpFirewall());
+	super.configure(web);
+	web.httpFirewall(allowUrlEncodedSlashHttpFirewall());
     }
 }
