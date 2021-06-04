@@ -1,11 +1,10 @@
 package com.apress.springbootrecipes.calculator;
 
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.anyChar;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-
-import static org.assertj.core.api.Assertions.*;
 
 import java.util.Collections;
 

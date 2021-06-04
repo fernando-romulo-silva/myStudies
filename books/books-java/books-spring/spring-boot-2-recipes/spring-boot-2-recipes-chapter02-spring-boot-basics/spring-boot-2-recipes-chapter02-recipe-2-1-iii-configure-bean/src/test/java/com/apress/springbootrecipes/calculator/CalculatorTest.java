@@ -1,29 +1,36 @@
 package com.apress.springbootrecipes.calculator;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Mockito;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.anyChar;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import java.util.Collections;
 
-import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 public class CalculatorTest {
 
     private Calculator calculator;
     private Operation mockOperation;
 
-    @Before
+    @BeforeEach
     public void setup() {
 	mockOperation = Mockito.mock(Operation.class);
 	calculator = new Calculator(Collections.singletonList(mockOperation));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void throwExceptionWhenNoSuitableOperationFound() {
 
 	when(mockOperation.handles(anyChar())).thenReturn(false);
-	calculator.calculate(2, 2, '*');
+
+	assertThatThrownBy(() -> {
+	    calculator.calculate(2, 2, '*');
+	}).isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
