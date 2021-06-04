@@ -32,6 +32,9 @@
 		</module>
 		<module>head-first-javascript-programming-chapter07-serious-type</module>
 		<module>head-first-javascript-programming-chapter08-building-app</module>
+		<module>
+			head-first-javascript-programming-chapter09-handling-events
+		</module>
 	</modules>
 
 	<dependencies>

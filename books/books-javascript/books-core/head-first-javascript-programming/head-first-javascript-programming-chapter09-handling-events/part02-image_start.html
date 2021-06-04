@@ -1,0 +1,51 @@
+<!-- use this file to get started and follow along! -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Image Guess </title>
+  <style>
+	    
+      body { margin: 20px; }
+      img { margin: 20px; }
+
+  </style>
+  <script>
+
+    
+    window.onload = init;
+    
+    function init() {
+
+      var image = document.getElementById("zero");
+
+      image.onclick = showAnswer;
+    }
+
+
+    function showAnswer() {
+      var image = document.getElementById("zero");
+      image.src = "zero.jpg";
+    }
+
+    
+
+
+  </script>
+</head>
+<body>
+  
+  
+  <img id="zero" src="zeroblur.jpg">
+  <img id="one" src="oneblur.jpg">
+  <img id="two" src="twoblur.jpg">
+  <img id="three" src="threeblur.jpg">
+  <img id="four" src="fourblur.jpg">
+  <img id="five" src="fiveblur.jpg">
+
+
+</body>
+
+
+
+</html
