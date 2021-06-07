@@ -7,3 +7,5 @@ exit
 docker container commit 95fcb33b2247 debian-with-postfix
 
 docker image ls
+
+docker build --file Dockerfile.application -t templated:production --build-arg ENVIRONMENT=production .

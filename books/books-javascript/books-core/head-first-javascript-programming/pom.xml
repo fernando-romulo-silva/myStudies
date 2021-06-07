@@ -35,6 +35,9 @@
 		<module>
 			head-first-javascript-programming-chapter09-handling-events
 		</module>
+		<module>
+			head-first-javascript-programming-chapter10-liberated-functions
+		</module>
 	</modules>
 
 	<dependencies>

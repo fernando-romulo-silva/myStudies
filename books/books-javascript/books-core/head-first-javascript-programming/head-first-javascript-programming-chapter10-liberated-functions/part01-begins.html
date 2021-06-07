@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>First</title>
+<meta charset="utf-8">
+<script>
+
+// function declaration
+function quack(num) {
+	
+	for (var i = 0; i < num; i++) {
+		console.log("Quack!");
+	}
+};
+
+// function expression
+var fly = function(num) {
+	for (var i = 0; i < num; i++) {
+		console.log("fly!");
+	}	
+}
+
+var superFly = fly;
+superFly(2); // add some parethese and agurment and we can invoke it!
+
+
+var superQuack = quack; // even though quack was created by function declaration, the value in quack is a function reference too
+
+superQuack(3);
+
+</script>
+</head>
+<body> </body>
+</html>
+
