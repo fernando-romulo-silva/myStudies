@@ -15,5 +15,8 @@
   	</module>
   	<module>spring-boot-2-recipes-chapter06-recipe-6-3-i-authenticating-users</module>
   	<module>spring-boot-2-recipes-chapter06-recipe-6-3-ii-authenticating-users</module>
+  	<module>
+  		spring-boot-2-recipes-chapter06-recipe-6-3-iii-authenticating-users
+  	</module>
   </modules>
 </project>

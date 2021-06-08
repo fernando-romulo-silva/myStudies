@@ -7,7 +7,7 @@
 		<artifactId>spring-boot-2-recipes-chapter06-spring-security</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>spring-boot-2-recipes-chapter06-recipe-6-3-ii-authenticating-users</artifactId>
+	<artifactId>spring-boot-2-recipes-chapter06-recipe-6-3-iii-authenticating-users</artifactId>
 
 	<dependencyManagement>
 		<dependencies>
