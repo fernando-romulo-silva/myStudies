@@ -13,12 +13,12 @@ import jakarta.servlet.http.HttpServletResponse;
 public class TestServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, 
-            HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("text/html");        
+        
         PrintWriter out = response.getWriter();        
+        
         try {
             out.println("<h1>HTML from servlet</h1>");
         } 
@@ -28,9 +28,7 @@ public class TestServlet extends HttpServlet {
     }
     
     @Override
-    protected void doGet(HttpServletRequest request, 
-            HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request,  HttpServletResponse response) throws ServletException, IOException {
 
         doPost(request, response);
     }    
