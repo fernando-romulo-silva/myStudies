@@ -4,8 +4,28 @@ apt-get install postfix
 
 exit
 
+
+
 docker container commit 95fcb33b2247 debian-with-postfix
 
 docker image ls
 
-docker build --file Dockerfile.application -t templated:production --build-arg ENVIRONMENT=production .
+
+
+docker image build [-t  MY_TAG] [--label MY_LABEL=VALUE] [--file MY_DOCKERFILE] [BUILD_CONTEXT]
+
+docker build --file Dockerfile.application -t templated:production --label enviroment=remote --build-arg ENVIRONMENT=production .
+
+
+
+docker image ls --filter label=enviroment
+
+docker image ls --format "table {{.ID}}\\t{{.Repository}}:{{.Tag}}\\t{{.CreatedAt}}"
+
+
+
+docker image save nginx:alpine -o /tmp/codegazers_colors_test.tar
+
+docker image rm nginx:alpine -f
+
+docker image load </tmp/codegazers_colors_test.tar

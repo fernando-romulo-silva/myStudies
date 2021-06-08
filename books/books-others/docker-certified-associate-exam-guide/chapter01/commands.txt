@@ -10,11 +10,15 @@ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/dock
 
 sudo yum install -y docker-ce docker-ce-cli containerd.io
 
+
+
 sudo systemctl enable docker
 
 sudo systemctl enable docker
 
 sudo systemctl start docker
+
+
 
 sudo docker container run hello-world
 
@@ -28,9 +32,13 @@ exit the machine
 
 sudo systemctl status docker
 
+
+
 docker run -d nginx:alpine
 
 ps -efa|grep -v grep|egrep -e containerd -e nginx
+
+
 
 sudo ls -laRt /var/run/docker/runtime-runc/moby
 
@@ -43,3 +51,6 @@ sudo lsns
 docker container run --rm -it alpine sh -c "chown nobody /etc/passwd; ls -l /etc/passwd" -rw-r--r-- 1 nobody root 1230 Jun 17 09:00 /etc/passwd
 
 docker container run --rm -it --cap-drop=ALL alpine sh -c "chown nobody /etc/passwd; ls -l /etc/passwd"
+
+
+
