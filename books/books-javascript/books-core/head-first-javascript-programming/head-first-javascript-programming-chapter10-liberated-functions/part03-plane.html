@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>First class functions</title>
+<script>
+
+var passengers = [  { name: "Jane Doloop", paid: true, ticket: "coach" },
+					{ name: "Dr. Evel", paid: true, ticket: "firstclass" },
+					{ name: "Sue Property", paid: false, ticket: "firstclass" },
+					{ name: "John Funcall", paid: true, ticket: "premium" } ];
+					
+					
+					
+function processPassengers(passengers, testFunction) {
+	
+	for (var i = 0; i < passengers.length; i++) {
+		if (testFunction(passengers[i])) {
+			return false;
+		}
+	}
+	
+	return true;
+}
+					
+				
+// here's the function to check to see if a passenger is no on the no-fly list. 				
+function checkNoFlyList(passenger) {
+	return (passenger.name === "Dr. Evel");
+}
+
+// funtion to check to see if a passagenger has paid
+function checkNotPaid(passenger) {
+	return (!passenger.paid);
+}
+
+
+
+//
+//plane can only fly if every passenger is on the fly flist
+//
+var allCanFly = processPassengers(passengers, checkNoFlyList);
+if (!allCanFly) {
+	console.log("The plane can't take off: we have a passenger on the no fly list.");
+}
+
+//
+//plane can only fly if every passenger has paid
+//
+var allPaid = processPassengers(passengers, checkNotPaid);
+if (!allPaid) {
+	console.log("The plane can't take off: not everyone has paid.");
+}
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+

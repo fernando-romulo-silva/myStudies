@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>First class functions</title>
+<script>
+
+var passengers = [  { name: "Jane Doloop", paid: true, ticket: "coach" },
+					{ name: "Dr. Evel", paid: true, ticket: "firstclass" },
+					{ name: "Sue Property", paid: false, ticket: "firstclass" },
+					{ name: "John Funcall", paid: true, ticket: "premium" } ];
+
+function checkPaid(passengers) {
+	
+	for (var i = 0; i < passengers.length; i++) {
+		if (!passengers[i].paid) {
+			return false; // (A)
+		}
+	}
+	
+	return true;
+}
+
+function checkNoFly(passengers) {
+	
+	for (var i = 0; i < passengers.length; i++) {
+		if (onNoFlyList(passengers[i].name)) {
+			return false; // (B)
+		}
+	}
+	
+	return true;
+}
+
+
+//the only thing different here is the test for paid vesus being on a fly (A) and (B)
+
+
+
+// printPassengers is a different only in that there is no test (instead we pass a passenger to console)
+// and we don't care about the return valeu, but still interact through the passengers.
+
+function printPassengers(passengers) {
+	
+	for (var i = 0; i < passengers.length; i++) {
+		console.log(passengers[i].name);
+	}
+}
+
+
+function onNoFlyList(name) {
+	
+	return true;
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
