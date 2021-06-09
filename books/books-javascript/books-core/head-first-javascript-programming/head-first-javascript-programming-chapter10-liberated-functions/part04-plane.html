@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>First class functions</title>
+<script>
+
+var passengers = [  { name: "Jane Doloop", paid: true, ticket: "coach" },
+					{ name: "Dr. Evel", paid: true, ticket: "firstclass" },
+					{ name: "Sue Property", paid: false, ticket: "firstclass" },
+					{ name: "John Funcall", paid: true, ticket: "premium" } ];
+
+function processPassengers(passengers, test) {
+	for (var i = 0; i < passengers.length; i++) {
+		if (test(passengers[i])) {
+			return false;
+		}
+	}
+	return true;
+}
+
+
+function printPassenger(passenger) {
+	var message = passenger.name;
+	
+	if (passenger.paid) {
+		message = message + " has paid";
+	} else {
+		message = message + " has not paid";
+	}
+	
+	console.log(message);
+	return false;
+}
+
+// we don't care about the result here; we're just using 
+// processPassengers to display the passenger list
+//
+processPassengers(passengers, printPassenger);
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
