@@ -19,6 +19,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
 
+    public LibrarySecurityConfig() {
+	super(true); // disable default configuration
+    }
+
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 	registry.addViewController("/login.html").setViewName("login");
@@ -26,13 +30,38 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-	http //
-			.authorizeRequests() //
-			.antMatchers(HttpMethod.GET, "/books*") //
-			/*-*/.hasAnyRole("USER", "GUEST") //
-			.antMatchers(HttpMethod.POST, "/books*").hasRole("USER") //
-			.antMatchers(HttpMethod.DELETE, "/books*") //
-			/*-*/.access("hasRole('ROLE_ADMIN') or hasIpAddress('127.0.0.1') or hasIpAddress('0:0:0:0:0:0:0:1')");
+
+	http.securityContext() //
+			.and().exceptionHandling() //
+			.and().servletApi() //
+			.and().httpBasic() //
+			//
+			.and().logout() //
+			/*-*/.logoutSuccessUrl("/") //
+			//
+			.and().headers() //
+			.and().csrf() //
+			//
+			.and().anonymous() //
+			/*-*/.principal("guest") //
+			/*-*/.authorities("ROLE_GUEST") //
+			//
+			.and().rememberMe() //
+			//
+			.and().formLogin() //
+			/*-*//*-*/.loginPage("/login.html") //
+			/*-*//*-*/.defaultSuccessUrl("/") //
+			/*-*//*-*/.failureUrl("/login.html?error=true") //
+			/*-*//*-*/.permitAll() //
+			//
+			.and().authorizeRequests() //
+			/*-*/.antMatchers(HttpMethod.GET, "/books*") //
+			/*-*//*-*/.hasAnyRole("USER", "GUEST") //
+			//
+			/*-*/.antMatchers(HttpMethod.POST, "/books*").hasRole("USER") //
+			//
+			/*-*/.antMatchers(HttpMethod.DELETE, "/books*") //
+			/*-*//*-*/.access("hasRole('ROLE_ADMIN') or hasIpAddress('127.0.0.1') or hasIpAddress('0:0:0:0:0:0:0:1')");
     }
 
     @Override

@@ -29,3 +29,56 @@ docker image save nginx:alpine -o /tmp/codegazers_colors_test.tar
 docker image rm nginx:alpine -f
 
 docker image load </tmp/codegazers_colors_test.tar
+
+
+
+Lab
+
+
+echo "FROM alpine:latest
+RUN echo "hello world"" > Dockerfile.cache
+
+docker image build --file Dockerfile.cache --no-cache --label lab=lab1 -t test1 .
+
+docker image build --file Dockerfile.cache --no-cache --label lab=lab1 -t test2 .
+
+docker image ls --filter label=lab=lab1
+
+echo 'FROM alpine:3.9
+RUN echo "hello world"
+RUN apk add --update -q python3' > Dockerfile.cache
+
+
+time docker image build --file Dockerfile.cache -q -t test3 --no-cache .
+
+echo 'FROM alpine:3.9
+RUN echo "hello world"
+RUN apk add --update -q python3
+RUN apk add -q httpie' > Dockerfile.cache
+
+time docker image build --file Dockerfile.cache -q -t test4 --no-cache .
+
+
+
+
+
+echo 'FROM alpine
+RUN mkdir /data
+RUN echo "hello world" > /data/helloworld
+VOLUME /data' > Dockerfile.chapter2.lab2
+
+docker image build -f Dockerfile.chapter2.lab2 -t ch2lab2 --label lab=lab2 .
+
+docker container run ch2lab2 ls -lt /data
+
+
+
+
+echo 'FROM alpine
+RUN mkdir /data
+VOLUME /data
+RUN echo "hello world" > /data/helloworld' > Dockerfile.chapter2.lab2-2
+
+docker image build -f Dockerfile.chapter2.lab2-2 -t ch2lab2-2 --label lab=lab2 .
+
+docker container run ch2lab2-2 ls -lt /data

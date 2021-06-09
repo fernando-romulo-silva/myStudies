@@ -7,7 +7,7 @@
 		<artifactId>spring-boot-2-recipes-chapter06-spring-security</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>spring-boot-2-recipes-chapter06-recipe-6-4-i-making-access-control-decisions</artifactId>
+	<artifactId>spring-boot-2-recipes-chapter06-recipe-6-4-iii-making-access-control-decisions</artifactId>
 
 	<dependencyManagement>
 		<dependencies>
@@ -38,24 +38,19 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 		</dependency>
 		
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.thymeleaf.extras</groupId>
-			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webflux</artifactId>
-		</dependency>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>		
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -79,5 +74,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

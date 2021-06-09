@@ -1,13 +1,14 @@
 package com.apress.springbootrecipes.library;
 
+import javax.sql.DataSource;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.firewall.HttpFirewall;
 import org.springframework.security.web.firewall.StrictHttpFirewall;
 import org.springframework.stereotype.Controller;
@@ -17,15 +18,25 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
 
-    public LibrarySecurityConfig() {
+    private final DataSource dataSource;
+
+    public LibrarySecurityConfig(DataSource dataSource) {
 	super(true); // disable default configuration
+	this.dataSource = dataSource;
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 	registry.addViewController("/login.html").setViewName("login");
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+	auth.jdbcAuthentication().dataSource(dataSource);
     }
 
     @Override
@@ -54,37 +65,8 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
 			/*-*//*-*/.permitAll() //
 			//
 			.and().authorizeRequests() //
-			/*--*/.antMatchers(HttpMethod.GET, "/books*") //
-			/*--*//*--*/.hasAnyRole("USER", "GUEST") //
-			/*--*/.antMatchers(HttpMethod.POST, "/books*") //
-			/*--*//*--*/.hasRole("USER") //
-			/*--*/.antMatchers(HttpMethod.DELETE, "/books*")//
-			/*--*//*--*/.access("hasRole('ROLE_ADMIN') or @accessChecker.hasLocalAccess(authentication)");
-    }
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-	final var adminUser = User//
-			.withUsername("admin@books.io") //
-			.password("{noop}secret") //
-			.roles("USER", "ADMIN") //
-			.build();
-
-	final var normalUser = User //
-			.withUsername("marten@books.io") //
-			.password("{noop}user") //
-			.roles("USER") //
-			.build();
-
-	final var disabledUser = User //
-			.withUsername("john@books.io") //
-			.password("{noop}user") //
-			.disabled(true) //
-			.roles("USER") //
-			.build();
-
-	auth.inMemoryAuthentication().withUser(adminUser).withUser(normalUser).withUser(disabledUser);
+			/*-*/.mvcMatchers("/").permitAll() //
+			/*-*/.anyRequest().authenticated(); //
     }
 
     @Bean

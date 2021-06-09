@@ -24,5 +24,8 @@
   	<module>
   		spring-boot-2-recipes-chapter06-recipe-6-4-ii-making-access-control-decisions
   	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter06-recipe-6-4-iii-making-access-control-decisions
+  	</module>
   </modules>
 </project>
