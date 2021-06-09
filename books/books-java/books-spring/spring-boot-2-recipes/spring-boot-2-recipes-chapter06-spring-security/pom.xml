@@ -18,5 +18,11 @@
   	<module>
   		spring-boot-2-recipes-chapter06-recipe-6-3-iii-authenticating-users
   	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter06-recipe-6-4-i-making-access-control-decisions
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter06-recipe-6-4-ii-making-access-control-decisions
+  	</module>
   </modules>
 </project>
