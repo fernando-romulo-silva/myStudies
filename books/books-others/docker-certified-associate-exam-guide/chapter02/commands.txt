@@ -87,6 +87,60 @@ docker container run ch2lab2-2 ls -lt /data
 
 
 
+cd $HOME/chapter2
+mkdir multistage
+cd multistage
+
+
+echo '#include <stdio.h>
+int main()
+{
+  printf("Hello, World!\n");
+  return 0;
+}' > helloword.c
+
+echo 'FROM alpine:3.9 AS compiler 
+RUN apk update && \ 
+apk add --update -q --no-cache alpine-sdk 
+RUN mkdir /myapp 
+WORKDIR /myapp 
+ADD *.c /myapp 
+RUN mkdir bin 
+RUN gcc -Wall helloword.c -o bin/helloworld 
+ 
+FROM alpine:3.9
+COPY --from=compiler /myapp/bin/helloworld /myapp/helloworld 
+CMD /myapp/helloworld' > Dockerfile.multistage
+
+
+docker build --file Dockerfile.multistage --no-cache -t helloworld --label lab=lab3 .
+
+docker container run helloworld:latest
+
+
+
+
+
+docker container run -d -p 5000:5000 --restart=always --name registry registry:2
+
+docker pull alpine
+
+docker tag alpine localhost:5000/my-alpine
+
+docker image push localhost:5000/my-alpine
+
+docker container run localhost:5000/my-alpine:latest ls /tmp
+
+docker container rm --force registry
+
+
+
+
+
+
+cd $HOME/chapter2
+mkdir templating
+cd templating
 
 
 
