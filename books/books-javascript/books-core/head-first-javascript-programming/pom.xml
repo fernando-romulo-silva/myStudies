@@ -38,6 +38,9 @@
 		<module>
 			head-first-javascript-programming-chapter10-liberated-functions
 		</module>
+		<module>
+			head-first-javascript-programming-chapter11-serious-functions
+		</module>
 	</modules>
 
 	<dependencies>

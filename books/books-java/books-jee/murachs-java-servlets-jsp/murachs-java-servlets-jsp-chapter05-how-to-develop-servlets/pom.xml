@@ -1,15 +1,29 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>br.com.fernando</groupId>
-    <artifactId>murachs-java-servlets-jsp</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>murachs-java-servlets-jsp-chapter05-how-to-develop-servlets</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>murachs-java-servlets-jsp</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>murachs-java-servlets-jsp-chapter05-how-to-develop-servlets</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>
   		murachs-java-servlets-jsp-chapter05-part01-email-list
   	</module>
-  </modules>
+		<module>
+  		murachs-java-servlets-jsp-chapter05-part02-ex1-f01-email-list-start
+  	</module>
+		<module>
+  		murachs-java-servlets-jsp-chapter05-part02-ex1-f02-email-list-sol
+  	</module>
+		<module>
+  		murachs-java-servlets-jsp-chapter05-part03-ex2-f01-email-list-start
+  	</module>
+		<module>
+  		murachs-java-servlets-jsp-chapter05-part03-ex2-f02-email-list-sol
+  	</module>
+	</modules>
 </project>

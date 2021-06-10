@@ -82,3 +82,11 @@ RUN echo "hello world" > /data/helloworld' > Dockerfile.chapter2.lab2-2
 docker image build -f Dockerfile.chapter2.lab2-2 -t ch2lab2-2 --label lab=lab2 .
 
 docker container run ch2lab2-2 ls -lt /data
+
+
+
+
+
+
+
+

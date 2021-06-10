@@ -133,5 +133,6 @@
 		<module>spring-boot-2-recipes-chapter04-spring-mvc-async</module>
 		<module>spring-boot-2-recipes-chapter05-spring-webflux</module>
 		<module>spring-boot-2-recipes-chapter06-spring-security</module>
+		<module>spring-boot-2-recipes-chapter07-data-acces</module>
 	</modules>
 </project>

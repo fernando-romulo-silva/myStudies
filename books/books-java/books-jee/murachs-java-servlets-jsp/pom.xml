@@ -12,6 +12,9 @@
 		<module>
 			murachs-java-servlets-jsp-chapter05-how-to-develop-servlets
 		</module>
+		<module>
+			murachs-java-servlets-jsp-chapter06-how-to-develop-java-server-pages
+		</module>
 	</modules>
 
 	<properties>

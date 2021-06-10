@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>First class functions exercise</title>
+<script>
+	function handler() {
+		alert("Yeah, that page loaded!");
+	};
+
+	window.onload = handler;
+
+	// or
+
+	window.onload = function() {
+		alert("Yeah, that page loaded!");
+	};
+
+	// ---------------------------------------------------------
+
+	function cookieAlarm() {
+		alert("Time to take the cookies out of the oven");
+	};
+
+	setTimeout(cookieAlarm, 10000);
+
+	// or
+
+	setTimeout(function() {alert("Time to take the cookies out of the oven");} , 10000);
+	
+	
+	
+</script>
+</head>
+<body>
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scope</title>
+<script>
+	var migrating = true;
+
+	if (migrating) {
+		quack(4);
+		fly(4); // error
+	}
+
+	var fly = function(num) { // referenct function, humm error
+		var sound = "Flying";
+
+		function wingFlapper() {
+			console.log(sound);
+		}
+
+		for (var i = 0; i < num; i++) {
+			wingFlapper();
+		}
+	};
+
+	function quack(num) { // function declaration
+		var sound = "Quack";
+
+		var quacker = function() {
+			console.log(sound);
+		};
+
+		for (var i = 0; i < num; i++) {
+			quacker();
+		}
+	}
+</script>
+</head>
+<body>
+</body>
+</html>
+
