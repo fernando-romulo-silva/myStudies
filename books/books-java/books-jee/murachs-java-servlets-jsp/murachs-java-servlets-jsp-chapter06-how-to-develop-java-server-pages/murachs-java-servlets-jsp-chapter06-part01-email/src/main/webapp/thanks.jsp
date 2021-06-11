@@ -6,7 +6,7 @@
 
 <p>Here is the information that you entered:</p>
 <label>Email:</label>
-<span>${user.emailAddress}</span><br>
+<span>${user.email}</span><br>
 <label>First Name:</label>
 <span>${user.firstName}</span><br>
 <label>Last Name:</label>
