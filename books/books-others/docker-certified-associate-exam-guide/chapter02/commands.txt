@@ -31,9 +31,9 @@ docker image rm nginx:alpine -f
 docker image load </tmp/codegazers_colors_test.tar
 
 
-
+===========================================================================================================================
 Lab
-
+===========================================================================================================================
 
 echo "FROM alpine:latest
 RUN echo "hello world"" > Dockerfile.cache
@@ -60,6 +60,8 @@ time docker image build --file Dockerfile.cache -q -t test4 --no-cache .
 
 
 
+===========================================================================================================================
+
 
 
 echo 'FROM alpine
@@ -84,7 +86,7 @@ docker image build -f Dockerfile.chapter2.lab2-2 -t ch2lab2-2 --label lab=lab2 .
 docker container run ch2lab2-2 ls -lt /data
 
 
-
+===========================================================================================================================
 
 
 cd $HOME/chapter2
@@ -118,7 +120,7 @@ docker build --file Dockerfile.multistage --no-cache -t helloworld --label lab=l
 docker container run helloworld:latest
 
 
-
+===========================================================================================================================
 
 
 docker container run -d -p 5000:5000 --restart=always --name registry registry:2
@@ -134,7 +136,7 @@ docker container run localhost:5000/my-alpine:latest ls /tmp
 docker container rm --force registry
 
 
-
+===========================================================================================================================
 
 
 
@@ -143,4 +145,34 @@ mkdir templating
 cd templating
 
 
+echo 'FROM nginx:1.18.0-alpine
+RUN apk update -q
+RUN apk add curl httpie' > Dockerfile.nginx-dev
+
+echo 'FROM nginx:1.18.0-alpine
+RUN apk update -q' > Dockerfile.nginx
+
+docker image build --quiet --file Dockerfile.nginx-dev -t baseimage:development --label lab=lab4 .
+
+docker image build --quiet --file Dockerfile.nginx -t baseimage:production --label lab=lab4 .
+
+docker image ls --filter label=lab=lab4
+
+
+===========================================================================================================================
+
+
+
+echo 'ARG ENVIRONMENT=development 
+FROM baseimage:${ENVIRONMENT} 
+COPY html/* /usr/share/nginx/html' > Dockerfile.application
+
+mkdir html
+
+echo "This is a simple test and of course it is not an application" > html/index.html
+
+
+docker image build --file Dockerfile.application -t templated:development --build-arg ENVIRONMENT=development --label lab=lab4 .
+
+docker image build --file Dockerfile.application -t templated:production --build-arg ENVIRONMENT=production --label lab=lab4 . 
 

@@ -7,4 +7,18 @@
   </parent>
   <artifactId>spring-boot-2-recipes-chapter07-data-acces</artifactId>
   <packaging>pom</packaging>
+  <modules>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-1-i-configuring-datasource
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-1-ii-configuring-datasource
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-1-iii-configuring-datasource
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-1-iv-configuring-datasource
+  	</module>
+  </modules>
 </project>

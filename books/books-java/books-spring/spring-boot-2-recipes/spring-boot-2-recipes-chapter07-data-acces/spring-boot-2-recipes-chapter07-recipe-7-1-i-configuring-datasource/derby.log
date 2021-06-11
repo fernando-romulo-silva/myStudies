@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Jun 11 15:38:16 BRT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0179-fc5e-1ac7-00003daef8f8 
+on database directory memory:/home/fernando/Development/workspaces/eclipse-workspace/myStudies/books/books-java/books-spring/spring-boot-2-recipes/spring-boot-2-recipes-chapter07-data-acces/spring-boot-2-recipes-chapter06-recipe-7-1-i-configuring-datasource/63278c69-4fcc-4790-af45-124d3eae7760 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@443b7951 
+Loaded from file:/home/fernando/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=16+36-2231
+user.dir=/home/fernando/Development/workspaces/eclipse-workspace/myStudies/books/books-java/books-spring/spring-boot-2-recipes/spring-boot-2-recipes-chapter07-data-acces/spring-boot-2-recipes-chapter06-recipe-7-1-i-configuring-datasource
+os.name=Linux
+os.arch=amd64
+os.version=5.4.0-74-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
