@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Counter closure</title>
+<script>
+
+function makeTimer(doneMessage, n) {
+	
+	setTimeout(function () { // we have a function ... 
+		
+		alert(doneMessage); // with free variable that we are using for setTimeout
+		
+	}, n);
+}
+
+makeTimer("Cookies are done!", 1000); // ... and this function will be executed 1000 miliseconds from now
+// long after the function makeTimer has completed
+
+</script> 
+</head> 
+<body>
+</body>
+</html>
+

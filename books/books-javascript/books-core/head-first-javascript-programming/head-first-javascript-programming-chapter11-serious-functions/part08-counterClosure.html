@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Counter closure</title>
+<script>
+	var count = 0;
+
+	function counter() {
+		count = count + 1;
+		return count;
+	}
+
+	console.log(counter());
+	console.log(counter());
+	console.log(counter());
+</script>
+</head>
+<body>
+</body>
+</html>
+

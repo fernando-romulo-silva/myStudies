@@ -6,17 +6,18 @@
 <script>
 
 function makeCounter() {
-	var count = 0;
+	var count = 0; // to be a closure, must access a var out of the inner function (counter)
 
 	function counter() {
 		count = count + 1;
 		return count;
 	}
-	return counter;
-
+	
+	return counter; // return a inner function
 }
 
-var doCount = makeCounter();
+var doCount = makeCounter(); // a inner function execute the count
+
 console.log(doCount());
 console.log(doCount());
 console.log(doCount());
