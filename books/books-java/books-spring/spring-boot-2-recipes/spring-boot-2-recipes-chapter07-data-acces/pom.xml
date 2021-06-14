@@ -20,5 +20,17 @@
   	<module>
   		spring-boot-2-recipes-chapter07-recipe-7-1-iv-configuring-datasource
   	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-1-v-configuring-datasource
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-2-i-use-jdbc-template
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-2-ii-use-jdbc-template
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-2-iii-use-jdbc-template
+  	</module>
   </modules>
 </project>
