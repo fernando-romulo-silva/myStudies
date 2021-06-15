@@ -23,7 +23,7 @@ public class JdbcCustomerRepositoryTest {
     public void insertNewCustomer() {
 	assertThat(repository.findAll()).isEmpty();
 
-	Customer customer = repository.save(new Customer(-1, "T. Testing", "t.testing@test123.tst"));
+	final var customer = repository.save(new Customer(-1, "T. Testing", "t.testing@test123.tst"));
 
 	assertThat(customer.getId()).isGreaterThan(-1L);
 	assertThat(customer.getName()).isEqualTo("T. Testing");
