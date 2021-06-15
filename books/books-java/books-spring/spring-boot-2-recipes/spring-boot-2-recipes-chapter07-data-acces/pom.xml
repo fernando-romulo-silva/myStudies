@@ -32,5 +32,9 @@
   	<module>
   		spring-boot-2-recipes-chapter07-recipe-7-2-iii-use-jdbc-template
   	</module>
+  	<module>spring-boot-2-recipes-chapter07-recipe-7-3-i-use-jpa</module>
+  	<module>spring-boot-2-recipes-chapter07-recipe-7-3-ii-use-jpa</module>
+  	<module>spring-boot-2-recipes-chapter07-recipe-7-3-iii-use-jpa</module>
+  	<module>spring-boot-2-recipes-chapter07-recipe-7-3-iv-use-jpa</module>
   </modules>
 </project>
