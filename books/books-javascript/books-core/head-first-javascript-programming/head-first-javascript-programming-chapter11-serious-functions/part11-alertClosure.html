@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Counter closure</title>
+<script>
+
+function makeTimer(doneMessage, n) {
+	
+	setTimeout(function () { // The closure is created here.
+		
+		alert(doneMessage); // Now we're changing the value of doneMessage after we call setTimeout
+		
+	}, n);
+	
+	doneMessage = "OUCH!";
+}
+
+// 1000 milliseconds later, the function in the closure is called. 
+// This function references the doneMessage variable, 
+// which is now set to “OUCH!” in the environment, so we see “OUCH!” in the alert.
+
+makeTimer("Cookies are done!", 1000); //
+</script> 
+</head> 
+<body>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+docker container run nginx:alpine
+
+docker container ls
+
+docker inspect modest_leakey
+
+docker run -ti busybox
+
+# wget http://172.17.0.2 -q -O -
+
+docker container ls --all
+
+docker stop modest_leakey
+
+
+
+docker container run --name ping busybox ping www.google.com
+
+time docker container stop ping
+
+
+
+docker container create --name webserver nginx:alpine
