@@ -14,10 +14,52 @@ docker stop modest_leakey
 
 
 
+
 docker container run --name ping busybox ping www.google.com
 
 time docker container stop ping
 
 
 
+
 docker container create --name webserver nginx:alpine
+
+docker container ls --all --filter name=webserver
+
+docker container ls --filter name=webserver
+
+
+
+
+
+docker container run busybox ip add
+
+docker container run --network=host busybox ip add
+
+
+
+
+docker container ls
+
+docker container exec webserver ps -ef
+
+docker exec -ti --user nginx --env ENVIRONMENT=test webserver /bin/sh 
+
+# id
+
+# env|grep ENVIRON
+
+# exit
+
+touch /tmp/TEST
+
+docker container cp /tmp/TEST webserver:/tmp/TEST
+
+
+
+
+
+docker container logs --tail all webserver
+
+
+

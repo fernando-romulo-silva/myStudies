@@ -15,6 +15,9 @@
 		<module>
 			murachs-java-servlets-jsp-chapter06-how-to-develop-java-server-pages
 		</module>
+		<module>
+			murachs-java-servlets-jsp-chapter07-how-work-with-sessions-cookies
+		</module>
 	</modules>
 
 	<properties>
