@@ -134,5 +134,8 @@
 		<module>spring-boot-2-recipes-chapter05-spring-webflux</module>
 		<module>spring-boot-2-recipes-chapter06-spring-security</module>
 		<module>spring-boot-2-recipes-chapter07-data-acces</module>
+		<module>
+			spring-boot-2-recipes-chapter08-java-enterprise-services
+		</module>
 	</modules>
 </project>

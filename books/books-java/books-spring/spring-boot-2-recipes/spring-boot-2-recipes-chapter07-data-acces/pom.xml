@@ -44,5 +44,11 @@
   	</module>
   	<module>spring-boot-2-recipes-chapter07-recipe-7-5-i-spring-data-mongo</module>
   	<module>spring-boot-2-recipes-chapter07-recipe-7-5-ii-spring-data-mongo</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-5-iii-spring-data-mongo
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-5-iv-spring-data-mongo
+  	</module>
   </modules>
 </project>

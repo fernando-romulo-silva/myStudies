@@ -61,5 +61,55 @@ docker container cp /tmp/TEST webserver:/tmp/TEST
 
 docker container logs --tail all webserver
 
+docker stats --all --format "table [{{.Container}}] {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"
 
+docker container top webserver
+
+
+
+
+docker container diff webserver
+
+
+
+
+docker container ls --all --format "table {{.Names}}: {{.Image}} {{.Command}}" --no-trunc 
+
+
+
+docker run -ti --cap-add SYS_ADMIN --device /dev/mapper/centos-root:/dev/sdx centos
+
+docker container run -ti --device /dev/snd alpine
+
+
+
+===========================================================================================================================
+Lab
+===========================================================================================================================
+
+docker container --help
+
+
+===========================================================================================================================
+
+docker run: docker container run
+docker ps: docker container ls
+docker rm: docker container rm
+docker start/stop: docker container start/stop
+docker port: docker container port
+docker rmi: docker image rm
+
+============================================================================================================================
+
+docker container run -ti -d alpine
+
+docker container ls -l
+
+docker container rename $(docker container ls -ql) myalpineshell
+
+docker container ls -l
+
+docker container attach myalpineshell
+
+docker container rename $(docker container ls -ql) secondshell
 
