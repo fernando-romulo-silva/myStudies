@@ -36,5 +36,11 @@
   	<module>spring-boot-2-recipes-chapter07-recipe-7-3-ii-use-jpa</module>
   	<module>spring-boot-2-recipes-chapter07-recipe-7-3-iii-use-jpa</module>
   	<module>spring-boot-2-recipes-chapter07-recipe-7-3-iv-use-jpa</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-4-i-use-plain-hibernate
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter07-recipe-7-4-ii-use-plain-hibernate
+  	</module>
   </modules>
 </project>

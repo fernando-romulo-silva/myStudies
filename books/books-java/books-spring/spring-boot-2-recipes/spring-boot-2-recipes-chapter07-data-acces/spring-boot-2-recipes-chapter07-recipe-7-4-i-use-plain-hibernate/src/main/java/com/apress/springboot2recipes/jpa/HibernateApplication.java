@@ -11,25 +11,24 @@ import org.springframework.stereotype.Component;
 @SpringBootApplication
 public class HibernateApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HibernateApplication.class, args);
-	}
+    public static void main(String[] args) {
+	SpringApplication.run(HibernateApplication.class, args);
+    }
 }
-
 
 @Component
 class CustomerLister implements ApplicationRunner {
 
-	private final Logger logger = LoggerFactory.getLogger(getClass());
-	private final CustomerRepository customers;
+    private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final CustomerRepository customers;
 
-	CustomerLister(CustomerRepository customers) {
-		this.customers = customers;
-	}
+    CustomerLister(CustomerRepository customers) {
+	this.customers = customers;
+    }
 
-	@Override
-	public void run(ApplicationArguments args) {
+    @Override
+    public void run(ApplicationArguments args) {
 
-		customers.findAll().forEach( customer -> logger.info("{}", customer));
-	}
+	customers.findAll().forEach(customer -> logger.info("{}", customer));
+    }
 }
