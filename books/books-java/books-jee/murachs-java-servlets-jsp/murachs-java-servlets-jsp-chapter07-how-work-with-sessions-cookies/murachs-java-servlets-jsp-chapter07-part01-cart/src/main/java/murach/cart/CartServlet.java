@@ -29,14 +29,18 @@ public class CartServlet extends HttpServlet {
 
 	// perform action and set URL to appropriate page
 	if (action.equals("shop")) {
-	    url = "/index.jsp"; // the "index" page
+	    
+            url = "/index.jsp"; // the "index" page
+            
 	} else if (action.equals("cart")) {
-	    String productCode = request.getParameter("productCode");
+	   
+            String productCode = request.getParameter("productCode");
 	    String quantityString = request.getParameter("quantity");
 
 	    HttpSession session = request.getSession();
 	    Cart cart = (Cart) session.getAttribute("cart");
-	    if (cart == null) {
+	    
+            if (cart == null) {
 		cart = new Cart();
 	    }
 
@@ -58,14 +62,19 @@ public class CartServlet extends HttpServlet {
 	    LineItem lineItem = new LineItem();
 	    lineItem.setProduct(product);
 	    lineItem.setQuantity(quantity);
-	    if (quantity > 0) {
-		cart.addItem(lineItem);
+	    
+            if (quantity > 0) {
+		
+                cart.addItem(lineItem);
+                
 	    } else if (quantity == 0) {
-		cart.removeItem(lineItem);
+		
+                cart.removeItem(lineItem);
 	    }
 
 	    session.setAttribute("cart", cart);
 	    url = "/cart.jsp";
+            
 	} else if (action.equals("checkout")) {
 	    url = "/checkout.jsp";
 	}
