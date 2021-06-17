@@ -7,4 +7,27 @@
   </parent>
   <artifactId>spring-boot-2-recipes-chapter08-java-enterprise-services</artifactId>
   <packaging>pom</packaging>
+  <modules>
+  	<module>
+  		spring-boot-2-recipes-chapter08-recipe-8-1-i-spring-asysnchronous-processing
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter08-recipe-8-1-ii-spring-asysnchronous-processing
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter08-recipe-8-1-iii-spring-asysnchronous-processing
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter08-recipe-8-2-i-spring-task-scheduling
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter08-recipe-8-2-ii-spring-task-scheduling
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter08-recipe-8-3-i-sending-email
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter08-recipe-8-3-ii-sending-email
+  	</module>
+  </modules>
 </project>
