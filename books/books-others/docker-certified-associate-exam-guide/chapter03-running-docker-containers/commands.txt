@@ -113,3 +113,56 @@ docker container attach myalpineshell
 
 docker container rename $(docker container ls -ql) secondshell
 
+
+============================================================================================================================
+
+docker container rm secondshell
+
+docker container ls --all --filter name=myalpineshell --filter name=secondshell
+
+docker container start -a -i myalpineshell
+
+docker container exec -ti myalpineshell sh
+
+# ps -ef
+
+# exit
+
+docker container ls --all --filter name=myalpineshell
+
+============================================================================================================================
+
+docker container run --memory-reservation=250m --name 2GBreserved -d frjaraur/stress-ng:alpine --vm 2 --vm-bytes 1024M
+
+docker container run --memory=250m --name 2GBlimited -d frjaraur/stress-ng:alpine --vm 2 --vm-bytes 1024M
+
+docker container rm -f 2GBlimited 2GBreserved
+
+docker container run -d --cpus=1 --name CPU2vs1 frjaraur/stress-ng:alpine --cpu 2 --timeout 120
+
+docker container run -d --cpus=2 --name CPU2vs2 frjaraur/stress-ng:alpine --cpu 2 --timeout 120
+
+============================================================================================================================
+
+docker run -d --name web1 --label stage=production nginx:alpine
+
+docker run -d --name web2 --label stage=development nginx:alpine
+
+docker run -d --name web3 --label stage=development nginx:alpine
+
+docker container ls
+
+docker container ls --format "table {{.Names}} {{.Command}}\\t{{.Labels}}"
+
+docker container ls --format "table {{.Names}} {{.Command}}\\t{{.Labels}}" --filter label=stage=development
+
+
+docker container kill $(docker container ls --format "{{.ID}}" --filter label=stage=development)
+
+
+docker container ls --format "table {{.Names}}\\t{{.Labels}}"
+
+
+
+
+

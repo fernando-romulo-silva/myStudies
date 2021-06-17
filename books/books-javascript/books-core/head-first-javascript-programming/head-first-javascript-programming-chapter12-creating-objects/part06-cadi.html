@@ -5,13 +5,15 @@
 <title>Car Constructor</title>
 <script>
 
-var cadiParams = {make: "GM", 
-                  model: "Cadillac", 
-                  year: 1955, 
-                  color: "tan", 
-                  passengers: 5, 
-                  convertible: false, 
-                  mileage: 12892};
+var cadiParams = {//
+			          make: "GM", //
+	                  model: "Cadillac", // 
+	                  year: 1955,  //
+	                  color: "tan",  //
+	                  passengers: 5, //
+	                  convertible: false,// 
+	                  mileage: 12892
+                  }; //
 
 var cadi = new Car(cadiParams);
 
@@ -27,12 +29,15 @@ function Car(params) {
 
     this.start = function() {
         this.started = true;
-    };     
+    };
+    
     this.stop = function() {
         this.started = false;
-    };    
+    };
+    
     this.drive = function() {
-        if (this.started) {
+        
+    	if (this.started) {
             alert("Zoom zoom!");
         } else {
             alert("You need to start the engine first.");
@@ -44,6 +49,11 @@ cadi.start();
 cadi.drive();
 cadi.drive();
 cadi.stop();
+
+if (cadi instanceof Car) {
+   console.log("Congrats, it's a Car!");
+}
+
 
 </script>
 </head>

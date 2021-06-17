@@ -4,8 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import javax.mail.internet.MimeMessage;
 
-import org.junit.After;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -22,7 +22,7 @@ public class MailSenderApplicationTest {
 //		    .withConfiguration(GreenMailConfiguration.aConfig()) //
 		    .withPerMethodLifecycle(false);
 
-    @After
+    @AfterEach
     public void cleanUp() {
 	greenMail.reset();
     }
