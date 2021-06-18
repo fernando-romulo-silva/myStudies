@@ -26,7 +26,8 @@ public class DownloadServlet extends HttpServlet {
 
 	// perform action and set URL to appropriate page
 	String url = "/index.jsp";
-	if (action.equals("viewAlbums")) {
+	
+        if (action.equals("viewAlbums")) {
 	    url = "/index.jsp";
 	} else if (action.equals("checkUser")) {
 	    url = checkUser(request, response);
@@ -47,7 +48,8 @@ public class DownloadServlet extends HttpServlet {
 
 	// perform action and set URL to appropriate page
 	String url = "/index.jsp";
-	if (action.equals("registerUser")) {
+	
+        if (action.equals("registerUser")) {
 	    url = registerUser(request, response);
 	}
 
@@ -119,17 +121,20 @@ public class DownloadServlet extends HttpServlet {
 	// create and return a URL for the appropriate Download page
 	String productCode = (String) session.getAttribute("productCode");
 	String url = "/" + productCode + "_download.jsp";
+        
 	return url;
     }
 
     private String deleteCookies(HttpServletRequest request, HttpServletResponse response) {
 
 	Cookie[] cookies = request.getCookies();
-	for (Cookie cookie : cookies) {
+	
+        for (Cookie cookie : cookies) {
 	    cookie.setMaxAge(0); // delete the cookie
 	    cookie.setPath("/"); // allow the download application to access it
 	    response.addCookie(cookie);
 	}
+        
 	String url = "/delete_cookies.jsp";
 	return url;
     }
