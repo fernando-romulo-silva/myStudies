@@ -12,5 +12,26 @@
   	<module>
   		murachs-java-servlets-jsp-chapter07-part02-download
   	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter07-part0p3ex1-f02-email-list-sol
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter07-part03-ex1-f02-download-sol
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter07-part03-ex1-f01-download-start
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter07-part03-ex2-f01-download-start
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter07-part03-ex2-f02-download-sol
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter07-part03-ex3-f01-cart-start
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter07-part03-ex3-f02-cart-sol
+  	</module>
   </modules>
 </project>

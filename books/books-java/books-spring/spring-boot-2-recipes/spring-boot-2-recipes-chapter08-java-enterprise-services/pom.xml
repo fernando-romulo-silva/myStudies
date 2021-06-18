@@ -29,5 +29,8 @@
   	<module>
   		spring-boot-2-recipes-chapter08-recipe-8-3-ii-sending-email
   	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter08-recipe-8-4-i-register-jmx-mbean
+  	</module>
   </modules>
 </project>

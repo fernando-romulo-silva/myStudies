@@ -7,7 +7,7 @@
 		<artifactId>murachs-java-servlets-jsp-chapter07-how-work-with-sessions-cookies</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>murachs-java-servlets-jsp-chapter07-part02-download</artifactId>
+	<artifactId>murachs-java-servlets-jsp-chapter07-part03-ex3-f01-cart-start</artifactId>
 	<packaging>war</packaging>
 
 	<build>

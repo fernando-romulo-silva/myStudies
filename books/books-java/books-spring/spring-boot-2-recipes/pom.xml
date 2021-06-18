@@ -137,5 +137,6 @@
 		<module>
 			spring-boot-2-recipes-chapter08-java-enterprise-services
 		</module>
+		<module>spring-boot-2-recipes-chapter09-messaging</module>
 	</modules>
 </project>

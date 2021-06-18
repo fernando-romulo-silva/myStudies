@@ -44,6 +44,9 @@
 		<module>
 			head-first-javascript-programming-chapter12-creating-objects
 		</module>
+		<module>
+			head-first-javascript-programming-chapter13-extra-strength-objects
+		</module>
 	</modules>
 
 	<dependencies>
