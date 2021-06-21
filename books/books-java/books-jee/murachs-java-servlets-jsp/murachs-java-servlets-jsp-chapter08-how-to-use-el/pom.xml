@@ -9,5 +9,11 @@
   <packaging>pom</packaging>
   <modules>
   	<module>murachs-java-servlets-jsp-chapter08-part01-email</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter08-part02-ex1-f01-email-start
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter08-part02-ex1-f02-email-sol
+  	</module>
   </modules>
 </project>
