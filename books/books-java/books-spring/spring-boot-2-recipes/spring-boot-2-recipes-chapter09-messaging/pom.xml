@@ -9,10 +9,22 @@
   <packaging>pom</packaging>
   <modules>
   	<module>
-  		spring-boot-2-recipes-chapter09-recipe-9-1-i-configure-jms
+  		spring-boot-2-recipes-chapter09-recipe-9-1-i-configure-jms-activeMq
   	</module>
   	<module>
-  		spring-boot-2-recipes-chapter09-recipe-9-1-ii-configure-jms
+  		spring-boot-2-recipes-chapter09-recipe-9-1-ii-configure-jms-artemisMq
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-1-iii-configure-jms-jndi
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-1-iv-configure-jms-manual-config
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-2-i-send-messages-using-jms
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-2-ii-send-messages-using-jms-convert-msg
   	</module>
   </modules>
 </project>

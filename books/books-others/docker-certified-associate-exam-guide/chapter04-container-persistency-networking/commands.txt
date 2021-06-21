@@ -1,0 +1,55 @@
+$ docker image pull --quiet postgres:alpine
+
+$ docker image inspect postgres:alpine --format "{{ .Config.Volumes }} "
+
+$ docker container run -e POSTGRES_DB=postgres-db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=user -d --name mydb postgres:alpine 
+
+$ docker container inspect mydb --format "{{ .Mounts }} "
+
+$ docker volume inspect 00ac69248177ca4fb3a0eff4eede98012ca928a033375cefbad3ed0e24cd1c88
+
+$ sudo ls -lart /var/lib/docker/volumes/00ac69248177ca4fb3a0eff4eede98012ca928a033375cefbad3ed0e24cd1c88/_data
+
+$ docker container stop mydb
+
+$ docker container rm mydb
+
+$ docker volume ls --filter name=00ac69248177ca4fb3a0eff4eede98012ca928a033375cefbad3ed0e24cd1c88
+
+$ docker volume rm 00ac69248177ca4fb3a0eff4eede98012ca928a033375cefbad3ed0e24cd1c88
+
+==============================================================================================================================
+
+$ docker volume create mydata
+
+$ docker container run --name c1 -v mydata:/data -ti alpine
+
+# touch /data/persistent-file-test
+
+# exit
+
+$ sudo ls -lart /var/lib/docker/volumes/mydata/_data
+
+$ docker container run --name c2 -v mydata:/tmp -ti alpine ls -lart /tmp
+
+$ docker volume rm mydata
+
+$ docker container rm c1 c2
+
+$ docker volume rm mydata
+
+
+==============================================================================================================================
+
+$ docker container run -ti -d --name c1 alpine ping 8.8.8.8
+
+$ docker container run -ti -d --name cd alpine ping 8.8.8.8
+
+$ docker container inspect c1 --format "{{ .NetworkSettings.Networks.bridge.IPAddress }}"
+
+$ docker container inspect c2 --format "{{ .NetworkSettings.Networks.bridge.IPAddress }}"
+
+$ docker exec c1 ping -c 2 172.17.0.3 
+
+
+$ docker container inspect c1 --format "{{json .NetworkSettings.Networks }}"

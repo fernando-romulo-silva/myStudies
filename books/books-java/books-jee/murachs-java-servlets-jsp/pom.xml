@@ -18,6 +18,9 @@
 		<module>
 			murachs-java-servlets-jsp-chapter07-how-work-with-sessions-cookies
 		</module>
+		<module>
+			murachs-java-servlets-jsp-chapter08-how-to-use-el
+		</module>
 	</modules>
 
 	<properties>
