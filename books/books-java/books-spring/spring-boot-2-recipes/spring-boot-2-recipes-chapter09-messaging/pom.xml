@@ -26,5 +26,23 @@
   	<module>
   		spring-boot-2-recipes-chapter09-recipe-9-2-ii-send-messages-using-jms-convert-msg
   	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-3-i-receive-messages-using-jms
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-3-ii-receive-messages-using-jms-configure-listener
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-3-iii-receive-messages-using-jms-use-converter
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-3-iv-receive-messages-using-jms-sending-reply
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-4-i-configure-rabbitMq
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-4-ii-configure-rabbitMq-messaing
+  	</module>
   </modules>
 </project>

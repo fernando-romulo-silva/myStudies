@@ -13,18 +13,23 @@
 
     <label>Email:</label>
     <span>${user.email}</span><br>
+   
     <label>First Name:</label>
     <span>${user.firstName}</span><br>
+   
     <label>Last Name:</label>
     <span>${user.lastName}</span><br>
 
     <p>Here is the information that you entered (useBean):</p>
 
     <jsp:useBean id="user" scope="session" class="murach.business.User"/>
+    
     <label>Email:</label>
     <span><jsp:getProperty name="user" property="email"/></span><br>
+    
     <label>First Name:</label>
     <span><jsp:getProperty name="user" property="firstName"/></span><br>
+    
     <label>Last Name:</label>
     <span><jsp:getProperty name="user" property="lastName"/></span><br>
 

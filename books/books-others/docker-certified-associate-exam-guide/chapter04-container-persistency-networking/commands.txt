@@ -53,3 +53,60 @@ $ docker exec c1 ping -c 2 172.17.0.3
 
 
 $ docker container inspect c1 --format "{{json .NetworkSettings.Networks }}"
+
+==============================================================================================================================
+
+$ docker run -ti --network none alpine
+
+# ip add
+
+==============================================================================================================================
+
+$ docker run -ti --network host alpine
+
+# ip add
+
+
+$ docker network create --driver bridge --internal --subnet 192.168.30.0/24 --label internal-only internal-only
+
+$ docker network inspect internal-only 
+
+$ docker container run --network internal-only -ti --name intc1 alpine sh
+
+(Ctrl + P + Q)
+
+$ docker container run --network internal-only -ti --name intc2 alpine sh
+
+$ sudo iptables -L
+
+==============================================================================================================================
+
+$ docker container run -d --name webserver nginx:alpine
+
+$ docker container inspect webserver --format "{{json .NetworkSettings.Networks.bridge.IPAddress }}"
+
+$ curl http://172.17.0.2
+
+$ docker container run -d --name public-webserver --publish 80 nginx:alpine
+
+$ docker container ls --filter name=public-webserver
+
+$ curl http://0.0.0.0:49153
+
+
+
+==============================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
