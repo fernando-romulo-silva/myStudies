@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>br.com.fernando</groupId>
-		<artifactId>murachs-java-servlets-jsp-chapter08-how-to-use-el</artifactId>
+		<artifactId>murachs-java-servlets-jsp-chapter09-how-to-use-jstl</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>murachs-java-servlets-jsp-chapter08-part02-ex1-f02-email-sol</artifactId>
+	<artifactId>murachs-java-servlets-jsp-chapter09-part01-cart</artifactId>
 	<packaging>war</packaging>
 
 

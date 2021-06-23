@@ -47,6 +47,9 @@
 		<module>
 			head-first-javascript-programming-chapter13-extra-strength-objects
 		</module>
+		<module>
+			head-first-javascript-programming-chapter14-appendix-A-leftover
+		</module>
 	</modules>
 
 	<dependencies>

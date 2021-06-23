@@ -9,38 +9,38 @@ public class User implements Serializable {
     private String email;
 
     public User() {
-        firstName = "";
-        lastName = "";
-        email = "";
+	firstName = "";
+	lastName = "";
+	email = "";
     }
 
     public User(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.email = email;
     }
 
     public String getFirstName() {
-        return firstName;
+	return firstName;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+	this.firstName = firstName;
     }
 
     public String getLastName() {
-        return lastName;
+	return lastName;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+	this.lastName = lastName;
     }
 
     public String getEmail() {
-        return email;
+	return email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+	this.email = email;
     }
 }

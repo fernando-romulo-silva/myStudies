@@ -138,5 +138,8 @@
 			spring-boot-2-recipes-chapter08-java-enterprise-services
 		</module>
 		<module>spring-boot-2-recipes-chapter09-messaging</module>
+		<module>
+			spring-boot-2-recipes-chapter10-spring-boot-actuator
+		</module>
 	</modules>
 </project>

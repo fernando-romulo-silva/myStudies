@@ -21,6 +21,9 @@
 		<module>
 			murachs-java-servlets-jsp-chapter08-how-to-use-el
 		</module>
+		<module>
+			murachs-java-servlets-jsp-chapter09-how-to-use-jstl
+		</module>
 	</modules>
 
 	<properties>

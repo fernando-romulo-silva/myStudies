@@ -98,15 +98,37 @@ $ curl http://0.0.0.0:49153
 ==============================================================================================================================
 
 
+$ docker image build -q -t simpleapp:v1.0 .
+
+$ docker container run -d --name v1.0 simpleapp:v1.0
+
+$ docker container ls --filter name=v1.0
+
+$ docker container inspect v1.0 --format "{{.NetworkSettings.Networks.bridge.IPAddress }}"
+
+$ curl http://172.17.0.3:5000
 
 
 
+$ docker container run -d --name v1.0-bindmount -v $(pwd)/templates:/app/templates simpleapp:v1.0 
+
+$ docker container inspect v1.0-bindmount --format "{{.NetworkSettings.Networks.bridge.IPAddress }}"
+
+$ curl http://172.17.0.4:5000
 
 
 
+$ docker plugin install vieux/sshfs
 
+$ sudo systemctl status ssh
 
+$ docker plugin ls
 
+$ docker plugin inspect 3ab308e8b3ed
+
+$ docker volume create -d vieux/sshfs -o sshcmd=ssh_user@127.0.0.1:/tmp -o password=ssh_userpasswd sshvolume
+
+$ docker container run --rm -it -v sshvolume:/data alpine sh
 
 
 

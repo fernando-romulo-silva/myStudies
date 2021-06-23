@@ -44,5 +44,14 @@
   	<module>
   		spring-boot-2-recipes-chapter09-recipe-9-4-ii-configure-rabbitMq-messaing
   	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-5-i-send-msg-using-rabbitMq
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-5-ii-send-msg-using-rabbitMq-send-object
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter09-recipe-9-5-iii-send-msg-using-rabbitMq-sending-reply
+  	</module>
   </modules>
 </project>
