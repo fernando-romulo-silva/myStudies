@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Brief intro to jQuery </title>
+  <style>
+	div {
+		margin: 20px;
+		padding: 50px;
+		background-color: lightyellow;
+	}
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+
+$(function() {// first we're setting up a function that is clled when the page is loaded
+	
+	$("#buynow") // Grabbing the element with '#specialoffer' id (JQuery use CSS syntax for selecting elements)
+		.click(function() { // calling a jQuery method, click, on the result to set the onclick handler
+	
+			alert("I Want to buy now!");
+	});
+});
+
+  </script>
+</head>
+<body>
+<div id="buynow">I'm a special offer</div>
+</body>
+</html>

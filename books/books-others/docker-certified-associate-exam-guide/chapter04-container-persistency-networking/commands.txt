@@ -109,6 +109,7 @@ $ docker container inspect v1.0 --format "{{.NetworkSettings.Networks.bridge.IPA
 $ curl http://172.17.0.3:5000
 
 
+==============================================================================================================================
 
 $ docker container run -d --name v1.0-bindmount -v $(pwd)/templates:/app/templates simpleapp:v1.0 
 
@@ -117,6 +118,7 @@ $ docker container inspect v1.0-bindmount --format "{{.NetworkSettings.Networks.
 $ curl http://172.17.0.4:5000
 
 
+==============================================================================================================================
 
 $ docker plugin install vieux/sshfs
 
@@ -129,6 +131,59 @@ $ docker plugin inspect 3ab308e8b3ed
 $ docker volume create -d vieux/sshfs -o sshcmd=ssh_user@127.0.0.1:/tmp -o password=ssh_userpasswd sshvolume
 
 $ docker container run --rm -it -v sshvolume:/data alpine sh
+
+==============================================================================================================================
+
+$ docker network create zone-a
+
+$ docker network create zone-b
+
+$ docker container run -d --name cont1 --network zone-a alpine sleep 3000
+
+$ docker network connect zone-b cont1
+
+$ docker exec cont1 ip add
+
+
+$ docker container run -d --name cont2 --network zone-b --cap-add NET_ADMIN alpine sleep 3000
+
+$ docker container run -d --name cont3 --network zone-a --cap-add NET_ADMIN alpine sleep 3000
+
+$ docker exec cont2 ip route
+
+$ docker exec cont3 ip route
+
+
+$ docker exec cont2 route add -net 172.18.0.0 netmask 255.255.255.0 gw 172.19.0.3
+
+$ docker exec cont2 ip route
+
+
+$ docker exec cont3 route add -net 172.19.0.0 netmask 255.255.255.0 gw 172.18.0.3
+
+$ docker exec cont3 ip route
+
+==============================================================================================================================
+
+$ docker network create simplenet
+
+$ docker container run -d --name simpledb --network simplenet --env "POSTGRES_PASSWORD=changeme" codegazers/simplestlab:simpledb
+
+$ docker container run -d --name simpleapp --network simplenet --env dbhost=simpledb --env dbname=demo --env dbuser=demo --env dbpasswd=d3m0 codegazers/simplestlab:simpleapp
+
+$ docker network inspect simplenet --format "{{range .Containers}} {{.IPv4Address }} {{.Name}} {{end}}"
+
+$ docker inspect codegazers/simplestlab:simpledb --format "{{json .Config.ExposedPorts }}"
+
+$ curl -I 172.20.0.2:5432
+
+$ curl -I 172.20.0.3:3000
+
+
+$ docker container run -d --name simplelb --env APPLICATION_ALIAS=simpleapp --env APPLICATION_PORT=3000 --network simplenet --publish 8080:80 codegazers/simplestlab:simplelb
+
+$ sudo iptables -L DOCKER -t nat --line-numbers --numeric
+
 
 
 

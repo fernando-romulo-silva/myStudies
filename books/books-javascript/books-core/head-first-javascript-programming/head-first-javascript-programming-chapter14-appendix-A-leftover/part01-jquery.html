@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Brief intro to jQuery </title>
+  <style>
+	div {
+		margin: 20px;
+		padding: 50px;
+		background-color: lightyellow;
+	}
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+
+/*
+ 
+ window.onload = function() {
+	alert("the page is loaded!");	
+ } 
+ 
+ */
+
+ $(document).ready(function(){
+	 alert("the page is loaded!");
+ });
+ 
+ // or
+ 
+ $(function(){
+	 alert("the page is loaded!"); 
+ });
+ 
+  </script> 
+</head>
+<body>
+<div id="specialoffer">I'm a special offer</div>
+</body>
+</html>

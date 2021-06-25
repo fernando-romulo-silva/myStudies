@@ -141,5 +141,6 @@
 		<module>
 			spring-boot-2-recipes-chapter10-spring-boot-actuator
 		</module>
+		<module>spring-boot-2-recipes-chapter11-packaging</module>
 	</modules>
 </project>

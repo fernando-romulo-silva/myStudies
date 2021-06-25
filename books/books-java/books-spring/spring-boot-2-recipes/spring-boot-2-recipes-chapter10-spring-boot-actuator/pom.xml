@@ -7,4 +7,18 @@
   </parent>
   <artifactId>spring-boot-2-recipes-chapter10-spring-boot-actuator</artifactId>
   <packaging>pom</packaging>
+  <modules>
+  	<module>
+  		spring-boot-2-recipes-chapter10-recipe-10-1-i-enable-and-configure-actuator
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter10-recipe-10-1-ii-enable-and-configure-actuator-spring-security
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter10-recipe-10-2-i-create-custom-healph-checks-metrics
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter10-recipe-10-3-i-export-metrics
+  	</module>
+  </modules>
 </project>
