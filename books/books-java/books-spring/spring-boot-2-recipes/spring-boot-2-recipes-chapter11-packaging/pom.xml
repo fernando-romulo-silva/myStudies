@@ -7,4 +7,18 @@
   </parent>
   <artifactId>spring-boot-2-recipes-chapter11-packaging</artifactId>
   <packaging>pom</packaging>
+  <modules>
+  	<module>
+  		spring-boot-2-recipes-chapter11-recipe-11-1-i-create-executable-archive
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter11-recipe-11-2-i-create-war-archive
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter11-recipe-11-3-i-reduce-archive-size-through-thin-launcher
+  	</module>
+  	<module>
+  		spring-boot-2-recipes-chapter11-recipe-11-4-i-using-docker
+  	</module>
+  </modules>
 </project>
