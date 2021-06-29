@@ -8,8 +8,6 @@
 	<artifactId>murachs-java-servlets-jsp-chapter07-how-work-with-sessions-cookies</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>murachs-java-servlets-jsp-chapter07-part01-cart</module>
-		<module>murachs-java-servlets-jsp-chapter07-part02-download</module>
 
 		<module>murachs-java-servlets-jsp-chapter07-part03-ex1-f01-download-start</module>
 		<module>murachs-java-servlets-jsp-chapter07-part03-ex1-f02-download-sol</module>

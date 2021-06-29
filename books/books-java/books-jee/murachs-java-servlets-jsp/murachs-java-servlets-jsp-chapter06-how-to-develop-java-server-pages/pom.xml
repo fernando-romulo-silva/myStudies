@@ -8,7 +8,6 @@
   <artifactId>murachs-java-servlets-jsp-chapter06-how-to-develop-java-server-pages</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>murachs-java-servlets-jsp-chapter06-part01-email</module>
   	<module>murachs-java-servlets-jsp-chapter06-part02-ex1-f01-email-list-start</module>
   	<module>murachs-java-servlets-jsp-chapter06-part02-ex1-f02-email-list-sol</module>
   	<module>murachs-java-servlets-jsp-chapter06-part03-ex2-f01-survey-start</module>

@@ -11,7 +11,6 @@
 	<modules>
 		<module>murachs-java-servlets-jsp-chapter04-part01-email-list</module>
 		<module>murachs-java-servlets-jsp-chapter04-part02-survey-start</module>
-		<module>murachs-java-servlets-jsp-chapter04-part03-survey-mine</module>
 		<module>murachs-java-servlets-jsp-chapter04-part04-survey-sol</module>
 	</modules>
 </project>

@@ -1,4 +1,4 @@
-<%@ taglib prefix="mma" uri="/WEB-INF/murach.tld" %>
+<%@taglib prefix="mma" uri="/WEB-INF/tlds/murach.tld" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
     <h1>Join our email list</h1>
     <p>To join our email list, enter your name and
        email address below.</p>
-    
+       
     <p><mma:ifEmptyMark field=""/> marks required fields</p>
     
     <form action="emailList" method="post">
