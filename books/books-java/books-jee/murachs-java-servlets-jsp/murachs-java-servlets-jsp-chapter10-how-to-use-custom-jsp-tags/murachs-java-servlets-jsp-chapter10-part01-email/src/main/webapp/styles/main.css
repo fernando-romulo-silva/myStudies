@@ -4,33 +4,41 @@ body {
     font-size: 85%;
     margin-left: 2em;
     margin-right: 2em;
+    width: 400px;
 }
 h1 {     
     font-size: 140%;
     color: teal;
     margin-bottom: .5em;    
 }
+h2 {     
+    font-size: 120%;
+    color: teal;
+    margin-bottom: .5em;    
+}
+label {
+    float: left;
+    width: 7em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"] {  /* An attribute selector */
+    width: 15em;
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;
+}
+span {
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;    
+}
 br {
     clear: both;
 }
 
-#quantity {
-    width: 2em;
-}
+/* The styles for the classes */
 .pad_top {
-    padding-top: 1em;
+    padding-top: 0.25em;
 }
-/* The styles for the tables */
-table {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 50em;
-}
-th, td {
-    border: 1px solid black;
-    text-align: left;
-    padding: .5em;
-}
-.right {
-    text-align: right;
+.margin_left {
+    margin-left: 0.5em;
 }
