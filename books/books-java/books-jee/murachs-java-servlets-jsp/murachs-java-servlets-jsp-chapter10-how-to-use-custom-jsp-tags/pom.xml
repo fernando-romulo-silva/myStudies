@@ -7,4 +7,8 @@
   </parent>
   <artifactId>murachs-java-servlets-jsp-chapter10-how-to-use-custom-jsp-tags</artifactId>
   <packaging>pom</packaging>
+  <modules>
+  	<module>murachs-java-servlets-jsp-chapter10-part01-email</module>
+  	<module>murachs-java-servlets-jsp-chapter10-part02-cart</module>
+  </modules>
 </project>
