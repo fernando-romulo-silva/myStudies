@@ -13,12 +13,12 @@ ENV APPLICATION_PORT=3000
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY entrypoint.sh /scripts/entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
 EXPOSE 80
 
-CMD chmod 755 /scripts/entrypoint.sh
+CMD chmod 755 entrypoint.sh
 
-ENTRYPOINT ["/scripts/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD nginx -g 'pid /run/nginx.pid; daemon off;'

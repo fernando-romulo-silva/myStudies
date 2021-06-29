@@ -4,8 +4,37 @@ $ docker-compose config --volumes
 
 $ docker-compose build
 
+$ docker-compose up --detach
+
+$ docker-compose ps
+
+$ docker-compose logs db
+
+$ docker-compose exec app sh
+
+$ docker-compose top
+
+$ docker network ls
+
+$ docker volume ls
+
+$ docker-compose restart lb
+
+$ docker-compose up --scale app=1 --detach
+
+$ docker-compose ps app
+
+$ docker-compose down
+
+$ docker-compose down --volumes 
+
 ==============================================================================================================================
 
+$ docker-compose --file docker-compose.dev.yaml config
+
+$ LB_PORT=8081 docker-compose --file docker-compose.dev.yaml config
+
+$ LB_PORT=8081 dockerhubid=frjaraur docker-compose --project-name test --file docker-compose.dev.yaml build --build-arg alpineversion="3.6" 
 ==============================================================================================================================
 
 ==============================================================================================================================

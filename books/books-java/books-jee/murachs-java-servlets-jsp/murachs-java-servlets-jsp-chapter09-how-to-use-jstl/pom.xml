@@ -8,6 +8,19 @@
   <artifactId>murachs-java-servlets-jsp-chapter09-how-to-use-jstl</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>murachs-java-servlets-jsp-chapter09-part01-cart</module>
+  	<module>murachs-java-servlets-jsp-chapter09-part01-email</module>
+  	<module>murachs-java-servlets-jsp-chapter09-part02-cart</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter09-part03-ex1-f01-download-start
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter09-part03-ex1-f02-download-sol
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter09-part03-ex2-f01-cart-start
+  	</module>
+  	<module>
+  		murachs-java-servlets-jsp-chapter09-part03-ex2-f02-cart-sol
+  	</module>
   </modules>
 </project>
