@@ -1,4 +1,4 @@
-<%@taglib prefix="mma" uri="/WEB-INF/tlds/murach.tld" %>
+<%@ taglib prefix="mma" uri="/WEB-INF/tlds/murach.tld" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,8 +32,7 @@
         <input type="submit" value="Join Now" class="margin_left">
     </form>
         
-    <p>The current date is <mma:currentDate />.</p>
-    <p>The current time is <mma:currentTime />.</p>    
+   
     
     <mma:ifWeekday>
        <p>Live support available at 1-800-555-2222</p>
