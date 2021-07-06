@@ -1,4 +1,4 @@
-<%@ taglib prefix="mma" uri="/WEB-INF/murach.tld" %>
+<%@ taglib prefix="mma" uri="/WEB-INF/tlds/murach.tld" %>
 <!DOCTYPE html>
 <html>
 <head>
