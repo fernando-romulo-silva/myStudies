@@ -1,0 +1,51 @@
+===========================================================================================================
+
+# Installing Airflow
+
+$ python3 -m venv sandbox
+
+$ source sandbox/bin/activate
+
+$ pip install wheel
+
+# https://gist.github.com/marclamberti/742efaef5b2d94f44666b0aec020be7c
+
+$ pip install apache-airflow==2.1.0 --constraint https://gist.githubusercontent.com/marclamberti/742efaef5b2d94f44666b0aec020be7c/raw/21c88601337250b6fd93f1adceb55282fb07b7ed/constraint.txt
+
+$ airflow db init
+
+$ airflow webserver
+
+===========================================================================================================
+
+# The CLI in Airflow
+
+$ airflow -h
+
+$ airflow users -h
+
+$ airflow db -h
+
+$ airflow users create -h
+
+$ airflow users create -u admin -p admin -f Fernando -l Silva -r Admin -e admin@airflow.com
+
+$ airflow db upgrate
+
+$ airflow db reset
+
+$ airflow scheduler
+
+$ airflow dags list
+
+$ airflow tasks list example_xcom_args
+
+$ airflow dags trigger -e 2020-01-01 example_xcom_args
+
+===========================================================================================================
+
+What you need to know about the UI
+
+
+
+===========================================================================================================

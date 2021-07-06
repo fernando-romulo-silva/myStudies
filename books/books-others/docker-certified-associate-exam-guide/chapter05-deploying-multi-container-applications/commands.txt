@@ -34,12 +34,33 @@ $ docker-compose --file docker-compose.dev.yaml config
 
 $ LB_PORT=8081 docker-compose --file docker-compose.dev.yaml config
 
-$ LB_PORT=8081 dockerhubid=frjaraur docker-compose --project-name test --file docker-compose.dev.yaml build --build-arg alpineversion="3.6" 
+$ LB_PORT=8081 dockerhubid=frjaraur docker-compose --project-name test --file docker-compose.dev.yaml build --build-arg alpineversion="3.6"
+ 
 ==============================================================================================================================
+LAB
+
+$ docker-compose -p lab1 -f docker-compose.random.yaml build
+
+$ docker-compose -p lab1 -f docker-compose.random.yaml up -d
+
+$ docker-compose -p lab1 -f docker-compose.random.yaml down
 
 ==============================================================================================================================
 
+
+$ docker-compose -p lab3 -f docker-compose.multicolor.yaml up -d 
+
+$ docker-compose -p lab3 -f docker-compose.multicolor.yaml ps
+
+$ docker-compose -p lab5 -f docker-compose.loadbalancer.yaml up -d
+
+$ curl -H "Host: red" 0.0.0.0:8080/text
+
+
 ==============================================================================================================================
+
+
+$ docker-compose -p lab5 -f docker-compose.loadbalancer.yaml exec loadbalancer apk add -q --update bind-tools
 
 ==============================================================================================================================
 

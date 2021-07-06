@@ -1,0 +1,53 @@
+$ export DOCKER_CONTENT_TRUST=1
+
+$ docker stop $(docker ps -a -q)
+
+$ docker rm $(docker ps -a -q)
+
+$ docker pull busybox:latest
+
+$ docker pull --disable-content-trust=false busybox:latest
+
+$ docker pull --disable-content-trust=true busybox:latest
+
+$ docker container run -ti busybox sh
+
+# touch NEW_FILE
+
+# exit
+
+$ docker ps -a
+
+$ DOCKER_CONTENT_TRUST=0 docker container commit 623d1bca6846 busybox:untrusted
+
+e90ce266e82157bbf286a648a65cc47605fabb806ed5ac434f85cc0719a82965
+
+$ docker container run -ti busybox:untrusted sh
+
+$ docker image push frjaraur/mybusybox:trusted
+
+$ docker container run -ti frjaraur/mybusybox:trusted
+
+==============================================================================================================================
+
+$ curl -o /tmp/notary -sL https://github.com/theupdateframework/notary/releases/download/v0.6.1/notary-Linux-amd64
+
+$ sudo mv /tmp/notary /usr/local/bin/notary
+
+$ sudo chmod 755 /usr/local/bin/notary
+
+$ notary -s https://notary.docker.io -d ~/.docker/trust list docker.io/library/busybox
+
+==============================================================================================================================
+
+$ export DOCKER_CONTENT_TRUST_ROOT_PASSPHRASE="MyVerySecureRootPassphraseForAutomation"
+
+$ export DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE="MyVerySecureRepositoryPassphraseForAutomation"
+
+$ docker build -t docker/trusttest:testing .
+
+==============================================================================================================================
+
+$ docker trust sign frjaraur/pingo:trusted
+
+$ docker trust inspect --pretty frjaraur/pingo:trusted
