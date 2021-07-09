@@ -26,6 +26,17 @@
 			murachs-java-servlets-jsp-chapter10-how-to-use-custom-jsp-tags
 		</module>
 		<module>murachs-java-servlets-jsp-chapter12-how-to-use-jdbc</module>
+		<module>murachs-java-servlets-jsp-chapter13-how-to-use-jpa</module>
+		<module>murachs-java-servlets-jsp-chapter14-how-to-use-javamail</module>
+		<module>murachs-java-servlets-jsp-chapter15-how-to-use-ssl</module>
+		<module>murachs-java-servlets-jsp-chapter16-how-to-restric-access-web-resource</module>
+		<module>murachs-java-servlets-jsp-chapter17-more-security-skills</module>
+		<module>murachs-java-servlets-jsp-chapter18-how-work-http-request-response</module>
+		<module>murachs-java-servlets-jsp-chapter19-how-work-listeners</module>
+		<module>murachs-java-servlets-jsp-chapter-20-how-work-filters</module>
+		<module>murachs-java-servlets-jsp-chapter-21-how-work-jsf</module>
+		<module>murachs-java-servlets-jsp-chapter-22-introduction-music-store-website</module>
+		<module>murachs-java-servlets-jsp-chapter-23-applications-music-store-website</module>
 	</modules>
 
 	<properties>
@@ -73,6 +84,13 @@
 			<groupId>jakarta.servlet.jsp.jstl</groupId>
 			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
 			<version>2.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>6.0.6</version>
 		</dependency>
 
 		<dependency>

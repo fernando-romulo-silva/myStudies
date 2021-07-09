@@ -35,7 +35,7 @@ import org.springframework.context.annotation.Configuration;
  * @since 1.0
  */
 @Configuration
-@ComponentScan//(basePackages =  {"com.apress.cems.beans.inheritance"})
+@ComponentScan(basePackages =  {"com.apress.cems.beans.inheritance"})
 public class FamilyAppConfig {
 
 }

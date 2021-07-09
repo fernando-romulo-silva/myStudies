@@ -42,23 +42,23 @@ public class ParentBean {
 
     protected String surname;
 
-    ParentBean(@Value("John")String surname) {
-        this.surname = surname;
+    ParentBean(@Value("John") String surname) {
+	this.surname = surname;
     }
 
     @Override
     public String toString() {
-        return "ParentBean{" +
-                " familyName='" + familyName + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
+	return "ParentBean{" + //
+			" familyName='" + familyName + '\'' + //
+			", surname='" + surname + '\'' + //
+			'}';
     }
 
     String getFamilyName() {
-        return familyName;
+	return familyName;
     }
 
     String getSurname() {
-        return surname;
+	return surname;
     }
 }

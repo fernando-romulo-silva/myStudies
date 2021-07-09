@@ -40,8 +40,8 @@ import org.springframework.context.annotation.Configuration;
 public class SimpleAppCfg {
 
     // de-comment this to cause NoUniqueBeanDefinitionException
-   /* @Bean
+    @Bean
     SimpleBean anotherSimpleBean(){
         return new SimpleBeanImpl();
-    }*/
+    }
 }

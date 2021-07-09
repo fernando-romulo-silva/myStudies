@@ -49,31 +49,35 @@ public class EmptyCollectionHolder {
 
     private Map<String, SimpleBean> simpleBeanMap;
 
-    @Autowired @Qualifier("simpleBeanList")
+    @Autowired
+    @Qualifier("simpleBeanList")
     public void setSimpleBeanList(List<SimpleBean> simpleBeanList) {
-        this.simpleBeanList = simpleBeanList;
+	this.simpleBeanList = simpleBeanList;
     }
 
-    @Autowired @Qualifier("simpleBeanSet")
+    @Autowired
+    @Qualifier("simpleBeanSet")
     public void setSimpleBeanSet(Set<SimpleBean> simpleBeanSet) {
-        this.simpleBeanSet = simpleBeanSet;
+	this.simpleBeanSet = simpleBeanSet;
     }
 
-    @Autowired @Qualifier("simpleBeanMap")
+    @Autowired
+    @Qualifier("simpleBeanMap")
     public void setSimpleBeanMap(Map<String, SimpleBean> simpleBeanMap) {
-        this.simpleBeanMap = simpleBeanMap;
+	this.simpleBeanMap = simpleBeanMap;
     }
 
     /**
      * This method was implemented just to verify the collections injected into beans of this type
+     * 
      * @return
      */
     @Override
     public String toString() {
-        return "EmptyCollectionHolder{" +
-                "simpleBeanList=" + simpleBeanList.size() +
-                ", simpleBeanSet=" + simpleBeanSet.size() +
-                ", simpleBeanMap=" + simpleBeanMap.size() +
-                '}';
+	return "EmptyCollectionHolder{" + //
+			"simpleBeanList=" + simpleBeanList.size() + //
+			", simpleBeanSet=" + simpleBeanSet.size() + //
+			", simpleBeanMap=" + simpleBeanMap.size() + //
+			'}';
     }
 }

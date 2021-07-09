@@ -5,10 +5,6 @@
     <artifactId>murachs-java-servlets-jsp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>murachs-java-servlets-jsp-chapter12-how-to-use-jdbc</artifactId>
+  <artifactId>murachs-java-servlets-jsp-chapter-21-how-work-jsf</artifactId>
   <packaging>pom</packaging>
-  <modules>
-  	<module>murachs-java-servlets-jsp-chapter12-part01-email</module>
-  	<module>murachs-java-servlets-jsp-chapter12-part02-sql-gateway</module>
-  </modules>
 </project>

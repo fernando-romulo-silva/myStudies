@@ -46,9 +46,11 @@ import java.util.*;
 @ComponentScan(basePackages = {"com.apress.cems.beans.scalars"} )
 public class AppConvertersCfg {
 
-    @Autowired StringToLocalDate stringToLocalDateConverter;
+    @Autowired 
+    StringToLocalDate stringToLocalDateConverter;
 
-    @Autowired StringToDate stringToDate;
+    @Autowired 
+    StringToDate stringToDate;
 
     @Bean
     ConversionService conversionService(ConversionServiceFactoryBean factory){

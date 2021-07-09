@@ -44,7 +44,7 @@ public class ComposedBeanImpl implements ComposedBean {
 
     // De-comment the @Qualifier annotation  to get rid of the exception
     @Autowired
-    public ComposedBeanImpl(/*@Qualifier("anotherSimpleBean")*/ SimpleBean simpleBean, @Value("AB123") String code, @Value("true") Boolean complicated) {
+    public ComposedBeanImpl(@Qualifier("anotherSimpleBean") SimpleBean simpleBean, @Value("AB123") String code, @Value("true") Boolean complicated) {
         this.simpleBean = simpleBean;
         this.code = code;
         this.complicated = complicated;

@@ -1,0 +1,1 @@
+docker run --name murachs-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=murachs -e MYSQL_USER=user -e MYSQL_PASSWORD=password -d -p 3306:3306 mysql:5.7

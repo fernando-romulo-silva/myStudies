@@ -1,0 +1,57 @@
+$ docker swarm init --advertise-addr 127.0.0.1
+
+$ docker node ls
+
+$ docker swarm join --token SWMTKN-1-4dtk2ieh3rwjd0se5rzwyf2hbk7zlyxh27pbh4plg2sn0qtitx-50zsub5f0s4kchwjcfcbyuzn5 192.168.200.18:2377
+
+$ docker node inspect pc02
+
+$ docker node update --role manager pc02
+
+$ docker node ls --filter role=manager
+
+$ docker node inspect pc02 --format "{{.ManagerStatus}}"
+
+==============================================================================================================================
+
+$ docker service create --name "top" --hostname="{{.Service.Name}}-{{.Task.ID}}" busybox top
+
+$ docker service create --name webserver --publish 80 nginx:alpine
+
+$ docker service ps webserver
+
+$ docker container ls
+
+$ docker container kill 8557a2214106
+
+$ docker service ps "top"
+
+$ docker container ls
+
+$ docker container inspect 25869e90f662 --format "{{.Config.Labels}}"
+
+
+==============================================================================================================================
+
+
+$ echo this_is_a_super_secret_password|docker secret create app-key -
+
+$ docker service create --name database --secret source=app-key,target=app,uid=1000,gid=1001,mode=0400 redis:3.0
+
+$ docker secret inspect app-key
+
+==============================================================================================================================
+
+$ echo "This is a sample configuration" | docker config create sample-config -
+
+$ docker config inspect sample-config --pretty
+
+==============================================================================================================================
+
+$ docker network create -d overlay testnet
+ 
+$ docker container run -ti --network testnet alpine 
+
+$ docker network create -d overlay testnet2 --attachable --opt encrypted
+
+$ docker container run -ti --network testnet2 alpine

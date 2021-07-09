@@ -1,0 +1,11 @@
+https://www.google.com/search?q=docker+dca+mock+exam&client=ubuntu&biw=1440&bih=701&sxsrf=ALeKk00L_5gdl9vAJZ0v5gpyqfKgzPAQDg%3A1623876981046&ei=dWXKYInpAZTb1sQPq9mtkAM&oq=docker+dca+mock+exam&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBggAEBYQHjoHCAAQRxCwA1CXGViXGWCsHGgBcAF4AIABigGIAe8BkgEDMC4ymAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwjJ9_OUhZ3xAhWUrZUCHatsCzIQ4dUDCA4&uact=5
+
+https://kodekloud.com/p/docker-certified-associate-exam-course
+
+https://medium.com/bb-tutorials-and-thoughts/250-practice-questions-for-the-dca-exam-84f3b9e8f5ce
+
+https://itnext.io/a-comprehensive-guide-to-docker-certified-associate-exam-d7f25b6374ca
+
+https://www.premiumdumps.com/docker/docker-dca-dumps
+
+http://mvpjava.com/docker-certified/

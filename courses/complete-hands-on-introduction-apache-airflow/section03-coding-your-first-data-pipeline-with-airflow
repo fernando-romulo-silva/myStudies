@@ -1,3 +1,86 @@
 ===========================================================================================================
-
 What is a Dag?
+
+===========================================================================================================
+
+# Dag Skeleton (user_processing.py)
+
+from airflow.models import DAG
+
+from datetime import datetime
+
+default_args = {
+    'start_date': datetime(2020, 1, 1)
+}
+
+with DAG('user_processing', 
+        schedule_interval='@daily', 
+        default_args=default_args, 
+        catchup=False) as dag:
+    # Define task/operators
+
+===========================================================================================================
+
+# Operator
+
+# 1 Operator and 1 Task (always!)
+
+Action Execute
+
+Transfer Operator
+
+Sensors: wait condicion
+
+===========================================================================================================
+
+# pip install 'apache-airflow-providers-sqlite'
+
+from airflow.models import DAG
+from airflow.providers.sqlite.operators.sqlite import SqliteOperator
+
+from datetime import datetime
+
+default_args = {
+    'start_date': datetime(2020, 1, 1)
+}
+
+with DAG('user_processing', 
+        schedule_interval='@daily', 
+        default_args=default_args, 
+        catchup=False) as dag:
+
+    creating_table = SqliteOperator(
+        task_id='creating_table',
+        sqlite_conn_id='db_sqlite',
+        sql='''
+            CREATE TABLE users (               
+                firstname TEXT NOT NULL,
+                lastname TEXT NOT NULL,
+                country TEXT NOT NULL,
+                username TEXT NOT NULL,
+                password TEXT NOT NULL,
+                email TEXT NOT NULL PRIMARY KEY
+            );
+            '''
+    )
+
+
+$ airflow tasks test user_processing creating_table 2020-01
+
+$ sqlite3 airflow.db
+
+Ctrl D
+
+===========================================================================================================
+
+$ airflow providers list
+
+$ pip install apache-airflow-providers-http==2.0.0
+
+$ airflow tasks test user_processing is_api_available 2020-01-01
+
+===========================================================================================================
+
+ $ airflow tasks test user_processing processing_user 2020-01-01
+
+ $ airflow tasks test user_processing storing_user 2020-01-01

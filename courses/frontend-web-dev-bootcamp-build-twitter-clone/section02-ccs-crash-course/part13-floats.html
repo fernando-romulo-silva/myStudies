@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container {
+            background-color: #ccc;
+            border-top: 20px solid blue;
+            border-bottom: 20px solid black;
+            overflow: right;
+
+        }
+
+        .left {
+
+            background-color: orangered;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .right {
+
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    
+</body>
+</html>
