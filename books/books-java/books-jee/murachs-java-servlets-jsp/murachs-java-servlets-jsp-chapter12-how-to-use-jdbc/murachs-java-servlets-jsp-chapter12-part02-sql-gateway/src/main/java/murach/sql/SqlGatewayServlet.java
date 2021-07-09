@@ -22,10 +22,11 @@ public class SqlGatewayServlet extends HttpServlet {
 
 	String sqlStatement = request.getParameter("sqlStatement");
 	String sqlResult = "";
-	try {
-	    // load the driver
-	    Class.forName("com.mysql.jdbc.Driver");
 
+        try {
+            
+            Class.forName("com.mysql.jdbc.Driver");
+            
 	    // get a connection
 	    String dbURL = "jdbc:mysql://localhost:3306/murach";
 	    String username = "murach_user";
@@ -55,9 +56,7 @@ public class SqlGatewayServlet extends HttpServlet {
 	    }
 	    statement.close();
 	    connection.close();
-	} catch (ClassNotFoundException e) {
-	    sqlResult = "<p>Error loading the databse driver: <br>" + e.getMessage() + "</p>";
-	} catch (SQLException e) {
+	} catch (Exception e) {
 	    sqlResult = "<p>Error executing the SQL statement: <br>" + e.getMessage() + "</p>";
 	}
 
