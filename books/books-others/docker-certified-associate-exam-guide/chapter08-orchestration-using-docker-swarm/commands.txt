@@ -30,10 +30,6 @@ $ docker container ls
 
 $ docker container inspect 25869e90f662 --format "{{.Config.Labels}}"
 
-
-==============================================================================================================================
-
-
 $ echo this_is_a_super_secret_password|docker secret create app-key -
 
 $ docker service create --name database --secret source=app-key,target=app,uid=1000,gid=1001,mode=0400 redis:3.0
@@ -55,3 +51,69 @@ $ docker container run -ti --network testnet alpine
 $ docker network create -d overlay testnet2 --attachable --opt encrypted
 
 $ docker container run -ti --network testnet2 alpine
+
+==============================================================================================================================
+
+$ docker service create --name webserver --publish published=8080,target=80,protocol=tcp nginx:alpine
+
+$ docker service create --name webserver --publish published=8080,target=80,protocol=tcp,mode=host --mode global nginx:alpine
+
+==============================================================================================================================
+==============================================================================================================================
+
+$ vagrant ssh swarm-node1
+
+$ docker swarm init
+
+$ docker swarm init --advertise-addr 10.10.10.11
+
+-> docker swarm join --token SWMTKN-1-5gww28oca3ystkphp5isiz418183hz1fw0o5fbp8csmbz7gvv2-2jpkek9ujpuaax0tz92rw17xn 10.10.10.11:2377
+
+$ vagrant ssh swarm-node2
+
+$ docker swarm join --token SWMTKN-1-5gww28oca3ystkphp5isiz418183hz1fw0o5fbp8csmbz7gvv2-2jpkek9ujpuaax0tz92rw17xn 10.10.10.11:2377
+
+$ docker node ls
+
+$ vagrant ssh swarm-node3
+
+$ docker swarm join --token SWMTKN-1-5gww28oca3ystkphp5isiz418183hz1fw0o5fbp8csmbz7gvv2-2jpkek9ujpuaax0tz92rw17xn 10.10.10.11:2377
+
+$ vagrant ssh swarm-node3
+
+$ docker swarm join --token SWMTKN-1-5gww28oca3ystkphp5isiz418183hz1fw0o5fbp8csmbz7gvv2-2jpkek9ujpuaax0tz92rw17xn 10.10.10.11:2377
+
+-------------------------------------------------------------
+
+$ docker node update --role manager swarm-node2
+
+$ sudo systemctl stop docker
+
+$ docker node ls
+
+$ sudo systemctl start docker
+
+$ docker node update --role worker swarm-node2
+
+=============================================================================================================================
+
+$ docker service create --name webserver nginx:alpine
+
+$ docker service ps webserver
+
+$ docker service update --replicas 3 webserver
+
+$ docker service ps webserver
+
+$ docker node update --label-add tier=front swarm-node3
+
+$ docker service update --constraint-add node.labels.tier==front webserver
+
+$ docker service ps webserver
+
+$ docker service update --constraint-rm node.labels.tier==front webserver
+
+$ docker node update --availability pause swarm-node3
+
+$ docker node update --availability drain swarm-node2
+
