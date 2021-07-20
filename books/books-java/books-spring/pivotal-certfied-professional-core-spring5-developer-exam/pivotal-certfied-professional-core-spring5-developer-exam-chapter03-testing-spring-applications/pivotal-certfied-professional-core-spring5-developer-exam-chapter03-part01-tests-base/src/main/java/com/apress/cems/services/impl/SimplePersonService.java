@@ -25,31 +25,47 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
+package com.apress.cems.services.impl;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.Optional;
 
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import com.apress.cems.dao.Person;
+import com.apress.cems.repos.AbstractRepo;
+import com.apress.cems.repos.PersonRepo;
+import com.apress.cems.services.PersonService;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+public class SimplePersonService extends SimpleAbstractService<Person> implements PersonService {
+    private PersonRepo repo;
 
-    @Autowired
-    DataSource dataSource;
+    @Override
+    public Person createPerson(String firstName, String lastName) {
+	var person = new Person();
+	person.setFirstName(firstName);
+	person.setLastName(lastName);
+	repo.save(person);
+	return person;
+    }
 
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    @Override
+    public Optional<Person> findByUsername(String username) {
+	return repo.findByUsername(username);
+    }
+
+    @Override
+    public Optional<Person> findByFirstNameAndLastName(String firstName, String lastName) {
+	return repo.findByCompleteName(firstName, lastName);
+    }
+
+    public void setRepo(PersonRepo repo) {
+	this.repo = repo;
+    }
+
+    @Override
+    AbstractRepo<Person> getRepo() {
+	return repo;
     }
 }

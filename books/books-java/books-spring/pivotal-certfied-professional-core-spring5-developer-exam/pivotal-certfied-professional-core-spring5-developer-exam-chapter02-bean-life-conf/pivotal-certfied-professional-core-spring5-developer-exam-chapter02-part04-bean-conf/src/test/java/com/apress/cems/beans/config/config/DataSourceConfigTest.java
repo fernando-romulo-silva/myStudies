@@ -32,24 +32,38 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+// import com.apress.cems.beans.config.config.RepositoryConfig;
+import com.apress.cems.beans.config.repos.JdbcDetectiveRepo;
+import com.apress.cems.beans.config.repos.JdbcEvidenceRepo;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+class DataSourceConfigTest {
 
-    @Autowired
-    DataSource dataSource;
+    private Logger logger = LoggerFactory.getLogger(DataSourceConfigTest.class);
 
     @Test
-    public void testBoot() {
+    void testMultipleCfgSource() {
+	@SuppressWarnings("resource")
+	var ctx = new AnnotationConfigApplicationContext(DataSourceConfig.class, RepositoryConfig.class);
+
+	for (String beanName : ctx.getBeanDefinitionNames()) {
+	    logger.info("Bean " + beanName + " of type " + ctx.getBean(beanName).getClass().getSimpleName());
+	}
+
+	var evidenceRepo = ctx.getBean(JdbcEvidenceRepo.class);
+	var detectiveRepo = ctx.getBean(JdbcDetectiveRepo.class);
+
+	assertNotNull(evidenceRepo);
+	assertNotNull(detectiveRepo);
+
+	var dataSource = ctx.getBean("two", DataSource.class);
 	assertNotNull(dataSource);
     }
 }

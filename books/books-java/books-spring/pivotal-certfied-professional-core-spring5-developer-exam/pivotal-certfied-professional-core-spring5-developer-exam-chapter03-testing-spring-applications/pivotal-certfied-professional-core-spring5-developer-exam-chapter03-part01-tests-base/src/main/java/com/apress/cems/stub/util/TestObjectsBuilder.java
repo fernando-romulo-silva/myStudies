@@ -25,31 +25,43 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
+package com.apress.cems.stub.util;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.apress.cems.dao.CriminalCase;
+import com.apress.cems.dao.Detective;
+import com.apress.cems.dao.Person;
+import com.apress.cems.util.*;
 
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import java.time.LocalDateTime;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+public class TestObjectsBuilder {
 
-    @Autowired
-    DataSource dataSource;
+    public static Detective buildDetective(String firstName, String lastName, Rank rank, String badgeNumber) {
+	var detective = new Detective();
+	var person = new Person();
+	person.setFirstName(firstName);
+	person.setLastName(lastName);
+	person.setHiringDate(LocalDateTime.now());
+	person.setUsername(firstName.concat(lastName));
+	person.setPassword("whatever");
+	detective.setPerson(person);
+	detective.setBadgeNumber(badgeNumber);
+	detective.setArmed(true);
+	detective.setStatus(EmploymentStatus.ACTIVE);
+	detective.setRank(rank);
+	return detective;
+    }
 
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    public static CriminalCase buildCase(Detective leadInvestigator, CaseType caseType, CaseStatus status) {
+	var criminalCase = new CriminalCase();
+	criminalCase.setLeadInvestigator(leadInvestigator);
+	criminalCase.setNumber(NumberGenerator.getEvidenceNumber());
+	criminalCase.setType(caseType);
+	criminalCase.setStatus(status);
+	return criminalCase;
     }
 }

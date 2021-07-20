@@ -25,31 +25,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+package com.apress.cems.services;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+public class ServiceException extends RuntimeException {
 
-    @Autowired
-    DataSource dataSource;
+    private static final long serialVersionUID = 1L;
 
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    public ServiceException(String message) {
+	super(message);
+    }
+
+    public ServiceException(String message, Throwable cause) {
+	super(message, cause);
     }
 }

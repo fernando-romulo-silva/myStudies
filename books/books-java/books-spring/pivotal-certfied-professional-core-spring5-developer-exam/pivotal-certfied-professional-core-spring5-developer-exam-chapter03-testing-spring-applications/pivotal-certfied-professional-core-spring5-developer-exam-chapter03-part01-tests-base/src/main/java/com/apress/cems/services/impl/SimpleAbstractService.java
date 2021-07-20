@@ -25,31 +25,36 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
+package com.apress.cems.services.impl;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import com.apress.cems.dao.AbstractEntity;
+import com.apress.cems.repos.AbstractRepo;
+import com.apress.cems.services.AbstractService;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+public abstract class SimpleAbstractService<T extends AbstractEntity> implements AbstractService<T> {
 
-    @Autowired
-    DataSource dataSource;
-
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    public void save(T entity) {
+	getRepo().save(entity);
     }
+
+    public T findById(Long entityId) {
+	var res = getRepo().findById(entityId);
+	return res.orElse(null);
+    }
+
+    @Override
+    public void delete(T entity) {
+	getRepo().delete(entity);
+    }
+
+    @Override
+    public int deleteById(Long entityId) {
+	return getRepo().deleteById(entityId);
+    }
+
+    abstract AbstractRepo<T> getRepo();
 }

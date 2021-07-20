@@ -25,31 +25,50 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
+package com.apress.cems.stub.repo;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.apress.cems.dao.AbstractEntity;
+import com.apress.cems.repos.AbstractRepo;
+import com.apress.cems.repos.NotFoundException;
 
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+public abstract class StubAbstractRepo<T extends AbstractEntity> implements AbstractRepo<T> {
 
-    @Autowired
-    DataSource dataSource;
+    protected Map<Long, T> records = new HashMap<>();
 
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    @Override
+    public void save(T entity) {
+	if (entity.getId() == null) {
+	    var id = (long) records.size() + 1;
+	    entity.setId(id);
+	}
+	records.put(entity.getId(), entity);
+    }
+
+    @Override
+    public void delete(T entity) throws NotFoundException {
+	findById(entity.getId()).ifPresent(r -> records.remove(r.getId()));
+    }
+
+    @Override
+    public int deleteById(Long entityId) throws NotFoundException {
+	findById(entityId).ifPresent(r -> records.remove(r.getId()));
+	return 1;
+    }
+
+    @Override
+    public Optional<T> findById(Long entityId) {
+	if (records.containsKey(entityId)) {
+	    return Optional.of(records.get(entityId));
+	} else {
+	    throw new NotFoundException("Entity with id " + entityId + " could not be processed because it does not exist.");
+	}
     }
 }

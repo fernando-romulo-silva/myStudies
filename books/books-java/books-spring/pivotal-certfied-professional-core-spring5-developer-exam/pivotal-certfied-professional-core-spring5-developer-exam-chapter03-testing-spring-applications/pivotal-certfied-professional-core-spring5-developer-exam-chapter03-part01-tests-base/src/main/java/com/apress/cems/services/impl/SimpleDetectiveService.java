@@ -25,31 +25,60 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
+package com.apress.cems.services.impl;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.apress.cems.dao.Detective;
+import com.apress.cems.dao.Person;
+import com.apress.cems.repos.AbstractRepo;
+import com.apress.cems.util.NumberGenerator;
+import com.apress.cems.util.Rank;
+import com.apress.cems.repos.DetectiveRepo;
+import com.apress.cems.services.DetectiveService;
 
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import java.util.Optional;
+import java.util.Set;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+public class SimpleDetectiveService extends SimpleAbstractService<Detective> implements DetectiveService {
 
-    @Autowired
-    DataSource dataSource;
+    private DetectiveRepo repo;
 
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    public SimpleDetectiveService() {
+    }
+
+    public SimpleDetectiveService(DetectiveRepo repo) {
+	this.repo = repo;
+    }
+
+    @Override
+    public Detective createDetective(Person person, Rank rank) {
+	var detective = new Detective();
+	detective.setPerson(person);
+	detective.setRank(rank);
+	detective.setBadgeNumber(NumberGenerator.getBadgeNumber());
+	repo.save(detective);
+	return detective;
+    }
+
+    @Override
+    public Optional<Detective> findByBadgeNumber(String badgeNumber) {
+	return repo.findByBadgeNumber(badgeNumber);
+    }
+
+    @Override
+    public Set<Detective> findByRank(Rank rank) {
+	return repo.findbyRank(rank);
+    }
+
+    public void setRepo(DetectiveRepo repo) {
+	this.repo = repo;
+    }
+
+    @Override
+    AbstractRepo<Detective> getRepo() {
+	return repo;
     }
 }

@@ -27,29 +27,42 @@ SOFTWARE.
 */
 package com.apress.cems.beans.config.config;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import javax.sql.DataSource;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+@Configuration
+@PropertySource("classpath:db/test-datasource.properties")
+public class DataSourceConfig {
 
-    @Autowired
-    DataSource dataSource;
+    @Value("${driverClassName}")
+    private String driverClassName;
 
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    @Value("${url}")
+    private String url;
+
+    @Value("${username}")
+    private String username;
+
+    @Value("${password}")
+    private String password;
+
+    @Bean(name = { "one", "two" })
+    public DataSource dataSource() {
+	var ds = new DriverManagerDataSource();
+	ds.setDriverClassName(driverClassName);
+	ds.setUrl(url);
+	ds.setUsername(username);
+	ds.setPassword(password);
+	return ds;
     }
+
 }

@@ -25,30 +25,60 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.boot1;
+package com.apress.cems.services.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.apress.cems.dao.CriminalCase;
+import com.apress.cems.dao.Evidence;
+import com.apress.cems.dao.Storage;
+import com.apress.cems.util.NumberGenerator;
+import com.apress.cems.repos.AbstractRepo;
+import com.apress.cems.repos.EvidenceRepo;
+import com.apress.cems.services.EvidenceService;
 
-import java.util.Arrays;
-
-import static com.apress.cems.BeanManager.asHtml;
+import java.util.Optional;
+import java.util.Set;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
+public class SimpleEvidenceService extends SimpleAbstractService<Evidence> implements EvidenceService {
+    private EvidenceRepo repo;
 
-@RestController
-public class CtxController {
+    public SimpleEvidenceService() {
+    }
 
-    @Autowired
-    ApplicationContext ctx;
+    public SimpleEvidenceService(EvidenceRepo repo) {
+	this.repo = repo;
+    }
 
-    @GetMapping("/")
-    public String index() {
-        return asHtml.apply(ctx);
+    @Override
+    public Evidence createEvidence(CriminalCase criminalCase, Storage storage, String itemName) {
+	var evidence = new Evidence();
+	evidence.setCriminalCase(criminalCase);
+	evidence.setNumber(NumberGenerator.getEvidenceNumber());
+	evidence.setItemName(itemName);
+	evidence.setStorage(storage);
+	repo.save(evidence);
+	return evidence;
+    }
+
+    @Override
+    public Set<Evidence> findByCriminalCase(CriminalCase criminalCase) {
+	return repo.findByCriminalCase(criminalCase);
+    }
+
+    @Override
+    public Optional<Evidence> findByNumber(String evidenceNumber) {
+	return repo.findByNumber(evidenceNumber);
+    }
+
+    public void setRepo(EvidenceRepo repo) {
+	this.repo = repo;
+    }
+
+    @Override
+    AbstractRepo<Evidence> getRepo() {
+	return repo;
     }
 }

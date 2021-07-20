@@ -25,31 +25,47 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
+package com.apress.cems.stub.repo;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.apress.cems.dao.Person;
+import org.apache.commons.lang3.NotImplementedException;
+import com.apress.cems.repos.PersonRepo;
 
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import java.util.Optional;
+import java.util.Set;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+public class StubPersonRepo extends StubAbstractRepo<Person> implements PersonRepo {
+    @Override
+    public Optional<Person> findByUsername(String username) {
+	throw new NotImplementedException("Not needed for this stub.");
+    }
 
-    @Autowired
-    DataSource dataSource;
+    @Override
+    public Optional<Person> findByCompleteName(String firstName, String lastName) {
+	throw new NotImplementedException("Not needed for this stub.");
+    }
 
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    @Override
+    public Set<Person> findAll() {
+	throw new NotImplementedException("Not needed for this stub.");
+    }
+
+    @Override
+    public Person update(Person entity) {
+	throw new NotImplementedException("Not needed for this stub.");
+    }
+
+    @Override
+    public long count() {
+	throw new NotImplementedException("Not needed for this stub.");
+    }
+
+    @Override
+    public int updatePassword(Long personId, String newPass) {
+	throw new NotImplementedException("Not needed for this example");
     }
 }

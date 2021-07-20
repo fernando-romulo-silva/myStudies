@@ -1,0 +1,46 @@
+
+
+$ kubectl run --image=nginx:alpine myfirstpod --labels=example=myfirstpod
+
+$ kubectl get pods
+
+$ kubectl get all -l example=myfirstpod
+
+$ kubectl get all -l example=myfirstpod -o wide
+
+==============================================================================================================================
+
+$ kubectl create deployment example-webserver --image=nginx:alpine
+
+$ kubectl get pods -o wide
+
+$ ping -c 2 10.244.1.2
+
+$ curl -I 10.244.1.2:80
+
+$ kubectl run --image=frjaraur/nettools:minimal -ti -- sh
+
+/# ping -c 2 10.244.1.2
+
+/# curl -I 10.244.1.2:80
+
+==============================================================================================================================
+
+$ kubectl expose deployment example-webserver --name example-webserver-svc --type=NodePort --port=80
+
+$ kubectl get services -o wide
+
+$ ping -c 2 10.102.2.127
+
+$ curl -I 10.88.0.3:80
+
+$ kubectl get pods -o wide -l app=example-webserver
+
+==============================================================================================================================
+
+$ kubectl scale --replicas=3 deployment/example-webserver
+
+$ kubectl get pods -o wide -l app=example-webserver
+
+$ kubectl logs example-webserver-5f44456b7-4zhqx
+

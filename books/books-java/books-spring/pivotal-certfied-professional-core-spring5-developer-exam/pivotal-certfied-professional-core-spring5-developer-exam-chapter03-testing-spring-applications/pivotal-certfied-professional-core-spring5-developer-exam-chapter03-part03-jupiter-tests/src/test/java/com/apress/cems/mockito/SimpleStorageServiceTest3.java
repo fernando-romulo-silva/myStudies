@@ -25,31 +25,56 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
+package com.apress.cems.mockito;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
-import javax.sql.DataSource;
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.apress.cems.dao.Storage;
+import com.apress.cems.repos.StorageRepo;
+import com.apress.cems.services.impl.SimpleStorageService;
 
 /**
  * @author Iuliana Cosmina
- * @since 1.0
+ * @since 1.0 Description: new-style using Mockito mocks with JUnit 5
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+@ExtendWith(MockitoExtension.class)
+class SimpleStorageServiceTest3 {
+    static final Long STORAGE_ID = 1L;
 
-    @Autowired
-    DataSource dataSource;
+    @Mock // Creates mock instance of the field it annotates
+    private StorageRepo mockRepo;
+
+    @InjectMocks
+    private SimpleStorageService storageService;
 
     @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    void findByIdPositive() {
+	var storage = new Storage();
+	storage.setId(STORAGE_ID);
+	
+	when(mockRepo.findById(any(Long.class))).thenReturn(Optional.of(storage));
+
+	Storage result = storageService.findById(STORAGE_ID);
+
+	verify(mockRepo, times(1)).findById(any(Long.class));
+
+	assertAll( //
+			() -> assertNotNull(result), //
+			() -> assertEquals(storage.getId(), result.getId()) //
+	);
     }
 }

@@ -25,31 +25,37 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.beans.config.config;
+package com.apress.cems.stub.repo;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.apress.cems.dao.Storage;
+import com.apress.cems.repos.StorageRepo;
+import org.apache.commons.lang3.NotImplementedException;
 
-import javax.sql.DataSource;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import java.util.Optional;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { DataSourceConfig.class })
-public class BootstrapDatasourceTest {
+public class StubStorageRepo extends StubAbstractRepo<Storage> implements StorageRepo {
+    @Override
+    public Optional<Storage> findByName(String name) {
+	switch (name) {
+	case "Here":
+	    return Optional.of(records.get(2L));
+	case "There":
+	    return Optional.of(records.get(3L));
+	}
+	return Optional.empty();
+    }
 
-    @Autowired
-    DataSource dataSource;
+    @Override
+    public Storage update(Storage entity) {
+	throw new NotImplementedException("Not needed for this stub.");
+    }
 
-    @Test
-    public void testBoot() {
-	assertNotNull(dataSource);
+    @Override
+    public Optional<Storage> findByLocation(String location) {
+	throw new NotImplementedException("Not needed for this stub.");
     }
 }
