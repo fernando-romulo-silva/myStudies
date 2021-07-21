@@ -11,5 +11,9 @@
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-part02-junit-tests</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-part01-tests-base</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-part03-jupiter-tests</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-part04-spring-tests-junit</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-part05-spring-tests-jupiter</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-part06-profiles</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-part07-spring-boot-testing</module>
 	</modules>
 </project>

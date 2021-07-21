@@ -1,0 +1,12 @@
+======================================================================================================
+ $ airflow config get-value core sql_alchemy_conn
+
+ $ airflow config get-value core executor
+
+======================================================================================================
+
+$ sudo -u postgres psql
+
+$ airflow db init
+
+$ airflow users create -u admin -p admin -r Admin -f admin -l admin -e admin@aiflwo.com

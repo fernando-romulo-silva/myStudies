@@ -44,3 +44,48 @@ $ kubectl get pods -o wide -l app=example-webserver
 
 $ kubectl logs example-webserver-5f44456b7-4zhqx
 
+==============================================================================================================================
+==============================================================================================================================
+
+$ vagrant ssh kubernetes-node1
+
+$ kubectl get nodes
+
+$ git clone https://github.com/PacktPublishing/Docker-Certified-Associate-DCA-Exam-Guide.git
+
+$ kubectl create -f blue-deployment-simple.yaml
+
+$ kubectl get deployments -o wide
+
+$ kubectl get pods -o wide
+
+$ curl 192.168.22.65:3000/text
+
+$ kubectl create -f blue-service-simple.yaml
+
+$ kubectl get svc
+
+$ curl 10.111.45.4:80/text
+
+$ kubectl delete -f blue-service-simple.yaml
+
+$ kubectl create -f blue-service-nodeport.yaml
+
+$ curl 0.0.0.0:30926/text
+
+$ kubectl set image deployment blue-app blue=codegazers/colors:1.15
+
+$ kubectl get all -o wide
+
+$ kubectl rollout status deployment.apps/blue-app
+
+$ kubectl rollout undo deployment.apps/blue-app
+
+==============================================================================================================================
+==============================================================================================================================
+$ kubectl create -f .
+
+$ vagrant ssh kubernetes-node2
+
+
+
