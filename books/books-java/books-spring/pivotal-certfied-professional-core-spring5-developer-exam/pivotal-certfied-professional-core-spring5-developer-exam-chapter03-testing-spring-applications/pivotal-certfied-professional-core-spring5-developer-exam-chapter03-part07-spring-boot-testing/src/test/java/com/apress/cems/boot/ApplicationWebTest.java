@@ -25,32 +25,47 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.jupiter.cfg;
+package com.apress.cems.boot;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Profile;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import com.apress.cems.boot.ctr.PersonController;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import javax.sql.DataSource;
+import static org.hamcrest.Matchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@Profile("dev")
-public class TestDbConfig {
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+class ApplicationWebTest {
 
-    @Bean
-    public DataSource dataSource() {
-        var builder = new EmbeddedDatabaseBuilder();
-        var db = builder
-                .setType(EmbeddedDatabaseType.H2)
-                .generateUniqueName(true)
-                .addScript("db/schema.sql")
-                .addScript("db/test-data.sql")
-                .build();
-        return db;
+    @Autowired
+    PersonController personController;
+
+    private MockMvc mockMvc;
+
+    @BeforeEach
+    void setup() {
+        this.mockMvc = MockMvcBuilders.standaloneSetup(this.personController).build();
+    }
+
+    @Test
+    public void testfindAll() throws Exception {
+
+        mockMvc.perform(get(String.format("/person/all")))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$..firstName", hasItem(is("Sherlock"))));
+
     }
 
 }

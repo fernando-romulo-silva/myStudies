@@ -25,30 +25,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.jupiter.cfg.repos;
+package com.apress.cems.boot.repos;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.JdbcTemplate;
-
-import javax.sql.DataSource;
+import com.apress.cems.boot.entities.Person;
+import org.springframework.data.repository.CrudRepository;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@Configuration
-@ComponentScan(basePackages = {"com.apress.cems.repos"})
-public class ReposConfig {
-
-    @Autowired
-    DataSource dataSource;
-
-    @Bean
-    public JdbcTemplate userJdbcTemplate() {
-        return new JdbcTemplate(dataSource);
-    }
+public interface PersonRepo extends CrudRepository<Person, Long> {
 
 }

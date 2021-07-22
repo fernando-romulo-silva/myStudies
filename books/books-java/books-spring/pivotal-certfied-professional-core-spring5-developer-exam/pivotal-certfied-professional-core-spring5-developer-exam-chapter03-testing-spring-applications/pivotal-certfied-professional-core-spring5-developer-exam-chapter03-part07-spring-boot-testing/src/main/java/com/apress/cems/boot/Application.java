@@ -25,16 +25,25 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.jupiter.cfg;
+package com.apress.cems.boot;
 
-import com.apress.cems.jupiter.cfg.db.ProdDbConfig;
-import com.apress.cems.jupiter.cfg.repos.ReposConfig;
-import org.springframework.context.annotation.Import;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@Import( {ProdDbConfig.class, ReposConfig.class})
-public class AppConfig {
+@SpringBootApplication
+public class Application {
+
+    private static Logger logger = LoggerFactory.getLogger(Application.class);
+
+    public static void main(String... args) {
+        var ctx = SpringApplication.run(Application.class, args);
+        ctx.registerShutdownHook();
+        logger.info("Application Started ...");
+    }
 }

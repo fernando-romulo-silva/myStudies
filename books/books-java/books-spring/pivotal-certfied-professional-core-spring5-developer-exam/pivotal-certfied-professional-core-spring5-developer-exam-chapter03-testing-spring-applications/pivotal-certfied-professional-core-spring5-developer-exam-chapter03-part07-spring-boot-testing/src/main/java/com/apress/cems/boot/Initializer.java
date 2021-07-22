@@ -25,55 +25,39 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.apress.cems.repos;
+package com.apress.cems.boot;
 
-import com.apress.cems.jupiter.cfg.AllConfig;
-import com.apress.cems.jupiter.cfg.TestDbConfig;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import com.apress.cems.boot.entities.Person;
+import com.apress.cems.boot.repos.PersonRepo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.stereotype.Service;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import javax.annotation.PostConstruct;
 
 /**
  * @author Iuliana Cosmina
  * @since 1.0
  */
-@ExtendWith(SpringExtension.class)
-//@ContextConfiguration(classes = {TestDbConfig.class, AppConfig.class})
-@ContextConfiguration(classes = {TestDbConfig.class, AllConfig.class})
-@ActiveProfiles("dev")
-class RepositoryTest {
+@Service
+public class Initializer {
 
-    static final Long PERSON_ID = 1L;
+    private Logger logger = LoggerFactory.getLogger(Initializer.class);
+    private PersonRepo personRepo;
 
     @Autowired
-    PersonRepo personRepo;
-
-    @BeforeEach
-    void setUp(){
-        assertNotNull(personRepo);
+    public Initializer(PersonRepo personRepo) {
+        this.personRepo = personRepo;
     }
 
-    @Test
-    void testFindByIdPositive(){
-        personRepo.findById(PERSON_ID).ifPresentOrElse(
-                p -> assertEquals("Sherlock", p.getFirstName()),
-                Assertions:: fail
-        );
+    @PostConstruct
+    public void init() {
+        logger.info(" -->> Starting database initialization...");
+        var person = new Person();
+        person.setFirstName("Sherlock");
+        person.setLastName("Holmes");
+        personRepo.save(person);
+        logger.info(" -->> Database initialization finished.");
     }
-
-    @Test
-    void testFindAll(){
-        var personSet = personRepo.findAll();
-        assertNotNull(personSet);
-        assertEquals(2, personSet.size());
-    }
-
 }
