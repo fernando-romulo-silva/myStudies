@@ -307,5 +307,6 @@
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter00-core</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter02-bean-life-conf</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-testing-spring-applications</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter04-apsect-oriented-with-spring</module>
 	</modules>
 </project>

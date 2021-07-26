@@ -10,3 +10,20 @@ $ sudo -u postgres psql
 $ airflow db init
 
 $ airflow users create -u admin -p admin -r Admin -f admin -l admin -e admin@aiflwo.com
+
+
+======================================================================================================
+
+$ pip install flower
+
+$ pip install 'apache-airflow[celery]'
+
+$ sudo apt install redis-server
+
+$ sudo nano /etc/redis/redis.conf
+
+$ sudo systemctl restart redis.service
+
+$ sudo systemctl status redis.service
+
+$ celery flower
