@@ -7,8 +7,5 @@
   </parent>
   <artifactId>murachs-java-servlets-jsp-chapter12-how-to-use-jdbc</artifactId>
   <packaging>pom</packaging>
-  <modules>
-  	<module>murachs-java-servlets-jsp-chapter12-part01-email</module>
-  	<module>murachs-java-servlets-jsp-chapter12-part02-sql-gateway</module>
-  </modules>
+  <modules></modules>
 </project>

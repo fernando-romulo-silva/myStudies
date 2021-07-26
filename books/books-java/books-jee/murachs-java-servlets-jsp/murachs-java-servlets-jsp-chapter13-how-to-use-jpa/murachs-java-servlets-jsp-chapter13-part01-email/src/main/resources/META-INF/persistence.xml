@@ -10,8 +10,8 @@
 		<class>murach.business.User</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
-			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/murach_jpa" />
-			<property name="jakarta.persistence.jdbc.user" value="root" />
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/murach" />
+			<property name="jakarta.persistence.jdbc.user" value="murach_user" />
 			<property name="jakarta.persistence.jdbc.password" value="sesame" />
 			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="jakarta.persistence.schema-generation.database.action" value="create" />
