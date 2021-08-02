@@ -1,0 +1,48 @@
+
+What environment variables should be exported to start using a trusted environment with the Docker client?
+
+a) export DOCKER_TRUSTED_ENVIRONMENT=1
+
+b) export DOCKER_CONTENT_TRUST=1
+
+c) export DOCKER_TRUST=1
+
+d) export DOCKER_TRUSTED=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer b

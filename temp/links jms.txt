@@ -1,0 +1,20 @@
+https://www.google.com/search?q=message+broker+supports+jta&oq=message+broker+supports+jta&aqs=chrome..69i57j33i160l2.6631j0j7&sourceid=chrome&ie=UTF-8
+https://www.google.com/search?q=message+broker+supports+jta&oq=message+broker+supports+jta&aqs=chrome.0.69i59.5309j0j7&sourceid=chrome&ie=UTF-8
+
+https://www.atomikos.com/Blog/ReliableJMSWithTransactions
+
+https://www.atomikos.com/Documentation/CommitOrderingWithJms
+
+https://docs.wso2.com/display/EI660/Handling+Distributed+Transactions+in+the+Message+Broker+
+
+https://www.atomikos.com/Blog/TheSimpleSecretOfExactlyOnceDelivery
+
+https://docs.gigaspaces.com/solution-hub/jta-xa-example.html
+
+jms recipes
+
+https://coderecipes.blog/category/jms/
+
+https://coderecipes.blog/2020/04/04/sending-jms-messages-in-a-transaction/
+
+https://docs.solace.com/Solace-JMS-API/Solace-JMS-Overview.htm

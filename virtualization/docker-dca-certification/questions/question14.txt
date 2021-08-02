@@ -1,0 +1,10 @@
+
+What is true about Swarm networking?
+
+a) All overlay networks are encrypted by default.
+
+b) Control Plane nodes use mutual TLS encryption to secure traffic.
+
+c) An internal DNS can be consumed externally exposing its service.
+
+d) All of the preceding options are true.

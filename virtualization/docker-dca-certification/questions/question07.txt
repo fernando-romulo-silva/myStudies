@@ -1,0 +1,49 @@
+
+If we publish a service on port 8080 using -P, which nodes will expose port 8080?
+
+a) No node will expose a service on port 8080.
+
+b) All nodes will publish port 8080.
+
+c) We should use privileged containers to expose port 8080.
+
+d) We must use --network=host to publish ports below port 30000.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer a

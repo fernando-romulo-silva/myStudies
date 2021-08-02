@@ -1,0 +1,44 @@
+How many replicas does a global service run on nodes if we specify the node.role!=worker constraint?
+
+a) Worker and manager nodes will run one replica.
+
+b) Only workers will run one replica.
+
+c) Only manager nodes will run one replica.
+
+d) No nodes will run any replicas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer b

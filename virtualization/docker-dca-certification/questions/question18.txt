@@ -1,0 +1,10 @@
+
+Which of the following is true about global services?
+
+a) Global services will only run one replica of the defined service on each node.
+
+b) Global services will not provide high availability based on resilience.
+
+c) Draining a node will not remove global services.
+
+d) All of the preceding sentences are true.

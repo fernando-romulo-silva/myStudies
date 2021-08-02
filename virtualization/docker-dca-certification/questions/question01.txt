@@ -1,0 +1,45 @@
+
+How can we limit the number of CPUs provided to a container?
+
+a) Using --cap-add CPU.
+
+b) Using --cpuset-cpus.
+
+c) Using --cpus.
+
+d) It is not possible to specify the number of CPUs; we have to use --cpu-shares and define the CPU slices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer b and c

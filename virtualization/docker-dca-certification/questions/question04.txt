@@ -1,0 +1,46 @@
+
+How can we increase the number of replicas of a service running one instance (mark all the correct answers)?
+
+a) This is not possible for global services.
+
+b) By updating the number of replicas with docker service update --replicas <NUMBER_OF_REPLICAS> <SERVICE>.
+
+c) The number of replicas can be increased using docker service scale <SERVICE>=<NUMBER_OF_REPLICAS>.
+
+d) We can use docker service scale up to create a new replica.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers a, b, and c

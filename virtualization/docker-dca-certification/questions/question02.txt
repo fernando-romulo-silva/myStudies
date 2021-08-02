@@ -1,0 +1,49 @@
+
+How can we limit the amount of memory available to a container?
+
+a) It is not possible to limit the amount of memory available to a container.
+
+b) Using --cap-drop MEM.
+
+c) Using --memory.
+
+d) Using --memory-reservation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer c

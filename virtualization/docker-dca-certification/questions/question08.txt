@@ -1,0 +1,46 @@
+What step should we follow to remove the leader node from the cluster?
+
+a) Ensure all tasks run on other nodes by executing docker node update --availability=drain <LEADER_NODE>.
+
+b) Remove the node from the cluster as the leader by executing docker swarm leave on the node.
+
+c) Demote the leader node to a worker and then execute docker swarm leave on the node.
+
+d) Once the node is out of the cluster, we can remove it completely using docker node rm <OLD_LEADER_NODE> from any available manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers a, c, and d

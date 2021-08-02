@@ -1,0 +1,10 @@
+
+Which of these lines creates a volume named DATA?
+
+a) docker volume create --driver local DATA.
+
+b) docker create --volume DATA.
+
+c) Volumes must be created during container execution.
+
+d) None of the options are valid.
