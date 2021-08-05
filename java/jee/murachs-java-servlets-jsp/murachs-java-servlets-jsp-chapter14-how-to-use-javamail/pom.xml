@@ -7,4 +7,7 @@
   </parent>
   <artifactId>murachs-java-servlets-jsp-chapter14-how-to-use-javamail</artifactId>
   <packaging>pom</packaging>
+  <modules>
+  	<module>murachs-java-servlets-jsp-chapter14-part01-email</module>
+  </modules>
 </project>

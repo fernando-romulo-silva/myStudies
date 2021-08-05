@@ -8,3 +8,35 @@ b) Copy the /var/lib/docker/swarm directory content for backing up Swarm.
 c) Raft logs should be backed up apart from normal files.
 
 d) All of the preceding steps are required.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a' and 'b'

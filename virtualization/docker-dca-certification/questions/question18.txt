@@ -8,3 +8,11 @@ b) Global services will not provide high availability based on resilience.
 c) Draining a node will not remove global services.
 
 d) All of the preceding sentences are true.
+
+
+
+
+
+
+
+Answer a

@@ -1,0 +1,32 @@
+
+What is required to deploy DTR?
+
+a) A Docker Enterprise license from Docker Hub and an appropriate repository URL
+
+b) Docker Enterprise Engine and Docker UCP
+
+c) Docker Engine, a DTR license, and Docker Content Trust
+
+d) All of the preceding options
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a' and 'b'

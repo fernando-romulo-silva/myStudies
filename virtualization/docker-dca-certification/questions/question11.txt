@@ -9,3 +9,30 @@ b) The webserver service will run three replicas.
 c) The webserver service will run five replicas.
 
 d) The webserver service will run eight replicas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer b

@@ -8,3 +8,43 @@ b) Images can be signed using docker trust sign <IMAGE>.
 c) All images will be signed if we set the Docker client to use Docker Content Trust on every command.
 
 d) Image signing is based on the following keys: the owner key, the repository key, the snapshot key, and the timestamp.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer a, b, and c

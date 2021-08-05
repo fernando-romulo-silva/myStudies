@@ -1,0 +1,32 @@
+
+Which option will bind an already-created DATA volume inside a container, under the /data directory?
+
+a) -v DATA:/data
+
+b) --mount type=volume,source=DATA,target=/data
+
+c) --mount DATA:/data
+
+d) --volume type=volume,source=DATA,target=/data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a' and 'b'

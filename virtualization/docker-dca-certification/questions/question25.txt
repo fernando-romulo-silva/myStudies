@@ -1,0 +1,31 @@
+
+Which methods are allowed to publish applications on Docker Enterprise?
+
+a) We can use Interlock.
+
+b) We can use an Ingress Controller.
+
+c) We will publish each application container.
+
+d) We can use the host mode to publish applications as if they were running directly at the host level.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a', 'c', and 'd'

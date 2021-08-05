@@ -1,0 +1,37 @@
+
+How can docker build avoid the use of cached image layers?
+
+a) Docker will always use cached information. It is not possible to avoid using image caching.
+
+b) By default, image caching is disabled, therefore we need to apply --use-caching to ensure caching is enabled as it will speed up the building process.
+
+c) To avoid image caching, we can use --no-cache. This way, the build will not use any previously saved layers.
+
+d) All of the preceding sentences are wrong.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'

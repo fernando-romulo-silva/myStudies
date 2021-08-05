@@ -8,3 +8,28 @@ b) To ensure all nodes run the same image version, we will need to use --with-re
 c) We will use signed images and Docker Engine on nodes that will use trusted content.
 
 d) It is not possible to ensure that nodes will use the right image version.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer a, b, and c

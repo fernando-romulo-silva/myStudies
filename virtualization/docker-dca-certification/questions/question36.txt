@@ -1,0 +1,31 @@
+Which is the best node distribution if we have to deploy a cluster with seven managers with distributed high availability?
+
+a) Four manager nodes in a data center and three manager nodes on a different one.
+
+b) Two managers in a data center, two managers in a second one, and three in another.
+
+c) All managers should be in the same data center.
+
+d) We cannot manage distributed availability with 7 nodes; we need at least 9.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'

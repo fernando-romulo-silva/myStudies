@@ -1,0 +1,30 @@
+
+How can we deploy two applications using the same docker-compose.yaml file?
+
+a) We cannot deploy two applications using the same docker-compose.yaml file.
+
+b) Docker Compose can deploy two applications using projects to ensure applications run using different volumes and ports.
+
+c) We can use environment variables for fixed resources to avoid any resource usage conflicts.
+
+d) The only option to avoid application component conflicts is to deploy applications on different clusters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'

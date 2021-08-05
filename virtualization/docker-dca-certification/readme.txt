@@ -18,65 +18,7 @@ Exam answers
 
 
 
-11 - b
 
-12 - a
-
-13 - d
-
-14 - b
-
-15 - c
-
-16 - a, b, and c
-
-17 - a, b, and c
-
-18 - a
-
-19 - b and c
-
-20 - a and b
-
-21 - d
-
-22 - c
-
-23 - b, c, and d
-
-24 - c and d
-
-25 - a, c, and d
-
-26 - a and c
-
-27 - c
-
-28 - c
-
-29 -c
-
-30 - b
-
-31 - d
-
-32 - a and b
-
-33 - d
-
-34 - b and c
-
-35 - d
-
-36 - b
-
-37 - a
-
-38 - c
-
-39 - c
-
-40 - a and b
 
 41 - a and b
 

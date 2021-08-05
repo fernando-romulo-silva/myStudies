@@ -1,0 +1,31 @@
+
+What are the differences between the COPY and ADD Dockerfile primitives?
+
+a) COPY adds files in read-only mode.
+
+b) COPY can be used to download files from external services.
+
+c) ADD can be used with packaged and compressed files and they will be decompressed in the layer's root filesystem.
+
+d) ADD and COPY are completely equal, but ADD is newer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'

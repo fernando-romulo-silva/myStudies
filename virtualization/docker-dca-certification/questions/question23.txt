@@ -1,0 +1,46 @@
+
+Which of the following is true about locking a Docker Swarm cluster?
+
+a) The control, management, and data planes are secure.
+
+b) A passphrase is required to unlock the /var/lib/docker/swarm data.
+
+c) Executing systemctl restart docker will require the locking passphrase.
+
+d) If a node reboots, Docker Engine will not restart automatically, hence we have lost the Docker Swarm quorum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b', 'c', and 'd'

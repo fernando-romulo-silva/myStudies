@@ -1,0 +1,46 @@
+
+What is the difference between docker image import and docker image load for uploading an image to a Docker host?
+
+a) There is no difference between the commands.
+
+b) Both import the same image content.
+
+c) docker image import will only retrieve image layers containing binaries, libraries, 
+and configurations for the process but without any meta-information about how to launch the process, 
+what volumes to use, what ports should be used, and so on.
+
+d) We can only use docker image import to create new images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'

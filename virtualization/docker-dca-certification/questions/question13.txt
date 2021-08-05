@@ -8,3 +8,35 @@ b) Using --memory.
 c) This must be configured on your operating system.
 
 d) We use --memory-reservation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'd'

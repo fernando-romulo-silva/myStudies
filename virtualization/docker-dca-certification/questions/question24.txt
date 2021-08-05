@@ -1,0 +1,35 @@
+Which of the following is true about replicated services?
+
+a) They will run one instance on each node.
+
+b) Only replicated services can be upgraded using the rolling update feature.
+
+c) They can be stopped using the Docker service update: --replicas 0 <SERVICENAME>.
+
+d) We will use Go templates to be able to provide unique resources, such as volumes or hostnames, inside containers to ensure all replicas use their own resources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c' and 'd'

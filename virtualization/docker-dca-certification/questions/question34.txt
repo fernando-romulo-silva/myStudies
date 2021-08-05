@@ -1,0 +1,30 @@
+Which of these keys requires a passphrase to unlock it while signing images?
+
+a) Timestamp
+
+b) Target
+
+c) Snapshot
+
+d) Root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b' and 'c'

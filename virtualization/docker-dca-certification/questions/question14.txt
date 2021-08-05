@@ -8,3 +8,37 @@ b) Control Plane nodes use mutual TLS encryption to secure traffic.
 c) An internal DNS can be consumed externally exposing its service.
 
 d) All of the preceding options are true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+

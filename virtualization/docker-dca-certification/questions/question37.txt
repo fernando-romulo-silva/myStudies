@@ -1,0 +1,31 @@
+Which concept is responsible for managing external to internal load balancing for Docker Swarm services?
+
+a) Router Mesh
+
+b) Ingress Controller
+
+c) nodePort
+
+d) clusterIP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'

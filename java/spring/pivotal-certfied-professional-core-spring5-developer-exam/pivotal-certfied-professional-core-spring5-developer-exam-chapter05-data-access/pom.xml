@@ -10,5 +10,8 @@
   <modules>
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part01-jdbc</module>
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part02-transactions</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part03-hibernate</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part04-emf</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part05-data-jpa</module>
   </modules>
 </project>

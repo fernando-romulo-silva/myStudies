@@ -8,3 +8,31 @@ b) docker create --volume DATA.
 c) Volumes must be created during container execution.
 
 d) None of the options are valid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'

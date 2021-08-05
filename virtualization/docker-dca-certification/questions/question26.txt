@@ -1,0 +1,41 @@
+ Which of the following is true about Kubernetes' integration with Docker Enterprise?
+
+a) Docker Enterprise provides Kubernetes out of the box.
+
+b) We must choose which orchestrator to use in cluster nodes because only one is allowed at once.
+
+c) We can run hosts in mixed mode to allow Kubernetes and Docker Swarm workloads, although it is not recommended for production.
+
+d) We can upgrade Kubernetes components with common Kubernetes installation commands.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a' and 'c'

@@ -8,3 +8,24 @@ b) Replicated services are the default service mode and they will run one instan
 c) Replicated services can be stopped by setting the number of replicas to 0.
 
 d) All of the preceding options are true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer b and c

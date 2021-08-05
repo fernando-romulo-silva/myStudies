@@ -1,0 +1,31 @@
+
+How do we expose a web server container on the host's port 80 (the nginx:alpine image exposes port 80)?
+
+a) docker container run --cap-add NET_ADMIN -p 80:80 -d nginx:alpine
+
+b) docker container run --net=host -d nginx:alpine
+
+c) docker container run -P nginx:alpine
+
+d) docker container run -d -P 80:80 nginx:alpine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'd'

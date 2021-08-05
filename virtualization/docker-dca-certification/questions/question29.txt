@@ -1,0 +1,42 @@
+
+
+How can we download all of the images from a repository?
+
+a) It is not possible. We need to make a list of all the images with their tags and retrieve them one by one.
+
+b) Every time we execute docker image pull, we download all the images and their layers, regardless of whether we are going to use them or not.
+
+c) We can use docker image pull --all-tags to retrieve all repository-associated images.
+
+d) None of the preceding sentences are right.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'

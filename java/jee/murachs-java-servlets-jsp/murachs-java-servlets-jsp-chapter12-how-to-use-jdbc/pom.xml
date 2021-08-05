@@ -1,11 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>br.com.fernando</groupId>
-    <artifactId>murachs-java-servlets-jsp</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>murachs-java-servlets-jsp-chapter12-how-to-use-jdbc</artifactId>
-  <packaging>pom</packaging>
-  <modules></modules>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>murachs-java-servlets-jsp</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>murachs-java-servlets-jsp-chapter12-how-to-use-jdbc</artifactId>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>murachs-java-servlets-jsp-chapter12-part01-email</module>
+		<module>murachs-java-servlets-jsp-chapter12-part02-sql-gateway</module>
+	</modules>
+	
 </project>

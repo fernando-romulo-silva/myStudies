@@ -1,0 +1,35 @@
+
+How can we push a locally built image to a remote registry?
+
+a) We need to know the registry's fully qualified domain name (FQDN) or its IP address.
+
+b) We tag the image with the registry FQDN or IP, the username or group, and the repository where the image will be stored.
+
+c) If the registry uses TLS/SSL certificates, we load its CA in our system to be able to trust them or we can configure it using the insecure-registries key.
+
+d) All of the preceding sentences are correct.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'd'

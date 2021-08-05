@@ -1,0 +1,31 @@
+What is a Docker bundle and what is included inside those ZIP files?
+
+a) A Docker bundle provides client binaries and configurations for administrators.
+
+b) All users have their own Docker bundle and it includes all the environment files required for the user.
+
+c) A Docker bundle includes only environment scripts and we will ask administrators for certificates.
+
+d) A user's Docker bundle includes all the environment files and certificates required for using the CaaS platform.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'd'
