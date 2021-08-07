@@ -1,0 +1,34 @@
+Which labels are required to deploy a service with Interlock?
+
+
+a) com.docker.lb.port
+
+b) com.docker.interlock.port
+
+c) com.docker.interlock.hosts
+
+d) com.docker.lb.backend
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+61 - Answer(s) 'a'

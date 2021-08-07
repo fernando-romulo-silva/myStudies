@@ -13,5 +13,8 @@
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part03-hibernate</module>
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part04-emf</module>
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part05-data-jpa</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part06-sec-data-jpa</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part07-sandbox</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part08-boot-jpa</module>
   </modules>
 </project>

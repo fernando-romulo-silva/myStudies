@@ -1,0 +1,34 @@
+
+Which role should be set in UCP for the DBA team to allow them to create their own volumes?
+
+
+a) Scheduler.
+
+b) View Only.
+
+c) Only UCP administrators can create volumes and other cluster resources.
+
+d) Restricted Control is enough to create volumes on their private collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'b'

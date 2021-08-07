@@ -1,0 +1,34 @@
+How do we know how much space is used by containers and volumes in our system?
+
+
+a) By using docker system prune
+
+b) By using docker system df
+
+c) By using docker container df
+
+d) By using docker volume df
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'b'

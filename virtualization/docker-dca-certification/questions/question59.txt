@@ -1,0 +1,35 @@
+
+Which concept is responsible for managing internal load balancing for Kubernetes?
+
+
+a) Router Mesh
+
+b) Ingress Controller
+
+c) Interlock
+
+d) clusterIP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'd'

@@ -1,0 +1,31 @@
+
+Which of the following is true about privileged containers?
+
+a) Resource limits will be avoided (CPU, memory, and disk I/O).
+
+b) They always run the container as the root user.
+
+c) These containers run with all available capabilities.
+
+d) They run using the host's kernel namespaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'a' and 'c'

@@ -1,0 +1,35 @@
+
+Which Kubernetes resources provide an application's resilience?
+
+
+a) Deployment
+
+b) ReplicaSet
+
+c) Pod
+
+d) Replicated
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'a' and 'b'

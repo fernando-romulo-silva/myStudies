@@ -1,0 +1,31 @@
+
+Which of the following is true about secrets?
+
+a) They will only be available on manager nodes, so workloads with secrets must run on these nodes.
+
+b) They are ephemeral and deployed on on-memory filesystems.
+
+c) They are encrypted even for administrators, so they cannot be recovered from the control plane.
+
+d) If we need to change a secret, we need to create a new secret and update the service with this new one.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'b', 'c', and 'd'

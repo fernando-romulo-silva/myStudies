@@ -1,0 +1,37 @@
+
+A user cannot push images to our DTR internal registry. 
+What should we verify?
+
+
+a) Docker login access.
+
+b) That the DTR CA certificate should be trusted.
+
+c) We should verify whether the image's repository does exist.
+
+d) That the image has vulnerabilities and DTR's image scanning rejects the user's image.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+66 - Answer(s) 'a', 'b', and 'c'

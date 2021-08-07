@@ -1,0 +1,34 @@
+Which command allows us to review and recover lost space due to "dangling images" and dead containers?
+
+a) docker system rm
+
+b) docker system prune
+
+c) docker image rm --filter="dangling"
+
+d) docker container rm -a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'b'

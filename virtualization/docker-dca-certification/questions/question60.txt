@@ -1,0 +1,35 @@
+
+Which resources are used to link pods with Kubernetes' defined volumes?
+
+
+a) persistentVolume
+
+b) persistentVolumeClaim
+
+c) storageClass
+
+d) persistentDataVolume
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'b'

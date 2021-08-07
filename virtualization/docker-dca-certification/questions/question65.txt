@@ -1,0 +1,35 @@
+
+Which flag should be used to configure all available FQDNs for UCP?
+
+
+a) --san
+
+b) --external-name
+
+c) --external-url
+
+d) --ucp-url
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'a'

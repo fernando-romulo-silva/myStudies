@@ -1,0 +1,32 @@
+
+Which of the following is true about Swarm join tokens?
+
+a) Once created, we have to store them in a secure place because they are not recoverable.
+
+b) We can generate new ones to get new values for new nodes if we lose them using docker swarm join-token recreate.
+
+c) We can recover them whenever we need them using docker swarm join-token.
+
+d) Join tokens will be automatically updated on all nodes once they are regenerated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'c'

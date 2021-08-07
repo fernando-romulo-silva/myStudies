@@ -1,0 +1,35 @@
+
+How can we review ports published for a container named webserver?
+
+
+a) Using docker container ls --filter name=webserver.
+
+b) Using docker container port webserver.
+
+c) Using docker container inspect webserver --format="{{ .NetworkSettings.Ports }}".
+
+d) All of the preceding answers are correct.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'd'

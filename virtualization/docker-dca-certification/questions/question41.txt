@@ -1,0 +1,36 @@
+
+How do we enable debugging on Docker Engine?
+
+a) By executing the Docker daemon with the -D argument
+
+b) By setting the debug key to true in the config.json file
+
+c) By enabling experimental features in daemon.json
+
+d) None of the preceding options
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'a' and 'b'

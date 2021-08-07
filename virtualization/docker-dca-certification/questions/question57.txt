@@ -1,0 +1,34 @@
+How do we set a repository named myregistry/myorganization/baseimages, available for internal users, where images are owned and managed by DevOps group users?
+
+
+a) We need to create an organization with the name myorganization.
+
+b) We will create myregistry/myorganization/baseimages as a public repository.
+
+c) We configure DevOps team users as admins of the myregistry/myorganization/baseimages repository.
+
+d) The myregistry/myorganization/baseimages repository will be created as private for myorganization users.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'c' and 'd'

@@ -1,0 +1,33 @@
+Which of the following sentences are true about overlay networks?
+
+a) DTR deploys an overlay network, dtr-ol, to route a cluster's internal communications.
+
+b) Overlay-defined networks are only present on manager nodes when there is not a task connected to them.
+
+c) interlock-extension connects to services' defined networks to route requests to appropriate backends.
+
+d) Docker Swarm overlay networks are encrypted and deployed using VXLAN.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'a', 'b', and 'c'

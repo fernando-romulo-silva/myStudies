@@ -1,0 +1,34 @@
+
+How can we ensure that the web server Docker service runs one instance of NGINX on all cluster nodes?
+
+
+a) By using docker service create --type=global --instances=1 --name=webserver --image=nginx:alpine.
+
+b) By using docker service create --mode=global --name=webserver nginx:alpine.
+
+c) UCP can ensure that administrators run any service on all nodes in the cluster with a tick on allow run on manager nodes.
+
+d) docker service create --name=webserver --image=nginx:alpine is enough for executing one instance on all nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'b'

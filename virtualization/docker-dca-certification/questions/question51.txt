@@ -1,0 +1,33 @@
+How can we ensure an image's content immutability?
+
+a) By using signed images.
+
+b) Defining immutable tags in DTR.
+
+c) By using image scanning.
+
+d) Images cannot be immutable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'a'

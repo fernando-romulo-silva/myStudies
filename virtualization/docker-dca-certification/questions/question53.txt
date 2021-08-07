@@ -1,0 +1,35 @@
+
+What does the HEALTHCHECK --start-period=15s CMD curl --fail https://localhost:8080 | exit 1 line in a Dockerfile do?
+
+
+a) It will execute the defined curl command every 15 seconds, and if it fails three consecutive times, it will mark the container as unhealthy.
+
+b) It will wait 15 seconds for the first execution and then Docker Engine will run the defined curl command every 30 seconds, and if it fails three consecutive times, it will mark the container as unhealthy.
+
+c) This line does not do anything; health checks must be configured for each container.
+
+d) Docker Engine will run this probe every 15 seconds and if it fails, it will restart the container.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'b'

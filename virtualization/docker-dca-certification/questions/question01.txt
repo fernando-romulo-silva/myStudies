@@ -42,4 +42,20 @@ d) It is not possible to specify the number of CPUs; we have to use --cpu-shares
 
 
 
+
+
+
+
+
+
 Answer b and c
+
+This means processes in container can be executed on cpu 1 and cpu 3.
+
+$ docker run --name test-mysql --cpuset-cpus="1,3"  --env MYSQL_ROOT_PASSWORD=root --detach --publish 3306:3306 mysql:5.7
+
+Number of CPUs. Number is a fractional number. 0.000 means no limit.
+
+$ docker run --name test-mysql --cpus 0.75  --env MYSQL_ROOT_PASSWORD=root --detach --publish 3306:3306 mysql:5.7
+
+

@@ -1,0 +1,28 @@
+Which primitive combination creates the command line that will effectively finally run inside a container?
+
+a) ENTRYPOINT will set the script or binary to be launched and CMD will be used if ENTRYPOINT is not defined.
+
+b) CMD always overwrites the ENTRYPOINT definition.
+
+c) Using a combination of ENTRYPOINT to define the script or binary to be launched and RUN as arguments.
+
+d) CMD will add arguments to the defined ENTRYPOINT only if ENTRYPOINT is configured using the exec format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'd'

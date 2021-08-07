@@ -1,0 +1,34 @@
+Which of the following sentences about container isolation are true?
+
+
+a) The host's hardware resources, such as memory and CPU, are granted using cgroups.
+
+b) To ensure a container's limits, we need to use operating system security modules.
+
+c) Only the root user is allowed to deploy containers with unlimited resources.
+
+d) Privileged containers will avoid defined process' capabilities and execution user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'b' and 'c'
