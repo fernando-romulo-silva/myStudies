@@ -46,4 +46,12 @@ d) Using --memory-reservation.
 
 
 
-Answer c
+
+
+
+Answer 'c'
+
+To limit the maximum amount of memory usage for a container, add the --memory option to the docker run command. 
+Alternatively, you can use the shortcut -m.
+
+$ docker run -it --memory="1g" ubuntu

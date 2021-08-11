@@ -41,4 +41,16 @@ d) No nodes will run any replicas.
 
 
 
-Answer b
+
+
+
+
+
+
+
+Answer 'b'
+
+
+A global service is a service that runs one task on every node. 
+There is no pre-specified number of tasks. 
+Each time you add a node to the swarm, the orchestrator creates a task and the scheduler assigns the task to the new node.

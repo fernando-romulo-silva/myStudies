@@ -40,5 +40,14 @@ d) All of the preceding options are true.
 
 
 
+
+
+
+
+
+
+
+
 Answer 'b'
 
+The nodes in a swarm use mutual Transport Layer Security (TLS) to authenticate, authorize, and encrypt the communications with other nodes in the swarm. 

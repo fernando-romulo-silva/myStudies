@@ -4,7 +4,8 @@ a) We can configure our registry as "insecure" in Docker Engine's daemon.json fi
 
 b) We should disable Content Trust to allow image pulling from unsecured registries.
 
-c) The best option is to trust self-signed certificates. We will add DTR's created Certificate Authority (CA) into our system's trusted-CA list.
+c) The best option is to trust self-signed certificates. 
+We will add DTR's created Certificate Authority (CA) into our system's trusted-CA list.
 
 d) We cannot use self-signed certificates, therefore we always require an Enterprise-signed certificate.
 
@@ -46,4 +47,6 @@ d) We cannot use self-signed certificates, therefore we always require an Enterp
 
 
 
-Answers a and c
+Answers 'a' and 'c'
+
+Docker Registry is an application that manages storing and delivering Docker container images.

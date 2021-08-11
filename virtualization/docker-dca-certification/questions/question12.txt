@@ -35,4 +35,21 @@ d) None of the options are valid.
 
 
 
-Answer 'a'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a' - Create a volume and then configure the container to use it:
+
+$ docker volume create DATA

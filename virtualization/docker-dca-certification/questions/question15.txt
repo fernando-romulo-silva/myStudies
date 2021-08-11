@@ -1,6 +1,7 @@
 
 Which concept routes requests to containers running for a deployed service?
 
+
 a) An ingress overlay network is used to route requests to different services' backends using a round-robin endpoint by default.
 
 b) A docker_gwbridge network is used to communicate with containers on different hosts.
@@ -8,6 +9,11 @@ b) A docker_gwbridge network is used to communicate with containers on different
 c) An ingress overlay network is used to route requests to different services' backends using the service's virtual IP by default.
 
 d) We must use a host network to route requests to containers.
+
+
+
+
+
 
 
 

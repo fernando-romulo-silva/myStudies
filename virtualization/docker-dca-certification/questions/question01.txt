@@ -48,7 +48,7 @@ d) It is not possible to specify the number of CPUs; we have to use --cpu-shares
 
 
 
-Answer b and c
+Answer 'b' and 'c'
 
 This means processes in container can be executed on cpu 1 and cpu 3.
 

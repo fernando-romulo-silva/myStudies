@@ -55,12 +55,18 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-core</artifactId>
-		    <version>5.3.10.RELEASE</version>
-		</dependency>    		
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>5.3.10.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>3.0.9.RELEASE</version>
+		</dependency>
 
 		<dependency>
 			<groupId>javax.validation</groupId>
@@ -105,7 +111,6 @@
 			<version>2.11.4</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -160,6 +165,27 @@
 			<artifactId>logback-classic</artifactId>
 			<version>1.2.3</version>
 		</dependency>
+
+		<dependency>
+			<groupId>de.flapdoodle.embed</groupId>
+			<artifactId>de.flapdoodle.embed.mongo</artifactId>
+			<version>3.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+<dependency>
+  <groupId>org.mongodb</groupId>
+  <artifactId>mongodb-driver-core</artifactId>
+  <version>4.0.4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.mongodb</groupId>
+  <artifactId>mongodb-driver-sync</artifactId>
+  <version>4.0.4</version>
+</dependency>
+
+
 
 		<!-- <dependency> <groupId>ch.qos.logback</groupId> <artifactId>logback-core</artifactId> <version>1.2.3</version> </dependency> -->
 
@@ -247,12 +273,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>de.flapdoodle.embed</groupId>
-			<artifactId>de.flapdoodle.embed.mongo</artifactId>
-			<version>2.2.0</version>
-			<scope>test</scope>
-		</dependency>
+
 
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -327,5 +348,6 @@
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter03-testing-spring-applications</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter04-apsect-oriented-with-spring</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-data-access</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter06-spring-web</module>
 	</modules>
 </project>

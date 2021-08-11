@@ -1,6 +1,7 @@
 
 If we publish a service on port 8080 using -P, which nodes will expose port 8080?
 
+
 a) No node will expose a service on port 8080.
 
 b) All nodes will publish port 8080.
@@ -46,4 +47,19 @@ d) We must use --network=host to publish ports below port 30000.
 
 
 
-Answer a
+
+
+Answer 'a'
+
+When you access port 8080 on any node, Docker routes your request to an active container. On the swarm nodes themselves, 
+port 8080 may not actually be bound, but the routing mesh knows how to route the traffic and prevents any port conflicts from happening.
+
+$ docker service create \
+  --name my-web \
+  --publish published=8080,target=80 \
+  --replicas 2 \
+  nginx
+  
+But, it's 'P' = publish-all, it's not valid for swarn
+  
+

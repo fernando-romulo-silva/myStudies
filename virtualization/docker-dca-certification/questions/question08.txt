@@ -43,4 +43,24 @@ d) Once the node is out of the cluster, we can remove it completely using docker
 
 
 
-Answers a, c, and d
+
+
+
+
+
+
+Answers 'a', 'c', and 'd'
+
+'a' - When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
+It also prevents the scheduler from assigning tasks to the node.
+
+$ docker node update --availability drain <NODE>
+
+
+'c' - To demote a node or set of nodes, run docker node demote from a manager node:
+
+$ docker node demote node-3
+
+'d' - Removes the specified nodes from a swarm.
+
+$ docker node rm swarm-node-02
