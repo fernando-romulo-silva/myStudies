@@ -31,6 +31,7 @@ import com.apress.cems.mongo.dao.Person;
 import com.apress.cems.mongo.services.PersonService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,6 +48,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @author Iuliana Cosmina
  * @since 1.0
  */
+@Disabled
 @SpringBootTest
 class PersonServiceTest {
 

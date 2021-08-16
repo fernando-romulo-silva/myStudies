@@ -29,6 +29,8 @@ package com.apress.cems.boot;
 
 import com.apress.cems.boot.services.PersonService;
 import com.apress.cems.boot.dao.Person;
+
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +47,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @since 1.0
  */
 @SpringBootTest
+@Disabled
 class ApplicationTest {
 
     @Autowired

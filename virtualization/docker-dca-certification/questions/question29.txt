@@ -1,6 +1,5 @@
-
-
 How can we download all of the images from a repository?
+
 
 a) It is not possible. We need to make a list of all the images with their tags and retrieve them one by one.
 
@@ -39,4 +38,19 @@ d) None of the preceding sentences are right.
 
 
 
-Answer 'c'
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c' because of:
+
+$ docker pull --all-tags $registry/$repo;

@@ -47,4 +47,24 @@ d) Image signing is based on the following keys: the owner key, the repository k
 
 
 
-Answer a, b, and c
+Answer 'a', 'b', and 'c'
+
+a - To sign a Docker Image you will need a delegation key pair, with that Image signing ensures image ownership.
+
+// load the key
+
+$ docker trust key load key.pem --name jeff
+
+
+b - Trust the image
+
+$ docker trust sign example/trust-demo:v2
+
+
+c - Since the commands execute only in trust way
+
+
+
+
+
+

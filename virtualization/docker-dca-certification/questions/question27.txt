@@ -43,4 +43,15 @@ d) We can only use docker image import to create new images.
 
 
 
+
+
+
+
+
 Answer 'c'
+
+docker import – docker import creates one image from one tarball which is not even an image (just a filesystem you want to import as an image). 
+Create an empty filesystem image and import the contents of the tarball
+
+docker load – docker load creates potentially multiple images from a tarred repository (since docker save can save multiple images in a tarball). 
+Loads a tarred repository from a file or the standard input stream

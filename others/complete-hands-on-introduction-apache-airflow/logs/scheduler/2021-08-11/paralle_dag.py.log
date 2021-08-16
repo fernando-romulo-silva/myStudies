@@ -1,0 +1,280 @@
+[2021-08-11 22:04:53,482] {scheduler_job.py:181} INFO - Started process (PID=102) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:04:53,483] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:04:53,483] {logging_mixin.py:104} INFO - [2021-08-11 22:04:53,483] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:04:53,489] {logging_mixin.py:104} INFO - [2021-08-11 22:04:53,488] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:04:53,489] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:04:53,499] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.019 seconds
+[2021-08-11 22:05:23,786] {scheduler_job.py:181} INFO - Started process (PID=910) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:05:23,787] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:05:23,788] {logging_mixin.py:104} INFO - [2021-08-11 22:05:23,788] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:05:23,798] {logging_mixin.py:104} INFO - [2021-08-11 22:05:23,797] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:05:23,798] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:05:23,809] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.024 seconds
+[2021-08-11 22:05:53,928] {scheduler_job.py:181} INFO - Started process (PID=974) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:05:53,928] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:05:53,929] {logging_mixin.py:104} INFO - [2021-08-11 22:05:53,929] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:05:53,936] {logging_mixin.py:104} INFO - [2021-08-11 22:05:53,936] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:05:53,936] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:05:53,949] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.024 seconds
+[2021-08-11 22:06:23,990] {scheduler_job.py:181} INFO - Started process (PID=1052) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:06:23,991] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:06:23,991] {logging_mixin.py:104} INFO - [2021-08-11 22:06:23,991] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:06:24,001] {logging_mixin.py:104} INFO - [2021-08-11 22:06:24,000] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:06:24,001] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:06:24,012] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.025 seconds
+[2021-08-11 22:06:54,045] {scheduler_job.py:181} INFO - Started process (PID=1139) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:06:54,046] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:06:54,046] {logging_mixin.py:104} INFO - [2021-08-11 22:06:54,046] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:06:54,055] {logging_mixin.py:104} INFO - [2021-08-11 22:06:54,054] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:06:54,055] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:06:54,067] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.024 seconds
+[2021-08-11 22:07:24,289] {scheduler_job.py:181} INFO - Started process (PID=1229) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:07:24,290] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:07:24,291] {logging_mixin.py:104} INFO - [2021-08-11 22:07:24,291] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:07:24,299] {logging_mixin.py:104} INFO - [2021-08-11 22:07:24,298] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:07:24,299] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:07:24,311] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.024 seconds
+[2021-08-11 22:07:54,440] {scheduler_job.py:181} INFO - Started process (PID=1307) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:07:54,441] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:07:54,442] {logging_mixin.py:104} INFO - [2021-08-11 22:07:54,442] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:07:54,450] {logging_mixin.py:104} INFO - [2021-08-11 22:07:54,450] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:07:54,451] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:07:54,461] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.024 seconds
+[2021-08-11 22:08:24,502] {scheduler_job.py:181} INFO - Started process (PID=1396) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:08:24,503] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:08:24,503] {logging_mixin.py:104} INFO - [2021-08-11 22:08:24,503] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:08:24,511] {logging_mixin.py:104} INFO - [2021-08-11 22:08:24,511] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:08:24,511] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:08:24,523] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.023 seconds
+[2021-08-11 22:08:54,585] {scheduler_job.py:181} INFO - Started process (PID=1484) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:08:54,585] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:08:54,586] {logging_mixin.py:104} INFO - [2021-08-11 22:08:54,586] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:08:54,593] {logging_mixin.py:104} INFO - [2021-08-11 22:08:54,593] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:08:54,593] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:08:54,606] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.024 seconds
+[2021-08-11 22:09:24,815] {scheduler_job.py:181} INFO - Started process (PID=1568) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:09:24,816] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:09:24,817] {logging_mixin.py:104} INFO - [2021-08-11 22:09:24,817] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:09:24,826] {logging_mixin.py:104} INFO - [2021-08-11 22:09:24,825] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:09:24,826] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:09:24,836] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.023 seconds
+[2021-08-11 22:09:54,999] {scheduler_job.py:181} INFO - Started process (PID=1650) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:09:55,000] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:09:55,000] {logging_mixin.py:104} INFO - [2021-08-11 22:09:55,000] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:09:55,010] {logging_mixin.py:104} INFO - [2021-08-11 22:09:55,009] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:09:55,010] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:09:55,022] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.026 seconds
+[2021-08-11 22:10:25,190] {scheduler_job.py:181} INFO - Started process (PID=1739) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:10:25,191] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:10:25,191] {logging_mixin.py:104} INFO - [2021-08-11 22:10:25,191] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:10:25,199] {logging_mixin.py:104} INFO - [2021-08-11 22:10:25,198] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:10:25,199] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:10:25,212] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.023 seconds
+[2021-08-11 22:10:55,558] {scheduler_job.py:181} INFO - Started process (PID=1827) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:10:55,559] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:10:55,560] {logging_mixin.py:104} INFO - [2021-08-11 22:10:55,559] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:10:55,566] {logging_mixin.py:104} INFO - [2021-08-11 22:10:55,566] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:10:55,566] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:10:55,577] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.021 seconds
+[2021-08-11 22:11:25,698] {scheduler_job.py:181} INFO - Started process (PID=1905) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:11:25,698] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:11:25,699] {logging_mixin.py:104} INFO - [2021-08-11 22:11:25,699] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:11:25,707] {logging_mixin.py:104} INFO - [2021-08-11 22:11:25,706] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:11:25,707] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:11:25,720] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.025 seconds
+[2021-08-11 22:12:26,054] {scheduler_job.py:181} INFO - Started process (PID=201) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:12:26,055] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:12:26,055] {logging_mixin.py:104} INFO - [2021-08-11 22:12:26,055] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:12:26,064] {logging_mixin.py:104} INFO - [2021-08-11 22:12:26,064] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:12:26,065] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:12:26,075] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.024 seconds
+[2021-08-11 22:12:56,926] {scheduler_job.py:181} INFO - Started process (PID=429) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:12:56,927] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:12:56,927] {logging_mixin.py:104} INFO - [2021-08-11 22:12:56,927] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:12:56,936] {logging_mixin.py:104} INFO - [2021-08-11 22:12:56,935] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:12:56,936] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:12:56,947] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.023 seconds
+[2021-08-11 22:13:27,410] {scheduler_job.py:181} INFO - Started process (PID=647) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:13:27,411] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:13:27,411] {logging_mixin.py:104} INFO - [2021-08-11 22:13:27,411] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:13:27,419] {logging_mixin.py:104} INFO - [2021-08-11 22:13:27,419] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:13:27,420] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:13:27,431] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.023 seconds
+[2021-08-11 22:13:57,957] {scheduler_job.py:181} INFO - Started process (PID=875) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:13:57,958] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:13:57,958] {logging_mixin.py:104} INFO - [2021-08-11 22:13:57,958] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:13:57,966] {logging_mixin.py:104} INFO - [2021-08-11 22:13:57,966] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:13:57,966] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:13:57,978] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.023 seconds
+[2021-08-11 22:14:28,357] {scheduler_job.py:181} INFO - Started process (PID=1103) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:14:28,358] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:14:28,358] {logging_mixin.py:104} INFO - [2021-08-11 22:14:28,358] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:14:28,367] {logging_mixin.py:104} INFO - [2021-08-11 22:14:28,366] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:14:28,367] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:14:28,379] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.024 seconds
+[2021-08-11 22:14:58,902] {scheduler_job.py:181} INFO - Started process (PID=1367) to work on /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:14:58,903] {scheduler_job.py:632} INFO - Processing file /opt/airflow/dags/paralle_dag.py for tasks to queue
+[2021-08-11 22:14:58,904] {logging_mixin.py:104} INFO - [2021-08-11 22:14:58,904] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:14:58,909] {logging_mixin.py:104} INFO - [2021-08-11 22:14:58,909] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/paralle_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/paralle_dag.py", line 6, in <module>
+    from subdags.subdag_parallel_dag import subdag_parallel_dag
+ModuleNotFoundError: No module named 'subdags'
+[2021-08-11 22:14:58,909] {scheduler_job.py:644} WARNING - No viable dags retrieved from /opt/airflow/dags/paralle_dag.py
+[2021-08-11 22:14:58,921] {scheduler_job.py:189} INFO - Processing /opt/airflow/dags/paralle_dag.py took 0.021 seconds

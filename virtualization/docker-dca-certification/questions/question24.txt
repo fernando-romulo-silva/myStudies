@@ -32,4 +32,26 @@ d) We will use Go templates to be able to provide unique resources, such as volu
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer 'c' and 'd'
+
+'a' is wrong because for replicated service, you specify the number of identical tasks you want to run. 
+
+'b' is wrong because of
+ 
+$ docker service update --replicas=5 web

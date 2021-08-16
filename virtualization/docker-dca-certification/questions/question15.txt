@@ -49,5 +49,10 @@ d) We must use a host network to route requests to containers.
 
 
 
+
 Answer 'c'
+
+Docker Engine swarm mode makes it easy to publish ports for services to make them available to resources outside the swarm. 
+All nodes participate in an ingress routing mesh.
+
 

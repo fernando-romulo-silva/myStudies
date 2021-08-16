@@ -27,14 +27,15 @@ SOFTWARE.
 */
 package com.apress.cems.aop.service;
 
-import com.apress.cems.aop.exception.MailSendingException;
-import com.apress.cems.dao.Person;
-import com.apress.cems.repos.PersonRepo;
+import java.util.Optional;
+import java.util.Set;
+
 import org.apache.commons.lang3.NotImplementedException;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-import java.util.Set;
+import com.apress.cems.aop.exception.MailSendingException;
+import com.apress.cems.dao.Person;
+import com.apress.cems.repos.PersonRepo;
 
 /**
  * @author Iuliana Cosmina
@@ -42,6 +43,7 @@ import java.util.Set;
  */
 @Service
 public class PersonServiceImpl implements PersonService {
+    
     private PersonRepo personRepo;
 
     public PersonServiceImpl(PersonRepo personRepo) {

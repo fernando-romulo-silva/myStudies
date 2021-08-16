@@ -30,6 +30,7 @@ package com.apress.cems.boot;
 import com.apress.cems.boot.dao.Person;
 import com.apress.cems.boot.repos.PersonRepo;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -43,6 +44,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @since 1.0
  */
 @DataJpaTest
+@Disabled
 public class RepositoriesTest {
 
     @Autowired

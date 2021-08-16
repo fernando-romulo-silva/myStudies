@@ -27,6 +27,16 @@ SOFTWARE.
 */
 package com.apress.cems.dj.services.impl;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.apress.cems.dao.Person;
 import com.apress.cems.dj.problem.InvalidCriteriaException;
 import com.apress.cems.dj.repos.PersonRepo;
@@ -34,16 +44,6 @@ import com.apress.cems.dj.services.PersonService;
 import com.apress.cems.dto.CriteriaDto;
 import com.apress.cems.dto.FieldGroup;
 import com.apress.cems.util.DateProcessor;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.time.LocalDateTime;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeParseException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Iuliana Cosmina

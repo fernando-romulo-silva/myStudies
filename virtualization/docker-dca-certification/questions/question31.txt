@@ -32,4 +32,30 @@ d) All of the preceding sentences are correct.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer 'd'
+
+know the  fully qualified domain name or ip
+
+$ docker push --all-tags registry-host:5000/myname/myimage
+
+// or
+
+$ docker push --all-tags 172.20.20.20:5000/myname/my_image
+
+

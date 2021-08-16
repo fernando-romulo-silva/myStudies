@@ -28,4 +28,24 @@ d) We can use the host mode to publish applications as if they were running dire
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer 'a', 'c', and 'd'

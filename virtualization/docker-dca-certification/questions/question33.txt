@@ -28,4 +28,30 @@ d) docker container run -d -P 80:80 nginx:alpine
 
 
 
-Answer 'd'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'd' - publish port
+
+$ docker container run --name porta80 -P 80:80 -d nginx:alpine
+
+// or
+
+$ docker container run --name porta80 --detach --publish-all 80:80 nginx:alpine

@@ -29,4 +29,33 @@ d) --volume type=volume,source=DATA,target=/data
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer 'a' and 'b'
+
+a - Volume (--volume)
+
+$ docker run --name postgres-db -e POSTGRES_PASSWORD=password --volume DATA:/data -p 2000:5432 -d postgres
+
+
+b - Mount
+
+$ docker run --name postgres-db -e POSTGRES_PASSWORD=password --mount type=bind,source="$pwd",target=/var/lib/postgresql/data -p 2000:5432 -d postgres
+

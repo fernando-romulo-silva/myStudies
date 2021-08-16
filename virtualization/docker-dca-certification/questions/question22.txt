@@ -30,4 +30,22 @@ d) None of the preceding options are true.
 
 
 
-Answer 'c'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c' - The node labels defined in the compose file and the ones defined in the actual node are different

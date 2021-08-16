@@ -38,4 +38,19 @@ d) We can upgrade Kubernetes components with common Kubernetes installation comm
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 Answer 'a' and 'c'
+
+a - Choice of Orchestration – Swarm and Kubernetes
+
+c - Swarm and Kubernetes are both available and can be used interchangeably in the same cluster.
