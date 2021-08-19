@@ -105,8 +105,10 @@ class WebConfig implements WebMvcConfigurer, ApplicationContextAware, ServletCon
         factory.setIgnoreAcceptHeader(true);
         factory.setFavorParameter(false);
         factory.setFavorPathExtension(true);
-        factory.setMediaTypes(Properties.of("html", MediaType.TEXT_HTML_VALUE,"xls", "application/vnd.ms-excel",
-                "pdf", MediaType.APPLICATION_PDF_VALUE, "json", MediaType.APPLICATION_JSON_VALUE));
+        factory.setMediaTypes(
+        		Properties.of(
+        				"html", MediaType.TEXT_HTML_VALUE,"xls", "application/vnd.ms-excel",
+        				"pdf", MediaType.APPLICATION_PDF_VALUE, "json", MediaType.APPLICATION_JSON_VALUE));
 
         var  resolver = new ContentNegotiatingViewResolver();
         resolver.setContentNegotiationManager(factory.getObject());

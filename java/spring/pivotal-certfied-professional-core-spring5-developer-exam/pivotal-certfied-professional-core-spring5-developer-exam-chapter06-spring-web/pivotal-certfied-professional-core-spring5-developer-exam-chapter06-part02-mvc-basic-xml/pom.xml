@@ -9,15 +9,37 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<tomcat.version>8.5.23</tomcat.version>
+		<!-- <tomcat.version>7.0.109</tomcat.version> -->
+		<!-- <tomcat.version>8.0.28</tomcat.version> -->
+		<!-- <tomcat.version>8.5.70</tomcat.version> -->
+		<tomcat.version>9.0.52</tomcat.version>
 	</properties>
 
 	<dependencies>
 
 		<dependency>
 			<groupId>br.com.fernando</groupId>
+			<artifactId>pivotal-certfied-professional-core-spring5-developer-exam-chpater00-core-repos</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>br.com.fernando</groupId>
+			<artifactId>pivotal-certfied-professional-core-spring5-developer-exam-chapter04-part01-aop-base</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.fernando</groupId>
 			<artifactId>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-part05-data-jpa</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>br.com.fernando</groupId>
+					<artifactId>pivotal-certfied-professional-core-spring5-developer-exam-chapter04-part02-aop</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -52,6 +74,20 @@
 			<version>${tomcat.version}</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-websocket -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-websocket</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-el -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-el</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jasper</artifactId>
@@ -66,6 +102,18 @@
 
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-servlet-api</artifactId>
+		    <version>${tomcat.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jsp-api</artifactId>
 			<version>${tomcat.version}</version>
 		</dependency>
@@ -77,10 +125,21 @@
 		</dependency>
 
 		<dependency>
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>jstl-api</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>4.0.1</version>
-			<scope>provided</scope>
+			<version>3.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
 		</dependency>
 
 	</dependencies>

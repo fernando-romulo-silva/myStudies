@@ -54,3 +54,4 @@ d) None of the preceding sentences are right.
 Answer 'c' because of:
 
 $ docker pull --all-tags $registry/$repo;
+

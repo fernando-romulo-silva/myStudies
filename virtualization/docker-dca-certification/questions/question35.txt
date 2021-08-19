@@ -29,3 +29,16 @@ d) A user's Docker bundle includes all the environment files and certificates re
 
 
 Answer 'd'
+
+Containers as a service (CaaS) is a cloud service model that allows users to upload, 
+organize, start, stop, scale and otherwise manage containers, applications and clusters. 
+
+
+Distributed Application Bundle, or DAB, is a multi-services distributable image format.
+An image is a portable format for a single container. 
+But Distributed Application Bundle, or DAB, is a new concept introduced in Docker 1.12, is a portable format for multiple containers. 
+Each bundle can be then deployed as a stack at runtime.
+
+Dockerfile -> Image -> Container
+
+Docker Compose -> Distributed Application Bundle -> Docker Stack

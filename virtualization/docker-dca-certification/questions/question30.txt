@@ -51,3 +51,5 @@ d) None of the preceding sentences are right.
 Answer 'b' because of
 
 $ docker ps -q  --filter ancestor=docker-mariadb:1.0.1
+
+

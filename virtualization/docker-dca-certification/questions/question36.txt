@@ -28,4 +28,22 @@ d) We cannot manage distributed availability with 7 nodes; we need at least 9.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 Answer 'b'
+
+A swarm cluster comprises one or more manager and worker nodes.
+
+To ensure high availability (HA) of the swarm control plane in production, 
+you should include an odd number (3+) of manager nodes, usually no more than seven. 
+
+They should be spread across availability zones and connected by high-speed reliable networks.
