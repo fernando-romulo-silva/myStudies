@@ -110,7 +110,6 @@
 			<version>3.0.0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/jakarta.mail/jakarta.mail-api -->
 		<dependency>
 			<groupId>jakarta.mail</groupId>
 			<artifactId>jakarta.mail-api</artifactId>
@@ -118,11 +117,10 @@
 		</dependency>
 
 		<dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-
+			<groupId>com.sun.mail</groupId>
+			<artifactId>jakarta.mail</artifactId>
+			<version>1.6.4</version>
+		</dependency>
 
 
 		<!-- <dependency> <groupId>jakarta.faces</groupId> <artifactId>jakarta.faces-api</artifactId> <version>3.0.0</version> <scope>provided</scope> </dependency> -->
