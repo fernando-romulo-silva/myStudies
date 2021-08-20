@@ -13,14 +13,11 @@
     <form action="emailList" method="post">
         <input type="hidden" name="action" value="add">        
         <label class="pad_top">Email:</label>
-        <input type="email" name="email" value="${user.email}" 
-               required><br>
+        <input type="email" name="email" value="${user.email}"><br>
         <label class="pad_top">First Name:</label>
-        <input type="text" name="firstName" value="${user.firstName}" 
-               required><br>
+        <input type="text" name="firstName" value="${user.firstName}"><br>
         <label class="pad_top">Last Name:</label>
-        <input type="text" name="lastName" value="${user.lastName}"  
-               required><br>        
+        <input type="text" name="lastName" value="${user.lastName}"><br>        
         <label>&nbsp;</label>
         <input type="submit" value="Join Now" class="margin_left">
     </form>

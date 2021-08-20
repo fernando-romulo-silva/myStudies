@@ -27,5 +27,7 @@
         <input type="submit" value="Return">
     </form>
 
+    <p><i>${errorMessage}</i></p>
+    
 </body>
 </html>
