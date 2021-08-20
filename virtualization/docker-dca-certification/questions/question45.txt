@@ -29,4 +29,30 @@ d) DTR provides /status and UCP provides /_ping.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answers 'a' and 'c'
+
+DTR and UCP provide /_ping
+
+DTR provides /_ping, /nginx_status, and /api/v0/meta/cluster_status.
+
+

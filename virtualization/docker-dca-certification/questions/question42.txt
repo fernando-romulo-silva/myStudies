@@ -1,5 +1,6 @@
 How do we only list containers created from an alpine:3.10 image?
 
+
 a) docker container ls image=alpine:3.10
 
 b) docker ps --format ancestor=alpine:3.10
@@ -29,4 +30,32 @@ d) docker container ls --filter image=alpine:3.10
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answers 'b' and 'c'
+
+b - because
+
+$ docker ps --format ancestor=alpine:3.10 
+
+c - because
+
+$ docker container ls --filter ancestor=alpine:3.10
+

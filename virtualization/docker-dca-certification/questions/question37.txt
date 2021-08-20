@@ -28,4 +28,28 @@ d) clusterIP
 
 
 
-Answer 'a'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a' - Usually, containers are only accessible through their host machine’s IP addresses but in a swarm, all nodes participate in an ingress routing mesh.
+

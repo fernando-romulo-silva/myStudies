@@ -1,6 +1,7 @@
 
 Which of the following is true about privileged containers?
 
+
 a) Resource limits will be avoided (CPU, memory, and disk I/O).
 
 b) They always run the container as the root user.
@@ -29,3 +30,5 @@ d) They run using the host's kernel namespaces.
 
 
 Answers 'a' and 'c'
+
+Docker privileged mode grants a Docker container root capabilities to all devices on the host system.

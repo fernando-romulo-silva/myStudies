@@ -32,4 +32,21 @@ d) By using docker image history to review commands used to generate the image.
 
 
 
-Answers 'a' and 'b'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'a' and 'b' - Just use tag and hash to identify images
+

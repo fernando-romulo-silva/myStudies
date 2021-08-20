@@ -1,5 +1,5 @@
 
-What is required to deploy DTR?
+What is required to deploy DTR (Docker Trusted Registry) ?
 
 a) A Docker Enterprise license from Docker Hub and an appropriate repository URL
 
@@ -29,4 +29,31 @@ d) All of the preceding options
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer 'a' and 'b'
+
+'a' 
+The DTR cache is going to be deployed as a Docker service
+
+'b'
+We’ll manage the cache configuration using a Docker configuration, and the TLS certificates using Docker secrets. 
+This allows you to manage the configurations securely and independently of the node where the cache is actually running.
+

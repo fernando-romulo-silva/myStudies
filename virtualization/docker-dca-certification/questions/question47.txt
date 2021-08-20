@@ -26,3 +26,10 @@ d) CMD will add arguments to the defined ENTRYPOINT only if ENTRYPOINT is config
 
 
 Answers 'd'
+
+In short, CMD defines default commands and/or parameters for a container. 
+CMD is an instruction that is best to use if you need a default command which users can easily override. 
+If a Dockerfile has multiple CMDs, it only applies the instructions from the last one.
+
+On the other hand, ENTRYPOINT is preferred when you want to define a container with a specific executable. 
+You cannot override an ENTRYPOINT when starting a container unless you add the --entrypoint flag.

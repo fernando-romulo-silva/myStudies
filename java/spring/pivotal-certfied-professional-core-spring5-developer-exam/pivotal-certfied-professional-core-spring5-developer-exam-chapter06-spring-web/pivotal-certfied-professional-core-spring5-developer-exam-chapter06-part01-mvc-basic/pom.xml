@@ -9,8 +9,7 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<tomcat.version>9.0.43</tomcat.version>
-		<tomcat.version>8.5.23</tomcat.version>
+		<tomcat.version>9.0.22</tomcat.version>
 	</properties>
 
 	<dependencies>

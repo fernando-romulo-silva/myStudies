@@ -67,9 +67,9 @@
 	<dependencies>
 
 		<dependency>
-		    <groupId>org.eclipse.persistence</groupId>
-		    <artifactId>org.eclipse.persistence.jpa</artifactId>
-		    <version>3.0.1</version>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.jpa</artifactId>
+			<version>3.0.1</version>
 		</dependency>
 
 		<dependency>
@@ -109,6 +109,14 @@
 			<artifactId>jakarta.persistence-api</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/jakarta.mail/jakarta.mail-api -->
+		<dependency>
+			<groupId>jakarta.mail</groupId>
+			<artifactId>jakarta.mail-api</artifactId>
+			<version>1.6.7</version>
+		</dependency>
+
 
 
 

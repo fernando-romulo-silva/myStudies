@@ -4,11 +4,12 @@
              version="3.0"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
-
 	<persistence-unit name="emailListPU" transaction-type="RESOURCE_LOCAL">
+	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>murach.business.User</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		
 		<properties>
 			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/murach" />
 			<property name="jakarta.persistence.jdbc.user" value="murach_user" />
@@ -16,5 +17,6 @@
 			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="jakarta.persistence.schema-generation.database.action" value="create" />
 		</properties>
+		
 	</persistence-unit>
 </persistence>

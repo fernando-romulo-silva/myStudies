@@ -28,4 +28,27 @@ d) If we need to change a secret, we need to create a new secret and update the 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answers 'b', 'c', and 'd'
+
+Secrets are ephemeral, unchaged mounted as files that contain the information.
+

@@ -29,4 +29,27 @@ d) Join tokens will be automatically updated on all nodes once they are regenera
 
 
 
-Answers 'c'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'c' - Join tokens are secrets that allow a node to join the swarm. 
+
+We can recover them whenever we need them using docker swarm join-token.
+
+
