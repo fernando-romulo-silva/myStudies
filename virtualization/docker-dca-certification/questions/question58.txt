@@ -32,4 +32,28 @@ d) All of the preceding answers are correct.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer(s) 'd'
+
+$ docker container ls --filter name=murachs-mysql
+
+$ docker container port murachs-mysql
+
+$ docker container inspect murachs-mysql --format="{{ .NetworkSettings.Ports }}"
+

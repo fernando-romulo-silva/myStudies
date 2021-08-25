@@ -9,7 +9,7 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<tomcat.version>8.5.23</tomcat.version>
+		<tomcat.version>9.0.52</tomcat.version>
 	</properties>
 
 	<dependencies>
@@ -82,30 +82,23 @@
 			<version>4.0.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>4.1.2</version>
 		</dependency>
 
-<!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf-spring5 -->
-<dependency>
-    <groupId>org.thymeleaf</groupId>
-    <artifactId>thymeleaf-spring5</artifactId>
-    <version>3.0.12.RELEASE</version>
-</dependency>
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring5</artifactId>
+			<version>3.0.12.RELEASE</version>
+		</dependency>
 
-<!-- https://mvnrepository.com/artifact/com.lowagie/itext -->
-<dependency>
-    <groupId>com.lowagie</groupId>
-    <artifactId>itext</artifactId>
-    <version>4.2.0</version>
-</dependency>
-
-
-
-
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>4.2.0</version>
+		</dependency>
 	</dependencies>
 
 

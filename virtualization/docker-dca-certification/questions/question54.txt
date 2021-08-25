@@ -27,4 +27,28 @@ d) Only the root user is allowed to run privileged containers on a host.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer(s) 'a'
+
+Docker engine access ports can be secured with client access certificates (owners) to ensure that only trusted sources are allowed access.
+

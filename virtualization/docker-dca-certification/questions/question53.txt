@@ -32,4 +32,26 @@ d) Docker Engine will run this probe every 15 seconds and if it fails, it will r
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer(s) 'b'
+
+A Health Check means to check the health of any resource to determine whether that resource is operating normally. 
+Here, it is about checking the health of Docker containers. 
+
+A healthcheck is how you tell Docker to test your app is really healthy, so if your web process is maxing out, 
+Docker can mark the container as unhealthy and take evasive action

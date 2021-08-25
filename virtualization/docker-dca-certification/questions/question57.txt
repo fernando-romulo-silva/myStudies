@@ -31,4 +31,24 @@ d) The myregistry/myorganization/baseimages repository will be created as privat
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer(s) 'c' and 'd'
+
+The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. 
+

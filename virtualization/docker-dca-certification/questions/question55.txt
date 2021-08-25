@@ -26,3 +26,7 @@ d) None of the preceding answers are correct.
 
 
 Answer(s) 'c'
+
+When you update a service, you can update the ports:
+
+$ docker service update --publish-add <NEW_PORT> --publish-rm <OLD_PORT>.

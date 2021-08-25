@@ -37,6 +37,17 @@ d) Privileged containers will avoid defined process' capabilities and execution 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 Answers 'a'
 
 Docker containers share a single host OS kernel across all of the application containers running on that machine. 

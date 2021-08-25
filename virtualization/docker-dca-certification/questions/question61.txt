@@ -32,3 +32,18 @@ d) com.docker.lb.backend
 
 
 61 - Answer(s) 'a'
+
+Interlock is an application routing proxy service for Docker. 
+Fully integrates with Docker (Swarm, Services, Secrets, Configs) Enhanced configuration 
+(context roots, TLS, zero downtime deploy, rollback) Support external load balancers (nginx, haproxy, etc) via extensions.
+
+$ docker service create \
+ --name demo \
+ --network demo \
+ --detach=false \
+ --replicas=5 \
+ --label com.docker.lb.hosts=demo.local \
+ --label com.docker.lb.sticky_session_cookie=session \
+ --label com.docker.lb.port=8080 \
+ --env METADATA="demo-sticky" \
+ ehazlett/docker-demo

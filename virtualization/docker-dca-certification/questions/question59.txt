@@ -32,4 +32,23 @@ d) clusterIP
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer(s) 'd'
+
+LoadBalancer exposes the Service externally using a cloud provider's load balancer. 
+ClusterIP manage internal load balance for kubernets
+
