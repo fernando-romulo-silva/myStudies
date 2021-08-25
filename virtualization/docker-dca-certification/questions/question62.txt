@@ -31,4 +31,27 @@ d) Privileged containers will avoid defined process' capabilities and execution 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer(s) 'b' and 'c'
+
+Applications are safer in containers and Docker provides the strongest default isolation capabilities in the industry

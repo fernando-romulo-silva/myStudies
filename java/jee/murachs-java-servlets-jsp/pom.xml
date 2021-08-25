@@ -137,4 +137,13 @@
 
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>integration-tests</id>
+		</profile>
+		<profile>
+			<id>mutation-tests</id>
+		</profile>
+	</profiles>
+
 </project>

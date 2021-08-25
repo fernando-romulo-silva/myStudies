@@ -32,4 +32,23 @@ d) --ucp-url
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer(s) 'a'
+
+You can configure fully qualified domain name (FQDN) hosts for UCP using the flag --san
+

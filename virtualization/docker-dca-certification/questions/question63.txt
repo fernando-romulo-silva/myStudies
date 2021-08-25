@@ -31,4 +31,25 @@ d) By using docker volume df
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer(s) 'b'
+
+The docker system df command displays information regarding the amount of disk space used by the docker daemon.
+
+$ docker system df

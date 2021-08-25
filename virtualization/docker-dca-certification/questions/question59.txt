@@ -47,6 +47,11 @@ d) clusterIP
 
 
 
+
+
+
+
+
 Answer(s) 'd'
 
 LoadBalancer exposes the Service externally using a cloud provider's load balancer. 
