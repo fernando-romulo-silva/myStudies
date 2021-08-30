@@ -16,6 +16,20 @@
 		<spring-boot.version>2.3.7.RELEASE</spring-boot.version> <!-- 2.3.7.RELEASE, 2.4.1 -->
 	</properties>
 
+	<repositories>
+
+		<repository>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url> <!-- the https you've been looking for -->
+			<layout>default</layout>
+			<snapshots>
+				<enabled>false</enabled> <!-- or set to false if desired, default is true https://stackoverflow.com/a/61684539/32453 -->
+			</snapshots>
+		</repository>
+
+	</repositories>
+
 	<!-- Hooking into Bean Destruction -->
 
 	<dependencies>
@@ -78,12 +92,6 @@
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
 			<version>4.0.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.oracle.ojdbc</groupId>
-			<artifactId>ojdbc8</artifactId>
-			<version>19.3.0.0</version>
 		</dependency>
 
 		<dependency>
@@ -227,10 +235,10 @@
 		</dependency>
 
 		<dependency>
-		    <groupId>org.mockito</groupId>
-		    <artifactId>mockito-core</artifactId>
-		    <version>2.24.0</version>
-		    <scope>test</scope>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.24.0</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -277,6 +285,8 @@
 
 	</dependencies>
 
+	<!-- <dependency> <groupId>com.oracle.ojdbc</groupId> <artifactId>ojdbc8</artifactId> <version>19.3.0.0</version> </dependency> -->
+
 	<build>
 		<plugins>
 
@@ -314,5 +324,6 @@
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter04-apsect-oriented-with-spring</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-data-access</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter06-spring-web</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter07-spring-security</module>
 	</modules>
 </project>

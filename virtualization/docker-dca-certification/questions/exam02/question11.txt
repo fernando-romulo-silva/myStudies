@@ -1,0 +1,50 @@
+
+User A executed docker service scale --replicas 5 webserver, while user B executed docker service update --replicas 3 webserver. 
+How many replicas will be running after both executions?
+
+a) None of the commands will work.
+
+b) The webserver service will run three replicas.
+
+c) The webserver service will run five replicas.
+
+d) The webserver service will run eight replicas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+When you update a service, Docker stops its containers and restarts them with the new configuration.

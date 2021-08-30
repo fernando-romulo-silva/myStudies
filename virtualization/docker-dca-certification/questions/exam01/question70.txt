@@ -1,0 +1,58 @@
+Which sentences are true about Docker Swarm and Kubernetes networking?
+
+
+a) An ingress overlay network will be encrypted by default.
+
+b) Mutual TLS communications ensure control-plane security in Docker Swarm.
+
+c) A Kubernetes network is isolated with networkPolicy resources out of the box.
+
+d) Kubernetes uses certificates to ensure security for user access and the internal control plane.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'b' and 'd'
+
+The nodes in a swarm use mutual Transport Layer Security (TLS) to authenticate, authorize, and encrypt the communications with other nodes in the swarm.
+
+Kubernetes uses certificates to ensure security for user access and the internal control plane.
+
+

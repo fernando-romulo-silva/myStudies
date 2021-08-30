@@ -14,4 +14,5 @@
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter06-part04-mvc-thymeleaf</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter06-part05-boot-web</module>
 	</modules>
+
 </project>

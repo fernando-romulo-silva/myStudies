@@ -28,6 +28,7 @@ where `local-oracle` is the name of the container. You can now see it with Kitem
 image::kitematic_view.png[Kitematic View]
 
 - You can test the database being up by executing `docker ps -a`. You should see something similar to:
+
 ```
 CONTAINER ID        IMAGE                                       COMMAND                  CREATED             STATUS                        PORTS                                              NAMES
 d9fe67c59e67        store/oracle/database-enterprise:12.2.0.1   "/bin/sh -c '/bin/ba…"   7 minutes ago       Up 7 minutes (healthy)        0.0.0.0:1521->1521/tcp, 0.0.0.0:5500->5500/tcp     local-oracle

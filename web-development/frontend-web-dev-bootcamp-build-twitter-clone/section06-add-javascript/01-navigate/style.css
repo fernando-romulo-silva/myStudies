@@ -842,10 +842,8 @@ body {
   opacity: 0.5;
 }
 /* end of post modal */
-/* end of feeds page */
 
 /* sidebar */
-
 .sidebar-wrapper {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -853,25 +851,38 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.sidebar-wrapper-display {
+  opacity: 1;
+  visibility: visible;
 }
 
 .sidebar {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -30rem;
   width: 30rem;
   height: 100vh;
   background-color: #fff;
   padding: 2.5rem;
   box-sizing: border-box;
   box-shadow: -0.1rem 0 0.5rem rgba(0, 0, 0, 0.3);
+  transition: right 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.sidebar-display {
+  right: 0;
 }
 
 .sidebar-header {
   display: flex;
   align-items: center;
   padding-bottom: 1.5rem;
-  border-bottom: 01.rem solid #eee;
+  border-bottom: 0.1rem solid #eee;
 }
 
 .sidebar-header h2 {
@@ -882,12 +893,13 @@ body {
   margin-left: auto;
   font-size: 2.5rem;
   color: #1aa1f5;
+  cursor: pointer;
 }
 
 .sidebar-user {
   display: flex;
   align-items: center;
-  padding-top: 1.5rem;  
+  padding-top: 1.5rem;
 }
 
 .sidebar-user-img {
@@ -908,9 +920,115 @@ body {
   height: 3.5rem;
   font-size: 5rem;
   border: 0.1rem solid #1aa1f5;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
   color: #1aa1f5;
 }
 
+.sidebar-user-info {
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+}
+
+.sidebar-user-info h4 {
+  margin-bottom: 0.5rem;
+}
+
+.following {
+  display: flex;
+  padding: 1.5rem 0;
+}
+
+.following-paragraph {
+  font-size: 1.8rem;
+}
+
+.following-paragraph:first-child {
+  margin-right: 2.5rem;
+}
+
+.following-paragraph span {
+  font-weight: bold;
+}
+
+.sidebar-list-1 {
+  border-bottom: 0.1rem solid #eee;
+}
+
+.sidebar-list-1 ul {
+  list-style: none;
+  padding: 1.5rem 0;
+}
+
+.sidebar-list-1 li {
+  margin-bottom: 2.5rem;
+}
+
+.sidebar-list-1 a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #868383;
+}
+
+.sidebar-list-1 i {
+  margin-right: 1rem;
+}
+
+.sidebar-list-2 ul {
+  list-style: none;
+  padding: 3rem 0;
+}
+
+.sidebar-list-2 li {
+  margin-bottom: 2.5rem;
+}
+
+.sidebar-list-2 a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #868383;
+}
+
+/* dark mode */
+.dark-mode {
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode p {
+  margin-right: 8rem;
+  font-size: 1.6rem;
+  color: #868686;
+}
+
+.toggle {
+  width: 4.5rem;
+  height: 1.5rem;
+  background-color: #777;
+  border-radius: 3rem;
+  position: relative;
+}
+
+.circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ddd;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  box-shadow: inse 0 0.2rem 1 rem rgba(0, 0, 0, 0.3);
+  transition: all 0.1s linear;
+}
+
+.move {
+  left: 2.5rem;
+  background-color: #117abb;
+}
+
+/* end of dark mode */
 /* end of sidebar */
+/* end of feeds page */

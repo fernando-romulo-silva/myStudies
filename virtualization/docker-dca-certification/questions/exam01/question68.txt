@@ -1,0 +1,63 @@
+
+Which Kubernetes resources provide an application's resilience?
+
+
+a) Deployment
+
+b) ReplicaSet
+
+c) Pod
+
+d) Replicated
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer(s) 'a' and 'b'
+
+resilience: The capacity to recover quickly from difficulties; toughness.
+
+ReplicaSet 
+
+A ReplicaSet's purpose is to maintain a stable set of replica Pods running at any given time. 
+As such, it is often used to guarantee the availability of a specified number of identical Pods.
+
+Deployment
+
+A Deployment provides declarative updates for Pods and ReplicaSets.
+

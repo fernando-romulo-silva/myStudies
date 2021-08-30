@@ -1,0 +1,69 @@
+
+How can we increase the number of replicas of a service running one instance (mark all the correct answers)?
+
+a) This is not possible for global services.
+
+b) By updating the number of replicas with docker service update --replicas <NUMBER_OF_REPLICAS> <SERVICE>.
+
+c) The number of replicas can be increased using docker service scale <SERVICE>=<NUMBER_OF_REPLICAS>.
+
+d) We can use docker service scale up to create a new replica.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'a', 'b', and 'c'
+
+The following command scales the “frontend” service to 50 tasks.
+
+$ docker service scale frontend=50
+
+or
+
+$ docker service update --replicas=50 frontend
+
+
+There are two types of service deployments, replicated and global.
+For a replicated service, you specify the number of identical tasks you want to run.
+A global service is a service that runs one task on every node. 
+There is no pre-specified number of tasks. 
+Each time you add a node to the swarm, the orchestrator creates a task and the scheduler assigns the task to the new node. 
+
+
+

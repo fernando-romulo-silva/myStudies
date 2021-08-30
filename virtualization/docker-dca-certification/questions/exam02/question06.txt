@@ -1,0 +1,56 @@
+
+How do we stop all replicas of the service web server, which is currently executing three replicas?
+
+
+a) Using docker service stop webserver.
+
+b) Using docker rm service webserver.
+
+c) Using docker service update --replicas 0 webserver.
+
+d) None of the preceding answers are correct.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'
+
+To stop all replicas of a service while keeping the service active in the swarm you can set the scale to 0. 
+This is a cluster management command, and must be executed on a swarm manager node. 
+
