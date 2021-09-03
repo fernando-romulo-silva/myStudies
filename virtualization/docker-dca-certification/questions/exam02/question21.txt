@@ -1,0 +1,51 @@
+Which of the following is true about overlay networks?
+
+​A)
+Overlay networks are first created on the manager nodes. 
+Then they are created on the worker nodes once a task is scheduled on the specific worker node.
+​
+B)
+Overlay networks are created only on the manager node that you created the overlay networking on.
+​
+C)
+Overlay networks are created on all cluster nodes when you create the overlay network.
+​
+D)
+Overlay networks are only created on the manager nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is A
+
+The overlay network driver creates a distributed network among multiple Docker daemon hosts.
+
+
+

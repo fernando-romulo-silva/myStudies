@@ -1,14 +1,12 @@
+Which of the following is used for monitoring the docker in a production environment?
 
-What environment variables should be exported to start using a trusted environment with the Docker client?
+A) Docker stats
+​
+B) Docker events
+​
+C) Both the above
 
-a) export DOCKER_TRUSTED_ENVIRONMENT=1
-
-b) export DOCKER_CONTENT_TRUST=1
-
-c) export DOCKER_TRUST=1
-
-d) export DOCKER_TRUSTED=1
-
+D) None of the above
 
 
 
@@ -49,8 +47,9 @@ d) export DOCKER_TRUSTED=1
 
 
 
-Answer 'b'
 
-For the Docker client to know to use this server, you will need to set an environment variable pointing to it:
 
-$ export DOCKER_CONTENT_TRUST=1
+The correct option is C
+
+For monitoring docker in the production environment docker states and docker events both are used. 
+

@@ -1,19 +1,17 @@
+What is the docker command to add a node to a swarm?
 
-Which of these lines creates a volume named DATA?
-
-a) docker volume create --driver local DATA.
-
-b) docker create --volume DATA.
-
-c) Volumes must be created during container execution.
-
-d) None of the options are valid.
-
-
-
-
-
-
+​
+A)
+docker swarm join
+​
+B)
+docker swarm create-node
+​
+C)
+docker join swarm
+​
+D)
+docker swarm add-node
 
 
 
@@ -50,6 +48,10 @@ d) None of the options are valid.
 
 
 
-Answer 'a' - Create a volume and then configure the container to use it:
 
-$ docker volume create DATA
+
+
+
+The correct option is A
+
+Join a swarm as a node and/or manager

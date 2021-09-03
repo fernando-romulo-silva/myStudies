@@ -1,14 +1,12 @@
+From the below-mentioned option, what is the use of docker stats command?
 
-How can we increase the number of replicas of a service running one instance (mark all the correct answers)?
+A) It is used for providing information about the command.
+​
+B) It is used for downloading an image.
+​
+C) It is used for the information of the container
 
-a) This is not possible for global services.
-
-b) By updating the number of replicas with docker service update --replicas <NUMBER_OF_REPLICAS> <SERVICE>.
-
-c) The number of replicas can be increased using docker service scale <SERVICE>=<NUMBER_OF_REPLICAS>.
-
-d) We can use docker service scale up to create a new replica.
-
+D) It is used for the listing of downloaded images.
 
 
 
@@ -48,22 +46,17 @@ d) We can use docker service scale up to create a new replica.
 
 
 
-Answers 'a', 'b', and 'c'
-
-The following command scales the “frontend” service to 50 tasks.
-
-$ docker service scale frontend=50
-
-or
-
-$ docker service update --replicas=50 frontend
 
 
-There are two types of service deployments, replicated and global.
-For a replicated service, you specify the number of identical tasks you want to run.
-A global service is a service that runs one task on every node. 
-There is no pre-specified number of tasks. 
-Each time you add a node to the swarm, the orchestrator creates a task and the scheduler assigns the task to the new node. 
 
+
+
+
+
+The correct option is C.
+
+For downloading an image the command used is docker pull for providing the information about container the command used is docker stats. 
+For listing the downloaded images the command used is docker images. 
+And for providing the information of command the command used is docker input. 
 
 

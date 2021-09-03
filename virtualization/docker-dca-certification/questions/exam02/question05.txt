@@ -1,16 +1,14 @@
-How many replicas does a global service run on nodes if we specify the node.role!=worker constraint?
+From the below-mentioned option, what are the correct option which helps in 
+easily letting the communication happen between docker demons and docker client?
 
-a) Worker and manager nodes will run one replica.
-
-b) Only workers will run one replica.
-
-c) Only manager nodes will run one replica.
-
-d) No nodes will run any replicas.
-
-
-
-
+​
+A) Rest API
+​
+B) Socket.IO
+​
+C) PCP
+​
+D) All of the above
 
 
 
@@ -48,9 +46,12 @@ d) No nodes will run any replicas.
 
 
 
-Answer 'b'
 
 
-A global service is a service that runs one task on every node. 
-There is no pre-specified number of tasks. 
-Each time you add a node to the swarm, the orchestrator creates a task and the scheduler assigns the task to the new node.
+The correct option is D
+
+For creating communication between docker client and docker demons the combination 
+of three things is required, which is as follows, A. Rest API, Socket.IO, PCP. 
+
+Hence this all three are helpful for the above-mentioned communication.
+

@@ -325,5 +325,6 @@
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter05-data-access</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter06-spring-web</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter07-spring-security</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-spring-rest</module>
 	</modules>
 </project>

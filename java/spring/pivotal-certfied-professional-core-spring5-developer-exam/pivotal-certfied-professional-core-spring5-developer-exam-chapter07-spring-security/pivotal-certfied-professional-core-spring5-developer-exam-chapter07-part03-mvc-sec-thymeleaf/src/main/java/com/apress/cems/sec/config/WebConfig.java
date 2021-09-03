@@ -113,8 +113,9 @@ class WebConfig implements WebMvcConfigurer, ServletContextAware {
     //Declare our static resources. I added cache to the java config but it?s not required.
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/images/**", "/styles/**")
-                .addResourceLocations("/WEB-INF/images/", "/WEB-INF/styles/").setCachePeriod(31556926);
+        registry.addResourceHandler("/images/**", "/styles/**") //
+                .addResourceLocations("/WEB-INF/images/", "/WEB-INF/styles/") //
+                .setCachePeriod(31556926);
     }
 
     @Override

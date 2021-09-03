@@ -1,0 +1,62 @@
+What is the default format of docker inspect output?
+
+​A)
+yaml
+​
+B)
+html
+​
+C)
+xml
+​
+D)
+json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is D
+
+Docker inspect provides detailed information on constructs controlled by Docker.
+
+By default, docker inspect will render results in a JSON array.
+
+$ docker inspect murachs-mysql
+
+or
+
+$ docker inspect --format='{{.NetworkSettings.Ports}}' murachs-mysql
+

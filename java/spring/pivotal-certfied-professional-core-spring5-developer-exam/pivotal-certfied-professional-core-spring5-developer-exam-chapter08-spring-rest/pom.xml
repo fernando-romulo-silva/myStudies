@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>br.com.fernando</groupId>
+    <artifactId>pivotal-certfied-professional-core-spring5-developer-exam</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-spring-rest</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part01-rest-classic</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part02-rest-boot</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part03-rest-bootp</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part03-rest-boot-jetty</module>
+  </modules>
+</project>
