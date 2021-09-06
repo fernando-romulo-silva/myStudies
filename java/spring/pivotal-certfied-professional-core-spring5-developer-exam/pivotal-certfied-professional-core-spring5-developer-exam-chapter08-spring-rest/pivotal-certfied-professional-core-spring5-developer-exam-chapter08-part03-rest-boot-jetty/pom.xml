@@ -91,7 +91,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.apress.cems.BootSecureApp</mainClass>
+					<mainClass>com.apress.cems.RestApplication</mainClass>
 				</configuration>
 			</plugin>
 

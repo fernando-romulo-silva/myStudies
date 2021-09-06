@@ -1,0 +1,54 @@
+You have been asked to backup the swarm state on a Linux installation. 
+By default, where do Docker manager nodes store the swarm state and manager logs?
+
+​
+A)
+/var/run/docker/swarm
+​
+B)
+/var/lib/docker/swarm
+​
+C)
+/etc/docker/swarm
+​
+D)
+/run/docker/swarm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is B
+
+The '/var/lib/' folder holds state information pertaining to an application or the system, 
+so the '/var/lib/docker/swarm' has the swarm state and logs. 

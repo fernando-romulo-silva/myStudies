@@ -1,0 +1,53 @@
+In a Docker Trusted Registry, how would a user prevent an image, for examle 'nginx:latest' 
+from being overwritten by another user with push access to the repository ?
+
+A)
+Tag the image with 'nginx:immutable'
+​
+B)
+Remive push access from all other users
+​
+C)
+User the DTR web UI to make the tag immutable
+​
+D)
+Keep a backup copy of the image on another repository
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is C
+
+Tag Immutability enables customers to rely on the descriptive tags of an image as a reliable mechanism to track and uniquely identify images.

@@ -1,0 +1,57 @@
+Which of the following is the correct command to store an image to a registry?
+
+A)
+docker upload [OPTIONS] NAME[:TAG]
+​
+B)
+docker store [OPTIONS] NAME[:TAG]
+​
+C)
+docker commit [OPTIONS] NAME[:TAG]
+​
+D)
+docker push [OPTIONS] NAME[:TAG]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is D
+
+Docker Hub repositories allow you share container images with your team, customers, or the Docker community at large.
+
+Docker images are pushed to Docker Hub through the docker push command.
+
+ 
