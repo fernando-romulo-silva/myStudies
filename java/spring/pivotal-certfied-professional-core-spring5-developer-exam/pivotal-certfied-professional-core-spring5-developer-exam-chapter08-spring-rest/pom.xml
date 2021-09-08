@@ -12,5 +12,7 @@
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part02-rest-boot</module>
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part03-rest-bootp</module>
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part03-rest-boot-jetty</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part04-rest-boot-secured</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-part05-rest-classic-secured</module>
   </modules>
 </project>

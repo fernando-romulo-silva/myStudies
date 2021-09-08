@@ -1,0 +1,73 @@
+What is a grant made up of in Docker's Role Based Access Controls (RBAC)? 
+(Select three)
+
+A)
+Resource collection
+​
+B)
+Role
+​
+C)
+Certificate
+​
+D)
+Subject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answers are A, B and D
+
+RBAC is based on declarative permissions definitions and cluster API objects. 
+The RBAC mechanism enables us to configure fine-grained and specific sets of permissions that define 
+how a given user, or group of users, can interact with any Kubernetes object in our cluster, 
+or in a specific namespace of our cluster.
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role #(B)
+metadata:
+  namespace: default
+  name: pod-reader
+
+subjects: # (D)
+- kind: User
+  name: jane 
+  apiGroup: rbac.authorization.k8s.io  
+  
+  
+rules: 
+- apiGroups: [""] 
+  resources: ["pods"] # (A)
+  verbs: ["get", "watch", "list"]    

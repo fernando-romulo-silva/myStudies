@@ -1,0 +1,59 @@
+Besides the read only image and the writable container layer, which other ways 
+can containers take up disk space? (Select all that apply)
+
+A)
+Volumes and bind mounts used by the container.
+
+B)
+Disk used for the container's configuration files, which are typically small.
+​
+C)
+Data stored in tmpfs
+​
+D)
+Disk space used for log files if you use the json-file logging driver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer are A, B and D
+
+A - Bind mounts have limited functionality compared to volumes. 
+When you use a bind mount, a file or directory on the host machine is mounted into a container. 
+  
+B - Docker swarm service configs allow you to store non-sensitive information, 
+such as configuration files, outside a service’s image or running containers.
+
+C - Containers are stateless, and the logs are stored on the Docker host in JSON files by default.

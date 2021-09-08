@@ -1,0 +1,68 @@
+Which of the following make up container format?
+(select three)
+
+A)
+​Docker control plane
+​
+B)
+UnionFS
+​
+C)
+Control Groups
+​
+D)
+Namespaces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answers are B, C and D
+
+B) UnionFS is used to isolate changes to a container filesystem in its own layer
+
+
+C) Cgroups provide resource limitation and reporting capability within the container space. 
+They allow granular control over what host resources are allocated to the containers and when they are allocated.
+Common control groups:
+
+* CPU
+* Memory
+* Network Bandwidth
+* Disk
+* Priority
+
+
+D) Namespaces provide a layer of isolation. 
+Docker uses namespaces of various kinds to provide the isolation that containers need in order to remain portable

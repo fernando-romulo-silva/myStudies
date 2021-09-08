@@ -2,12 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>br.com.fernando</groupId>
-    <artifactId>murachs-java-servlets-jsp</artifactId>
+    <artifactId>murachs-java-servlets-jsp-chapter16-how-to-restric-access-web-resource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>murachs-java-servlets-jsp-chapter16-how-to-restric-access-web-resource</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>murachs-java-servlets-jsp-chapter16-part01-admin</module>
-  </modules>
+  <artifactId>murachs-java-servlets-jsp-chapter16-part01-admin</artifactId>
+  <packaging>war</packaging>
 </project>
