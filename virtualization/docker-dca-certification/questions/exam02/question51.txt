@@ -1,0 +1,57 @@
+Which flag of 'docker service create' determines how many tasks are started for the service?
+
+A)
+--tasks
+​
+B)
+--numtasks
+​
+C)
+--numjobs
+​
+D)
+--replicas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is D
+
+docker service create command works with the Swarm orchestrator.
+
+--replicas = Number of tasks
+
+ 

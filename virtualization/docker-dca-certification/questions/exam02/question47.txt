@@ -1,0 +1,62 @@
+To bypass the routing mesh, you can start a service using DNS Round Robin (DNSRR) mode,
+
+A)
+TRUE
+​
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is A
+
+By default, swarm services which publish ports do so using the routing mesh.
+
+To bypass the routing mesh, you can start a service using DNS Round Robin (DNSRR) mode, 
+by setting the --endpoint-mode flag to dnsrr. You must run your own load balancer in front of the service. 
+
+A DNS query for the service name on the Docker host returns a list of IP addresses for the nodes running the service. 
+Configure your load balancer to consume this list and balance the traffic across the nodes.
+
+ 

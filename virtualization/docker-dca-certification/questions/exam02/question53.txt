@@ -1,0 +1,60 @@
+Changing the storage driver makes any containers you have already created inaccessible on the local system.
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is A
+
+The devicemapper driver uses block devices dedicated to Docker and operates at the block level, rather than the file level.
+
+Changing the storage driver makes any containers you have already created inaccessible on the local system. Use docker save to save containers, 
+and push existing images to Docker Hub or a private repository, so you do not need to recreate them later.
+
+
+
+ 

@@ -1,0 +1,57 @@
+Which of the following is true of filesystem storage models? (select all that apply)
+
+​A)
+They store data in regular files on the host machine.
+​
+B)
+They are efficient with write-heavy workloads.
+​
+C)
+They are used by overlay2 and aufs .
+​
+D)
+They use an external, object-based store.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answers are A and C
+
+They store data in regular files on the host machine. 
+
+They are used by overlay2 and aufs .
