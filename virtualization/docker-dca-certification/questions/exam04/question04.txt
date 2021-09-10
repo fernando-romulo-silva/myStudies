@@ -1,0 +1,66 @@
+From the below-mentioned option, what is the use of docker images command?
+
+​A)
+It is used for providing information about the command.
+​
+B)
+It is used for downloading an image.
+​
+C)
+It is used for the information of the container
+​
+D)
+It is used for the listing of downloaded images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+For downloading an image the command used is docker pull for providing the information about container the command used is docker stats. 
+
+For listing the downloaded images the command used is docker images. 
+
+And for providing the information of command the command used is docker input. 
+

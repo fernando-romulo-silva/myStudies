@@ -326,5 +326,6 @@
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter06-spring-web</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter07-spring-security</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter08-spring-rest</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter09-monitoring-spring-applications</module>
 	</modules>
 </project>

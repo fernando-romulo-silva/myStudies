@@ -48,7 +48,7 @@ $ docker start <container_id>
 
 
 
-B Correct
+B is Correct
 
 $ docker kill <container_id> this command is used for killing a container. 
 $ docker start <container_id> command is used for starting a docker container. 
