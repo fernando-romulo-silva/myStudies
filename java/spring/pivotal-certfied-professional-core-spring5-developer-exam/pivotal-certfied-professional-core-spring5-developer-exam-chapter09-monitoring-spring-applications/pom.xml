@@ -9,5 +9,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter09-part01-classic-app</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter09-part02-boot-app</module>
   </modules>
 </project>

@@ -1,0 +1,58 @@
+Which of the following statements truly applies to the ENV directive?
+​
+​A)
+It sets an environment variable on the host while the container is running
+​
+B)
+It sets environment variables that are only visible at the container runtime.
+​
+C)
+It sets environment variables that are made available in subsequent build steps and to containers at the runtime.
+​
+D)
+It sets environment variables that are only visible during later build steps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C is Correct
+
+The ENV instruction sets the environment variable <key> to the value <value>, on the container. 
+
+This value will be in the environment for all subsequent instructions in the build stage and can be replaced inline in many as well. 

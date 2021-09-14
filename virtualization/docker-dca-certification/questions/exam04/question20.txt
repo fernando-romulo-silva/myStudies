@@ -1,0 +1,60 @@
+Which of the following statements is incorrect?
+​
+A)
+When a container is deleted, the writable layer is persisted.
+​
+B)
+The column 'virtual size' of docker ps -s output shows the amount of data used for the read-only 
+image data used by the container plus the container's writable layer 'size'.
+​
+C)
+Copy-on-write is a Docker strategy of sharing and copying files for maximum efficiency.
+​
+D)
+The column 'size' of docker ps -s output shows the amount of data that is used for the writable layer of each container.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A is correct
+
+The container's writable layer does not persist after the container is deleted, 
+but is suitable for storing ephemeral data that is generated at runtime.

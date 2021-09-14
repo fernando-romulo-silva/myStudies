@@ -1,0 +1,62 @@
+Which of the following is the correct command to tag an image?
+
+A)
+docker build tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+​
+B)
+docker tag TARGET_IMAGE[:TAG] SOURCE_IMAGE[:TAG]
+​
+C)
+docker tag image SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+D)
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is correct
+
+Docker tags are mutable named references to Docker images, much like branch refs in Git. 
+
+They make it easy to pull and run images, and for image authors to roll out updates automatically.
+ 

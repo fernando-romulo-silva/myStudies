@@ -1,0 +1,63 @@
+Which of the following docker command can be used to find out all the ports mapped? (select all that apply).
+​
+A)
+docker inspect
+​
+B)
+docker network ls
+​
+C)
+docker ps
+​
+D)
+docker port
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A, C and D are correct
+
+To show all mapped ports you can use these three:
+
+$ docker ps
+
+$ docker port test
+
+$ docker inspect --format='{{(index (index .NetworkSettings.Ports "8787/tcp") 0).HostPort}}' 
+

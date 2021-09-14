@@ -1,0 +1,59 @@
+Which of the following is true about building docker images?
+​
+A)
+Every Dockerfile can have only one FROM directive.
+​
+B)
+Only layers that have changed since the last build (and any following layers) are built.
+​
+C)
+Every layer of the image is re-built every time docker build is executed.
+​
+D)
+Every Dockerfile can have only one FROM directive.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B is Correct
+
+When you modify a Dockerfile and create a new image, Docker only rebuilds layers that have changed. 
+
+The rest stay the same. This can be a good thing or a bad thing depending on how you structure your Dockerfile.
+
