@@ -1,0 +1,58 @@
+What is used by the kernel to isolate resources when running Docker containers?
+​
+A)
+Control groups (also know as cgroups)
+​
+B)
+Overlay networks
+​
+C)
+Volumes
+​
+D)
+Namespaces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A e C are correct
+
+The key feature of namespaces is that they isolate processes from each other.
+
+Control group (cgroup) is a Linux kernel feature that limits, accounts for, 
+and isolates the resource usage (CPU, memory, disk I/O, network, and so on) of a collection of processes.
