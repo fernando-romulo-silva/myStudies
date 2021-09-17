@@ -1,0 +1,53 @@
+Docker security scan can be started by all users including those with read-only access.
+
+True or false?
+​
+A)
+TRUE
+​
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B is correct
+
+Docker image security scanning is a process of identifying known security vulnerabilities in the packages listed in your Docker image. 
+
+
+

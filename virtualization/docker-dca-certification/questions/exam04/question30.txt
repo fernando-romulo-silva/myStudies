@@ -1,0 +1,53 @@
+A Dockerfile can start with any command.
+
+​A)
+TRUE
+​
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B is correct
+
+ARG and FROM can start a Dockerfile
+
+The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. 
+
+ARG is the only instruction that may precede FROM in the Dockerfile.
+
+

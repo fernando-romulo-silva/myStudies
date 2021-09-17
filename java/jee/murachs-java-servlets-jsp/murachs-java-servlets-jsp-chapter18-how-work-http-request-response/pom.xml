@@ -7,4 +7,7 @@
   </parent>
   <artifactId>murachs-java-servlets-jsp-chapter18-how-work-http-request-response</artifactId>
   <packaging>pom</packaging>
+  <modules>
+  	<module>murachs-java-servlets-jsp-chapter18-part01-http</module>
+  </modules>
 </project>
