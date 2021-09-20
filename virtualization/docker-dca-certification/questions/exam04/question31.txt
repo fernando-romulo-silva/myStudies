@@ -1,0 +1,57 @@
+It is OK to have more than one RUN instruction in the Docker file.
+
+​A)
+TRUE
+​
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A is correct
+
+RUN instruction allows you to install your application and packages required for it. 
+It executes any commands on top of the current image and creates a new layer by committing the results. 
+Often you will find multiple RUN instructions in a Dockerfile.
+
+RUN - command triggers while we build the docker image.
+
+CMD - command triggers while we launch the created docker image.
+
+
+
+

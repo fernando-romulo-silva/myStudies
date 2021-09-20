@@ -1,0 +1,70 @@
+What is the docker command to connect a running container to an existing user-defined bridge?
+​
+A)
+docker network join
+​
+B)
+docker network attach
+​
+C)
+docker connect network
+​
+D)
+docker network connect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is correct
+
+When you create a new container, you can specify one or more --network flags. 
+This example connects a Nginx container to the my-net network.
+
+$ docker create --name my-nginx \
+  --network my-net \
+  --publish 8080:80 \
+  nginx:latest
+  
+
+To connect a running container to an existing user-defined bridge, use the docker network connect command. 
+The following command connects an already-running my-nginx container to an already-existing my-net network:
+
+$ docker network connect my-net my-nginx
+
+
+ 
