@@ -15,17 +15,14 @@ import jakarta.servlet.http.HttpServletResponse;
 public class RequestHeadersHTMLServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        Enumeration<String> headerNames = request.getHeaderNames();
-        Map<String, String> headers = new HashMap<String, String>();
-        while (headerNames.hasMoreElements()) {
-            String headerName = headerNames.nextElement();
-            headers.put(headerName, request.getHeader(headerName));
-        }
-        request.setAttribute("headers", headers);
-        getServletContext()
-                .getRequestDispatcher("/headers.jsp")
-                .forward(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	Enumeration<String> headerNames = request.getHeaderNames();
+	Map<String, String> headers = new HashMap<String, String>();
+	while (headerNames.hasMoreElements()) {
+	    String headerName = headerNames.nextElement();
+	    headers.put(headerName, request.getHeader(headerName));
+	}
+	request.setAttribute("headers", headers);
+	getServletContext().getRequestDispatcher("/headers.jsp").forward(request, response);
     }
 }

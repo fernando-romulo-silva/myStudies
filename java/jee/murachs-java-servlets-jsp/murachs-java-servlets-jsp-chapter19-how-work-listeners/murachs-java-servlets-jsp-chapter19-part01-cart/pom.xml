@@ -2,12 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>br.com.fernando</groupId>
-    <artifactId>murachs-java-servlets-jsp</artifactId>
+    <artifactId>murachs-java-servlets-jsp-chapter19-how-work-listeners</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>murachs-java-servlets-jsp-chapter19-how-work-listeners</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>murachs-java-servlets-jsp-chapter19-part01-cart</module>
-  </modules>
+  <artifactId>murachs-java-servlets-jsp-chapter19-part01-cart</artifactId>
+  <packaging>war</packaging>
 </project>

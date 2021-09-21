@@ -1,0 +1,56 @@
+Which of the following will put the Docker engine into debug mode?
+​
+A)
+echo '{"debug": true}' > /var/lib/docker/daemon.json ; sudo kill -HUP
+​
+B)
+echo '{"debug": true}' > /etc/docker/config.json ; sudo kill -HUP
+​
+C)
+echo '{"debug": true}' > /var/lib/docker/config.json ; sudo kill -HUP
+​
+D)
+echo '{"debug": true}' > /etc/docker/daemon.json ; sudo kill -HUP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is correct
+
+The default daemon configuration file is "/etc/docker/daemon.json" and the property is "debug": true,
+
