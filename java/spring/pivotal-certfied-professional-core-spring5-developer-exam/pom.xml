@@ -324,5 +324,6 @@
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter09-monitoring-spring-applications</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter10-spring-and-kotlin</module>
 		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter11-spring-cloud</module>
+		<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter12-reactive-applications</module>
 	</modules>
 </project>

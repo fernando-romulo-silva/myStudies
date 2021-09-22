@@ -1,0 +1,56 @@
+Which command is used to create a swarm
+
+​A)
+docker init swarm
+​
+B)
+docker swarm create
+​
+C)
+docker swarm init
+​
+D)
+docker swarm start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is correct
+
+Initialize a swarm. 
+The docker engine targeted by this command becomes a manager in the newly created single-node swarm.

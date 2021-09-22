@@ -1,0 +1,64 @@
+Which Docker Tool/Features is used to provision and manage multiple remote Docker hosts or Swarm Clusters?
+
+A)
+Docker swarm
+​
+B)
+Docker deploy
+​
+C)
+Docker Machine
+​
+D)
+Docker rollout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C is correct
+
+You can use Docker Machine to:
+
+* Install and run Docker on Mac or Windows
+* Provision and manage multiple remote Docker hosts
+* Provision Swarm clusters
+
+Docker Machine is a tool that lets you install Docker Engine on virtual hosts, 
+and manage the hosts with docker-machine commands. 
+
+You can use Machine to create Docker hosts on your local Mac or Windows box, on your company network, 
+in your data center, or on cloud providers like Azure, AWS, or DigitalOcean.
+

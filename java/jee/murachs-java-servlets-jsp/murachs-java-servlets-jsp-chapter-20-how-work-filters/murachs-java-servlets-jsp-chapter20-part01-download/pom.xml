@@ -2,10 +2,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>br.com.fernando</groupId>
-		<artifactId>murachs-java-servlets-jsp-chapter19-how-work-listeners</artifactId>
+		<artifactId>murachs-java-servlets-jsp-chapter-20-how-work-filters</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>murachs-java-servlets-jsp-chapter19-part01-cart</artifactId>
+	<artifactId>murachs-java-servlets-jsp-chapter20-part01-download</artifactId>
 	<packaging>war</packaging>
 
 	<build>
@@ -34,5 +34,5 @@
 
 		</plugins>
 	</build>
-	
+
 </project>

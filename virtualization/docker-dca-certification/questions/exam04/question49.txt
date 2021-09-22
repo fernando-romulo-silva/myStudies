@@ -1,0 +1,57 @@
+Docker EE is available on multiple platforms. 
+Which of the following are not valid hardware platforms to run Docker EE?
+​
+A)
+IBM Z (s390x)
+​
+B)
+Sun/Oracle SPARC
+​
+C)
+X86_64/AMD 64
+​
+D)
+IBM Power (ppc64le)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B is correct
+
+Docker Enterprise Edition (EE) is an integrated, supported and certified container platform for CentOS, 
+Red Hat Enterprise Linux (RHEL), Ubuntu, SUSE Linux Enterprise Server (SLES), Oracle Linux, and Windows Server 2016, 
+as well as for cloud providers AWS and Azure.
