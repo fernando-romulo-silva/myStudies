@@ -1,15 +1,16 @@
-From the below-mentioned option which is the false advantage of Docker ?
+From the below-mentioned option, what are the essential feature of Docker ?
 
 ​A)
-Docker provides a difficult set-up initially.
+Docker is having efficient operation activity.
+(Incorrect)
 ​
 B)
-The application lifecycle can be described in detail, docker grants permission for it.
-​
-C)
-Simple configuration and interaction with docker composed as possible.
+Docker is having easy modeling
 ​
 D)
+Docker provides version control.
+​
+C)
 All of the above
 
 
@@ -48,10 +49,10 @@ All of the above
 
 
 
-A is Correct
+D is Correct
 
-all the other states except A, are included in the advantages of the docker container. 
+The various features of docker are as follows: easy modeling, version control, placement- affinitive, developer productivity, operational efficiency. 
 
-But the first statement is incorrect because the docker container provides an easy set-up which is quite efficient initially. 
+Since all the options are included in the list of essential features.
 
-Hence it is the correct answer.
+Hence the correct option is D

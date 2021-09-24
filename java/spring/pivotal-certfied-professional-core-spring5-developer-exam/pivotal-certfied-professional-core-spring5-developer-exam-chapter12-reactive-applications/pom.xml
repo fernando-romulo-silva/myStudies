@@ -9,5 +9,7 @@
   <packaging>pom</packaging>
   <modules>
   	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter12-part01-sandbox</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter12-part02-reactive-boot-hybrid</module>
+  	<module>pivotal-certfied-professional-core-spring5-developer-exam-chapter12-part03-reactive-boot-mongo</module>
   </modules>
 </project>

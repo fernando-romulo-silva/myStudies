@@ -1,15 +1,15 @@
-From the below-mentioned option which of the following command is used for running the container in docker?
+Which command is used for running the images as a container?
 
-A)
-$ Sudo docker run -i -t alpine /bin/bash
+​A)
+$ sudo docker run -i -t alpine /bin/bash
 ​
 B)
 $ Sudo docker run container name
 ​
-C)
+D)
 $ docker PS
 ​
-D)
+C)
 All of the above
 
 
@@ -48,21 +48,10 @@ All of the above
 
 
 
+A is Correct
 
+'$ Sudo docker run container name' is not defined command. 
 
+'$ Sudo docker run -i -t alpine /bin/bash' is the command used for running the image as the container. 
 
-
-
-
-
-
-
-C is Correct
-
-$ Sudo docker run container name is not defined command. 
-
-$ Sudo docker run -i -t alpine /bin/bash is the command used for running the image as the container.
-
-$ docker PS is the only command used for seeing all the running containers in docker.
-
-Hence the correct option is C.
+'$ docker PS' is the only command used for seeing all the running containers in docker. 
