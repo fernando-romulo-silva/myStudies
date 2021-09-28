@@ -1,0 +1,60 @@
+Which of the following statements is NOT TRUE about replicated service in docker?
+
+​
+A)
+For replicated services you can specify number of replica tasks
+​
+B)
+If you don't specify a mode, the service defaults to replicated
+​
+C)
+A service running in a replicated mode may not run in all nodes
+​
+D)
+A replicated service, the scheduler places one task on each available that meets the service's placement constraints and resource requirements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+For a replicated service, you specify the number of identical tasks you want to run. 

@@ -1,0 +1,61 @@
+Which of the Dockerfile options executes any commands in a new layer 
+on top of the current image and commit the results?
+
+​A)
+RUN
+​
+B)
+FROM
+​
+C)
+ONBUILD
+​
+D)
+CMD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A is Correct
+
+The docker run command first creates a writeable container layer over the specified image, 
+and then starts it using the specified command.
+

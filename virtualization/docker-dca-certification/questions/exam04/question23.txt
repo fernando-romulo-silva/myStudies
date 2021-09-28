@@ -1,0 +1,60 @@
+Docker image is built up from a series of layers and each layer represents an instruction in the image's Dockerfile. 
+True or false?
+
+A)
+​False
+
+B)
+True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B is Correct
+
+Each image consists of a series of layers. 
+
+Docker makes use of union file systems to combine these layers into a single image. 
+
+Union file systems allow files and directories of separate file systems, known as branches, 
+to be transparently overlaid, forming a single coherent file system.
+
+

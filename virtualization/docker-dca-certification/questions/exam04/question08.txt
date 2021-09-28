@@ -1,0 +1,56 @@
+Which of the following is not backed up when performing a Docker Trusted Registry (DTR) metadata backup?
+
+A)
+DTR Configurations
+​
+B)
+Repository metadata.
+​
+C)
+Docker images.
+​
+D)
+Role-based access control (RBAC) settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C is Correct
+
+The backup up is on configurations, to backup a image use docker save
+
+
+

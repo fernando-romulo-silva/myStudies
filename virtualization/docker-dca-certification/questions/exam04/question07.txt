@@ -1,0 +1,57 @@
+What is the docker command to backup the UCP?
+
+​A)
+Docker Enterprise Edition (EE)
+​
+B)
+Docker Developer Edition (DE)
+​
+C)
+Docker Community Edition (CE)
+​
+D)
+Either Docker CE or Docker EE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E is Correct
+
+
+All versions need updates...
+
+
+

@@ -1,0 +1,63 @@
+What is used by the kernel to isolate resources when running Docker containers?
+
+​A)
+Volumes
+​
+B)
+Overlay networks
+​
+C)
+Control groups
+​
+D)
+Namespaces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+Docker uses namespaces of various kinds to provide the isolation that containers need in order to remain portable
+
+Cgroups provide resource limitation and reporting capability within the container space. 
+
+

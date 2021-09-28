@@ -1,0 +1,62 @@
+What is the difference between the ADD and COPY dockerfile instructions? 
+
+​A)
+ADD supports compression format handling while COPY does not.
+​
+B)
+COPY supports compression format handling while ADD does not.
+​
+C)
+ADD supports regular expression handling while COPY does not.
+​
+D)
+ADD support remote URL handling while COPY does not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A and B are correct
+
+COPY and ADD are both Dockerfile instructions that serve similar purposes. 
+They let you copy files from a specific location into a Docker image.
+
+COPY takes in a src and destruction. It only lets you copy in a local or directory 
+from your host (the machine-building the Docker image) into the Docker image itself.

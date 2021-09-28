@@ -1,0 +1,68 @@
+Which of the following statement below is NOT TRUE about docker-compose?
+
+​A)
+docker-compose is well suited for development environments
+​
+B)
+docker-compose can not be used to create new container images
+​
+C)
+docker-compose will bring up services as specified in docker-compose.yml
+​
+D)
+docker-compose can be used with docker swarm to run services across different workers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+The few differences between Docker Swarm and Docker-Compose:
+
+Docker Swarm is used to scale your web app across one or more servers. 
+Where as Docker-compose will simply run your web app on a single Docker host.
+
+Scaling your web app Docker Swarm offers serious high availability and fault tolerance. 
+Scaling your web app using Docker-Compose on a single host is useful only for testing and development.
+
+Docker Swarm and related subcommands like Docker Swarm and Docker Stack are built into the Docker CLI itself. 
+Docker-Compose is standalone binary in and of itself.

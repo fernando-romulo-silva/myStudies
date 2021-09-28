@@ -1,10 +1,32 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>br.com.fernando</groupId>
-    <artifactId>murachs-java-servlets-jsp</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>murachs-java-servlets-jsp-chapter-21-how-work-jsf</artifactId>
-  <packaging>pom</packaging>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.fernando</groupId>
+		<artifactId>murachs-java-servlets-jsp</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>murachs-java-servlets-jsp-chapter-21-how-work-jsf</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>murachs-java-servlets-jsp-chapter21-part01-email</module>
+		<module>murachs-java-servlets-jsp-chapter21-part02-messages</module>
+	</modules>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>jakarta.faces</groupId>
+			<artifactId>jakarta.faces-api</artifactId>
+			<version>3.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.platform</groupId>
+			<artifactId>jakarta.jakartaee-web-api</artifactId>
+			<version>9.1.0-RC1</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
 </project>

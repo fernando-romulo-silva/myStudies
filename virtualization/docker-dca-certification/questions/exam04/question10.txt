@@ -1,0 +1,55 @@
+Which of the following scenarios would still allow the quorum to have maintenance in a swarm cluster? (Choose two)
+
+​A)
+A 3-node cluster with 1 node down.
+​
+B)
+A 3-node cluster with 2 nodes down
+​
+C)
+A 7-node cluster with 3 nodes down.
+​
+D)
+A 4-node cluster with 2 nodes down.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A and C are Correct
+
+In a swarm of N managers, a quorum (a majority) of manager nodes must always be available.
+For example, in a swarm with 5 managers, a minimum of 3 must be operational and in communication with each other. 
+

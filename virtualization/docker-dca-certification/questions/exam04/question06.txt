@@ -1,0 +1,65 @@
+What is the docker command to backup the UCP?
+
+A)
+docker ucp backup
+​
+B)
+docker backup ucp
+​
+C)
+docker backup all
+​
+D)
+docker/ucp backup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+
+Docker Universal Control Plane (UCP) is an enterprise on- premise solution that enables IT operations teams to deploy and manage their Dockerized applications in production,
+
+To create a backup of a UCP manager node:
+
+docker container run --log-driver none --rm -i \
+    --name ucp \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    docker/ucp \
+    backup [command options] > backup.tar
+
+
+
