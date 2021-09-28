@@ -8,6 +8,16 @@
 	<artifactId>murachs-java-servlets-jsp-chapter-22-introduction-music-store-website</artifactId>
 	<packaging>war</packaging>
 
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+	</dependencies>
+
+
 	<build>
 		<plugins>
 

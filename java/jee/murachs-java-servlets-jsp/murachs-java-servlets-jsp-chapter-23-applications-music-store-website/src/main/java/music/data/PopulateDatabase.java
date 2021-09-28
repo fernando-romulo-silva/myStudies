@@ -35,57 +35,54 @@ import music.business.Product;
 
 public class PopulateDatabase {
     private static EntityManagerFactory emf;
-    
+
     public static void insertProduct(Product product) {
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction trans = em.getTransaction();
-        trans.begin();
-        try {
-            em.persist(product);
-            trans.commit();
-        } catch (Exception e) {
-            System.out.println(e);
-        } finally {
-            em.close();
-        }
+	EntityManager em = emf.createEntityManager();
+	EntityTransaction trans = em.getTransaction();
+	trans.begin();
+	try {
+	    em.persist(product);
+	    trans.commit();
+	} catch (Exception e) {
+	    System.out.println(e);
+	} finally {
+	    em.close();
+	}
     }
-    
+
     public static void main(String[] args) {
-        Map props = new HashMap();
-        props.put(TRANSACTION_TYPE,
-                PersistenceUnitTransactionType.RESOURCE_LOCAL.name());
-        props.put(JDBC_DRIVER, "com.mysql.jdbc.Driver");
-        props.put(JDBC_URL,
-                "jdbc:mysql://localhost:3306/music_jpa?zeroDateTimeBehavior=convertToNull");
-        props.put(JDBC_USER, "root");
-        props.put(JDBC_PASSWORD, "sesame");
-        props.put(TARGET_SERVER, TargetServer.None);
-        
-        emf = Persistence.createEntityManagerFactory("musicStorePU", props);
-        
-        
-        Product product1 = new Product();
-        product1.setCode("8601");
-        product1.setDescription("86 (the band) - True Life Songs and Pictures");
-        product1.setPrice(14.95);
-        insertProduct(product1);
-        
-        Product product2 = new Product();
-        product2.setCode("pf01");
-        product2.setDescription("Paddlefoot - The first CD");
-        product2.setPrice(12.95);
-        insertProduct(product2);
-        
-        Product product3 = new Product();
-        product3.setCode("pf02");
-        product3.setDescription("Paddlefoot - The second CD");
-        product3.setPrice(14.95);
-        insertProduct(product3);
-        
-        Product product4 = new Product();
-        product4.setCode("jr01");
-        product4.setDescription("Joe Rut - Genuine Wood Grained Finish");
-        product4.setPrice(14.95);
-        insertProduct(product4);
+	Map props = new HashMap();
+	props.put(TRANSACTION_TYPE, PersistenceUnitTransactionType.RESOURCE_LOCAL.name());
+	props.put(JDBC_DRIVER, "com.mysql.jdbc.Driver");
+	props.put(JDBC_URL, "jdbc:mysql://localhost:3306/music_jpa?zeroDateTimeBehavior=convertToNull");
+	props.put(JDBC_USER, "root");
+	props.put(JDBC_PASSWORD, "sesame");
+	props.put(TARGET_SERVER, TargetServer.None);
+
+	emf = Persistence.createEntityManagerFactory("musicStorePU", props);
+
+	Product product1 = new Product();
+	product1.setCode("8601");
+	product1.setDescription("86 (the band) - True Life Songs and Pictures");
+	product1.setPrice(14.95);
+	insertProduct(product1);
+
+	Product product2 = new Product();
+	product2.setCode("pf01");
+	product2.setDescription("Paddlefoot - The first CD");
+	product2.setPrice(12.95);
+	insertProduct(product2);
+
+	Product product3 = new Product();
+	product3.setCode("pf02");
+	product3.setDescription("Paddlefoot - The second CD");
+	product3.setPrice(14.95);
+	insertProduct(product3);
+
+	Product product4 = new Product();
+	product4.setCode("jr01");
+	product4.setDescription("Joe Rut - Genuine Wood Grained Finish");
+	product4.setPrice(14.95);
+	insertProduct(product4);
     }
 }

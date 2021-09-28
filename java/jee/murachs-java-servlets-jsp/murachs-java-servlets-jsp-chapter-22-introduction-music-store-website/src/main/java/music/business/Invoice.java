@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Invoice implements Serializable {
-    
+
     private User user;
     private List<LineItem> lineItems;
     private Date invoiceDate;
@@ -18,63 +18,63 @@ public class Invoice implements Serializable {
     }
 
     public void setUser(User user) {
-        this.user = user;
+	this.user = user;
     }
 
     public User getUser() {
-        return user;
+	return user;
     }
 
     public void setLineItems(List<LineItem> lineItems) {
-        this.lineItems = lineItems;
+	this.lineItems = lineItems;
     }
 
     public List<LineItem> getLineItems() {
-        return lineItems;
+	return lineItems;
     }
 
     public void setInvoiceDate(Date invoiceDate) {
-        this.invoiceDate = invoiceDate;
+	this.invoiceDate = invoiceDate;
     }
 
     public Date getInvoiceDate() {
-        return invoiceDate;
+	return invoiceDate;
     }
 
     public String getInvoiceDateDefaultFormat() {
-        DateFormat dateFormat = DateFormat.getDateInstance();
-        String invoiceDateFormatted = dateFormat.format(invoiceDate);
-        return invoiceDateFormatted;
+	DateFormat dateFormat = DateFormat.getDateInstance();
+	String invoiceDateFormatted = dateFormat.format(invoiceDate);
+	return invoiceDateFormatted;
     }
 
     public void setInvoiceNumber(Long invoiceNumber) {
-        this.invoiceNumber = invoiceNumber;
+	this.invoiceNumber = invoiceNumber;
     }
 
     public Long getInvoiceNumber() {
-        return invoiceNumber;
+	return invoiceNumber;
     }
 
     public boolean isIsProcessed() {
-        return isProcessed;
+	return isProcessed;
     }
 
     public void setIsProcessed(boolean isProcessed) {
-        this.isProcessed = isProcessed;
+	this.isProcessed = isProcessed;
     }
 
     public double getInvoiceTotal() {
-        double invoiceTotal = 0.0;
-        for (LineItem item : lineItems) {
-            invoiceTotal += item.getTotal();
-        }
-        return invoiceTotal;
+	double invoiceTotal = 0.0;
+	for (LineItem item : lineItems) {
+	    invoiceTotal += item.getTotal();
+	}
+	return invoiceTotal;
     }
 
     public String getInvoiceTotalCurrencyFormat() {
-        double total = this.getInvoiceTotal();
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        String formattedTotal = currency.format(total);
-        return formattedTotal;
+	double total = this.getInvoiceTotal();
+	NumberFormat currency = NumberFormat.getCurrencyInstance();
+	String formattedTotal = currency.format(total);
+	return formattedTotal;
     }
 }

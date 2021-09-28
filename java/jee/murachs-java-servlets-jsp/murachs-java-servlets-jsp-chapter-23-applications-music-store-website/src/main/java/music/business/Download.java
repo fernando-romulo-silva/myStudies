@@ -19,7 +19,7 @@ public class Download implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long downloadId;
 
-    @ManyToOne(fetch=FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private User user;
 
     @Temporal(TemporalType.DATE)
@@ -28,40 +28,40 @@ public class Download implements Serializable {
     private String productCode;
 
     public Download() {
-        user = null;
-        downloadDate = new Date();
-        productCode = "";
+	user = null;
+	downloadDate = new Date();
+	productCode = "";
     }
 
     public Long getDownloadId() {
-        return downloadId;
+	return downloadId;
     }
 
     public void setDownloadId(Long downloadId) {
-        this.downloadId = downloadId;
+	this.downloadId = downloadId;
     }
 
     public void setUser(User u) {
-        user = u;
+	user = u;
     }
 
     public User getUser() {
-        return user;
+	return user;
     }
 
     public void setDownloadDate(Date date) {
-        downloadDate = date;
+	downloadDate = date;
     }
 
     public Date getDownloadDate() {
-        return downloadDate;
+	return downloadDate;
     }
 
     public void setProductCode(String productCode) {
-        this.productCode = productCode;
+	this.productCode = productCode;
     }
 
     public String getProductCode() {
-        return productCode;
+	return productCode;
     }
 }

@@ -13,68 +13,67 @@ public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long productId;    
+    private Long productId;
     private String code;
     private String description;
     private double price;
 
-    public Product() {}
+    public Product() {
+    }
 
     public Long getId() {
-        return productId;
+	return productId;
     }
 
     public void setId(Long productId) {
-        this.productId = productId;
+	this.productId = productId;
     }
 
     public void setCode(String code) {
-        this.code = code;
+	this.code = code;
     }
 
     public String getCode() {
-        return code;
+	return code;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+	this.description = description;
     }
 
     public String getDescription() {
-        return description;
+	return description;
     }
 
     public String getArtistName() {
-        String artistName = 
-                description.substring(0, description.indexOf(" - "));
-        return artistName;
+	String artistName = description.substring(0, description.indexOf(" - "));
+	return artistName;
     }
 
     public String getAlbumName() {
-        String albumName = 
-                description.substring(description.indexOf(" - ") + 3);
-        return albumName;
+	String albumName = description.substring(description.indexOf(" - ") + 3);
+	return albumName;
     }
 
     public void setPrice(double price) {
-        this.price = price;
+	this.price = price;
     }
 
     public double getPrice() {
-        return price;
+	return price;
     }
 
     public String getPriceCurrencyFormat() {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        return currency.format(price);
+	NumberFormat currency = NumberFormat.getCurrencyInstance();
+	return currency.format(price);
     }
 
     public String getImageURL() {
-        String imageURL = "/musicStore/images/" + code + "_cover.jpg";
-        return imageURL;
+	String imageURL = "/musicStore/images/" + code + "_cover.jpg";
+	return imageURL;
     }
 
     public String getProductType() {
-        return "Audio CD";
+	return "Audio CD";
     }
 }
