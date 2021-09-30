@@ -1,0 +1,53 @@
+Docker security scan can be started by all users including those with read-only access. 
+True or false?
+
+A)
+True
+
+B)
+​False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A correct
+
+Docker Scan runs on Snyk engine, providing users with visibility into the security posture of 
+their local Dockerfiles and local images, but you need permission for it.
+

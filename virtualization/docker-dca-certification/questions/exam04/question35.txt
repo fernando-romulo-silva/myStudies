@@ -1,0 +1,66 @@
+What is the docker command to connect a running container to an existing user-defined bridge?
+
+A)
+docker network join
+​
+B)
+docker network attach
+​
+C)
+docker connect network
+​
+D)
+docker network connect
+​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D correct
+
+Connects a container to a network. 
+You can connect a container by name or by ID. 
+Once connected, the container can communicate with other containers in the same network
+
+

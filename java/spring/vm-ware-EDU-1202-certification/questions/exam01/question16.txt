@@ -1,0 +1,67 @@
+What happens if you define both the "id" and "name" attributes in a bean's XML definition?
+​
+​A)
+An exception is thrown
+​
+B)
+The application will crash.
+​
+C)
+"name" is used for bean aliases
+
+​D)
+"id" is used as bean identifier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C' and 'D'
+
+Explanation
+
+XML-based configuration metadata, you use the id attribute, the name attribute, or both to specify the bean identifiers. 
+
+The id attribute lets you specify exactly one id. 
+
+Conventionally, these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well. 
+
+If you want to introduce other aliases for the bean, you can also specify them in the name attribute, separated by a comma (,), semicolon (;), or white space. 
+
+
+https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-beanname

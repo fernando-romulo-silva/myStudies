@@ -1,0 +1,75 @@
+Which class is used for programmatic usage of transactions?
+​
+​A)
+@Transactional
+​
+B)
+TransactionExecutor
+​
+C)
+TransactionTemplate
+
+D)​
+RollbackManager
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Explanation
+
+@Transactional is used for declarative usage, not programmatic. 
+TransactionTemplate provides a set of callback-based APIs to manage transactions manually. 
+
+final var transactionTemplate = new TransactionTemplate(transactionManager);
+
+final var id = transactionTemplate.execute(status -> {
+        Payment payment = new Payment();
+        payment.setAmount(1000L);
+        payment.setReferenceNumber("Ref-1");
+        payment.setState(Payment.State.SUCCESSFUL);
+
+        entityManager.persist(payment);
+
+        return payment.getId();
+    });
+
+https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/support/TransactionTemplate.html

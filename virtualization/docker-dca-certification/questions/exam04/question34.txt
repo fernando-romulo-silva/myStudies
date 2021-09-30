@@ -1,0 +1,65 @@
+The output of which command can be used to find the architecture and operating system an image is compatible with?
+
+​A)
+docker image ls
+​
+B)
+docker image inspect --filter {{.Architecture}} {{.OS}} '
+​
+C)
+docker image inspect --format {{.Architecture}} {{.OS}} '
+​
+D)
+docker image info
+​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C correct
+
+Docker inspect provides detailed information on constructs controlled by Docker.
+
+--format , -f  Format the output using the given Go template
+

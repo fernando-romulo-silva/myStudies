@@ -1,0 +1,60 @@
+Which of the following symbols is used in @Value expressions?
+
+​A)
+#
+
+B)​
+^
+​
+C)
+$
+
+D)​
+&
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Expressions starting with $. 
+Such expressions reference a property name in the application’s environment. 
+These expressions are evaluated by the PropertySourcesPlaceholderConfigurer Spring bean prior to bean creation and can only be used in @Value annnotations. 
+
+Expressions starting with #. 
+Spring Expression Language expressions parsed by a SpEL expression parser and evaluated by a SpEL expression instance
+
+

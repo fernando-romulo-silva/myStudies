@@ -53,7 +53,8 @@ The correct option is C
 
 Docker uses a technology called namespaces to provide the isolated workspace called the container. 
 When you run a container, Docker creates a set of namespaces for that container.
-These namespaces provide a layer of isolation. Each aspect of a container runs in a separate namespace and its access is limited to that namespace.
+These namespaces provide a layer of isolation. 
+Each aspect of a container runs in a separate namespace and its access is limited to that namespace.
 
 Docker Engine uses the following namespaces on Linux:
 

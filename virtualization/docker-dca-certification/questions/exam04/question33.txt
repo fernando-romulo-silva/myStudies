@@ -1,0 +1,62 @@
+Which of the following commands will create a swarm service which only listens on port 53 using the UDP protocol?
+
+​A)
+docker service create --name dns-cache -p 53:53 --service udp dns-cache
+​
+B)
+docker service create --name dns-cache -p 53:53 --udp dns-cache
+​
+C)
+docker service create --name dns-cache -p 53:53/udp dns-cache
+​
+D)
+docker service create --name dns-cache -p 53:53 --constraint networking-protocol-udp=true dns-cache
+​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D correct
+
+$ docker service create --name dns-cache --publish 53:53/udp dns-cache

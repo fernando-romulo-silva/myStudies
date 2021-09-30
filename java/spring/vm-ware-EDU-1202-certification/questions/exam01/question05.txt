@@ -1,0 +1,64 @@
+Which of the following annotations can be used to inject property values into Spring beans and configuration classes?
+​
+​A)
+@PropertyValue
+​
+B)
+@Import
+​
+C)
+@Value
+
+D)​
+@Primary
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Explanation
+
+@Value is an annotation used to inject property values into a field using SpEL. 
+
+ @Value("${tesseract.folder}") //
+ final String tesseractFolder, //
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config

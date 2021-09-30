@@ -1,0 +1,69 @@
+What are the advantages when using @Mock instead of @MockBean in Spring Boot tests?
+​
+A)
+@Mock can be used for non-bean classes
+​
+B)
+@Mock can be used without SpringRunner
+​
+C)
+@Mock is included without additional dependencies
+
+D)​
+Method parameters can be annotated with @Mock
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A', 'B' and 'D'
+
+Both the @MockBean and @Mock annotation can be used to create Mockito mocks but there are some differences between the two annotations:
+
+• @Mock can only be applied to fields and parameters while @MockBean can only be applied to classes and fields. 
+
+• @Mock can be used to mock any Java class or interface while @MockBean only allows for mocking of Spring beans or creation of mock Spring beans. 
+  @MockBean can be used to mock existing beans but also to create new beans that will belong to the Spring application context. 
+
+• To be able to use the @MockBean annotation, the Spring runner (@RunWith(SpringRunner.class) ) has to be used to run the associated test. 
+
+• @MockBean can be used to create custom annotations for specific, reoccurring, needs When running Spring Boot Tests, 
+both @Mock and @MockBean are included in the spring-boot-starter-test. 
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-testing-spring-boot-applications-mocking-beans

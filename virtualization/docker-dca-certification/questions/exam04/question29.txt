@@ -1,0 +1,60 @@
+What docker image prune command does?
+
+A)
+Show the history of an image
+​
+B)
+Remove one or more images
+​
+C)
+Display detailed information on one or more images
+​
+D)
+Remove unused images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D correct
+
+The docker image prune command allows you to clean up unused images. 
+By default, docker image prune only cleans up dangling images. 
+A dangling image is one that is not tagged and is not referenced by any container
+
+

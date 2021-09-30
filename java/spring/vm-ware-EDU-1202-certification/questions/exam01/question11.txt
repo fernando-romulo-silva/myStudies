@@ -1,0 +1,66 @@
+Fill in the Blank.  
+_______is an Interface that is responsible for Instantiating, Configuring, Assembling, 
+and Managing the life-cycle of spring beans.
+​
+A)
+BeanContext
+​
+B)
+ApplicationBeanContext
+​
+C)
+ApplicationContext
+​
+D)
+ApplicationFactoryContext
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Explanation
+
+ApplicationContext is an Interface, which acts as a container in spring which is responsible for carrying out life cycle of beans. 
+
+ ApplicationContext context = new ClassPathXmlApplicationContext("applicationcontext/user-bean-config.xml");
+ UserService userService = context.getBean(UserService.class);
+
+
+https://docs.spring.io/spring/docs/5.0.3.RELEASE/javadoc-api/org/springframework/context/ApplicationContext.html

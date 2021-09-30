@@ -1,0 +1,77 @@
+Which of the following Spring MVC-related information types are collected in metrics by Spring Boot Actuator by default?
+​
+A)
+There are less available pointcut designators.
+
+B)​
+It cannot intercept constructor calls
+​
+C)
+All of the above
+
+D)​
+Method calls inside the same class cannot be intercepted.
+
+E)​
+Only public interface method calls can be intercepted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A', 'B', 'D'
+
+Explanation
+
+By default, Spring MVC-related metrics are tagged with the following information: 
+
+exception - Simple class name of any exception that was thrown while handling the request. 
+
+method - Request’s method (for example, GET or POST) 
+
+outcome - Request’s outcome based on the status code of the response. 
+1xx is INFORMATIONAL 
+2xx is SUCCESS
+3xx is REDIRECTION
+4xx CLIENT_ERROR 
+5xx is SERVER_ERROR status - Response’s HTTP status code (for example, 200 or 500) 
+
+uri - Request’s URI template prior to variable substitution, if possible (for example, /api/person/{id})
+
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-metrics-spring-mvc
