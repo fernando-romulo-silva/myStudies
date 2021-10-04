@@ -1,0 +1,74 @@
+Which of the following are valid ways to inject a dependency into a bean in Spring?
+
+​A)
+Constructor argument
+
+B)​
+@Autowired annotation
+
+C)​
+XML Configuration
+
+D)​
+BeanFactory.getBean() method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A', 'B' and 'C'
+
+@Authowired, XML Configuration, Constructor Argument, Setter methods are valid ways.  
+
+public class TextEditor {
+   
+   @Autowired
+   private SpellChecker spellChecker;
+   
+   @Autowired
+   public TextEditor(SpellChecker sc) {
+   	  this.spellChecker = sc;
+   }
+
+   @Autowired
+   public void setSpellChecker( SpellChecker spellChecker ){
+      this.spellChecker = spellChecker;
+   }
+   public SpellChecker getSpellChecker( ) {
+      return spellChecker;
+   }
+
+https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-collaborators
+

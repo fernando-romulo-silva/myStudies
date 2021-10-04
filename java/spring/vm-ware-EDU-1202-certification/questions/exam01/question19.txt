@@ -68,4 +68,3 @@ For example we may create a @Loggable annotation:
 @Pointcut("@annotation(com.baeldung.pointcutadvice.annotations.MyAnnotation)")
 public void loggableMethods() {}
 
-

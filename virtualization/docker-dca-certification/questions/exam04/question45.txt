@@ -1,0 +1,55 @@
+If the manager in a single-manager swarm fails, your services continue to run, 
+but you need to create a new cluster to recover.
+
+A)
+TRUE
+​
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A is correct
+
+Say, if any of master or worker node fails, SwarmKit reschedules its tasks(which are nothing but containers) onto a different node.
+
+ 

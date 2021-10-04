@@ -1,0 +1,61 @@
+Which Docker command is used to remove a base image, even if that image has containers that are based on it?
+
+A)
+docker rmi [image name] --force
+​
+B)
+docker rm [image name] --force
+​
+C)
+docker remove [image name]
+​
+D)
+None of the above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A is correct
+
+Removes (and un-tags) one or more images from the host node.
+Using "--force" or "-f" force removal of the image
+

@@ -1,0 +1,80 @@
+Which of these is the correct naming convention for custom find methods in Spring Data Repository Interface?
+
+A)
+None of the above.
+​
+B)
+find(First[count]) By[Property Expression] [comparison operator] [ordering operator]
+
+C)​
+find(First[count]) [ordering operator] [comparison operator] By[Property Expression]
+​
+D)
+find(First[count]) By[Property Expression] [ordering operator] [comparison operator]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A', 'C' and  'D'
+
+Result limit (First/Last X) comes first. 
+
+After By comes the property to be queried, followed by the comparison operator. 
+
+The sort order comes last. 
+
+https://docs.spring.io/spring-data/jpa/docs/2.1.1.RELEASE/reference/html/#repositories.query-methods.details
+
+interface PersonRepository extends Repository<User, Long> {
+
+  List<Person> findByEmailAddressAndLastname(EmailAddress emailAddress, String lastname);
+
+  // Enables the distinct flag for the query
+  List<Person> findDistinctPeopleByLastnameOrFirstname(String lastname, String firstname);
+  List<Person> findPeopleDistinctByLastnameOrFirstname(String lastname, String firstname);
+
+  // Enabling ignoring case for an individual property
+  List<Person> findByLastnameIgnoreCase(String lastname);
+  // Enabling ignoring case for all suitable properties
+  List<Person> findByLastnameAndFirstnameAllIgnoreCase(String lastname, String firstname);
+
+  // Enabling static ORDER BY for a query
+  List<Person> findByLastnameOrderByFirstnameAsc(String lastname);
+  List<Person> findByLastnameOrderByFirstnameDesc(String lastname);
+  
+  List<User> findFirst10ByLastname(String lastname, Sort sort);
+}
+

@@ -1,0 +1,57 @@
+Which of the following HTTP verbs is idempotent?
+
+A)
+PUT
+​
+B)
+POST
+​
+C)
+GET
+​
+D)
+DELETE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A', 'C', 'D'
+
+The GET, PUT and DELETE methods are idempotent, meaning that applying them multiple times 
+to a resource results in the same state change of the resource as applying them once, though the response might differ. 
+
+
+https://en.wikipedia.org/wiki/Representational_state_transfer

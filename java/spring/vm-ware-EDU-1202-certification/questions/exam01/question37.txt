@@ -1,0 +1,57 @@
+Which of the following methods in JdbcTemplate is recommended for UPDATE or INSERT operations?
+
+A)
+query
+​
+B)
+queryForList
+​
+C)
+update
+
+D)​
+execute
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+update should be used for write operations. 
+
+
+https://www.baeldung.com/spring-jdbc-jdbctemplate https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html
+

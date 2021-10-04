@@ -1,0 +1,66 @@
+After creating a new service names 'http", you notice that the new service is not registering as healthy. 
+How do you view the list of historical tasks for that service by using the command line ?
+
+A)
+docker inspect http'
+​
+B)
+docker servoce inspect http'
+​
+C)
+docker service ps http'
+​
+D)
+docker ps http'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C correct
+
+Lists the tasks that are running as part of the specified services.
+In addition to running tasks, the output also shows the task history. 
+
+
+

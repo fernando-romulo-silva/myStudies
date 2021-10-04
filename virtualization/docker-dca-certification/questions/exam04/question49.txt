@@ -1,0 +1,59 @@
+Which command should you run to show all the nodes in a swarm?
+
+A)
+docker swarm list
+​
+B)
+docker node ls
+​
+C)
+docker node list
+​
+D)
+docker swarm l
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B is correct
+
+Lists all the nodes that the Docker Swarm manager knows about. You can filter using the -f or --filter flag.  

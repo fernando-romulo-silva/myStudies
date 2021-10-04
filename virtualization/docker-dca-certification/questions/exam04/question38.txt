@@ -1,0 +1,66 @@
+One of the nodes in your existing cluster is logging errors related to the 
+storage subsystem it exists on in your infrastructure and needs to be taken offline. 
+
+Which command will allow you to gracefully remove the swarm it is a member of when executed ON the node itself?
+
+A)
+​docker swarm unregister
+
+B)
+docker swarm leave
+​
+C)
+docker swarm rm
+​
+D)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B is correct
+
+When you run this command on a worker, that worker leaves gracefully the swarm.
+You can use the --force option on a manager to remove it from the swarm.
+
+

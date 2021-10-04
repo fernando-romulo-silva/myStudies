@@ -1,0 +1,55 @@
+Consider the following signature of a bean definition method. 
+@Bean public BeanX beanY(BeanZ beanZ) Which is the name of the created bean?
+
+A)
+BeanX
+​
+B)
+beanZ
+​
+C)
+beanY
+
+D)​
+beanX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'Y'
+
+When defined this way, the name of the method will be used as bean name.
+
