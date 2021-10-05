@@ -1,0 +1,57 @@
+_____ means that if anything goes wrong, the changes will be preserved once the system is back
+
+A)
+Durability
+
+B)​
+Consistency
+​
+C)
+Isolation
+​
+D)
+Atomicity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+The effect of one transaction will not have any impact on another transaction so they are independent to one another. 
+
+They are totally isolated from one another. 
+
+https://en.wikipedia.org/wiki/Transaction_processing

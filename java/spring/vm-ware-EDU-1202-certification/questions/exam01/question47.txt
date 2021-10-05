@@ -1,0 +1,63 @@
+Which technology is used to accomplish method-level security in Spring?
+
+A)
+None of the above.
+​
+B)
+AOP
+​
+C)
+Servlet Filters
+​
+D)
+Transactions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+Method security is based on Spring AOP.
+
+Spring Security uses AOP internally. 
+
+For example, it is used for global method security. 
+
+Global method security is used to apply security checks to certain methods (for example, in service layer).
+
+
+https://docs.spring.io/spring-security/site/docs/current/reference/html5/#spring-security-core
+

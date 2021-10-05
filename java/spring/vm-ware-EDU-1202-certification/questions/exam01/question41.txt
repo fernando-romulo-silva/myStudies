@@ -1,0 +1,91 @@
+Which of the following are true about Spring MVC Controllers?
+
+A)
+When using annotations, specific class or interface inheritance is not required.
+
+B)​
+@Controller is a stereotype annotation.
+
+C)​
+Endpoint paths mapped by a controller must all have the same prefix.
+​
+D)
+Controllers implemented using annotations do not have direct dependencies on Portlet or Servlet APIs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A', 'B' and 'D'
+
+Endpoint Paths do not necessarily need to have the same path prefix. 
+
+@Controller is a stereotype annotation because it is meta annotated with @Component. 
+
+Before annotation based controller declaration, controllers needed to extend certain classes, such as MultiActionController.
+
+
+@Controller
+public class HelloWorldController {
+
+    @RequestMapping("/helloWorld")
+    public ModelAndView helloWorld() {
+        ModelAndView mac = new ModelAndView();
+        mav.setViewName("helloWorld");
+        mav.addObject("message", "Hello World!");
+        return mav;
+    }
+}
+
+public class AccountController extends MultiActionController {
+    public ModelAndView listAccounts() {
+        // your code
+        return new ModelAndView("listAccounts.bean", "msg", "As you  want")
+    }
+}
+
+web.xml
+
+<servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>*.bean</url-pattern>
+</servlet-mapping>
+
+<bean name="/listAccounts.bean" class="p1.AccountController"></bean>
+

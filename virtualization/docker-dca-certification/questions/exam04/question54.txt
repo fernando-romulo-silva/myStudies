@@ -1,0 +1,61 @@
+Docker Hub and Docker Cloud are examples of?
+
+A)
+docker service create -p 8080:80 nginx
+​
+B)
+docker service create -p mode=ingress,published=8082,target=80 nginx
+​
+C)
+docker service create -p mode=host,published=8082,target=80 nginx
+​
+D)
+docker service create -p 8080:80 --mode host nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Docker Hub is a cloud-hosted version of Docker Registry. 
+A Docker user can opt for Docker Registry, which is a stateless, open source and scalable server-side application, 
+if they prefer to maintain the storage and distribution of Docker images instead of relying on Docker's service.
+
+

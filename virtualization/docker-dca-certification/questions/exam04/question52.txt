@@ -1,0 +1,63 @@
+Which algorithm docker uses to maintain a consistent cluster state across multiple managers?
+
+A)
+Floyd's Cycle Detection Algorithm.
+​
+B)
+Round robin Algorithm
+​
+C)
+Lee algorithm
+​
+D)
+Raft consensus algorithm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Using a Raft implementation, the managers maintain a consistent internal state of the entire swarm and all the services running on it. 
+
+For testing purposes it is OK to run a swarm with a single manager. 
+
+If the manager in a single-manager swarm fails, your services continue to run, but you need to create a new cluster to recover.
+

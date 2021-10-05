@@ -1,0 +1,61 @@
+If you manually stop a container, its restart policy is ignored until 
+the Docker daemon restarts or the container is manually restarted
+
+A)
+TRUE
+​
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A
+
+If you manually stop a container, its restart policy is ignored until the Docker daemon restarts or the container is manually restarted. 
+
+This is another attempt to prevent a restart loop. 
+
+Restart policies only apply to containers. 
+
+Restart policies for swarm services are configured differently.
+
