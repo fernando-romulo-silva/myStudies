@@ -1,0 +1,78 @@
+By default, the @ComponentScan class scans in the following locations.
+  ​
+A)
+The current package
+
+B)​
+The entire file system
+​
+C)
+The entire Spring application
+​
+D)
+Nowhere. The path must be specified.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A'
+
+Configures component scanning directives for use with @Configuration classes.
+Provides support parallel with Spring XML's <context:component-scan> element.
+
+Either basePackageClasses() or basePackages() (or its alias value()) may be specified to define specific packages to scan. 
+If specific packages are not defined, scanning will occur from the package of the class that declares this annotation.
+
+@Configuration
+
+@ComponentScan
+// or
+@ComponentScan(basePackages = "com.baeldung.componentscan.springapp")
+
+public class SpringComponentScanApp {
+    private static ApplicationContext applicationContext;
+
+    @Bean
+    public ExampleBean exampleBean() {
+        return new ExampleBean();
+    }
+}    
+
+https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-using-springbootapplication-annotation.html
+

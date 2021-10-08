@@ -1,0 +1,66 @@
+What is the correct sequence of docker container states?
+
+I. Running
+II. Paused
+III. Restarting
+IV. Exited
+
+​A)
+I, II, III, IV
+​
+B)
+VI, III, II, I
+​
+C)
+I, IV, III, II
+​
+D)
+III, IV, II, I
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A is Correct
+
+The correct sequence of the docker container cycle is,
+
+I. Running
+
+II. Paused
+
+III. Restarting
+
+IV. Exited

@@ -1,0 +1,59 @@
+Which of the following are cross cutting concerns where Spring AOP can be useful?
+  ​
+A)
+File access
+​
+B)
+Security
+
+C)​
+Parallelization
+​
+D)
+Logging
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B' and 'D'
+
+There are many valid AOP use cases. Other use cases include: performance monitoring, statistics, transactions, caching. 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#aop
+

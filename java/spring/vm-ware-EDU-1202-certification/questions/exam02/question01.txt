@@ -1,12 +1,16 @@
-A HTTP Response Code of ____ means __________
+Which of the following are advantages of using interfaces in Java?
   ​
-A) 300, Success
-   ​
-B) 200, Client Side Error
-   ​
-C) 400, Client Side Error
-   ​
-D) 500, Server Side Error
+A)
+Increased Modularity
+
+B)​
+Simple type names
+​
+C)
+Interchangeable implementation classes
+
+D)​
+Better exception handling
    
 
 
@@ -48,15 +52,10 @@ D) 500, Server Side Error
 
 
 
-Answer 'C' and 'D'
+Answer 'A' and 'C'
 
-Http Response Status Codes for a request are:
- 
-1x - informational 
-2x - Success 
-3x - Redirectional
-4x - Client Side Error
-5x - Server Side Error 
+Interfaces do not help with exception handling, nor do they necessarily have simpler names. 
 
-https://docs.spring.io/spring-framework/docs/4.0.9.RELEASE/javadoc-api/org/springframework/http/HttpStatus.html
+Their advantages include being able to change the implementation without needing to change classes that depend on it and, as a result, increased modularity. 
 
+https://en.wikipedia.org/wiki/Interface_(Java)

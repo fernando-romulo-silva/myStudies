@@ -1,0 +1,75 @@
+If needed, Spring application contexts can be bootstrapped in the following situations.
+  ​
+A)
+Web applications
+
+B)​
+JUnit tests
+
+C)​
+Standalone applications
+​
+D)
+A second instance is required
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A', 'B', and 'C'
+
+There are different implementations of the ApplicationContext interface, for each purpose (they can be viewed at the link below). 
+
+Spring does not support running multiple instances on the same machine. 
+
+AnnotationConfigWebApplicationContext
+ClassPathXmlApplicationContext
+FileSystemXmlApplicationContext
+
+GenericApplicationContext
+GenericGroovyApplicationContext
+GenericWebApplicationContext
+GenericXmlApplicationContext
+
+GroovyWebApplicationContext
+ResourceAdapterApplicationContext
+StaticApplicationContext
+StaticWebApplicationContext
+XmlWebApplicationContext
+
+https://docs.spring.io/spring-framework/docs/5.0.3.RELEASE/javadoc-api/org/springframework/context/ApplicationContext.html

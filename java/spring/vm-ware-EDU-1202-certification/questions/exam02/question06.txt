@@ -1,0 +1,63 @@
+__________ is an additional behavior, typically a cross cutting concern, 
+that is to be executed at certain places(at join Points) in a program.
+  ​
+A)
+Advice
+
+B)​
+Weaving
+
+C)​
+Pointcut
+​
+D)
+Aspect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+Advice: Action taken by an aspect at a particular join point. 
+
+Different types of advice include “around”, “before” and “after” advice. (Advice types are discussed later.) 
+
+Many AOP frameworks, including Spring, model an advice as an interceptor and maintain a chain of interceptors around the join point. 
+
+https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop-introduction-defn

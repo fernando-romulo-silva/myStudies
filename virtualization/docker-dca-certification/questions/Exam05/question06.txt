@@ -1,0 +1,52 @@
+What is the docker command to add or update a published port?
+
+​A)
+docker service update --publish-add
+​
+B)
+docker service update --publish-port
+
+C)
+docker service set --add-port
+​
+D)
+docker service modify --add-update-port
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A is Correct
+

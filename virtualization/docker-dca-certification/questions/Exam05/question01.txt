@@ -1,0 +1,59 @@
+From the below-mentioned option which of the following is not the drawbacks of Docker?
+
+​A)
+Docker does not provide a storage choice.
+​
+B)
+The monitoring option offered by the docker is quite poor.
+​
+C)
+Docker provides automatic rescheduling of inactive notes.
+​
+D)
+Horizontal scaling set-up is complicated and automatic.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C is Correct
+
+Docker does not provide a storage choice. 
+
+Monitoring option offered by docker is quite poor, Horizontal scaling set-up is complicated and automatic, are the drawbacks of docker.
+
+But option C is incorrect and also not included in the drawbacks of docker.
+
+Hence C is the correct option.
