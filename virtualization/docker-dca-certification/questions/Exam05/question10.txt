@@ -1,0 +1,65 @@
+Which of the following commands can we use to view detailed metadata about a container? 
+(select two)
+
+​A)
+docker metadata
+​
+B)
+docker inspect
+​
+C)
+docker container inspect
+​
+D)
+docker query
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A and C are Correct
+
+Docker includes multiple logging mechanisms to help you get information from running containers and services. 
+These mechanisms are called logging drivers. 
+Each Docker daemon has a default logging driver, which each container uses unless you configure it to use a different logging driver, or “log-driver” for short.
+
+Because of:
+
+$ docker info --format '{{.LoggingDriver}}'
+
+or
+
+$ docker system info | grep -i log
+

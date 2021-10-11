@@ -1,0 +1,67 @@
+Which is the annotation where transactions configuration properties such as isolation, 
+propagation and rollbackFor can be configured?
+  ​
+A)
+EnableTransaction
+​
+B)
+@Transactional
+
+C)​
+@Transaction
+
+D)​
+@TransactionConfiguration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+@Transactional is the main annotation used for declarative transactional management. 
+It has all of these attributes. 
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html
+
+    @Transactional(readOnly = true)
+    public List<ImageTypeResponse> findBySpecification(final Specification<ImageType> spec) {
+	return repository.findAll(spec) //
+			.stream() //
+			.map(imageType -> new ImageTypeResponse(imageType.getId(), imageType.getExtension(), imageType.getName())) //
+			.toList();
+    }

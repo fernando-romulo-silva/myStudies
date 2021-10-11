@@ -1,0 +1,65 @@
+What is the difference between a replicated and a global service?
+
+​A)
+Number of identical tasks can be specified for a replicated service. 
+There is no pre-specified number of tasks for global service.
+​
+B)
+Replicated service can only be deployed on manager node. 
+Global service can be deployed on both manager and worker node
+​
+C)
+Replicated service runs one task on every node. 
+Global service runs multiple task on every node.
+​
+D)
+Good candidates for replicated service are monitoring agents that you want to run on every node in the swarm.
+Good candidates for global service are http servers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A is Correct
+
+There are two types of service deployments, replicated and global.
+
+For a replicated service, you specify the number of identical tasks you want to run. 
+For example, you decide to deploy an HTTP service with three replicas, each serving the same content.
+
+A global service is a service that runs one task on every node.
+There is no pre-specified number of tasks. 
+Each time you add a node to the swarm, the orchestrator creates a task and the scheduler assigns the task to the new node.
+   

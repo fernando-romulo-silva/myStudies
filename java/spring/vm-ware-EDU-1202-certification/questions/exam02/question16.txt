@@ -1,0 +1,57 @@
+Which of the following are endpoints provided by Spring Boot Actuator?
+  ​
+A)
+management
+​
+B)
+graph
+​
+C)
+beans
+
+D)​
+info
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C' and 'D'
+
+beans: Lists the Spring beans in the application. 
+
+info: Arbitrary application information. Spring Boot Actuator, by itself, does not provide metrics visualization.

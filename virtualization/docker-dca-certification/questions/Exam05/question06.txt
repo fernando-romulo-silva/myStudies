@@ -50,3 +50,7 @@ docker service modify --add-update-port
 
 A is Correct
 
+You can change almost everything about an existing service using the docker service update command. 
+When you update a service, Docker stops its containers and restarts them with the new configuration.
+
+$ docker service update --publish-add

@@ -1,0 +1,59 @@
+In Spring Security ___________ comes after _______________?
+  ​
+A)
+Principal, Authentication
+​
+B)
+Principal, Authorization
+​
+C)
+Authorization, Authentication
+
+D)​
+Authentication, Authorization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Authentication is process of validating the user who he claims to be. 
+
+Once the person is authenticated, he is allowed to perform certain actions based on his role, which is authorization. 
+
+https://docs.spring.io/spring-security/site/docs/5.0.7.RELEASE/reference/htmlsingle/#tech-intro-authentication https://en.wikipedia.org/wiki/Authentication https://en.wikipedia.org/wiki/Authorization

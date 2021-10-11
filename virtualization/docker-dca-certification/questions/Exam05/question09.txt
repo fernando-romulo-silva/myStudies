@@ -1,0 +1,64 @@
+What is the docker command to find the current logging driver for a running container?
+
+​A)
+docker info
+​
+B)
+docker config
+​
+C)
+docker inspect
+​
+D)
+docker status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C is Correct
+
+Docker includes multiple logging mechanisms to help you get information from running containers and services. 
+These mechanisms are called logging drivers. 
+Each Docker daemon has a default logging driver, which each container uses unless you configure it to use a different logging driver, or “log-driver” for short.
+
+Because of:
+
+$ docker info --format '{{.LoggingDriver}}'
+
+or
+
+$ docker system info | grep -i log
+

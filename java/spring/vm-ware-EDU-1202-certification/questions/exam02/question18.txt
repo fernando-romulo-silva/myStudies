@@ -1,0 +1,64 @@
+Which of these annotation is used for specifying a query to be used with a Spring Data JPA Repository method?
+  ​
+A)
+@JpaQuery
+​
+B)
+@Query
+
+C)​
+@SqlQuery
+​
+D)
+@DataQuery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+@Query is the name of the annotation. Ex:
+
+
+@Repository
+public interface ImageTypeRespository extends JpaRepository<ImageType, Long>, JpaSpecificationExecutor<ImageType> {
+
+    @Query("select o from ImageType o where o.extension = :extension")
+    Optional<ImageType> findByExtension(@Param("extension") final String extension);
+}
+
+https://docs.spring.io/spring-data/jpa/docs/2.1.1.RELEASE/reference/html/#jpa.query-methods.at-query
