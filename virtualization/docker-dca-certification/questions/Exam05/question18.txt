@@ -1,0 +1,55 @@
+What is the docker command to remove one or more images?
+
+​A)
+docker image delete
+​
+B)
+docker delete
+​
+C)
+docker image rm
+​
+D)
+docker remove
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C is Correct
+
+docker image rm: Remove one or more images.
+
+$  docker image rm --force web

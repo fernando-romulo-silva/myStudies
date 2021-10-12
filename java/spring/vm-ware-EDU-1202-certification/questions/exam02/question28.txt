@@ -1,0 +1,57 @@
+Which of the following are advantages offered by Spring Boot?
+  ​
+A)​​
+Easy Configuration
+
+B)​
+Less boiler plate code
+
+C)​
+Simple Dependency management
+
+D)​
+It can be run from a command line.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B', 'C' and 'D'
+
+All of these are advantages offered by Spring Boot. 
+Spring Boot is designed to be user friendly, easy to use and with less boilerplate code than the alternatives.
+ 
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-introducing-spring-boot
+ 

@@ -1,0 +1,64 @@
+Which of the following are metrics provided by Spring Boot Actuator?
+  ​
+A)
+Garbage collection statistics
+
+B)​
+HTTP Request response time
+
+C)​
+Number of user sessions
+​
+D)
+Memory usage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B' and 'D'
+
+Some examples of metrics that can be found in a Spring Boot application are: 
+
+• Response time of HTTP requests. 
+
+• Number of active connections in a database connection pool. 
+
+• Memory usage. This can be for instance heap memory usage. 
+
+• Garbage collection statistics. 
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-metrics-meter
+ 

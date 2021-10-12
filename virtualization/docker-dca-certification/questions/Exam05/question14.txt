@@ -56,8 +56,3 @@ Removes (and un-tags) one or more images from the host node.
 If an image has multiple tags, using this command with the tag as a parameter only removes the tag. 
 If the tag is the only one for the image, both the image and the tag are removed.
 
-
-
-
-
-  

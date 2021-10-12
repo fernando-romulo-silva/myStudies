@@ -1,0 +1,68 @@
+Which of the following may be used as Controller method arguments?
+  ​
+A)​​
+@IpAddress
+​
+B)
+WebRequest
+
+C)​
+ServletResponse
+
+D)​
+@RequestBody
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B', 'C' and 'D'
+
+IpAddress is not a valid annotation. 
+
+@ResponseBody
+@RequestMapping(value = "/report/{objectId}", method = RequestMethod.GET)
+public void generateReport(
+        
+        @PathVariable("objectId") Long objectId, 
+        HttpServletRequest request, 
+        HttpServletResponse response) {
+
+    // ...
+}
+
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#mvc-ann-arguments
+ 

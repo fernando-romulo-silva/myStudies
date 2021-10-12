@@ -1,0 +1,73 @@
+Which of the following statements are true regarding the RestTemplate class?
+  ​
+A)​
+When using postForObject, it is impossible to check the HTTP response code.
+
+B)
+getForEntity returns domain entities
+
+C)​
+getForObject takes an ObjectFactory as an argument
+​
+D)
+The put and delete methods have a void return type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'D'
+
+*ForEntity methods return ResponseEntity objects. 
+-These contain the response status code as well as the object in the payload. 
+-ObjectFactory is not used as an argument in any method of RestTemplate. 
+
+var restTemplate = new RestTemplate();
+var fooResourceUrl = "http://localhost:8080/spring-rest/foos";
+ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
+
+var statusCode = response.getStatusCode();
+
+*ForObject methods do not return the HTTP status code. 
+
+Foo foo = restTemplate.getForObject(fooResourceUrl + "/1", Foo.class);
+
+
+put and delete methods return void. 
+
+String entityUrl = fooResourceUrl + "/" + existingResource.getId();
+restTemplate.delete(entityUrl);
+
