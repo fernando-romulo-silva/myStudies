@@ -1,0 +1,62 @@
+What is the docker command to add or update a placement constraint?
+
+​A)​
+docker service update --constraint-add
+​
+B)
+docker service update --pref-add
+​
+C)
+docker service update --placement-pref-add
+​
+D)
+docker service update --placement-constraint-add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is A
+
+Updates a service as described by the specified parameters. The parameters are the same as docker service create.
+
+$ docker service update --constraint-add
+
+--constraint-add : Add or update a placement constraint

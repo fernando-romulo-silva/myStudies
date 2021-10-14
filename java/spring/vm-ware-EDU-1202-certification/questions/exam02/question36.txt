@@ -1,0 +1,57 @@
+A ________ is an operation that consists of number of tasks that take place as single unit.
+Either all tasks are performed or no tasks are performed.
+
+A)
+HTTP Request
+​
+B)
+Logging
+
+C)​
+Data Validation
+​
+D)
+Transaction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Transactions are a group of tasks that are either performed or aborted (in which case any changes will be rolled back). 
+
+https://en.wikipedia.org/wiki/Transaction_processing#Atomicity
+

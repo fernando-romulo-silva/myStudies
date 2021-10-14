@@ -1,0 +1,59 @@
+Which of the following are health indicators provided by Spring Boot Actuator by default?
+
+A)​
+ElasticsearchHealthIndicator
+
+B)​
+ApplicationHealthIndicator
+
+C)​
+ConnectionHealthIndicator
+
+D)​
+DiskSpaceHealthIndicator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'D'
+
+DiskSpaceHealthIndicator - Verifies that available disk space is above a certain threshold. 
+
+ElasticsearchHealthIndicator - Verifies the availability of an Elasticsearch cluster. 
+
+ConnectionHealthIndicator and ApplicationHealthIndicator do not exist. 
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-health-indicators

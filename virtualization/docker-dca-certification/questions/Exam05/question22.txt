@@ -1,0 +1,54 @@
+Which of the following is NOT how to create an efficient image via a Dockerfile?
+
+​A)
+Use multi-stage builds
+​
+B)
+Start with an appropriate base image
+​
+C)
+Avoid installing unnecessary packages
+​
+D)
+Combine multiple applications into a single container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+Docker is perfect to create micro services, each app with its container.
+

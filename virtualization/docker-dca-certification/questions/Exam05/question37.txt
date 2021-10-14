@@ -1,0 +1,62 @@
+When using the Dockers client to push an image to a registry, 
+what environment variable is used to instruct the client to perform signing of the image?
+
+​A)​
+DOCKER_CONTENT_TRUST=1
+​
+B)
+DOCKER_IMAGE_SIGN=1
+​
+C)
+DOCKER_PUSH_SIGN=1
+​
+D)
+NOTARY_ENABLE=1 Correct
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'A'
+
+For the Docker client to know to use this server, you will need to set an environment variable pointing to it:
+
+$ export DOCKER_CONTENT_TRUST=1
+

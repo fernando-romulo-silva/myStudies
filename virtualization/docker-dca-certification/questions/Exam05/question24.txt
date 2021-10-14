@@ -1,0 +1,55 @@
+What is the image storage solution that is part of Docker Enterprise Edition called?
+
+​A)​
+Universal Control Plane
+​
+B)
+Docker Hub
+​
+C)
+Docker Registry
+​
+D)
+Docker Trusted Registry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+Trusted Registry is part of the Docker Datacenter Subscription which also includes, 
+Universal Control Plane, commercially supported Engine and support.
+

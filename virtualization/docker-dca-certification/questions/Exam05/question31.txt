@@ -1,0 +1,58 @@
+Which of the following is how to configure the Docker daemon to start on boot? (Select two)
+
+​A)​
+Use upstart for Ubuntu 14.10 and below
+​
+B)
+Use crond for Ubuntu 14.10 and below
+​
+C)
+Use systemd for most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 16.04 and higher)
+
+​D)
+Use startup for most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 16.04 and higher)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct options are 'A' and 'C'
+
+When processes outside Docker depend on Docker containers, you can use a process manager such as upstart and systemd 

@@ -1,0 +1,68 @@
+@EnableGlobalMethodSecurity is annotation used in Spring Security to secure which layer?
+
+A)
+Service layer
+
+B)​
+DAO layer
+​
+C)
+Web layer
+​
+D)
+Controller layer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+From version 2.0 onwards Spring Security has improved support substantially for adding security to your service layer methods. 
+
+It provides support for JSR-250 annotation security as well as the framework’s original @Secured annotation. 
+
+From 3.0 you can also make use of new expression-based annotations.
+
+@Service
+public class TesseractService {
+    
+    @PreAuthorize("hasAuthority('ADMIN') or @accessChecker.hasLocalAccess(authentication)")
+    public String convert(final MultipartFile data) {
+    	...
+    }
+}
+
+https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-applications

@@ -1,0 +1,89 @@
+What is the purpose of the interface MessageSource?
+
+A)​
+Store of common messages
+​
+B)
+Internationalization
+
+C)​
+Storing HTTP requests
+​
+D)
+Mapping error codes to messages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+MessageSource is a strategy interface for resolving messages, with support for the parameterization and internationalization of such messages.
+
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public ResourceBundleMessageSource messageSource() {
+
+        var source = new ResourceBundleMessageSource();
+        source.setBasenames("messages/label");
+        source.setUseCodeAsDefaultMessage(true);
+
+        return source;
+    }
+} 
+
+@ComponentScan(basePackages = "com.zetcode")
+public class Application {
+
+    public void run() {
+
+        logger.info("Translated messages:");
+        
+        logger.info("{}", messageSource.getMessage("l1", null, Locale.GERMAN));
+        
+        logger.info("{}", messageSource.getMessage("l1", null, Locale.ENGLISH));
+
+        logger.info("Translated parameterized messages:");
+        
+        logger.info("{}", messageSource.getMessage("l2", new Object[] {"Paul Smith"}, Locale.GERMAN));
+                
+        logger.info("{}", messageSource.getMessage("l2", new Object[] {"Paul Smith"}, Locale.ENGLISH));
+    }
+}
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/MessageSource.html

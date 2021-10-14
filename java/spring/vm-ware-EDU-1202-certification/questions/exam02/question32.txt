@@ -1,0 +1,96 @@
+Which of the following affect which packages get component scanned?
+
+A)​
+basePackageClasses attribute of the @ComponentScan annotation
+
+B)​
+scanBasePackageClasses attribute of @SpringBootApplication class
+
+C)​
+Configuration property spring.scan.location
+​
+D)
+location of @ComponentScan annotated class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B' and 'D'
+
+'basePackages' specifies the packages to be scanned as a String. 
+'BasePackageClasses' is the type-safe alternative to this (scans the package that each class is in). 
+
+@ComponentScan(basePackages = "com.baeldung.componentscan.springapp.animals")
+@Configuration
+public class SpringComponentScanApp {
+   // ...
+}
+
+@ComponentScan(basePackageClasses = {ImageConfig.class})
+@Configuration
+public class SpringComponentScanApp {
+   // ...
+}
+
+
+
+We use the @SpringBootApplication annotation, but it's a combination of three annotations:
+
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
+
+SpringBootApplication provides alias fields for both of these methods.
+ 
+
+@SpringBootApplication(basePackages = "com.baeldung.componentscan.springapp.animals")
+public class ImageServiceApplication {
+
+    public static void main(final String[] args) {
+		run(ImageServiceApplication.class, args);
+    }
+}
+
+@SpringBootApplication(basePackageClasses = {ImageConfig.class})
+public class ImageServiceApplication {
+
+    public static void main(final String[] args) {
+		run(ImageServiceApplication.class, args);
+    }
+}
+
+https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/support/PropertySourcesPlaceholderConfigurer.html
+ 

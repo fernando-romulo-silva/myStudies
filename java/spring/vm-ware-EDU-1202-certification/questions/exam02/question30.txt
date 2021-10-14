@@ -1,4 +1,5 @@
-In Spring MVC, a controller method (inside a class annotated with @Controller) annotated with @RequestMapping may have the return type _______.
+In Spring MVC, a controller method (inside a class annotated with @Controller) 
+annotated with @RequestMapping may have the return type _______.
 
 A)
 double

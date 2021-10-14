@@ -48,3 +48,21 @@ s.codePointAt(0)        // => 72: ES6, works for codepoints > 16 bits
 // Miscellaneous string methods
 s.concat("!")           // => "Hello, world!": just use + operator instead
 "<>".repeat(5)          // => "<><><><><>": concatenate n copies. ES6
+
+
+// Template Literals
+let name = "Bill";
+let greeting = `Hello ${ name }.`;  // greeting == "Hello Bill."
+
+// Pattern Matching
+let text = "testing: 1, 2, 3";   // Sample text
+let pattern = /\d+/g;            // Matches all instances of one or more digits
+pattern.test(text)               // => true: a match exists
+
+text.search(pattern)             // => 9: position of first match
+text.match(pattern)              // => ["1", "2", "3"]: array of all matches
+text.replace(pattern, "#")       // => "testing: #, #, #"
+
+text.split(/\D+/)                // => ["","1","2","3"]: split on nondigits
+
+

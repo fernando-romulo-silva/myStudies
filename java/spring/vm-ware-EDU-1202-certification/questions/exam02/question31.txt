@@ -1,0 +1,58 @@
+Which class is responsible for injecting values into beans when using the @Value annotation?
+
+A)
+PropertySourcesPlaceholderConfigurer
+
+B)​
+ValuePopulator
+​
+C)
+BeanFactoryPostProcessor
+​
+D)
+BeanValuePostProcessor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+PropertySourcesPlaceholderConfigurer is a specialization of PlaceholderConfigurerSupport that resolves ${...} 
+placeholders within bean definition property values and @Value annotations against the current Spring Environment 
+and its set of PropertySources. 
+
+https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/support/PropertySourcesPlaceholderConfigurer.html
+ 

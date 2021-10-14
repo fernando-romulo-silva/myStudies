@@ -1,0 +1,68 @@
+Which network allows Docker Trusted Registry components running 
+on different nodes to communicate and replicate Docker Trusted Registry data?
+
+​A)​
+dtr-ol
+​
+B)
+dtr-hosts
+​
+C)
+dtr-br
+​
+D)
+dtr-vlan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'A'
+
+To allow containers to communicate, when installing DTR the following networks are created:
+
+Name    Type    Description 
+
+dtr-br	bridge	Allows containers on the same node to communicate with each other in a secure way.
+
+dtr-ol	overlay	Allows containers running on different nodes to communicate. 
+                This network is used in high-availability installations, to allow Etcd 
+                and RethinkDB containers to replicate their data.
+

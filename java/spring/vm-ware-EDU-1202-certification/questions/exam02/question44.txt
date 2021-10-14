@@ -1,0 +1,62 @@
+In Spring Boot, what is the default type of ApplicationContext created if Spring MVC is not present?
+
+A)​
+ClassPathXmlApplicationContext
+​
+B)
+FileSystemXmlApplicationContext
+​
+C)
+AnnotationConfigServletWebServerApplicationContext
+​
+D)
+AnnotationConfigApplicationContext 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+A SpringApplication attempts to create the right type of ApplicationContext on your behalf. 
+
+The algorithm used to determine a WebApplicationType is the following: 
+
+If Spring MVC is present, an AnnotationConfigServletWebServerApplicationContext is used; 
+
+If Spring MVC is not present and Spring WebFlux is present, an AnnotationConfigReactiveWebServerApplicationContext is used; 
+
+Otherwise, AnnotationConfigApplicationContext is used
+
+https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/reference/htmlsingle/#boot-features-web-environment

@@ -1,0 +1,66 @@
+What is the docker command to update an existing service?
+
+​A)​
+docker service change
+​
+B)
+docker service modify
+​
+C)
+docker service update
+​
+D)
+docker service config
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'B'
+
+Updates a service as described by the specified parameters. 
+
+The parameters are the same as docker service create
+
+$ docker service update --network-add
+
+
+ 

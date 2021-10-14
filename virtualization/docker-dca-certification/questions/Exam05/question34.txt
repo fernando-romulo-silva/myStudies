@@ -1,0 +1,64 @@
+What is the docker command to add a network to a service?
+
+​A)​
+docker service add-network
+​
+B)
+docker service update --network-add
+​
+C)
+docker service set --add-network
+​
+D)
+docker service modify --add-network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'B'
+
+Update the service to use this network:
+
+$ docker service update --network-add
+
+
+ 
