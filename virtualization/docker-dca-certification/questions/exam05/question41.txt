@@ -1,0 +1,54 @@
+Docker security scan result is available in both UCP and DTR. True or false?
+
+​A)​
+TRUE
+​
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'B'
+
+The docker scan command allows you to scan existing Docker images using the image name or ID, 
+but this feature requires a Docker subscription
+

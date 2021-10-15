@@ -1,0 +1,59 @@
+Which Docker feature allows operations with a remote Docker 
+registry to enforce client-side signing and verification of image tags?
+
+​A)​
+Docker Content Trust
+​
+B)
+It is not possible to enforce client-side signing and verification of image tags.
+​
+C)
+Docker Signing Authority
+​
+D)
+Docker Certificate Checker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'A'
+
+Docker Content Trust (DCT) allows publishers of images to use digital signatures, effectively allowing users pulling their images to verify
+
+

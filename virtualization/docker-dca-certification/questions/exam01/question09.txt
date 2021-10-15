@@ -42,6 +42,12 @@ d) This is not possible on Docker Enterprise.
 
 
 
+
+
+
+
+
+
 Answer 'c'
 
 Docker Content Trust (DCT) allows publishers of images to use digital signatures, effectively allowing users pulling their images to verify:

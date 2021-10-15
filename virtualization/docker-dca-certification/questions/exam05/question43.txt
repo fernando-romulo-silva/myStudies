@@ -1,0 +1,66 @@
+Which technology allows Docker Engine to share available hardware resources 
+to containers and optionally enforce limits and constraints?
+
+​A)​
+Control Groups
+​
+B)
+HyperVisor
+​
+C)
+Hardware Abstraction
+​
+D)
+Virtualization Layers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'A'
+
+Cgroups provide resource limitation and reporting capability within the container space. 
+They allow granular control over what host resources are allocated to the containers and when they are allocated.
+Common control groups:
+
+* CPU
+* Memory
+* Network Bandwidth
+* Disk
+* Priority

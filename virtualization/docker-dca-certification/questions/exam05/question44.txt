@@ -1,0 +1,60 @@
+Which format is the output returned, when the --pretty flag is 
+not specified for the docker service inspect command?
+
+​A)​
+yaml
+​
+B)
+json
+​
+C)
+txt
+​
+D)
+xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'A'
+
+Docker inspect provides detailed information on constructs controlled by Docker.
+
+By default, docker inspect will render results in a JSON array.
