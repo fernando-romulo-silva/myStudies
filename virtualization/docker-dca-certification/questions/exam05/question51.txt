@@ -1,0 +1,66 @@
+Which ports have to be opened to allow traffic to, and from, 
+docker hosts that will be part of an overlay network? (select three)
+
+​A)​
+TCP and UDP port 8999 for data transfer
+​
+B)
+TCP port 2377 for cluster management communications
+
+C)
+UDP port 4789 for overlay network traffic
+​
+D)
+TCP and UDP port 7946 for communication among nodes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct options are 'B', 'C', and 'D'
+
+TCP port 2377 for cluster management communications TCP 
+UDP port 7946 for communication among nodes 
+UDP port 4789 for overlay network traffic 
+
+If you plan on creating an overlay network with encryption (--opt encrypted), 
+you also need to ensure ip protocol 50 (ESP) traffic is allowed
+

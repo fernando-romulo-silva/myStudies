@@ -1,0 +1,69 @@
+When running network in 'host' mode you can override the dns related settings of 
+the host by using which options of 'docker run'? (select two)
+
+​A)​
+--dns-domain
+​
+B)
+--dns
+​
+C)
+--dns-search
+​
+D)
+--dns_server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct options are 'B' and 'C'
+
+By default, a container inherits the DNS settings of the host, as defined in the /etc/resolv.conf configuration file. 
+
+--dns -> The IP address of a DNS server. To specify multiple DNS servers, use multiple --dns flags.
+
+$ docker run --dns=4.4.4.4 --net=host -t -i centos:centos6
+
+
+--dns-search -> A DNS search domain to search non-fully-qualified hostnames. To specify multiple DNS search prefixes, use multiple --dns-search flags.
+
+$ docker run --dns-search=example.com -t -i  centos:centos6
