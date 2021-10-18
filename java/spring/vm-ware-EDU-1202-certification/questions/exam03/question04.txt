@@ -1,0 +1,61 @@
+@RestController, @RequestBody and @ResponseBody are included in the _______ jar dependency.
+  ​
+A)
+spring-web
+​
+B)
+spring-mvc
+​
+C)
+spring-web-mvc
+​
+D)
+spring-core
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A'
+
+@RestController, @RequestBody, @ResponseBody are present in the spring-web module 
+that has the Maven group id org.springframework and artifact id spring-web. 
+
+https://github.com/spring-projects/spring-framework/tree/master/spring-web/src/main/java/org/spr
+

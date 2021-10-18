@@ -1,0 +1,87 @@
+Which of the following can be used to execute SQL scripts before running test methods?
+  ​
+A)
+runScript method of the SqlRunner class
+​
+B)
+@Sql annotation
+​
+C)
+@SqlScript annotation
+​
+D)
+addScripts method of the ResourceDatabasePopulator class
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B', 'D'
+
+In addition to the aforementioned mechanisms for running SQL scripts programmatically, 
+you can declaratively configure SQL scripts in the Spring TestContext Framework. 
+
+Specifically, you can declare the @Sql annotation on a test class or test method to configure individual 
+SQL statements or the resource paths to SQL scripts that should be run against a given database before or after an integration test method. 
+Support for @Sql is provided by the SqlScriptsTestExecutionListener, which is enabled by default. 
+ResourceDatabasePopulator provides an object-based API for programmatically populating, initializing, 
+or cleaning up a database by using SQL scripts defined in external resources. 
+
+@Sql(scripts = "classpath:db/db-data-test.sql", config = @SqlConfig(errorMode = CONTINUE_ON_ERROR))
+
+@Sql(statements = "DELETE FROM image_type WHERE IMT_EXTENSION = 'BMP' ")
+
+ResourceDatabasePopulator provides options for configuring the character encoding, statement separator, 
+comment delimiters, and error handling flags used when parsing and running the scripts.
+
+@Bean
+public DataSourceInitializer dataSourceInitializer() {
+    ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
+    resourceDatabasePopulator.addScript(new ClassPathResource("/data.sql"));
+
+    DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
+    dataSourceInitializer.setDataSource(dataSource());
+    dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);
+    
+    return dataSourceInitializer;
+} 
+
+Each of the configuration options has a reasonable default value. 
+ 
+

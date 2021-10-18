@@ -1,0 +1,62 @@
+Which of the following pointcut expressions allow picking method access specifiers?
+  ​
+A)
+bean
+​
+B)
+within
+​
+C)
+target
+
+D)​
+execution
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Execution allows optionally picking the access specifier. 
+
+E.g.: execution(public * *(..)) 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#aop-pointcuts-designators
+
