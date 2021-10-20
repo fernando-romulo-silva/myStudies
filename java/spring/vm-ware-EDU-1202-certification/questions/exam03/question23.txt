@@ -1,0 +1,91 @@
+Which of the following are valid usages of Spring profiles?
+  ​
+A)
+@Profile({"!production"}) @Configuration public class MyConfig {
+
+B)
+@Configuration public class MyConfig { @Profile({"dev"}) @Bean public MyService myService(){
+
+C)​
+@Profile({exclude="production"}) @Configuration public class MyConfig {
+
+D)​
+@Configuration public class MyConfig { @Profile({"dev","staging"}) @Bean public MyService myService(){
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B', 'D'
+
+Configuration classes and bean methods can be annotated with the @Profile annotation. 
+
+The Profile annotation does not have an "exclude attribute". 
+
+For negative profiles, profile names need to be prefixed with an exclamation mark (!), like in the 3rd answer.
+
+
+@Profile({"!production"}) 
+@Configuration 
+public class MyConfig {
+
+}
+ 
+​
+@Configuration 
+public class MyConfig { 
+	
+	@Profile({"dev"}) 
+	@Bean 
+	public MyService myService(){
+		...
+	}
+}
+
+@Configuration 
+public class MyConfig { 
+	
+	@Profile({"dev","staging"}) 
+	@Bean 
+	public MyService myService(){
+		...
+	}	
+}
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition-profiles-java

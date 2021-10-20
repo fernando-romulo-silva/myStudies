@@ -1,0 +1,65 @@
+Which of the following types of AOP advice can be used to execute code before the advised method?
+  ​
+A)
+@Around
+​
+B)
+@Before
+​
+C)
+@AfterThrowing
+​
+D)
+@AfterReturning
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'B'
+
+All types of After advice execute exclusively after the advised method has executed. 
+
+Around advice runs both before and after. 
+
+Before advice runs only before the method execution. 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#aop-api-advice-types
+
+ 

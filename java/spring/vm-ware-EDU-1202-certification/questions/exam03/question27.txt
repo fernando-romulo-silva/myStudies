@@ -1,0 +1,62 @@
+A HTTP status code of ________ means forbidden.
+  ​
+A)
+203
+​
+B)
+403
+
+C)​
+503
+​
+D)
+303
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+403 is the status code for forbidden. 
+Note that the first number of a HTTP status code signifies what HTTP series 
+the code is a part of. 4xx signifies a client error (i.e. the client is trying to do something he can't or isn't allowed to). 
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpStatus.html#FORBIDDEN
+

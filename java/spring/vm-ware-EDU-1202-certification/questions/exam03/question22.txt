@@ -1,0 +1,103 @@
+How can the Health Indicator status severity order be changed?
+  ​
+A)
+Using the @Primary annotation
+​
+B)
+Using the property management.health.status.order
+
+C)​
+Using the @Ordered annotation
+​
+D)
+It cannot be changed.
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+The @Ordered and @Primary annotations are used to change the order in which Spring beans are instantiated.
+
+
+
+public interface Fruit {
+  
+}
+
+@Component
+@Order(3)
+public class Apple implements Fruit {
+
+	  @Override
+	  public String toString() {
+	    	return "Apple";
+	  }
+}
+
+@Component
+@Order(4)
+public class Banana implements Fruit {
+
+	  @Override
+	  public String toString() {
+	    	return "Banana";
+	  }
+}
+ 
+ 
+ @Configuration
+public class Config {
+
+    @Bean
+    public Employee JohnEmployee() {
+        return new Employee("John");
+    }
+
+    @Bean
+    @Primary
+    public Employee TonyEmployee() {
+        return new Employee("Tony");
+    }
+}
+ 
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#actuator-properties 
+

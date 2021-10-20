@@ -1,0 +1,60 @@
+
+From the below-mentioned option, what is the use of the docker info command?
+
+a) It is used for providing information about the system-wide information.
+​
+b) It is used for downloading an image.
+​
+c) It is used for the information of the container
+​
+d) It is used for the listing of downloaded images.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'
+
+For downloading an image the command used is docker pull;
+For providing the information about container the command used is docker stats; 
+For listing the downloaded images the command used is docker images;
+ 
+docker info display system-wide information
+ 
+

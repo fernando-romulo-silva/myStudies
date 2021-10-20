@@ -1,0 +1,59 @@
+Which of the following are valid ways of defining Spring bean metadata?
+  ​
+A)
+YAML Files
+​
+B)
+Java code
+​
+C)
+Java annotations
+​
+D)
+XML files
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B', 'C' and 'D'
+
+YAML Files do not directly define bean metadata. 
+
+https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-basics

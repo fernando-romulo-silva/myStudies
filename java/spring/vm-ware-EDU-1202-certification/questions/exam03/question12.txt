@@ -1,0 +1,62 @@
+Which of the following is the default JSON mapping library used by Spring Boot?
+  ​
+A)
+Jackson
+
+B)​
+JSON-B
+​
+C)
+Gson
+​
+D)
+SnakeJSON
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A'
+
+Spring Boot provides integration with three JSON mapping libraries: Gson, Jackson and JSON-B. 
+
+Jackson is the preferred and default library. 
+
+https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/reference/htmlsingle/#boot-features-json
+

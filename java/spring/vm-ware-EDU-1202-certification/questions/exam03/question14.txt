@@ -1,0 +1,104 @@
+Which of the following methods can be used to shutdown a Spring Boot application?
+  ​
+A)
+AbstractApplicationContext.close()
+
+B)​
+SpringBootApplication.shutdown()
+​
+C)
+SpringApplication.exit()
+
+D)​
+AbstractApplicationContext.registerShutdownHook()
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B' and 'D'
+
+SpringBootApplication is an annotation, so it does not have methods. 
+
+
+@SpringBootApplication
+public class Example {
+    
+    public static void main(String[] args) {
+        ConfigurableApplicationContext ctx = SpringApplication.run(Example.class, args);
+    
+        // ...determine it's time to shut down...
+        ctx.close();
+    }
+}
+
+
+@SpringBootApplication
+public class Example {
+
+    public static void main(String[] args) {
+        ConfigurableApplicationContext ctx = SpringApplication.run(Example.class, args);
+        
+        // ...determine it's time to stop...
+        int exitCode = SpringApplication.exit(ctx, new ExitCodeGenerator() {
+            @Override
+            public int getExitCode() {
+                // no errors
+                return 0;
+            }
+        });
+
+        // or shortened to
+        // int exitCode = SpringApplication.exit(ctx, () -> 0);
+
+        System.exit(exitCode);
+    }
+}
+
+public class MainApp {
+   public static void main(String[] args) {
+
+      ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");//error here
+
+      context.registerShutdownHook();
+   }
+}
+
+
+http://www.dailycodebuffer.com/shutdown-a-spring-boot-application/#:~:text=Close%20ApplicationContext,method%20to%20close%20ApplicationContext%20programmatically.

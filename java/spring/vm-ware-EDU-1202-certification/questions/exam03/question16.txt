@@ -1,0 +1,61 @@
+Which of the following transaction APIs are supported by Spring?
+  ​
+A)
+JDO
+
+B)​
+JTA
+
+C)​
+JPA
+
+D)​
+Hibernate
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B' 'C' and 'D'
+
+Spring offers a consistent programming model across different transaction APIs, 
+such as Java Transaction API (JTA), JDBC, Hibernate, JDO and the Java Persistence API (JPA). 
+
+https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#transaction
+ 

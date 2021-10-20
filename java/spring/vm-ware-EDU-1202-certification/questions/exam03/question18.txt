@@ -1,0 +1,78 @@
+Which of the following annotations will instruct the IoC Container to 
+instantiate the beans declared in the Demo1 and Demo2 configuration classes?
+  ​
+A)
+@Import({Demo1.class, Demo2.class})
+
+B)​
+@Imports(Demo1.class, Demo2.class)
+​
+C)
+@Include({Demo1.class, Demo2.class})
+​
+D)
+@DependsOn(Demo1.class, Demo2.class)
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+@Import indicates one or more component classes to import — typically @Configuration classes. 
+
+Multiple values are added to an annotation attribute using {}, as arrays. 
+
+
+@Configuration
+@Import({ DogConfig.class, CatConfig.class })
+class MammalConfiguration {
+
+}
+
+@Configuration
+@Import({ MammalConfiguration.class, BirdConfig.class })
+class AnimalConfiguration {
+
+}
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframewor
+
+
+ 

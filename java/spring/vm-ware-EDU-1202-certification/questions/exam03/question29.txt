@@ -1,0 +1,71 @@
+Which of the following methods will be called last in the bean lifecycle?
+  ​
+A)
+Any method named "destroy"
+​
+B)
+Any methods annotated with @PreDestroy
+
+C)​
+destroy-method as specified in the Spring XML Configuration
+
+D)
+destroy method in the DisposableBean interface
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+When the Spring application context is to shut down, 
+the beans in it will receive destruction callbacks in this order: 
+
+▪ Any methods in the bean implementation class annotated with @PreDestroy are invoked. 
+
+▪ Any destroy method in a bean implementation class implementing the DisposableBean interface is invoked. 
+If the same destruction method has already been invoked, it will not be invoked again. 
+
+▪ Any custom bean destruction method is invoked. 
+Bean destruction methods can be specified either in the value of the destroy-method attribute 
+in the corresponding <bean> element in a Spring XML configuration or in the destroyMethod property of the @Bean annotation. 
+If the same destruction method has already been invoked, it will not be invoked again.
+
+@PreDestroy -> DisposableBean -> destroy-method
+

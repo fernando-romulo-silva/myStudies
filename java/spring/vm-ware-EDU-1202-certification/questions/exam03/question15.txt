@@ -1,0 +1,70 @@
+Using the default configurations, which methods will be affected when adding the @Transactional annotation to the class?
+  ​
+A)
+private methods
+​
+B)
+public methods
+​
+C)
+@Transactional may be used only on methods
+​
+D)
+protected methods
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B' and 'D'
+
+Since declarative transactional management is made possible using Spring AOP, 
+which by default uses JDK Dynamic Proxies, which can only intercept public methods called from outside the class. 
+
+    @Transactional(readOnly = true)
+    public List<ImageTypeResponse> findAll() {
+
+	return repository.findAll() //
+			.stream() //
+			.map(imageType -> new ImageTypeResponse(imageType.getId(), imageType.getExtension(), imageType.getName())) //
+			.toList();
+    }
+
+
+https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative

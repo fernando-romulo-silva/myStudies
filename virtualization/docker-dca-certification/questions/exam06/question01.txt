@@ -1,0 +1,59 @@
+
+From the below-mentioned option which of the following statement is true about the docker image?
+
+a) Docker image is used for creating a docker container.
+​
+b) The command used for creating a docker image is to build command.
+​
+c) By using the build command a container is created which helps in starting when it begins
+​
+d) All of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'd'
+
+All the statements mentioned above, Docker image is used for creating a docker container.
+
+The command used for creating a docker image is built command, 
+By using the build command a container is created which helps in starting when it begins, 
+The docker images are stored in the registry of docker are true about docker image.
+
+Hence the correct option is D.
