@@ -1,0 +1,129 @@
+Which of the following is a callback interface for the class JdbcTemplate?
+  ​
+A)
+ResultSetMapper
+​
+B)
+PreparedStatementExtractor
+​
+C)
+ResultSetCallback
+​
+D)
+ResultSetExtractor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+ResultSetExtractor is the only class which exists out of these options. 
+It is a callback interface used by JdbcTemplate's query methods. 
+Implementations of this interface perform the actual work of extracting results from a ResultSet. 
+
+https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/core/ResultSetExtractor.html
+
+==========================================================================================
+
+class CityMapper implements RowMapper<City> {
+
+    @Override
+    public City mapRow(ResultSet rs, int rowNum) throws SQLException {
+        return new City(rs.getLong("id"), rs.getString("name"), rs.getInt("population"));
+    }
+}
+
+String sql = "SELECT * FROM cities";
+
+List<City> result = JdbcTemplate.query(sql, new CityMapper());
+
+
+============================================================================================
+
+class CustomRowCallbackHandler implements RowCallbackHandler {
+  
+    private StringBuilder sb = new StringBuilder();
+    
+    @Override
+    public void processRow(ResultSet rs) throws SQLException {
+        if (sb.length() != 0) {
+          sb.append(", ");
+        }
+        
+        sb.append(rs.getString("NAME"));
+    }
+    
+    public String getUserNames() {
+        return sb.toString();
+    }
+}
+
+template.query("select * from USER", new CustomRowCallbackHandler());
+
+============================================================================================
+
+class EmployeeMapExtractor implements ResultSetExtractor<Map<String, List<String>>> {
+
+@Override
+public Map<String, List<String>> extractData(ResultSet rs) throws SQLException {
+	Map<String, List<String>> employeesMap = new HashMap<>();
+
+	while (rs.next()) {
+		
+		String country = rs.getString("country");
+		String employeeName = rs.getString("employee");
+	
+		List<String> employees = employeesMap.get(country);
+	
+	   if (employees == null) {
+			List<String> newEmployees = new ArrayList<>();
+	
+	        newEmployees.add(employeeName);
+			employeesMap.put(country, newEmployees);
+			
+	   } else {
+ 			employees.add(employeeName);
+       }
+       
+    }
+    
+    return employeesMap; 
+}
+
+Map<String, List<String>> employeesMap = jdbcTemplate.query("SELECT country, employee FROM employees", new EmployeeMapExtractor());

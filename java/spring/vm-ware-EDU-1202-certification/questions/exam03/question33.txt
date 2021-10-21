@@ -1,0 +1,96 @@
+A JPA Repository finder method, which can generate a valid query, might end with the comparison operator _____.
+  ​
+A)
+Is
+
+B)​
+LessThan
+
+C)​
+Null
+
+D)​
+GreaterThan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B', 'C' and 'D'
+
+All of these are valid comparators for finder methods.
+
+You can also specify different comparison operations by using one of the following keywords together with the name of your entity attribute:
+
+Like – to check if the value of an entity is like a provided String.
+Containing – to check if the value of an entity attribute contains the provided String.
+IgnoreCase – to ignore the case when comparing the value of an entity attribute with a provided String.
+Between – to check if the value of an entity attribute is between 2 provided values.
+LessThan / GreaterThan – to check if the value of an entity attribute is less or greater then a provided one.
+
+
+public interface AuthorRepository extends JpaRepository<Author, Long> {
+ 
+	// Multiple Parameters
+    List<Author> findByFirstNameAndLastName(String firstName, String lastName);
+    
+    // Containinng
+    List<Author> findByFirstNameContainingIgnoreCase(String firstName); //  where x.firstname like ?1
+  
+  	// Less than
+  	List<Author> findByAgeLessThan(Long age);	// where x.age < ?1
+  
+  	// Greater than / Greater Than Equal
+  	List<Author> findByAgeGreaterThan(Long age); // where x.age > ?1 	
+  
+  	// Is / Equals
+  	List<Author> findByFirstnameIs(String firstname); // where x.firstname = ?1
+  
+  	// first 5 elements
+  	List<Book> findFirst5ByTitleOrderByTitleAsc(String title);
+  	
+  	// 
+  	List<Author> findByAgeIsNull(Long age); // where x.age is null
+  	
+  	List<Author> findByAge(Is)NotNull(Long age); // where x.age not null
+     
+} 
+
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
+
+

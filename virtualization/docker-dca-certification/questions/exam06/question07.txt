@@ -1,0 +1,55 @@
+What is the docker command to display detailed information on one or more networks?
+
+a) docker inspect network
+​
+b) docker network display
+​
+c) docker network inspect
+​
+d) docker network status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'
+
+docker network inspect returns information about one or more networks. 
+
+By default, this command renders all results in a JSON object.

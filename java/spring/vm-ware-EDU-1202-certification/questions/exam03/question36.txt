@@ -1,0 +1,74 @@
+What does the prototype bean scope do?
+  ​
+A)
+It picks the right class out of a class hierarchy
+​
+B)
+It creates a single instance to be used for all requests.
+​
+C)
+It autowires the appropriate Bean class based on the given prototype argument
+​
+C)
+It creates a new bean instance every time a request for that specific bean is made
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Prototype bean creates a new bean instance for every usage 
+
+https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-prototype
+
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public PrototypeBean prototypeBean() {
+        return new PrototypeBean();
+    }
+
+    @Bean
+    public SingletonBean singletonBean() {
+        return new SingletonBean();
+    }
+}

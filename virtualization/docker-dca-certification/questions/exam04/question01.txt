@@ -2,7 +2,6 @@ From the below-mentioned option, what are the essential feature of Docker ?
 
 ​A)
 Docker is having efficient operation activity.
-(Incorrect)
 ​
 B)
 Docker is having easy modeling

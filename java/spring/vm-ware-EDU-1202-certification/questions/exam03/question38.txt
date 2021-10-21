@@ -1,0 +1,75 @@
+Which of the following may be used as Controller method arguments?
+  ​
+A)
+Principal
+​
+B)
+ModelAndView
+​
+C)
+ServletRequest
+​
+D)
+@PathVariable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers  'A', 'C' and 'D'
+
+ModelAndView can only be used as a Controller method return value.
+
+@RequestMapping(value = "/report/{objectId}", method = RequestMethod.GET)
+@ResponseBody
+public void generateReport( 
+        
+        @PathVariable("objectId") Long objectId, //
+         
+        Principal principal, // 
+         
+        HttpServletRequest request, //
+        // 
+        HttpServletResponse response) {
+
+    // ...
+ 
+} 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#mvc-ann-arguments
+

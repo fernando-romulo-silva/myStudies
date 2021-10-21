@@ -1,0 +1,57 @@
+Which of the following best describes the procedure for backing up the Universal Control Plane (UCP) metadata?
+
+a) Create an archive for all of the data under the /etc/docker/ucp directory.
+​
+b) Create an archive for all of the data under the /var/data/ucp directory.
+​
+c) Run a container from the ucp image with the backup command.
+​
+d) Run a container from the ucp image with the uninstall-ucp command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'
+
+To create a UCP backup, run the docker/ucp:3.0. 10 backup command on a single UCP manager. 
+
+
+This command creates a tar archive with the contents of all the volumes used by UCP to persist data and streams it to stdout.
+

@@ -5,7 +5,6 @@ docker dump-logs
 ​
 B)
 docker logs
-(Correct)
 ​
 C)
 docker get-logs

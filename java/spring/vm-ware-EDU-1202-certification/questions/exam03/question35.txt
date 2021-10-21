@@ -1,0 +1,62 @@
+Which of the following template engines does Spring MVC support?
+  ​
+A)
+ResultSetMapper
+​
+B)
+PreparedStatementExtractor
+​
+C)
+ResultSetCallback
+​
+D)
+ResultSetExtractor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B' and 'D'
+
+As well as REST web services, you can also use Spring MVC to serve dynamic HTML content. 
+
+Spring MVC supports a variety of templating technologies, including Thymeleaf, FreeMarker, and JSPs. 
+
+Also, many other templating engines include their own Spring MVC integrations. 
+
+https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/reference/htmlsingle/#boot-features-spring-mvc-template-engines

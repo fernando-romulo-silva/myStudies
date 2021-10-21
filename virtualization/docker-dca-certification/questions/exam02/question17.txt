@@ -6,7 +6,6 @@ None
 ​
 B)
 All
-(Correct)
 ​
 C)
 Some

@@ -3,7 +3,6 @@ or when Docker restarts, and that they are started in the correct order
 
 A)
 startup rules
-(Incorrect)
 ​
 B)
 restart policies
