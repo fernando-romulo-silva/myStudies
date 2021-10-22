@@ -51,7 +51,7 @@ match
 
 
 
-Answers 'A' and 'B'
+Answers 'A' and 'C'
 
 MvcRequestMatcher can be configured using the mvcMatchers or antMatchers method. 
 

@@ -1,0 +1,68 @@
+Which of the following types of AOP advice will execute code after the advised method 
+regardless if it completes normally or throws an exception?
+  ​
+A)
+@AfterThrowing
+​
+B)
+@Around
+​
+C)
+@After
+
+D)​
+@AfterReturning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+After (finally) advice will execute regardless if an exception was thrown or not.
+
+An After advice runs after the target method is finished, including when the target method results in exception. 
+This advice is similar to the finally block in Java that it always executes irrespective of the outcome. 
+
+	@After("execution(* com.amitph.spring.aop.service.FileSystemStorageService.readFile(..)) ")
+    public void logAfterMethodCall() {
+        log.info("After Executing target");
+    }
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#aop-introduction-defn
+

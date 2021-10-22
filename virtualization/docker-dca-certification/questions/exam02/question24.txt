@@ -48,7 +48,7 @@ Start the 'dockerd' process manually with the '--logging' flag set to debug
 
 
 
-The correct answer is A
+The correct answer is C
 
 There are two ways to configure the Docker daemon:
 

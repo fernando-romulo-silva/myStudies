@@ -57,7 +57,8 @@ Chains of property references can be accessed using the period character.
 
 Object bean = parser.parseExpression("@foo").getValue(context);
 
- https://docs.spring.io/spring-framework/docs/5.0.3.RELEASE/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html
+
+https://docs.spring.io/spring-framework/docs/5.0.3.RELEASE/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html
 
 
 

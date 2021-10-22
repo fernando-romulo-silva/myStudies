@@ -1,0 +1,59 @@
+What is the correct order a system administrator should follow for creating a backup policy for the Docker Enterprise Edition?
+
+a) Swarm, ucp, dtr
+​
+b) Ucp, dtr, swarm
+​
+c) Swarm, dtr, ucp
+​
+d) Dtr, ucp, swram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'
+
+To backup Docker Enterprise Edition you need to create individual backups for each of the following components:
+
+* Docker Swarm. Backup Swarm resources like service and network definitions.
+* Universal Control Plane (UCP). Backup UCP configurations.
+* Docker Trusted Registry (DTR). Backup DTR configurations and images.
+
+

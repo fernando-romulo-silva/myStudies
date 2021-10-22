@@ -1,0 +1,66 @@
+What is invalid in the following code snippet?
+  
+    public interface PersonRepository extends JpaRepository<Person, Long>{
+      
+       @Query("select p from Person p where p.emailAddress = ?l")
+       Person findByEmailAddress(String emailAddress);
+       
+    }  
+  ​
+A)
+The method Parameter emailAddress should be annotated with @Param.
+​
+B)
+The method should be called "findPersonByEmailAddress"
+​
+C)
+None of the above.
+​
+D)
+The annotation should be @SqlQuery instead of @Query
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+The code snipper is valid as is. 
+
+https://docs.spring.io/spring-data/jpa/docs/2.1.1.RELEASE/reference/html/#jpa.query-methods.at-query
+

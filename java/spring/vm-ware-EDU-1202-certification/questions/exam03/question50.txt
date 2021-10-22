@@ -1,0 +1,57 @@
+Which of the following is considered best practice?
+
+A)
+@ComponentScan({"org", "com"})
+​
+B)
+@ComponentScan("com")
+​
+C)
+@ComponentScan({com.example.app})
+
+D)​
+@ComponentScan("com.example.app")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+It is recommended to add the minimal amount of packages to ComponentScan. 
+So that it is quicker and also so that only components in the application, that should. 
+The problem with the second option is that there are no quotes.

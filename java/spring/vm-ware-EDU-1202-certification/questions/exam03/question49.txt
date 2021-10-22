@@ -1,0 +1,103 @@
+In Spring AOP, two dots (..) instead of method arguments, like in the example below, matches __________. 
+
+execution(* transfer(..))
+  ​
+A)
+Any number of arguments
+​
+B)
+Multiple arguments
+​
+C)
+No arguments
+​
+D)
+One or more arguments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+Method arguments (..) signify zero or more arguments. 
+
+	@After("execution(* com.amitph.spring.aop.service.FileSystemStorageService.readFile(..)) ")
+    public void logAfterMethodCall() {
+        log.info("After Executing target");
+    }
+
+Others example
+
+The execution of any public method:
+
+    execution(public * *(..))
+    
+    
+The execution of any method with a name that begins with set:
+
+    execution(* set*(..))
+
+
+The execution of any method defined by the AccountService interface:
+
+    execution(* com.xyz.service.AccountService.*(..))
+
+
+The execution of any method defined in the service package:
+
+    execution(* com.xyz.service.*.*(..))
+
+
+The execution of any method defined in the service package or one of its sub-packages:
+
+    execution(* com.xyz.service..*.*(..))
+
+
+Any join point (method execution only in Spring AOP) within the service package:
+
+    within(com.xyz.service.*)
+    
+    
+Any join point (method execution only in Spring AOP) within the service package or one of its sub-packages:
+
+    within(com.xyz.service..*)
+
+
+Any join point (method execution only in Spring AOP) where the proxy implements the AccountService interface:
+
+    this(com.xyz.service.AccountService)

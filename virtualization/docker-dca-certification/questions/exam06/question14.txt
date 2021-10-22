@@ -1,0 +1,56 @@
+A global service is a service that runs ____task/tasks on every node that meet the placement and resource constraints
+
+a) One
+
+b) More than one
+​
+c) Many
+​
+d) None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'
+
+A global service is a service that runs ONE task on every node. 
+There is no pre-specified number of tasks. 
+Each time you add a node to the swarm, the orchestrator creates a task and the scheduler assigns the task to the new node.
+

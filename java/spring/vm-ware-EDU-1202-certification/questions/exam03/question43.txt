@@ -1,0 +1,71 @@
+What do SpEL expressions starting with $ reference?
+  ​
+A)
+JVM Properties
+​
+B)
+Spring Beans
+​
+C)
+Literal Values
+​
+D)
+Properties in the application environment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Expressions starting with $. 
+
+Such expressions reference a property name in the application’s environment. 
+
+These expressions are evaluated by the PropertySourcesPlaceholderConfigurer Spring bean prior to bean creation and can only be used in @Value annnotations. 
+
+@Value("${tesseract.folder}")
+private String tesseractFolder;
+
+#============== Tesseract ============================================================================
+tesseract:
+    language: ${TESSERACT_LANG}
+    folder : ${TESSERACT_FOLDER}
+    dpi : ${TESSERACT_DPI:100}
+
+https://docs.spring.io/spring-framework/docs/5.0.3.RELEASE/javadoc-api/org/springframework/context/support/PropertySourcesPlaceholderConfigurer.html
