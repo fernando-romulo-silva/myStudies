@@ -50,7 +50,9 @@ d) Subject, role and containers
 
 Answer 'c'
 
-A grant defines who has how much access to what resources. Each grant is a 1:1:1 mapping of subject, role, and resource set. 
+A grant defines who has how much access to what resources. 
+Each grant is a 1:1:1 mapping of subject, role, and resource set.
+ 
 For example, you can grant the “Prod Team” “Restricted Control” over services in the “/Production” collection.
 
 A common workflow for creating grants has four steps:

@@ -51,3 +51,10 @@ Keep a backup copy of the image on another repository
 The correct answer is C
 
 Tag Immutability enables customers to rely on the descriptive tags of an image as a reliable mechanism to track and uniquely identify images.
+
+Docker tags are mutable named references to Docker images, much like branch refs in Git.
+
+$ docker pull debian:buster 
+
+DTR web UI help to make the tag immutable
+

@@ -1,0 +1,61 @@
+If installing Docker using device mapper for storage with the Intent to run production workloads, 
+how should device mapper be configured?
+
+a) direct-lvm
+​
+b) aufs-lvm
+​
+c) loop-lvm
+
+d) overlay-lvm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'
+
+Production hosts using the devicemapper storage driver must use direct-lvm mode. 
+
+This mode uses block devices to create the thin pool. 
+
+This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
+
+However, more setup is required than in loop-lvm mode.
+
