@@ -83,7 +83,7 @@ public class Banana implements Fruit {
 }
  
  
- @Configuration
+@Configuration
 public class Config {
 
     @Bean

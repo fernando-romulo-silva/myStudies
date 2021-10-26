@@ -1,0 +1,57 @@
+On which of these database system isolation levels can non-repeatable reads happen?
+  ​
+A)
+READ_UNCOMMITED
+
+B)​
+READ_COMMITED
+
+C)​
+SERIALIZABLE
+
+D)​
+REPEATABLE_READ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'B'
+
+Both READ_COMMITTED and READ_UNCOMMITTED allow for non-repeatable reads to happen. 
+
+https://www.byteslounge.com/tutorials/spring-transaction-isolation-tutorial
+

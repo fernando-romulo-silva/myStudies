@@ -1,0 +1,63 @@
+Which of the following is the docker command to enable autolock on an existing swarm cluster?
+
+a) docker swarm update --autolock-swarm=true
+​
+b) docker swarm --autolock=true
+​
+c) docker swarm autolock
+​
+d) docker swarm update --autolock=true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'D' is Correct
+
+To enable autolock on an existing swarm, set the autolock flag to true.
+
+$ docker swarm update --autolock=true
+
+To disable autolock, set --autolock to false. 
+
+The mutual TLS key and the encryption key used to read and write Raft logs are stored unencrypted on disk. 
+
+There is a trade-off between the risk of storing the encryption key unencrypted at rest and the convenience 
+of restarting a swarm without needing to unlock each manager.
+

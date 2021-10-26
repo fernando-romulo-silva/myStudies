@@ -1,0 +1,53 @@
+What is the docker command for displaying layers of a Docker image?
+
+a) ​​docker info
+​
+b) docker history
+​
+c) docker layers
+​
+d) docker image layers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+Docker history show the history of an image.

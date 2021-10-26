@@ -1,0 +1,64 @@
+Which of the following statements is true regarding the code below?
+
+    @Profile("prod")
+    @Configuration
+    public class MyConfig{
+         @Bean
+         public DataSource dataSource(){ ... 
+  ​
+A)
+This code will not have any effect. @ContextConfiguration should be used instead of @Configuration.
+​
+B)
+The Spring Actuator monitoring profile "prod" will be used for data access performance measuring.
+​
+C)
+It is invalid. The @Profile annotation can only be applied to methods.
+​
+D)
+A DataSource bean will be created if the profile is "prod".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'B'
+
+The sample code is valid. If "prod" is among the current active profiles, 
+a bean named "dataSource" will be instantiated by executing the code in the method. 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition-profiles-java
+

@@ -1,0 +1,59 @@
+Spring Boot provides a default configuration for the log implementation _______
+
+A)
+Commons Logging
+​
+B)
+Log4J2
+
+C)​
+SLF4J
+
+D)​
+Logback
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B' and 'D'
+
+Spring Boot uses Commons Logging for all internal logging but leaves the underlying log implementation open. 
+
+Default configurations are provided for Java Util Logging, Log4J2, and Logback. 
+
+In each case, loggers are pre-configured to use console output with optional file output also available. 
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-logging

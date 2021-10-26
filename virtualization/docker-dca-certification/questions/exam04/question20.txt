@@ -56,7 +56,6 @@ The column 'size' of docker ps -s output shows the amount of data that is used f
 
 A is Correct
 
-
 When the container is deleted, the writable layer is also deleted. The underlying image remains unchanged.
  
 Because each container has its own writable container layer, and all changes are stored in this container layer, 
