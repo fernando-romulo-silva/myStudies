@@ -1,0 +1,58 @@
+Which of the following docker command can be used to find out all the ports mapped? 
+(Select three)
+
+a) docker ps
+
+b) docker inspect
+
+c) docker network ls
+​
+d) docker port
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'A', 'B' and 'D' are Correct
+
+$ docker port murachs-mysql
+
+$ docker inspect --format='{{.NetworkSettings.Ports}}' murachs-mysql
+
+$ docker ps 

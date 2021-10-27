@@ -1,0 +1,56 @@
+Which one of the following commands will show a list of volumes for a specific container?
+
+a) 'docker volume logs nginx --containers'
+​
+b) 'docker container inspect nginx'
+​
+c) 'docker volume inspect nginx'
+
+d) 'docker container logs nginx --volumes'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'B' is Correct
+
+Docker inspect provides detailed information on constructs controlled by Docker.
+
+$ docker container inspect nginx 
+

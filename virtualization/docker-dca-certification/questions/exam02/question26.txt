@@ -54,6 +54,4 @@ $ docker port murachs-mysql
 
 or 
 
-$ 
-
 $ docker inspect --format='{{.NetworkSettings.Ports}}' murachs-mysql
