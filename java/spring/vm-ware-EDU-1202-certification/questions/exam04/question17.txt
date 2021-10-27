@@ -1,0 +1,67 @@
+In the code below, which of the method parameters is most likely to be annotated with @RequestParam? 
+
+@RequestMapping("/{p1}/{p2}") 
+public String someHandlerMethod(String p1, String p2, String p3, String p4) {
+	...
+}
+
+A)
+p4
+
+B)​
+p2
+​
+C)
+p3
+
+D)​
+p1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'C'
+
+Both p1 and p2 appear in the URI template of the handler method. 
+
+Because of that, they should be annotated with @PathVariable. 
+
+@RequestParam extracts the annotated parameter from the request parameters (appended after ? at the end of the URL). 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#mvc-ann-arguments

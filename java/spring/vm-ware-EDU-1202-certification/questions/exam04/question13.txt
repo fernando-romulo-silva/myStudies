@@ -1,0 +1,59 @@
+Which of these URL should be used to access the following Controller class? 
+Assume the port no to be 8080. 
+
+@RequestMapping("/greeting") 
+public String sayHello (@RequestParam String name, @RequestParam int id) { 
+	return "Hello"; 
+}
+
+?
+
+A) http://localhost:8080/greeting?name=John?id=4324
+​
+B) http://localhost:8080/greeting/name=John/id=4324
+​
+C) http://localhost:8080/greeting?name=John&id=4324
+​
+D) http://localhost:8080/greeting/John/4324
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'C'
+
+Request parameters are appended to the URL after the question mark (?) symbol and are separated using ampersand (&) symbol. 
+
+https://docs.spring.io/spring/docs/5.0.7.RELEASE/javadoc-api/org/springframework/web/bind/annotation/RequestParam.html
+

@@ -1,0 +1,65 @@
+Which of the following ways of configuring Spring Boot has the highest precedence (overrides the others)?
+
+A)
+OS environment variables
+​
+B)
+Profile-specific application properties
+
+C)​
+Default Properties
+​
+D)
+@TestPropertySource
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A'
+
+@TestPropertySource annotation has the highest precedence out of these answers because test settings override normal application settings. 
+
+@TestPropertySource is a class-level annotation that configures locations of property files and inlined properties in Spring integration test. 
+The properties loaded by @TestPropertySource are added to the set of @PropertySource in the Environment for an ApplicationContext.
+
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes = AppConfig.class)
+@TestPropertySource("/testauth.properties")
+public class MyAppTest {
+------
+} 
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config
