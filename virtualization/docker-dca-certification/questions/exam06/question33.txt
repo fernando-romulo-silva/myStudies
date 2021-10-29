@@ -1,0 +1,57 @@
+It is OK to have more than one CMD instruction in the Docker file.
+
+a)​ TRUE
+​
+b) FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'B'
+
+In principle, there should only be one CMD command in your Dockerfile. 
+
+When CMD is used multiple times, only the last instance is executed.
+
+

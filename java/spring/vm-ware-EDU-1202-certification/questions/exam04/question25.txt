@@ -1,0 +1,68 @@
+In Spring Security, what is the name of the Servlet Filter intercepting all the requests sent to an application?
+
+A)
+SecurityFilterChain
+
+B)​
+DelegatingProxy
+​
+C)
+DelegatingFilterProxy
+
+D)​
+FilterChainProxy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Spring provides a Filter implementation named DelegatingFilterProxy that allows bridging between the Servlet container’s lifecycle and Spring’s ApplicationContext. 
+
+The Servlet container allows registering Filters using its own standards, but it is not aware of Spring defined Beans. 
+
+DelegatingFilterProxy can be registered via standard Servlet container mechanisms, but delegate all the work to a Spring Bean that implements Filter.
+
+https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-delegatingfilterproxy
+
+<filter>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+</filter>
+
