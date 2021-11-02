@@ -1,0 +1,71 @@
+Which of the following handler method signatures are valid?
+
+A)
+@RequestMapping(value="/employees") 
+public String getEmployeeName(@RequestParam employeeId)
+
+B)​
+@PostMapping("/account") 
+public ResponseEntity createAccount(@RequestBody Account account)
+​
+C)
+@PutMapping(value="/employees/{employeeId}") 
+public Employee createEmployee(@PathVariable("id") employeeId, @RequestBody Employee)
+
+​D)
+@GetMapping("/users/{id}") 
+public User getUser(@PathVariable id, Model m)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B' and 'D'
+
+Explanation
+
+A) GET: http://localhost:8080/employees?employeeId=1
+
+B) POST: http://localhost:8080/account
+
+D) PUT:http://localhost:8080/users/{id}
+
+The 'C' method is invalid because the PathVariable annotation specifies the name as "id", 
+however in the URI template of the PutMapping annotation, there is only one path variable named "employeeId". 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#mvc-ann-arguments

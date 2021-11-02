@@ -1,0 +1,66 @@
+What type of file may have the following content format? 
+spring: 
+	data: 
+		jpa-dialect: 
+
+H2 server: 
+	port: 8080
+
+A)
+YAML Files
+​
+B)
+Java Configuration files
+​
+C)
+Properties Files
+​
+D)
+XML Files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Explanation
+
+YAML is the only format of the given ones where indentation signifies nesting 
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config-yaml

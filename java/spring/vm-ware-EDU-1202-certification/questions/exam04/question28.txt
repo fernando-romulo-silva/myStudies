@@ -1,0 +1,64 @@
+Are beans lazily or eagerly instantiated by default?
+
+A)
+Lazy
+​
+B)
+Depends on the bean
+​
+C)
+Eager
+
+D)​
+Neither
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Explanation
+
+By default, ApplicationContext implementations eagerly create and configure all singleton beans as part of the initialization process.
+Generally, this pre-instantiation is desirable, because errors in the configuration or surrounding environment are discovered immediately.
+When this behavior is not desirable, you can prevent pre-instantiation of a singleton bean by marking the bean definition as being lazy-initialized.
+
+A lazy-initialized bean tells the IoC container to create a bean instance when it is first requested, rather than at startup.
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-lazy-init

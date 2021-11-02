@@ -1,0 +1,65 @@
+What do SpEL expressions starting with @ reference?
+
+A)
+Literal Values
+​
+B)
+Properties in the application environment
+​
+C)
+Spring Beans
+
+C)​
+JVM Properties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Explanation
+
+A Spring bean is referenced using its name prefixed with @ in SpEL.
+Chains of property references can be accessed using the period character.
+Ex:
+
+
+Object bean = parser.parseExpression("@foo").getValue(context);
+
+https://docs.spring.io/spring-framework/docs/5.0.3.RELEASE/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html
