@@ -1,0 +1,68 @@
+Which of the following is NOT one of the 3 main Docker Container Network Model components?
+
+a) ​Endpoint
+​
+b) Routing
+
+c) Network
+​
+d) Sandbox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'B'
+
+he Docker Container Network Model provides an open interface for vendors and the community to build network drivers. 
+The complementary evolution of Docker and SDN technologies is providing more options and capabilities every day. 
+
+The CNM has three elements—sandbox, endpoint, and network. 
+
+Sandbox: The sandbox perfectly isolates a container from the outside world. 
+
+Endpoint: An endpoint is a controlled gateway from the outside woeld into network's sandbox that shields the container.
+The endpoint connects the network snadbox (not the container) to the third element of the model, which is the network.
+
+Network: The newtork is the pathway that transports the datapackets of an instance of communication from endpoint to endpoint, 
+or ultimately from container to container.
+

@@ -1,0 +1,57 @@
+You have created a Docker bridge network on a host with three containers attached, 
+how do you make this containers accessible outside of the host?
+
+a) Use network attach to access the containers on the bridge network
+​
+b) Use either EXPOSE or --publish to access the containers on the bridge network
+​
+c) Use network connect to access the containers on the bridge network
+​
+d) Use --link to access the containers on the bridge network Correct
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'C'
+
+You can connect your host with a bridge and connect that containers on the bridge network.
