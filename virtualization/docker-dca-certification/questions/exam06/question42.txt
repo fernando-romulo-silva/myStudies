@@ -1,0 +1,55 @@
+It is OK to use root directory such as / as the PATH for building the docker image.
+
+a) TRUE
+
+b) FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'B'
+
+The docker build command builds Docker images from a Dockerfile and a “context”. 
+The build process can refer to any of the files in the context, but have to read all files before.
+
+

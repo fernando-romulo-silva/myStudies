@@ -48,7 +48,9 @@ d) All of the preceding sentences are true.
 
 
 
-Answer 'a' - A global service is a service that runs one task on EVERY node. 
+Answer 'a'
+
+A global service is a service that runs one task on EVERY node. 
 There is no pre-specified number of tasks.
 
 

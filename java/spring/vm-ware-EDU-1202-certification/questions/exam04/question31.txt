@@ -1,0 +1,71 @@
+Which of the following methods in JdbcTemplate is recommended for DDL operations?
+
+A)
+query
+​
+B)
+execute
+​
+C)
+update
+​
+D)
+queryForList
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+Explanation
+
+execute is generally intended for DDL operations.
+
+SimpleJdbcInsert simpleJdbcInsert =  new SimpleJdbcInsert(dataSource).withTableName("EMPLOYEE");
+
+Map<String, Object> parameters = new HashMap<>();
+parameters.put("ID", emp.getId());
+parameters.put("FIRST_NAME", emp.getFirstName());
+parameters.put("LAST_NAME", emp.getLastName());
+parameters.put("ADDRESS", emp.getAddress());
+
+final int result = simpleJdbcInsert.execute(parameters);
+
+
+https://www.baeldung.com/spring-jdbc-jdbctemplate https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html

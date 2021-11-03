@@ -1,0 +1,60 @@
+Which of the following can be used to monitor a Spring Boot application?
+
+A)
+Spring Boot Initializr
+​
+B)
+Spring Boot Starter
+​
+C)
+Spring Boot Devtools
+​
+D)
+Spring Boot Actuator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Explanation
+
+One of the purposes of Actuator is to monitor Spring Boot Applications. 
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-readyhttps://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready
+

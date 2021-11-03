@@ -1,0 +1,58 @@
+Which availability mode needs to be set on a node when you need to perform maintenance on a node?
+
+a) MAINTENANCE
+​
+b) EVACUATE
+​
+c) OFFLINE
+
+d) DRAIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
+It also prevents the scheduler from assigning tasks to the node.
+
