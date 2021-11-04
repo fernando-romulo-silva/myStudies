@@ -1,0 +1,59 @@
+Which of the following storage systems are supported by DTR?
+
+a) Microsoft Azure Blob storage
+​
+b) All of the storage systems are supported
+
+c) Amazon S3 or compatible
+​
+d) Google Cloud Storage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+It's a important feature, all cloud providers support it;
+

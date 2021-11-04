@@ -55,3 +55,7 @@ docker swarm add-node
 The correct option is A
 
 Join a swarm as a node and/or manager
+
+$ docker swarm join
+
+

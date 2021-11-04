@@ -1,13 +1,13 @@
 Which flag of 'docker service create' and 'docker service update' configures 
 the time delay between updates to a service task or sets of tasks?
 
-a) MAINTENANCE
+a) ​-update-wait
 ​
-b) EVACUATE
+b) --update-pause
 ​
-c) OFFLINE
-
-d) DRAIN
+c) --update-delay
+​
+d) --wait-delay
 
 
 

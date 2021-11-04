@@ -1,0 +1,62 @@
+Which instruction specifies the Base Image from which you are building?
+
+a) FROM
+
+b) CMD
+​
+c) RUN
+​
+d) EXPOSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+A Dockerfile usually starts with the FROM directive. 
+This is used to specify the parent image of our custom Docker image. 
+The parent image is the starting point of our custom Docker image. 
+All the customization that we do will be applied on top of the parent image.
+

@@ -1,0 +1,59 @@
+Which storage driver uses block devices dedicated to Docker and operates at the block level, 
+rather than the file level?
+
+a) ​BlockDeviceMap
+​
+b) OverlayFS
+​
+c) devicemapper
+
+d) BlockDriver
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+The devicemapper driver uses block devices dedicated to Docker and operates at the block level, rather than the file level.
