@@ -1,0 +1,63 @@
+____________ testing refers to automated tests for several modules 
+and the interactions between them when they are put together.
+
+A)
+Unit
+​
+B)
+Integration
+
+C)​
+Performance
+​
+D)
+Interaction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+Explanation
+
+Integration testing (sometimes called integration and testing, abbreviated I&T) is the phase in software testing in 
+which individual software modules are combined and tested as a group. 
+
+It occurs after unit testing and before validation testing. 
+
+https://en.wikipedia.org/wiki/Integration_testing

@@ -1,0 +1,122 @@
+Which of the following annotations is used on custom Spring Boot Auto-configuration classes?
+
+A)
+​@ConfigurationCondition
+​
+B)
+@AutoConfiguration
+​
+C)
+@ConditionalConfiguration
+​
+D)
+@Configuration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Explanation
+
+Custom auto-configuration classes are simply @Configuration classes using @ConditionalOn* annotations 
+to select the situation in which the Configuration should come into effect. 
+The other annotations don't exist. 
+
+@Configuration
+class ConditionalBeanConfiguration {
+
+  @Bean
+  @Conditional... // <--
+  ConditionalBean conditionalBean(){
+    return new ConditionalBean();
+  };
+}
+
+@Configuration
+@Conditional... // <--
+class ConditionalConfiguration {
+  
+  @Bean
+  Bean bean(){
+    ...
+  };
+  
+}
+
+========================================================================================================
+
+It allows to load beans conditionally depending on a certain environment property:
+
+@ConditionalOnProperty(
+    value="module.enabled", 
+    havingValue = "true", 
+    matchIfMissing = true)
+)
+
+
+If we have a more complex condition based on multiple properties, we can use @ConditionalOnExpression:
+
+@ConditionalOnExpression(
+    "${module.enabled:true} and ${module.submodule.enabled:true}"
+)
+
+
+Sometimes, we might want to load a bean only if a certain other bean is available in the application context:
+
+@ConditionalOnBean(OtherModule.class)
+
+
+Similarly, we can use @ConditionalOnMissingBean if we want to load a bean only if a certain other bean is not in the application context:
+
+@Bean
+@ConditionalOnMissingBean
+DataSource dataSource() {
+    return new InMemoryDataSource();
+}
+
+
+If we want to load a bean depending on the fact that a certain resource is available on the class path, we can use @ConditionalOnResource:
+
+@Configuration
+@ConditionalOnResource(resources = "/logback.xml")
+class LogbackModule {
+  ...
+}
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-developing-auto-configuration

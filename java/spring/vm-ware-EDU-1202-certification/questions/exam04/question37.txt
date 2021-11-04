@@ -1,0 +1,60 @@
+Which of these is being described below? 
+A bean instance in this scope lives within the lifetime of a single HTTP Request.
+
+A)
+session
+​
+B)
+request
+
+C)​
+global session
+​
+D)
+application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Explanation
+
+A Bean is created when there is a request and it is destroyed after the request is completed. 
+
+https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-request
