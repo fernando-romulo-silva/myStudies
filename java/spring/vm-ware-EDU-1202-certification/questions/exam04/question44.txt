@@ -1,0 +1,64 @@
+Which of the following are advantages of Dependency Injection?
+
+A)
+Reduce Boilerplate code
+
+B)​
+Loose coupling
+
+C)​
+Interface segregation
+​
+D)
+Reduces number of dependencies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'B'
+
+Explanation
+
+Dependency Injection does not reduce the number of dependencies, that is the developer's responsibility.
+
+Interface segregation also has no connection.
+
+DI reduces boilerplate code required to inject dependencies and makes classes less loosely coupled (as this boilerplate code is not needed)
+
+
+ 

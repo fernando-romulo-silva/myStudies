@@ -1,0 +1,63 @@
+What is measuring different aspects of the application for determining the performance 
+of the application at different points in time, under different conditions?
+
+A)
+Management
+
+B)​
+Metrics
+
+C)​
+Monitoring
+​
+D)
+Auditing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B'
+
+Explanation
+
+A software metric is a standard of measure of a degree to which a software system or process possesses some property. 
+
+Even if a metric is not a measurement (metrics are functions, while measurements are the numbers obtained by the application of metrics), 
+often the two terms are used as synonyms. 
+
+https://en.wikipedia.org/wiki/Software_metric

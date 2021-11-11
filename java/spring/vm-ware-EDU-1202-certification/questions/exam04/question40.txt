@@ -62,6 +62,7 @@ Reference
 
 https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection-proxies
 
+
 Due to the proxy-based nature of Spring’s AOP framework, calls within the target object are by definition not intercepted. 
 
 For JDK proxies, only public interface method calls on the proxy can be intercepted. 

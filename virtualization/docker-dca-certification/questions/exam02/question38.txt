@@ -48,7 +48,9 @@ docker run -d --failure omit-stopped redis'
 
 
 
-The correct answer is D
+The correct answer is C
+
+$ ​docker run -d --restart unless-stopped redis
 
 The value of the --restart flag can be any of the following:
 

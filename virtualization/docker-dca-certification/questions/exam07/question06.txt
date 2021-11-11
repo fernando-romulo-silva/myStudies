@@ -1,0 +1,58 @@
+
+Which of the below Dockerfile directive would set up the base image 
+that can serve as our starting point for establishing a new image?
+
+a) ​FROM
+
+b) BASE
+​
+c) ARG
+​
+d) START
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'
+
+
+The FROM instruction specifies the Parent Image from which you are building. 
+
+FROM may only be preceded by one or more ARG instructions, which declare arguments that are used in FROM lines in the Dockerfile.
+

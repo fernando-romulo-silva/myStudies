@@ -1,0 +1,56 @@
+
+What is docker command to create swarm?
+
+a) docker swarm initialize
+​
+b) docker swarm start
+​
+c) docker swarm join
+​
+d) docker swarm init
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'd'
+
+This command works with the Swarm orchestrator.
+
+$ docker swarm init [OPTIONS]
+

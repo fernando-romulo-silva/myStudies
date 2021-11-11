@@ -1,0 +1,57 @@
+
+Where can you get a repository URL for installing the Docker Enterprise Edition (EE)?
+
+a) ​​​Docker Hub
+
+b) Docker Enterprise Hub
+​
+c) Docker Trusted Registry
+​
+d) Docker Marketplace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'
+
+'b' is wrong because Docker Enterprise Hub don't exits
+​
+'c' is wrong because Docker Trusted Registry it's a tool
+​
+'d' is wrong because Docker Marketplace don't exits

@@ -1,0 +1,76 @@
+The @PropertySource annotation is used for ________
+
+A)
+Specifying the location of application.properties files
+​
+B)
+Declaring the path to the source files
+​
+C)
+Binding a properties file to a POJO
+
+D)​
+Using Java configuration for application.properties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'C'
+
+Explanation
+
+The @PropertySource annotation provides a convenient and declarative mechanism for adding a PropertySource to Spring’s Environment. 
+
+See the following example: 
+
+@Configuration 
+@PropertySource("classpath:/com/myco/app.properties") 
+public class AppConfig { 
+	
+	@Autowired 
+	Environment env; 
+	
+	@Bean 
+	public TestBean testBean() { 
+		TestBean testBean = new TestBean(); 
+		testBean.setName(env.getProperty("testbean.name")); 
+		return testBean; 
+	} 
+} 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-using-propertysource

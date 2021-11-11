@@ -1,0 +1,56 @@
+
+Network isolation by docker is provided by which one of the following linux kernel features?
+
+a) Ulimits
+​
+b) Namespace
+​
+c) Cgroups
+​
+d) File descriptors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+Docker uses namespaces of various kinds to provide the isolation that containers need in order to remain portable
+
+Cgroups provide resource limitation and reporting capability within the container space. 
+

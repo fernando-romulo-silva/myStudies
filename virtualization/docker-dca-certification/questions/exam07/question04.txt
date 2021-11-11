@@ -1,0 +1,65 @@
+
+What is the correct sequence for the lifecycle of the docker container?
+
+ I. Build
+ II. PULL
+ III. Run
+
+a) ​II, III, I
+​
+b) I, III, II
+​
+c) I, II, III
+
+d) II, III, I
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'
+
+The correct sequence of the lifecycle of docker container is as follows,
+
+I. Build
+
+II. PULL
+
+III. Run
+
+

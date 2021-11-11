@@ -1,16 +1,13 @@
 
-How can we ensure that a minimum of memory is available to run a container using soft limits?
+Which of the following commands will ensure that a container uses a maximum of 1 GB of active memory?
 
+a) ​​docker run --memory-swap 2G nginx
+​
+b) docker run --memory 1G nginx
 
-a) We cannot ensure a minimum of memory is available for a container.
-
-b) Using --memory.
-
-c) This must be configured on your operating system.
-
-d) We use --memory-reservation.
-
-
+c) docker run --memory-swap 2G --memory-reservation 1G
+​
+d) docker run --memory-reservation 1G nginx
 
 
 
@@ -40,8 +37,18 @@ d) We use --memory-reservation.
 
 
 
-Answer 'd' 
 
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
 
 To limit the maximum amount of memory usage for a container, add the --memory option to the docker run command. 
 Alternatively, you can use the shortcut -m.
@@ -66,5 +73,3 @@ If you run top  you will see no virtual RAM allocated. This setting is internal 
 
 13422 root        8.7m   3.3m   2.5m S  0.3   0:00.02 docker-containe
 
-
- 

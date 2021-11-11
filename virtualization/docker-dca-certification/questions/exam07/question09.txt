@@ -1,0 +1,56 @@
+
+Describe what the RUN directive does.
+
+a) The RUN directive sets the default command for the image.
+​
+b) The RUN directive executes a command on the host when building an image.
+​
+c) The RUN directive executes a command and commits the resulting changed files as a new layer in the image.
+​
+d) The RUN directive automatically runs a command when a new container gets created.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+The docker run command first creates a writeable container layer over the specified image, and then starts it using the specified command. 
+
+The docker run command can be used in combination with docker commit to change the command that a container runs. 
+

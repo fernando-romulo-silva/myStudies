@@ -1,0 +1,65 @@
+
+Which of the following statement is false about Dockers swarm?
+
+a) ​Docker swan is a native gathering used for docker.
+​
+b) Docker host is the group in the number of multiple and virtual docker host.
+
+c) It provides the standard docker application program interface.
+​
+d) All of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+There are two types of the registry.
+
+1. Public
+
+2. Private
+
+Public registry's of Docker is also called a docker hub. 
+
+Which helps in storing the images privately. 
+
+In the docker hub, millions of images can be stored.
+
+
