@@ -1,0 +1,53 @@
+
+When seven managers are in a swarm cluster, how would they be distributed across three data centers or availability zones?
+
+a) 36983
+​
+b) 37317
+
+c) 36953
+​
+d) 37012
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+

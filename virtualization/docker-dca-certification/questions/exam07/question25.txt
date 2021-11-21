@@ -1,0 +1,57 @@
+
+Which of the following docker image commands display detailed information on one or more images?
+
+a) docker image ls
+​
+b) docker image detail
+​
+c) docker image inspect
+
+d) docker image history
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'
+
+Docker inspect provides detailed information on constructs controlled by Docker.
+
+By default, docker inspect will render results in a JSON array.
+
+--format , -f		Format the output using the given Go template

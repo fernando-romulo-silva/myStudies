@@ -1,0 +1,59 @@
+
+FROM keyword can only appear once at the start of the Dockerfile.
+
+a) TRUE
+​
+b) FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+ARG and FROM can start a Dockerfile
+
+The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. 
+
+ARG is the only instruction that may precede FROM in the Dockerfile.
+
+

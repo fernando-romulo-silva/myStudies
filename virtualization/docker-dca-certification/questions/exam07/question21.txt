@@ -1,0 +1,56 @@
+
+Which of these swarm manager configurations will cause the cluster to be in a lost quorum state?
+
+a) 1 manager of which 1 is healthy.
+​
+b) 3 managers of which 2 are healthy.
+​
+c) 4 managers of which 2 are healthy.
+​
+d) 5 managers of which 3 are healthy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'd'
+
+So a quorum is a majority of managers. 
+To ensure that quorum is achieved in the cluster, swarm managers use something called the Raft Consensus Algorithm. 
+
+
