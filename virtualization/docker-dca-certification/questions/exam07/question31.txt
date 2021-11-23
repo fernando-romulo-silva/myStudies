@@ -56,4 +56,3 @@ The FROM instruction initializes a new build stage and sets the Base Image for s
 
 ARG is the only instruction that may precede FROM in the Dockerfile.
 
-

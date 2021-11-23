@@ -1,0 +1,58 @@
+
+Which of the following commands will ensure that overlay traffic between service tasks is encrypted?
+
+a) docker network create -d overlay -o encrypted=true
+​
+b) ​docker network create -d overlay --secure
+
+c) docker service create --network --secure
+​
+d) docker service create --network --encrypted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'a'
+
+This command ensure that overlay traffic between service tasks is encrypted
+
+$ docker network create -d overlay -o encrypted=true

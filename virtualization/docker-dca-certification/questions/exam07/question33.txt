@@ -1,0 +1,61 @@
+
+Which of the following commands is used to display system-wide Docker configuration on a host?
+
+a) ​docker inspect
+
+b) docker system
+​
+c) docker info
+​
+d) docker status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'
+
+This command displays system wide information regarding the Docker installation. 
+Information displayed includes the kernel version, number of containers and images. 
+The number of images shown is the number of unique images. 
+
+Docker inspect provides detailed information on constructs (Images, volumes, networks, etc.) controlled by Docker.
+By default, docker inspect will render results in a JSON array.

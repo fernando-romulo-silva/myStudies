@@ -1,0 +1,58 @@
+
+What does docker image rm command do?
+
+a) Display detailed information on one or more images
+​
+b) Remove one or more images
+
+c) Remove unused images
+​
+d) Show the history of an image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+docker image rm: Remove one or more images.
+
+$  docker image rm --force web
