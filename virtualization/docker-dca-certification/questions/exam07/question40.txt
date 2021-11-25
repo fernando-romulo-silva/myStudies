@@ -1,0 +1,61 @@
+
+When querying the configuration of a running container called 'myweb', 
+which command would display the container's IP Address?
+
+a) docker run inspect myweb | grep IP
+​
+b) docker myweb inspect | grep IP
+
+c) docker inspect myweb | grep IPAddress
+​
+d) None of the Above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'c'
+
+The 'inspect' command show all conf about the image.   
+The 'grep' command filter a result.
+
+$ docker inspect myweb | grep IPAddress 
+

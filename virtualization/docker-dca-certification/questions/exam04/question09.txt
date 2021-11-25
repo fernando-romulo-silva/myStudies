@@ -48,7 +48,7 @@ Docker Trusted Registry
 
 
 
-C is Correct
+A is Correct
 
 Docker Universal Control Plane (UCP) is an enterprise 
 on premise solution that enables IT operations teams to deploy and manage their Dockerized applications in production

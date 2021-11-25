@@ -1,13 +1,13 @@
 
 Which of these swarm manager configurations will cause the cluster to be in a lost quorum state?
 
-a) 1 manager of which 1 is healthy.
+a) 4 managers of which 2 are healthy
+
+b) 1 manager of which 1 is healthy
 ​
-b) 3 managers of which 2 are healthy.
+c) 3 managers of which 2 are healthy
 ​
-c) 4 managers of which 2 are healthy.
-​
-d) 5 managers of which 3 are healthy.
+d) 5 managers of which 3 are healthy
 
 
 
@@ -48,7 +48,10 @@ d) 5 managers of which 3 are healthy.
 
 
 
-Answer 'c'
+
+
+
+Answer 'a'
 
 So a quorum is a majority of managers.
  
@@ -67,5 +70,3 @@ c->  4 but two helthy
 
     (4-1)/2 = 2 (two failures)
     (2/2) + 1 = 2 (need three healthy)
-    
-    

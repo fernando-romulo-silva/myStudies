@@ -1,17 +1,16 @@
-How many states are there of docker containers?
+Mention whether the following statement is true or false?
+
+Data is lost when the container exits.
 
 ​
-A)
-Two
+A) True
 ​
-B)
-Four
-​
-C)
-Three
-​
-D)
-Five
+B) False
+
+
+
+
+
 
 
 
@@ -51,10 +50,7 @@ Five
 
 B is Correct
 
-There are four important states of a docker container, they are: 
-
-running: A currently running container
-paused: A container whose processes have been paused
-restarting: A container that is in the process of being restarted
-exited: A container that ran and completed ("stopped" in other contexts, although a created container is technically also "stopped")
+The above statement is false because no data is lost when the container exits. 
+Because any data that is written by the application in the disc is stored in the container. 
+The file system for the contain persists after the container halts.
  

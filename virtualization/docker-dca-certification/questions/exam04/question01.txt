@@ -48,9 +48,19 @@ All of the above
 
 
 
-D is Correct
+'D' is Correct
 
-The various features of docker are as follows: easy modeling, version control, placement- affinitive, developer productivity, operational efficiency. 
+The various features of docker are as follows: 
+
+easy modeling, 
+
+version control, 
+
+placement-affinitive, 
+
+developer productivity, 
+
+operational efficiency. 
 
 Since all the options are included in the list of essential features.
 

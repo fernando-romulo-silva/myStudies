@@ -1,0 +1,58 @@
+
+Which of the following Docker client commands will display all of the base images available for local containers to be instantiated from? 
+Choose the correct answer:
+
+a) docker list
+​
+b) docker images
+
+c) docker list all
+​
+d) None of the above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'b'
+
+For listing ALL the downloaded images the command used is docker images. 
+

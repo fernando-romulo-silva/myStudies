@@ -1,13 +1,14 @@
-Which of the following is not an endpoint exposed by Docker Trusted Registry 
-that can be used to assess the health of a Docker Trusted Registry replica?
 
-a) ​/health
+Which of the following endpoints exposed by Docker Trusted Registry can be used to assess the health of a 
+Docker Trusted Registry replica?
+
+a) /health
+
+b) /api/health
 ​
-b) /nginx_status
-​
-c) /api/v0/meta/cluster_status
-​
-d) replica_status
+c) /replica_status
+
+d) /nginx/health
 
 
 
@@ -51,8 +52,9 @@ d) replica_status
 
 
 
+Answer 'a'
 
-'A' and 'D'
+So, you can use HEALTCHECK CMD curl --fail http://localhost/health || exit 1 to check the health
 
 Docker Trusted Registry is a Dockerized application. 
 To monitor it, you can use the same tools and techniques you’re already using to monitor other containerized applications running on your cluster. 
@@ -65,5 +67,4 @@ DTR also exposes several endpoints you can use to assess if a DTR replica is hea
 /nginx_status: Returns the number of connections being handled by the NGINX front-end used by DTR.
 
 /api/v0/meta/cluster_status: Returns extensive information about all DTR replicas.
-
 
