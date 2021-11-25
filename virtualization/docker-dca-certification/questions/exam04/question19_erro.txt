@@ -1,4 +1,4 @@
-What is used by the kernel to isolate resources when running Docker containers?
+What is the docker command to pull an image or a repository from a registry?
 
 ​A)
 Volumes

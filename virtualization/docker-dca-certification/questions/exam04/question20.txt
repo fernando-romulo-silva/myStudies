@@ -1,17 +1,12 @@
-Which of the following statements is incorrect?
+Which statement is true?
 
-A)
-When a container is deleted, the writable layer is persisted.
+A) ENTRYPOINT cannot be overriden in the "docker container run" command
 ​
-B)
-The column 'virtual size' of docker ps -s output shows the amount of data used for the read-only image data used by 
-the container plus the container's writable layer 'size'.
-
-​C)
-Copy-on-write is a Docker strategy of sharing and copying files for maximum efficiency.
+B) CMD is used to run the software is the image along with any arguments
 ​
-D)
-The column 'size' of docker ps -s output shows the amount of data that is used for the writable layer of each container.
+C) ENTRYPOINT cannot be used in conjuction with CMD
+​
+D) CMD shell format uses this form ["param", param", "param"]
 
 
 
