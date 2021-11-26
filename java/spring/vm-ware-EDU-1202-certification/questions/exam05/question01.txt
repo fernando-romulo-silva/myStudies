@@ -1,16 +1,16 @@
-Which of these is ordering operator which can be used in custom finder method declaration in Spring Data JPA Repository Interface?
+Which of the following are true about Spring Framework's Test module?
   ​
 A)
-​Asc
-​
-B)
-Descending
+JUnit is supported
+
+B)​
+It supports Mockito Framework
 ​
 C)
-Ascending
+AspectJ is included as a dependency
 ​
 D)
-Desc
+It supports EasyMock
 
 
 
@@ -51,15 +51,11 @@ Desc
 
 
 
-Answers 'A' and 'D'
+Answers 'A', 'B' and 'D'
 
-The correct ordering operators are Asc and Desc. 
+Spring Framework's Test module offers support for JUnit, Mockito and EasyMock.  
+AspectJ is an AOP dependency which is not included or required for the Spring Test Module.  
 
-public interface StudentDAO extends JpaRepository<StudentEntity, Integer> {
-    
-    public List<StudentEntity> findAllByOrderByIdAsc();
-    
-    public List<StudentEntity> findAllByOrderByIdDesc();
-}
+http://docs.spring.io/spring-framework/docs/4.0.9.RELEASE/spring-framework-reference/html/overview.html#overview-testing
 
-https://docs.spring.io/spring-data/jpa/docs/2.1.1.RELEASE/reference/html/#jpa.query-methods.at-query
+

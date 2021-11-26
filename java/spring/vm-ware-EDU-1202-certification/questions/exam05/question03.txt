@@ -1,0 +1,61 @@
+Which HTTP verb is safe, and as such will not result in a state change of the resource?
+  ​
+A)
+DELETE
+
+​B)
+PUT
+​
+C)
+GET
+
+D)​
+POST
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Function of GET: Retrieve a representation of the data in the response body. 
+
+The GET method is safe, meaning that applying it to a resource does not result 
+in a state change of the resource (read-only semantics).
+
+https://en.wikipedia.org/wiki/Representational_state_transfer

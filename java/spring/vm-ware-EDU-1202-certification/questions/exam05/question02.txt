@@ -1,0 +1,66 @@
+What does the annotation @ConfigurationProperties("example") do?
+  ​
+A)
+Populates Application Properties for "example"
+
+B)​
+Uses the application profile "example"
+​
+C)
+Binds external properties from root "example"
+
+D)​
+Validates Configuration Properties against validation group "example"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+Using the @Value("${property}") annotation to inject configuration properties can sometimes be cumbersome, 
+especially if you are working with multiple properties or your data is hierarchical in nature. 
+
+Spring Boot provides an alternative method of working with properties that lets strongly typed beans
+govern and validate the configuration of your application. 
+
+It is possible to bind a bean declaring standard JavaBean properties as shown. 
+
+https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/reference/htmlsingle/#boot-features-external-config-typesafe-configuration-properties
+
+

@@ -1,11 +1,18 @@
-Docker security scan can be started by all users including those with read-only access. 
-True or false?
+A container named "analytics" that stores results in a volume called "data" was created. 
+docker run -d --name=analytics -v data:/data webapp. 
+How are the results accessed in "data" with another container called "dbapp"?
 
 A)
-True
-
+​docker run -d --name=reports --volume=data dbapp
+​
 B)
-​False
+docker run -d --name=reports --volume=webapp dbapp
+​
+C)
+docker run -d --name=reports --volume-from=analytics dbapp
+​
+D)
+docker run -d --name=reports --mount=webapp dbapp
 
 
 
@@ -46,8 +53,16 @@ B)
 
 
 
-A correct
+C correct
 
-Docker Scan runs on Snyk engine, providing users with visibility into the security posture of 
-their local Dockerfiles and local images, but you need permission for it.
+The voloume-from connect to another containers volumes without knowing how volumes are named and you do not specify path.
+
+Ex:
+
+#create data containers
+docker run --name=d1 -v /svr1 busybox sh -c 'touch /svr1/some_data'
+docker run --name=d2 -v /svr2 busybox sh -c 'touch /svr2/some_data'
+
+docker run --rm --volumes-from=d1 --volumes-from=d2 busybox sh -c 'find -name some_data'
+
 

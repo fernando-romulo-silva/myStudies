@@ -55,6 +55,9 @@ $ docker system prune is used for is used removing all the stock containers.
 $ docker login is used for promoting user name or password inserting those and finally, you are logged in.
 
 $ docker info is used for getting the data information about the docker that is installed in your system.
+Information displayed includes the kernel version, storage driver, number of containers and images. 
+The number of images shown is the number of unique images. 
+
 
 For checking the docker client and docker server version the command used is $ docker version. 
 

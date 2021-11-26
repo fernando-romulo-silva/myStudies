@@ -1,0 +1,57 @@
+Declarative Transaction Management in Spring Applications is implemented using ________
+  ​
+A)
+Spring AOP
+
+B)​
+Spring Data Rest
+​
+C)
+Spring Security
+​
+D)
+Spring JDBC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+Transactions is a cross cutting concern which is implemented using AOP.
+
+https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/data-access.html#tx-decl-explained 
