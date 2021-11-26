@@ -50,8 +50,12 @@ d) It is used for the listing of downloaded images.
 
 Answer 'b'
 
-For downloading an image the command used is docker pull for providing the information about container the command used is docker stats. 
+For downloading an image the command used is docker pull.
+ 
+For providing the information about container the command used is docker stats. 
+
 For listing the downloaded images the command used is docker images. 
+
 And for providing the information of command the command used is docker input. 
 
 

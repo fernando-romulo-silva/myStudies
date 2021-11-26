@@ -49,10 +49,35 @@ D) CMD shell format uses this form ["param", param", "param"]
 
 
 
-A is Correct
+D is Correct
 
-When the container is deleted, the writable layer is also deleted. The underlying image remains unchanged.
+
+Both the ENTRYPOINT and CMD instructions support two different forms: the shell form and the exec form. 
+
+In the example above, we used the shell form which looks like this:
+
+CMD executable param1 param2
+
+or
+
+CMD ["executable","param1","param2"]
+
+---------------------
+A is wrong because:
  
-Because each container has its own writable container layer, and all changes are stored in this container layer, 
-multiple containers can share access to the same underlying image and yet have their own data state.
+One difference is that unlike CMD, you cannot override the ENTRYPOINT command just by adding new command line parameters. 
+To override ENTRYPOINT you need to modify the docker run command following a specific syntax.
+
+---------------------
+
+C is wrong because Wen can combining ENTRYPOINT and CMD, 
+It allows you to specify the default executable for your image while also providing default arguments to that executable which may be overridden by the user. 
+
+FROM ubuntu:trusty
+ENTRYPOINT ["/bin/ping","-c","3"]
+CMD ["localhost"]
+
+----------------------
+
+
 

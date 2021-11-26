@@ -1,0 +1,60 @@
+What is the docker command to pull an image or a repository from a registry?
+
+​A)​
+docker deploy
+​
+B)
+docker pull
+
+​C)
+docker checkout
+​
+D)
+docker build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+docker pull download an image or a repository from a registry
+
+

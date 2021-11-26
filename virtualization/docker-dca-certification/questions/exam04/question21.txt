@@ -1,17 +1,17 @@
-Which of the Dockerfile options executes any commands in a new layer 
-on top of the current image and commit the results?
+When seven managers are in a swarm cluster, how would they be distributed 
+across three data centers or availability zones?
 
 ​A)
-RUN
+3/2/2
 ​
 B)
-FROM
+4/2/1
 ​
 C)
-ONBUILD
+5/1/1
 ​
 D)
-CMD
+3/3/1
 
 
 
@@ -56,6 +56,5 @@ CMD
 
 A is Correct
 
-The docker run command first creates a writeable container layer over the specified image, 
-and then starts it using the specified command.
+Try to distribute it equality
 
