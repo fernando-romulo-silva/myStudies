@@ -1,16 +1,16 @@
-What is the docker command to connect a running container to an existing user-defined bridge?
+What is the purpose of Dockers Content Trust?
 
 A)
-docker network join
+Signing and verification of image tags
 ​
 B)
-docker network attach
+Enabling mutual TLS between the Dockers client and server
 ​
 C)
-docker connect network
+Dockers registry TLS verification and encryption
 ​
 D)
-docker network connect
+Indicating an image on DockersHub is an officialimage
 ​
 
 
@@ -59,8 +59,7 @@ docker network connect
 
 D correct
 
-Connects a container to a network. 
-You can connect a container by name or by ID. 
-Once connected, the container can communicate with other containers in the same network
+Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
+These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
 
 

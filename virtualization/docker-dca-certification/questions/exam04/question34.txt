@@ -1,16 +1,16 @@
-The output of which command can be used to find the architecture and operating system an image is compatible with?
+What Dockerfile option EXPOSE does?
 
 ​A)
-docker image ls
+Expose defaults for an executing container
 ​
 B)
-docker image inspect --filter {{.Architecture}} {{.OS}} '
+Adds metadata to an image
 ​
 C)
-docker image inspect --format {{.Architecture}} {{.OS}} '
+Label a container that will run as an executable
 ​
 D)
-docker image info
+Informs Docker that the container listens on the specified network ports at runtime
 ​
 
 
@@ -57,9 +57,31 @@ docker image info
 
 
 
-C correct
+D is correct
 
-Docker inspect provides detailed information on constructs controlled by Docker.
+The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. 
 
---format , -f  Format the output using the given Go template
+You can specify whether the port listens on TCP or UDP, and the default is TCP if the protocol is not specified.
+
+The EXPOSE instruction does not actually publish the port. 
+
+It functions as a type of documentation between the person who builds the image and 
+the person who runs the container, about which ports are intended to be published. 
+
+To actually publish the port when running the container, use the -p flag on docker run to publish and map one or more ports, 
+or the -P flag to publish all exposed ports and map them to high-order ports.
+
+
+Basically, you have three options:
+
+Neither specify EXPOSE nor -p
+Only specify EXPOSE
+Specify EXPOSE and -p
+
+1) If you specify neither EXPOSE nor -p, the service in the container will only be accessible from inside the container itself.
+
+2) If you EXPOSE a port, the service in the container is NOT accessible from outside Docker, but from inside other Docker containers. 
+So this is good for inter-container communication.
+
+3) If you EXPOSE and -p (publish) a port, the service in the container is accessible from anywhere, even outside Docker.
 

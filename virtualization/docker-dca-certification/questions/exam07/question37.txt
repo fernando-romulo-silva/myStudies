@@ -62,7 +62,7 @@ Raft tolerates up to (N-1)/2 failures and requires a majority or quorum of (N/2)
 This means that in a cluster of 5 Managers running Raft, if 3 nodes are unavailable, 
 the system cannot process any more requests to schedule additional tasks.
 
-    (5-1)/2 = 2 (two failures) 2 < 3 (nodes available)
+    (5-2)/2 = 2 (two failures) 2 < 3 (nodes available)
     (3/2) + 1 = 2,5 
 
 

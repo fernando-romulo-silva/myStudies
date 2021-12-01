@@ -66,3 +66,17 @@ the person who runs the container, about which ports are intended to be publishe
 To actually publish the port when running the container, use the -p flag on docker run to publish and map one or more ports, 
 or the -P flag to publish all exposed ports and map them to high-order ports.
 
+
+Basically, you have three options:
+
+Neither specify EXPOSE nor -p
+Only specify EXPOSE
+Specify EXPOSE and -p
+
+1) If you specify neither EXPOSE nor -p, the service in the container will only be accessible from inside the container itself.
+
+2) If you EXPOSE a port, the service in the container is NOT accessible from outside Docker network, but from inside other Docker containers. 
+So this is good for inter-container communication.
+
+3) If you EXPOSE and -p (publish) a port, the service in the container is accessible from anywhere, even outside Docker network.
+

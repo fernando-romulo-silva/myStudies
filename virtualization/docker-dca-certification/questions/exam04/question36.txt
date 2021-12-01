@@ -1,17 +1,16 @@
-After creating a new service names 'http", you notice that the new service is not registering as healthy. 
-How do you view the list of historical tasks for that service by using the command line ?
+Which command is used to place an image into a registry?
 
 A)
-docker inspect http'
+docker commit
 ​
 B)
-docker servoce inspect http'
+docker tag
 ​
 C)
-docker service ps http'
+docker push
 ​
 D)
-docker ps http'
+docker images
 
 
 
@@ -59,8 +58,7 @@ docker ps http'
 
 C correct
 
-Lists the tasks that are running as part of the specified services.
-In addition to running tasks, the output also shows the task history. 
+docker image push: Push an image or a repository to a registry.
 
 
 

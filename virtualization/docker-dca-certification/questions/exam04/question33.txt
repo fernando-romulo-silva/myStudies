@@ -1,16 +1,16 @@
-Which of the following commands will create a swarm service which only listens on port 53 using the UDP protocol?
+Which of the following is NOT true about Raft (docker consensus algorithm)?
 
 ​A)
-docker service create --name dns-cache -p 53:53 --service udp dns-cache
+If a quorum is not reached, the system will not process any more requests to schedule additional tasks
 ​
 B)
-docker service create --name dns-cache -p 53:53 --udp dns-cache
+Raft tolerates up to (N-1)/2 failures
 ​
 C)
-docker service create --name dns-cache -p 53:53/udp dns-cache
+Raft requires a majority or quorum of (N/2) + 1 members
 ​
 D)
-docker service create --name dns-cache -p 53:53 --constraint networking-protocol-udp=true dns-cache
+If a quorum is not reached, the existing tasks will keep running
 ​
 
 
@@ -57,6 +57,22 @@ docker service create --name dns-cache -p 53:53 --constraint networking-protocol
 
 
 
-D correct
+B is correct
 
-$ docker service create --name dns-cache --publish 53:53/udp dns-cache
+So a quorum is a majority of managers.
+ 
+To ensure that quorum is achieved in the cluster, swarm managers use something called the Raft Consensus Algorithm. 
+
+Raft tolerates up to (N-1)/2 failures and requires a majority or quorum of (N/2)+1 members to agree on values proposed to the cluster. 
+
+This means that in a cluster of 5 Managers running Raft, if 3 nodes are unavailable, 
+the system cannot process any more requests to schedule additional tasks.
+
+    (5-1)/2 = 2 (two failures) 2 < 3 (nodes available)
+    (3/2) + 1 = 2,5 
+
+
+c->  4 but two helthy
+
+    (4-1)/2 = 2 (two failures)
+    (2/2) + 1 = 2 (need three healthy)
