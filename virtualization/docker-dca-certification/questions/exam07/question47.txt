@@ -1,0 +1,80 @@
+
+Which command can you run on a manager node to retrieve the join command for a worker?
+
+A)
+docker swarm get-token worker
+​
+B)
+docker swarm join worker
+​
+C)
+docker swarm show join-token
+​
+D)
+docker swarm join-token worker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D'
+
+Join tokens are secrets that allow a node to join the swarm. There are two different join tokens available, one for the worker role and one for the manager role. 
+You pass the token using the --token flag when you run swarm join. 
+Nodes use the join token only when they join the swarm.
+
+1) Get the token
+ 
+$ docker swarm join-token worker
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join \
+    --token SWMTKN-1-3pu6hszjas19xyp7ghgosyx9k8atbfcr8p2is99znpy26u2lkl-1awxwuwd3z9j1z3puu7rcgdbx \
+    172.17.0.2:2377
+
+
+2) Join the cluster 
+    
+$ docker swarm join \
+    --token SWMTKN-1-3pu6hszjas19xyp7ghgosyx9k8atbfcr8p2is99znpy26u2lkl-7p73s1dx5in4tatdymyhg9hu2 \
+    172.17.0.2:2377
+     
+   

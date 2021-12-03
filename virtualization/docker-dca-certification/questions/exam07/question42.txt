@@ -1,0 +1,62 @@
+
+To decrease the image pull time for geographically dispersed users you can configure which DTR option?
+
+A)
+DTR CDN
+​
+B)
+DTR cache
+​
+C)
+DTR Edge
+​
+D)
+DTR Local Registry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'B'
+
+To decrease the time to pull an image, you can deploy DTR caches geographically closer to users.
+Caches are transparent to users, since users still login and pull images using the DTR url address. 
+DTR checks if users are authorized to pull the image, and redirects the request to the cache.

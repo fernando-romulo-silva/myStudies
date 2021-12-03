@@ -1,0 +1,71 @@
+
+Which of the following commands can be used to create a read only volume? 
+(select two)
+
+A)
+docker run -d --name test --mount source=testvol,target=/testvol,readonly ubuntu:latest
+​
+B)
+docker volume create testvol
+​
+C)
+docker run -d --name test -v testvol:/testvol:ro ubuntu:latest
+​
+D)
+docker volume make readonly testvol
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'C'
+
+You can specify that a volume should be read-only by appending :ro to the -v switch:
+
+$ docker volume create volume-name
+
+
+$ docker run -v volume-name:/path/in/container:ro my/image
+
+
+And by using the --mount switch. 
+Here is how to utilize that with read-only:
+
+$ docker run --mount source=volume-name,destination=/path/in/container,readonly my/image

@@ -1,0 +1,57 @@
+
+Docker image can be saved in multiple repositories after the build is done.
+
+A)
+​TRUE
+​
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+You can do it using the push command:
+
+$ docker push <REGISTRY_HOST>:<REGISTRY_PORT>/<APPNAME>:<APPVERSION> 
+
+$ docker push repo.company.com:3456/myapp:0.1
