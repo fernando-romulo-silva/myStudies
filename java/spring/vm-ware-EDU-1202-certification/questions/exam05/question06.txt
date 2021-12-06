@@ -1,0 +1,78 @@
+Which of the following are authentication mechanisms provided by Spring Security?
+  ​
+A)
+OAuth 2.0
+
+B)​
+All of the above.
+​
+C)
+JMS Login
+​
+D)
+Form Login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'D'
+
+Spring Security offers the following authentication mechanisms: 
+
+* Username and Password 
+
+* OAuth 2.0 
+
+* SAML 2.0
+
+* CAS
+ 
+* Remember Me
+
+* JAAS Authentication 
+
+* OpenID
+
+* Pre-Authentication Scenarios 
+
+* X509 Authentication. 
+
+https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication 
+
+https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-authentication-unpwd
+

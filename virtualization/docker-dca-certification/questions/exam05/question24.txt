@@ -52,4 +52,5 @@ D is Correct
 
 Trusted Registry is part of the Docker Datacenter Subscription which also includes, 
 Universal Control Plane, commercially supported Engine and support.
+But only Docker Trusted Registry is a storage solution.
 

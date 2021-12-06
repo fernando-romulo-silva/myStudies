@@ -1,0 +1,61 @@
+How will adding the @RequestMapping annotation to a @Controller class affect handler methods inside the class?
+  ​
+A)
+It will narrow down the handler methods mapped HTTP verbs.
+
+B)​
+It will be overwritten by their @RequestMapping annotation.
+​
+C)
+It will override any handler method annotations
+​
+D)
+Its path will prefix the methods' paths
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A' and 'D'
+
+The attributes of the annotation applied at class level will be merged with the handler method annotations. 
+
+The path of the methods will be prefixed with the class mapping path. 
+
+The HTTP Verbs will be narrowed down by the class annotation.
+
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html

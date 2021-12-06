@@ -1,0 +1,65 @@
+Which of the following annotations can be used to change the order in which the IoC Container instantiates beans?
+  ​
+A)
+@Lazy
+​
+B)
+@Order
+​
+C)
+@DependsOn
+​
+D)
+@Import
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B', 'C' and 'D'
+
+All of these annotations affect the order in which the IoC Container instantiates beans. 
+
+@Lazy makes the Container only instantiate the annotated bean when it is called.
+ 
+@Order directly specifies the order in which beans are instantiated.  
+
+@Import and @DependsOn both make sure that the annotated beans are instantiated after their dependencies. 
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/annotation/Order.html 
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Lazy.html 
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html 
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html

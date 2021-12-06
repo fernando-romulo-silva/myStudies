@@ -50,7 +50,7 @@ Namespaces
 
 
 
-A e C are correct
+A (C) are correct
 
 The key feature of namespaces is that they isolate processes from each other.
 

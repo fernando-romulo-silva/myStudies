@@ -54,4 +54,6 @@ Docker Hub repositories allow you share container images with your team, custome
 
 Docker images are pushed to Docker Hub through the docker push command.
 
+$ docker push repo.company.com:3456/myapp:0.1
+
  

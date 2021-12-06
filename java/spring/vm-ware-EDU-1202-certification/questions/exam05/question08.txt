@@ -1,0 +1,64 @@
+Which of the following classes is created and configured when the annotation @SpringBootTest 
+is used with the attribute webEnvironment set to RANDOM_PORT or DEFINED_PORT?
+  ​
+A)
+TestRestTemplate
+​
+B)
+TestPropertySource
+
+C)​
+MockMvc
+​
+D)
+SpringApplication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+Alternatively, if you use the @SpringBootTest annotation with WebEnvironment.RANDOM_PORT or WebEnvironment.DEFINED_PORT, 
+you can inject a fully configured TestRestTemplate and start using it. 
+
+If necessary, additional customizations can be applied through the RestTemplateBuilder bean.
+
+Any URLs that do not specify a host and port automatically connect to the embedded server. 
+
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-rest-templates-test-utility

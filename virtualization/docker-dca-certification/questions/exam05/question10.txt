@@ -49,17 +49,13 @@ docker query
 
 
 
-A and C are Correct
-
-Docker includes multiple logging mechanisms to help you get information from running containers and services. 
-These mechanisms are called logging drivers. 
-Each Docker daemon has a default logging driver, which each container uses unless you configure it to use a different logging driver, or “log-driver” for short.
+B and C are Correct
 
 Because of:
 
-$ docker info --format '{{.LoggingDriver}}'
+$ docker container inspect container_name
 
 or
 
-$ docker system info | grep -i log
+$ docker inspect container_name
 

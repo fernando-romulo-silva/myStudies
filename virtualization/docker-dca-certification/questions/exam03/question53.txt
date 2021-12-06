@@ -1,16 +1,16 @@
-Which Docker Tool/Features is used to provision and manage multiple remote Docker hosts or Swarm Clusters?
+Which command is used to promote a worker node to be a manager?
 
 A)
-Docker swarm
+docker swarm promote
 ​
 B)
-Docker deploy
+docker node make manager
 ​
 C)
-Docker Machine
+docker node promote
 ​
 D)
-Docker rollout
+docker node upgrade
 
 
 
@@ -50,15 +50,8 @@ Docker rollout
 
 C is correct
 
-You can use Docker Machine to:
+Promotes a node to manager. This command can only be executed on a manager node.
 
-* Install and run Docker on Mac or Windows
-* Provision and manage multiple remote Docker hosts
-* Provision Swarm clusters
+$ docker node promote NODE [NODE...]
 
-Docker Machine is a tool that lets you install Docker Engine on virtual hosts, 
-and manage the hosts with docker-machine commands. 
-
-You can use Machine to create Docker hosts on your local Mac or Windows box, on your company network, 
-in your data center, or on cloud providers like Azure, AWS, or DigitalOcean.
 

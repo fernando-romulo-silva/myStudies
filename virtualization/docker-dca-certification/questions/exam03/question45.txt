@@ -50,7 +50,8 @@ docker swarm start
 
 
 
-D is correct
+C is correct
 
-Initialize a swarm. 
 The docker engine targeted by this command becomes a manager in the newly created single-node swarm.
+
+$ docker swarm init [OPTIONS]
