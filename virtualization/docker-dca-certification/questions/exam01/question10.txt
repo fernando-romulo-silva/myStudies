@@ -47,6 +47,8 @@ d) We cannot use self-signed certificates, therefore we always require an Enterp
 
 
 
+
+
 Answers 'a' and 'c'
 
 Docker Registry is an application that manages storing and delivering Docker container images.

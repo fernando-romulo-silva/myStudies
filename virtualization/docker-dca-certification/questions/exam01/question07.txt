@@ -51,8 +51,9 @@ d) We must use --network=host to publish ports below port 30000.
 
 Answer 'a'
 
-When you access port 8080 on any node, Docker routes your request to an active container. On the swarm nodes themselves, 
-port 8080 may not actually be bound, but the routing mesh knows how to route the traffic and prevents any port conflicts from happening.
+When you access port 8080 on any node, Docker routes your request to an active container. 
+On the swarm nodes themselves, port 8080 may not actually be bound, but the routing mesh 
+knows how to route the traffic and prevents any port conflicts from happening.
 
 $ docker service create \
   --name my-web \
