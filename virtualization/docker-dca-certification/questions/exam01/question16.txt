@@ -47,6 +47,7 @@ d) Image signing is based on the following keys: the owner key, the repository k
 
 
 
+
 Answer 'a', 'b', and 'c'
 
 a - To sign a Docker Image you will need a delegation key pair, with that Image signing ensures image ownership.

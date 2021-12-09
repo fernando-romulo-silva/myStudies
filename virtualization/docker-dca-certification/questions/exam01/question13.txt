@@ -40,6 +40,14 @@ d) We use --memory-reservation.
 
 
 
+
+
+
+
+
+
+
+
 Answer 'd' 
 
 

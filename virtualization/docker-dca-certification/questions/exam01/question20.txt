@@ -39,6 +39,16 @@ d) All of the preceding steps are required.
 
 
 
+
+
+
+
+
+
+
+
+
+
 Answer 'a' and 'b'
 
 Performing back up and restoration on same server
@@ -46,3 +56,6 @@ Performing back up and restoration on same server
 1 stop the docker daemon
 
 2 copy the /var/lib/docker/swarm folder
+
+You don't neet backup the logs to backup the swarm
+

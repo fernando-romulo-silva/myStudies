@@ -1,0 +1,75 @@
+In Spring Security, what is the name of the class holding user 
+information such as the username and password before Authentication?
+  ​
+A)
+GrantedAuthority
+
+B)
+AuthenticationManager
+
+C)
+AuthenticationProvider
+
+D)
+UserDetails
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+UserDetails is returned by the UserDetailsService. 
+The DaoAuthenticationProvider validates the UserDetails and then returns an Authentication that has a principal that 
+is the UserDetails returned by the configured UserDetailsService.
+
+
+private Collection<? extends GrantedAuthority> getAuthorities(Collection<Role> roles) {
+ 
+    List<GrantedAuthority> authorities = new ArrayList<>();
+    
+    for (Role role: roles) {
+        authorities.add(new SimpleGrantedAuthority(role.getName()));
+        role.getPrivileges().stream()
+            .map(p -> new SimpleGrantedAuthority(p.getName()))
+            .forEach(authorities::add);
+    }
+    
+    return authorities;
+}
+
+ 

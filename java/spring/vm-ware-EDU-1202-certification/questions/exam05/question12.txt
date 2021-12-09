@@ -1,0 +1,67 @@
+What is an aspect in Spring AOP?
+  ​
+A)
+Technique by which aspect are combined with main code.
+
+B)
+An expression that selects on or more join point
+
+C)
+Code to be executed at each selected join point
+
+D)
+A module that encapsulate pointcuts and advice
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C'
+
+Join point: a point in the execution of a program such as a method call or exception thrown 
+
+Pointcut: An expression that selects one or more join points 
+
+Advice: code to be executed at each selected join point 
+
+Aspect: A module that encapsulates pointcuts and advice 
+
+Weaving: Technique by which aspects are combined with main code.
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#aop-introduction-defn 
+

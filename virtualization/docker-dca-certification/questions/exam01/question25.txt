@@ -49,3 +49,11 @@ d) We can use the host mode to publish applications as if they were running dire
 
 
 Answer 'a', 'c', and 'd'
+
+A)
+Interlock is an application routing proxy service for Docker. 
+Fully integrates with Docker (Swarm, Services, Secrets, Configs) Enhanced configuration (context roots, TLS, zero downtime deploy, rollback) 
+Support external load balancers (nginx, haproxy, etc) via extensions.
+
+
+

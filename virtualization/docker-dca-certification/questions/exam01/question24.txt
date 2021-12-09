@@ -50,6 +50,8 @@ d) We will use Go templates to be able to provide unique resources, such as volu
 
 Answer 'c' and 'd'
 
+Go templates = docker inspect --format '{{ .Config.Image }}' hello_world-0f87ch
+
 'a' is wrong because for replicated service, you specify the number of identical tasks you want to run. 
 
 'b' is wrong because of
