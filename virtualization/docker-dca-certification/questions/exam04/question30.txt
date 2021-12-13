@@ -59,6 +59,7 @@ host network
 
 A correct
 
-
 An overlay network called ingress, which handles the control and data traffic related to swarm services. 
-When you create a swarm service and do not connect it to a user-defined overlay network, it connects to the ingress network by default.
+
+When you create a swarm service and do not connect it to a user-defined overlay network, 
+it connects to the ingress network by default.

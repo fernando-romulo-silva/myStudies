@@ -63,6 +63,7 @@ or
 CMD ["executable","param1","param2"]
 
 ---------------------
+
 A is wrong because:
  
 One difference is that unlike CMD, you cannot override the ENTRYPOINT command just by adding new command line parameters. 
@@ -70,7 +71,14 @@ To override ENTRYPOINT you need to modify the docker run command following a spe
 
 ---------------------
 
-C is wrong because Wen can combining ENTRYPOINT and CMD, 
+B is wrong because:
+
+RUN lets you execute commands inside of your Docker image. 
+These commands get executed once at build time and get written into your Docker image as a new layer.
+
+---------------------
+
+C is wrong because we can combining ENTRYPOINT and CMD, 
 It allows you to specify the default executable for your image while also providing default arguments to that executable which may be overridden by the user. 
 
 FROM ubuntu:trusty

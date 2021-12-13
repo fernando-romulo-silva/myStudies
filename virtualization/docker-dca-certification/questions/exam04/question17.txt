@@ -9,10 +9,10 @@ Only a single node in the cluster will listen on port 80 and forward to port 808
 B)
 All nodes in the cluster will listen on port 8080 and forward to port 80 in the container.
 ​
-D)
+C)
 Only a single node in the cluster will listen on port 8080 and forward to port 80 in the container.
 ​
-C)
+D)
 All nodes in the cluster will listen on port 80 and forward to port 8080 in the container.
 
 

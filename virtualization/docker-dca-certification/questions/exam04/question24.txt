@@ -1,4 +1,5 @@
-What is the recommended way to configure the daemon flags and environment variables for your Docker daemon in a platform independent way?
+What is the recommended way to configure the daemon flags and environment variables 
+for your Docker daemon in a platform independent way?
 
 ​A)
 Set the configuration DOCKER_OPTS in '/etc/default/docker'
@@ -10,7 +11,7 @@ C)
 Set the configuration options using the ENV variable
 ​
 D)
-Using 'docker config' to set the configuration options.
+Using 'docker config' to set the configuration options
 
 
 
