@@ -1,0 +1,67 @@
+Which of the following types of AOP advice can be used to prevent execution of the advised method?
+  ​
+A)
+@Before
+
+B)
+@After
+
+C)
+@Around
+    
+D)    
+@AfterThrowing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B', 'C' and 'D' 
+
+If the Before advice throws an exception, the join point will not be called. 
+
+By not calling the 'proceed()' on the ProceedingJoinPoint parameter of the Around advice method, the join point (target method) will not be executed. 
+
+'After returning advice' and 'After throwing advice' are involved only after the execution of the join point. 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#aop-introduction-defn

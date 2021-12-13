@@ -1,0 +1,64 @@
+Which of the following paths will be matched by mvcMatchers(/*/employees")?
+  ​
+A)
+/hr/archived/employees
+
+B)
+/management/employees
+
+C)
+/hr/employees.html
+
+D)
+/hr/employees
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B', 'C' and 'D' 
+
+The last one is not matched because there are 2 URL parts ("hr" and "archived") before employees, but only 1 is permitted in the pattern. 
+
+Since mvcMatchers was used, paths that would match but have a file extension (such as .html or .css), will also be matched (unlike antMatchers).
+
+https://docs.spring.io/spring-security/site/docs/5.0.5.RELEASE/reference/htmlsingle/#mvc-requestmatcher
+

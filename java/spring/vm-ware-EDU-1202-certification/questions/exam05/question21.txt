@@ -1,0 +1,63 @@
+The methods in which of the following classes are intercepted when using the following pointcut expression "within(com.xyz.example.service.*)"
+  ​
+A)
+com.xyz.example.service.MyService
+
+B)
+com.xyz.example.Application
+
+C)
+com.xyz.service.payment.PaymentService
+
+D)
+com.xyz.example.rest.http.MyController
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'A'
+
+Two consecutive dots (.) recursively matches all subpackages. 
+
+The pointcut operator within metches all methods in the specified packages. 
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#aop-pointcuts-designators
