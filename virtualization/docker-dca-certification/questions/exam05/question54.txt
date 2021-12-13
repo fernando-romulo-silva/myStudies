@@ -53,7 +53,7 @@ Running
 
 
 
-The correct options is 'C'
+The correct options are 'A', 'B' and 'C'
 
 To view a list of nodes in the swarm run docker node ls from a manager node:
 
@@ -62,12 +62,12 @@ $  docker node ls
 
 The AVAILABILITY column shows whether or not the scheduler can assign tasks to the node:
 
-Active : that the scheduler can assign tasks to the node.
+* Active : That the scheduler can assign tasks to the node.
 
-Pause : the scheduler doesn’t assign new tasks to the node, but existing tasks remain running.
+* Pause : The scheduler doesn’t assign new tasks to the node, but existing tasks remain running.
 
-Drain : the scheduler doesn’t assign new tasks to the node. 
-The scheduler shuts down any existing tasks and schedules them on an available node.
+* Drain : The scheduler doesn’t assign new tasks to the node. 
+          The scheduler shuts down any existing tasks and schedules them on an available node.
 
 
 

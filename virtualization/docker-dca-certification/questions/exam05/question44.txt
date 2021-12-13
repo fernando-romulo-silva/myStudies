@@ -53,7 +53,7 @@ xml
 
 
 
-The correct option is 'A'
+The correct option is 'B'
 
 Docker inspect provides detailed information on constructs controlled by Docker.
 

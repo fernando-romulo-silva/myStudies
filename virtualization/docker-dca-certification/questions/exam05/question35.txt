@@ -54,7 +54,7 @@ docker service config
 
 
 
-The correct option is 'B'
+The correct option is 'C'
 
 Updates a service as described by the specified parameters. 
 

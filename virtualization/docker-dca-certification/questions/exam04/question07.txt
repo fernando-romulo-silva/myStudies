@@ -48,10 +48,6 @@ Either Docker CE or Docker EE
 
 
 
-E is Correct
-
+D is the correct
 
 All versions need updates...
-
-
-

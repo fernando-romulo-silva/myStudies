@@ -50,4 +50,5 @@ FALSE
 
 The correct option is 'A'
 
-
+Without the quorum, administrative tasks are not possible, 
+including scaling or updating services and joining or removing nodes from the swarm
