@@ -47,6 +47,7 @@ FALSE
 
 
 
+
 B is correct
 
 By default, DTR creates a volume named dtr-registry-<replica-id> to store your images using the local filesystem. 

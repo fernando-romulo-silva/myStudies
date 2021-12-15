@@ -49,7 +49,7 @@ FALSE
 
 
 
-A
+Answer 'A'
 
 If you manually stop a container, its restart policy is ignored until the Docker daemon restarts or the container is manually restarted. 
 

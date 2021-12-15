@@ -1,0 +1,66 @@
+Which of the following are endpoints provided by Spring Boot Actuator?
+
+A)
+loggers
+
+B)
+shutdown
+
+C)
+env
+
+D)
+stacktrace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'A', 'B' and 'C' 
+
+shutdown: Shutdown of the application. 
+
+env: Lists properties from the Spring ConfigurableEnvironment. 
+
+loggers: Allows for viewing and modification of the application’s log configuration. 
+
+The endpoint stacktrace does not exist.
+

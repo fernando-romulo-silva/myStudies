@@ -58,5 +58,10 @@ A and D are correct
 
 A - By default, docker pull pulls a single image from the registry. A repository can contain multiple images.
 
+$ docker pull mysql/mysql-server:5.7
+
+
 D - The docker run command first creates a writeable container layer over the specified image (download it if doesn't found), 
 and then starts it using the specified command.  
+
+$ docker run --name test-mysql --publish 3306:3306 mysql:5.7

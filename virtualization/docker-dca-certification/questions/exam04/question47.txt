@@ -54,6 +54,7 @@ You can configure DTR to have single sign-on (SSO) with UCP, so that users only 
 
 At installation time: When installing DTR, use the docker/dtr install --dtr-external-url <url> option to enable SSO. 
 
-After install: In your browser, navigate to the DTR web UI, and choose Settings. In the General tab, scroll to Domain & proxies.
+After install: In your browser, navigate to the DTR web UI, and choose Settings. 
+In the General tab, scroll to Domain & proxies.
 
  

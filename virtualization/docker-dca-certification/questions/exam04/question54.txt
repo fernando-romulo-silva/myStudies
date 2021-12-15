@@ -1,16 +1,17 @@
 Docker Hub and Docker Cloud are examples of?
 
 A)
-docker service create -p 8080:80 nginx
-​
+docker templates
+
 B)
-docker service create -p mode=ingress,published=8082,target=80 nginx
-​
+docker repos
+
 C)
-docker service create -p mode=host,published=8082,target=80 nginx
-​
+docker libraries
+
 D)
-docker service create -p 8080:80 --mode host nginx
+docker registries
+
 
 
 
