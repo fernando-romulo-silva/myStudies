@@ -1,0 +1,73 @@
+Which of the following are valid ways to run an MVC test on a random port?
+
+A)
+Using the port=RANDOM attribute of @SpringBootTest
+
+B)
+Using the webEnvironment=RANDOM_PORT attribute of @SpringBootTest
+
+C)
+Setting the property server.port=0
+
+D)
+Using the @RandomPort annotation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B' and 'C' 
+
+@SpringBootTest provides support for different web environment modes to create for the test using the webEnvironment element of the @SpringBootTest annotation. 
+The following web environment modes are available: 
+
+* DEFINED_PORT (creates a web application context without defining a port)
+
+* MOCK (creates a web application context with a mock servlet environment or a reactive web application context)
+
+* NONE (creates a regular application context)
+
+* RANDOM_PORT (creates a web application context and a regular server listening on a random port). 
+
+When using an embedded Web server, setting "server.port=0" makes Spring search for a random unassigned port to use. 
+The @RandomPort annotation does not exist and neither does the port attribute on SpringBootTest. 
+
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-user-a-random-unassigned-http-port

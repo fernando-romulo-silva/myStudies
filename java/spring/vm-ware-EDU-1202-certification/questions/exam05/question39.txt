@@ -1,0 +1,64 @@
+When does the JdbcTemplate class acquire a database connection?
+
+A)
+None of the above.
+
+B)
+During application startup
+
+C)
+When one of its execute method is called
+
+D)
+During JdbcTemplate instantiation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'C' 
+
+JdbcTemplate acquires a database connection only during a method call, 
+which requires data access, and releases it as soon as the rows are fetched. 
+
+This is so that resources are not held longer than necessary. 
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html

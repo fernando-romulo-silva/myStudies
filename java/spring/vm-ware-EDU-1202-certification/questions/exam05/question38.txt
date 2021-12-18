@@ -1,0 +1,71 @@
+A HTTP Response Code of ____ means __________
+
+A)
+500, Client Side Error
+
+B)
+300, Server Side Error
+
+C)
+400, Success
+
+D)
+200, Success
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer 'D' 
+
+Http Response Status Codes for a request are: 
+
+* 1x-informational, 
+
+* 2x- Success, 
+
+* 3x-Redirectional, 
+
+* 4x-Client Side Error, 
+
+* 5x-Server Side Error. 
+
+https://docs.spring.io/spring-framework/docs/4.0.9.RELEASE/javadoc-api/org/springframework/http/HttpStatus.html
