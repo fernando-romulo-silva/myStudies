@@ -53,3 +53,10 @@ Answer 'c'
 docker network inspect returns information about one or more networks. 
 
 By default, this command renders all results in a JSON object.
+
+$ docker network inspect test-net -f "{{json .Containers }}"
+
+or
+
+$ docker inspect container1 -f "{{json .NetworkSettings.Networks }}"
+

@@ -1,0 +1,91 @@
+In Spring Boot, in order to use YAML to configure application properties, you must add ________.
+
+A)
+SnakeYAML library to the classpath
+
+B)
+Nothing, since it is available by default
+
+C)
+YamlPropertySourceLoader bean
+
+D)
+@EnableYaml annotation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B' and 'C'
+
+The @Profile annotation may be used in any of the following ways:
+
+* as a type-level annotation on any class directly or indirectly annotated with @Component, including @Configuration classes
+
+@Component
+@Profile("dev")
+public class DevDatasourceConfig {
+
+}
+
+@Component
+@Profile("!prod")
+public class DevDatasourceConfig {
+
+}
+
+* as a method-level annotation on any @Bean method 
+
+@Configuration
+class MyConfiguration {
+
+    @Bean
+    @Profile("test")
+    Service mockService() {
+      return new MockService();
+    }
+}
+
+ 
+
+* as a meta-annotation, for the purpose of composing custom stereotype annotations 
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html

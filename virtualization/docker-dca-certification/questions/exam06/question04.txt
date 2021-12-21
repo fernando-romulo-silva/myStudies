@@ -1,7 +1,7 @@
 
 What is the possible option for running the multiple copies of a composed file in one host?
 
-a) You need to set a custom project name by using the command "-A- command- line"
+a) You need to set a custom project name by using the command "docker compose -p(--project-name) COMPOSE_PROJECT_NAME"
 ​
 b) A custom project name is set by using the command "COMPOSE_PROJECT_NAME"
 ​
@@ -54,7 +54,8 @@ For running the multiple copies of a composed file on one host two options are a
 
 1. You need to set a custom project name by using the command:
 
-$ docker compose  -p, --project-name PROJECT_NAME     
+$ docker compose -p(--project-name) COMPOSE_PROJECT_NAME
+
 
 2. A custom project name is set by using the command "COMPOSE_PROJECT_NAME"
 

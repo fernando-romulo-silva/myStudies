@@ -1,0 +1,63 @@
+Classes annotated with ________ will be detected by component scanning.
+
+A)
+@Bean
+
+B)
+@Component
+
+C)
+@Configuration
+
+D)
+@Scanned
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B' and 'C' 
+
+Component scan picks up classes annotated with @Component or stereotype annotations (which are simply meta annotated with @Component) like @Configuration. 
+
+@Bean is applied at method level. 
+
+The annotation @Scanned does not exist in Spring.

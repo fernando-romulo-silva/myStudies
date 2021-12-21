@@ -1,0 +1,77 @@
+In Spring MVC, which of the following may be used as Controller return values by default?
+
+A)
+ServletResponse
+
+B)
+Model
+
+C)
+ModelAndView
+
+D)
+void
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B', 'C' and 'D' 
+
+ServletResponse should not be returned by the method, instead it should be added as an argument and written to inside the method. 
+
+@GetMapping("/goToViewPage")
+public ModelAndView passParametersWithModelAndView() {
+    ModelAndView modelAndView = new ModelAndView("viewPage");
+    modelAndView.addObject("message", "Baeldung");
+    return modelAndView;
+}
+
+@GetMapping("/showViewPage")
+public String passParametersWithModel(Model model) {
+    Map<String, String> map = new HashMap<>();
+    map.put("spring", "mvc");
+    model.addAttribute("message", "Baeldung");
+    model.mergeAttributes(map);
+    return "viewPage";
+}
+
+https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#mvc-ann-return-types

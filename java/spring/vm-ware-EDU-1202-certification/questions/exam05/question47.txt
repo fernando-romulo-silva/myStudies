@@ -1,0 +1,67 @@
+Which of the following are valid targets for the @Profile annotation?
+
+A)
+any method
+
+B)
+bean classes
+
+C)
+bean methods
+
+C)
+bean fields
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers 'B' and 'C'
+
+The @Profile annotation may be used in any of the following ways:
+
+* as a type-level annotation on any class directly or indirectly annotated with @Component, including @Configuration classes 
+
+* as a meta-annotation, for the purpose of composing custom stereotype annotations 
+
+* as a method-level annotation on any @Bean method 
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html
