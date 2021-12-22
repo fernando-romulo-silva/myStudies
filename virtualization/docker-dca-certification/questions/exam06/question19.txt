@@ -48,6 +48,7 @@ d) docker swarm update --autolock=true
 
 
 
+
 Answer 'd'
 
 To enable autolock on an existing swarm, set the autolock flag to true.
