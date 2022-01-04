@@ -52,6 +52,6 @@ d) Use --link to access the containers on the bridge network Correct
 
 
 
-'C'
+The correct answer is 'C'
 
 You can connect your host with a bridge and connect that containers on the bridge network.

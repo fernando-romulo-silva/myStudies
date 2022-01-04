@@ -48,7 +48,7 @@ b) FALSE
 
 
 
-'B'
+The correct answer is 'B'
 
 In principle, there should only be one CMD command in your Dockerfile. 
 

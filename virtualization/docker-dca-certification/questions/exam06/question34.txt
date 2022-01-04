@@ -52,7 +52,7 @@ d) Optimizing images by copying artifacts selectively from previous stages
 
 
 
-'D'
+The correct answer is 'D'
 
 Multistage builds are useful to anyone who has struggled to optimize Dockerfiles while keeping them easy to read and maintain.
 

@@ -48,7 +48,7 @@ d) export DOCKER_CONTENT_TRUST=1
 
 
 
-'D'
+The correct answer is 'D'
 
 For the Docker client to know to sign a image to a trusted repository, you will need to set an environment variable pointing to it:
 

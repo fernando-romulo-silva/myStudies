@@ -51,7 +51,7 @@ d) docker service --mount-volume
 
 
 
-'B'
+The correct answer is 'B'
 
 Use the --mount-add or --mount-rm options add or remove a service’s bind mounts or volumes.
 

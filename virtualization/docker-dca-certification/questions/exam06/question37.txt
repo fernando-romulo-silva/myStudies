@@ -51,7 +51,7 @@ d) Sandbox
 
 
 
-'B'
+The correct answer is 'B'
 
 he Docker Container Network Model provides an open interface for vendors and the community to build network drivers. 
 The complementary evolution of Docker and SDN technologies is providing more options and capabilities every day. 
