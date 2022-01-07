@@ -50,7 +50,8 @@ d) export DOCKER_CONTENT_TRUST=1
 
 Answer 'd'
 
-For the Docker client to know to use trusted server (environment), you will need to set an environment variable pointing to it:
+For the Docker client to know to use trusted server (environment), 
+you will need to set an environment variable pointing to it:
 
 $ export DOCKER_CONTENT_TRUST=1
 

@@ -48,7 +48,7 @@ d) The RUN directive automatically runs a command when a new container gets crea
 
 
 
-Answer 'b'
+Answer 'C'
 
 The docker run command first creates a writeable container layer over the specified image, and then starts it using the specified command. 
 

@@ -51,7 +51,7 @@ d) docker node update --availability drain
 
 
 
-'C'
+The correct answer is 'D'
 
  When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
 It also prevents the scheduler from assigning tasks to the node.

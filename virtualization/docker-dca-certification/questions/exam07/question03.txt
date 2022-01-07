@@ -51,6 +51,9 @@ d) It is used for the listing of downloaded images.
 Answer 'b'
 
 For downloading an image the command used is docker pull.
+
+$  docker pull debian:latest
+ 
  
 For providing the information about container the command used is docker stats. 
 
