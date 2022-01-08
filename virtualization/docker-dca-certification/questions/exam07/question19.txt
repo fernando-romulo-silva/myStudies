@@ -53,6 +53,8 @@ Answer 'b'
 
 1 - Add param "-D" or "--debug"  to enable debug mode
 
+Or
+
 2 - You can create the file at /etc/docker/daemon.json if it does not already exist.
 
 Add the following code snippet:

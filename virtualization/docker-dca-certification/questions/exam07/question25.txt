@@ -48,10 +48,17 @@ d) docker image history
 
 
 
-Answer 'c'
+Answer 'C'
 
 Docker inspect provides detailed information on constructs controlled by Docker.
 
 By default, docker inspect will render results in a JSON array.
 
 --format , -f		Format the output using the given Go template
+
+Example (two images):
+
+$ docker image inspect  mysql:5.7 alpine:3.6
+
+
+

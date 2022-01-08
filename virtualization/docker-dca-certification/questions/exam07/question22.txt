@@ -59,6 +59,6 @@ services:
     image: hello-world
     deploy:
       placement:
-         - node.role==worker 
+         - node.role: manager 
 
 
