@@ -61,7 +61,6 @@ You can specify that a volume should be read-only by appending :ro to the -v swi
 
 $ docker volume create volume-name
 
-
 $ docker run -v volume-name:/path/in/container:ro my/image
 
 

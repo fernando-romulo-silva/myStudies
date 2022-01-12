@@ -48,7 +48,7 @@ FALSE
 
 
 
-Answer 'D'
+Answer 'B'
 
 Production hosts using the devicemapper storage driver must use direct-lvm mode. 
 
