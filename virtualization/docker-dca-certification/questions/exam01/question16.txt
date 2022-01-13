@@ -1,5 +1,5 @@
 
-Which of these sentences are true about signing images?
+Which of these sentences are true about signing images (select all correct)?
 
 a) Image signing ensures image ownership.
 
