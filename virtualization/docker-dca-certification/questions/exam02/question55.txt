@@ -50,8 +50,12 @@ They use an external, object-based store.
 
 
 
-The correct answers are A and C
+The correct answers are A, B and C
 
 They store data in regular files on the host machine. 
 
 They are used by overlay2 and aufs .
+
+They are efficient with write-heavy workloads
+
+

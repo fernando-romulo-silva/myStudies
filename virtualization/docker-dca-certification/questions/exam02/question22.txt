@@ -51,3 +51,14 @@ docker history
 The correct option is D
 
 Docker history show the history of an image.
+
+$ docker history modular-java-tests-iso:latest
+IMAGE          CREATED        CREATED BY                                      SIZE      COMMENT
+fd809ad91774   2 days ago     /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B        
+7a2447ac2b8b   2 days ago     /bin/sh -c #(nop) COPY file:e0c70e858407421e…   1.8kB     
+808b3ed2a2b0   2 days ago     /bin/sh -c #(nop) COPY multi:067583134130327…   4.98MB    
+eca5cc474853   2 days ago     /bin/sh -c #(nop) COPY dir:4d2e32e4cc3638b73…   51MB      
+9c0d23fb5e7b   2 days ago     /bin/sh -c #(nop) WORKDIR /deployment           0B        
+6dbb9cc54074   9 months ago   /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B        
+<missing>      9 months ago   /bin/sh -c #(nop) ADD file:8ec69d882e7f29f06…   5.61MB 
+

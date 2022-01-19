@@ -50,7 +50,7 @@ D) There is the availability of millions of images in the Docker hub.
 
 A is the correct option
 
-All the statements, Public registry also called a docker hub, Docker hub permits you for storing images privately, 
+Public registry also called a docker hub, Docker hub permits you for storing images privately, 
 
 There is the availability of millions of images in docker hub are true about docker. 
 

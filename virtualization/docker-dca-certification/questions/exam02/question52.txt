@@ -1,4 +1,5 @@
-By default manager nodes also run services as worker nodes, but you can configure them to run manager tasks exclusively and be manager-only nodes.
+By default manager nodes also run services as worker nodes, 
+but you can configure them to run manager tasks exclusively and be manager-only nodes.
 
 A)
 TRUE

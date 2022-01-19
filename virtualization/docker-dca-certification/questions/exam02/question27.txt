@@ -47,6 +47,7 @@ Keep a backup copy of the image on another repository.
 
 
 
+
 The correct answer is B
 
 Tag Immutability enables customers to rely on the descriptive tags of an image as a reliable mechanism to track and uniquely identify images.

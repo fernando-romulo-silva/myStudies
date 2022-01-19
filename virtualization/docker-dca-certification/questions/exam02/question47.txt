@@ -51,6 +51,13 @@ FALSE
 
 The correct answer is A
 
+
+To bypass the routing mesh, you must use the long --publish service and set mode to host
+
+To use an external load balancer without the routing mesh, set --endpoint-mode to dnsrr
+
+--------
+
 By default, swarm services which publish ports do so using the routing mesh.
 
 To bypass the routing mesh, you can start a service using DNS Round Robin (DNSRR) mode, 

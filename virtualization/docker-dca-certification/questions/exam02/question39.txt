@@ -52,3 +52,4 @@ The correct answer is B
 
 The '/var/lib/' folder holds state information pertaining to an application or the system, 
 so the '/var/lib/docker/swarm' has the swarm state and logs. 
+

@@ -9,7 +9,7 @@ Label a container that will run as an executable
 C)
 Provide defaults for an executing container
 ​
-C)
+D)
 Adds metadata to an image
 
 
@@ -48,7 +48,7 @@ Adds metadata to an image
 
 
 
-The correct answer is C
+The correct answer is D
 
 Labels are a mechanism for applying metadata to Docker objects, including:
 

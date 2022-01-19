@@ -53,3 +53,12 @@ The docker logs command shows information logged by a running container.
 The docker service logs command shows information logged by all containers participating in a service. 
 The information that is logged and the format of the log depends almost entirely on the container’s endpoint command.
 
+docker logs [CONTAINER]
+
+$ docker logs jmodular-java-tests-1
+
+13:37:15.464 [main] INFO  modular.java.test.App - hello, the application has started
+13:37:15.466 [main] ERROR modular.java.test.App - Hello World!
+13:37:15.466 [main] INFO  modular.java.test.App - the application is now complete
+
+

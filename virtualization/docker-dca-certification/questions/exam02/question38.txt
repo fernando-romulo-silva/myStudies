@@ -2,16 +2,16 @@ Which of the following commands starts a Redid container and configures it to al
 restart unless it is explicitly stopped or Dockers is restarted?
 
 A)
-docker run -d --restart-policy unless-stopped redid'
+docker run -d --restart-policy unless-stopped redid
 ​
 B)
-docker run -d --restart omit-stopped redis'
+docker run -d --restart omit-stopped redis
 ​
 C)
-docker run -d --restart unless-stopped redis'
+docker run -d --restart unless-stopped redis
 ​
 D)
-docker run -d --failure omit-stopped redis'
+docker run -d --failure omit-stopped redis
 
 
 
@@ -51,6 +51,7 @@ docker run -d --failure omit-stopped redis'
 The correct answer is C
 
 $ ​docker run -d --restart unless-stopped redis
+
 
 The value of the --restart flag can be any of the following:
 

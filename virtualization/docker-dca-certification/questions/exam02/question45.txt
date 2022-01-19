@@ -87,3 +87,5 @@ REJECTED - The worker node rejected the task.
 ORPHANED -The node was down for too long.
 
 REMOVE - The task is not terminal but the associated service was removed or scaled down.
+
+

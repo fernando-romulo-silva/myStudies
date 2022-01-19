@@ -48,9 +48,10 @@ D) All nodes must have fixed hostname
 
 
 
-The correct option is B e C
+The correct option is B, C and D
 
 You can install DTR on-premises or on a cloud provider. To install DTR, all nodes must:
 
-Be a worker node managed by UCP (Universal Control Plane). See Compatibility Matrix for version compatibility.
+Be a worker node managed by UCP (Universal Control Plane). 
+See Compatibility Matrix for version compatibility.
 Have a fixed hostname.
