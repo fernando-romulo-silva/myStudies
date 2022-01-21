@@ -57,6 +57,7 @@ C is Correct
 The on-failure restart policy lets you specify how many retries should be attempted. 
 
 Docker will give up and leave the container in a stopped state if it fails to start multiple times in succession.
+Example:
 
 $ docker run httpd:latest --restart on-failure:5
 

@@ -55,7 +55,13 @@ docker registries
 
 Answer 'D'
 
+Docker registry could be hosted by a third party, as public or private registry.
+
+Docker repository is a collection of different docker images with same name, 
+that have different tags. Tag is alphanumeric identifier of the image within a repository.
+
 Docker Hub is a cloud-hosted version of Docker Registry. 
+
 A Docker user can opt for Docker Registry, which is a stateless, open source and scalable server-side application, 
 if they prefer to maintain the storage and distribution of Docker images instead of relying on Docker's service.
 

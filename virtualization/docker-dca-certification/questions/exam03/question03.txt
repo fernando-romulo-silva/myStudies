@@ -59,5 +59,12 @@ All of the above
 
 D is Correct
 
-There are four important states of a docker container, they are running, caused, restarting and exited. 
+There are four important states of a docker container, they are: 
+
+* running
+* paused
+* restarting
+* exited
+
+ 
 

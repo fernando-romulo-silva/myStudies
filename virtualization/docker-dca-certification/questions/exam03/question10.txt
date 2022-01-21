@@ -56,3 +56,5 @@ C is Correct
 The ENV instruction sets the environment variable <key> to the value <value>, on the container. 
 
 This value will be in the environment for all subsequent instructions in the build stage and can be replaced inline in many as well. 
+
+$ docker run --name test-mysql --cpus 0.75  --env MYSQL_ROOT_PASSWORD=root --detach --publish 3306:3306 mysql:5.7

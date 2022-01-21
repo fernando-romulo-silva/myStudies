@@ -58,3 +58,5 @@ D is correct
 
 The param --publish or -p publish a container's port(s) to the host
 
+$ docker run --name test-mysql --detach --publish 3306:3306 mysql:latest
+

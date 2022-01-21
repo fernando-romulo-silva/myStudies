@@ -57,4 +57,4 @@ A correct
 
 Return low-level information on Docker objects 
 
-$ docker inspect --format='{{.Config.Image}}'
+$ docker inspect --format='{{.Config.Image}}' mysql

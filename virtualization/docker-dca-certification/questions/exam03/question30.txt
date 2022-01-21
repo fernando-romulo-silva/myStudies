@@ -42,6 +42,12 @@ FALSE
 
 
 
+
+
+
+
+
+
 B is correct
 
 ARG and FROM can start a Dockerfile

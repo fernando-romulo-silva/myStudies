@@ -1,17 +1,17 @@
-The output of which command can be used to find the architecture 
-and operating system an image is compatible with?
+Which of the following option is used to specify a repository and a 
+tag for saving the image after the build is done?
 ​
 A)
-docker image ls
+-f
 ​
 B)
-docker image inspect --filter '{{.Architecture}} {{.OS}}'
+-m
 ​
 C)
-docker image inspect --format '{{ .Architecture }} {{ .Os }}' alpine
+-t
 ​
 D)
-docker image info
+-p
 
 
 
@@ -50,8 +50,12 @@ docker image info
 
 C is correct
 
-Docker inspect provides detailed information on constructs controlled by Docker.
+$ docker tag <Image-ID> <desired Name:Tag>
 
-By default, docker inspect will render results in a JSON array.
+To specify a value for repository and tag of the image, we use the --tag or -t flag with the $ docker build command. 
 
---format , -f		Format the output using the given Go template
+$ docker build -t my-docker-image .
+
+The format of the value for this flag is <repository>:<tag>. 
+If we leave the :<tag> part out, Docker will use the latest value for the <tag> part implicitly.
+

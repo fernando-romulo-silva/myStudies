@@ -50,6 +50,7 @@ FALSE
 
 A is correct
 
-Say, if any of master or worker node fails, SwarmKit reschedules its tasks(which are nothing but containers) onto a different node.
+Say, if any of master or worker node fails, 
+SwarmKit reschedules its tasks(which are nothing but containers) onto a different node.
 
  

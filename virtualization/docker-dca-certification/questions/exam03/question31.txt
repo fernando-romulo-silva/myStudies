@@ -42,6 +42,12 @@ FALSE
 
 
 
+
+
+
+
+
+
 A is correct
 
 RUN instruction allows you to install your application and packages required for it. 

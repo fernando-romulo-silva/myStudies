@@ -1,4 +1,5 @@
-Which of the following scenarios would still allow the quorum to have maintenance in a swarm cluster? (Choose two)
+Which of the following scenarios would still allow the quorum to have maintenance in a swarm cluster? 
+(Choose two)
 
 ​A)
 A 3-node cluster with 1 node down.

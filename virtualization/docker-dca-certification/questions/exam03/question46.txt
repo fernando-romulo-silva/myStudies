@@ -1,6 +1,5 @@
 Docker's default container format is called?
 
-​
 A)
 dockertainer
 ​

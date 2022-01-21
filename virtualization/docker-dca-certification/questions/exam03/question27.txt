@@ -45,9 +45,14 @@ FALSE
 
 
 
+
+
+
 B is correct
 
 Docker image security scanning is a process of identifying known security vulnerabilities in the packages listed in your Docker image. 
 
+To start scanning, you need to have a Docker ID and be logged in via Docker Desktop. You’ll get 10 free container images tests per month.
 
+$ docker scan --login
 

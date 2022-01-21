@@ -54,7 +54,7 @@ docker service create -p 8080:80 --mode host nginx
 
 Answer 'C'
 
-You can publish a service task’s port directly on the swarm node where that service is running
+You can publish a service task’s port directly on the swarm node where that service is running.
 The following example runs nginx as a service on each node in your swarm and exposes nginx port locally on each swarm node:
 
 $ docker service create -p mode=host,published=8082,target=80 nginx

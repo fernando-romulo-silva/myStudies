@@ -70,4 +70,7 @@ A name component may not start or end with a separator.
 To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”:
 
 $ docker tag 0e5574283393 fedora/httpd:version1.0
- 
+
+To tag a local image with name “httpd” into the “fedora” repository with “version1.0”:
+
+$ docker tag httpd fedora/httpd:version1.0 

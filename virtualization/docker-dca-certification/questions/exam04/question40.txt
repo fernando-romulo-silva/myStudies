@@ -50,4 +50,5 @@ FALSE
 
 A is correct
 
-A Docker image consists of several layers. Each layer corresponds to certain instructions in your Dockerfile 
+A Docker image consists of several layers. 
+Each layer corresponds to certain instructions in your Dockerfile 
