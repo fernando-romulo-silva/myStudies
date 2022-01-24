@@ -57,7 +57,7 @@ docker info is used for getting the data information about the docker that is in
 Information displayed includes the kernel version, storage driver, number of containers and images. 
 The number of images shown is the number of unique images. 
 
-// line 75, overlay
+// line 75, overlay2
 
 $ docker info 
 

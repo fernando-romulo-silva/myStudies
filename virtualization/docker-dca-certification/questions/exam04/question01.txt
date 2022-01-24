@@ -6,10 +6,10 @@ Docker is having efficient operation activity.
 B)
 Docker is having easy modeling
 ​
-D)
+C)
 Docker provides version control.
 ​
-C)
+D)
 All of the above
 
 

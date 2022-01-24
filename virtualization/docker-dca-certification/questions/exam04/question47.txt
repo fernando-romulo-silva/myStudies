@@ -48,7 +48,7 @@ FALSE
 
 
 
-A is correct
+B is correct
 
 You can configure DTR to have single sign-on (SSO) with UCP, so that users only have to authenticate once.
 

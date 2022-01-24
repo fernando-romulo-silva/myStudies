@@ -50,8 +50,8 @@ All of the above
 
 A is Correct
 
-'$ Sudo docker run container name' is not defined command. 
+Because '$ Sudo docker run -i -t alpine /bin/bash' is the command used for running the image as the container. 
 
-'$ Sudo docker run -i -t alpine /bin/bash' is the command used for running the image as the container. 
+'$ Sudo docker run container name' is not defined command. 
 
 '$ docker PS' is the only command used for seeing all the running containers in docker. 
