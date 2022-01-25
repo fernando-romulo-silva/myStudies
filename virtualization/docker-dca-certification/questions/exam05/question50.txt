@@ -50,8 +50,8 @@ FALSE
 
 The correct option is 'A'
 
-Docker provides restart policies to control whether your containers start automatically when they exit, or when Docker restarts.
-But only for container. 
+Docker provides restart policies to control whether your containers start automatically when they exit, 
+or when Docker restarts, but only for container. 
 
 
 

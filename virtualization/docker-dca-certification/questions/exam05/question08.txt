@@ -51,7 +51,7 @@ Ops client bundels and dev client bundles.
 
 A is Correct
 
-A client bundle is a group of certificates downloadable directly from the 
+A client bundle is a GROUP OF CERTIFICATES downloadable directly from the 
 Docker Universal Control Plane (UCP) user interface within the admin section for “My Profile”. 
 
 This allows you to authorize a remote Docker engine to a specific user account managed in Docker EE.
