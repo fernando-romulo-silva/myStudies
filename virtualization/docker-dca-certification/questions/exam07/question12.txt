@@ -1,15 +1,13 @@
 
-Which of the following is NOT TRUE about running a stack of services?
+Which of these lines creates a volume named DATA?
 
-a) ​The docker-compose.yaml file can be used both on docker stack and docker-compose.
-​
-b) The docker-compose.yaml file must be version 3.0 or higher in order to use it in a stack.
-​
-c) Docker stack can run without docker swarm
-​
-d) A stack would run across all nodes on a Swarm, while running on docker-compose would run in a single node, even if it is a swarm node.
+a) docker volume create --driver local DATA.
 
+b) docker create --volume DATA.
 
+c) Volumes must be created during container execution.
+
+d) None of the options are valid.
 
 
 
@@ -48,8 +46,11 @@ d) A stack would run across all nodes on a Swarm, while running on docker-compos
 
 
 
-Answer 'c'
 
-Docker stack is a command that's embedded into the Docker CLI. 
-It lets you manage a cluster of Docker containers through Docker Swarm.
+
+
+
+Answer 'a' - Create a volume and then configure the container to use it:
+
+$ docker volume create DATA
 

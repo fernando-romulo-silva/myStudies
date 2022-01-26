@@ -1,10 +1,17 @@
-You can use local file system if you're deploying DTR with high-availability.
+Which format is the output returned, when the --pretty flag is 
+not specified for the docker service inspect command?
 
-A)
-TRUE
+​A)​
+yaml
 ​
 B)
-FALSE
+json
+​
+C)
+txt
+​
+D)
+xml
 
 
 
@@ -46,14 +53,8 @@ FALSE
 
 
 
+The correct option is 'B'
 
+Docker inspect provides detailed information on constructs controlled by Docker.
 
-B is correct
-
-By default, DTR creates a volume named dtr-registry-<replica-id> to store your images using the local filesystem. 
-You can customize the name and path of the volume used by DTR, using the docker/dtr reconfigure --dtr-storage-volume option.
-
-If you’re deploying DTR with high-availability, you need to use NFS or any other centralized storage backend so that 
-all your DTR replicas have access to the same images.
-
- 
+By default, docker inspect will render results in a JSON array.

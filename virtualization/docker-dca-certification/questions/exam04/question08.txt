@@ -1,16 +1,17 @@
-Which of the following is not backed up when performing a Docker Trusted Registry (DTR) metadata backup?
+What are the two types of UCP client bundles?
 
-A)
-DTR Configurations
+​A)
+Admin user certificate bundles and user certificate bundles.
 ​
 B)
-Repository metadata.
+Docker CLI bundles and Docker web Ui bundles.
 ​
 C)
-Docker images.
+Docker UCP Client bundles and DTR client bundles.
+
 ​
 D)
-Role-based access control (RBAC) settings.
+Ops client bundels and dev client bundles.
 
 
 
@@ -48,9 +49,13 @@ Role-based access control (RBAC) settings.
 
 
 
-C is Correct
+A is Correct
 
-The backup up is on configurations, to backup a image use docker save
+A client bundle is a GROUP OF CERTIFICATES downloadable directly from the 
+Docker Universal Control Plane (UCP) user interface within the admin section for “My Profile”. 
 
+This allows you to authorize a remote Docker engine to a specific user account managed in Docker EE.
+
+It use admin user certificate bundles and user certificate bundles
 
 

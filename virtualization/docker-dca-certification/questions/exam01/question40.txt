@@ -1,21 +1,19 @@
+Recent problems with the service called 'my_api' in your cluster has caused your development team to request 
+its removal from the cluster while they address the problems. 
 
-What is required to deploy DTR (Docker Trusted Registry) ?
+Which command will you need to execute to remove it? Choose the correct answer:
 
-a) A Docker Enterprise license from Docker Hub and an appropriate repository URL
-
-b) Docker Enterprise Engine and Docker UCP
-
-c) Docker Engine, a DTR license, and Docker Content Trust
-
-d) All of the preceding options
-
-
-
-
-
-
-
-
+​A)
+docker swarm --remove=my_api
+​
+B)
+docker rm my_api
+​
+C)
+docker swarm remove my_api
+​
+D)
+docker service rm my_api
 
 
 
@@ -48,12 +46,11 @@ d) All of the preceding options
 
 
 
-Answer 'a' and 'b'
 
-'a' 
-The DTR cache is going to be deployed as a Docker service
 
-'b'
-We’ll manage the cache configuration using a Docker configuration, and the TLS certificates using Docker secrets. 
-This allows you to manage the configurations securely and independently of the node where the cache is actually running.
+The correct answer is D
+
+You can easylly delete the service from the swarm:
+
+$ docker service rm helloworld
 

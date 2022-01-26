@@ -1,16 +1,14 @@
 
-Which of the following commands can be used to see IPv4 subnet of a network?
-
-a) docker info network
-​
-b) docker network info
-​
-c) docket network ls
-​
-d) docker network inspect
+Which concept routes requests to containers running for a deployed service?
 
 
+a) An ingress overlay network is used to route requests to different services' backends using a round-robin endpoint by default.
 
+b) A docker_gwbridge network is used to communicate with containers on different hosts.
+
+c) An ingress overlay network is used to route requests to different services' backends using the service's virtual IP by default.
+
+d) We must use a host network to route requests to containers.
 
 
 
@@ -48,7 +46,13 @@ d) docker network inspect
 
 
 
-Answer 'd'
 
-$ docker network inspect -f '{{json .Containers}}' c6b0cccfd892 | jq '.[] | .Name + ":" + .IPv4Address'
+
+
+
+Answer 'c'
+
+Docker Engine swarm mode makes it easy to publish ports for services to make them available to resources outside the swarm. 
+All nodes participate in an ingress routing mesh.
+
 

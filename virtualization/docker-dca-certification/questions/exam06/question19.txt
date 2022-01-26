@@ -1,12 +1,14 @@
-Which of the following in the docker command to enable autolock on an existing swarm cluster?
 
-a) docker swarm autolock
+A user is having problems running Docker. 
+Which of the following will start Docker in debug mode?
 
-b) docker swarm update --autolock-swarm=true
+a) Start the 'dockerd' process manually with the '--raw-logs' flag set to debug
 ​
-c) docker swarm --autolock=true
+b) Set the debug key to true in the 'daemon.json' file.
+
+c) Start the 'dockerd' process manually with the '--logging' flag set to debug
 ​
-d) docker swarm update --autolock=true
+d) Set the logging key to debug in the 'daemon.json' file.
 
 
 
@@ -47,18 +49,18 @@ d) docker swarm update --autolock=true
 
 
 
+Answer 'b'
 
+1 - Add param "-D" or "--debug"  to enable debug mode
 
-Answer 'd'
+Or
 
-To enable autolock on an existing swarm, set the autolock flag to true.
+2 - You can create the file at /etc/docker/daemon.json if it does not already exist.
 
-$ docker swarm update --autolock=true
+Add the following code snippet:
 
-To disable autolock, set --autolock to false. 
+{
+    "debug": true
+}
 
-The mutual TLS key and the encryption key used to read and write Raft logs are stored unencrypted on disk. 
-
-There is a trade-off between the risk of storing the encryption key unencrypted at rest and the convenience 
-of restarting a swarm without needing to unlock each manager.
 

@@ -1,28 +1,14 @@
-Arrange the copy-on-write operation steps below in the correct sequence;
+You can use local file system if you're deploying DTR with high-availability.
 
-A) Any modifications are made to this copy of the file, 
-and the container cannot see the read-only copy of the file that exists in the lower layer.
-
-B) Perform a copy_up operation on the first copy of the file that is found, 
-to copy the file to the container's writable layer.
-
-C) Search through the image layers for the file to update. 
-The process starts at the newest layer and works down to the base layer one layer at a time. 
-When results are found, they are added to a cache to speed future operations.
-
-
-
-​A)
-B, C, A
+A)
+TRUE
 ​
 B)
-C, B, A
-​
-C)
-A, B, C
-​
-D)
-B, A, C
+FALSE
+
+
+
+
 
 
 
@@ -64,3 +50,10 @@ B, A, C
 
 B is correct
 
+By default, DTR creates a volume named dtr-registry-<replica-id> to store your images using the local filesystem. 
+You can customize the name and path of the volume used by DTR, using the docker/dtr reconfigure --dtr-storage-volume option.
+
+If you’re deploying DTR with high-availability, you need to use NFS or any other centralized storage backend so that 
+all your DTR replicas have access to the same images.
+
+ 

@@ -1,12 +1,13 @@
-The feature of limiting memory while running a container is provided by which of the following?
 
-a) cgroups
+Which of the following is NOT TRUE about running a stack of services?
 
-b) namespaces
+a) ​The docker-compose.yaml file can be used both on docker stack and docker-compose.
 ​
-c) systemd
+b) The docker-compose.yaml file must be version 3.0 or higher in order to use it in a stack.
 ​
-d) selinux
+c) Docker stack can run without docker swarm
+​
+d) A stack would run across all nodes on a Swarm, while running on docker-compose would run in a single node, even if it is a swarm node.
 
 
 
@@ -47,15 +48,8 @@ d) selinux
 
 
 
+Answer 'c'
 
-Answer 'a'
+Docker stack is a command that's embedded into the Docker CLI. 
+It lets you manage a cluster of Docker containers through Docker Swarm.
 
-Cgroups provide resource limitation and reporting capability within the container space. 
-They allow granular control over what host resources are allocated to the containers and when they are allocated.
-Common control groups:
-
-* CPU
-* Memory
-* Network Bandwidth
-* Disk
-* Priority

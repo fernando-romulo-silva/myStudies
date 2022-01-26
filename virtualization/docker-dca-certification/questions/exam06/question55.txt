@@ -1,16 +1,17 @@
-Which instruction will execute any commands in a new layer on top of the current image and commit the results?
 
-a) ​ARG
+Docker is written in which programming language?
+
+A)
+Go
 ​
-b) FROM
+B)
+.Net
 ​
-c) RUN
-
-d) CMD
-
-
-
-
+C)
+Python
+​
+D)
+C
 
 
 
@@ -52,13 +53,9 @@ d) CMD
 
 
 
-Answer 'C'
 
-The RUN directive is used to execute commands during the image build time. 
-This will create a new layer on top of the existing layer, execute the specified command, and commit the results to the newly created layer. 
-The RUN directive can be used to install the required packages, update the packages, create users and groups, and so on.
+Answer 'A'
 
-The ENTRYPOINT or CMD that you specify in your Dockerfile identify the default executable for your image. 
-However, the user has the option to override either of these values at run time.
+Docker is written in the Go programming language and takes advantage of several features of the Linux kernel to deliver its functionality.
 
 

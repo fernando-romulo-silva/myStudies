@@ -1,18 +1,16 @@
+What Dockerfile option LABEL does?
 
-Which methods are allowed to publish applications on Docker Enterprise?
-
-a) We can use Interlock.
-
-b) We can use an Ingress Controller.
-
-c) We will publish each application container.
-
-d) We can use the host mode to publish applications as if they were running directly at the host level.
-
-
-
-
-
+​A)
+Tells Docker how to test a container to check that it is still working.
+​
+B)
+Label a container that will run as an executable
+​
+C)
+Provide defaults for an executing container
+​
+D)
+Adds metadata to an image
 
 
 
@@ -48,12 +46,19 @@ d) We can use the host mode to publish applications as if they were running dire
 
 
 
-Answer 'a', 'c', and 'd'
-
-A)
-Interlock is an application routing proxy service for Docker. 
-Fully integrates with Docker (Swarm, Services, Secrets, Configs) Enhanced configuration (context roots, TLS, zero downtime deploy, rollback) 
-Support external load balancers (nginx, haproxy, etc) via extensions.
 
 
+The correct answer is D
 
+Labels are a mechanism for applying metadata to Docker objects, including:
+
+* Images
+* Containers
+* Local daemons
+* Volumes
+* Networks
+* Swarm nodes
+* Swarm services
+
+You can use labels to organize your images, record licensing information, annotate relationships between containers, 
+volumes, and networks, or in any way that makes sense for your business or application.

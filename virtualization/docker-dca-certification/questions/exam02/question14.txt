@@ -1,16 +1,16 @@
-Which of the following namespaces is not enabled by default?
-
-A)
-pid
+Which of the following gives a web dashboard to manage docker cluster?
 ​
-B)
-uts
+​A)
+Docker swarm mode
+​
+B)​
+Docker UCP
 ​
 C)
-user
+Docker-compose
 ​
 D)
-mnt
+DTR
 
 
 
@@ -49,17 +49,11 @@ mnt
 
 
 
-The correct option is C
 
-Docker uses a technology called namespaces to provide the isolated workspace called the container. 
-When you run a container, Docker creates a set of namespaces for that container.
-These namespaces provide a layer of isolation. 
-Each aspect of a container runs in a separate namespace and its access is limited to that namespace.
+B is correct
 
-Docker Engine uses the following namespaces on Linux:
+Universal Control Plane (UCP)
 
-PID namespace for process isolation.
-NET namespace for managing network interfaces.
-IPC namespace for managing access to IPC resources.
-MNT namespace for managing filesystem mount points.
-UTS namespace for isolating kernel and version identifiers.
+Docker Universal Control Plane (UCP) is an enterprise onpremise solution that enables IT operations teams to deploy and 
+manage their Dockerized applications in production, while giving developers the agility and portability they need, all from within the enterprise firewall.
+

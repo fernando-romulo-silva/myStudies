@@ -1,17 +1,16 @@
-In a Docker Trusted Registry, how would a user prevent an image, for examle 'nginx:latest' 
-from being overwritten by another user with push access to the repository ?
-
+Which of the following will put the Docker engine into debug mode?
+​
 A)
-Tag the image with 'nginx:immutable'
+echo '{"debug": true}' > /var/lib/docker/daemon.json ; sudo kill -HUP
 ​
 B)
-Remive push access from all other users
+echo '{"debug": true}' > /etc/docker/config.json ; sudo kill -HUP
 ​
 C)
-User the DTR web UI to make the tag immutable
+echo '{"debug": true}' > /var/lib/docker/config.json ; sudo kill -HUP
 ​
 D)
-Keep a backup copy of the image on another repository
+echo '{"debug": true}' > /etc/docker/daemon.json ; sudo kill -HUP
 
 
 
@@ -48,13 +47,10 @@ Keep a backup copy of the image on another repository
 
 
 
-The correct answer is C
 
-Tag Immutability enables customers to rely on the descriptive tags of an image as a reliable mechanism to track and uniquely identify images.
 
-Docker tags are mutable named references to Docker images, much like branch refs in Git.
 
-$ docker pull debian:buster 
+D is correct
 
-DTR web UI help to make the tag immutable
+The default daemon configuration file is "/etc/docker/daemon.json" and the property is "debug": true,
 

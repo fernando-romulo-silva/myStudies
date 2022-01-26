@@ -1,13 +1,17 @@
-Which command is used to create an overlay network that can be used with swarm services or 
-standalone containers to communicate with other standalone containers running on other Docker daemons?
 
-a) docker network create -d overlay --attachable 'network name'
+Which file is used to configure the default logging driver?
 
-b) docker-network create 'network name'
+A)
+/opt/docker/daemon.json
 ​
-c) docker make attachable overlay network 'network name'
+B)
+/var/docker/daemon.json
 ​
-d) docker network 'network name' create -d overlay --attachable
+C)
+/etc/docker/daemon.json
+​
+D)
+/etc/docker/startup.json
 
 
 
@@ -50,17 +54,17 @@ d) docker network 'network name' create -d overlay --attachable
 
 
 
+Answer 'C'
 
+To configure the Docker daemon to default to a specific logging driver, set the value of log-driver to the name of the logging driver in the daemon.json :
 
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3",
+    "labels": "production_status",
+    "env": "os,customer"
+  }
+}
 
-
-Answer 'A'
-
-Creates a new network. The DRIVER accepts bridge or overlay which are the built-in network drivers.
-
-$ docker network create [OPTIONS] NETWORK
-
-The --attachable parameter enable manual container attachment, that permits swarm services or 
-standalone containers to communicate with other standalone containers running on other Docker daemons
-
-$ docker network create --driver=overlay --attachable core-infra

@@ -1,16 +1,12 @@
-What is the docker command to find the current logging driver for a running container?
+What are the requirements to install Docker Trusted Registry (DTR)? (Select all that apply)
 
-​A)
-docker info
+a) ​Make sure the port 8080 and 8443 are open on the node
 ​
-B)
-docker config
+b) All nodes must have a fixed hostname
 ​
-C)
-docker inspect
+c) DTR can be installed on-premises or on a cloud provider
 ​
-D)
-docker status
+d) All nodes must be a worker node managed by Universal Control Plan
 
 
 
@@ -48,35 +44,16 @@ docker status
 
 
 
-C is Correct
-
-Docker includes multiple logging mechanisms to help you get information from RUNNING CONTAINER and services. 
-These mechanisms are called logging drivers. 
-Each Docker daemon has a default logging driver, which each container uses unless you configure it to use a different logging driver, or “log-driver” for short.
-But for the a RUNNING  CONTAINER, you need do it:
-
-$ docker inspect murachs-mysql | grep -i -C 5 log
-...
-        "AppArmorProfile": "docker-default",
-        "ExecIDs": null,
-        "HostConfig": {
-            "Binds": null,
-            "ContainerIDFile": "",
-            "LogConfig": {
-                "Type": "json-file",
-                "Config": {}
-            },
-            "NetworkMode": "default",
-            "PortBindings": {
-...
 
 
 
-A is wrong because of the command bellow it's the docker daemon's log driver:
 
-$ docker info --format '{{.LoggingDriver}}'
+Answers 'b', 'c' and 'd'
 
-or
+You can install UCP on-premises or on a cloud provider. Common requirements:
 
-$ docker system info | grep -i log
+Docker EE Engine version 18.09
+Linux kernel version 3.10 or higher
+A static IP address for each node in the cluster
+
 

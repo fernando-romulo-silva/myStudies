@@ -1,16 +1,16 @@
-From the below-mentioned option, what are the essential feature of Docker ?
+From the below-mentioned option which of the following is not the drawbacks of Docker?
 
 ​A)
-Docker is having efficient operation activity.
+Docker does not provide a storage choice.
 ​
 B)
-Docker is having easy modeling
+The monitoring option offered by the docker is quite poor.
 ​
 C)
-Docker provides version control.
+Docker provides automatic rescheduling of inactive notes.
 ​
 D)
-All of the above
+Horizontal scaling set-up is complicated and automatic.
 
 
 
@@ -48,20 +48,12 @@ All of the above
 
 
 
-'D' is Correct
+C is Correct
 
-The various features of docker are as follows: 
+Docker does not provide a storage choice. 
 
-easy modeling, 
+Monitoring option offered by docker is quite poor, Horizontal scaling set-up is complicated and automatic, are the drawbacks of docker.
 
-version control, 
+But option C is incorrect and also not included in the drawbacks of docker.
 
-placement-affinitive, 
-
-developer productivity, 
-
-operational efficiency. 
-
-Since all the options are included in the list of essential features.
-
-Hence the correct option is D
+Hence C is the correct option.

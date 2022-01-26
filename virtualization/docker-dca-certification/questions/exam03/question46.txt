@@ -1,16 +1,14 @@
-Docker's default container format is called?
+Build-time variable values are not visible to anyone so it is OK to pass secret keys, user credentials, etc
 
 A)
-dockertainer
+TRUE
 ​
 B)
-libcontainer
-​
-D)
-dockerformat
-​
-C)
-containerd
+FALSE
+
+
+
+
 
 
 
@@ -52,7 +50,20 @@ containerd
 
 B is correct
 
-First, we are introducing an execution driver API which can be used to customize the execution environment surrounding each container. 
+Build-time variable values are visible to any user of the image with the docker history command.
 
-Thanks to libcontainer, Docker out of the box can now manipulate namespaces, control groups, capabilities, apparmor profiles, network interfaces and firewalling rules
+$ docker history mysql:5.7
 
+IMAGE          CREATED        CREATED BY                                      SIZE      COMMENT
+09361feeb475   5 months ago   /bin/sh -c #(nop)  CMD ["mysqld"]               0B        
+<missing>      5 months ago   /bin/sh -c #(nop)  EXPOSE 3306 33060            0B        
+<missing>      5 months ago   /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B        
+<missing>      5 months ago   /bin/sh -c ln -s usr/local/bin/docker-entryp…   34B       
+<missing>      5 months ago   /bin/sh -c #(nop) COPY file:345a22fe55d3e678…   14.5kB    
+<missing>      5 months ago   /bin/sh -c #(nop)  VOLUME [/var/lib/mysql]      0B        
+<missing>      5 months ago   /bin/sh -c {   echo mysql-community-server m…   312MB     
+<missing>      5 months ago   /bin/sh -c echo 'deb http://repo.mysql.com/a…   55B       
+<missing>      5 months ago   /bin/sh -c #(nop)  ENV MYSQL_VERSION=5.7.34-…   0B        
+<missing>      5 months ago   /bin/sh -c #(nop)  ENV MYSQL_MAJOR=5.7          0B 
+
+ 

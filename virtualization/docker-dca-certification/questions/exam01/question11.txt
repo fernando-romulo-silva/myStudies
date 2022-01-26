@@ -1,18 +1,16 @@
+What does the EXPOSE directive do?
 
-User A executed docker service scale --replicas 5 webserver, while user B executed docker service update --replicas 3 webserver. 
-How many replicas will be running after both executions?
-
-a) None of the commands will work.
-
-b) The webserver service will run three replicas.
-
-c) The webserver service will run five replicas.
-
-d) The webserver service will run eight replicas.
-
-
-
-
+A)
+It causes the container to listen on a port.
+​
+B)
+It documents ports intended for publishing at the time of running a container.
+​
+C)
+It automatically publishes ports when running a container.
+​
+D)
+It makes a container's port accessible externally.
 
 
 
@@ -48,6 +46,37 @@ d) The webserver service will run eight replicas.
 
 
 
-Answer 'b'
 
-When you update a service, Docker stops its containers and restarts them with the new configuration.
+
+
+
+
+
+The correct option is B
+
+The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. 
+
+You can specify whether the port listens on TCP or UDP, and the default is TCP if the protocol is not specified.
+
+The EXPOSE instruction does not actually publish the port. 
+
+It functions as a type of documentation between the person who builds the image and 
+the person who runs the container, about which ports are intended to be published. 
+
+To actually publish the port when running the container, use the -p flag on docker run to publish and map one or more ports, 
+or the -P flag to publish all exposed ports and map them to high-order ports.
+
+
+Basically, you have three options:
+
+Neither specify EXPOSE nor -p
+Only specify EXPOSE
+Specify EXPOSE and -p
+
+1) If you specify neither EXPOSE nor -p, the service in the container will only be accessible from inside the container itself.
+
+2) If you EXPOSE a port, the service in the container is NOT accessible from outside Docker network, but from inside other Docker containers. 
+So this is good for inter-container communication.
+
+3) If you EXPOSE and -p (publish) a port, the service in the container is accessible from anywhere, even outside Docker network.
+

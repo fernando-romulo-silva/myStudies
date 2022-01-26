@@ -1,16 +1,13 @@
-From the below-mentioned option which of the following is not the drawbacks of Docker?
 
-​A)
-Docker does not provide a storage choice.
+From the below-mentioned option which of the following statement is true about the docker image?
+
+a) Docker image is used for creating a docker container.
 ​
-B)
-The monitoring option offered by the docker is quite poor.
+b) The command used for creating a docker image is to build command.
 ​
-C)
-Docker provides automatic rescheduling of inactive notes.
+c) By using the build command a container is created which helps in starting when it begins
 ​
-D)
-Horizontal scaling set-up is complicated and automatic.
+d) All of the above
 
 
 
@@ -48,12 +45,15 @@ Horizontal scaling set-up is complicated and automatic.
 
 
 
-C is Correct
 
-Docker does not provide a storage choice. 
 
-Monitoring option offered by docker is quite poor, Horizontal scaling set-up is complicated and automatic, are the drawbacks of docker.
 
-But option C is incorrect and also not included in the drawbacks of docker.
+Answer 'd'
 
-Hence C is the correct option.
+All the statements mentioned above, Docker image is used for creating a docker container.
+
+The command used for creating a docker image is built command. 
+
+By using the build command a container is created which helps in starting when it begins, the docker images are stored in the registry of docker are true about docker image.
+
+Hence the correct option is D.

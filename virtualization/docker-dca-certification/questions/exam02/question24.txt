@@ -1,17 +1,17 @@
-A user is having problems running Docker. 
-Which of the following will start Docker in debug mode?
-
+What is the difference between the ADD and COPY dockerfile instructions? 
+(choosen 2)
+​
 A)
-Set the logging key to debug in the 'daemon.json' file.
+ADD supports compression format handling while COPY does not.
 ​
 B)
-Start the 'dockerd' process manually with the '--raw-logs' flag set to debug
+COPY supports compression format handling while ADD does not.
 ​
 C)
-Set the debug key to true in the 'daemon.json' file.
+ADD supports regular expression handling while COPY does not.
 ​
 D)
-Start the 'dockerd' process manually with the '--logging' flag set to debug
+ADD support remote URL handling while COPY does not.
 
 
 
@@ -48,31 +48,14 @@ Start the 'dockerd' process manually with the '--logging' flag set to debug
 
 
 
-The correct answer is C
 
-There are two ways to configure the Docker daemon:
 
-Use a JSON configuration file or use flags when starting dockerd. 
 
-To configure the Docker daemon using a JSON file, create a file at /etc/docker/daemon.json on Linux systems, 
-or C:\ProgramData\docker\config\daemon.json on Windows. 
+A e C are correct
 
-Here’s what the configuration file looks like:
+COPY takes in a src and destination. 
+It only lets you copy in a local file or directory from your host (the machine building the Docker image) into the Docker image itself.
 
-{
-  "debug": true,
-  "tls": true,
-  "tlscert": "/var/docker/server.pem",
-  "tlskey": "/var/docker/serverkey.pem",
-  "hosts": ["tcp://192.168.59.3:2376"]
-}
-
-Here’s an example of how to manually start the Docker daemon, using the same configurations as above:
-
-$ dockerd --debug \
-  --tls=true \
-  --tlscert=/var/docker/server.pem \
-  --tlskey=/var/docker/serverkey.pem \
-  --host tcp://192.168.59.3:2376
-  
-  
+ADD lets you do that too, but it also supports 2 other sources. 
+First, you can use a URL instead of a local file / directory. 
+Secondly, you can extract a tar file from the source directly into the destination.

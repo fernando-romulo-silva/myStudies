@@ -1,17 +1,12 @@
-In Docker Trusted Registry, how would a user prevent an image, 
-for example 'nginx:latest' from being overwritten by another user with push access to the repository?
+Docker security scan can be started by all users including those with read-only access.
 
+True or false?
+​
 A)
-Tag the image with 'nginx:immutable'
+TRUE
 ​
 B)
-Use the DTR web UI to make the tag immutable.
-​
-C)
-Remove push access from all other users.
-​
-D)
-Keep a backup copy of the image on another repository.
+FALSE
 
 
 
@@ -48,12 +43,16 @@ Keep a backup copy of the image on another repository.
 
 
 
-The correct answer is B
 
-Tag Immutability enables customers to rely on the descriptive tags of an image as a reliable mechanism to track and uniquely identify images.
 
-Docker tags are mutable named references to Docker images, much like branch refs in Git.
 
-$ docker pull debian:buster 
 
-DTR web UI help to make the tag immutable
+
+B is correct
+
+Docker image security scanning is a process of identifying known security vulnerabilities in the packages listed in your Docker image. 
+
+To start scanning, you need to have a Docker ID and be logged in via Docker Desktop. You’ll get 10 free container images tests per month.
+
+$ docker scan --login
+

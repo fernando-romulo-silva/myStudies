@@ -1,16 +1,11 @@
-Which option allows you to override the default Docker directory (/var/lib/docker) on Linux?
-​
+If you manually stop a container, its restart policy is ignored until 
+the Docker daemon restarts or the container is manually restarted
+
 A)
-docker-path
+TRUE
 ​
 B)
-install-root
-​
-C)
-data-root
-​
-D)
-docker-root
+FALSE
 
 
 
@@ -48,6 +43,19 @@ docker-root
 
 
 
-C is correct
 
-The 'data-root' is the root directory of persistent Docker state (default "/var/lib/docker")
+
+
+
+
+
+Answer 'A'
+
+If you manually stop a container, its restart policy is ignored until the Docker daemon restarts or the container is manually restarted. 
+
+This is another attempt to prevent a restart loop. 
+
+Restart policies only apply to containers. 
+
+Restart policies for swarm services are configured differently.
+

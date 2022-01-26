@@ -1,16 +1,12 @@
-Which of the following commands can be used to delete an existing image?
+A global service is a service that runs ____task/tasks on every node that meet the placement and resource constraints
 
-​A)
-docker image delete
+a) One
+
+b) More than one
 ​
-B)
-docker rmi
+c) Many
 ​
-C)
-docker rm
-​
-D)
-docker rm image
+d) None
 
 
 
@@ -48,13 +44,13 @@ docker rm image
 
 
 
-B is Correct
 
-docker rmi
 
-Removes (and un-tags) one or more images from the host node.
-If an image has multiple tags, using this command with the tag as a parameter only removes the tag. 
-If the tag is the only one for the image, both the image and the tag are removed.
 
-$ docker rmi test1:latest
+
+Answer 'a'
+
+A global service is a service that runs ONE task on every node. 
+There is no pre-specified number of tasks. 
+Each time you add a node to the swarm, the orchestrator creates a task and the scheduler assigns the task to the new node.
 

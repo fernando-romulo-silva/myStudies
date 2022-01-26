@@ -1,17 +1,14 @@
 
-Docker is written in which programming language?
+How can we modify ports published on an already-deployed service?
 
-A)
-Go
-​
-B)
-.Net
-​
-C)
-Python
-​
-D)
-C
+
+a) It is not possible; we have to remove the service and create it again.
+
+b) We can only change ports if the service is running using the host's network (--net=host).
+
+c) We use docker service update --publish-add <NEW_PORT> --publish-rm <OLD_PORT>.
+
+d) None of the preceding answers are correct.
 
 
 
@@ -28,34 +25,8 @@ C
 
 
 
+Answer(s) 'c'
 
+When you update a service, you can update the ports:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Answer 'A'
-
-Docker is written in the Go programming language and takes advantage of several features of the Linux kernel to deliver its functionality.
-
-
+$ docker service update --publish-add <NEW_PORT> --publish-rm <OLD_PORT>.

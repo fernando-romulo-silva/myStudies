@@ -1,14 +1,16 @@
-From the below-mentioned option, what are the correct option which helps in 
-easily letting the communication happen between docker demons and docker client?
+From the below-mentioned option which of the following is correct in which the docker is being used?
 
+A)
+To simplify the configuration
 ​
-A) Rest API
+B)
+Managing the code pipeline
 ​
-B) Socket.IO
+C)
+For the isolation of application
 ​
-C) PCP
-​
-D) All of the above
+D)
+All of the above
 
 
 
@@ -48,10 +50,25 @@ D) All of the above
 
 
 
-The correct option is D
 
-For creating communication between docker client and docker demons the combination 
-of three things is required, which is as follows, A. Rest API, Socket.IO, PCP. 
 
-Hence this all three are helpful for the above-mentioned communication.
+
+
+D is Correct
+
+There are various uses of dockers. 
+
+Docker is used for the following things, to simplify the configuration: docker is used for putting your environment and configuration 
+into coding and further deploying it. 
+
+Managing the code pipeline: there are various types of system which is used in production and development, the journey of the code is
+with development to testing and then to production. 
+And hence it goes through different types of environments. 
+In this way, docker helps in maintaining the consistency of the code pipeline. 
+ 
+For the isolation of application: as in one container all application is wrapped together with dependencies, apps are isolated. 
+They work independently on any hardware which is supported by docker. 
+
+For the rapid development: docker cuts and removes the need for boosting an entire OS from scratch. 
+This will reduce deployment time. And hence the deployment is rapid. 
 

@@ -1,17 +1,16 @@
-What is the purpose of Dockers Content Trust?
+What is the docker command to update an existing service?
 
-A)
-Signing and verification of image tags
+​A)​
+docker service change
 ​
 B)
-Enabling mutual TLS between the Dockers client and server
+docker service modify
 ​
 C)
-Dockers registry TLS verification and encryption
+docker service update
 ​
 D)
-Indicating an image on DockersHub is an officialimage
-​
+docker service config
 
 
 
@@ -55,11 +54,13 @@ Indicating an image on DockersHub is an officialimage
 
 
 
+The correct option is 'C'
+
+Updates a service as described by the specified parameters. 
+
+The parameters are the same as docker service create
+
+$ docker service update --network-add
 
 
-A correct
-
-Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
-These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
-
-
+ 

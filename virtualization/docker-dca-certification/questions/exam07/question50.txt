@@ -1,15 +1,13 @@
-
-To bypass the routing mesh, you must use the long --publish service and set mode to host
-
-A)
-TRUE
-​
-B)
-FALSE
+Which of the following sentences about container isolation are true?
 
 
+a) The host's hardware resources, such as memory and CPU, are granted using cgroups.
 
+b) To ensure a container's limits, we need to use operating system security modules.
 
+c) Only the root user is allowed to deploy containers with unlimited resources.
+
+d) Privileged containers will avoid defined process' capabilities and execution user.
 
 
 
@@ -48,10 +46,10 @@ FALSE
 
 
 
-Answer 'A'
 
-Routing Mesh is a feature which make use of Load Balancer concepts.
-It provides global publish port for a given service.
-The routing mesh uses port based service discovery and load balancing.
-So to reach any service from outside the cluster you need to expose ports and reach them via the Published Port.
 
+Answers 'a'
+
+Docker containers share a single host OS kernel across all of the application containers running on that machine. 
+Isolation is provided on a per-container level by the Docker Engine. 
+Using containers, multiple applications can be deployed to a single bare metal server without any conflict between the applications.

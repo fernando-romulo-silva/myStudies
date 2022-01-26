@@ -1,12 +1,13 @@
-What is the purpose of multi-stage builds?
 
-a)​ Better logical separation of Dockerfile instructions for better readability
+What does docker image rm command do?
+
+a) Display detailed information on one or more images
 ​
-b) Faster image builds by allowing parallel execution of Docker builds
+b) Remove one or more images
+
+c) Remove unused images
 ​
-c) Better caching when building Docker images
-​
-d) Optimizing images by copying artifacts selectively from previous stages
+d) Show the history of an image
 
 
 
@@ -50,20 +51,8 @@ d) Optimizing images by copying artifacts selectively from previous stages
 
 
 
+Answer 'b'
 
+docker image rm: Remove one or more images.
 
-The correct answer is 'D'
-
-Multistage builds are useful to anyone who has struggled to optimize Dockerfiles while keeping them easy to read and maintain.
-
-FROM golang:1.16 AS builder
-WORKDIR /go/src/github.com/alexellis/href-counter/
-RUN go get -d -v golang.org/x/net/html  
-COPY app.go    ./
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
-
-FROM alpine:latest  
-RUN apk --no-cache add ca-certificates
-WORKDIR /root/
-COPY --from=builder /go/src/github.com/alexellis/href-counter/app ./
-CMD ["./app"]    
+$  docker image rm --force web

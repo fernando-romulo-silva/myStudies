@@ -1,17 +1,16 @@
-Which of the following statements is NOT TRUE about replicated service in docker?
+Which of the following gives a web dashboard to manage docker cluster?
 
-​
-A)
-For replicated services you can specify number of replica tasks
+​A)
+Docker swarm mode
 ​
 B)
-If you don't specify a mode, the service defaults to replicated
+Docker UCP
 ​
 C)
-A service running in a replicated mode may not run in all nodes
+Docker-compose
 ​
 D)
-A replicated service, the scheduler places one task on each available that meets the service's placement constraints and resource requirements
+DTR
 
 
 
@@ -49,13 +48,9 @@ A replicated service, the scheduler places one task on each available that meets
 
 
 
+B is Correct
+
+Docker Universal Control Plane (UCP) is an enterprise onpremise solution that enables IT operations teams to deploy and 
+manage their Dockerized applications in production, while giving developers the agility and portability they need, all from within the enterprise firewall.
 
 
-
-
-
-
-D is Correct
-
- If you don’t specify a mode, the service defaults to replicated
-For a replicated service, you specify the number of identical tasks you want to run. 

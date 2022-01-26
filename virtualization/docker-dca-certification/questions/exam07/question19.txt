@@ -1,16 +1,14 @@
 
-A user is having problems running Docker. 
-Which of the following will start Docker in debug mode?
-
-a) Start the 'dockerd' process manually with the '--raw-logs' flag set to debug
-​
-b) Set the debug key to true in the 'daemon.json' file.
-
-c) Start the 'dockerd' process manually with the '--logging' flag set to debug
-​
-d) Set the logging key to debug in the 'daemon.json' file.
+Which of the following sentences are true about replicated services?
 
 
+a) We need to specify the number of instances during service creation because it cannot be changed later.
+
+b) Replicated services are the default service mode and they will run one instance if none was specified.
+
+c) Replicated services can be stopped by setting the number of replicas to 0.
+
+d) All of the preceding options are true.
 
 
 
@@ -49,18 +47,12 @@ d) Set the logging key to debug in the 'daemon.json' file.
 
 
 
-Answer 'b'
 
-1 - Add param "-D" or "--debug"  to enable debug mode
 
-Or
+Answer 'b' and 'c'
 
-2 - You can create the file at /etc/docker/daemon.json if it does not already exist.
+'b' - There are two types of service deployments, replicated and global. The default is replicated
 
-Add the following code snippet:
-
-{
-    "debug": true
-}
+'c' - For a replicated service, you specify the number of identical tasks you want to run, even zero (0).  
 
 

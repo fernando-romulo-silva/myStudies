@@ -1,10 +1,12 @@
-Docker security scan result is available in both UCP and DTR. True or false?
+Which command will drain a node that had a task assigned to it?
 
-​A)​
-TRUE
+a) ​docker node update --role drain
 ​
-B)
-FALSE
+b) docker node update drain
+
+c) docker node demote drain
+​
+d) docker node update --availability drain
 
 
 
@@ -47,8 +49,11 @@ FALSE
 
 
 
-The correct option is 'B'
 
-The docker scan command allows you to scan existing Docker images using the image name or ID, 
-but this feature requires a Docker subscription
 
+The correct answer is 'D'
+
+ When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
+It also prevents the scheduler from assigning tasks to the node.
+
+$ docker node update --availability drain <NODE>

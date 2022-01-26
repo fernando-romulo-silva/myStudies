@@ -1,15 +1,13 @@
 
-Which of the following endpoints exposed by Docker Trusted Registry can be used to assess the health of a 
-Docker Trusted Registry replica?
+What are the differences between the COPY and ADD Dockerfile primitives?
 
-a) /health
+a) COPY adds files in read-only mode.
 
-b) /api/health
-​
-c) /replica_status
+b) COPY can be used to download files from external services.
 
-d) /nginx/health
+c) ADD can be used with packaged and compressed files and they will be decompressed in the layer's root filesystem.
 
+d) ADD and COPY are completely equal, but ADD is newer.
 
 
 
@@ -51,20 +49,13 @@ d) /nginx/health
 
 
 
+Answer 'c'
 
-Answer 'a'
+COPY takes in a src and destination. 
+It only lets you copy in a local file or directory from your host (the machine building the Docker image) into the Docker image itself.
 
-So, you can use HEALTCHECK CMD curl --fail http://localhost/health || exit 1 to check the health
+ADD lets you do that too, but it also supports 2 other sources. 
+First, you can use a URL instead of a local file / directory. 
+Secondly, you can extract a tar file from the source directly into the destination.
 
-Docker Trusted Registry is a Dockerized application. 
-To monitor it, you can use the same tools and techniques you’re already using to monitor other containerized applications running on your cluster. 
-One way to monitor DTR is using the monitoring capabilities of Docker Universal Control Plane.
-
-DTR also exposes several endpoints you can use to assess if a DTR replica is healthy or not:
-
-/_ping: Checks if the DTR replica is healthy, and returns a simple json response. This is useful for load balancing or other automated health check tasks.
-
-/nginx_status: Returns the number of connections being handled by the NGINX front-end used by DTR.
-
-/api/v0/meta/cluster_status: Returns extensive information about all DTR replicas.
 

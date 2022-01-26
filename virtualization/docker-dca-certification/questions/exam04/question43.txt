@@ -1,16 +1,17 @@
-The core component of UCP is a globally-scheduled service called?
+Which technology allows Docker Engine to share available hardware resources 
+to containers and optionally enforce limits and constraints?
 
-A)
-ucp-agent
+​A)​
+Control Groups
 ​
 B)
-ucp-manager
+HyperVisor
 ​
 C)
-ucp-daemon
+Hardware Abstraction
 ​
 D)
-ha-agent
+Virtualization Layers
 
 
 
@@ -52,8 +53,14 @@ ha-agent
 
 
 
+The correct option is 'A'
 
-A is correct
+Cgroups provide resource limitation and reporting capability within the container space. 
+They allow granular control over what host resources are allocated to the containers and when they are allocated.
+Common control groups:
 
-ucp-agent: The agent that monitors the node and ensures the right MKE services are running. 
-Named ucp-agent-win on Windows nodes.
+* CPU
+* Memory
+* Network Bandwidth
+* Disk
+* Priority

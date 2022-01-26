@@ -1,17 +1,17 @@
-After creating a new service names "http", you notice that the new service is not registering as healthy. 
-How do you view the list of historical tasks for that service by using the command line?
-​
+What is the purpose of Dockers Content Trust?
+
 A)
-docker inspect http
+Signing and verification of image tags
 ​
 B)
-docker servoce inspect http
+Enabling mutual TLS between the Dockers client and server
 ​
 C)
-docker service ps http
+Dockers registry TLS verification and encryption
 ​
 D)
-docker ps http
+Indicating an image on DockersHub is an officialimage
+​
 
 
 
@@ -51,13 +51,15 @@ docker ps http
 
 
 
-C is correct
 
 
-Lists the tasks that are running as part of the specified services.
-In addition to running tasks, the output also shows the task history. 
 
-For example, after updating the service to use the redis:3.0.6 image, the output may look like this:
 
-$ docker service ps redis
+
+
+A correct
+
+Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
+These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
+
 

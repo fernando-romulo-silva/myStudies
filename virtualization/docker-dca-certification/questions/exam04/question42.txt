@@ -1,16 +1,16 @@
-A ____ is an instance of the Docker engine participating in the swarm.
+Where is the option to integrate Docker Enterprise with LDAP?
 
-A)
-Node
+​A)​
+Universal Control Plane
 ​
 B)
-Service
+Docker Machine
 ​
 C)
-Container
+Docker Trusted Registry
 ​
 D)
-Server
+Docker Compose
 
 
 
@@ -52,10 +52,6 @@ Server
 
 
 
+The correct option is 'A'
 
-A is correct
-
-A node is an instance of the Docker engine participating in the swarm. 
-You can also think of this as a Docker node. 
-You can run one or more nodes on a single physical computer or cloud server, but production swarm deployments 
-typically include Docker nodes distributed across multiple physical and cloud machines.
+Docker UCP integrates with LDAP services, so that you can manage users from a single place.

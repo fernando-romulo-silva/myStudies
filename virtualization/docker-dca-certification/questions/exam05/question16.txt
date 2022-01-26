@@ -1,16 +1,12 @@
-Which of the following gives a web dashboard to manage docker cluster?
+Grants in UCP are made up of which of the following?
 
-​A)
-Docker swarm mode
+a) Nodes, role and containers
+
+b) Subject, node and containers
 ​
-B)
-Docker UCP
+c) Subject, role and resource set
 ​
-C)
-Docker-compose
-​
-D)
-DTR
+d) Subject, role and containers
 
 
 
@@ -48,9 +44,22 @@ DTR
 
 
 
-B is Correct
 
-Docker Universal Control Plane (UCP) is an enterprise onpremise solution that enables IT operations teams to deploy and 
-manage their Dockerized applications in production, while giving developers the agility and portability they need, all from within the enterprise firewall.
+
+
+
+Answer 'c'
+
+A grant defines who has how much access to what resources. 
+Each grant is a 1:1:1 mapping of subject, role, and resource set.
+ 
+For example, you can grant the “Prod Team” “Restricted Control” over services in the “/Production” collection.
+
+A common workflow for creating grants has four steps:
+
+* Add and configure subjects (users, teams, and service accounts).
+* Define custom roles (or use defaults) by adding permitted API operations per type of resource.
+* Group cluster resources into Swarm collections or Kubernetes namespaces.
+* Create grants by combining subject + role + resource set.
 
 

@@ -1,15 +1,13 @@
 
-What is the purpose of Docker Content Trust?
+Which of the following steps are required to create a Swarm backup?
 
-a) Signing and verification of image tags
+a) Stop Docker Engine on any manager to ensure files are static.
 
-b) Indicating an image on Docker Hub is an official image
-​
-c) Enabling mutual TLS between the Docker client and server
+b) Copy the /var/lib/docker/swarm directory content for backing up Swarm.
 
-d) Docker registry TLS verification and encryption
+c) Raft logs should be backed up apart from normal files.
 
-
+d) All of the preceding steps are required.
 
 
 
@@ -48,9 +46,16 @@ d) Docker registry TLS verification and encryption
 
 
 
-Answer 'a'
 
-Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
-These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
 
+
+Answer 'a' and 'b'
+
+Performing back up and restoration on same server
+
+1 stop the docker daemon
+
+2 copy the /var/lib/docker/swarm folder
+
+You don't neet backup the logs to backup the swarm
 

@@ -1,17 +1,12 @@
-When using the Docker client to push an image to a registry, what environment variable 
-is used to instruct the client to perform signing of the image?
+Which one of the following commands will show a list of volumes for a specific container?
 
-​A)​
-DOCKER_IMAGE_SIGN=1
+a) 'docker volume logs nginx --containers'
 ​
-B)
-DOCKER_CONTENT_TRUST=1
+b) 'docker container inspect nginx'
 ​
-C)
-DOCKER_PUSH_SIGN=1
-​
-D)
-NOTARY_ENABLE=1
+c) 'docker volume inspect nginx'
+
+d) 'docker container logs nginx --volumes'
 
 
 
@@ -53,11 +48,9 @@ NOTARY_ENABLE=1
 
 
 
+'B' is Correct
 
+Docker inspect provides detailed information on constructs controlled by Docker.
 
-The correct option is B
-
-For the Docker client to know to use this server, you will need to set an environment variable pointing to it:
-
-$ export DOCKER_CONTENT_TRUST=1
+$ docker container inspect nginx 
 

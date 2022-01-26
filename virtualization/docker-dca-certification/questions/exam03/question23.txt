@@ -1,12 +1,17 @@
-Docker image is built up from a series of layers and each layer represents an instruction in the image's Dockerfile. 
+How do you configure Docker engine to use a registry 
+that is not configured with TLS certificates from a trusted CA?
 
-True or false?
-​
 A)
-False
+Set and export the IGNORE_TLS environment variable on the command line.
 ​
 B)
-True
+Pass the '--insecure-registry' flag to the daemon at run time.
+​
+C)
+Set INSECURE_REGISTRY in the '/etc/docker/default' configuration file.
+​
+D)
+Set IGNORE_TLS in the 'daemon.json' configuration file.
 
 
 
@@ -48,10 +53,20 @@ True
 
 
 
-B is correct
 
-A Docker image consists of several layers. 
-Each layer corresponds to certain instructions in your Dockerfile. 
-The following instructions create a layer: RUN , COPY , ADD. 
-The other instructions will create intermediate layers and do not influence the size of your image
+B is Correct
+
+To use a registry that is not configured with TLS certificates 
+
+$ docker -d --insecure-registry registry:8443
+
+or 
+
+use the platform-independent daemon.json file, which is located in /etc/docker/ on Linux by default.
+
+Set the following flag in the daemon.json file:
+
+{
+    "insecure-registries": ["registry:8443"]
+}
 

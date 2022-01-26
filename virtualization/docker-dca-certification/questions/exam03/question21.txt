@@ -1,16 +1,17 @@
-Which of the Dockerfile options executes any commands in a new layer on top of the current image and commit the results?
-​​
-A)
-RUN
+When seven managers are in a swarm cluster, how would they be distributed 
+across three data centers or availability zones?
+
+​A)
+3/2/2
 ​
 B)
-FROM
+4/2/1
 ​
 C)
-ONBUILD
+5/1/1
 ​
 D)
-CMD
+3/3/1
 
 
 
@@ -53,10 +54,7 @@ CMD
 
 
 
-A is correct
+A is Correct
 
-The RUN directive is used to execute commands during the image build time. 
+Try to distribute it equality
 
-This will create a new layer on top of the existing layer, execute the specified command, and commit the results to the newly created layer. 
-
-The RUN directive can be used to install the required packages, update the packages, create users and groups, and so on.

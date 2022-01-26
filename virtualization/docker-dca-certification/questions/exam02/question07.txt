@@ -1,16 +1,16 @@
-What is the docker command to setup a swarm?
-  
-A)
-$ docker create swarm
+What does the FROM directive do?
+
+​A)
+It indicates the build location of where the image is.
 ​
 B)
-$ docker init swarm
+It pulls a file from an external source into the image.
 ​
 C)
-$ docker swarm init
-
+It sets a base image that can be used as a platform to begin builds.
+​
 D)
-$ docker swarm create
+It sets the working directory of containers ran using the image.
 
 
 
@@ -51,15 +51,13 @@ $ docker swarm create
 
 
 
+C is Correct
 
+The FROM instruction specifies the Parent Image from which you are building. 
 
+FROM may only be preceded by one or more ARG instructions, which declare arguments that are used in FROM lines in the Dockerfile.
 
+Dockerfile example:
 
-
-
-The correct option is C
-
-This command works with the Swarm orchestrator.
-
-$ docker swarm init [OPTIONS]
-
+FROM eclipse-temurin:17.0.1_12-jre-alpine
+WORKDIR /application

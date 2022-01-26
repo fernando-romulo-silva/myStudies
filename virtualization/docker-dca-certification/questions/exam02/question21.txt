@@ -1,17 +1,16 @@
-Which of the following is true about overlay networks?
-
-​A)
-Overlay networks are first created on the manager nodes. 
-Then they are created on the worker nodes once a task is scheduled on the specific worker node.
+Which of the Dockerfile options executes any commands in a new layer on top of the current image and commit the results?
+​​
+A)
+RUN
 ​
 B)
-Overlay networks are created only on the manager node that you created the overlay networking on.
+FROM
 ​
 C)
-Overlay networks are created on all cluster nodes when you create the overlay network.
+ONBUILD
 ​
 D)
-Overlay networks are only created on the manager nodes.
+CMD
 
 
 
@@ -48,10 +47,16 @@ Overlay networks are only created on the manager nodes.
 
 
 
-The correct option is A
-
-The overlay network driver creates a distributed network among multiple Docker daemon hosts.
-Overlay networks are first created on the manager nodes. 
-Then they are created on the worker nodes once a task is scheduled on the specific worker node.
 
 
+
+
+
+
+A is correct
+
+The RUN directive is used to execute commands during the image build time. 
+
+This will create a new layer on top of the existing layer, execute the specified command, and commit the results to the newly created layer. 
+
+The RUN directive can be used to install the required packages, update the packages, create users and groups, and so on.

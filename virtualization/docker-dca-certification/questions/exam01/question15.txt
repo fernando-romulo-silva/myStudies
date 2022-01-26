@@ -1,18 +1,16 @@
+Which of the following is NOT true about dockerignore?
 
-Which concept routes requests to containers running for a deployed service?
-
-
-a) An ingress overlay network is used to route requests to different services' backends using a round-robin endpoint by default.
-
-b) A docker_gwbridge network is used to communicate with containers on different hosts.
-
-c) An ingress overlay network is used to route requests to different services' backends using the service's virtual IP by default.
-
-d) We must use a host network to route requests to containers.
-
-
-
-
+​A)
+.dockerignore file can be used to exclude files and directories from docker context
+​
+B)
+.dockerignore must be present in the root directory of the context
+​
+C)
+.dockerignore can help in bringing down image size and speed up builds
+​
+D)
+.dockerignore is available only with docker enterprise edition
 
 
 
@@ -50,9 +48,9 @@ d) We must use a host network to route requests to containers.
 
 
 
-Answer 'c'
+The correct option is D
 
-Docker Engine swarm mode makes it easy to publish ports for services to make them available to resources outside the swarm. 
-All nodes participate in an ingress routing mesh.
+To use a file in the build context, the Dockerfile refers to the file specified in an instruction, for example, a COPY instruction. 
 
+To increase the build’s performance, exclude files and directories by adding a .dockerignore file to the context directory. 
 

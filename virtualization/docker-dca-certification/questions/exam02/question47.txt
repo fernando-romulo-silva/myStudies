@@ -1,10 +1,22 @@
-To bypass the routing mesh, you can start a service using DNS Round Robin (DNSRR) mode,
+When you're starting the docker daemon manually and see an error like the one below, what should you do?
 
+Unable to configure the Docker daemon with file /etc/docker/daemon.json:
+
+the following directives are specified both as a flag and in the configuration file: 
+hosts: (from flag: [unix:///var/run/docker.sock], from file: [tcp://127.0.0.1:2376])
+
+​
 A)
-TRUE
+Restart your host to resolve the conflict
 ​
 B)
-FALSE
+Adjust the flags you're using to start the daemon or modify the daemon.json to remove the conflict
+​
+C)
+Verify that port 2376 is open
+​
+D)
+Ensure the host is accessible on the network and try again
 
 
 
@@ -44,26 +56,6 @@ FALSE
 
 
 
+C is correct
 
 
-
-
-
-The correct answer is A
-
-
-To bypass the routing mesh, you must use the long --publish service and set mode to host
-
-To use an external load balancer without the routing mesh, set --endpoint-mode to dnsrr
-
---------
-
-By default, swarm services which publish ports do so using the routing mesh.
-
-To bypass the routing mesh, you can start a service using DNS Round Robin (DNSRR) mode, 
-by setting the --endpoint-mode flag to dnsrr. You must run your own load balancer in front of the service. 
-
-A DNS query for the service name on the Docker host returns a list of IP addresses for the nodes running the service. 
-Configure your load balancer to consume this list and balance the traffic across the nodes.
-
- 

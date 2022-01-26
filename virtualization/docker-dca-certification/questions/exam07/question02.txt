@@ -1,15 +1,13 @@
 
-Which of the following statement is false about Dockers swarm?
+How can we limit the amount of memory available to a container?
 
-a) ​Docker swarm is a native gathering used for docker.
-​
-b) Docker host is the group in the number of multiple and virtual docker host.
+a) It is not possible to limit the amount of memory available to a container.
 
-c) It provides the standard docker application program interface.
-​
-d) All of the above
+b) Using --cap-drop MEM.
 
+c) Using --memory.
 
+d) Using --memory-reservation.
 
 
 
@@ -48,9 +46,12 @@ d) All of the above
 
 
 
-Answer 'b'
-
-Docker host is converted in single or Virtual docker host. 
-Not a multiple and virtual. 
 
 
+
+Answer 'c'
+
+To limit the maximum amount of memory usage for a container, add the --memory option to the docker run command. 
+Alternatively, you can use the shortcut -m.
+
+$ docker run -it --memory="1g" ubuntu

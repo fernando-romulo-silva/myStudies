@@ -1,17 +1,17 @@
-What is the difference between the ADD and COPY dockerfile instructions? 
-(choosen 2)
-​
-A)
-ADD supports compression format handling while COPY does not.
+What is the recommended way to configure the daemon flags and environment variables 
+for your Docker daemon in a platform independent way?
+
+​A)
+Set the configuration DOCKER_OPTS in '/etc/default/docker'
 ​
 B)
-COPY supports compression format handling while ADD does not.
+Set the configuration options in '/etc/docker/daemon.json'
 ​
 C)
-ADD supports regular expression handling while COPY does not.
+Set the configuration options using the ENV variable
 ​
 D)
-ADD support remote URL handling while COPY does not.
+Using 'docker config' to set the configuration options
 
 
 
@@ -51,11 +51,16 @@ ADD support remote URL handling while COPY does not.
 
 
 
-A e C are correct
 
-COPY takes in a src and destination. 
-It only lets you copy in a local file or directory from your host (the machine building the Docker image) into the Docker image itself.
 
-ADD lets you do that too, but it also supports 2 other sources. 
-First, you can use a URL instead of a local file / directory. 
-Secondly, you can extract a tar file from the source directly into the destination.
+
+B is correct
+
+There are two ways to configure the Docker daemon:
+
+Use a JSON configuration file(/etc/docker/daemon.json). 
+This is the preferred option, since it keeps all configurations in a single place.
+
+Use flags when starting dockerd. 
+You can use both of these options together as long as you don’t specify the same option both as a flag and in the JSON file. 
+If that happens, the Docker daemon won’t start and prints an error message.

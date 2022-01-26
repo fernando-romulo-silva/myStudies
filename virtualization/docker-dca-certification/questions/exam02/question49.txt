@@ -1,17 +1,17 @@
-Which instruction copies new files, directories or remote file URLs from <src> 
-and adds them to the filesystem of the image at the path <dest>?
-
+Docker EE is available on multiple platforms. 
+Which of the following are not valid hardware platforms to run Docker EE?
+​
 A)
-ENV
+IBM Z (s390x)
 ​
 B)
-ADD
+Sun/Oracle SPARC
 ​
 C)
-LABEL
+X86_64/AMD 64
 ​
 D)
-TAG
+IBM Power (ppc64le)
 
 
 
@@ -50,9 +50,8 @@ TAG
 
 
 
+B is correct
 
-The correct answer is B
-
-The ADD instruction copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the image at the path <dest>.
-
- 
+Docker Enterprise Edition (EE) is an integrated, supported and certified container platform for CentOS, 
+Red Hat Enterprise Linux (RHEL), Ubuntu, SUSE Linux Enterprise Server (SLES), Oracle Linux, and Windows Server 2016, 
+as well as for cloud providers AWS and Azure.

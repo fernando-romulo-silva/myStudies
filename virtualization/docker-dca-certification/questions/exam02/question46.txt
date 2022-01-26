@@ -1,17 +1,16 @@
-Which docker feature allows you to control whether your containers start automatically when they exit, 
-or when Docker restarts, and that they are started in the correct order
+Docker's default container format is called?
 
 A)
-startup rules
+dockertainer
 ​
 B)
-restart policies
-​
-C)
-placement rules
+libcontainer
 ​
 D)
-startup policies
+dockerformat
+​
+C)
+containerd
 
 
 
@@ -48,23 +47,12 @@ startup policies
 
 
 
-The correct answer is B
 
-Restart policies (--restart)
 
-Using the --restart flag on Docker run you can specify a restart policy for how a container should or should not be restarted on exit.
-When a restart policy is active on a container, it will be shown as either Up or Restarting in docker ps. 
-It can also be useful to use docker events to see the restart policy in effect.
-Docker supports the following restart policies:
 
-* no - Do not automatically restart the container when it exits. This is the default.
+B is correct
 
-* on-failure[:max-retries]  - Restart only if the container exits with a non-zero exit status. 
-Optionally, limit the number of restart retries the Docker daemon attempts.
+First, we are introducing an execution driver API which can be used to customize the execution environment surrounding each container. 
 
-* always - Always restart the container regardless of the exit status. 
-When you specify always, the Docker daemon will try to restart the container indefinitely. 
-The container will also always start on daemon startup, regardless of the current state of the container.
+Thanks to libcontainer, Docker out of the box can now manipulate namespaces, control groups, capabilities, apparmor profiles, network interfaces and firewalling rules
 
-* unless-stopped - Always restart the container regardless of the exit status, including on daemon startup, 
-except if the container was put into a stopped state before the Docker daemon was stopped.

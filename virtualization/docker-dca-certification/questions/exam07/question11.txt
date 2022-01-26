@@ -1,16 +1,14 @@
 
-What command would we use to locate the layered file system data for an image on a machine?
+User A executed docker service scale --replicas 5 webserver, while user B executed docker service update --replicas 3 webserver. 
+How many replicas will be running after both executions?
 
-a) ​docker image inspect
+a) None of the commands will work.
 
-b) docker layer inspect
-​
-c) docker pull history
+b) The webserver service will run three replicas.
 
-d) docker image layers
+c) The webserver service will run five replicas.
 
-
-
+d) The webserver service will run eight replicas.
 
 
 
@@ -48,11 +46,8 @@ d) docker image layers
 
 
 
-Answer 'a'
 
-Docker inspect provides detailed information on constructs controlled by Docker.
 
-By default, docker inspect will render results in a JSON array.
+Answer 'b'
 
---format , -f		Format the output using the given Go template
-
+When you update a service, Docker stops its containers and restarts them with the new configuration.

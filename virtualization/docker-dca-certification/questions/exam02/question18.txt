@@ -1,16 +1,16 @@
-Which of the following lvm mode should a production host using the device mapper as a storage driver use?
+Which of the following is required to install Docker EE from a package repository?
 
 A)
-​Loop-lvm
+License key obtained from Docker Hub
 ​
 B)
-ZFS
+Repository URL obtained from Docker Hub
 ​
 C)
-Direct-lvm
+Repository URL obtained from Docker Store
 ​
 D)
-Overlay
+License key obtained from Docker Store
 
 
 
@@ -48,13 +48,19 @@ Overlay
 
 
 
-The correct option is C
 
-Production hosts using the devicemapper storage driver must use direct-lvm mode. 
 
-This mode uses block devices to create the thin pool. 
 
-This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
 
-However, more setup is required than in loop-lvm mode.
+
+
+C is correct
+
+Install with a package:
+
+1* Go to the Docker EE repository URL associated with your trial or subscription in your browser. 
+2* Install Docker EE, changing the path below to the path where you downloaded the Docker package.
+3* Start Docker.
+4* Verify that Docker EE is installed correctly by running the hello-world image.
+
 

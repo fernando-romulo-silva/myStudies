@@ -1,16 +1,12 @@
-Which of the following are valid states of the AVAILABILITY column as shown when running 'docker node ls'? (select three)
+What is used to define what goes on in the environment inside a container?
 
-​A)​
-Drain
+a) Docker policy
+
+b) Dockerfile
 ​
-B)
-Pause
+c) Docker initialization file
 ​
-C)
-Active
-​
-D)
-Running
+d) Docker template
 
 
 
@@ -53,21 +49,13 @@ Running
 
 
 
-The correct options are 'A', 'B' and 'C'
-
-To view a list of nodes in the swarm run docker node ls from a manager node:
-
-$  docker node ls
 
 
-The AVAILABILITY column shows whether or not the scheduler can assign tasks to the node:
-
-* Active : That the scheduler can assign tasks to the node.
-
-* Pause : The scheduler doesn’t assign new tasks to the node, but existing tasks remain running.
-
-* Drain : The scheduler doesn’t assign new tasks to the node. 
-          The scheduler shuts down any existing tasks and schedules them on an available node.
 
 
+Answer 'B'
+
+A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. 
+
+Using docker build users can create an automated build that executes several command-line instructions in succession.
 

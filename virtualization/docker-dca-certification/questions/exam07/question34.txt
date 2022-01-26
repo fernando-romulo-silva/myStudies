@@ -1,14 +1,12 @@
+Which of these keys requires a passphrase to unlock it while signing images?
 
-What does docker image rm command do?
+a) Timestamp
 
-a) Display detailed information on one or more images
-​
-b) Remove one or more images
+b) Target
 
-c) Remove unused images
-​
-d) Show the history of an image
+c) Snapshot
 
+d) Root
 
 
 
@@ -50,9 +48,28 @@ d) Show the history of an image
 
 
 
+Answer 'b' and 'c' - Only 'Target' and 'Snapshot' use passphrase
 
-Answer 'b'
 
-docker image rm: Remove one or more images.
+Key	Description
 
-$  docker image rm --force web
+root key - Root of content trust for an image tag. 
+When content trust is enabled, you create the root key once. Also known as the offline key, because it should be kept offline.
+
+targets	- This key allows you to sign image tags, to manage delegations including delegated keys or permitted delegation paths. 
+Also known as the repository key, since this key determines what tags can be signed into an image repository.
+
+snapshot - This key signs the current collection of image tags, preventing mix and match attacks.
+
+timestamp - This key allows Docker image repositories to have freshness security guarantees without requiring periodic content refreshes on the client’s side.
+
+delegation - Delegation keys are optional tagging keys and allow you to delegate signing image tags to other publishers without having to share your targets key.
+
+
+
+
+
+
+
+
+

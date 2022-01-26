@@ -1,16 +1,13 @@
-What is the docker command to update an existing service?
+A server is running low on disk space. 
+What command can be used to check the disk usage of images, containers, and volumes for Docker engine?
 
-​A)​
-docker service change
+a)​ 'docker system df'
+
+b) 'docker system prune'
 ​
-B)
-docker service modify
-​
-C)
-docker service update
-​
-D)
-docker service config
+c) 'docker system ps'
+
+d) 'docker system free'
 
 
 
@@ -54,13 +51,10 @@ docker service config
 
 
 
-The correct option is 'C'
-
-Updates a service as described by the specified parameters. 
-
-The parameters are the same as docker service create
-
-$ docker service update --network-add
 
 
- 
+'A'
+
+The docker system df command displays information regarding the amount of disk space used by the docker daemon.
+
+$ docker system df  

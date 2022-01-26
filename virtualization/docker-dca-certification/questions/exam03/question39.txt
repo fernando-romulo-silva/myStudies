@@ -1,17 +1,20 @@
-Which Docker command is used to remove a base image, even 
-if that image has containers that are based on it?
+How many cgroups are created for each container in Docker?
 
 A)
-docker rmi [image name] --force
-
+1
+​
 B)
-docker rm [image name] --force
+2
 ​
 C)
-docker remove [image name]
+3
 ​
 D)
-None of the above.
+4
+
+
+
+
 
 
 
@@ -53,12 +56,8 @@ None of the above.
 
 A is correct
 
-Removes (and un-tags) one or more images from the host node. 
-If an image has multiple tags, using this command with the tag as a parameter only removes the tag. 
-If the tag is the only one for the image, both the image and the tag are removed.
-This does not remove images from a registry. 
-You cannot remove an image of a running container unless you use the -f option. 
+Cgroups allow you to allocate resources — such as CPU time, system memory, network bandwidth, 
+or combinations of these resources — among user-defined groups of tasks (processes) running on a system.
 
-Docker rmi specifies that docker rmi is an alias for docker image rm
+Each container has one.
 
-$ docker rmi -f fd484f19954f

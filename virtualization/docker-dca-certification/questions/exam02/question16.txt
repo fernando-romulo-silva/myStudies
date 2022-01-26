@@ -1,16 +1,16 @@
-What is docker command to see container logs?
+What is the purpose of the docker image prune command?
 
 ​A)
-docker dump-logs
+Remove one or more images
 ​
 B)
-docker logs
+Show the history of an image
 ​
 C)
-docker get-logs
+Remove unused images
 ​
 D)
-docker fetch-logs
+Display detailed information on one or more images
 
 
 
@@ -47,18 +47,9 @@ docker fetch-logs
 
 
 
-The correct option is B
 
-The docker logs command shows information logged by a running container. 
-The docker service logs command shows information logged by all containers participating in a service. 
-The information that is logged and the format of the log depends almost entirely on the container’s endpoint command.
+C is correct
 
-docker logs [CONTAINER]
+Remove all dangling (unused) images. 
 
-$ docker logs jmodular-java-tests-1
-
-13:37:15.464 [main] INFO  modular.java.test.App - hello, the application has started
-13:37:15.466 [main] ERROR modular.java.test.App - Hello World!
-13:37:15.466 [main] INFO  modular.java.test.App - the application is now complete
-
-
+If -a is specified, will also remove all images not referenced by any container.

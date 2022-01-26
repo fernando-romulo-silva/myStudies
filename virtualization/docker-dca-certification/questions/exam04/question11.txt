@@ -1,10 +1,16 @@
-In Docker security scan result is available in both UCP and DTR.?
+What is the docker command to increase number of replicas?
 
 ​A)
-TRUE
+docker service replica
 ​
 B)
-FALSE
+docker service increase
+​
+C)
+docker service scale
+​
+D)
+docker service build
 
 
 
@@ -42,16 +48,13 @@ FALSE
 
 
 
+C is Correct
 
+The command 'scale' Scale one or multiple replicated services.
 
+$ docker service scale frontend=50
 
+You can also scale a service using the docker service update command. 
+The following commands are equivalent:
 
-
-
-B is Correct
-
-Vulnerability scanning for Docker local images allows developers and development teams to review 
-the security state of the container images and take actions to fix issues identified during the scan.
-
-It's only available in DTR.
-
+$ docker service update --replicas=50 frontend

@@ -1,15 +1,13 @@
-What is one way of directly transferring a Docker Image from one Docker host in another?
 
-a) ​There is no way of directly transferring Docker images between hosts. 
-A Docker Registry must be used ad an intermediary.
+If installing Docker using device mapper for storage with the Intent to run production workloads, how should devicemapper be configured?
+
+a) direct-lvm
+
+b) aufs-lvm
 ​
-b) 'docker save' the image to save it as TAR file and copy it over to the target host. 
-Then use 'docker load' to un-TAR the image back as a Docker image.
+c) overlay-lvm
 ​
-c) 'docker commit' to save the image outside of the Docker filesystem. 
-Then transfer the file over to the target host and 'docker start' to start the container again.
-​
-d) 'docker push' the image to the IP address of the target host.
+d) loop-lvm
 
 
 
@@ -50,15 +48,12 @@ d) 'docker push' the image to the IP address of the target host.
 
 
 
-b is Correct
+Answer 'a'
 
-You will need to save the Docker image as a tar file:
+Production hosts using the devicemapper storage driver must use direct-lvm mode. 
 
-$ docker save -o <path for generated tar file> <image name>
+This mode uses block devices to create the thin pool. 
 
+This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
 
-Then copy your image to a new system with regular file transfer tools such as cp, scp or rsync(preferred for big files). 
-After that you will have to load the image into Docker:
-
-$ docker load -i <path to image tar file>
-
+However, more setup is required than in loop-lvm mode.

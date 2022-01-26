@@ -1,17 +1,28 @@
-Which of the following make up container format?
-(select three)
+Arrange the copy-on-write operation steps below in the correct sequence;
 
-A)
-​Docker control plane
+A) Any modifications are made to this copy of the file, 
+and the container cannot see the read-only copy of the file that exists in the lower layer.
+
+B) Perform a copy_up operation on the first copy of the file that is found, 
+to copy the file to the container's writable layer.
+
+C) Search through the image layers for the file to update. 
+The process starts at the newest layer and works down to the base layer one layer at a time. 
+When results are found, they are added to a cache to speed future operations.
+
+
+
+​A)
+B, C, A
 ​
 B)
-UnionFS
+C, B, A
 ​
 C)
-Control Groups
+A, B, C
 ​
 D)
-Namespaces
+B, A, C
 
 
 
@@ -48,21 +59,8 @@ Namespaces
 
 
 
-The correct answers are B, C and D
-
-B) UnionFS is used to isolate changes to a container filesystem in its own layer
 
 
-C) Cgroups provide resource limitation and reporting capability within the container space. 
-They allow granular control over what host resources are allocated to the containers and when they are allocated.
-Common control groups:
 
-* CPU
-* Memory
-* Network Bandwidth
-* Disk
-* Priority
+B is correct
 
-
-D) Namespaces provide a layer of isolation. 
-Docker uses namespaces of various kinds to provide the isolation that containers need in order to remain portable

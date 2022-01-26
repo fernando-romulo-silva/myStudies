@@ -1,16 +1,16 @@
-You can monitor the status of UCP by using the web UI or the CLI. True or false?
-​
-A)
-Control groups (also know as cgroups)
+What is the function of docker inspect command?
+
+​A)
+To return low-level information on Docker objects
 ​
 B)
-Overlay networks
+To manage Docker configs
 ​
 C)
-Volumes
+To inspect changes to files or directories on a container's filesystem
 ​
 D)
-Namespaces
+To display system-wide information
 
 
 
@@ -50,9 +50,11 @@ Namespaces
 
 
 
-A (C) are correct
 
-The key feature of namespaces is that they isolate processes from each other.
 
-Control group (cgroup) is a Linux kernel feature that limits, accounts for, 
-and isolates the resource usage (CPU, memory, disk I/O, network, and so on) of a collection of processes.
+
+A correct
+
+Return low-level information on Docker objects 
+
+$ docker inspect --format='{{.Config.Image}}' mysql

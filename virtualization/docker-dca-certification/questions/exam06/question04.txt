@@ -1,13 +1,17 @@
 
-What is the possible option for running the multiple copies of a composed file in one host?
+What is the correct sequence for the lifecycle of the docker container?
 
-a) You need to set a custom project name by using the command "docker compose -p(--project-name) COMPOSE_PROJECT_NAME"
+ I. Build
+ II. PULL
+ III. Run
+
+a) ​II, III, I
 ​
-b) A custom project name is set by using the command "COMPOSE_PROJECT_NAME"
+b) I, III, II
 ​
-c) Both of the above
-​
-d) None of the above
+c) I, II, III
+
+d) II, III, I
 
 
 
@@ -50,12 +54,12 @@ d) None of the above
 
 Answer 'c'
 
-For running the multiple copies of a composed file on one host two options are available
+The correct sequence of the lifecycle of docker container is as follows,
 
-1. You need to set a custom project name by using the command:
+I. Build
 
-$ docker compose -p(--project-name) COMPOSE_PROJECT_NAME
+II. PULL
 
+III. Run
 
-2. A custom project name is set by using the command "COMPOSE_PROJECT_NAME"
 

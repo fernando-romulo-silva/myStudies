@@ -1,18 +1,24 @@
-A container named "analytics" that stores results in a volume called "data" was created. 
-docker run -d --name=analytics -v data:/data webapp. 
-How are the results accessed in "data" with another container called "dbapp"?
+The following health check exists in a Dockerfile:
 
-A)
-​docker run -d --name=reports --volume=data dbapp
+'HEALTCHECK CMD curl --fail http://localhost/health || exit 1'
+
+Which of the following describes its purpose?
+
+​A)​
+Defines the health check endpoint on the local host interface 
+for containers to monitor the health of the docker engine.
 ​
 B)
-docker run -d --name=reports --volume=webapp dbapp
+Defines the action taken when container health fails, 
+which in this case will kill the container with exit status 1.
 ​
 C)
-docker run -d --name=reports --volume-from=analytics dbapp
+Defines the health check endpoint on the localhost interface for external 
+monitoring tools to monitor the health of the docker engine.
 ​
 D)
-docker run -d --name=reports --mount=webapp dbapp
+Defines the health check for the containerized application so that the application 
+health can be monitored by the Docker engine.
 
 
 
@@ -53,16 +59,11 @@ docker run -d --name=reports --mount=webapp dbapp
 
 
 
-C correct
-
-The voloume-from connect to another containers volumes without knowing how volumes are named and you do not specify path.
-
-Ex:
-
-#create data containers
-docker run --name=d1 -v /svr1 busybox sh -c 'touch /svr1/some_data'
-docker run --name=d2 -v /svr2 busybox sh -c 'touch /svr2/some_data'
-
-docker run --rm --volumes-from=d1 --volumes-from=d2 busybox sh -c 'find -name some_data'
 
 
+
+The correct option is B
+
+The curl command checks whether the application is running or not making a request to localhost:3000. 
+If the request returns a 200, it will return exit code 0; if the application crashes, it will return exit code 1. 
+These exit codes are how Docker's HEALTHCHECK determines the health of the container.

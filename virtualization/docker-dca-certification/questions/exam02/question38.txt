@@ -1,17 +1,19 @@
-Which of the following commands starts a Redid container and configures it to always 
-restart unless it is explicitly stopped or Dockers is restarted?
+One of the nodes in your existing cluster is logging errors related to the storage subsystem 
+it exists on in your infrastructure and needs to be taken offline.
 
+Which command will allow you to gracefully remove the swarm it is a member of when executed ON the node itself?
+​
 A)
-docker run -d --restart-policy unless-stopped redid
+docker swarm unregister
 ​
 B)
-docker run -d --restart omit-stopped redis
+docker swarm leave
 ​
 C)
-docker run -d --restart unless-stopped redis
+docker swarm rm
 ​
 D)
-docker run -d --failure omit-stopped redis
+None of the above
 
 
 
@@ -48,20 +50,15 @@ docker run -d --failure omit-stopped redis
 
 
 
-The correct answer is C
-
-$ ​docker run -d --restart unless-stopped redis
 
 
-The value of the --restart flag can be any of the following:
 
-* no : Do not automatically restart the container. (the default)
+B is correct
 
-* on-failure : Restart the container if it exits due to an error, which manifests as a non-zero exit code.
+Run the docker swarm leave command on a node to remove it from the swarm. 
+For example to leave the swarm on a worker node:
+ 
+$ docker swarm leave  
 
-* always : Always restart the container if it stops. If it is manually stopped, it is restarted only when Docker 
-daemon restarts or the container itself is manually restarted.
-
-* unless-stopped : Similar to always, except that when the container is stopped (manually or otherwise), 
-it is not restarted even after Docker daemon restarts.
+When a node leaves the swarm, the Docker Engine stops running in swarm mode.
 

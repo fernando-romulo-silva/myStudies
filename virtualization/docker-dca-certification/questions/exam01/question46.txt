@@ -1,19 +1,17 @@
-Which command allows us to review and recover lost space due to "dangling images" and dead containers?
+Which docker feature allows you to control whether your containers start automatically when they exit, 
+or when Docker restarts, and that they are started in the correct order
 
-a) docker system rm
-
-b) docker system prune
-
-c) docker image rm --filter="dangling"
-
-d) docker container rm -a
-
-
-
-
-
-
-
+A)
+startup rules
+​
+B)
+restart policies
+​
+C)
+placement rules
+​
+D)
+startup policies
 
 
 
@@ -49,18 +47,24 @@ d) docker container rm -a
 
 
 
-Answers 'b'
 
-Docker images consist of multiple layers. 
-Dangling images are layers that have no relationship to any tagged images. 
-They no longer serve a purpose and consume disk space. 
+The correct answer is B
 
-They can be located by adding the filter flag, -f with a value of dangling=true to the Docker images command.
+Restart policies (--restart)
 
-To list dangling:
+Using the --restart flag on Docker run you can specify a restart policy for how a container should or should not be restarted on exit.
+When a restart policy is active on a container, it will be shown as either Up or Restarting in docker ps. 
+It can also be useful to use docker events to see the restart policy in effect.
+Docker supports the following restart policies:
 
-$ docker images -f dangling=true
+* no - Do not automatically restart the container when it exits. This is the default.
 
-To clean dangling:
+* on-failure[:max-retries]  - Restart only if the container exits with a non-zero exit status. 
+Optionally, limit the number of restart retries the Docker daemon attempts.
 
-$ docker system prune
+* always - Always restart the container regardless of the exit status. 
+When you specify always, the Docker daemon will try to restart the container indefinitely. 
+The container will also always start on daemon startup, regardless of the current state of the container.
+
+* unless-stopped - Always restart the container regardless of the exit status, including on daemon startup, 
+except if the container was put into a stopped state before the Docker daemon was stopped.

@@ -1,16 +1,14 @@
 
-Which of the following Docker client commands will display all of the base images available for local containers to be instantiated from? 
-Choose the correct answer:
-
-a) docker list
-​
-b) docker images
-
-c) docker list all
-​
-d) None of the above.
+How can we deploy two applications using the same docker-compose.yaml file?
 
 
+a) We cannot deploy two applications using the same docker-compose.yaml file.
+
+b) Docker Compose can deploy two applications using projects to ensure applications run using different volumes and ports.
+
+c) We can use environment variables for fixed resources to avoid any resource usage conflicts.
+
+d) The only option to avoid application component conflicts is to deploy applications on different clusters.
 
 
 
@@ -30,29 +28,32 @@ d) None of the above.
 
 
 
+Answer 'c'
 
+Ex: 
 
+common-services.yml
 
+services:
+  webapp:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - "/data"
+      
+      
+ You can go further and define (or re-define) configuration locally in docker-compose.yml:
+ 
+ services:
+  web:
+    extends:
+      file: common-services.yml
+      service: webapp
+    environment:
+      - DEBUG=1
+    cpu_shares: 5
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Answer 'b'
-
-For listing ALL the downloaded images the command used is docker images. 
-
+  important_web:
+    extends: web
+    cpu_shares: 10

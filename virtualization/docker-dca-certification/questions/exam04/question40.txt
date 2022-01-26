@@ -1,10 +1,17 @@
-Docker reuse intermediate images for accelerating the docker build process.
+Which instruction sets the working directory for any RUN, CMD, ENTRYPOINT, 
+COPY and ADD instructions that follow it in the Dockerfile?
 
-A)
-TRUE
+​A)​
+VOLUME
 ​
 B)
-FALSE
+MOUNT
+​
+C)
+WORKDIR
+​
+D)
+DIR
 
 
 
@@ -47,8 +54,10 @@ FALSE
 
 
 
+The correct option is 'C'
 
-A is correct
+The WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions
+that follow it in the Dockerfile. 
 
-A Docker image consists of several layers. 
-Each layer corresponds to certain instructions in your Dockerfile 
+If the WORKDIR doesn’t exist, it will be created even if it’s not used in any subsequent Dockerfile instruction.
+

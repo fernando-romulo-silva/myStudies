@@ -1,12 +1,13 @@
-What is the command that need to be executed to sign an image before pushing it to repository?
 
-a)​ export TRUST_DOCKER_IMAGE=1
+Which of the following commands will ensure that overlay traffic between service tasks is encrypted?
+
+a) docker network create -d overlay -o encrypted=true
 ​
-b) export SIGN_DOCKER_IMAGE=1
+b) ​docker network create -d overlay --secure
+
+c) docker service create --network --secure
 ​
-c) export TRUST_DOCKER_CONTENT=1
-​
-d) export DOCKER_CONTENT_TRUST=1
+d) docker service create --network --encrypted
 
 
 
@@ -48,8 +49,10 @@ d) export DOCKER_CONTENT_TRUST=1
 
 
 
-The correct answer is 'D'
 
-For the Docker client to know to sign a image to a trusted repository, you will need to set an environment variable pointing to it:
 
-$ export DOCKER_CONTENT_TRUST=1
+Answer 'a'
+
+This command ensure that overlay traffic between service tasks is encrypted
+
+$ docker network create -d overlay -o encrypted=true

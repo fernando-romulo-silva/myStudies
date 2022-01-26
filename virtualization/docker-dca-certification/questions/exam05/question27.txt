@@ -1,24 +1,13 @@
-The following health check exists in a Dockerfile:
+You have deployed a service to swarm. 
+Which command uses the Docker CLI to set the number of tasks of the services to 5? (Choose 2)
 
-'HEALTCHECK CMD curl --fail http://localhost/health || exit 1'
-
-Which of the following describes its purpose?
-
-​A)​
-Defines the health check endpoint on the local host interface 
-for containers to monitor the health of the docker engine.
+a) 'docker replica update =5'
 ​
-B)
-Defines the action taken when container health fails, 
-which in this case will kill the container with exit status 1.
+b) docker update service =5'
 ​
-C)
-Defines the health check endpoint on the localhost interface for external 
-monitoring tools to monitor the health of the docker engine.
+c) docker service update --replicas=5
 ​
-D)
-Defines the health check for the containerized application so that the application 
-health can be monitored by the Docker engine.
+d) docker service scale = 5
 
 
 
@@ -60,10 +49,14 @@ health can be monitored by the Docker engine.
 
 
 
+'C' and 'D' are Correct
 
+You can also scale a service using the docker service update command. 
+The following commands are equivalent:
 
-The correct option is B
+$ docker service scale frontend=50
 
-The curl command checks whether the application is running or not making a request to localhost:3000. 
-If the request returns a 200, it will return exit code 0; if the application crashes, it will return exit code 1. 
-These exit codes are how Docker's HEALTHCHECK determines the health of the container.
+or
+
+$ docker service update --replicas=50 frontend
+

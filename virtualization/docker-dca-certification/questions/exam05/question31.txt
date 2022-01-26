@@ -1,18 +1,15 @@
-Which of the following is how to configure the Docker daemon to start on boot? (Select two)
+What is the docker command to add or update a mount on a service?
 
-​A)​
-Use upstart for Ubuntu 14.10 and below
+a) docker service set --add-update-mount
 ​
-B)
-Use crond for Ubuntu 14.10 and below
+
+b) docker service update --mount-add
 ​
-C)
-Use systemd for most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 16.04 and higher)
 
-​D)
-Use startup for most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 16.04 and higher)
+c) docker service --add-update-mount
+​
 
-
+d) docker service --mount-volume
 
 
 
@@ -53,17 +50,24 @@ Use startup for most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 1
 
 
 
-The correct options are 'A' and 'C'
 
-When processes outside Docker depend on Docker containers, you can use a process manager such as upstart and systemd
+The correct answer is 'B'
 
-systemd is a software suite that provides an array of system components for Linux[6] operating systems. 
-Its main aim is to unify service configuration and behavior across Linux distributions;
-systemd's primary component is a "system and service manager"—an init system used to bootstrap user space and manage user processes. 
+Use the --mount-add or --mount-rm options add or remove a service’s bind mounts or volumes.
+
+The --mount-add flag takes the same parameters as the --mount flag on service create
+
+$ docker service create \
+    --name=myservice \
+    --mount type=volume,source=test-data,target=/somewhere \
+    nginx:alpine
+    
+$ docker service update \
+    --mount-add type=volume,source=other-volume,target=/somewhere-else \
+    myservice    
 
 
-Upstart was an event-based replacement for the traditional init daemon—the method by which several Unix-like computer operating systems 
-perform tasks when the computer is started.
+The --mount-rm flag takes the target path of the mount.
 
-Ubuntu moved away from Upstart with the release of version 15.04 (Vivid Vervet) in favor of migrating to systemd. 
+$ docker service update --mount-rm /somewhere myservice
 

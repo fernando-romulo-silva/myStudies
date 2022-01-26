@@ -1,11 +1,8 @@
-Without the quorum, administrative tasks are not possible, including scaling 
-or updating services and joining or removing nodes from the swarm.
+Docker regularly cleans up unused objects, such as images, containers, volumes, and networks
 
-​A)​
-TRUE
+a) TRUE
 ​
-B)
-FALSE
+b) FALSE
 
 
 
@@ -48,7 +45,13 @@ FALSE
 
 
 
-The correct option is 'A'
 
-Without the quorum, administrative tasks are not possible, 
-including scaling or updating services and joining or removing nodes from the swarm
+
+
+
+Answer 'B'
+
+You have to do it by yourself:
+
+$ docker system prune
+

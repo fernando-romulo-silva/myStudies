@@ -1,16 +1,14 @@
-What are the common instructions from the below-mentioned option that are used in the docker file?
 
-​A)
-FROM
+Which of the following statement is true about memories web swap flag?
+
+a) Memory swap is the modification flag that only exists if memory is getting.
 ​
-B)
-LABEL
+b) Swap permits the container for writing to express memory requirements to disc.
 ​
-C)
-RUN
+c) When the container gets exhausted all the ramp available then only swap permits 
+for writing the express memory requirements to disc.
 ​
-D)
-All of the above
+d) All of the above
 
 
 
@@ -48,10 +46,17 @@ All of the above
 
 
 
-D is Correct
 
-The common instructions used in the docker file are FROM, LABEL, RUN, AND CMD. 
 
-This all the options are included in the list. 
 
-Hence the correct option is D
+
+Answer 'd'
+
+All the statements, Memory swap is the modification flag that only exists if memory is get, 
+
+Swap permits the container for writing express memory requirements to disc, 
+
+When the container gets exhausted all the ramp available then only swap permits for writing 
+the express memory requirements to disc are true about memories web swap flag.
+
+ 

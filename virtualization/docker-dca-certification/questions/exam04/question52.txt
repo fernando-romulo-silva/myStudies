@@ -1,16 +1,17 @@
-Which algorithm docker uses to maintain a consistent cluster state across multiple managers?
+When running network in 'host' mode you can override the dns related settings of 
+the host by using which options of 'docker run'? (select two)
 
-A)
-Floyd's Cycle Detection Algorithm.
+​A)​
+--dns-domain
 ​
 B)
-Round robin Algorithm
+--dns
 ​
 C)
-Lee algorithm
+--dns-search
 ​
 D)
-Raft consensus algorithm
+--dns_server
 
 
 
@@ -53,11 +54,16 @@ Raft consensus algorithm
 
 
 
-Answer 'D'
 
-Using a Raft implementation, the managers maintain a consistent internal state of the entire swarm and all the services running on it. 
+The correct options are 'B' and 'C'
 
-For testing purposes it is OK to run a swarm with a single manager. 
+By default, a container inherits the DNS settings of the host, as defined in the /etc/resolv.conf configuration file. 
 
-If the manager in a single-manager swarm fails, your services continue to run, but you need to create a new cluster to recover.
+--dns -> The IP address of a DNS server. To specify multiple DNS servers, use multiple --dns flags.
 
+$ docker run --dns=4.4.4.4 --net=host -t -i centos:centos6
+
+
+--dns-search -> A DNS search domain to search non-fully-qualified hostnames. To specify multiple DNS search prefixes, use multiple --dns-search flags.
+
+$ docker run --dns-search=example.com -t -i  centos:centos6

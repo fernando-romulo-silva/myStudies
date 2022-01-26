@@ -1,16 +1,12 @@
-What is the docker command to remove one or more images?
+Which of the following is NOT how to create an efficient image via a Docker file?
 
-​A)
-docker image delete
+a) Avoid installing unnecessary packages
 ​
-B)
-docker delete
+b) Start with an appropriate base image
 ​
-C)
-docker image rm
-​
-D)
-docker remove
+c) Combine multiple applications into a single container
+
+d) Use multi-stage builds
 
 
 
@@ -48,8 +44,11 @@ docker remove
 
 
 
-C is Correct
 
-docker image rm: Remove one or more images.
 
-$  docker image rm --force web
+
+
+Answer 'c'
+
+Docker is perfect to create micro services, each app with its container.
+

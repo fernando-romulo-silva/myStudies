@@ -1,16 +1,13 @@
-From the below-mentioned option, what are the components of docker Architecture?
 
-​A)
-Client
+What is the possible option for running the multiple copies of a composed file in one host?
+
+a) You need to set a custom project name by using the command "docker compose -p(--project-name) COMPOSE_PROJECT_NAME"
 ​
-B)
-Docker host
+b) A custom project name is set by using the command "COMPOSE_PROJECT_NAME"
 ​
-C)
-Registry
+c) Both of the above
 ​
-D)
-All of the above
+d) None of the above
 
 
 
@@ -48,8 +45,17 @@ All of the above
 
 
 
-D is Correct
 
-The components of docker Architecture are as follows: client, docker host, registry. 
 
-Hence the correct option is D.
+
+Answer 'c'
+
+For running the multiple copies of a composed file on one host two options are available
+
+1. You need to set a custom project name by using the command:
+
+$ docker compose -p(--project-name) COMPOSE_PROJECT_NAME
+
+
+2. A custom project name is set by using the command "COMPOSE_PROJECT_NAME"
+

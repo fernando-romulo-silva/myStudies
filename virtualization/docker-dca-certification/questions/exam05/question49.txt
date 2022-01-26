@@ -1,17 +1,9 @@
-Which 'docker service update' flags are used to update the published 
-ports of existing services? (select two)
+You can specify multiple labels for an object, 
+but each key-value pair must be unique within an object.
 
-​A)​
--port-remove
-​
-B)
---publish-add
-​
-C)
---port-add
-​
-D)
---publish-rm
+a) ​TRUE
+
+b) FALSE
 
 
 
@@ -53,11 +45,15 @@ D)
 
 
 
-The correct option are 'B' and 'D'
 
-Update a service
 
---publish-add => Add or update a published port
 
---publish-rm  => Remove a published port by its target port
 
+
+Answer 'A'
+
+A label is a key-value pair, stored as a string. 
+
+You can specify multiple labels for an object, but each key-value pair must be unique within an object. 
+
+If the same key is given multiple values, the most-recently-written value overwrites all previous values.

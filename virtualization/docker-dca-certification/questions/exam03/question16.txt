@@ -1,16 +1,17 @@
-What is the purpose of the docker image prune command?
+Which of the following statements is NOT TRUE about replicated service in docker?
 
-​A)
-Remove one or more images
+​
+A)
+For replicated services you can specify number of replica tasks
 ​
 B)
-Show the history of an image
+If you don't specify a mode, the service defaults to replicated
 ​
 C)
-Remove unused images
+A service running in a replicated mode may not run in all nodes
 ​
 D)
-Display detailed information on one or more images
+A replicated service, the scheduler places one task on each available that meets the service's placement constraints and resource requirements
 
 
 
@@ -48,8 +49,13 @@ Display detailed information on one or more images
 
 
 
-C is correct
 
-Remove all dangling (unused) images. 
 
-If -a is specified, will also remove all images not referenced by any container.
+
+
+
+
+D is Correct
+
+ If you don’t specify a mode, the service defaults to replicated
+For a replicated service, you specify the number of identical tasks you want to run. 

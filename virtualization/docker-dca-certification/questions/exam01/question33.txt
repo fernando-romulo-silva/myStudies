@@ -1,19 +1,17 @@
+What is the docker command to create a container with custom DNS server(s)?
 
-How do we expose a web server container on the host's port 80 (the nginx:alpine image exposes port 80)?
-
-a) docker container run --cap-add NET_ADMIN -p 80:80 -d nginx:alpine
-
-b) docker container run --net=host -d nginx:alpine
-
-c) docker container run -P nginx:alpine
-
-d) docker container run -d -P 80:80 nginx:alpine
-
-
-
-
-
-
+​
+A)
+docker container create --add-dns=IP_ADDRESS
+​
+B)
+docker container create --dns=IP_ADDRESS
+​
+C)
+docker container create --custom-dns=IP_ADDRESS
+​
+D)
+docker container create --set-dns=IP_ADDRESS
 
 
 
@@ -48,10 +46,20 @@ d) docker container run -d -P 80:80 nginx:alpine
 
 
 
-Answer 'd' - publish port
 
-$ docker container run --name porta80 -P 80:80 -d nginx:alpine
 
-// or
+The correct answer is B
 
-$ docker container run --name porta80 --detach --publish-all 80:80 nginx:alpine
+By default, a container inherits the DNS settings of the host, as defined in the /etc/resolv.conf configuration file. 
+
+Containers that use the default bridge network get a copy of this file, whereas containers that use a custom network use Docker’s embedded DNS server, 
+which forwards external DNS lookups to the DNS servers configured on the host.
+
+Custom hosts defined in /etc/hosts are not inherited. 
+
+To pass additional hosts into your container, refer to add entries to container hosts file in the docker run reference documentation. 
+
+You can override these settings on a per-container basis.
+
+$ docker run -d -t --name ubuntuDNS --dns="1.0.0.1" ubuntu
+

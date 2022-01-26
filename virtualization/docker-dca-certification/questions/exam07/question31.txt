@@ -1,15 +1,13 @@
 
-FROM keyword can only appear once at the start of the Dockerfile.
+How can we push a locally built image to a remote registry?
 
-a) TRUE
-​
-b) FALSE
+a) We need to know the registry's fully qualified domain name (FQDN) or its IP address.
 
+b) We tag the image with the registry FQDN or IP, the username or group, and the repository where the image will be stored.
 
+c) If the registry uses TLS/SSL certificates, we load its CA in our system to be able to trust them or we can configure it using the insecure-registries key.
 
-
-
-
+d) All of the preceding sentences are correct.
 
 
 
@@ -48,11 +46,16 @@ b) FALSE
 
 
 
-Answer 'b'
 
-ARG and FROM can start a Dockerfile
 
-The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. 
+Answer 'd'
 
-ARG is the only instruction that may precede FROM in the Dockerfile.
+know the  fully qualified domain name or ip
+
+$ docker push --all-tags registry-host:5000/myname/myimage
+
+// or
+
+$ docker push --all-tags 172.20.20.20:5000/myname/my_image
+
 

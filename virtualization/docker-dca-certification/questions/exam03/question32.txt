@@ -1,17 +1,18 @@
-Which of the following commands will create a swarm service which 
-only listens on port 53 using the UDP protocol?
-​
-A)
-docker service create --name dns-cache -p 53:53 --service udp dns-cache
+A host machine has four CPUs available and two running containers. 
+The sysadmin would like to assign two CPUs to each container. 
+Which of the following commands achieves this?
+
+​A)
+Set the '--cpuset-cpus' flag of the 'dockerd' process to the value 'even-spread'
 ​
 B)
-docker service create --name dns-cache -p 53:53 --udp dns-cache
+Set the '--cpu-quota' flag to '1.3' on one container and '2,4' on the other container.
 ​
 C)
-docker service create --name dns-cache -p 53:53/udp dns-cache
+Set the '--cpuset-cpus' flag to '.5' on both containers
 ​
 D)
-docker service create --name dns-cache -p 53:53 --constraint networking-protocol-udp=true dns-cache
+Set the '--cpuset-cpu's flag to '1.3' on one container and '2.4' on the other container.
 
 
 
@@ -48,23 +49,23 @@ docker service create --name dns-cache -p 53:53 --constraint networking-protocol
 
 
 
-C is correct
 
-$ docker service create --name dns-cache -p 53:53/udp dns-cache
 
-Use the --publish flag to publish a port when you create a service. target is used to specify the port inside the container, and published is used to specify the port to bind on the routing mesh. 
 
-If you leave off the published port, a random high-numbered port is bound for each service task. You need to inspect the task to determine the port.
 
-Full syntax:
 
-$ docker service create \
-  --name <SERVICE-NAME> \
-  --publish published=<PUBLISHED-PORT>,target=<CONTAINER-PORT>,protocol=udp \
-  <IMAGE>
 
-Short syntax:
 
-$ docker service create --name dns-cache \
-  -p 53:53/udp \
-  dns-cache
+
+
+C correct
+
+--cpuset-cpus
+
+Limit the specific CPUs or cores a container can use. 
+A comma-separated list or hyphen-separated range of CPUs a container can use, if you have more than one CPU. 
+The first CPU is numbered 0. 
+A valid value might be 0-3 (to use the first, second, third, and fourth CPU) or 1,3 (to use the second and fourth CPU).
+
+The value '.5' is 50% of the all cores. 
+

@@ -1,17 +1,12 @@
-Which of the following commands can we use to view detailed metadata about a container? 
-(select two)
+How is the ADD directive different from COPY ? (Choose two)
 
-​A)
-docker metadata
+a) The ADD directive can transfer a specific file between build stages.
 ​
-B)
-docker inspect
+b) The ADD directive can pull a file from an external URL.
 ​
-C)
-docker container inspect
+c) The ADD directive can extract an archive into the image.
 ​
-D)
-docker query
+d) The ADD directive can transfer files over to a specific location inside the image.
 
 
 
@@ -49,13 +44,16 @@ docker query
 
 
 
-B and C are Correct
 
-Because of:
 
-$ docker container inspect container_name
 
-or
 
-$ docker inspect container_name
+Answers 'c' and 'd'
+
+COPY takes in a src and destination. 
+It only lets you copy in a local file or directory from your HOST (the machine building the Docker image) into the Docker image itself.
+
+ADD lets you do that too, but it also supports 2 other sources. 
+First, you can use a URL instead of a local file / directory. 
+Secondly, you can extract a TAR file from the source directly into the destination.
 

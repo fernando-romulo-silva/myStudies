@@ -1,15 +1,13 @@
+What step is required to access images stored on a secure registry that is using a self-signed certificate?
 
-What is the docker command to setup a swarm?
+a) We can configure our registry as "insecure" in Docker Engine's daemon.json file.
 
-a) docker init swarm
-​
-b) docker create swarm
-​
-c) docker swarm create
-​
-d) docker swarm init
+b) We should disable Content Trust to allow image pulling from unsecured registries.
 
+c) The best option is to trust self-signed certificates. 
+We will add DTR's created Certificate Authority (CA) into our system's trusted-CA list.
 
+d) We cannot use self-signed certificates, therefore we always require an Enterprise-signed certificate.
 
 
 
@@ -48,9 +46,9 @@ d) docker swarm init
 
 
 
-Answer 'd'
 
-This command works with the Swarm orchestrator.
 
-$ docker swarm init [OPTIONS] 
 
+Answers 'a' and 'c'
+
+Docker Registry is an application that manages storing and delivering Docker container images.

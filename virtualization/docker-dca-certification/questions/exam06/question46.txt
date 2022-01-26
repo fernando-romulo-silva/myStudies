@@ -1,8 +1,17 @@
-Docker regularly cleans up unused objects, such as images, containers, volumes, and networks
 
-a) TRUE
+Docker Engine uses which file system to provide the building blocks for containers?
+
+A)
+NTFS
 ​
-b) FALSE
+B)
+EXT2
+​
+C)
+UnionFS
+​
+D)
+XFS
 
 
 
@@ -45,13 +54,6 @@ b) FALSE
 
 
 
+Answer 'C'
 
-
-
-
-Answer 'B'
-
-You have to do it by yourself:
-
-$ docker system prune
-
+UnionFS is used to isolate changes to a container filesystem in its own layer

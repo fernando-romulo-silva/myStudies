@@ -1,19 +1,17 @@
-Which concept is responsible for managing external to internal load balancing for Docker Swarm services?
+In a Docker Trusted Registry, how would a user prevent an image, for examle 'nginx:latest' 
+from being overwritten by another user with push access to the repository ?
 
-a) Router Mesh
-
-b) Ingress Controller
-
-c) nodePort
-
-d) clusterIP
-
-
-
-
-
-
-
+A)
+Tag the image with 'nginx:immutable'
+​
+B)
+Remive push access from all other users
+​
+C)
+User the DTR web UI to make the tag immutable
+​
+D)
+Keep a backup copy of the image on another repository
 
 
 
@@ -50,6 +48,13 @@ d) clusterIP
 
 
 
+The correct answer is C
 
-Answer 'a' - Usually, containers are only accessible through their host machine’s IP addresses but in a swarm, all nodes participate in an ingress routing mesh.
+Tag Immutability enables customers to rely on the descriptive tags of an image as a reliable mechanism to track and uniquely identify images.
+
+Docker tags are mutable named references to Docker images, much like branch refs in Git.
+
+$ docker pull debian:buster 
+
+DTR web UI help to make the tag immutable
 

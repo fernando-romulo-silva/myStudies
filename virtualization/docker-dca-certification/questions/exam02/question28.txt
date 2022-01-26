@@ -1,11 +1,17 @@
-Each container shares common writeable container layer.
-True or false?
+Which network driver type is best when the network stack should not be isolated from the Docker host, 
+but you want other aspects of the container to be isolated?
 
-A)
-FALSE
-
+​A)
+Overlay networks
+​
 B)
-TRUE
+Host networks
+​
+C)
+User-defined bridge networks
+​
+D)
+Macvlan networks
 
 
 
@@ -43,21 +49,51 @@ TRUE
 
 
 
+B is correct
+
+Network driver type
+
+Docker’s networking subsystem is pluggable, using drivers.
+
+bridge - networks are best when you need multiple containers to communicate on the same Docker host.
+
+Host networks - are best when the network stack should not be isolated from the Docker host, but you want other aspects of the container to be isolated.
+
+Overlay -  networks are best when you need containers running on different Docker hosts to communicate, or when multiple applications work together using swarm services.
+
+Macvlan -  networks are best when you are migrating from a VM setup or need your containers to look like physical hosts on your network, each with a unique MAC address.
+
+Third-party network plugins- allow you to integrate Docker with specialized network stacks.
 
 
 
 
 
-The correct answer is A
 
-The major difference between a container and an image is the top writable layer. 
+Complete
+ 
 
-All writes to the container that add new or modify existing data are stored in this writable layer. 
+Several drivers exist by default, and provide core networking functionality:
 
-When the container is deleted, the writable layer is also deleted. 
+bridge - The default network driver. If you don’t specify a driver, this is the type of network you are creating. 
+Bridge networks are usually used when your applications run in standalone containers that need to communicate.
 
-The underlying image remains unchanged.
+host: For standalone containers, remove network isolation between the container and the Docker host, 
+and use the host’s networking directly.
 
-Because each container has its own writable container layer, and all changes are stored in this container layer, 
-multiple containers can share access to the same underlying image and yet have their own data state.
+overlay: Overlay networks connect multiple Docker daemons together and enable swarm services to communicate with each other. 
+You can also use overlay networks to facilitate communication between a swarm service and a standalone container, 
+or between two standalone containers on different Docker daemons. 
+This strategy removes the need to do OS-level routing between these containers. 
+
+macvlan: Macvlan networks allow you to assign a MAC address to a container, making it appear as a physical device on your network. 
+The Docker daemon routes traffic to containers by their MAC addresses. 
+Using the macvlan driver is sometimes the best choice when dealing with legacy applications that expect to be directly connected 
+to the physical network, rather than routed through the Docker host’s network stack. See Macvlan networks.
+
+ 
+none: For this container, disable all networking. Usually used in conjunction with a custom network driver. none is not available for swarm services. 
+
+
+
 

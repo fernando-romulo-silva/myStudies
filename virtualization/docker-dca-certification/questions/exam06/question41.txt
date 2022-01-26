@@ -1,12 +1,11 @@
-Which command will drain a node that had a task assigned to it?
 
-a) ​docker node update --role drain
+Docker image can be saved in multiple repositories after the build is done.
+
+A)
+​TRUE
 ​
-b) docker node update drain
-
-c) docker node demote drain
-​
-d) docker node update --availability drain
+B)
+FALSE
 
 
 
@@ -49,11 +48,11 @@ d) docker node update --availability drain
 
 
 
+Answer 'A'
 
+You can do it using the push command:
 
-The correct answer is 'D'
+$ docker push <REGISTRY_HOST>:<REGISTRY_PORT>/<APPNAME>:<APPVERSION> 
 
- When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
-It also prevents the scheduler from assigning tasks to the node.
+$ docker push repo.company.com:3456/myapp:0.1
 
-$ docker node update --availability drain <NODE>

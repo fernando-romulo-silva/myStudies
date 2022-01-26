@@ -1,13 +1,12 @@
-Which storage driver uses block devices dedicated to Docker and operates at the block level, 
-rather than the file level?
 
-a) ​BlockDeviceMap
+It is possible to take a backup while the manager is running (a "hot" backup), 
+but this is not recommended and your results are less predictable when restoring.
+
+A)
+TRUE
 ​
-b) OverlayFS
-​
-c) devicemapper
-
-d) BlockDriver
+B)
+FALSE
 
 
 
@@ -50,10 +49,12 @@ d) BlockDriver
 
 
 
+Answer 'A'
 
+The backup operation enables you to save the current node data state. 
 
+There are several types of backup operations available:
 
+Cold backup – Perform a backup on a stopped node.
+Hot backup – Perform a backup on a running node.
 
-Answer 'C'
-
-The devicemapper driver uses block devices dedicated to Docker and operates at the block level, rather than the file level.

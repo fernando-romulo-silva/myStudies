@@ -1,16 +1,17 @@
-How do you deploy 4 new instances of nginx with a single command?
+When using the Dockers client to push an image to a registry, 
+what environment variable is used to instruct the client to perform signing of the image?
 
-A)
-docker service create --replicas 4 --name myservice nginx
+​A)​
+DOCKER_CONTENT_TRUST=1
 ​
 B)
-docker service create --instances 4 --name myservice nginx
+DOCKER_IMAGE_SIGN=1
 ​
 C)
-docker service scale myservice=4 nginx
+DOCKER_PUSH_SIGN=1
 ​
 D)
-docker service scale --replicas 4 --name myservice nginx
+NOTARY_ENABLE=1 Correct
 
 
 
@@ -53,10 +54,9 @@ docker service scale --replicas 4 --name myservice nginx
 
 
 
+The correct option is 'A'
 
+For the Docker client to know to use this server, you will need to set an environment variable pointing to it:
 
-A is correct
+$ export DOCKER_CONTENT_TRUST=1
 
-To creates a service as described by the specified parameters:
-
-$ docker service create --replicas 4 --name myservice nginx

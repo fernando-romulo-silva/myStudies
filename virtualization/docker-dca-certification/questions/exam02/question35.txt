@@ -1,16 +1,17 @@
-Which of the following items need to be considered before installing Docker Enterprise?
-
+After creating a new service names "http", you notice that the new service is not registering as healthy. 
+How do you view the list of historical tasks for that service by using the command line?
+​
 A)
-Network ports
+docker inspect http
 ​
 B)
-Disk space
+docker servoce inspect http
 ​
 C)
-Time Synchronization
+docker service ps http
 ​
 D)
-All of the options
+docker ps http
 
 
 
@@ -48,7 +49,15 @@ All of the options
 
 
 
-The correct answer is D
 
-Docker Enterprise Edition (Docker EE) is designed for enterprise development and IT teams who build, ship, 
-and run business-critical applications in production and at scale.
+
+C is correct
+
+
+Lists the tasks that are running as part of the specified services.
+In addition to running tasks, the output also shows the task history. 
+
+For example, after updating the service to use the redis:3.0.6 image, the output may look like this:
+
+$ docker service ps redis
+

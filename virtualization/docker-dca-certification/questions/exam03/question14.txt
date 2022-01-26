@@ -1,16 +1,16 @@
-Which of the following gives a web dashboard to manage docker cluster?
-​
-​A)
-Docker swarm mode
-​
-B)​
-Docker UCP
+Which of the following commands can be used to check Entry point and CMD of a given docker image?
+
+A)
+docker image inspect
+
+B)
+docker image ls
 ​
 C)
-Docker-compose
+docker info image
 ​
 D)
-DTR
+docker image info
 
 
 
@@ -50,10 +50,15 @@ DTR
 
 
 
-B is correct
 
-Universal Control Plane (UCP)
 
-Docker Universal Control Plane (UCP) is an enterprise onpremise solution that enables IT operations teams to deploy and 
-manage their Dockerized applications in production, while giving developers the agility and portability they need, all from within the enterprise firewall.
+
+
+A is Correct
+
+Docker inspect provides detailed information on constructs controlled by Docker.
+
+$ docker inspect -f '{{.Config.Cmd}}' <image:tag>
+
+$ docker inspect -f '{{.Config.Entrypoint}}' <image:tag>
 

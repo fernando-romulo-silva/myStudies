@@ -1,16 +1,16 @@
-Docker Hub and Docker Cloud are examples of?
+Which of the following are valid states of the AVAILABILITY column as shown when running 'docker node ls'? (select three)
 
-A)
-docker templates
-
+​A)​
+Drain
+​
 B)
-docker repos
-
+Pause
+​
 C)
-docker libraries
-
+Active
+​
 D)
-docker registries
+Running
 
 
 
@@ -53,16 +53,21 @@ docker registries
 
 
 
-Answer 'D'
+The correct options are 'A', 'B' and 'C'
 
-Docker registry could be hosted by a third party, as public or private registry.
+To view a list of nodes in the swarm run docker node ls from a manager node:
 
-Docker repository is a collection of different docker images with same name, 
-that have different tags. Tag is alphanumeric identifier of the image within a repository.
+$  docker node ls
 
-Docker Hub is a cloud-hosted version of Docker Registry. 
 
-A Docker user can opt for Docker Registry, which is a stateless, open source and scalable server-side application, 
-if they prefer to maintain the storage and distribution of Docker images instead of relying on Docker's service.
+The AVAILABILITY column shows whether or not the scheduler can assign tasks to the node:
+
+* Active : That the scheduler can assign tasks to the node.
+
+* Pause : The scheduler doesn’t assign new tasks to the node, but existing tasks remain running.
+
+* Drain : The scheduler doesn’t assign new tasks to the node. 
+          The scheduler shuts down any existing tasks and schedules them on an available node.
+
 
 

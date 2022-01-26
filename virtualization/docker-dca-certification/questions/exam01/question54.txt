@@ -1,18 +1,16 @@
-Which of the following is true about Docker Engine access?
+What is the recommended approach to set storage driver?
 
-a) By default, only owners of a Docker socket are allowed to run containers on a standalone host.
-
-b) We can allow users to run containers allowing their access to either Docker Engine's Unix socket or the API's TCP port (enabled by default).
-
-c) Anyone allowed to log in to the host is also allowed to run containers.
-
-d) Only the root user is allowed to run privileged containers on a host.
-
-
-
-
-
-
+A)
+Use --storage-driver flag when running dockerd
+​
+B)
+There is no such a feature to set storage driver options
+​
+C)
+Set the "storage-driver" option in the daemon.json file
+​
+D)
+Set the "storage" command line
 
 
 
@@ -48,7 +46,36 @@ d) Only the root user is allowed to run privileged containers on a host.
 
 
 
-Answer(s) 'a'
 
-Docker engine access ports can be secured with client access certificates (owners) to ensure that only trusted sources are allowed access.
 
+
+
+
+
+
+
+The correct answer is C
+
+
+Docker supports several storage drivers, using a pluggable architecture. 
+
+The storage driver controls how images and containers are stored and managed on your Docker host.
+
+1 - Stop Docker.
+
+$ sudo systemctl stop docker
+
+2 - Copy the contents of /var/lib/docker to a temporary location.
+
+$ cp -au /var/lib/docker /var/lib/docker.bk
+
+3 - If you want to use a separate backing filesystem from the one used by /var/lib/, format the filesystem and mount it into /var/lib/docker. 
+Make sure add this mount to /etc/fstab to make it permanent.
+
+4 - Edit /etc/docker/daemon.json. If it does not yet exist, create it. Assuming that the file was empty, add the following contents.
+
+{
+  "storage-driver": "overlay2"
+}
+
+ 

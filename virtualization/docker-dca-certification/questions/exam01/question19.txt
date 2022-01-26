@@ -1,14 +1,12 @@
+A docker image is built up from a series of layers and each layer represents an instruction in the image's Docker file.
 
-Which of the following sentences are true about replicated services?
+True or false?
 
-
-a) We need to specify the number of instances during service creation because it cannot be changed later.
-
-b) Replicated services are the default service mode and they will run one instance if none was specified.
-
-c) Replicated services can be stopped by setting the number of replicas to 0.
-
-d) All of the preceding options are true.
+​A)
+TRUE
+​
+B)
+FALSE
 
 
 
@@ -49,10 +47,20 @@ d) All of the preceding options are true.
 
 
 
-Answer 'b' and 'c'
 
-'b' - There are two types of service deployments, replicated and global. The default is replicated
+The correct option is A
 
-'c' - For a replicated service, you specify the number of identical tasks you want to run, even zero (0).  
+What Are Docker Image Layers?
 
+$ Each layer is an image itself, just one without a human-assigned tag. 
+They have auto-generated IDs though.
 
+$ Each layer stores the changes compared to the image it’s based on.
+
+$ An image can consist of a single layer (that’s often the case when the squash command was used).
+
+$ Each instruction in a Dockerfile results in a layer. 
+(Except for multi-stage builds, where usually only the layers in the final image are pushed, or when an image is squashed to a single layer).
+
+$ Layers are used to avoid transferring redundant information and skip build steps which have not changed 
+(according to the Docker cache).

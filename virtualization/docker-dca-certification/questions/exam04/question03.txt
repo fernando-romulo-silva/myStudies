@@ -1,16 +1,21 @@
-How many states are there of docker containers?
-​
-A)
-Two
+What is the correct sequence of docker container states?
+
+I. Running
+II. Paused
+III. Restarting
+IV. Exited
+
+​A)
+I, II, III, IV
 ​
 B)
-Four
+VI, III, II, I
 ​
 C)
-Three
+I, IV, III, II
 ​
 D)
-Five
+III, IV, II, I
 
 
 
@@ -48,15 +53,14 @@ Five
 
 
 
-B is Correct
+A is Correct
 
-There are four important states of a docker container, they are: 
+The correct sequence of the docker container cycle is,
 
-* running: A currently running container
+I. Running
 
-* paused: A container whose processes have been paused
+II. Paused
 
-* restarting: A container that is in the process of being restarted
+III. Restarting
 
-* exited: A container that ran and completed ("stopped" in other contexts, although a created container is technically also "stopped")
-
+IV. Exited

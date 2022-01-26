@@ -1,13 +1,16 @@
-Which of the following statement is false about the public registry?
+From the below-mentioned option which of the following command is used sed for seeing all the running containers in docker?
 
-
-A) The public registry helps in creating public Dockers.
+A)
+$ Sudo docker run -i -t alpine /bin/bash
 ​
-B) The public registry also called a docker hub.
+B)
+$ Sudo docker run container name
 ​
-C) Docker hub permits you for storing images privately.
+C)
+$ docker ps
 ​
-D) There is the availability of millions of images in the Docker hub.
+D)
+All of the above
 
 
 
@@ -48,10 +51,24 @@ D) There is the availability of millions of images in the Docker hub.
 
 
 
-A is the correct option
 
-Public registry also called a docker hub, Docker hub permits you for storing images privately, 
 
-There is the availability of millions of images in docker hub are true about docker. 
 
-But the first statement is incorrect because docker permits for creating private image storage.
+
+
+
+C is Correct
+
+docker run container name is not defined command. 
+
+docker run -i -t alpine /bin/bash is the command used for running the image as the container.
+
+docker ps is the only command used for seeing all the running containers in docker.
+
+Hence the correct option is C.
+
+$ docker ps
+
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS         PORTS                                                  NAMES
+7a38e315e870   mysql:5.7   "docker-entrypoint.s…"   6 months ago   Up 3 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   murachs-mysql
+

@@ -1,10 +1,17 @@
-A Dockerfile can start with any command.
+What type of network is ingress network?
 
-​A)
-TRUE
+A)
+overlay network
 ​
 B)
-FALSE
+bridge network
+​
+C)
+macvlan network
+​
+D)
+host network
+​
 
 
 
@@ -48,12 +55,11 @@ FALSE
 
 
 
-B is correct
-
-ARG and FROM can start a Dockerfile
-
-The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. 
-
-ARG is the only instruction that may precede FROM in the Dockerfile.
 
 
+A correct
+
+An overlay network called ingress, which handles the control and data traffic related to swarm services. 
+
+When you create a swarm service and do not connect it to a user-defined overlay network, 
+it connects to the ingress network by default.

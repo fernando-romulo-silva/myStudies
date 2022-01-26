@@ -1,16 +1,16 @@
-Which of the following will put the Docker engine into debug mode?
-​
+How do you deploy 4 new instances of nginx with a single command?
+
 A)
-echo '{"debug": true}' > /var/lib/docker/daemon.json ; sudo kill -HUP
+docker service create --replicas 4 --name myservice nginx
 ​
 B)
-echo '{"debug": true}' > /etc/docker/config.json ; sudo kill -HUP
+docker service create --instances 4 --name myservice nginx
 ​
 C)
-echo '{"debug": true}' > /var/lib/docker/config.json ; sudo kill -HUP
+docker service scale myservice=4 nginx
 ​
 D)
-echo '{"debug": true}' > /etc/docker/daemon.json ; sudo kill -HUP
+docker service scale --replicas 4 --name myservice nginx
 
 
 
@@ -50,7 +50,13 @@ echo '{"debug": true}' > /etc/docker/daemon.json ; sudo kill -HUP
 
 
 
-D is correct
 
-The default daemon configuration file is "/etc/docker/daemon.json" and the property is "debug": true,
 
+
+
+
+A is correct
+
+To creates a service as described by the specified parameters:
+
+$ docker service create --replicas 4 --name myservice nginx

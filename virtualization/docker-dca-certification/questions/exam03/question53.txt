@@ -1,16 +1,16 @@
-Which command is used to promote a worker node to be a manager?
+Which of the following commands will publish a service's port, but only on nodes that are running a task for that service?
 
 A)
-docker swarm promote
+docker service create -p 8080:80 nginx
 ​
 B)
-docker node make manager
+docker service create -p mode=ingress,published=8082,target=80 nginx
 ​
 C)
-docker node promote
+docker service create -p mode=host,published=8082,target=80 nginx
 ​
 D)
-docker node upgrade
+docker service create -p 8080:80 --mode host nginx
 
 
 
@@ -48,10 +48,16 @@ docker node upgrade
 
 
 
-C is correct
 
-Promotes a node to manager. This command can only be executed on a manager node.
 
-$ docker node promote NODE [NODE...]
+
+
+Answer 'C'
+
+You can publish a service task’s port directly on the swarm node where that service is running.
+The following example runs nginx as a service on each node in your swarm and exposes nginx port locally on each swarm node:
+
+$ docker service create -p mode=host,published=8082,target=80 nginx
+​
 
 

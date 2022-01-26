@@ -1,13 +1,11 @@
-Which of the following sentences are true about overlay networks?
+By default manager nodes also run services as worker nodes, 
+but you can configure them to run manager tasks exclusively and be manager-only nodes.
 
-a) DTR deploys an overlay network, dtr-ol, to route a cluster's internal communications.
+A)
+TRUE
 
-b) Overlay-defined networks are only present on manager nodes when there is not a task connected to them.
-
-c) interlock-extension connects to services' defined networks to route requests to appropriate backends.
-
-d) Docker Swarm overlay networks are encrypted and deployed using VXLAN.
-
+B)
+FALSE
 
 
 
@@ -48,9 +46,14 @@ d) Docker Swarm overlay networks are encrypted and deployed using VXLAN.
 
 
 
-Answer(s) 'a', 'b', and 'c'
 
-The overlay network driver creates a distributed network among multiple Docker daemon hosts.
-his network sits on top of (overlays) the host-specific networks, 
-allowing containers connected to it (including swarm service containers) to communicate securely when encryption is enabled.
 
+
+The correct answer is A
+
+By default manager nodes also run services as worker nodes, 
+but you can configure them to run manager tasks exclusively and be manager-only nodes. 
+
+An agent runs on each worker node and reports on the tasks assigned to it. 
+
+ 

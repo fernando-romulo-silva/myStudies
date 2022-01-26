@@ -1,13 +1,13 @@
-Which of the following docker command can be used to find out all the ports mapped? 
-(Select three)
 
-a) docker ps
+Which of the following commands will automatically create a volume when a container is started?
 
-b) docker inspect
-
-c) docker network ls
+a) ​docker container run --name nginxtest --volumes myvol:/app:new nginx
 ​
-d) docker port
+b) docker container run --name nginxtest -v myvol:/app nginx
+​
+c) docker container run --name nginxtest -v /app:mount nginx
+​
+d) docker container run --name nginxtest --volumes=/app nginx
 
 
 
@@ -48,11 +48,15 @@ d) docker port
 
 
 
+Answer 'c'
 
-'A', 'B' and 'D' are Correct
+The folder /app must be create before...
 
-$ docker port murachs-mysql
+The -v (or --volume) argument to docker run is for creating storage space inside a container that is separate from the rest of the container filesystem.
 
-$ docker inspect --format='{{.NetworkSettings.Ports}}' murachs-mysql
+* When given a single argument, like -v /var/lib/mysql, this allocates space from Docker and mounts it at the given location. 
+ 
+* When given two arguments (host_path:container_path), like -v /data/mysql:/var/lib/mysql, this mounts the specified directory 
+  on the host inside the container at the specified path
 
-$ docker ps 
+

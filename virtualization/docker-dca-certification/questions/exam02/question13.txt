@@ -1,17 +1,16 @@
-What is the function of docker inspect command?
-
+Which of the following statement is correct? Pick exactly two statements.
 ​
-A)
-To return low-level information on Docker objects
+​A)
+Image is a collection of immutable layers whereas container is a running instance of an image.
 ​
 B)
-To display system-wide information
+Container can exist without the image but image cannot exist without container
 ​
 C)
-To manage Docker configs
+Only one container can be spawned from a given image at a time
 ​
 D)
-To inspect changes to files or directories on a container's filesystem
+If multiple containers are spawned from the same image then they all use the same copy of image in memory.
 
 
 
@@ -48,33 +47,14 @@ To inspect changes to files or directories on a container's filesystem
 
 
 
-The correct option is A
 
-Return low-level information on Docker objects in JSON format
 
-$ docker inspect murachs-mysql
 
-[
-    {
-        "Id": "7a38e315e8703cbcce1a994e889554edd48a76668f695628355954f3b2f25cc9",
-        "Created": "2021-07-09T22:06:06.307095179Z",
-        "Path": "docker-entrypoint.sh",
-        "Args": [
-            "mysqld"
-        ],
-        "State": {
-            "Status": "exited",
-            "Running": false,
-            "Paused": false,
-            "Restarting": false,
-            "OOMKilled": false,
-            "Dead": false,
-            "Pid": 0,
-            "ExitCode": 0,
-            "Error": "",
-            "StartedAt": "2022-01-06T00:58:44.173400116Z",
-            "FinishedAt": "2022-01-06T00:58:52.471913412Z"
-        },
-....
 
+A and D are correct
+
+A Docker image consists of several layers. Each layer corresponds to certain instructions in your Dockerfile 
+
+A Docker container is a runtime instance of an image. 
+From one image you can create multiple containers (all running the sample application) on multiple Docker platform.
 

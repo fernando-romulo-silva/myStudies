@@ -1,16 +1,17 @@
-What is the docker command to roll back to the previous version of a service?
+Which network driver type is best when you need containers running on different Docker hosts to communicate, 
+or when multiple applications work together using swarm services?
 
-A)
-​docker service update --rollback-version
+​A)​
+User-defined bridge networks
 ​
 B)
-docker service --rollback-version
+Overlay networks
 ​
 C)
-docker service update --rollback
+Macvlan networks
 ​
 D)
-docker service --rollback
+Host networks
 
 
 
@@ -51,14 +52,9 @@ docker service --rollback
 
 
 
-C correct
 
-Use the docker service rollback command to roll back to the previous version of a service.
-After executing this command, the service is reverted to the configuration that was in place before the most recent docker service update command.
 
-$ docker service update --rollback my-service
 
-// or
+The correct option is B
 
-$ docker service rollback my-service
-
+The overlay network driver creates a distributed network among multiple Docker daemon hosts.

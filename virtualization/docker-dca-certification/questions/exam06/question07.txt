@@ -1,12 +1,13 @@
-What is the docker command to display detailed information on one or more networks?
 
-a) docker inspect network
+Which of the following commands will ensure that a container uses a maximum of 1 GB of active memory?
+
+a) ​​docker run --memory-swap 2G nginx
 ​
-b) docker network display
+b) docker run --memory 1G nginx
+
+c) docker run --memory-swap 2G --memory-reservation 1G
 ​
-c) docker network inspect
-​
-d) docker network status
+d) docker run --memory-reservation 1G nginx
 
 
 
@@ -47,16 +48,28 @@ d) docker network status
 
 
 
+Answer 'b'
 
-Answer 'c'
+To limit the maximum amount of memory usage for a container, add the --memory option to the docker run command. 
+Alternatively, you can use the shortcut -m.
 
-docker network inspect returns information about one or more networks. 
+$ docker run -it --memory="1g" ubuntu
 
-By default, this command renders all results in a JSON object.
 
-$ docker network inspect test-net -f "{{json .Containers }}"
 
-or
+If you use  --memory-reservation, it must be set lower than --memory for it to take precedence. 
 
-$ docker inspect container1 -f "{{json .NetworkSettings.Networks }}"
+It's allows you to specify a soft limit smaller than "--memory" which is activated when Docker detects contention or low memory on the host machine. 
+
+Because it is a soft limit, it does not guarantee that the container doesn't exceed the limit.
+
+$ docker container run -d --memory-reservation=250m --name mymem1 alpine:3.8 sleep 3600
+
+$ docker stats  // does not show RAM reservations.
+
+But
+
+If you run top  you will see no virtual RAM allocated. This setting is internal to Docker.
+
+13422 root        8.7m   3.3m   2.5m S  0.3   0:00.02 docker-containe
 

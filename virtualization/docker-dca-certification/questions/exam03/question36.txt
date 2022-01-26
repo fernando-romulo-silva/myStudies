@@ -1,16 +1,16 @@
-What is the docker command to connect a running container to an existing user-defined bridge?
-​
+Which command is used to place an image into a registry?
+
 A)
-docker network join
+docker commit
 ​
 B)
-docker network attach
+docker tag
 ​
 C)
-docker connect network
+docker push
 ​
 D)
-docker network connect
+docker images
 
 
 
@@ -50,21 +50,15 @@ docker network connect
 
 
 
-D is correct
-
-When you create a new container, you can specify one or more --network flags. 
-This example connects a Nginx container to the my-net network.
-
-$ docker create --name my-nginx \
-  --network my-net \
-  --publish 8080:80 \
-  nginx:latest
-  
-
-To connect a running container to an existing user-defined bridge, use the docker network connect command. 
-The following command connects an already-running my-nginx container to an already-existing my-net network:
-
-$ docker network connect my-net my-nginx
 
 
- 
+
+
+
+
+C correct
+
+docker image push: Push an image or a repository to a registry.
+
+$ docker push repo.company.com:3456/myapp:0.1
+

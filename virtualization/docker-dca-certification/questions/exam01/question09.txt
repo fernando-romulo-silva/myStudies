@@ -1,14 +1,12 @@
-Where do we specify that DevOps users can run a container using only images signed by the admin group from our Docker Enterprise registry?
+What are the requirements to install Docker Trusted Registry (DTR)? (Select all that apply)
 
-a) On Universal Control Plane's (UCP's) RBAC, we allow DevOps users to run their images.
-
-b) On DTR's image repository, we add image pulling access to DevOps.
-
-c) Image access should be configured on Docker Trusted Registry (DTR), and DevOps users should be able to at least read this repository. 
-On UCP, we allow only images signed by the admin group on the cluster and add at least scheduler access for DevOps users to their private collection.
-
-d) This is not possible on Docker Enterprise.
-
+A) Make sure the port 8080 and 8443 are open on the node
+​
+B) All nodes must be a worker node managed by Universal Control Plan
+​
+C) DTR can be installed on-premises or on a cloud provider
+​
+D) All nodes must have fixed hostname
 
 
 
@@ -48,8 +46,12 @@ d) This is not possible on Docker Enterprise.
 
 
 
-Answer 'c'
 
-Docker Content Trust (DCT) allows publishers of images to use digital signatures, effectively allowing users pulling their images to verify:
-That the content of the image has not been tampered with.
-The identity of the publisher.
+
+The correct option is B, C and D
+
+You can install DTR on-premises or on a cloud provider. To install DTR, all nodes must:
+
+Be a worker node managed by UCP (Universal Control Plane). 
+See Compatibility Matrix for version compatibility.
+Have a fixed hostname.

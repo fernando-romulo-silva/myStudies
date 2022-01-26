@@ -1,16 +1,14 @@
 
-The docker logs command is not available for drivers other than json-file and journald.
-
-A)
-TRUE
-​
-B)
-FALSE
+What does the HEALTHCHECK --start-period=15s CMD curl --fail https://localhost:8080 | exit 1 line in a Dockerfile do?
 
 
+a) It will execute the defined curl command every 15 seconds, and if it fails three consecutive times, it will mark the container as unhealthy.
 
+b) It will wait 15 seconds for the first execution and then Docker Engine will run the defined curl command every 30 seconds, and if it fails three consecutive times, it will mark the container as unhealthy.
 
+c) This line does not do anything; health checks must be configured for each container.
 
+d) Docker Engine will run this probe every 15 seconds and if it fails, it will restart the container.
 
 
 
@@ -48,12 +46,12 @@ FALSE
 
 
 
-Answer 'A'
 
-By default, Docker captures the standard output (and standard error) of all your containers, and writes them in files using the JSON format. 
-The JSON format annotates each line with its origin (stdout or stderr) and its timestamp. 
-Each log file contains information about only one container.
 
-The journald logging driver sends container logs to the systemd journal. 
-Log entries can be retrieved using the journalctl command, through use of the journal API, or using the docker logs command.
+Answer(s) 'b'
 
+A Health Check means to check the health of any resource to determine whether that resource is operating normally. 
+Here, it is about checking the health of Docker containers. 
+
+A healthcheck is how you tell Docker to test your app is really healthy, so if your web process is maxing out, 
+Docker can mark the container as unhealthy and take evasive action

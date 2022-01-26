@@ -1,18 +1,10 @@
-A host machine has four CPUs available and two running containers. 
-The sysadmin would like to assign two CPUs to each container. 
-Which of the following commands achieves this?
+Both RUN and CMD instruction can be used interchangeably in the Dockerfile as they do the similar thing
 
-​A)
-Set the '--cpuset-cpus' flag of the 'dockerd' process to the value 'even-spread'
+​A)​
+TRUE
 ​
 B)
-Set the '--cpu-quota' flag to '1.3' on one container and '2,4' on the other container.
-​
-C)
-Set the '--cpuset-cpus' flag to '.5' on both containers
-​
-D)
-Set the '--cpuset-cpu's flag to '1.3' on one container and '2.4' on the other container.
+FALSE
 
 
 
@@ -56,16 +48,10 @@ Set the '--cpuset-cpu's flag to '1.3' on one container and '2.4' on the other co
 
 
 
+The correct option is 'B'
 
+* RUN executes command(s) in a new layer and creates a new image. E.g., it is often used for installing software packages.
 
-C correct
+* CMD sets default command and/or parameters, which can be overwritten from command line when docker container runs.
 
---cpuset-cpus
-
-Limit the specific CPUs or cores a container can use. 
-A comma-separated list or hyphen-separated range of CPUs a container can use, if you have more than one CPU. 
-The first CPU is numbered 0. 
-A valid value might be 0-3 (to use the first, second, third, and fourth CPU) or 1,3 (to use the second and fourth CPU).
-
-The value '.5' is 50% of the all cores. 
-
+* ENTRYPOINT configures a container that will run as an executable. 

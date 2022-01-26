@@ -1,16 +1,17 @@
-Which command should you run to show all the nodes in a swarm?
+Which 'docker service update' flags are used to update the published 
+ports of existing services? (select two)
 
-A)
-docker swarm list
+​A)​
+-port-remove
 ​
 B)
-docker node ls
+--publish-add
 ​
 C)
-docker node list
+--port-add
 ​
 D)
-docker swarm l
+--publish-rm
 
 
 
@@ -52,18 +53,11 @@ docker swarm l
 
 
 
+The correct option are 'B' and 'D'
 
+Update a service
 
-B is correct
+--publish-add => Add or update a published port
 
-Lists all the nodes that the Docker Swarm manager knows about. 
+--publish-rm  => Remove a published port by its target port
 
-You can filter using the -f or --filter flag.
-
-$ docker node ls
-
-ID                           HOSTNAME        STATUS  AVAILABILITY  MANAGER STATUS
-1bcef6utixb0l0ca7gxuivsj0    swarm-worker2   Ready   Active
-38ciaotwjuritcdtn9npbnkuz    swarm-worker1   Ready   Active
-e216jshn25ckzbvmwlnh5jr3g *  swarm-manager1  Ready   Active        Leader
-  

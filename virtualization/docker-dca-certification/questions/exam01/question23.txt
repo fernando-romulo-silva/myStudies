@@ -1,19 +1,16 @@
-Which of the following is true about locking a Docker Swarm cluster?
+Which statement is true about DTR garbage collection?
 
-
-a) The control, management, and data planes are secure.
-
-b) A passphrase is required to unlock the /var/lib/docker/swarm data.
-
-c) Executing systemctl restart docker will require the locking passphrase.
-
-d) If a node reboots, Docker Engine will not restart automatically, hence we have lost the Docker Swarm quorum.
-
-
-
-
-
-
+A)
+Garbage collection removes DTR images that are older than a configurable of days.
+​
+B)
+Garbage collection removes unused volumes from cluster nodes
+​
+C)
+Garbage collection removes unreferenced image layers from DTR's backend storage.
+​
+D)
+Garbage collection removes exited containers from cluster nodes.
 
 
 
@@ -48,4 +45,13 @@ d) If a node reboots, Docker Engine will not restart automatically, hence we hav
 
 
 
-Answer 'b', 'c', and 'd'
+
+
+
+The correct option is C
+
+In the context of the Docker registry, garbage collection is the process of removing blobs from the filesystem when they are no longer referenced by a manifest. 
+
+Blobs can include both layers and manifests.
+
+garbage-collect [--dry-run] /path/to/config.yml

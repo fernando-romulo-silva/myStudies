@@ -1,16 +1,16 @@
-After joining a swarm, machines that are running Docker, are referred to as?
+Which command can you use to clean up multiple types of objects (images, containers, and networks) at once?
 
 ​A)
-Pods
+docker system purge
 ​
 B)
-Nodes
+docker cleanup
 ​
 C)
-Instances
+docker clean all
 ​
 D)
-Hosts
+docker system prune
 
 
 
@@ -50,14 +50,9 @@ Hosts
 
 
 
+D is correct
 
+Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
 
-The correct answer is B
+$ docker system prune 
 
-A node is an instance of the Docker engine participating in the swarm. 
-You can also think of this as a Docker node. 
-You can run one or more nodes on a single physical computer or cloud server, but production swarm deployments 
-typically include Docker nodes distributed across multiple physical and cloud machines.
-
-
- 

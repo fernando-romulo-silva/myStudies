@@ -1,22 +1,16 @@
-When seven managers are in a swarm cluster, how would they be distributed 
-across three data centers or availability zones?
+Which of the following is NOT a valid way to tag a Docker image?
 
 ​A)
-3/2/2
+Tag an image referenced by user ID
 ​
 B)
-4/2/1
+Tag an image referenced by Name
 ​
 C)
-5/1/1
+Tag an image referenced by image ID
 ​
 D)
-3/3/1
-
-
-
-
-
+Tag an image referenced by Name and Tag
 
 
 
@@ -56,5 +50,16 @@ D)
 
 A is Correct
 
-Try to distribute it equality
+Docker tags convey useful information about a specific image version/variant. 
+
+Tag an image referenced by ID
+To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”:
+
+$ docker tag 0e5574283393 fedora/httpd:version1.0
+
+
+Tag an image referenced by Name
+To tag a local image with name “httpd” into the “fedora” repository with “version1.0”:
+
+$ docker tag httpd fedora/httpd:version1.0
 

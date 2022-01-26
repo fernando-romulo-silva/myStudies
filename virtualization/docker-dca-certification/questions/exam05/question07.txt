@@ -1,16 +1,12 @@
-What is the endpoint that we can use to check the health of a single UCP (universal control panel) manager node?
+What is the docker command to display detailed information on one or more networks?
 
-​A)
-https:///_ heartbeat
+a) docker inspect network
 ​
-B)
-https:///_ping
+b) docker network display
 ​
-C)
-https:///_ health
+c) docker network inspect
 ​
-D)
-https:/// _status
+d) docker network status
 
 
 
@@ -48,13 +44,19 @@ https:/// _status
 
 
 
-B is Correct
 
-API endpoints which are specific to UCP
 
-https:///_ping
 
-Check the health of a UCP manager. 
-Use the _ping endpoint to check the health of a single UCP manager node. 
-The UCP manager validates that all of its internal components are working, and it returns either 200, if all components are healthy, or 500, if any aren’t healthy.
+
+Answer 'c'
+
+docker network inspect returns information about one or more networks. 
+
+By default, this command renders all results in a JSON object.
+
+$ docker network inspect test-net -f "{{json .Containers }}"
+
+or
+
+$ docker inspect container1 -f "{{json .NetworkSettings.Networks }}"
 

@@ -1,19 +1,17 @@
-Which of the following is true about replicated services?
+A user is having problems running Docker. 
+Which of the following will start Docker in debug mode?
 
-a) They will run one instance on each node.
-
-b) Only replicated services can be upgraded using the rolling update feature.
-
-c) They can be stopped using the Docker service update: --replicas 0 <SERVICENAME>.
-
-d) We will use Go templates to be able to provide unique resources, such as volumes or hostnames, inside containers to ensure all replicas use their own resources.
-
-
-
-
-
-
-
+A)
+Set the logging key to debug in the 'daemon.json' file.
+​
+B)
+Start the 'dockerd' process manually with the '--raw-logs' flag set to debug
+​
+C)
+Set the debug key to true in the 'daemon.json' file.
+​
+D)
+Start the 'dockerd' process manually with the '--logging' flag set to debug
 
 
 
@@ -48,12 +46,33 @@ d) We will use Go templates to be able to provide unique resources, such as volu
 
 
 
-Answer 'c' and 'd'
 
-Go templates = docker inspect --format '{{ .Config.Image }}' hello_world-0f87ch
 
-'a' is wrong because for replicated service, you specify the number of identical tasks you want to run. 
+The correct answer is C
 
-'b' is wrong because of
- 
-$ docker service update --replicas=5 web
+There are two ways to configure the Docker daemon:
+
+Use a JSON configuration file or use flags when starting dockerd. 
+
+To configure the Docker daemon using a JSON file, create a file at /etc/docker/daemon.json on Linux systems, 
+or C:\ProgramData\docker\config\daemon.json on Windows. 
+
+Here’s what the configuration file looks like:
+
+{
+  "debug": true,
+  "tls": true,
+  "tlscert": "/var/docker/server.pem",
+  "tlskey": "/var/docker/serverkey.pem",
+  "hosts": ["tcp://192.168.59.3:2376"]
+}
+
+Here’s an example of how to manually start the Docker daemon, using the same configurations as above:
+
+$ dockerd --debug \
+  --tls=true \
+  --tlscert=/var/docker/server.pem \
+  --tlskey=/var/docker/serverkey.pem \
+  --host tcp://192.168.59.3:2376
+  
+  

@@ -1,20 +1,18 @@
+You have been asked to backup the swarm state on a Linux installation. 
+By default, where do Docker manager nodes store the swarm state and manager logs?
 
-How can we deploy two applications using the same docker-compose.yaml file?
-
-
-a) We cannot deploy two applications using the same docker-compose.yaml file.
-
-b) Docker Compose can deploy two applications using projects to ensure applications run using different volumes and ports.
-
-c) We can use environment variables for fixed resources to avoid any resource usage conflicts.
-
-d) The only option to avoid application component conflicts is to deploy applications on different clusters.
-
-
-
-
-
-
+​
+A)
+/var/run/docker/swarm
+​
+B)
+/var/lib/docker/swarm
+​
+C)
+/etc/docker/swarm
+​
+D)
+/run/docker/swarm
 
 
 
@@ -28,32 +26,30 @@ d) The only option to avoid application component conflicts is to deploy applica
 
 
 
-Answer 'c'
 
-Ex: 
 
-common-services.yml
 
-services:
-  webapp:
-    build: .
-    ports:
-      - "8000:8000"
-    volumes:
-      - "/data"
-      
-      
- You can go further and define (or re-define) configuration locally in docker-compose.yml:
- 
- services:
-  web:
-    extends:
-      file: common-services.yml
-      service: webapp
-    environment:
-      - DEBUG=1
-    cpu_shares: 5
 
-  important_web:
-    extends: web
-    cpu_shares: 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is B
+
+The '/var/lib/' folder holds state information pertaining to an application or the system, 
+so the '/var/lib/docker/swarm' has the swarm state and logs. 
+

@@ -1,16 +1,16 @@
-From the below-mentioned option which of the following is correct in which the docker is being used?
+Which of the following command is used for checking the docker client and docker server?
 
-A)
-To simplify the configuration
+​A)
+$ docker version
 ​
 B)
-Managing the code pipeline
+$ docker info
 ​
 C)
-For the isolation of application
+$ docker login
 ​
 D)
-All of the above
+$ docker system prune
 
 
 
@@ -48,27 +48,45 @@ All of the above
 
 
 
+A is Correct
 
-
-
-
-
-
-D is Correct
-
-There are various uses of dockers. 
-
-Docker is used for the following things, to simplify the configuration: docker is used for putting your environment and configuration 
-into coding and further deploying it. 
-
-Managing the code pipeline: there are various types of system which is used in production and development, the journey of the code is
-with development to testing and then to production. 
-And hence it goes through different types of environments. 
-In this way, docker helps in maintaining the consistency of the code pipeline. 
+$ docker system prune is used for is used removing all the stock containers.
  
-For the isolation of application: as in one container all application is wrapped together with dependencies, apps are isolated. 
-They work independently on any hardware which is supported by docker. 
+$ docker login is used for promoting user name or password inserting those and finally, you are logged in.
 
-For the rapid development: docker cuts and removes the need for boosting an entire OS from scratch. 
-This will reduce deployment time. And hence the deployment is rapid. 
+$ docker info is used for getting the data information about the docker that is installed in your system.
+Information displayed includes the kernel version, storage driver, number of containers and images. 
+The number of images shown is the number of unique images. 
+
+For checking the docker client and docker server version the command used is $ docker version. 
+
+$ docker version
+Client:
+ Version:           20.10.7
+ API version:       1.41
+ Go version:        go1.13.8
+ Git commit:        20.10.7-0ubuntu5~20.04.2
+ Built:             Mon Nov  1 00:34:17 2021
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true
+
+Server:
+ Engine:
+  Version:          20.10.7
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.13.8
+  Git commit:       20.10.7-0ubuntu5~20.04.2
+  Built:            Fri Oct 22 00:45:53 2021
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.5.5-0ubuntu3~20.04.1
+  GitCommit:        
+ runc:
+  Version:          1.0.1-0ubuntu2~20.04.1
+  GitCommit:        
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        
 

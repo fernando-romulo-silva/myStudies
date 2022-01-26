@@ -1,16 +1,10 @@
-What is the correct order to upgrade a Docker cluster?
-​
-A)
-Upgrade DTR, UCP, then engine and kernel
+In Docker security scan result is available in both UCP and DTR.?
+
+​A)
+TRUE
 ​
 B)
-Upgrade engine and kernel, DTR, and then UCP
-​
-C)
-Upgrade engine and kernel, UCP, and then DTR
-​
-D)
-Upgrade UCP, DTR, then engine and kernel
+FALSE
 
 
 
@@ -51,12 +45,13 @@ Upgrade UCP, DTR, then engine and kernel
 
 
 
-C is Correct
 
-To upgrade Docker Engine - Enterprise you need to individually upgrade each of the following components:
 
-1) Docker Engine and kernel
-3) Universal Control Plane (UCP).
-4) Docker Trusted Registry (DTR).
 
+B is Correct
+
+Vulnerability scanning for Docker local images allows developers and development teams to review 
+the security state of the container images and take actions to fix issues identified during the scan.
+
+It's only available in DTR.
 

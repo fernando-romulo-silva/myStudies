@@ -1,16 +1,12 @@
-Which statement is true about DTR garbage collection?
+Docker image is built up from a series of layers and each layer represents an instruction in the image's Dockerfile. 
 
+True or false?
+​
 A)
-Garbage collection removes DTR images that are older than a configurable of days.
+False
 ​
 B)
-Garbage collection removes unused volumes from cluster nodes
-​
-C)
-Garbage collection removes unreferenced image layers from DTR's backend storage.
-​
-D)
-Garbage collection removes exited containers from cluster nodes.
+True
 
 
 
@@ -48,10 +44,14 @@ Garbage collection removes exited containers from cluster nodes.
 
 
 
-The correct option is C
 
-In the context of the Docker registry, garbage collection is the process of removing blobs from the filesystem when they are no longer referenced by a manifest. 
 
-Blobs can include both layers and manifests.
 
-garbage-collect [--dry-run] /path/to/config.yml
+
+B is correct
+
+A Docker image consists of several layers. 
+Each layer corresponds to certain instructions in your Dockerfile. 
+The following instructions create a layer: RUN , COPY , ADD. 
+The other instructions will create intermediate layers and do not influence the size of your image
+

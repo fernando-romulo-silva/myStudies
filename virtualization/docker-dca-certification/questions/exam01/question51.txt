@@ -1,18 +1,16 @@
-How can we ensure an image's content immutability?
+Which flag of 'docker service create' determines how many tasks are started for the service?
 
-a) By using signed images.
-
-b) Defining immutable tags in DTR.
-
-c) By using image scanning.
-
-d) Images cannot be immutable.
-
-
-
-
-
-
+A)
+--tasks
+​
+B)
+--numtasks
+​
+C)
+--numjobs
+​
+D)
+--replicas
 
 
 
@@ -49,11 +47,11 @@ d) Images cannot be immutable.
 
 
 
-Answer(s) 'a' 
 
-The principle of container immutability regards an image unchangeable once it is built,
-and requires creating a new image if changes need to be made. 
+The correct answer is D
 
-Image tags are not immutable, and the author of the images can publish the same tag multiple times.
-To image become immutable is necessary sign the image.
+docker service create command works with the Swarm orchestrator.
 
+--replicas = Number of tasks
+
+ 

@@ -1,16 +1,17 @@
-Which command is used to place an image into a registry?
+From a DevOps process standpoint, it is best practice to keep changes to an application in version control. 
+Which of the following will allow changes to a docker Image to be stored in a version control system?
 
-A)
-docker commit
+​A)
+docker save
 ​
 B)
-docker tag
+A docker file
 ​
 C)
-docker push
+A docker-compose.yaml file
 ​
 D)
-docker images
+docker commit
 
 
 
@@ -53,12 +54,10 @@ docker images
 
 
 
+The correct option is 'D'
 
+It can be useful to commit a container’s file changes or settings into a new image. 
+This allows you to debug a container by running an interactive shell, or to export a working dataset to another server. 
+Generally, it is better to use Dockerfiles to manage your images in a documented and maintainable way;
 
-
-C correct
-
-docker image push: Push an image or a repository to a registry.
-
-$ docker push repo.company.com:3456/myapp:0.1
 

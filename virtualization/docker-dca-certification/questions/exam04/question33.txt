@@ -1,17 +1,17 @@
-Which of the following is NOT true about Raft (docker consensus algorithm)?
+An application image runs in multiple environments, and each environment uses different certificates and ports, 
+what is the best practice to deploy the containers?
 
-​A)
-If a quorum is not reached, the system will not process any more requests to schedule additional tasks
+​A)​
+Create a Dockerfile for each environment, specifying ports and Docker secrets for certificates.
 ​
 B)
-Raft tolerates (N-2)/2 failures
+Create a Dockerfile for each environment, specifying ports and ENV variables for certificates.
 ​
 C)
-Raft requires a majority or quorum of (N/2) + 1 members
+Create a config file for each environment.
 ​
 D)
-If a quorum is not reached, the existing tasks will keep running
-​
+Create images that contain the specific configuration for every environment.
 
 
 
@@ -55,16 +55,20 @@ If a quorum is not reached, the existing tasks will keep running
 
 
 
+The correct option is 'C'
+
+Docker swarm service configs allow you to store non-sensitive information, 
+such as configuration files, outside a service’s image or running containers. 
+
+This allows you to keep your images as generic as possible, without the need to bind-mount 
+configuration files into the containers or use environment variables.
+
+1) Add a config to Docker. 
+
+$ echo "This is a config" | docker config create my-config - 
 
 
-B is correct
+2) Create a redis service and grant it access to the config. 
 
-So a quorum is a majority of managers.
- 
-To ensure that quorum is achieved in the cluster, swarm managers use something called the Raft Consensus Algorithm. 
-
-Raft tolerates UP TO (N-2)/2 failures and requires a majority or quorum of (N/2)+1 members to agree on values proposed to the cluster. 
-
-This means that in a cluster of 5 Managers running Raft, if 3 nodes are unavailable, 
-the system cannot process any more requests to schedule additional tasks.
+$ docker service create --name redis --config my-config redis:alpine
 

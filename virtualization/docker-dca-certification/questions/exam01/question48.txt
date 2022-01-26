@@ -1,18 +1,16 @@
-Which of the following is true about secrets?
+After joining a swarm, machines that are running Docker, are referred to as?
 
-a) They will only be available on manager nodes, so workloads with secrets must run on these nodes.
-
-b) They are ephemeral and deployed on on-memory filesystems.
-
-c) They are encrypted even for administrators, so they cannot be recovered from the control plane.
-
-d) If we need to change a secret, we need to create a new secret and update the service with this new one.
-
-
-
-
-
-
+​A)
+Pods
+​
+B)
+Nodes
+​
+C)
+Instances
+​
+D)
+Hosts
 
 
 
@@ -47,7 +45,19 @@ d) If we need to change a secret, we need to create a new secret and update the 
 
 
 
-Answers 'b', 'c', and 'd'
 
-Secrets are ephemeral, unchaged mounted as files that contain the information.
 
+
+
+
+
+
+The correct answer is B
+
+A node is an instance of the Docker engine participating in the swarm. 
+You can also think of this as a Docker node. 
+You can run one or more nodes on a single physical computer or cloud server, but production swarm deployments 
+typically include Docker nodes distributed across multiple physical and cloud machines.
+
+
+ 

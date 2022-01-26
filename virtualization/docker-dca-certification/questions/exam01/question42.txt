@@ -1,19 +1,16 @@
-How do we only list containers created from an alpine:3.10 image?
+Where do you create Docker Role Based Access Controls (RBAC)?
 
-
-a) docker container ls image=alpine:3.10
-
-b) docker ps --format ancestor=alpine:3.10
-
-c) docker container ls --filter ancestor=alpine:3.10
-
-d) docker container ls --filter image=alpine:3.10
-
-
-
-
-
-
+A)
+Docker Machine
+​
+B)
+Docker Trusted Registry
+​
+C)
+Docker Compose
+​
+D)
+Universal Control Plane
 
 
 
@@ -49,13 +46,13 @@ d) docker container ls --filter image=alpine:3.10
 
 
 
-Answers 'b' and 'c'
 
-b - because
 
-$ docker ps --format ancestor=alpine:3.10 
+The correct answer is D
 
-c - because
+Docker Universal Control Plane (UCP) is an enterprise on-premise solution that enables IT operations 
+teams to deploy and manage their Dockerized applications in production, while giving developers the agility 
+and portability they need, all from within the enterprise firewall.
 
-$ docker container ls --filter ancestor=alpine:3.10
+Docker UCP has the ability to create teams and orgs and granular RBAC policies to managed objects like containers. 
 

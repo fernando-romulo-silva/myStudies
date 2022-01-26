@@ -1,19 +1,17 @@
+Which of the following commands starts a Redid container and configures it to always 
+restart unless it is explicitly stopped or Dockers is restarted?
 
-What are the differences between the COPY and ADD Dockerfile primitives?
-
-a) COPY adds files in read-only mode.
-
-b) COPY can be used to download files from external services.
-
-c) ADD can be used with packaged and compressed files and they will be decompressed in the layer's root filesystem.
-
-d) ADD and COPY are completely equal, but ADD is newer.
-
-
-
-
-
-
+A)
+docker run -d --restart-policy unless-stopped redid
+​
+B)
+docker run -d --restart omit-stopped redis
+​
+C)
+docker run -d --restart unless-stopped redis
+​
+D)
+docker run -d --failure omit-stopped redis
 
 
 
@@ -49,13 +47,21 @@ d) ADD and COPY are completely equal, but ADD is newer.
 
 
 
-Answer 'c'
 
-COPY takes in a src and destination. 
-It only lets you copy in a local file or directory from your host (the machine building the Docker image) into the Docker image itself.
+The correct answer is C
 
-ADD lets you do that too, but it also supports 2 other sources. 
-First, you can use a URL instead of a local file / directory. 
-Secondly, you can extract a tar file from the source directly into the destination.
+$ ​docker run -d --restart unless-stopped redis
 
+
+The value of the --restart flag can be any of the following:
+
+* no : Do not automatically restart the container. (the default)
+
+* on-failure : Restart the container if it exits due to an error, which manifests as a non-zero exit code.
+
+* always : Always restart the container if it stops. If it is manually stopped, it is restarted only when Docker 
+daemon restarts or the container itself is manually restarted.
+
+* unless-stopped : Similar to always, except that when the container is stopped (manually or otherwise), 
+it is not restarted even after Docker daemon restarts.
 

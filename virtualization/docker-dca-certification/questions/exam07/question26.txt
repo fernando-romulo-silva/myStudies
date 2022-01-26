@@ -1,14 +1,12 @@
+ Which of the following is true about Kubernetes' integration with Docker Enterprise?
 
-Which one of the following commands will result in the volume being removed automatically once the container has exited?
+a) Docker Enterprise provides Kubernetes out of the box.
 
-a) docker run --rm -v /foo busybox
+b) We must choose which orchestrator to use in cluster nodes because only one is allowed at once.
 
-b) docker run --remove -v /foo busybox
-​
-c) docker run --read-only -v /foo busybox
-​
-d) docker run --del -v /foo busybox
+c) We can run hosts in mixed mode to allow Kubernetes and Docker Swarm workloads, although it is not recommended for production.
 
+d) We can upgrade Kubernetes components with common Kubernetes installation commands.
 
 
 
@@ -48,15 +46,11 @@ d) docker run --del -v /foo busybox
 
 
 
-Answer 'a'
 
-The -v (or --volume) argument to docker run is for creating storage space inside a container that is separate from the rest of the container filesystem.
 
-* When given a single argument, like -v /var/lib/mysql, this allocates space from Docker and mounts it at the given location. 
- 
-* When given two arguments (host_path:container_path), like -v /data/mysql:/var/lib/mysql, this mounts the specified directory 
-  on the host inside the container at the specified path
 
-When you set the --rm flag, Docker also removes the volumes associated with the container when the container is removed.
+Answer 'a' and 'c'
 
-$ docker run --rm -v /foo busybox  sh -c 'echo "blabla"'
+a - Choice of Orchestration – Swarm and Kubernetes
+
+c - Swarm and Kubernetes are both available and can be used interchangeably in the same cluster.

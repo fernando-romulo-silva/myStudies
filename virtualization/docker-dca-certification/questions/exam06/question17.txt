@@ -1,15 +1,13 @@
-If installing Docker using device mapper for storage with the Intent to run production workloads, 
-how should device mapper be configured?
 
-a) direct-lvm
+Network isolation by docker is provided by which one of the following linux kernel features?
+
+a) Ulimits
 ​
-b) aufs-lvm
+b) Namespace
 ​
-c) loop-lvm
-
-d) overlay-lvm
-
-
+c) Cgroups
+​
+d) File descriptors
 
 
 
@@ -49,13 +47,10 @@ d) overlay-lvm
 
 
 
-Answer 'a'
 
-Production hosts using the devicemapper storage driver must use direct-lvm mode. 
+Answer 'b'
 
-This mode uses block devices to create the thin pool. 
+Docker uses namespaces of various kinds to provide the isolation that containers need in order to remain portable
 
-This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
-
-However, more setup is required than in loop-lvm mode.
+Cgroups provide resource limitation and reporting capability within the container space. 
 

@@ -1,19 +1,16 @@
-How can we download all of the images from a repository?
+What is the default format of docker inspect output?
 
-
-a) It is not possible. We need to make a list of all the images with their tags and retrieve them one by one.
-
-b) Every time we execute docker image pull, we download all the images and their layers, regardless of whether we are going to use them or not.
-
-c) We can use docker image pull --all-tags to retrieve all repository-associated images.
-
-d) None of the preceding sentences are right.
-
-
-
-
-
-
+​A)
+yaml
+​
+B)
+html
+​
+C)
+xml
+​
+D)
+json
 
 
 
@@ -51,7 +48,15 @@ d) None of the preceding sentences are right.
 
 
 
-Answer 'c' because of:
+The correct answer is D
 
-$ docker pull --all-tags $registry/$repo;
+Docker inspect provides detailed information on constructs controlled by Docker.
+
+By default, docker inspect will render results in a JSON array.
+
+$ docker inspect murachs-mysql
+
+or
+
+$ docker inspect --format='{{.NetworkSettings.Ports}}' murachs-mysql
 

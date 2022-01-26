@@ -1,17 +1,12 @@
-Which format is the output returned, when the --pretty flag is 
-not specified for the docker service inspect command?
+Which availability mode needs to be set on a node when you need to perform maintenance on a node?
 
-​A)​
-yaml
+a) MAINTENANCE
 ​
-B)
-json
+b) EVACUATE
 ​
-C)
-txt
-​
-D)
-xml
+c) OFFLINE
+
+d) DRAIN
 
 
 
@@ -53,8 +48,11 @@ xml
 
 
 
-The correct option is 'B'
 
-Docker inspect provides detailed information on constructs controlled by Docker.
 
-By default, docker inspect will render results in a JSON array.
+
+Answer 'D'
+
+When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
+It also prevents the scheduler from assigning tasks to the node.
+

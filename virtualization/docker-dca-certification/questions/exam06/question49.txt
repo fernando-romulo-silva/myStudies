@@ -1,19 +1,17 @@
-You can specify multiple labels for an object, 
-but each key-value pair must be unique within an object.
 
-a) ​TRUE
+Which of the following is an advantage of volumes over bind mounts?
 
-b) FALSE
-
-
-
-
-
-
-
-
-
-
+A)
+New volumes can have their content pre-populated by a container.
+​
+B)
+You can manage volumes using Docker CLI commands or the Docker API.
+​
+C)
+All of these are advantages of volumes over bind mounts
+​
+D)
+Volumes can be more safely shared among multiple containers.
 
 
 
@@ -50,10 +48,31 @@ b) FALSE
 
 
 
-Answer 'A'
 
-A label is a key-value pair, stored as a string. 
 
-You can specify multiple labels for an object, but each key-value pair must be unique within an object. 
 
-If the same key is given multiple values, the most-recently-written value overwrites all previous values.
+
+
+Answer 'C'
+
+Volumes have several advantages over bind mounts:
+
+* Volumes are easier to back up or migrate than bind mounts.
+
+* You can manage volumes using Docker CLI commands or the Docker API.
+
+* Volumes work on both Linux and Windows containers.
+
+* Volumes can be more safely shared among multiple containers.
+
+* Volume drivers let you store volumes on remote hosts or cloud providers, to encrypt the contents of volumes, or to add other functionality.
+
+* New volumes can have their content pre-populated by a container.
+
+* Volumes on Docker Desktop have much higher performance than bind mounts from Mac and Windows hosts.
+
+
+In addition, volumes are often a better choice than persisting data in a container’s writable layer, 
+because a volume does not increase the size of the containers using it, and the volume’s contents exist outside the lifecycle of a given container.
+
+

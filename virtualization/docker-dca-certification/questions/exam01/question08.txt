@@ -1,15 +1,13 @@
-What step should we follow to remove the leader node from the cluster?
+Niels has an application that consists of multiple different containers that interact with one another. 
+What should he use to manage this application in a Docker Swarm?
 
-a) Ensure all tasks run on other nodes by executing docker node update --availability=drain <LEADER_NODE>.
-
-b) Remove the node from the cluster as the leader by executing docker swarm leave on the node.
-
-c) Demote the leader node to a worker and then execute docker swarm leave on the node.
-
-d) Once the node is out of the cluster, we can remove it completely using docker node rm <OLD_LEADER_NODE> from any available manager.
-
-
-
+A) Niels should use a service with multiple tasks.
+​
+B) Niels should use docker-compose .
+​
+C) Niels should use a stack .
+​
+D) Niels should use a task
 
 
 
@@ -49,18 +47,11 @@ d) Once the node is out of the cluster, we can remove it completely using docker
 
 
 
-Answers 'a', 'c', and 'd'
 
-'a' - When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
-It also prevents the scheduler from assigning tasks to the node.
+The answer correct is C
 
-$ docker node update --availability drain <NODE>
+Docker stack is ignoring “build” instructions. You can’t build new images using the stack commands.
 
+It need pre-built images to exist. So docker-compose is better suited for development scenarios.
 
-'c' - To demote a node or set of nodes, run docker node demote from a manager node:
-
-$ docker node demote node-3
-
-'d' - Removes the specified nodes from a swarm.
-
-$ docker node rm swarm-node-02
+Niels already the container?

@@ -1,15 +1,13 @@
 
-Which of the following commands is used to display system-wide Docker configuration on a host?
+How do we expose a web server container on the host's port 80 (the nginx:alpine image exposes port 80)?
 
-a) ​docker inspect
+a) docker container run --cap-add NET_ADMIN -p 80:80 -d nginx:alpine
 
-b) docker system
-​
-c) docker info
-​
-d) docker status
+b) docker container run --net=host -d nginx:alpine
 
+c) docker container run -P nginx:alpine
 
+d) docker container run -d -P 80:80 nginx:alpine
 
 
 
@@ -50,12 +48,10 @@ d) docker status
 
 
 
+Answer 'd' - publish port
 
-Answer 'c'
+$ docker container run --name porta80 -P 80:80 -d nginx:alpine
 
-This command displays system wide information regarding the Docker installation. 
-Information displayed includes the kernel version, number of containers and images. 
-The number of images shown is the number of unique images. 
+// or
 
-Docker inspect provides detailed information on constructs (Images, volumes, networks, etc.) controlled by Docker.
-By default, docker inspect will render results in a JSON array.
+$ docker container run --name porta80 --detach --publish-all 80:80 nginx:alpine

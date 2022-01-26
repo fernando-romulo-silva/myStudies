@@ -1,13 +1,13 @@
-Which of the following statements is incorrect?
 
-a) When a container is deleted, the writable layer is persisted.
+When seven managers are in a swarm cluster, how would they be distributed across three data centers or availability zones?
+
+a) 4/2/1
 ​
-b) Copy-on-write is a Docker strategy of sharing and copying files for maximum efficiency.
+b) 3/2/2
+
+c) 5/1/1 
 ​
-c) The column 'size' of docker ps -s output shows the amount of data that is used for the writable layer of each container.
-​
-d) The column 'virtual size' of docker ps -s output shows the amount of data used for the read-only image data used by 
-the container plus the container's writable layer 'size'.
+d) 3/3/1
 
 
 
@@ -48,11 +48,7 @@ the container plus the container's writable layer 'size'.
 
 
 
+Answer 'b'
 
-A is Correct
-
-When the container is deleted, the writable layer is also deleted. The underlying image remains unchanged.
- 
-Because each container has its own writable container layer, and all changes are stored in this container layer, 
-multiple containers can share access to the same underlying image and yet have their own data state.
+The swarm always try to distribute equality de managers
 

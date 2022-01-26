@@ -1,17 +1,12 @@
+Which command allows us to review and recover lost space due to "dangling images" and dead containers?
 
-Docker Engine uses which file system to provide the building blocks for containers?
+a) docker system rm
 
-A)
-NTFS
-​
-B)
-EXT2
-​
-C)
-UnionFS
-​
-D)
-XFS
+b) docker system prune
+
+c) docker image rm --filter="dangling"
+
+d) docker container rm -a
 
 
 
@@ -54,6 +49,18 @@ XFS
 
 
 
-Answer 'C'
+Answers 'b'
 
-UnionFS is used to isolate changes to a container filesystem in its own layer
+Docker images consist of multiple layers. 
+Dangling images are layers that have no relationship to any tagged images. 
+They no longer serve a purpose and consume disk space. 
+
+They can be located by adding the filter flag, -f with a value of dangling=true to the Docker images command.
+
+To list dangling:
+
+$ docker images -f dangling=true
+
+To clean dangling:
+
+$ docker system prune

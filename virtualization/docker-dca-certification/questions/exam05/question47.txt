@@ -1,16 +1,12 @@
-The docker daemon is called?
+Which instruction specifies the Base Image from which you are building?
 
-​A)​
-docker_d
+a) FROM
+
+b) CMD
 ​
-B)
-dockerd
+c) RUN
 ​
-C)
-docker_engine
-​
-D)
-docker_run
+d) EXPOSE
 
 
 
@@ -52,7 +48,15 @@ docker_run
 
 
 
-The correct option is 'B'
 
-Docker uses different binaries for the daemon and client. To run the daemon you type dockerd.
+
+
+
+
+Answer 'A'
+
+A Dockerfile usually starts with the FROM directive. 
+This is used to specify the parent image of our custom Docker image. 
+The parent image is the starting point of our custom Docker image. 
+All the customization that we do will be applied on top of the parent image.
 

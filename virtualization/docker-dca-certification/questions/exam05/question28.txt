@@ -1,24 +1,12 @@
-The following health check exists in a Dockerfile:
+What is the docker command to add or update a node label?
 
-'HEALTCHECK CMD curl --fail http://localhost/health || exit 1'
-
-Which of the following describes its purpose?
-
-​A)​
-Defines the health check endpoint on the local host interface 
-for containers to monitor the health of the docker engine.
+a) docker node update --set-label
 ​
-B)
-Defines the action taken when container health fails, 
-which in this case will kill the container with exit status 1.
+b) docker node update --label-add
 ​
-C)
-Defines the health check endpoint on the localhost interface for external 
-monitoring tools to monitor the health of the docker engine.
+c) docker node add --label
 ​
-D)
-Defines the health check for the containerized application so that the application 
-health can be monitored by the Docker engine.
+d) docker node modify --set-label
 
 
 
@@ -60,10 +48,15 @@ health can be monitored by the Docker engine.
 
 
 
+'B' is Correct
 
+Node labels provide a flexible method of node organization. 
+You can also use node labels in service constraints. 
+Apply constraints when you create a service to limit the nodes where the scheduler assigns tasks for the service.
 
-The correct option is B
+Run docker node update --label-add on a manager node to add label metadata to a node. 
+The --label-add flag supports either a <key> or a <key>=<value> pair.
 
-The curl command checks whether the application is running or not making a request to localhost:3000. 
-If the request returns a 200, it will return exit code 0; if the application crashes, it will return exit code 1. 
-These exit codes are how Docker's HEALTHCHECK determines the health of the container.
+Pass the --label-add flag once for each node label you want to add:
+
+$ docker node update --label-add foo --label-add bar=baz node-1

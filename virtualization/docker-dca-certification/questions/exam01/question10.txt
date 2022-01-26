@@ -1,20 +1,18 @@
-What step is required to access images stored on a secure registry that is using a self-signed certificate?
+Paul have some containerized software that needs to have a reference to the hostname of the node that the software is running on. 
+Which of the following commands Paul will pass the node hostname as an environment variable into each task in a service?
 
-a) We can configure our registry as "insecure" in Docker Engine's daemon.json file.
-
-b) We should disable Content Trust to allow image pulling from unsecured registries.
-
-c) The best option is to trust self-signed certificates. 
-We will add DTR's created Certificate Authority (CA) into our system's trusted-CA list.
-
-d) We cannot use self-signed certificates, therefore we always require an Enterprise-signed certificate.
-
-
-
-
-
-
-
+​
+A)
+docker service create --env NODE_HOSTNAME="{{.Node.Hostname}}" nginx
+​
+B)
+docker service create -e NODE_HOSTNAME nginx
+​
+C)
+docker service create --env NODE_HOSTNAME="{{Hostname}}" nginx
+​
+D)
+docker service create --pass-node-hostname=true nginx
 
 
 
@@ -49,6 +47,19 @@ d) We cannot use self-signed certificates, therefore we always require an Enterp
 
 
 
-Answers 'a' and 'c'
 
-Docker Registry is an application that manages storing and delivering Docker container images.
+
+
+
+The correct option is A
+
+Service Constraints
+
+node.id	-> Node ID
+node.hostname -> Node hostname
+node.role -> Node role (manager/worker)
+node.platform.os -> Node operating system	node.platform.os==windows
+node.platform.arch -> Node architecture	node.platform.arch==x86_64
+node.labels -> User-defined node labels node.labels.security==high
+engine.labels -> Docker Engine’s labels
+

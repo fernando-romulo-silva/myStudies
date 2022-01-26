@@ -1,17 +1,13 @@
-Which network driver type is best when you need containers running on different Docker hosts to communicate, 
-or when multiple applications work together using swarm services?
+Which of the following docker command can be used to find out all the ports mapped? 
+(Select three)
 
-​A)​
-User-defined bridge networks
+a) docker ps
+
+b) docker inspect
+
+c) docker network ls
 ​
-B)
-Overlay networks
-​
-C)
-Macvlan networks
-​
-D)
-Host networks
+d) docker port
 
 
 
@@ -53,8 +49,10 @@ Host networks
 
 
 
+'A', 'B' and 'D' are Correct
 
+$ docker port murachs-mysql
 
-The correct option is B
+$ docker inspect --format='{{.NetworkSettings.Ports}}' murachs-mysql
 
-The overlay network driver creates a distributed network among multiple Docker daemon hosts.
+$ docker ps 

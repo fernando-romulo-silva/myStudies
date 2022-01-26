@@ -1,19 +1,17 @@
-Which is the best node distribution if we have to deploy a cluster with seven managers with distributed high availability?
+You have created a Docker bridge network on a host with three containers attached, 
+how do you make this containers accessible outside of the host?
 
-a) Four manager nodes in a data center and three manager nodes on a different one.
-
-b) Two managers in a data center, two managers in a second one, and three in another.
-
-c) All managers should be in the same data center.
-
-d) We cannot manage distributed availability with 7 nodes; we need at least 9.
-
-
-
-
-
-
-
+A)
+Use --link to access the containers on the bridge network
+​
+B)
+Use either EXPOSE or --publish to access the containers on the bridge network
+​
+C)
+Use network connect to access the containers on the bridge network
+​
+D)
+Use network attach to access the containers on the bridge network
 
 
 
@@ -39,11 +37,26 @@ d) We cannot manage distributed availability with 7 nodes; we need at least 9.
 
 
 
-Answer 'b'
 
-A swarm cluster comprises one or more manager and worker nodes.
 
-To ensure high availability (HA) of the swarm control plane in production, 
-you should include an odd number (3+) of manager nodes, usually no more than seven. 
 
-They should be spread across availability zones and connected by high-speed reliable networks.
+
+
+
+
+
+
+
+
+The correct answer is B
+
+You should expose the ports which your service inside container is listening on to the host.
+
+$ docker run -d -p 80:80 apache
+
+-p = --publish
+
+or 
+
+EXPOSE in dockerfile
+

@@ -1,16 +1,16 @@
-What does the EXPOSE directive do?
-
+What is the correct order to upgrade a Docker cluster?
+​
 A)
-It causes the container to listen on a port.
+Upgrade DTR, UCP, then engine and kernel
 ​
 B)
-It documents ports intended for publishing at the time of running a container.
+Upgrade engine and kernel, DTR, and then UCP
 ​
 C)
-It automatically publishes ports when running a container.
+Upgrade engine and kernel, UCP, and then DTR
 ​
 D)
-It makes a container's port accessible externally.
+Upgrade UCP, DTR, then engine and kernel
 
 
 
@@ -51,32 +51,12 @@ It makes a container's port accessible externally.
 
 
 
+C is Correct
 
-The correct option is B
+To upgrade Docker Engine - Enterprise you need to individually upgrade each of the following components:
 
-The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. 
+1) Docker Engine and kernel
+3) Universal Control Plane (UCP).
+4) Docker Trusted Registry (DTR).
 
-You can specify whether the port listens on TCP or UDP, and the default is TCP if the protocol is not specified.
-
-The EXPOSE instruction does not actually publish the port. 
-
-It functions as a type of documentation between the person who builds the image and 
-the person who runs the container, about which ports are intended to be published. 
-
-To actually publish the port when running the container, use the -p flag on docker run to publish and map one or more ports, 
-or the -P flag to publish all exposed ports and map them to high-order ports.
-
-
-Basically, you have three options:
-
-Neither specify EXPOSE nor -p
-Only specify EXPOSE
-Specify EXPOSE and -p
-
-1) If you specify neither EXPOSE nor -p, the service in the container will only be accessible from inside the container itself.
-
-2) If you EXPOSE a port, the service in the container is NOT accessible from outside Docker network, but from inside other Docker containers. 
-So this is good for inter-container communication.
-
-3) If you EXPOSE and -p (publish) a port, the service in the container is accessible from anywhere, even outside Docker network.
 

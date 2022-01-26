@@ -1,14 +1,20 @@
-Which of the following is NOT how to create an efficient image via a Docker file?
 
-a) Avoid installing unnecessary packages
+You created a docker swarm with default address pool as this: 10.0.0.0/16
+
+Now when you run the following command to create an overlay network - what IP subnet will be allocated to this overlay network?
+
+NOTE: X can be any value starting from 0 to 255
+
+COMMAND: Docker network create -d overlay --attachable my-attachable-overlay
+
+
+a) 10.2.X.0/24
 ​
-b) Start with an appropriate base image
-​
-c) Combine multiple applications into a single container
+b) 10.0.X.0/24
 
-d) Use multi-stage builds
+c) 10.3.X.0/24
 
-
+d) 10.1.X.0/24
 
 
 
@@ -48,7 +54,7 @@ d) Use multi-stage builds
 
 
 
-Answer 'c'
 
-Docker is perfect to create micro services, each app with its container.
+Answer 'b'
+
 

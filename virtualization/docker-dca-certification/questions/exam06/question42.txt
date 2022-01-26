@@ -1,19 +1,17 @@
-It is OK to use root directory such as / as the PATH for building the docker image.
 
-a) TRUE
+To decrease the image pull time for geographically dispersed users you can configure which DTR option?
 
-b) FALSE
-
-
-
-
-
-
-
-
-
-
-
+A)
+DTR CDN
+​
+B)
+DTR cache
+​
+C)
+DTR Edge
+​
+D)
+DTR Local Registry
 
 
 
@@ -47,9 +45,18 @@ b) FALSE
 
 
 
-'B'
-
-The docker build command builds Docker images from a Dockerfile and a “context”. 
-The build process can refer to any of the files in the context, but have to read all files before.
 
 
+
+
+
+
+
+
+
+
+Answer 'B'
+
+To decrease the time to pull an image, you can deploy DTR caches geographically closer to users.
+Caches are transparent to users, since users still login and pull images using the DTR url address. 
+DTR checks if users are authorized to pull the image, and redirects the request to the cache.

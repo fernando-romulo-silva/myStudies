@@ -1,14 +1,11 @@
+Each container shares common writeable container layer.
+True or false?
 
-How can docker build avoid the use of cached image layers?
+A)
+FALSE
 
-a) Docker will always use cached information. It is not possible to avoid using image caching.
-
-b) By default, image caching is disabled, therefore we need to apply --use-caching to ensure caching is enabled as it will speed up the building process.
-
-c) To avoid image caching, we can use --no-cache. 
-This way, the build will not use any previously saved layers.
-
-d) All of the preceding sentences are wrong.
+B)
+TRUE
 
 
 
@@ -50,6 +47,17 @@ d) All of the preceding sentences are wrong.
 
 
 
-Answer 'c' because:
 
-$ docker build -t print-date-time --no-cache .
+The correct answer is A
+
+The major difference between a container and an image is the top writable layer. 
+
+All writes to the container that add new or modify existing data are stored in this writable layer. 
+
+When the container is deleted, the writable layer is also deleted. 
+
+The underlying image remains unchanged.
+
+Because each container has its own writable container layer, and all changes are stored in this container layer, 
+multiple containers can share access to the same underlying image and yet have their own data state.
+

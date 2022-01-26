@@ -1,12 +1,16 @@
-You can monitor the status of UCP by using the web UI or the CLI. 
+What is the docker command to remove one or more images?
 
-True or false?
-​
 A)
-TRUE
+​docker image delete
 ​
 B)
-FALSE
+docker image rm
+​
+C)
+docker remove
+​
+D)
+docker delete
 
 
 
@@ -48,8 +52,17 @@ FALSE
 
 
 
-A is correct
 
-You can monitor the status of UCP by using the web UI or the CLI. 
+B correct
 
-You can also use the _ping endpoint to build monitoring automation.
+docker image rm: Remove one or more images.  
+
+$ docker image rm mysql
+
+Untagged: mysql:latest
+Untagged: mysql@sha256:feada149cb8ff54eade1336da7c1d080c4a1c7ed82b5e320efb5beebed85ae8c
+
+Options:
+
+--force , -f    Force removal of the image
+--no-prune		Do not delete untagged parents

@@ -1,16 +1,16 @@
-What is the correct order to backup Docker EE components?
+What is the docker command to backup the UCP?
 
-​A)
-Backup DTR, UCP and then Swarm
+A)
+docker ucp backup
 ​
 B)
-Backup Swarm ,DTR, and then UCP
+docker backup ucp
 ​
 C)
-Backup Swarm, UCP, and then DTR
+docker backup all
 ​
 D)
-Backup UCP,Swarm, and then DTR
+docker/ucp backup
 
 
 
@@ -48,16 +48,18 @@ Backup UCP,Swarm, and then DTR
 
 
 
+D is Correct
 
 
+Docker Universal Control Plane (UCP) is an enterprise on- premise solution that enables IT operations teams to deploy and manage their Dockerized applications in production,
 
-C is Correct
+To create a backup of a UCP manager node:
 
-To backup Docker Enterprise Edition you need to create individual backups for each of the following components:
+docker container run --log-driver none --rm -i \
+    --name ucp \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    docker/ucp \
+    backup [command options] > backup.tar
 
-1* Docker Swarm: Backup Swarm resources like service and network definitions.
 
-2* Universal Control Plane (UCP): Backup UCP configurations.
-
-3* Docker Trusted Registry (DTR): Backup DTR configurations and images.
 

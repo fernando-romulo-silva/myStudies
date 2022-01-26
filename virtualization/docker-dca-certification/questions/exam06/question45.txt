@@ -1,13 +1,18 @@
-Which flag of 'docker service create' and 'docker service update' configures 
-the time delay between updates to a service task or sets of tasks?
 
-a) ​-update-wait
+Which of the following commands can be used to create a read only volume? 
+(select two)
+
+A)
+docker run -d --name test --mount source=testvol,target=/testvol,readonly ubuntu:latest
 ​
-b) --update-pause
+B)
+docker volume create testvol
 ​
-c) --update-delay
+C)
+docker run -d --name test -v testvol:/testvol:ro ubuntu:latest
 ​
-d) --wait-delay
+D)
+docker volume make readonly testvol
 
 
 
@@ -50,17 +55,16 @@ d) --wait-delay
 
 
 
+Answers 'A' and 'C'
+
+You can specify that a volume should be read-only by appending :ro to the -v switch:
+
+$ docker volume create volume-name
+
+$ docker run -v volume-name:/path/in/container:ro my/image
 
 
-Answer 'C'
+And by using the --mount switch. 
+Here is how to utilize that with read-only:
 
-The --update-delay flag configures the time delay between updates to a service task or sets of tasks. 
-
-You can describe the time T as a combination of the number of seconds Ts, minutes Tm, or hours Th. So 10m30s indicates a 10 minute 30 second delay.
-
-$ docker service create \
-  --replicas 3 \
-  --name redis \
-  --update-delay 10s \
-  redis:3.0.6
-
+$ docker run --mount source=volume-name,destination=/path/in/container,readonly my/image

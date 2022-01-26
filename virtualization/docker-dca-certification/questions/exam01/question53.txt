@@ -1,16 +1,14 @@
+Changing the storage driver makes any containers you have already created inaccessible on the local system.
 
-What does the HEALTHCHECK --start-period=15s CMD curl --fail https://localhost:8080 | exit 1 line in a Dockerfile do?
+A)
+TRUE
 
-
-a) It will execute the defined curl command every 15 seconds, and if it fails three consecutive times, it will mark the container as unhealthy.
-
-b) It will wait 15 seconds for the first execution and then Docker Engine will run the defined curl command every 30 seconds, and if it fails three consecutive times, it will mark the container as unhealthy.
-
-c) This line does not do anything; health checks must be configured for each container.
-
-d) Docker Engine will run this probe every 15 seconds and if it fails, it will restart the container.
+B)
+FALSE
 
 
+
+ 
 
 
 
@@ -48,10 +46,16 @@ d) Docker Engine will run this probe every 15 seconds and if it fails, it will r
 
 
 
-Answer(s) 'b'
 
-A Health Check means to check the health of any resource to determine whether that resource is operating normally. 
-Here, it is about checking the health of Docker containers. 
 
-A healthcheck is how you tell Docker to test your app is really healthy, so if your web process is maxing out, 
-Docker can mark the container as unhealthy and take evasive action
+The correct answer is A
+
+The devicemapper driver uses block devices dedicated to Docker and operates at the block level, rather than the file level.
+
+Changing the storage driver makes any containers you have already created inaccessible on the local system.
+ 
+Use docker save to save containers, and push existing images to Docker Hub or a private repository, so you do not need to recreate them later.
+
+
+
+ 

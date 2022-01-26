@@ -1,12 +1,13 @@
-Which one of the following commands will show a list of volumes for a specific container?
 
-a) 'docker volume logs nginx --containers'
+Which one of the following commands will result in the volume being removed automatically once the container has exited?
+
+a) docker run --rm -v /foo busybox
+
+b) docker run --remove -v /foo busybox
 ​
-b) 'docker container inspect nginx'
+c) docker run --read-only -v /foo busybox
 ​
-c) 'docker volume inspect nginx'
-
-d) 'docker container logs nginx --volumes'
+d) docker run --del -v /foo busybox
 
 
 
@@ -47,10 +48,15 @@ d) 'docker container logs nginx --volumes'
 
 
 
+Answer 'a'
 
-'B' is Correct
+The -v (or --volume) argument to docker run is for creating storage space inside a container that is separate from the rest of the container filesystem.
 
-Docker inspect provides detailed information on constructs controlled by Docker.
+* When given a single argument, like -v /var/lib/mysql, this allocates space from Docker and mounts it at the given location. 
+ 
+* When given two arguments (host_path:container_path), like -v /data/mysql:/var/lib/mysql, this mounts the specified directory 
+  on the host inside the container at the specified path
 
-$ docker container inspect nginx 
+When you set the --rm flag, Docker also removes the volumes associated with the container when the container is removed.
 
+$ docker run --rm -v /foo busybox  sh -c 'echo "blabla"'

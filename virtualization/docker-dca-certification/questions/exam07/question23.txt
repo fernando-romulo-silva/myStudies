@@ -1,15 +1,13 @@
-
-When seven managers are in a swarm cluster, how would they be distributed across three data centers or availability zones?
-
-a) 4/2/1
-​
-b) 3/2/2
-
-c) 5/1/1 
-​
-d) 3/3/1
+Which of the following is true about locking a Docker Swarm cluster?
 
 
+a) The control, management, and data planes are secure.
+
+b) A passphrase is required to unlock the /var/lib/docker/swarm data.
+
+c) Executing systemctl restart docker will require the locking passphrase.
+
+d) If a node reboots, Docker Engine will not restart automatically, hence we have lost the Docker Swarm quorum.
 
 
 
@@ -48,7 +46,6 @@ d) 3/3/1
 
 
 
-Answer 'b'
 
-The swarm always try to distribute equality de managers
 
+Answer 'b', 'c', and 'd'

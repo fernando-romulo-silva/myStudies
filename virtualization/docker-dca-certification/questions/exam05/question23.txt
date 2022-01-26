@@ -1,16 +1,13 @@
-Which of the following is supported by control groups?
+Which of the following statements is incorrect?
 
-​A)​
-Collect net
+a) When a container is deleted, the writable layer is persisted.
 ​
-B)
-Isolate processes in a container
+b) Copy-on-write is a Docker strategy of sharing and copying files for maximum efficiency.
 ​
-C)
-Mange certificates
+c) The column 'size' of docker ps -s output shows the amount of data that is used for the writable layer of each container.
 ​
-D)
-Limit CPU usage within a container
+d) The column 'virtual size' of docker ps -s output shows the amount of data used for the read-only image data used by 
+the container plus the container's writable layer 'size'.
 
 
 
@@ -48,15 +45,14 @@ Limit CPU usage within a container
 
 
 
-D is Correct
 
-Cgroups provide resource limitation and reporting capability within the container space. 
-They allow granular control over what host resources are allocated to the containers and when they are allocated.
-Common control groups:
 
-* CPU
-* Memory
-* Network Bandwidth
-* Disk
-* Priority
+
+
+A is Correct
+
+When the container is deleted, the writable layer is also deleted. The underlying image remains unchanged.
+ 
+Because each container has its own writable container layer, and all changes are stored in this container layer, 
+multiple containers can share access to the same underlying image and yet have their own data state.
 

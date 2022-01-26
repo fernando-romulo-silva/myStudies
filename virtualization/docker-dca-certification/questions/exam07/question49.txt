@@ -1,17 +1,13 @@
 
-Which of the following is an advantage of volumes over bind mounts?
+How can we ensure that a specific image is deployed in production?
 
-A)
-New volumes can have their content pre-populated by a container.
-​
-B)
-You can manage volumes using Docker CLI commands or the Docker API.
-​
-C)
-All of these are advantages of volumes over bind mounts
-​
-D)
-Volumes can be more safely shared among multiple containers.
+a) By using the image's hash for deploying containers.
+
+b) Signing images will ensure their tagging and provenance.
+
+c) Specifying the right tag is enough to ensure its content.
+
+d) By using docker image history to review commands used to generate the image.
 
 
 
@@ -52,27 +48,5 @@ Volumes can be more safely shared among multiple containers.
 
 
 
-
-Answer 'C'
-
-Volumes have several advantages over bind mounts:
-
-* Volumes are easier to back up or migrate than bind mounts.
-
-* You can manage volumes using Docker CLI commands or the Docker API.
-
-* Volumes work on both Linux and Windows containers.
-
-* Volumes can be more safely shared among multiple containers.
-
-* Volume drivers let you store volumes on remote hosts or cloud providers, to encrypt the contents of volumes, or to add other functionality.
-
-* New volumes can have their content pre-populated by a container.
-
-* Volumes on Docker Desktop have much higher performance than bind mounts from Mac and Windows hosts.
-
-
-In addition, volumes are often a better choice than persisting data in a container’s writable layer, 
-because a volume does not increase the size of the containers using it, and the volume’s contents exist outside the lifecycle of a given container.
-
+Answers 'a' and 'b' - Just use tag and hash to identify images
 

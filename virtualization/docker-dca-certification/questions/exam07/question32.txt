@@ -1,15 +1,13 @@
 
-Which of the following commands will ensure that overlay traffic between service tasks is encrypted?
+Which option will bind an already-created DATA volume inside a container, under the /data directory?
 
-a) docker network create -d overlay -o encrypted=true
-​
-b) ​docker network create -d overlay --secure
+a) -v DATA:/data
 
-c) docker service create --network --secure
-​
-d) docker service create --network --encrypted
+b) --mount type=volume,source=DATA,target=/data
 
+c) --mount DATA:/data
 
+d) --volume type=volume,source=DATA,target=/data
 
 
 
@@ -50,9 +48,14 @@ d) docker service create --network --encrypted
 
 
 
+Answer 'a' and 'b'
 
-Answer 'a'
+a - Volume (--volume)
 
-This command ensure that overlay traffic between service tasks is encrypted
+$ docker run --name postgres-db -e POSTGRES_PASSWORD=password --volume DATA:/data -p 2000:5432 -d postgres
 
-$ docker network create -d overlay -o encrypted=true
+
+b - Mount
+
+$ docker run --name postgres-db -e POSTGRES_PASSWORD=password --mount type=bind,source="$pwd",target=/var/lib/postgresql/data -p 2000:5432 -d postgres
+

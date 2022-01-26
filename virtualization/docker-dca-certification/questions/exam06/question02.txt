@@ -1,12 +1,11 @@
 
-Which of the following statement is true about memories web swap flag?
+Which of the following statement is false about Dockers swarm?
 
-a) Memory swap is the modification flag that only exists if memory is getting.
+a) ​Docker swarm is a native gathering used for docker.
 ​
-b) Swap permits the container for writing to express memory requirements to disc.
-​
-c) When the container gets exhausted all the ramp available then only swap permits 
-for writing the express memory requirements to disc.
+b) Docker host is the group in the number of multiple and virtual docker host.
+
+c) It provides the standard docker application program interface.
 ​
 d) All of the above
 
@@ -49,14 +48,9 @@ d) All of the above
 
 
 
+Answer 'b'
 
-Answer 'd'
+Docker host is converted in single or Virtual docker host. 
+Not a multiple and virtual. 
 
-All the statements, Memory swap is the modification flag that only exists if memory is get, 
 
-Swap permits the container for writing express memory requirements to disc, 
-
-When the container gets exhausted all the ramp available then only swap permits for writing 
-the express memory requirements to disc are true about memories web swap flag.
-
- 

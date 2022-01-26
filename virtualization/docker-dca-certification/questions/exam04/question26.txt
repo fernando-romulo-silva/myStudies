@@ -1,16 +1,17 @@
-What is the docker command to remove one or more images?
+When using the Docker client to push an image to a registry, what environment variable 
+is used to instruct the client to perform signing of the image?
 
-A)
-​docker image delete
+​A)​
+DOCKER_IMAGE_SIGN=1
 ​
 B)
-docker image rm
+DOCKER_CONTENT_TRUST=1
 ​
 C)
-docker remove
+DOCKER_PUSH_SIGN=1
 ​
 D)
-docker delete
+NOTARY_ENABLE=1
 
 
 
@@ -53,16 +54,10 @@ docker delete
 
 
 
-B correct
 
-docker image rm: Remove one or more images.  
+The correct option is B
 
-$ docker image rm mysql
+For the Docker client to know to use this server, you will need to set an environment variable pointing to it:
 
-Untagged: mysql:latest
-Untagged: mysql@sha256:feada149cb8ff54eade1336da7c1d080c4a1c7ed82b5e320efb5beebed85ae8c
+$ export DOCKER_CONTENT_TRUST=1
 
-Options:
-
---force , -f    Force removal of the image
---no-prune		Do not delete untagged parents

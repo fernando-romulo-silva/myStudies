@@ -1,16 +1,16 @@
-Which command is used to create an overlay network that can be used with swarm services?
+Which two commands can get an image from a registry? (select two)
 
 A)
-docker make overlay network 'network name'
+docker pull
 ​
 B)
-docker network create -d overlay 'network name'
+docker get
 ​
 C)
-docker-network create 'network name'
+docker download
 ​
 D)
-docker network 'network name' create -d overlay
+docker run
 
 
 
@@ -48,8 +48,20 @@ docker network 'network name' create -d overlay
 
 
 
-B is correct
 
-To create an overlay network for use with swarm services, use a command like the following:
 
-$ docker network create -d (--driver) overlay my-overlay
+
+
+
+
+A and D are correct
+
+A - By default, docker pull pulls a single image from the registry. A repository can contain multiple images.
+
+$ docker pull mysql/mysql-server:5.7
+
+
+D - The docker run command first creates a writeable container layer over the specified image (download it if doesn't found), 
+and then starts it using the specified command.  
+
+$ docker run --name test-mysql --publish 3306:3306 mysql:5.7

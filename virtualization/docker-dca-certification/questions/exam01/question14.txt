@@ -1,18 +1,16 @@
+Which of the following namespaces is not enabled by default?
 
-What is true about Swarm networking?
-
-a) All overlay networks are encrypted by default.
-
-b) Control Plane nodes use mutual TLS encryption to secure traffic.
-
-c) An internal DNS can be consumed externally exposing its service.
-
-d) All of the preceding options are true.
-
-
-
-
-
+A)
+pid
+​
+B)
+uts
+​
+C)
+user
+​
+D)
+mnt
 
 
 
@@ -48,9 +46,20 @@ d) All of the preceding options are true.
 
 
 
-Answer 'b'
-
-The nodes in a swarm use mutual Transport Layer Security (TLS) to authenticate, authorize, and encrypt the communications with other nodes in the swarm.
 
 
- 
+
+The correct option is C
+
+Docker uses a technology called namespaces to provide the isolated workspace called the container. 
+When you run a container, Docker creates a set of namespaces for that container.
+These namespaces provide a layer of isolation. 
+Each aspect of a container runs in a separate namespace and its access is limited to that namespace.
+
+Docker Engine uses the following namespaces on Linux:
+
+PID namespace for process isolation.
+NET namespace for managing network interfaces.
+IPC namespace for managing access to IPC resources.
+MNT namespace for managing filesystem mount points.
+UTS namespace for isolating kernel and version identifiers.

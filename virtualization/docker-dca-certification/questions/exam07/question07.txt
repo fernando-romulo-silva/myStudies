@@ -1,16 +1,14 @@
 
-Which of the following commands will ensure that a container uses a maximum of 1 GB of active memory?
-
-a) ​​docker run --memory-swap 2G nginx
-​
-b) docker run --memory 1G nginx
-
-c) docker run --memory-swap 2G --memory-reservation 1G
-​
-d) docker run --memory-reservation 1G nginx
+If we publish a service on port 8080 using -P, which nodes will expose port 8080?
 
 
+a) No node will expose a service on port 8080.
 
+b) All nodes will publish port 8080.
+
+c) We should use privileged containers to expose port 8080.
+
+d) We must use --network=host to publish ports below port 30000.
 
 
 
@@ -48,28 +46,21 @@ d) docker run --memory-reservation 1G nginx
 
 
 
-Answer 'b'
-
-To limit the maximum amount of memory usage for a container, add the --memory option to the docker run command. 
-Alternatively, you can use the shortcut -m.
-
-$ docker run -it --memory="1g" ubuntu
 
 
 
-If you use  --memory-reservation, it must be set lower than --memory for it to take precedence. 
+Answer 'a'
 
-It's allows you to specify a soft limit smaller than "--memory" which is activated when Docker detects contention or low memory on the host machine. 
+When you access port 8080 on any node, Docker routes your request to an active container. 
+On the swarm nodes themselves, port 8080 may not actually be bound, but the routing mesh 
+knows how to route the traffic and prevents any port conflicts from happening.
 
-Because it is a soft limit, it does not guarantee that the container doesn't exceed the limit.
-
-$ docker container run -d --memory-reservation=250m --name mymem1 alpine:3.8 sleep 3600
-
-$ docker stats  // does not show RAM reservations.
-
-But
-
-If you run top  you will see no virtual RAM allocated. This setting is internal to Docker.
-
-13422 root        8.7m   3.3m   2.5m S  0.3   0:00.02 docker-containe
+$ docker service create \
+  --name my-web \
+  --publish published=8080,target=80 \
+  --replicas 2 \
+  nginx
+  
+But, it's 'P' = publish-all, it's not valid for swarn
+  
 

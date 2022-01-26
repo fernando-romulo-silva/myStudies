@@ -1,12 +1,10 @@
-Which primitive combination creates the command line that will effectively finally run inside a container?
+To bypass the routing mesh, you can start a service using DNS Round Robin (DNSRR) mode,
 
-a) ENTRYPOINT will set the script or binary to be launched and CMD will be used if ENTRYPOINT is not defined.
-
-b) CMD always overwrites the ENTRYPOINT definition.
-
-c) Using a combination of ENTRYPOINT to define the script or binary to be launched and RUN as arguments.
-
-d) CMD will add arguments to the defined ENTRYPOINT only if ENTRYPOINT is configured using the exec format.
+A)
+TRUE
+​
+B)
+FALSE
 
 
 
@@ -25,11 +23,47 @@ d) CMD will add arguments to the defined ENTRYPOINT only if ENTRYPOINT is config
 
 
 
-Answers 'd'
 
-In short, CMD defines default commands and/or parameters for a container. 
-CMD is an instruction that is best to use if you need a default command which users can easily override. 
-If a Dockerfile has multiple CMDs, it only applies the instructions from the last one.
 
-On the other hand, ENTRYPOINT is preferred when you want to define a container with a specific executable. 
-You cannot override an ENTRYPOINT when starting a container unless you add the --entrypoint flag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is A
+
+
+To bypass the routing mesh, you must use the long --publish service and set mode to host
+
+To use an external load balancer without the routing mesh, set --endpoint-mode to dnsrr
+
+--------
+
+By default, swarm services which publish ports do so using the routing mesh.
+
+To bypass the routing mesh, you can start a service using DNS Round Robin (DNSRR) mode, 
+by setting the --endpoint-mode flag to dnsrr. You must run your own load balancer in front of the service. 
+
+A DNS query for the service name on the Docker host returns a list of IP addresses for the nodes running the service. 
+Configure your load balancer to consume this list and balance the traffic across the nodes.
+
+ 

@@ -1,17 +1,8 @@
-An application image runs in multiple environments, and each environment uses different certificates and ports, 
-what is the best practice to deploy the containers?
+It is OK to have more than one CMD instruction in the Docker file.
 
-​A)​
-Create a Dockerfile for each environment, specifying ports and Docker secrets for certificates.
+a)​ TRUE
 ​
-B)
-Create a Dockerfile for each environment, specifying ports and ENV variables for certificates.
-​
-C)
-Create a config file for each environment.
-​
-D)
-Create images that contain the specific configuration for every environment.
+b) FALSE
 
 
 
@@ -55,20 +46,12 @@ Create images that contain the specific configuration for every environment.
 
 
 
-The correct option is 'C'
-
-Docker swarm service configs allow you to store non-sensitive information, 
-such as configuration files, outside a service’s image or running containers. 
-
-This allows you to keep your images as generic as possible, without the need to bind-mount 
-configuration files into the containers or use environment variables.
-
-1) Add a config to Docker. 
-
-$ echo "This is a config" | docker config create my-config - 
 
 
-2) Create a redis service and grant it access to the config. 
+The correct answer is 'B'
 
-$ docker service create --name redis --config my-config redis:alpine
+In principle, there should only be one CMD command in your Dockerfile. 
+
+When CMD is used multiple times, only the last instance is executed.
+
 

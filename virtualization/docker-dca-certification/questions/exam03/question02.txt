@@ -1,15 +1,15 @@
-From the below-mentioned option which of the following command is used sed for seeing all the running containers in docker?
+Which command is used for running the images as a container?
 
-A)
-$ Sudo docker run -i -t alpine /bin/bash
+​A)
+$ sudo docker run -i -t alpine /bin/bash
 ​
 B)
 $ Sudo docker run container name
 ​
-C)
-$ docker ps
-​
 D)
+$ docker PS
+​
+C)
 All of the above
 
 
@@ -48,27 +48,10 @@ All of the above
 
 
 
+A is Correct
 
+Because '$ Sudo docker run -i -t alpine /bin/bash' is the command used for running the image as the container. 
 
+'$ Sudo docker run container name' is not defined command. 
 
-
-
-
-
-
-
-C is Correct
-
-docker run container name is not defined command. 
-
-docker run -i -t alpine /bin/bash is the command used for running the image as the container.
-
-docker ps is the only command used for seeing all the running containers in docker.
-
-Hence the correct option is C.
-
-$ docker ps
-
-CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS         PORTS                                                  NAMES
-7a38e315e870   mysql:5.7   "docker-entrypoint.s…"   6 months ago   Up 3 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   murachs-mysql
-
+'$ docker PS' is the only command used for seeing all the running containers in docker. 

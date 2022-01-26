@@ -1,10 +1,12 @@
-Both RUN and CMD instruction can be used interchangeably in the Dockerfile as they do the similar thing
+What is the command that need to be executed to sign an image before pushing it to repository?
 
-​A)​
-TRUE
+a)​ export TRUST_DOCKER_IMAGE=1
 ​
-B)
-FALSE
+b) export SIGN_DOCKER_IMAGE=1
+​
+c) export TRUST_DOCKER_CONTENT=1
+​
+d) export DOCKER_CONTENT_TRUST=1
 
 
 
@@ -46,12 +48,8 @@ FALSE
 
 
 
+The correct answer is 'D'
 
+For the Docker client to know to sign a image to a trusted repository, you will need to set an environment variable pointing to it:
 
-The correct option is 'B'
-
-* RUN executes command(s) in a new layer and creates a new image. E.g., it is often used for installing software packages.
-
-* CMD sets default command and/or parameters, which can be overwritten from command line when docker container runs.
-
-* ENTRYPOINT configures a container that will run as an executable. 
+$ export DOCKER_CONTENT_TRUST=1

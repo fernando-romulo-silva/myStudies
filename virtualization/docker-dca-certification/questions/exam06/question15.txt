@@ -1,16 +1,13 @@
-Which of the following is NOT true about secrets?
 
-a) Secrets are mounted in containers file system directly
+Which of the following commands can be used to see IPv4 subnet of a network?
+
+a) docker info network
 ​
-
-b) Secrets can be used for storing username and password
+b) docker network info
 ​
-
-c) Secrets are available at swarm services and standalone containers
+c) docket network ls
 ​
-
-d) Secrets are encrypted during transit and also at rest
-
+d) docker network inspect
 
 
 
@@ -51,10 +48,7 @@ d) Secrets are encrypted during transit and also at rest
 
 
 
-Answer 'a'
+Answer 'd'
 
-In terms of Docker Swarm services, a secret is a blob of data, such as a password, SSH private key, SSL certificate, 
-or another piece of data that should not be transmitted over a network or stored unencrypted in a Dockerfile or in your application’s source code.
-
- 
+$ docker network inspect -f '{{json .Containers}}' c6b0cccfd892 | jq '.[] | .Name + ":" + .IPv4Address'
 

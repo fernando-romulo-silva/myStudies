@@ -1,12 +1,13 @@
-What is the difference between UCP workers and managers?
 
-a) Ucp-agent service automatically starts serving UCP components and proxy service only on worker node.
+Which of the below correct command that need to be executed to sign an image before pushing it to repository?
+
+a) export TRUST_DOCKER_IMAGE=1
 ​
-b) Ucp-agent service automatically starts serving UCP components and proxy service only on manger node.
+b) export TRUST_DOCKER_CONTENT=1
 ​
-c) Ucp-agent service automatically starts serving all UCP components in manager node and only proxy service in worker node.
+c) export SIGN_DOCKER_IMAGE=1
 ​
-d) Ucp-agent service automatically starts serving UCP components in worker node, and only a proxy service in manager node.
+d) export DOCKER_CONTENT_TRUST=1
 
 
 
@@ -47,15 +48,11 @@ d) Ucp-agent service automatically starts serving UCP components in worker node,
 
 
 
+Answer 'd'
 
-Answer 'c'
+For the Docker client to know to use trusted server (environment), 
+you will need to set an environment variable pointing to it:
 
-If the node is a:
+$ export DOCKER_CONTENT_TRUST=1
 
-Manager: the ucp-agent service automatically starts serving all UCP components, including the UCP web UI and data stores used by UCP. 
-The ucp-agent accomplishes this by deploying several containers on the node. 
-By promoting a node to manager, UCP automatically becomes highly available and fault tolerant.
-
-Worker: on worker nodes, the ucp-agent service starts serving a proxy service that ensures only authorized users and other UCP services
-can run Docker commands in that node. The ucp-agent deploys a subset of containers on worker nodes.
 

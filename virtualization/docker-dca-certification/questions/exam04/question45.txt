@@ -1,11 +1,17 @@
-If the manager in a single-manager swarm fails, your services continue to run, 
-but you need to create a new cluster to recover.
+Which Docker feature allows operations with a remote Docker 
+registry to enforce client-side signing and verification of image tags?
 
-A)
-TRUE
+​A)​
+Docker Content Trust
 ​
 B)
-FALSE
+It is not possible to enforce client-side signing and verification of image tags.
+​
+C)
+Docker Signing Authority
+​
+D)
+Docker Certificate Checker
 
 
 
@@ -46,11 +52,8 @@ FALSE
 
 
 
+The correct option is 'A'
+
+Docker Content Trust (DCT) allows publishers of images to use digital signatures, effectively allowing users pulling their images to verify
 
 
-A is correct
-
-Say, if any of master or worker node fails, 
-SwarmKit reschedules its tasks(which are nothing but containers) onto a different node.
-
- 

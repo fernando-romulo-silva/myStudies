@@ -1,15 +1,13 @@
-
-Which command interactively monitors all container activity in the Docker engine?
-
-a) docker system events
-
-b) docker system logs
-​
-c) docker container events
-​
-d) docker container logs
+How can we filter running containers based on a specific image?
 
 
+a) There is no option for this. We use the Linux grep command to filter specific base images for containers.
+
+b) We will use the ancestor key to list all the running containers using a specific image.
+
+c) We will use the image key to list all the running containers using a specific image.
+
+d) None of the preceding sentences are right.
 
 
 
@@ -48,9 +46,10 @@ d) docker container logs
 
 
 
-Answer 'a'
 
-Use docker events to get real-time events from the server. 
-These events differ per Docker object type. 
-Different event types have different scopes.
+
+Answer 'b' because of
+
+$ docker ps -q  --filter ancestor=docker-mariadb:1.0.1
+
 

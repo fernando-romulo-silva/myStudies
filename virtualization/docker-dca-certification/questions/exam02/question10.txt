@@ -1,18 +1,16 @@
-Paul have some containerized software that needs to have a reference to the hostname of the node that the software is running on. 
-Which of the following commands Paul will pass the node hostname as an environment variable into each task in a service?
-
+Which of the following statements truly applies to the ENV directive?
 ​
-A)
-docker service create --env NODE_HOSTNAME="{{.Node.Hostname}}" nginx
+​A)
+It sets an environment variable on the host while the container is running
 ​
 B)
-docker service create -e NODE_HOSTNAME nginx
+It sets environment variables that are only visible at the container runtime.
 ​
 C)
-docker service create --env NODE_HOSTNAME="{{Hostname}}" nginx
+It sets environment variables that are made available in subsequent build steps and to containers at the runtime.
 ​
 D)
-docker service create --pass-node-hostname=true nginx
+It sets environment variables that are only visible during later build steps
 
 
 
@@ -51,15 +49,12 @@ docker service create --pass-node-hostname=true nginx
 
 
 
-The correct option is A
 
-Service Constraints
 
-node.id	-> Node ID
-node.hostname -> Node hostname
-node.role -> Node role (manager/worker)
-node.platform.os -> Node operating system	node.platform.os==windows
-node.platform.arch -> Node architecture	node.platform.arch==x86_64
-node.labels -> User-defined node labels node.labels.security==high
-engine.labels -> Docker Engine’s labels
+C is Correct
 
+The ENV instruction sets the environment variable <key> to the value <value>, on the container. 
+
+This value will be in the environment for all subsequent instructions in the build stage and can be replaced inline in many as well. 
+
+$ docker run --name test-mysql --cpus 0.75  --env MYSQL_ROOT_PASSWORD=root --detach --publish 3306:3306 mysql:5.7

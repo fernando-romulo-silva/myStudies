@@ -1,20 +1,13 @@
 
-You created a docker swarm with default address pool as this: 10.0.0.0/16
+Which of the following is true about global services?
 
-Now when you run the following command to create an overlay network - what IP subnet will be allocated to this overlay network?
+a) Global services will only run one replica of the defined service on each node.
 
-NOTE: X can be any value starting from 0 to 255
+b) Global services will not provide high availability based on resilience.
 
-COMMAND: Docker network create -d overlay --attachable my-attachable-overlay
+c) Draining a node will not remove global services.
 
-
-a) 10.2.X.0/24
-​
-b) 10.0.X.0/24
-
-c) 10.3.X.0/24
-
-d) 10.1.X.0/24
+d) All of the preceding sentences are true.
 
 
 
@@ -55,6 +48,9 @@ d) 10.1.X.0/24
 
 
 
-Answer 'b'
+Answer 'a'
+
+A global service is a service that runs one task on EVERY node. 
+There is no pre-specified number of tasks.
 
 

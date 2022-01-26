@@ -1,19 +1,16 @@
-Recent problems with the service called 'my_api' in your cluster has caused your development team to request 
-its removal from the cluster while they address the problems. 
-
-Which command will you need to execute to remove it? Choose the correct answer:
+Services using the routing mesh are running in the ___________.
 
 ​A)
-docker swarm --remove=my_api
+DNSRR mode
 ​
 B)
-docker rm my_api
+Global mode
 ​
 C)
-docker swarm remove my_api
+Virtual IP mode
 ​
 D)
-docker service rm my_api
+Swarm mode
 
 
 
@@ -48,9 +45,11 @@ docker service rm my_api
 
 
 
-The correct answer is D
 
-You can easylly delete the service from the swarm:
 
-$ docker service rm helloworld
 
+
+
+C is correct
+
+The service mesth use load balancer with the routing mesh, vip (virtual IP Mode) 

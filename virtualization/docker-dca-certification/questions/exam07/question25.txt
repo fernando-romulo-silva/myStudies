@@ -1,15 +1,13 @@
 
-Which of the following docker image commands display detailed information on one or more images?
+Which methods are allowed to publish applications on Docker Enterprise?
 
-a) docker image ls
-​
-b) docker image detail
-​
-c) docker image inspect
+a) We can use Interlock.
 
-d) docker image history
+b) We can use an Ingress Controller.
 
+c) We will publish each application container.
 
+d) We can use the host mode to publish applications as if they were running directly at the host level.
 
 
 
@@ -48,17 +46,14 @@ d) docker image history
 
 
 
-Answer 'C'
 
-Docker inspect provides detailed information on constructs controlled by Docker.
 
-By default, docker inspect will render results in a JSON array.
+Answer 'a', 'c', and 'd'
 
---format , -f		Format the output using the given Go template
-
-Example (two images):
-
-$ docker image inspect  mysql:5.7 alpine:3.6
+A)
+Interlock is an application routing proxy service for Docker. 
+Fully integrates with Docker (Swarm, Services, Secrets, Configs) Enhanced configuration (context roots, TLS, zero downtime deploy, rollback) 
+Support external load balancers (nginx, haproxy, etc) via extensions.
 
 
 

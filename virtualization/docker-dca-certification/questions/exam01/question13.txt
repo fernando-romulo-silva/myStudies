@@ -1,19 +1,17 @@
+What is the function of docker inspect command?
 
-How can we ensure that a minimum of memory is available to run a container using soft limits?
-
-
-a) We cannot ensure a minimum of memory is available for a container.
-
-b) Using --memory.
-
-c) This must be configured on your operating system.
-
-d) We use --memory-reservation.
-
-
-
-
-
+​
+A)
+To return low-level information on Docker objects
+​
+B)
+To display system-wide information
+​
+C)
+To manage Docker configs
+​
+D)
+To inspect changes to files or directories on a container's filesystem
 
 
 
@@ -48,31 +46,35 @@ d) We use --memory-reservation.
 
 
 
-Answer 'd' 
 
 
-To limit the maximum amount of memory usage for a container, add the --memory option to the docker run command. 
-Alternatively, you can use the shortcut -m.
+The correct option is A
 
-$ docker run -it --memory="1g" ubuntu
+Return low-level information on Docker objects in JSON format
+
+$ docker inspect murachs-mysql
+
+[
+    {
+        "Id": "7a38e315e8703cbcce1a994e889554edd48a76668f695628355954f3b2f25cc9",
+        "Created": "2021-07-09T22:06:06.307095179Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "mysqld"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2022-01-06T00:58:44.173400116Z",
+            "FinishedAt": "2022-01-06T00:58:52.471913412Z"
+        },
+....
 
 
-
-If you use  --memory-reservation, it must be set lower than --memory for it to take precedence. 
-
-It's allows you to specify a soft limit smaller than "--memory" which is activated when Docker detects contention or low memory on the host machine. 
-
-Because it is a soft limit, it does not guarantee that the container doesn't exceed the limit.
-
-$ docker container run -d --memory-reservation=250m --name mymem1 alpine:3.8 sleep 3600
-
-$ docker stats  // does not show RAM reservations.
-
-But
-
-If you run top  you will see no virtual RAM allocated. This setting is internal to Docker.
-
-13422 root        8.7m   3.3m   2.5m S  0.3   0:00.02 docker-containe
-
-
- 

@@ -1,13 +1,14 @@
 
-From the below-mentioned option, what is the use of the docker pull command?
+What environment variables should be exported to start using a trusted environment with the Docker client?
 
-a) It is used for providing information about the command.
-​
-b) It is used for downloading an image.
-​
-c) It is used for the information of the container
-​
-d) It is used for the listing of downloaded images.
+a) export DOCKER_TRUSTED_ENVIRONMENT=1
+
+b) export DOCKER_CONTENT_TRUST=1
+
+c) export DOCKER_TRUST=1
+
+d) export DOCKER_TRUSTED=1
+
 
 
 
@@ -50,15 +51,6 @@ d) It is used for the listing of downloaded images.
 
 Answer 'b'
 
-For downloading an image the command used is docker pull.
+For the Docker client to know to use trusted server (environment), you will need to set an environment variable pointing to it:
 
-$  docker pull debian:latest
- 
- 
-For providing the information about container the command used is docker stats. 
-
-For listing the downloaded images the command used is docker images. 
-
-And for providing the information of command the command used is docker input. 
-
-
+$ export DOCKER_CONTENT_TRUST=1

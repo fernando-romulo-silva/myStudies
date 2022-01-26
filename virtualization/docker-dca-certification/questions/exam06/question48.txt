@@ -1,12 +1,11 @@
-Which command is used to join a swarm as a worker?
 
-a) docker swarm -j
+The devicemapper can only use a single block device when using direct-lvm mode.
+
+A)
+TRUE
 ​
-b) docker join the swarm
-​
-c) docker worker init
-​
-d) docker swarm join
+B)
+FALSE
 
 
 
@@ -49,13 +48,11 @@ d) docker swarm join
 
 
 
+Answer 'B'
 
+Production hosts using the devicemapper storage driver must use direct-lvm mode. 
 
+This mode uses block devices to create the thin pool. 
 
-
-Answer 'D'
-
-Join a swarm as a node and/or manager
-
-$ docker swarm join
+This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
 

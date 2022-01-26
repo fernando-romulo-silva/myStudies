@@ -1,13 +1,14 @@
-Which of the following is not an endpoint exposed by Docker Trusted Registry 
-that can be used to assess the health of a Docker Trusted Registry replica?
 
-a) ​/health
+Which of the following Docker client commands will display all of the base images available for local containers to be instantiated from? 
+Choose the correct answer:
+
+a) docker list
 ​
-b) /nginx_status
+b) docker images
+
+c) docker list all
 ​
-c) /api/v0/meta/cluster_status
-​
-d) replica_status
+d) None of the above.
 
 
 
@@ -51,19 +52,7 @@ d) replica_status
 
 
 
+Answer 'b'
 
-The correct answers are 'A' and 'D'
-
-Docker Trusted Registry is a Dockerized application. 
-To monitor it, you can use the same tools and techniques you’re already using to monitor other containerized applications running on your cluster. 
-One way to monitor DTR is using the monitoring capabilities of Docker Universal Control Plane.
-
-DTR also exposes several endpoints you can use to assess if a DTR replica is healthy or not:
-
-/_ping: Checks if the DTR replica is healthy, and returns a simple json response. This is useful for load balancing or other automated health check tasks.
-
-/nginx_status: Returns the number of connections being handled by the NGINX front-end used by DTR.
-
-/api/v0/meta/cluster_status: Returns extensive information about all DTR replicas.
-
+For listing ALL the downloaded images the command used is docker images. 
 

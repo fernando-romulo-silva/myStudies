@@ -1,15 +1,13 @@
 
-When querying the configuration of a running container called 'myweb', 
-which command would display the container's IP Address?
+What is required to deploy DTR (Docker Trusted Registry) ?
 
-a) docker run inspect myweb | grep IP
-​
-b) docker myweb inspect | grep IP
+a) A Docker Enterprise license from Docker Hub and an appropriate repository URL
 
-c) docker inspect myweb | grep IPAddress
-​
-d) None of the Above
+b) Docker Enterprise Engine and Docker UCP
 
+c) Docker Engine, a DTR license, and Docker Content Trust
+
+d) All of the preceding options
 
 
 
@@ -50,12 +48,12 @@ d) None of the Above
 
 
 
+Answer 'a' and 'b'
 
+'a' 
+The DTR cache is going to be deployed as a Docker service
 
-Answer 'c'
-
-The 'inspect' command show all conf about the image.   
-The 'grep' command filter a result.
-
-$ docker inspect myweb | grep IPAddress 
+'b'
+We’ll manage the cache configuration using a Docker configuration, and the TLS certificates using Docker secrets. 
+This allows you to manage the configurations securely and independently of the node where the cache is actually running.
 

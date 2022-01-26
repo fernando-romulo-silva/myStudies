@@ -1,17 +1,16 @@
-You are running UCP service on a swarm with 3 managers and 2 workers. 
-You need to schedule a backup policy for your UCP service. How many nodes you need to fully back up this service?
+Network isolation by docker is provided by which one of the following linux kernel features?
 
 A)
-1
+cgroups
 ​
 B)
-2
+namespace
 ​
 C)
-3
+ulimits
 ​
 D)
-4
+file descriptors
 
 
 
@@ -50,7 +49,13 @@ D)
 
 
 
-A is correct
 
-1 is enough
 
+
+
+
+B is Correct
+
+Docker uses namespaces of various kinds to provide the isolation that containers need in order to remain portable
+
+Cgroups provide resource limitation and reporting capability within the container space. 

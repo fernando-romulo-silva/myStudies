@@ -1,16 +1,17 @@
-Which of the following is true of filesystem storage models? (select all that apply)
-
-​A)
-They store data in regular files on the host machine.
+What is the docker run option to publish a port so that an application is accessible externally?
+​
+A)
+docker run --open-port
 ​
 B)
-They are efficient with write-heavy workloads.
+docker run --expose
 ​
 C)
-They are used by overlay2 and aufs .
+docker run --piblish-port
 ​
 D)
-They use an external, object-based store.
+docker run --publish
+​
 
 
 
@@ -50,12 +51,12 @@ They use an external, object-based store.
 
 
 
-The correct answers are A, B and C
 
-They store data in regular files on the host machine. 
 
-They are used by overlay2 and aufs .
 
-They are efficient with write-heavy workloads
+D is correct
 
+The param --publish or -p publish a container's port(s) to the host
+
+$ docker run --name test-mysql --detach --publish 3306:3306 mysql:latest
 

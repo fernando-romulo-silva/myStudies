@@ -1,13 +1,13 @@
 
-From the below-mentioned option which of the following statement is true about the docker image?
+How many types of the registry is there?
 
-a) Docker image is used for creating a docker container.
+a) One
+
+b) Two
+
+c) Three
 ​
-b) The command used for creating a docker image is to build command.
-​
-c) By using the build command a container is created which helps in starting when it begins
-​
-d) All of the above
+d) Four
 
 
 
@@ -48,12 +48,18 @@ d) All of the above
 
 
 
-Answer 'd'
+Answer 'b'
 
-All the statements mentioned above, Docker image is used for creating a docker container.
+There are two types of the registry.
 
-The command used for creating a docker image is built command. 
+1. Public
 
-By using the build command a container is created which helps in starting when it begins, the docker images are stored in the registry of docker are true about docker image.
+2. Private
 
-Hence the correct option is D.
+Public registry's of Docker is also called a docker hub. 
+
+Which helps in storing the images privately. 
+
+In the docker hub, millions of images can be stored.
+
+

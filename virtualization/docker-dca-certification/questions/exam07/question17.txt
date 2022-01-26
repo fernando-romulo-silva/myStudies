@@ -1,16 +1,14 @@
 
-Network isolation by docker is provided by which one of the following linux kernel features?
-
-a) Ulimits
-​
-b) Namespace
-​
-c) Cgroups
-​
-d) File descriptors
+What happens if we have a cluster where nodes have myapplication images locally but images have different hashes?
 
 
+a) If we do not specify the image hash, each node will run tasks with its own image.
 
+b) To ensure all nodes run the same image version, we will need to use --with-registry-auth for remote registries.
+
+c) We will use signed images and Docker Engine on nodes that will use trusted content.
+
+d) It is not possible to ensure that nodes will use the right image version.
 
 
 
@@ -48,9 +46,8 @@ d) File descriptors
 
 
 
-Answer 'b'
 
-Docker uses namespaces of various kinds to provide the isolation that containers need in order to remain portable
 
-Cgroups provide resource limitation and reporting capability within the container space. 
 
+
+Answer 'a', 'b', and 'c'

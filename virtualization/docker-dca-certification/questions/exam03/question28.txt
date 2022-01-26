@@ -1,17 +1,16 @@
-Which network driver type is best when the network stack should not be isolated from the Docker host, 
-but you want other aspects of the container to be isolated?
+What is the docker command to see the storage driver Docker is currently using?
 
-​A)
-Overlay networks
+A)
+docker status
 ​
 B)
-Host networks
+docker info
 ​
 C)
-User-defined bridge networks
+docker config
 ​
 D)
-Macvlan networks
+docker inspect
 
 
 
@@ -49,51 +48,69 @@ Macvlan networks
 
 
 
-B is correct
-
-Network driver type
-
-Docker’s networking subsystem is pluggable, using drivers.
-
-bridge - networks are best when you need multiple containers to communicate on the same Docker host.
-
-Host networks - are best when the network stack should not be isolated from the Docker host, but you want other aspects of the container to be isolated.
-
-Overlay -  networks are best when you need containers running on different Docker hosts to communicate, or when multiple applications work together using swarm services.
-
-Macvlan -  networks are best when you are migrating from a VM setup or need your containers to look like physical hosts on your network, each with a unique MAC address.
-
-Third-party network plugins- allow you to integrate Docker with specialized network stacks.
 
 
 
+B correct
 
+docker info is used for getting the data information about the docker that is installed in your system.
+Information displayed includes the kernel version, storage driver, number of containers and images. 
+The number of images shown is the number of unique images. 
 
+// line 75, overlay2
 
-Complete
- 
+$ docker info 
 
-Several drivers exist by default, and provide core networking functionality:
+Client:
+ Context:    default
+ Debug Mode: false
 
-bridge - The default network driver. If you don’t specify a driver, this is the type of network you are creating. 
-Bridge networks are usually used when your applications run in standalone containers that need to communicate.
-
-host: For standalone containers, remove network isolation between the container and the Docker host, 
-and use the host’s networking directly.
-
-overlay: Overlay networks connect multiple Docker daemons together and enable swarm services to communicate with each other. 
-You can also use overlay networks to facilitate communication between a swarm service and a standalone container, 
-or between two standalone containers on different Docker daemons. 
-This strategy removes the need to do OS-level routing between these containers. 
-
-macvlan: Macvlan networks allow you to assign a MAC address to a container, making it appear as a physical device on your network. 
-The Docker daemon routes traffic to containers by their MAC addresses. 
-Using the macvlan driver is sometimes the best choice when dealing with legacy applications that expect to be directly connected 
-to the physical network, rather than routed through the Docker host’s network stack. See Macvlan networks.
-
- 
-none: For this container, disable all networking. Usually used in conjunction with a custom network driver. none is not available for swarm services. 
-
-
+Server:
+ Containers: 1
+  Running: 0
+  Paused: 0
+  Stopped: 1
+ Images: 121
+ Server Version: 20.10.7
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 1
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 io.containerd.runtime.v1.linux runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 
+ runc version: 
+ init version: 
+ Security Options:
+  apparmor
+  seccomp
+   Profile: default
+ Kernel Version: 5.4.0-91-generic
+ Operating System: Ubuntu 20.04.3 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 24
+ Total Memory: 62.83GiB
+ Name: pc02
+ ID: TWEW:67BH:XQTU:YS4Z:7AN4:RUS3:WLSI:ZAA3:SGEJ:NO26:ZX3W:4GSN
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Username: fernandoromulosilva
+ Registry: https://index.docker.io/v1/
+ Labels:
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
 
 

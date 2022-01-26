@@ -1,17 +1,12 @@
-In an environment where DOCKER_CONTENT_TRUST is set, 
-which docker build flag allows individual operations on tagged images without DCT?
+Which of the following storage systems are supported by DTR?
 
-​A)​
-dct-off
+a) Microsoft Azure Blob storage
 ​
-B)
---disable-dct
+b) All of the storage systems are supported
+
+c) Amazon S3 or compatible
 ​
-C)
---disable-content-trust
-​
-D)
---content-trust-offr
+d) Google Cloud Storage
 
 
 
@@ -55,10 +50,10 @@ D)
 
 
 
-The correct options is 'C'
 
-For individual docker build, docker push, or docker pull commands, 
-you can specify the --disable-content-trust=false 
-and --disable-content-trust=true options to enable or disable Content Trust.
 
-$  docker pull --disable-content-trust docker/trusttest:untrusted
+
+Answer 'B'
+
+It's a important feature, all cloud providers support it;
+

@@ -1,19 +1,17 @@
+By default, all containers on the same Docker network (multi-host swarm scope or local scope) 
+have connectivity with each other on _____ ports.
 
-What happens if we have a cluster where nodes have myapplication images locally but images have different hashes?
-
-
-a) If we do not specify the image hash, each node will run tasks with its own image.
-
-b) To ensure all nodes run the same image version, we will need to use --with-registry-auth for remote registries.
-
-c) We will use signed images and Docker Engine on nodes that will use trusted content.
-
-d) It is not possible to ensure that nodes will use the right image version.
-
-
-
-
-
+A)
+None
+​
+B)
+All
+​
+C)
+Some
+​
+D)
+Defined
 
 
 
@@ -44,10 +42,7 @@ d) It is not possible to ensure that nodes will use the right image version.
 
 
 
+The correct option is B
 
+Default Driver is bridge, and all containers running in the same bridge network can communicate with each other on ALL ports
 
-
-
-
-
-Answer 'a', 'b', and 'c'

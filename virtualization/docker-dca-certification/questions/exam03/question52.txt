@@ -1,16 +1,16 @@
-Which Docker Tool/Features is used to provision and manage multiple remote Docker hosts or Swarm Clusters?
+Which algorithm docker uses to maintain a consistent cluster state across multiple managers?
 
 A)
-Docker swarm
+Floyd's Cycle Detection Algorithm.
 ​
 B)
-Docker deploy
+Round robin Algorithm
 ​
 C)
-Docker Machine
+Lee algorithm
 ​
 D)
-Docker rollout
+Raft consensus algorithm
 
 
 
@@ -48,17 +48,16 @@ Docker rollout
 
 
 
-C is correct
 
-You can use Docker Machine to:
 
-* Install and run Docker on Mac or Windows
-* Provision and manage multiple remote Docker hosts
-* Provision Swarm clusters
 
-Docker Machine is a tool that lets you install Docker Engine on virtual hosts, 
-and manage the hosts with docker-machine commands. 
 
-You can use Machine to create Docker hosts on your local Mac or Windows box, on your company network, 
-in your data center, or on cloud providers like Azure, AWS, or DigitalOcean.
+
+Answer 'D'
+
+Using a Raft implementation, the managers maintain a consistent internal state of the entire swarm and all the services running on it. 
+
+For testing purposes it is OK to run a swarm with a single manager. 
+
+If the manager in a single-manager swarm fails, your services continue to run, but you need to create a new cluster to recover.
 

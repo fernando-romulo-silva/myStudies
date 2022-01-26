@@ -1,16 +1,16 @@
-Which of the following commands can be used to check Entry point and CMD of a given docker image?
+Which of the following commands can be used to delete an existing image?
 
-A)
-docker image inspect
-
+​A)
+docker image delete
+​
 B)
-docker image ls
+docker rmi
 ​
 C)
-docker info image
+docker rm
 ​
 D)
-docker image info
+docker rm image
 
 
 
@@ -48,17 +48,13 @@ docker image info
 
 
 
+B is Correct
 
+docker rmi
 
+Removes (and un-tags) one or more images from the host node.
+If an image has multiple tags, using this command with the tag as a parameter only removes the tag. 
+If the tag is the only one for the image, both the image and the tag are removed.
 
-
-
-
-A is Correct
-
-Docker inspect provides detailed information on constructs controlled by Docker.
-
-$ docker inspect -f '{{.Config.Cmd}}' <image:tag>
-
-$ docker inspect -f '{{.Config.Entrypoint}}' <image:tag>
+$ docker rmi test1:latest
 

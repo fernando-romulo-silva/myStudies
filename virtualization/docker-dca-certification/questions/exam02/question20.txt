@@ -1,16 +1,17 @@
-What happens when the RUN instruction is executed?
-
+Which of the following statements is incorrect?
+​
 A)
-The RUN directive sets the default command for the image.
+When a container is deleted, the writable layer is persisted.
 ​
 B)
-The RUN directive executes a command on the host when building an image.
+The column 'virtual size' of docker ps -s output shows the amount of data used for the read-only 
+image data used by the container plus the container's writable layer 'size'.
 ​
 C)
-The RUN directive automatically runs a command when a new container gets created.
+Copy-on-write is a Docker strategy of sharing and copying files for maximum efficiency.
 ​
 D)
-The RUN directive executes a command and commits the resulting changed files as a new layer in the image.
+The column 'size' of docker ps -s output shows the amount of data that is used for the writable layer of each container.
 
 
 
@@ -48,8 +49,12 @@ The RUN directive executes a command and commits the resulting changed files as 
 
 
 
-The correct option is D
 
-The docker run command first creates a writeable container layer over the specified image, and then starts it using the specified command. 
 
-The docker run command can be used in combination with docker commit to change the command that a container runs. 
+
+
+
+A is correct
+
+The container's writable layer does not persist after the container is deleted, 
+but is suitable for storing ephemeral data that is generated at runtime.

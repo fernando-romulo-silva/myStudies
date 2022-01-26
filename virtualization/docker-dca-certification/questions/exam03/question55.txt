@@ -1,17 +1,16 @@
-What is the docker run option to publish a port so that an application is accessible externally?
-​
+Which instruction allows you to configure a container that will run as an executable?
+
 A)
-docker run --open-port
+ENTRYPOINT
 ​
 B)
-docker run --expose
+ENV
 ​
 C)
-docker run --piblish-port
+RUN
 ​
 D)
-docker run --publish
-​
+CMD
 
 
 
@@ -53,10 +52,8 @@ docker run --publish
 
 
 
+Answer 'A'
 
-D is correct
+An ENTRYPOINT allows you to configure a container that will run as an executable.
 
-The param --publish or -p publish a container's port(s) to the host
-
-$ docker run --name test-mysql --detach --publish 3306:3306 mysql:latest
 

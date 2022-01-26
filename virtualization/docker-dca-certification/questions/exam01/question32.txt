@@ -1,13 +1,11 @@
+Publishing a service's port using the routing mesh makes the service accessible at the published port on every swarm node. 
+True or false?
 
-Which option will bind an already-created DATA volume inside a container, under the /data directory?
-
-a) -v DATA:/data
-
-b) --mount type=volume,source=DATA,target=/data
-
-c) --mount DATA:/data
-
-d) --volume type=volume,source=DATA,target=/data
+​A
+FALSE
+​
+B
+TRUE
 
 
 
@@ -48,14 +46,15 @@ d) --volume type=volume,source=DATA,target=/data
 
 
 
-Answer 'a' and 'b'
-
-a - Volume (--volume)
-
-$ docker run --name postgres-db -e POSTGRES_PASSWORD=password --volume DATA:/data -p 2000:5432 -d postgres
 
 
-b - Mount
+The correct answer is B
 
-$ docker run --name postgres-db -e POSTGRES_PASSWORD=password --mount type=bind,source="$pwd",target=/var/lib/postgresql/data -p 2000:5432 -d postgres
+Docker Engine swarm mode makes it easy to publish ports for services to make them available to resources outside the swarm. 
 
+All nodes participate in an ingress routing mesh. 
+
+The routing mesh enables each node in the swarm to accept connections on published ports for any service running in the swarm, 
+even if there’s no task running on the node. 
+
+The routing mesh routes all incoming requests to published ports on available nodes to an active container.

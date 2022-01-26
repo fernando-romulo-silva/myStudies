@@ -1,18 +1,16 @@
- Which of the following is true about Kubernetes' integration with Docker Enterprise?
+Which set of commands can identify the published port(s) for a container?
 
-a) Docker Enterprise provides Kubernetes out of the box.
-
-b) We must choose which orchestrator to use in cluster nodes because only one is allowed at once.
-
-c) We can run hosts in mixed mode to allow Kubernetes and Docker Swarm workloads, although it is not recommended for production.
-
-d) We can upgrade Kubernetes components with common Kubernetes installation commands.
-
-
-
-
-
-
+​A)
+'docker container inspect', docker port'
+​
+B)
+'docker network inspect', 'docker port'
+​
+C)
+'docker port inspect', 'docker container inspect'
+​
+C)
+'docker info', 'docker network inspect'
 
 
 
@@ -49,8 +47,11 @@ d) We can upgrade Kubernetes components with common Kubernetes installation comm
 
 
 
-Answer 'a' and 'c'
 
-a - Choice of Orchestration – Swarm and Kubernetes
+The correct answer is A
 
-c - Swarm and Kubernetes are both available and can be used interchangeably in the same cluster.
+$ docker port murachs-mysql
+
+or 
+
+$ docker inspect --format='{{.NetworkSettings.Ports}}' murachs-mysql

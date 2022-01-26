@@ -1,14 +1,12 @@
+Which concept is responsible for managing external to internal load balancing for Docker Swarm services?
 
-Which of these swarm manager configurations will cause the cluster to be in a lost quorum state?
+a) Router Mesh
 
-a) 4 managers of which 2 are healthy
+b) Ingress Controller
 
-b) 1 manager of which 1 is healthy
-​
-c) 3 managers of which 2 are healthy
-​
-d) 5 managers of which 3 are healthy
+c) nodePort
 
+d) clusterIP
 
 
 
@@ -51,22 +49,7 @@ d) 5 managers of which 3 are healthy
 
 
 
-Answer 'a'
-
-So a quorum is a majority of managers.
- 
-To ensure that quorum is achieved in the cluster, swarm managers use something called the Raft Consensus Algorithm. 
-
-Raft tolerates up to (N-1)/2 failures and requires a majority or quorum of (N/2)+1 members to agree on values proposed to the cluster. 
-
-This means that in a cluster of 5 Managers running Raft, if 3 nodes are unavailable, 
-the system cannot process any more requests to schedule additional tasks.
-
-    (5-2)/2 = 2 (two failures) 2 < 3 (nodes available)
-    (3/2) + 1 = 2,5 
 
 
-c->  4 but two helthy
+Answer 'a' - Usually, containers are only accessible through their host machine’s IP addresses but in a swarm, all nodes participate in an ingress routing mesh.
 
-    (4-1)/2 = 2 (two failures)
-    (2/2) + 1 = 2 (need three healthy)

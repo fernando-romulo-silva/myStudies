@@ -1,11 +1,12 @@
-Dockerfile option EXPOSE publish the port to external systems. 
-True or false?
+Which of the following is the docker command to enable autolock on an existing swarm cluster?
 
-​A)​
-TRUE
+a) docker swarm update --autolock-swarm=true
 ​
-B)
-FALSE
+b) docker swarm --autolock=true
+​
+c) docker swarm autolock
+​
+d) docker swarm update --autolock=true
 
 
 
@@ -47,19 +48,16 @@ FALSE
 
 
 
+'D' is Correct
 
+To enable autolock on an existing swarm, set the autolock flag to true.
 
-The correct option is B
+$ docker swarm update --autolock=true
 
-The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. 
+To disable autolock, set --autolock to false. 
 
-You can specify whether the port listens on TCP or UDP, and the default is TCP if the protocol is not specified.
+The mutual TLS key and the encryption key used to read and write Raft logs are stored unencrypted on disk. 
 
-The EXPOSE instruction does not actually publish the port. 
-
-It functions as a type of documentation between the person who builds the image and 
-the person who runs the container, about which ports are intended to be published. 
-
-To actually publish the port when running the container, use the -p flag on docker run to publish and map one or more ports, 
-or the -P flag to publish all exposed ports and map them to high-order ports.
+There is a trade-off between the risk of storing the encryption key unencrypted at rest and the convenience 
+of restarting a swarm without needing to unlock each manager.
 

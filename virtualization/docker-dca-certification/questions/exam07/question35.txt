@@ -1,14 +1,12 @@
+What is a Docker bundle and what is included inside those ZIP files?
 
-Which network driver type is best when you are migrating from a VM setup or 
-need your containers to look like physical hosts on your network, each with a unique MAC address?
+a) A Docker bundle provides client binaries and configurations for administrators.
 
-a) Host networks
-​
-b) Macvlan networks
-​
-c) Overlay networks
-​
-d) User-defined bridge networks
+b) All users have their own Docker bundle and it includes all the environment files required for the user.
+
+c) A Docker bundle includes only environment scripts and we will ask administrators for certificates.
+
+d) A user's Docker bundle includes all the environment files and certificates required for using the CaaS platform.
 
 
 
@@ -30,41 +28,17 @@ d) User-defined bridge networks
 
 
 
+Answer 'd'
+
+Containers as a service (CaaS) is a cloud service model that allows users to upload, 
+organize, start, stop, scale and otherwise manage containers, applications and clusters. 
 
 
+Distributed Application Bundle, or DAB, is a multi-services distributable image format.
+An image is a portable format for a single container. 
+But Distributed Application Bundle, or DAB, is a new concept introduced in Docker 1.12, is a portable format for multiple containers. 
+Each bundle can be then deployed as a stack at runtime.
 
+Dockerfile -> Image -> Container
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Answer 'b'
-
-Network driver type
-
-Docker’s networking subsystem is pluggable, using drivers.
-
-bridge - networks are best when you need multiple containers to communicate on the same Docker host.
-
-Host networks - are best when the network stack should not be isolated from the Docker host, but you want other aspects of the container to be isolated.
-
-Overlay -  networks are best when you need containers running on different Docker hosts to communicate, or when multiple applications work together using swarm services.
-
-Macvlan -  networks are best when you are migrating from a VM setup or need your containers to look like physical hosts on your network, each with a unique MAC address.
-
-Third-party network plugins- allow you to integrate Docker with specialized network stacks.
-
+Docker Compose -> Distributed Application Bundle -> Docker Stack

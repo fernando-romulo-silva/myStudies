@@ -1,13 +1,13 @@
-In Docker Trusted Registry, how would a user prevent an image, for example 'nginx:latest' 
-from being overwritten by another user with push access to the repository?
 
-a) Tag the image with 'nginx:immutable'
+What is the purpose of Docker Content Trust?
+
+a) Signing and verification of image tags
+
+b) Indicating an image on Docker Hub is an official image
 ​
-b) Remove push access from all other users.
-​
-c) Use the DTR web UI to make the tag immutable.
-​
-d) Keep a backup copy of the image on another repository.
+c) Enabling mutual TLS between the Docker client and server
+
+d) Docker registry TLS verification and encryption
 
 
 
@@ -48,15 +48,9 @@ d) Keep a backup copy of the image on another repository.
 
 
 
+Answer 'a'
 
-Answer 'c'
-
-Tag Immutability enables customers to rely on the descriptive tags of an image as a reliable mechanism to track and uniquely identify images.
-
-Docker tags are mutable named references to Docker images, much like branch refs in Git.
-
-$ docker pull debian:buster 
-
-DTR web UI help to make the tag immutable
+Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
+These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
 
 

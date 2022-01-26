@@ -1,13 +1,13 @@
-Which of the following Dockerfile options creates a mount point with the specified name and marks it as holding externally 
-mounted volumes from native host or other containers?
 
-a) ONBUILD
+Which command interactively monitors all container activity in the Docker engine?
 
-b) VOLUME
+a) docker system events
 
-c) RUN
+b) docker system logs
 ​
-d) WORKDIR
+c) docker container events
+​
+d) docker container logs
 
 
 
@@ -48,8 +48,9 @@ d) WORKDIR
 
 
 
+Answer 'a'
 
-'B'
+Use docker events to get real-time events from the server. 
+These events differ per Docker object type. 
+Different event types have different scopes.
 
-Dockerfile's VOLUME specify one or more volumes given container-side paths. 
-But it does not allow the image author to specify a host path.

@@ -1,14 +1,12 @@
+Which is the best node distribution if we have to deploy a cluster with seven managers with distributed high availability?
 
-Which of the following is supported by control group ?
+a) Four manager nodes in a data center and three manager nodes on a different one.
 
-a) Manage certificate
-​
-b) Collect net
-​
-c) Limit CPU usage within a container
+b) Two managers in a data center, two managers in a second one, and three in another.
 
-d) Isolate processess in a container
+c) All managers should be in the same data center.
 
+d) We cannot manage distributed availability with 7 nodes; we need at least 9.
 
 
 
@@ -41,24 +39,11 @@ d) Isolate processess in a container
 
 
 
+Answer 'b'
 
+A swarm cluster comprises one or more manager and worker nodes.
 
+To ensure high availability (HA) of the swarm control plane in production, 
+you should include an odd number (3+) of manager nodes, usually no more than seven. 
 
-
-
-
-
-
-
-
-Answer 'c'
-
-Cgroups provide resource limitation and reporting capability within the container space. 
-They allow granular control over what host resources are allocated to the containers and when they are allocated.
-Common control groups:
-
-* CPU
-* Memory
-* Network Bandwidth
-* Disk
-* Priority
+They should be spread across availability zones and connected by high-speed reliable networks.

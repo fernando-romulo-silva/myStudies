@@ -1,16 +1,16 @@
-Which of the following docker command can be used to find out all the ports mapped? (select all that apply).
-​
-A)
-docker inspect
+What are the two types of docker swarm services?
+
+​A)
+distributed and replicated services
 ​
 B)
-docker network ls
+replicated and local services
 ​
 C)
-docker ps
+local and global services
 ​
 D)
-docker port
+replicated and global services
 
 
 
@@ -51,26 +51,13 @@ docker port
 
 
 
-A, C and D are correct
-
-To show all mapped ports you can use these three:
-
-docker ps:
-
-$ docker ps
-CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS         PORTS                                                  NAMES
-7a38e315e870   mysql:5.7   "docker-entrypoint.s…"   6 months ago   Up 8 minutes   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   murachs-mysql
-
-docker port test:
-
-$ docker port murachs-mysql
-3306/tcp -> 0.0.0.0:3306
-3306/tcp -> :::3306
 
 
-docker inspect: 
 
-$ docker inspect --format='{{(index (index .NetworkSettings.Ports "3306/tcp") 0).HostPort}}' murachs-mysql 
-3306
+D is Correct
 
+Swarm mode has two types of services: replicated and global. 
 
+For replicated services, you specify the number of replica tasks for the swarm manager to schedule onto available nodes.
+
+For global services, the scheduler places one task on each available node that meets the service’s placement constraints and resource requirements.

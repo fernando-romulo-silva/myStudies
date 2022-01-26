@@ -1,12 +1,13 @@
-Which of the following commands would achieve this?
 
-a) docker swarm scale webserver=5
+What command would we use to locate the layered file system data for an image on a machine?
+
+a) ​docker image inspect
+
+b) docker layer inspect
 ​
-b) docker service scale webserver=5
-​
-c) docker service --replicas=5 webserver
-​
-d) docker swarm --replicas=5 webserver
+c) docker pull history
+
+d) docker image layers
 
 
 
@@ -47,15 +48,11 @@ d) docker swarm --replicas=5 webserver
 
 
 
+Answer 'a'
 
-Answer 'b'
+Docker inspect provides detailed information on constructs controlled by Docker.
 
-The scale command enables you to scale one or more replicated services either up or down to the desired number of replicas.
+By default, docker inspect will render results in a JSON array.
 
-Run the following command to change the desired state of the service running in the swarm:
+--format , -f		Format the output using the given Go template
 
-docker service scale <SERVICE-ID>=<NUMBER-OF-TASKS>
-
-Ex:
-
-$ docker service scale helloworld=5

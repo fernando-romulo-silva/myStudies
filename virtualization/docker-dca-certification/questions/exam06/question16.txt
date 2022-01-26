@@ -1,12 +1,14 @@
-Grants in UCP are made up of which of the following?
 
-a) Nodes, role and containers
+Docker Content Trust provides the ability to use __________ for verifying integrity 
+and the publisher of all the data received from a registry over any channel.
 
-b) Subject, node and containers
+a) A container
 ​
-c) Subject, role and resource set
+b) Digital signatures
 ​
-d) Subject, role and containers
+c) Symmetric key encryption
+​
+d) End to end encryption
 
 
 
@@ -47,19 +49,8 @@ d) Subject, role and containers
 
 
 
+Answer 'b'
 
-Answer 'c'
-
-A grant defines who has how much access to what resources. 
-Each grant is a 1:1:1 mapping of subject, role, and resource set.
- 
-For example, you can grant the “Prod Team” “Restricted Control” over services in the “/Production” collection.
-
-A common workflow for creating grants has four steps:
-
-* Add and configure subjects (users, teams, and service accounts).
-* Define custom roles (or use defaults) by adding permitted API operations per type of resource.
-* Group cluster resources into Swarm collections or Kubernetes namespaces.
-* Create grants by combining subject + role + resource set.
-
+Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
+These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
 

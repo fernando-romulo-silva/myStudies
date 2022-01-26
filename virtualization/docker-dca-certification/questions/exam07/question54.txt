@@ -1,17 +1,12 @@
+Which of the following is true about Docker Engine access?
 
-Which command is used to see the list of running services?
+a) By default, only owners of a Docker socket are allowed to run containers on a standalone host.
 
-A)
-docker service ls
-​
-B)
-docker services list
-​
-C)
-docker swarm ls
-​
-D)
-docker service list
+b) We can allow users to run containers allowing their access to either Docker Engine's Unix socket or the API's TCP port (enabled by default).
+
+c) Anyone allowed to log in to the host is also allowed to run containers.
+
+d) Only the root user is allowed to run privileged containers on a host.
 
 
 
@@ -53,17 +48,7 @@ docker service list
 
 
 
+Answer(s) 'a'
 
-Answer 'A'
-
-This command lists services are running in the swarm.
-
-$ docker service ls
-
-ID            NAME      MODE            REPLICAS             IMAGE
-c8wgl7q4ndfd  frontend  replicated      5/5                  nginx:alpine
-dmu1ept4cxcf  redis     replicated      3/3                  redis:3.0.6
-iwe3278osahj  mongo     global          7/7                  mongo:3.3
-hh08h9uu8uwr  job       replicated-job  1/1 (3/5 completed)  nginx:latest
-
+Docker engine access ports can be secured with client access certificates (owners) to ensure that only trusted sources are allowed access.
 

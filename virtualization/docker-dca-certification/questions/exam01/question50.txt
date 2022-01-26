@@ -1,20 +1,17 @@
-Which of the following sentences about container isolation are true?
+Which flag should be specified for 'docker/dtr install' 
+to configure DTR to have single sign-on (SSO) with UCP?
 
-
-a) The host's hardware resources, such as memory and CPU, are granted using cgroups.
-
-b) To ensure a container's limits, we need to use operating system security modules.
-
-c) Only the root user is allowed to deploy containers with unlimited resources.
-
-d) Privileged containers will avoid defined process' capabilities and execution user.
-
-
-
-
-
-
-
+A)
+--dtr-external-url
+​
+B)
+--url
+​
+C)
+--sso-url
+​
+D)
+--dtr-sso-url
 
 
 
@@ -48,8 +45,17 @@ d) Privileged containers will avoid defined process' capabilities and execution 
 
 
 
-Answers 'a'
 
-Docker containers share a single host OS kernel across all of the application containers running on that machine. 
-Isolation is provided on a per-container level by the Docker Engine. 
-Using containers, multiple applications can be deployed to a single bare metal server without any conflict between the applications.
+
+
+The correct answer is A
+
+By default, users are shared between UCP and DTR, but you have to authenticate separately on the web UI of both applications.
+
+You can configure DTR to have single sign-on (SSO) with UCP, so that users only have to authenticate once.
+
+When installing DTR, use the docker/dtr install --dtr-external-url <url> option to enable SSO. 
+
+
+
+ 

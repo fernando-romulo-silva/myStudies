@@ -1,17 +1,12 @@
-From a DevOps process standpoint, it is best practice to keep changes to an application in version control. 
-Which of the following will allow changes to a docker Image to be stored in a version control system?
+Which network driver type is best when you need multiple containers to communicate on the same Docker host?
 
-​A)
-docker save
+a)​ ​User-defined bridge networks
+
+b) Host networks
 ​
-B)
-A docker file
+c) Macvlan networks
 ​
-C)
-A docker-compose.yaml file
-​
-D)
-docker commit
+d) Overlay networks
 
 
 
@@ -54,10 +49,21 @@ docker commit
 
 
 
-The correct option is 'D'
 
-It can be useful to commit a container’s file changes or settings into a new image. 
-This allows you to debug a container by running an interactive shell, or to export a working dataset to another server. 
-Generally, it is better to use Dockerfiles to manage your images in a documented and maintainable way;
 
+The correct answer is 'A'
+
+Network driver type
+
+Docker’s networking subsystem is pluggable, using drivers:
+
+bridge - networks are best when you need multiple containers to communicate on the same Docker host.
+
+Host networks - are best when the network stack should not be isolated from the Docker host, but you want other aspects of the container to be isolated.
+
+Overlay - networks are best when you need containers running on different Docker hosts to communicate, or when multiple applications work together using swarm services.
+
+Macvlan - networks are best when you are migrating from a VM setup or need your containers to look like physical hosts on your network, each with a unique MAC address.
+
+Third-party network plugins - allow you to integrate Docker with specialized network stacks.
 

@@ -1,16 +1,14 @@
 
-Which of the following namespaces is disabled by default and must be enabled at Docker engine runtime in order to be used?
+How can docker build avoid the use of cached image layers?
 
-a) user
+a) Docker will always use cached information. It is not possible to avoid using image caching.
 
-b) net
+b) By default, image caching is disabled, therefore we need to apply --use-caching to ensure caching is enabled as it will speed up the building process.
 
-c) mnt
+c) To avoid image caching, we can use --no-cache. 
+This way, the build will not use any previously saved layers.
 
-d) pid
-
-
-
+d) All of the preceding sentences are wrong.
 
 
 
@@ -48,23 +46,10 @@ d) pid
 
 
 
-Answer 'A'
-
-Docker makes use of the namespace features of the Linux Kernel as one of the ways to provide container isolation. 
-
-By default, Docker uses:
-
-* PID
-* Cgroup
-* IPC
-* Network
-* Mount
-* UTS
-
-You might notice that the last namespace, User is not used by default, perhaps for good reasons. 
-
-User namespace support was only added recently this year, and in this post, 
-we can look at some of the problems you might encounter when trying to use Docker with the User namespace feature enabled.
 
 
 
+
+Answer 'c' because:
+
+$ docker build -t print-date-time --no-cache .

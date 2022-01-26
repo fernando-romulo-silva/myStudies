@@ -1,19 +1,17 @@
+Which of the following is true about overlay networks?
 
-What have you learned about Swarm networking?
-
-a) Overlay networks are deployed using UDP VXLAN tunnels.
-
-b) By default, all service replicas will be equally reachable by an internal load balancer.
-
-c) The internal DNS will allow all services to reach each other running on the same overlay network.
-
-d) All of the preceding options are true.
-
-
-
-
-
-
+​A)
+Overlay networks are first created on the manager nodes. 
+Then they are created on the worker nodes once a task is scheduled on the specific worker node.
+​
+B)
+Overlay networks are created only on the manager node that you created the overlay networking on.
+​
+C)
+Overlay networks are created on all cluster nodes when you create the overlay network.
+​
+D)
+Overlay networks are only created on the manager nodes.
 
 
 
@@ -48,7 +46,12 @@ d) All of the preceding options are true.
 
 
 
-Answer 'd'
 
-All statements are true
+
+The correct option is A
+
+The overlay network driver creates a distributed network among multiple Docker daemon hosts.
+Overlay networks are first created on the manager nodes. 
+Then they are created on the worker nodes once a task is scheduled on the specific worker node.
+
 

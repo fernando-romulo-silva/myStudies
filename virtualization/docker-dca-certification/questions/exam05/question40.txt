@@ -1,17 +1,13 @@
-Which instruction sets the working directory for any RUN, CMD, ENTRYPOINT, 
-COPY and ADD instructions that follow it in the Dockerfile?
+Which of the following commands will provide a list of all Docker networks and their 
+drivers currently configured on the Docker host? Choose the correct answer:
 
-​A)​
-VOLUME
+a) docker system --list-networks
+
+b) docker network ls
+
+c) docker info --networks
 ​
-B)
-MOUNT
-​
-C)
-WORKDIR
-​
-D)
-DIR
+d) docker system inspect networks
 
 
 
@@ -54,10 +50,19 @@ DIR
 
 
 
-The correct option is 'C'
 
-The WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions
-that follow it in the Dockerfile. 
 
-If the WORKDIR doesn’t exist, it will be created even if it’s not used in any subsequent Dockerfile instruction.
+The correct answer is 'B'
+
+docker network ls: Lists all the networks the Engine `daemon` knows about. 
+
+This includes the networks that span across multiple hosts in a cluster.
+
+$ docker network ls
+
+NETWORK ID     NAME      DRIVER    SCOPE
+d0a5db0ceb0f   bridge    bridge    local
+35a5d7129637   host      host      local
+b77fbb52ae51   none      null      local
+
 

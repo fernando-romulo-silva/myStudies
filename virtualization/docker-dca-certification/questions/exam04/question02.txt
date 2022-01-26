@@ -1,15 +1,15 @@
-Which command is used for running the images as a container?
+What are the common instructions from the below-mentioned option that are used in the docker file?
 
 ​A)
-$ sudo docker run -i -t alpine /bin/bash
+FROM
 ​
 B)
-$ Sudo docker run container name
-​
-D)
-$ docker PS
+LABEL
 ​
 C)
+RUN
+​
+D)
 All of the above
 
 
@@ -48,10 +48,10 @@ All of the above
 
 
 
-A is Correct
+D is Correct
 
-Because '$ Sudo docker run -i -t alpine /bin/bash' is the command used for running the image as the container. 
+The common instructions used in the docker file are FROM, LABEL, RUN, AND CMD. 
 
-'$ Sudo docker run container name' is not defined command. 
+This all the options are included in the list. 
 
-'$ docker PS' is the only command used for seeing all the running containers in docker. 
+Hence the correct option is D

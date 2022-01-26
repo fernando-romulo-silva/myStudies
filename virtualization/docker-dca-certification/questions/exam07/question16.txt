@@ -1,15 +1,13 @@
 
-Docker Content Trust provides the ability to use __________ for verifying integrity 
-and the publisher of all the data received from a registry over any channel.
+Which of these sentences are true about signing images (select all correct)?
 
-a) A container
-​
-b) Digital signatures
-​
-c) Symmetric key encryption
-​
-d) End to end encryption
+a) Image signing ensures image ownership.
 
+b) Images can be signed using docker trust sign <IMAGE>.
+
+c) All images will be signed if we set the Docker client to use Docker Content Trust on every command.
+
+d) Image signing is based on the following keys: the owner key, the repository key, the snapshot key, and the timestamp.
 
 
 
@@ -49,8 +47,25 @@ d) End to end encryption
 
 
 
-Answer 'b'
 
-Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
-These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
+Answer 'a', 'b', and 'c'
+
+a - To sign a Docker Image you will need a delegation key pair, with that Image signing ensures image ownership.
+
+// load the key
+
+$ docker trust key load key.pem --name jeff
+
+
+b - Trust the image
+
+$ docker trust sign example/trust-demo:v2
+
+
+c - Since the commands execute only in trust way
+
+
+
+
+
 

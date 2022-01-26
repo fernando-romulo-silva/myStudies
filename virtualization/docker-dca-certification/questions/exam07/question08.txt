@@ -1,14 +1,12 @@
+What step should we follow to remove the leader node from the cluster?
 
-Where can you get a repository URL for installing the Docker Enterprise Edition (EE)?
+a) Ensure all tasks run on other nodes by executing docker node update --availability=drain <LEADER_NODE>.
 
-a) ​​​Docker Hub
+b) Remove the node from the cluster as the leader by executing docker swarm leave on the node.
 
-b) Docker Enterprise Hub
-​
-c) Docker Trusted Registry
-​
-d) Docker Marketplace
+c) Demote the leader node to a worker and then execute docker swarm leave on the node.
 
+d) Once the node is out of the cluster, we can remove it completely using docker node rm <OLD_LEADER_NODE> from any available manager.
 
 
 
@@ -48,10 +46,21 @@ d) Docker Marketplace
 
 
 
-Answer 'a'
 
-'b' is wrong because Docker Enterprise Hub don't exits
-​
-'c' is wrong because Docker Trusted Registry it's a tool
-​
-'d' is wrong because Docker Marketplace don't exits
+
+
+Answers 'a', 'c', and 'd'
+
+'a' - When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
+It also prevents the scheduler from assigning tasks to the node.
+
+$ docker node update --availability drain <NODE>
+
+
+'c' - To demote a node or set of nodes, run docker node demote from a manager node:
+
+$ docker node demote node-3
+
+'d' - Removes the specified nodes from a swarm.
+
+$ docker node rm swarm-node-02

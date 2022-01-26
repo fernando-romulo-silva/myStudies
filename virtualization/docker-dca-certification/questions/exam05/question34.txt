@@ -1,16 +1,12 @@
-What is the docker command to add a network to a service?
+What is the purpose of multi-stage builds?
 
-​A)​
-docker service add-network
+a)​ Better logical separation of Dockerfile instructions for better readability
 ​
-B)
-docker service update --network-add
+b) Faster image builds by allowing parallel execution of Docker builds
 ​
-C)
-docker service set --add-network
+c) Better caching when building Docker images
 ​
-D)
-docker service modify --add-network
+d) Optimizing images by copying artifacts selectively from previous stages
 
 
 
@@ -54,11 +50,20 @@ docker service modify --add-network
 
 
 
-The correct option is 'B'
-
-Update the service to use this network:
-
-$ docker service update --network-add
 
 
- 
+The correct answer is 'D'
+
+Multistage builds are useful to anyone who has struggled to optimize Dockerfiles while keeping them easy to read and maintain.
+
+FROM golang:1.16 AS builder
+WORKDIR /go/src/github.com/alexellis/href-counter/
+RUN go get -d -v golang.org/x/net/html  
+COPY app.go    ./
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+
+FROM alpine:latest  
+RUN apk --no-cache add ca-certificates
+WORKDIR /root/
+COPY --from=builder /go/src/github.com/alexellis/href-counter/app ./
+CMD ["./app"]    

@@ -1,14 +1,17 @@
-Which availability mode needs to be set on a node when you need to perform maintenance on a node?
 
-a) MAINTENANCE
+You can create a volume dynamically using which command?
+
+A)
+docker create volume
 ​
-b) EVACUATE
+B)
+docker make volume
 ​
-c) OFFLINE
-
-d) DRAIN
-
-
+C)
+Volumes cannot be created after container creation
+​
+D)
+docker volume create
 
 
 
@@ -53,6 +56,15 @@ d) DRAIN
 
 Answer 'D'
 
-When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
-It also prevents the scheduler from assigning tasks to the node.
+Creates a new volume that containers can consume and store data in. 
+If a name is not specified, Docker generates a random name.
 
+$ docker volume create [OPTIONS] [VOLUME]
+
+Ex:
+
+$ docker volume create hello
+
+Using the volume:
+
+$ docker run -d -v hello:/world busybox ls /world

@@ -1,10 +1,11 @@
-It is OK to have more than one RUN instruction in the Docker file.
+ARG variables are persisted into the built image as like the ENV variables.
 
-​A)
-TRUE
+A)
+True
 ​
 B)
-FALSE
+False
+​
 
 
 
@@ -48,16 +49,13 @@ FALSE
 
 
 
-A is correct
-
-RUN instruction allows you to install your application and packages required for it. 
-It executes any commands on top of the current image and creates a new layer by committing the results. 
-Often you will find multiple RUN instructions in a Dockerfile.
-
-RUN - command triggers while we build the docker image.
-
-CMD - command triggers while we launch the created docker image.
 
 
+B correct
 
+ARG is only available during the build of a Docker image (RUN etc), not after the image is created and containers are started from it (ENTRYPOINT, CMD). 
+
+You can use ARG values to set ENV values to work around that.
+
+ENV values are available to containers, but also RUN-style commands during the Docker build starting with the line where they are introduced.
 

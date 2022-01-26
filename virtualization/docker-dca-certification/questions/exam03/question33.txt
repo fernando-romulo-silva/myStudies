@@ -1,17 +1,17 @@
-The output of which command can be used to find the architecture 
-and operating system an image is compatible with?
-​
-A)
-docker image ls
+Which of the following is NOT true about Raft (docker consensus algorithm)?
+
+​A)
+If a quorum is not reached, the system will not process any more requests to schedule additional tasks
 ​
 B)
-docker image inspect --filter '{{.Architecture}} {{.OS}}'
+Raft tolerates (N-2)/2 failures
 ​
 C)
-docker image inspect --format '{{ .Architecture }} {{ .OS }}'
+Raft requires a majority or quorum of (N/2) + 1 members
 ​
 D)
-docker image info
+If a quorum is not reached, the existing tasks will keep running
+​
 
 
 
@@ -48,15 +48,23 @@ docker image info
 
 
 
-C is correct
 
-Docker inspect provides detailed information on constructs controlled by Docker.
 
-By default, docker inspect will render results in a JSON array.
 
---format , -f		Format the output using the given Go template
 
-$ docker image inspect --format '{{ .Architecture }} {{ .Os }}' mysql:5.7
-amd64 linux
 
+
+
+
+
+B is correct
+
+So a quorum is a majority of managers.
+ 
+To ensure that quorum is achieved in the cluster, swarm managers use something called the Raft Consensus Algorithm. 
+
+Raft tolerates UP TO (N-2)/2 failures and requires a majority or quorum of (N/2)+1 members to agree on values proposed to the cluster. 
+
+This means that in a cluster of 5 Managers running Raft, if 3 nodes are unavailable, 
+the system cannot process any more requests to schedule additional tasks.
 

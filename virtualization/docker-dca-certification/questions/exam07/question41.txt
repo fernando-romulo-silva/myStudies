@@ -1,16 +1,14 @@
 
-Docker image can be saved in multiple repositories after the build is done.
-
-A)
-​TRUE
-​
-B)
-FALSE
+How do we enable debugging on Docker Engine?
 
 
+a) By executing the Docker daemon with the -D argument
 
+b) By setting the debug key to true in the config.json file
 
+c) By enabling experimental features in daemon.json
 
+d) None of the preceding options
 
 
 
@@ -48,11 +46,18 @@ FALSE
 
 
 
-Answer 'A'
 
-You can do it using the push command:
 
-$ docker push <REGISTRY_HOST>:<REGISTRY_PORT>/<APPNAME>:<APPVERSION> 
+Answers 'a' and 'b'
 
-$ docker push repo.company.com:3456/myapp:0.1
+a - Add param "-D" or "--debug"  to enable debug mode
+
+b - You can create the file at /etc/docker/daemon.json if it does not already exist.
+
+Add the following code snippet:
+
+{
+    "debug": true
+}
+
 

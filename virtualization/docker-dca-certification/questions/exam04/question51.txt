@@ -1,11 +1,17 @@
-If you manually stop a container, its restart policy is ignored until 
-the Docker daemon restarts or the container is manually restarted
+Which ports have to be opened to allow traffic to, and from, 
+docker hosts that will be part of an overlay network? (select three)
 
-A)
-TRUE
+​A)​
+TCP and UDP port 8999 for data transfer
 ​
 B)
-FALSE
+TCP port 2377 for cluster management communications
+
+C)
+UDP port 4789 for overlay network traffic
+​
+D)
+TCP and UDP port 7946 for communication among nodes
 
 
 
@@ -49,13 +55,12 @@ FALSE
 
 
 
-Answer 'A'
+The correct options are 'B', 'C', and 'D'
 
-If you manually stop a container, its restart policy is ignored until the Docker daemon restarts or the container is manually restarted. 
+TCP port 2377 for cluster management communications TCP 
+UDP port 7946 for communication among nodes 
+UDP port 4789 for overlay network traffic 
 
-This is another attempt to prevent a restart loop. 
-
-Restart policies only apply to containers. 
-
-Restart policies for swarm services are configured differently.
+If you plan on creating an overlay network with encryption (--opt encrypted), 
+you also need to ensure ip protocol 50 (ESP) traffic is allowed
 

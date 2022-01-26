@@ -1,17 +1,13 @@
-Which network allows Docker Trusted Registry components running 
-on different nodes to communicate and replicate Docker Trusted Registry data?
+You have created a Docker bridge network on a host with three containers attached, 
+how do you make this containers accessible outside of the host?
 
-​A)​
-dtr-ol
+a) Use network attach to access the containers on the bridge network
 ​
-B)
-dtr-hosts
+b) Use either EXPOSE or --publish to access the containers on the bridge network
 ​
-C)
-dtr-br
+c) Use network connect to access the containers on the bridge network
 ​
-D)
-dtr-vlan
+d) Use --link to access the containers on the bridge network Correct
 
 
 
@@ -54,15 +50,8 @@ dtr-vlan
 
 
 
-The correct option is 'A'
 
-To allow containers to communicate, when installing DTR the following networks are created:
 
-Name    Type    Description 
+The correct answer is 'C'
 
-dtr-br	bridge	Allows containers on the same node to communicate with each other in a secure way.
-
-dtr-ol	overlay	Allows containers running on different nodes to communicate. 
-                This network is used in high-availability installations, to allow Etcd 
-                and RethinkDB containers to replicate their data.
-
+You can connect your host with a bridge and connect that containers on the bridge network.

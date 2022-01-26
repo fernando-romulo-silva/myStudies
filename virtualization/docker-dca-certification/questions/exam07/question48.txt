@@ -1,14 +1,12 @@
+Which of the following is true about secrets?
 
-The devicemapper can only use a single block device when using direct-lvm mode.
+a) They will only be available on manager nodes, so workloads with secrets must run on these nodes.
 
-A)
-TRUE
-​
-B)
-FALSE
+b) They are ephemeral and deployed on on-memory filesystems.
 
+c) They are encrypted even for administrators, so they cannot be recovered from the control plane.
 
-
+d) If we need to change a secret, we need to create a new secret and update the service with this new one.
 
 
 
@@ -48,11 +46,8 @@ FALSE
 
 
 
-Answer 'B'
 
-Production hosts using the devicemapper storage driver must use direct-lvm mode. 
+Answers 'b', 'c', and 'd'
 
-This mode uses block devices to create the thin pool. 
-
-This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
+Secrets are ephemeral, unchaged mounted as files that contain the information.
 

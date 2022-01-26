@@ -1,22 +1,16 @@
-Which flag for a service would allow a container to consume more than 2 GB of memory 
-only when there is no memory contention but would also prevent a container 
-from consuming more than 4GB of memory, in any case?
+What is the docker command to remove one or more images?
 
-​
-A)
---limit-memory 4GB --reserve-memory 2GB
+​A)
+docker image delete
 ​
 B)
---memory-swap 4GB --limit-memory 2GB
+docker delete
 ​
 C)
---memory-swap 2GB --limit-memory 4GB
+docker image rm
 ​
 D)
---limit-memory 2GB --reserve-memory 4GB
-​
-E)
---limit-memory 2GB --reserve-memory 4GB
+docker remove
 
 
 
@@ -54,16 +48,8 @@ E)
 
 
 
+C is Correct
 
+docker image rm: Remove one or more images.
 
-
-
-
-
-A is Correct
-
---limit-memory: Limit prevents the binary inside the container from using more than that. 
-
---reserve-memory: Reserve holds those resources on the host so they are always available for the container. 
-
-
+$  docker image rm --force web

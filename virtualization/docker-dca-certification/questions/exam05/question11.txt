@@ -1,16 +1,12 @@
-What is the docker command to increase number of replicas?
+Which of the following commands would achieve this?
 
-​A)
-docker service replica
+a) docker swarm scale webserver=5
 ​
-B)
-docker service increase
+b) docker service scale webserver=5
 ​
-C)
-docker service scale
+c) docker service --replicas=5 webserver
 ​
-D)
-docker service build
+d) docker swarm --replicas=5 webserver
 
 
 
@@ -48,13 +44,18 @@ docker service build
 
 
 
-C is Correct
 
-The command 'scale' Scale one or multiple replicated services.
 
-$ docker service scale frontend=50
 
-You can also scale a service using the docker service update command. 
-The following commands are equivalent:
 
-$ docker service update --replicas=50 frontend
+Answer 'b'
+
+The scale command enables you to scale one or more replicated services either up or down to the desired number of replicas.
+
+Run the following command to change the desired state of the service running in the swarm:
+
+docker service scale <SERVICE-ID>=<NUMBER-OF-TASKS>
+
+Ex:
+
+$ docker service scale helloworld=5

@@ -1,16 +1,11 @@
-From the below-mentioned option, what is the use of docker images command?
+Mention whether the following statement is true or false?
 
-​A)
-It is used for providing information about the command.
+Data is lost when the container exits.
+
 ​
-B)
-It is used for downloading an image.
+A) True
 ​
-C)
-It is used for the information of the container
-​
-D)
-It is used for the listing of downloaded images.
+B) False
 
 
 
@@ -53,18 +48,9 @@ It is used for the listing of downloaded images.
 
 
 
+B is Correct
 
-
-
-D is Correct
-
-For downloading an image the command used is docker pull for providing the information about container the command used is docker stats. 
-
-For listing the downloaded images the command used is docker images. 
-
-And for providing the information of command the command used is docker input. 
-
-$ docker images
-REPOSITORY                                 TAG                    IMAGE ID       CREATED         SIZE
-modular-java-tests-iso                     latest                 fd809ad91774   4 days ago      61.6MB
-<none>                                     <none>                 23cae825fca0   4 days ago      382MB
+The above statement is false because no data is lost when the container exits. 
+Because any data that is written by the application in the disc is stored in the container. 
+The file system for the contain persists after the container halts.
+ 

@@ -1,17 +1,13 @@
 
-You can create a volume dynamically using which command?
+Which of the following is true about Swarm join tokens?
 
-A)
-docker create volume
-​
-B)
-docker make volume
-​
-C)
-Volumes cannot be created after container creation
-​
-D)
-docker volume create
+a) Once created, we have to store them in a secure place because they are not recoverable.
+
+b) We can generate new ones to get new values for new nodes if we lose them using docker swarm join-token recreate.
+
+c) We can recover them whenever we need them using docker swarm join-token.
+
+d) Join tokens will be automatically updated on all nodes once they are regenerated.
 
 
 
@@ -52,19 +48,8 @@ docker volume create
 
 
 
+Answers 'c' - Join tokens are secrets that allow a node to join the swarm. 
+
+We can recover them whenever we need them using docker swarm join-token.
 
 
-Answer 'D'
-
-Creates a new volume that containers can consume and store data in. 
-If a name is not specified, Docker generates a random name.
-
-$ docker volume create [OPTIONS] [VOLUME]
-
-Ex:
-
-$ docker volume create hello
-
-Using the volume:
-
-$ docker run -d -v hello:/world busybox ls /world

@@ -1,16 +1,16 @@
-Which of the following statement is correct? Pick exactly two statements.
-​
+Which of the following statement below is NOT TRUE about docker-compose?
+
 ​A)
-Image is a collection of immutable layers whereas container is a running instance of an image.
+docker-compose is well suited for development environments
 ​
 B)
-Container can exist without the image but image cannot exist without container
+docker-compose can not be used to create new container images
 ​
 C)
-Only one container can be spawned from a given image at a time
+docker-compose will bring up services as specified in docker-compose.yml
 ​
 D)
-If multiple containers are spawned from the same image then they all use the same copy of image in memory.
+docker-compose can be used with docker swarm to run services across different workers.
 
 
 
@@ -51,10 +51,18 @@ If multiple containers are spawned from the same image then they all use the sam
 
 
 
-A and D are correct
 
-A Docker image consists of several layers. Each layer corresponds to certain instructions in your Dockerfile 
 
-A Docker container is a runtime instance of an image. 
-From one image you can create multiple containers (all running the sample application) on multiple Docker platform.
 
+D is Correct
+
+The few differences between Docker Swarm and Docker-Compose:
+
+Docker Swarm is used to scale your web app across one or more servers. 
+Where as Docker-compose will simply run your web app on a single Docker host.
+
+Scaling your web app Docker Swarm offers serious high availability and fault tolerance. 
+Scaling your web app using Docker-Compose on a single host is useful only for testing and development.
+
+Docker Swarm and related subcommands like Docker Swarm and Docker Stack are built into the Docker CLI itself. 
+Docker-Compose is standalone binary in and of itself.

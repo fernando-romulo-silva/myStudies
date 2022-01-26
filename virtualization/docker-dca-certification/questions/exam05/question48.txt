@@ -1,10 +1,12 @@
-DTR only allows deleting images if that image hasn't been signed.
+Which command is used to join a swarm as a worker?
 
-​A)
-TRUE
+a) docker swarm -j
 ​
-B)
-FALSE
+b) docker join the swarm
+​
+c) docker worker init
+​
+d) docker swarm join
 
 
 
@@ -48,6 +50,12 @@ FALSE
 
 
 
-The correct option is 'A'
 
-If don't have admin grant you can only delete image hasn't been signed.
+
+
+Answer 'D'
+
+Join a swarm as a node and/or manager
+
+$ docker swarm join
+

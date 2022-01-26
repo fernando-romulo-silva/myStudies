@@ -1,16 +1,17 @@
-Which of the following is NOT true about dockerignore?
+You are running UCP service on a swarm with 3 managers and 2 workers. 
+You need to schedule a backup policy for your UCP service. How many nodes you need to fully back up this service?
 
-​A)
-.dockerignore file can be used to exclude files and directories from docker context
+A)
+1
 ​
 B)
-.dockerignore must be present in the root directory of the context
+2
 ​
 C)
-.dockerignore can help in bringing down image size and speed up builds
+3
 ​
 D)
-.dockerignore is available only with docker enterprise edition
+4
 
 
 
@@ -48,9 +49,8 @@ D)
 
 
 
-The correct option is D
 
-To use a file in the build context, the Dockerfile refers to the file specified in an instruction, for example, a COPY instruction. 
+A is correct
 
-To increase the build’s performance, exclude files and directories by adding a .dockerignore file to the context directory. 
+1 is enough
 

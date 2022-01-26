@@ -1,16 +1,17 @@
-Which of the following commands will publish a service's port, but only on nodes that are running a task for that service?
+In an environment where DOCKER_CONTENT_TRUST is set, 
+which docker build flag allows individual operations on tagged images without DCT?
 
-A)
-docker service create -p 8080:80 nginx
+​A)​
+dct-off
 ​
 B)
-docker service create -p mode=ingress,published=8082,target=80 nginx
+--disable-dct
 ​
 C)
-docker service create -p mode=host,published=8082,target=80 nginx
+--disable-content-trust
 ​
 D)
-docker service create -p 8080:80 --mode host nginx
+--content-trust-offr
 
 
 
@@ -52,12 +53,12 @@ docker service create -p 8080:80 --mode host nginx
 
 
 
-Answer 'C'
-
-You can publish a service task’s port directly on the swarm node where that service is running.
-The following example runs nginx as a service on each node in your swarm and exposes nginx port locally on each swarm node:
-
-$ docker service create -p mode=host,published=8082,target=80 nginx
-​
 
 
+The correct options is 'C'
+
+For individual docker build, docker push, or docker pull commands, 
+you can specify the --disable-content-trust=false 
+and --disable-content-trust=true options to enable or disable Content Trust.
+
+$  docker pull --disable-content-trust docker/trusttest:untrusted

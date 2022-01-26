@@ -1,17 +1,16 @@
-What type of network is ingress network?
+What is the docker command to add or update a placement constraint?
 
-A)
-overlay network
+​A)​
+docker service update --constraint-add
 ​
 B)
-bridge network
+docker service update --pref-add
 ​
 C)
-macvlan network
+docker service update --placement-pref-add
 ​
 D)
-host network
-​
+docker service update --placement-constraint-add
 
 
 
@@ -54,12 +53,10 @@ host network
 
 
 
+The correct option is A
 
+Updates a service as described by the specified parameters. The parameters are the same as docker service create.
 
+$ docker service update --constraint-add
 
-A correct
-
-An overlay network called ingress, which handles the control and data traffic related to swarm services. 
-
-When you create a swarm service and do not connect it to a user-defined overlay network, 
-it connects to the ingress network by default.
+--constraint-add : Add or update a placement constraint

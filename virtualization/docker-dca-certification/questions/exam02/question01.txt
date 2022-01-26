@@ -1,16 +1,16 @@
-Which of the following command is used for stopping a running container?
+From the below-mentioned option which is the false advantage of Docker ?
 
-​A) 
-$ docker kill <container_id>
-
+​A)
+Docker provides a difficult set-up initially.
+​
 B)
-$ docker stop <container_id>
+The application lifecycle can be described in detail, docker grants permission for it.
 ​
 C)
-$ docker rm <container_id>
+Simple configuration and interaction with docker composed as possible.
 ​
 D)
-$ docker start <container_id>
+All of the above
 
 
 
@@ -48,10 +48,10 @@ $ docker start <container_id>
 
 
 
-B is Correct
+A is Correct
 
-$ docker kill <container_id> this command is used for killing a container. 
-$ docker start <container_id> command is used for starting a docker container. 
-$ docker rm <container_id> command is used for selecting a stopped container. 
+all the other states except A, are included in the advantages of the docker container. 
 
-Hence the correct option is B, which is used for stopping a running container.
+But the first statement is incorrect because the docker container provides an easy set-up which is quite efficient initially. 
+
+Hence it is the correct answer.

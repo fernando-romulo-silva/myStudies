@@ -1,10 +1,12 @@
-Restart policies only apply to containers, not swarm services.
+Which command is used to remove a user-defined bridge network?
 
-​A)​
-TRUE
+a) ​docker network 'network name' rm
 ​
-B)
-FALSE
+b) docker network rm 'network name'
+​
+c) docker delete network 'network name'
+​
+d) docker-network rm 'network name'
 
 
 
@@ -48,11 +50,12 @@ FALSE
 
 
 
-The correct option is 'A'
-
-Docker provides restart policies to control whether your containers start automatically when they exit, 
-or when Docker restarts, but only for container. 
 
 
 
+Answer 'B'
 
+Removes one or more networks by name or identifier. 
+To remove a network, you must first disconnect any containers connected to it.
+
+$ docker network rm my-network

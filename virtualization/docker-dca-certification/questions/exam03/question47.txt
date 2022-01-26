@@ -1,22 +1,10 @@
-When you're starting the docker daemon manually and see an error like the one below, what should you do?
+Single sign-on (SSO) with UCP can only be configured at installation
 
-Unable to configure the Docker daemon with file /etc/docker/daemon.json:
-
-the following directives are specified both as a flag and in the configuration file: 
-hosts: (from flag: [unix:///var/run/docker.sock], from file: [tcp://127.0.0.1:2376])
-
-​
 A)
-Restart your host to resolve the conflict
+TRUE
 ​
 B)
-Adjust the flags you're using to start the daemon or modify the daemon.json to remove the conflict
-​
-C)
-Verify that port 2376 is open
-​
-D)
-Ensure the host is accessible on the network and try again
+FALSE
 
 
 
@@ -56,6 +44,17 @@ Ensure the host is accessible on the network and try again
 
 
 
-C is correct
 
 
+
+
+B is correct
+
+You can configure DTR to have single sign-on (SSO) with UCP, so that users only have to authenticate once.
+
+At installation time: When installing DTR, use the docker/dtr install --dtr-external-url <url> option to enable SSO. 
+
+After install: In your browser, navigate to the DTR web UI, and choose Settings. 
+In the General tab, scroll to Domain & proxies.
+
+ 

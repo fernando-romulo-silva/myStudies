@@ -1,17 +1,12 @@
-Which of the following statements is incorrect?
+Which statement is true?
+
+A) ENTRYPOINT cannot be overriden in the "docker container run" command
 ​
-A)
-When a container is deleted, the writable layer is persisted.
+B) CMD is used to run the software is the image along with any arguments
 ​
-B)
-The column 'virtual size' of docker ps -s output shows the amount of data used for the read-only 
-image data used by the container plus the container's writable layer 'size'.
+C) ENTRYPOINT cannot be used in conjuction with CMD
 ​
-C)
-Copy-on-write is a Docker strategy of sharing and copying files for maximum efficiency.
-​
-D)
-The column 'size' of docker ps -s output shows the amount of data that is used for the writable layer of each container.
+D) CMD shell format uses this form ["param", param", "param"]
 
 
 
@@ -54,7 +49,43 @@ The column 'size' of docker ps -s output shows the amount of data that is used f
 
 
 
-A is correct
+D is Correct
 
-The container's writable layer does not persist after the container is deleted, 
-but is suitable for storing ephemeral data that is generated at runtime.
+
+Both the ENTRYPOINT and CMD instructions support two different forms: the shell form and the exec form. 
+
+In the example above, we used the shell form which looks like this:
+
+CMD executable param1 param2
+
+or
+
+CMD ["executable","param1","param2"]
+
+---------------------
+
+A is wrong because:
+ 
+One difference is that unlike CMD, you cannot override the ENTRYPOINT command just by adding new command line parameters. 
+To override ENTRYPOINT you need to modify the docker run command following a specific syntax.
+
+---------------------
+
+B is wrong because:
+
+RUN lets you execute commands inside of your Docker image. 
+These commands get executed once at build time and get written into your Docker image as a new layer.
+
+---------------------
+
+C is wrong because we can combining ENTRYPOINT and CMD, 
+It allows you to specify the default executable for your image while also providing default arguments to that executable which may be overridden by the user. 
+
+FROM ubuntu:trusty
+ENTRYPOINT ["/bin/ping","-c","3"]
+CMD ["localhost"]
+
+----------------------
+
+
+

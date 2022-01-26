@@ -1,17 +1,12 @@
-When using the Dockers client to push an image to a registry, 
-what environment variable is used to instruct the client to perform signing of the image?
+Which of the following is NOT one of the 3 main Docker Container Network Model components?
 
-​A)​
-DOCKER_CONTENT_TRUST=1
+a) ​Endpoint
 ​
-B)
-DOCKER_IMAGE_SIGN=1
+b) Routing
+
+c) Network
 ​
-C)
-DOCKER_PUSH_SIGN=1
-​
-D)
-NOTARY_ENABLE=1 Correct
+d) Sandbox
 
 
 
@@ -54,9 +49,20 @@ NOTARY_ENABLE=1 Correct
 
 
 
-The correct option is 'A'
 
-For the Docker client to know to use this server, you will need to set an environment variable pointing to it:
 
-$ export DOCKER_CONTENT_TRUST=1
+The correct answer is 'B'
+
+he Docker Container Network Model provides an open interface for vendors and the community to build network drivers. 
+The complementary evolution of Docker and SDN technologies is providing more options and capabilities every day. 
+
+The CNM has three elements—sandbox, endpoint, and network. 
+
+Sandbox: The sandbox perfectly isolates a container from the outside world. 
+
+Endpoint: An endpoint is a controlled gateway from the outside woeld into network's sandbox that shields the container.
+The endpoint connects the network snadbox (not the container) to the third element of the model, which is the network.
+
+Network: The newtork is the pathway that transports the datapackets of an instance of communication from endpoint to endpoint, 
+or ultimately from container to container.
 

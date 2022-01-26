@@ -1,16 +1,10 @@
-Which of the following is the correct command to store an image to a registry?
+It is OK to have more than one RUN instruction in the Docker file.
 
-A)
-docker upload [OPTIONS] NAME[:TAG]
+​A)
+TRUE
 ​
 B)
-docker store [OPTIONS] NAME[:TAG]
-​
-C)
-docker commit [OPTIONS] NAME[:TAG]
-​
-D)
-docker push [OPTIONS] NAME[:TAG]
+FALSE
 
 
 
@@ -48,12 +42,22 @@ docker push [OPTIONS] NAME[:TAG]
 
 
 
-The correct answer is D
 
-Docker Hub repositories allow you share container images with your team, customers, or the Docker community at large.
 
-Docker images are pushed to Docker Hub through the docker push command.
 
-$ docker push repo.company.com:3456/myapp:0.1
 
- 
+
+
+A is correct
+
+RUN instruction allows you to install your application and packages required for it. 
+It executes any commands on top of the current image and creates a new layer by committing the results. 
+Often you will find multiple RUN instructions in a Dockerfile.
+
+RUN - command triggers while we build the docker image.
+
+CMD - command triggers while we launch the created docker image.
+
+
+
+

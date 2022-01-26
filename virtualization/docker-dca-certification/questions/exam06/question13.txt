@@ -1,12 +1,13 @@
-What is the correct order a system administrator should follow for creating a backup policy for the Docker Enterprise Edition?
 
-a) Swarm, ucp, dtr
+What is docker command to create swarm?
+
+a) docker swarm initialize
 ​
-b) Ucp, dtr, swarm
+b) docker swarm start
 ​
-c) Swarm, dtr, ucp
+c) docker swarm join
 ​
-d) Dtr, ucp, swram
+d) docker swarm init
 
 
 
@@ -47,13 +48,9 @@ d) Dtr, ucp, swram
 
 
 
+Answer 'd'
 
-Answer 'a'
+This command works with the Swarm orchestrator.
 
-To backup Docker Enterprise Edition you need to create individual backups for each of the following components:
-
-* Docker Swarm. Backup Swarm resources like service and network definitions.
-* Universal Control Plane (UCP). Backup UCP configurations.
-* Docker Trusted Registry (DTR). Backup DTR configurations and images.
-
+$ docker swarm init [OPTIONS]
 

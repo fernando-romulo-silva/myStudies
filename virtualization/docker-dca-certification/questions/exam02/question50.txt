@@ -1,17 +1,16 @@
-Which flag should be specified for 'docker/dtr install' 
-to configure DTR to have single sign-on (SSO) with UCP?
+Which command is used to create an overlay network that can be used with swarm services?
 
 A)
---dtr-external-url
+docker make overlay network 'network name'
 ​
 B)
---url
+docker network create -d overlay 'network name'
 ​
 C)
---sso-url
+docker-network create 'network name'
 ​
 D)
---dtr-sso-url
+docker network 'network name' create -d overlay
 
 
 
@@ -48,14 +47,9 @@ D)
 
 
 
-The correct answer is A
 
-By default, users are shared between UCP and DTR, but you have to authenticate separately on the web UI of both applications.
+B is correct
 
-You can configure DTR to have single sign-on (SSO) with UCP, so that users only have to authenticate once.
+To create an overlay network for use with swarm services, use a command like the following:
 
-When installing DTR, use the docker/dtr install --dtr-external-url <url> option to enable SSO. 
-
-
-
- 
+$ docker network create -d (--driver) overlay my-overlay

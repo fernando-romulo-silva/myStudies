@@ -1,16 +1,16 @@
-Which of the following is NOT backed up when performing a Docker Trusted backup operation?
+Which of the following is NOT how to create an efficient image via a Dockerfile?
 
-A)
-​Repository metadata
+​A)
+Use multi-stage builds
 ​
 B)
-DTR configurations
+Start with an appropriate base image
 ​
 C)
-Image blobs
+Avoid installing unnecessary packages
 ​
 D)
-Access control to repos and images
+Combine multiple applications into a single container
 
 
 
@@ -48,12 +48,7 @@ Access control to repos and images
 
 
 
+D is Correct
 
-
-
-
-
-C is Correct
-
-The backup up is on configurations, to backup a image use docker save
+Docker is perfect to create micro services, each app with its container.
 

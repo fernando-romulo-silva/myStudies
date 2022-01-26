@@ -1,14 +1,12 @@
+Which of the following is true about replicated services?
 
-If installing Docker using device mapper for storage with the Intent to run production workloads, how should devicemapper be configured?
+a) They will run one instance on each node.
 
-a) direct-lvm
+b) Only replicated services can be upgraded using the rolling update feature.
 
-b) aufs-lvm
-​
-c) overlay-lvm
-​
-d) loop-lvm
+c) They can be stopped using the Docker service update: --replicas 0 <SERVICENAME>.
 
+d) We will use Go templates to be able to provide unique resources, such as volumes or hostnames, inside containers to ensure all replicas use their own resources.
 
 
 
@@ -48,12 +46,14 @@ d) loop-lvm
 
 
 
-Answer 'a'
 
-Production hosts using the devicemapper storage driver must use direct-lvm mode. 
 
-This mode uses block devices to create the thin pool. 
+Answer 'c' and 'd'
 
-This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
+Go templates = docker inspect --format '{{ .Config.Image }}' hello_world-0f87ch
 
-However, more setup is required than in loop-lvm mode.
+'a' is wrong because for replicated service, you specify the number of identical tasks you want to run. 
+
+'b' is wrong because of
+ 
+$ docker service update --replicas=5 web

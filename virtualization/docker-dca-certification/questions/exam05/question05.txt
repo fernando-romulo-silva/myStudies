@@ -1,16 +1,12 @@
-Which of the following command is used for getting the detail information about the docker that is installed in your system?
+What is the difference between UCP workers and managers?
 
-​A)
-$ docker version
+a) Ucp-agent service automatically starts serving UCP components and proxy service only on worker node.
 ​
-B)
-$ docker info
+b) Ucp-agent service automatically starts serving UCP components and proxy service only on manger node.
 ​
-C)
-$ docker login
+c) Ucp-agent service automatically starts serving all UCP components in manager node and only proxy service in worker node.
 ​
-D)
-$ docker system prune
+d) Ucp-agent service automatically starts serving UCP components in worker node, and only a proxy service in manager node.
 
 
 
@@ -48,44 +44,18 @@ $ docker system prune
 
 
 
-B is Correct
 
-$ docker system prune is used for is used removing all the stock containers. 
 
-$ docker login is used for promoting user name or password inserting those and finally, you are logged in. 
 
-$ docker info is used for getting the data information about the docker that is installed in your system
- 
-for checking the docker slide and docker server version the command used is $ docker version. 
 
-$ docker version
-Client:
- Version:           20.10.7
- API version:       1.41
- Go version:        go1.13.8
- Git commit:        20.10.7-0ubuntu5~20.04.2
- Built:             Mon Nov  1 00:34:17 2021
- OS/Arch:           linux/amd64
- Context:           default
- Experimental:      true
+Answer 'c'
 
-Server:
- Engine:
-  Version:          20.10.7
-  API version:      1.41 (minimum version 1.12)
-  Go version:       go1.13.8
-  Git commit:       20.10.7-0ubuntu5~20.04.2
-  Built:            Fri Oct 22 00:45:53 2021
-  OS/Arch:          linux/amd64
-  Experimental:     false
- containerd:
-  Version:          1.5.5-0ubuntu3~20.04.1
-  GitCommit:        
- runc:
-  Version:          1.0.1-0ubuntu2~20.04.1
-  GitCommit:        
- docker-init:
-  Version:          0.19.0
-  GitCommit:        
+If the node is a:
 
+Manager: the ucp-agent service automatically starts serving all UCP components, including the UCP web UI and data stores used by UCP. 
+The ucp-agent accomplishes this by deploying several containers on the node. 
+By promoting a node to manager, UCP automatically becomes highly available and fault tolerant.
+
+Worker: on worker nodes, the ucp-agent service starts serving a proxy service that ensures only authorized users and other UCP services
+can run Docker commands in that node. The ucp-agent deploys a subset of containers on worker nodes.
 

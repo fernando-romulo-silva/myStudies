@@ -1,16 +1,16 @@
-What is the command to set DNS server for all Docker containers?
+What is the correct order to backup Docker EE components?
 
-​A) 
-$ dockerd --dns-update IP_ADDRESS
+​A)
+Backup DTR, UCP and then Swarm
 ​
 B)
-$ dockerd --set-dns IP_ADDRESS
+Backup Swarm ,DTR, and then UCP
 ​
 C)
-$ dockerd --dns-server IP_ADDRESS
+Backup Swarm, UCP, and then DTR
 ​
 D)
-$ dockerd --dns IP_ADDRESS
+Backup UCP,Swarm, and then DTR
 
 
 
@@ -51,13 +51,13 @@ $ dockerd --dns IP_ADDRESS
 
 
 
+C is Correct
 
+To backup Docker Enterprise Edition you need to create individual backups for each of the following components:
 
-The correct option is D
+1* Docker Swarm: Backup Swarm resources like service and network definitions.
 
-By default, a container inherits the DNS settings of the host, as defined in the /etc/resolv.conf
+2* Universal Control Plane (UCP): Backup UCP configurations.
 
-To set the DNS server for all Docker containers, use:
-
-$ sudo dockerd --dns 8.8.8.8
+3* Docker Trusted Registry (DTR): Backup DTR configurations and images.
 

@@ -1,12 +1,16 @@
-What are the requirements to install Docker Trusted Registry (DTR)? (Select all that apply)
-
-A) Make sure the port 8080 and 8443 are open on the node
+Which of the following is true about building docker images?
 ​
-B) All nodes must be a worker node managed by Universal Control Plan
+A)
+Every Dockerfile can have only one FROM directive.
 ​
-C) DTR can be installed on-premises or on a cloud provider
+B)
+Only layers that have changed since the last build (and any following layers) are built.
 ​
-D) All nodes must have fixed hostname
+C)
+Every layer of the image is re-built every time docker build is executed.
+​
+D)
+Every Dockerfile can have only one FROM directive.
 
 
 
@@ -47,11 +51,9 @@ D) All nodes must have fixed hostname
 
 
 
+B is Correct
 
-The correct option is B, C and D
+When you modify a Dockerfile and create a new image, Docker only rebuilds layers that have changed. 
 
-You can install DTR on-premises or on a cloud provider. To install DTR, all nodes must:
+The rest stay the same. This can be a good thing or a bad thing depending on how you structure your Dockerfile.
 
-Be a worker node managed by UCP (Universal Control Plane). 
-See Compatibility Matrix for version compatibility.
-Have a fixed hostname.

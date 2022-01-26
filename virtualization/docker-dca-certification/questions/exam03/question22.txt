@@ -1,16 +1,16 @@
-What service mode is used to deploy a single task of a service to each node?
+Which of the following is NOT backed up when performing a Docker Trusted backup operation?
 
 A)
-Universal
+​Repository metadata
 ​
 B)
-Spread
+DTR configurations
 ​
 C)
-Global
+Image blobs
 ​
 D)
-Replicated
+Access control to repos and images
 
 
 
@@ -52,7 +52,8 @@ Replicated
 
 
 
-C is correct
 
-For global services, the scheduler places one task on each available 
-node that meets the service’s placement constraints and resource requirements.
+C is Correct
+
+The backup up is on configurations, to backup a image use docker save
+

@@ -1,20 +1,16 @@
-Which of the following commands is correct if container exits due to an error, 
-which manifests as a non-zero exit code.
-​
+Which of the following is not backed up when performing a Docker Trusted Registry (DTR) metadata backup?
+
 A)
-docker run --restart unless-stopped nginx
+DTR Configurations
 ​
 B)
-docker run --restart no nginx
+Repository metadata.
 ​
 C)
-docker run --restart on-failure nginx
+Docker images.
 ​
 D)
-docker run --restart failure-only nginx
-
-
-
+Role-based access control (RBAC) settings.
 
 
 
@@ -54,16 +50,7 @@ docker run --restart failure-only nginx
 
 C is Correct
 
-The on-failure restart policy lets you specify how many retries should be attempted. 
+The backup up is on configurations, to backup a image use docker save
 
-Docker will give up and leave the container in a stopped state if it fails to start multiple times in succession.
-Example:
 
-$ docker run httpd:latest --restart on-failure:5
-
-In this example, Docker will try to restart the container five times after a failure (non-zero exit code). 
-
-If the container fails to start on the fifth attempt, no more retries will be attempted. 
-
-This option is useful for containers where a persistent starting error is unlikely to be resolved without manual intervention.
 

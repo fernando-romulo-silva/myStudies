@@ -1,16 +1,16 @@
-What docker image prune command does?
+What is the docker command to roll back to the previous version of a service?
 
-​A)
-Show the history of an image
+A)
+​docker service update --rollback-version
 ​
 B)
-Remove one or more images
+docker service --rollback-version
 ​
 C)
-Display detailed information on one or more images
+docker service update --rollback
 ​
 D)
-Remove unused images
+docker service --rollback
 
 
 
@@ -48,9 +48,17 @@ Remove unused images
 
 
 
-D is correct
 
-The docker image prune command allows you to clean up unused images. 
-By default, docker image prune only cleans up dangling images. 
-A dangling image is one that is not tagged and is not referenced by any container
+
+
+C correct
+
+Use the docker service rollback command to roll back to the previous version of a service.
+After executing this command, the service is reverted to the configuration that was in place before the most recent docker service update command.
+
+$ docker service update --rollback my-service
+
+// or
+
+$ docker service rollback my-service
 

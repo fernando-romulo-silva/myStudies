@@ -1,14 +1,12 @@
+How many replicas does a global service run on nodes if we specify the node.role!=worker constraint?
 
-Which of the below correct command that need to be executed to sign an image before pushing it to repository?
+a) Worker and manager nodes will run one replica.
 
-a) export TRUST_DOCKER_IMAGE=1
-​
-b) export TRUST_DOCKER_CONTENT=1
-​
-c) export SIGN_DOCKER_IMAGE=1
-​
-d) export DOCKER_CONTENT_TRUST=1
+b) Only workers will run one replica.
 
+c) Only manager nodes will run one replica.
+
+d) No nodes will run any replicas.
 
 
 
@@ -48,11 +46,10 @@ d) export DOCKER_CONTENT_TRUST=1
 
 
 
-Answer 'd'
-
-For the Docker client to know to use trusted server (environment), 
-you will need to set an environment variable pointing to it:
-
-$ export DOCKER_CONTENT_TRUST=1
 
 
+Answer 'b'
+
+A global service is a service that runs one task on every node. 
+There is no pre-specified number of tasks. 
+Each time you add a node to the swarm, the orchestrator creates a task and the scheduler assigns the task to the new node.

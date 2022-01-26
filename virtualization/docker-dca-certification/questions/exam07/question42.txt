@@ -1,17 +1,13 @@
+How do we only list containers created from an alpine:3.10 image?
 
-To decrease the image pull time for geographically dispersed users you can configure which DTR option?
 
-A)
-DTR CDN
-​
-B)
-DTR cache
-​
-C)
-DTR Edge
-​
-D)
-DTR Local Registry
+a) docker container ls image=alpine:3.10
+
+b) docker ps --format ancestor=alpine:3.10
+
+c) docker container ls --filter ancestor=alpine:3.10
+
+d) docker container ls --filter image=alpine:3.10
 
 
 
@@ -53,10 +49,13 @@ DTR Local Registry
 
 
 
+Answers 'b' and 'c'
 
+b - because
 
-Answer 'B'
+$ docker ps --format ancestor=alpine:3.10 
 
-To decrease the time to pull an image, you can deploy DTR caches geographically closer to users.
-Caches are transparent to users, since users still login and pull images using the DTR url address. 
-DTR checks if users are authorized to pull the image, and redirects the request to the cache.
+c - because
+
+$ docker container ls --filter ancestor=alpine:3.10
+

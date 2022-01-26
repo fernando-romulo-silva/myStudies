@@ -1,16 +1,16 @@
-Which of the following tool to use to create users and teams?
+What is the docker command to find the current logging driver for a running container?
 
-A)
-Universal Control Plane
+​A)
+docker info
 ​
 B)
-Docker Machine
+docker config
 ​
 C)
-Docker compose
+docker inspect
 ​
-C)
-Docker Trusted Registry
+D)
+docker status
 
 
 
@@ -48,10 +48,35 @@ Docker Trusted Registry
 
 
 
-A is Correct
+C is Correct
 
-Docker Universal Control Plane (UCP) is an enterprise 
-on premise solution that enables IT operations teams to deploy and manage their Dockerized applications in production
+Docker includes multiple logging mechanisms to help you get information from RUNNING CONTAINER and services. 
+These mechanisms are called logging drivers. 
+Each Docker daemon has a default logging driver, which each container uses unless you configure it to use a different logging driver, or “log-driver” for short.
+But for the a RUNNING  CONTAINER, you need do it:
+
+$ docker inspect murachs-mysql | grep -i -C 5 log
+...
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+...
 
 
+
+A is wrong because of the command bellow it's the docker daemon's log driver:
+
+$ docker info --format '{{.LoggingDriver}}'
+
+or
+
+$ docker system info | grep -i log
 

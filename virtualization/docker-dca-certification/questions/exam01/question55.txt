@@ -1,18 +1,16 @@
+Which of the following is true of filesystem storage models? (select all that apply)
 
-How can we modify ports published on an already-deployed service?
-
-
-a) It is not possible; we have to remove the service and create it again.
-
-b) We can only change ports if the service is running using the host's network (--net=host).
-
-c) We use docker service update --publish-add <NEW_PORT> --publish-rm <OLD_PORT>.
-
-d) None of the preceding answers are correct.
-
-
-
-
+​A)
+They store data in regular files on the host machine.
+​
+B)
+They are efficient with write-heavy workloads.
+​
+C)
+They are used by overlay2 and aufs .
+​
+D)
+They use an external, object-based store.
 
 
 
@@ -25,8 +23,39 @@ d) None of the preceding answers are correct.
 
 
 
-Answer(s) 'c'
 
-When you update a service, you can update the ports:
 
-$ docker service update --publish-add <NEW_PORT> --publish-rm <OLD_PORT>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answers are A, B and C
+
+They store data in regular files on the host machine. 
+
+They are used by overlay2 and aufs .
+
+They are efficient with write-heavy workloads
+
+

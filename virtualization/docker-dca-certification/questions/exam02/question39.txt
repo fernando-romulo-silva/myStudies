@@ -1,18 +1,17 @@
-You have been asked to backup the swarm state on a Linux installation. 
-By default, where do Docker manager nodes store the swarm state and manager logs?
+Which Docker command is used to remove a base image, even 
+if that image has containers that are based on it?
 
-​
 A)
-/var/run/docker/swarm
-​
+docker rmi [image name] --force
+
 B)
-/var/lib/docker/swarm
+docker rm [image name] --force
 ​
 C)
-/etc/docker/swarm
+docker remove [image name]
 ​
 D)
-/run/docker/swarm
+None of the above.
 
 
 
@@ -48,8 +47,18 @@ D)
 
 
 
-The correct answer is B
 
-The '/var/lib/' folder holds state information pertaining to an application or the system, 
-so the '/var/lib/docker/swarm' has the swarm state and logs. 
 
+
+
+A is correct
+
+Removes (and un-tags) one or more images from the host node. 
+If an image has multiple tags, using this command with the tag as a parameter only removes the tag. 
+If the tag is the only one for the image, both the image and the tag are removed.
+This does not remove images from a registry. 
+You cannot remove an image of a running container unless you use the -f option. 
+
+Docker rmi specifies that docker rmi is an alias for docker image rm
+
+$ docker rmi -f fd484f19954f

@@ -1,16 +1,16 @@
-What does the FROM directive do?
+Which Docker edition would you choose for obtaining the latest Docker Engine updates?
 
 ​A)
-It indicates the build location of where the image is.
+Docker Enterprise Edition (EE)
 ​
 B)
-It pulls a file from an external source into the image.
+Docker Developer Edition (DE)
 ​
 C)
-It sets a base image that can be used as a platform to begin builds.
+Docker Community Edition (CE)
 ​
 D)
-It sets the working directory of containers ran using the image.
+Either Docker CE or Docker EE
 
 
 
@@ -48,16 +48,6 @@ It sets the working directory of containers ran using the image.
 
 
 
+D is the correct
 
-
-
-C is Correct
-
-The FROM instruction specifies the Parent Image from which you are building. 
-
-FROM may only be preceded by one or more ARG instructions, which declare arguments that are used in FROM lines in the Dockerfile.
-
-Dockerfile example:
-
-FROM eclipse-temurin:17.0.1_12-jre-alpine
-WORKDIR /application
+All versions need updates...

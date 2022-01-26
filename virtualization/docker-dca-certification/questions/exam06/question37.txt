@@ -1,12 +1,13 @@
-Which of the following is NOT one of the 3 main Docker Container Network Model components?
 
-a) ​Endpoint
+Which of these swarm manager configurations will cause the cluster to be in a lost quorum state?
+
+a) 4 managers of which 2 are healthy
+
+b) 1 manager of which 1 is healthy
 ​
-b) Routing
-
-c) Network
+c) 3 managers of which 2 are healthy
 ​
-d) Sandbox
+d) 5 managers of which 3 are healthy
 
 
 
@@ -50,19 +51,22 @@ d) Sandbox
 
 
 
+Answer 'a'
 
-The correct answer is 'B'
+So a quorum is a majority of managers.
+ 
+To ensure that quorum is achieved in the cluster, swarm managers use something called the Raft Consensus Algorithm. 
 
-he Docker Container Network Model provides an open interface for vendors and the community to build network drivers. 
-The complementary evolution of Docker and SDN technologies is providing more options and capabilities every day. 
+Raft tolerates up to (N-1)/2 failures and requires a majority or quorum of (N/2)+1 members to agree on values proposed to the cluster. 
 
-The CNM has three elements—sandbox, endpoint, and network. 
+This means that in a cluster of 5 Managers running Raft, if 3 nodes are unavailable, 
+the system cannot process any more requests to schedule additional tasks.
 
-Sandbox: The sandbox perfectly isolates a container from the outside world. 
+    (5-2)/2 = 2 (two failures) 2 < 3 (nodes available)
+    (3/2) + 1 = 2,5 
 
-Endpoint: An endpoint is a controlled gateway from the outside woeld into network's sandbox that shields the container.
-The endpoint connects the network snadbox (not the container) to the third element of the model, which is the network.
 
-Network: The newtork is the pathway that transports the datapackets of an instance of communication from endpoint to endpoint, 
-or ultimately from container to container.
+c->  4 but two helthy
 
+    (4-1)/2 = 2 (two failures)
+    (2/2) + 1 = 2 (need three healthy)

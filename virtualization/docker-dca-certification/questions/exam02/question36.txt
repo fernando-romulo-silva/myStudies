@@ -1,17 +1,16 @@
-You have created a Docker bridge network on a host with three containers attached, 
-how do you make this containers accessible outside of the host?
-
+What is the docker command to connect a running container to an existing user-defined bridge?
+​
 A)
-Use --link to access the containers on the bridge network
+docker network join
 ​
 B)
-Use either EXPOSE or --publish to access the containers on the bridge network
+docker network attach
 ​
 C)
-Use network connect to access the containers on the bridge network
+docker connect network
 ​
 D)
-Use network attach to access the containers on the bridge network
+docker network connect
 
 
 
@@ -48,15 +47,24 @@ Use network attach to access the containers on the bridge network
 
 
 
-The correct answer is B
 
-You should expose the ports which your service inside container is listening on to the host.
 
-$ docker run -d -p 80:80 apache
 
--p = --publish
+D is correct
 
-or 
+When you create a new container, you can specify one or more --network flags. 
+This example connects a Nginx container to the my-net network.
 
-EXPOSE in dockerfile
+$ docker create --name my-nginx \
+  --network my-net \
+  --publish 8080:80 \
+  nginx:latest
+  
 
+To connect a running container to an existing user-defined bridge, use the docker network connect command. 
+The following command connects an already-running my-nginx container to an already-existing my-net network:
+
+$ docker network connect my-net my-nginx
+
+
+ 

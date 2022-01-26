@@ -1,16 +1,17 @@
-Which of the following statements truly applies to the ENV directive?
-​
+Which of the following scenarios would still allow the quorum to have maintenance in a swarm cluster? 
+(Choose two)
+
 ​A)
-It sets an environment variable on the host while the container is running
+A 3-node cluster with 1 node down.
 ​
 B)
-It sets environment variables that are only visible at the container runtime.
+A 3-node cluster with 2 nodes down
 ​
 C)
-It sets environment variables that are made available in subsequent build steps and to containers at the runtime.
+A 7-node cluster with 3 nodes down.
 ​
 D)
-It sets environment variables that are only visible during later build steps
+A 4-node cluster with 2 nodes down.
 
 
 
@@ -48,13 +49,8 @@ It sets environment variables that are only visible during later build steps
 
 
 
+A and C are Correct
 
+In a swarm of N managers, a quorum (a majority) of manager nodes must always be available.
+For example, in a swarm with 5 managers, a minimum of 3 must be operational and in communication with each other. 
 
-
-C is Correct
-
-The ENV instruction sets the environment variable <key> to the value <value>, on the container. 
-
-This value will be in the environment for all subsequent instructions in the build stage and can be replaced inline in many as well. 
-
-$ docker run --name test-mysql --cpus 0.75  --env MYSQL_ROOT_PASSWORD=root --detach --publish 3306:3306 mysql:5.7

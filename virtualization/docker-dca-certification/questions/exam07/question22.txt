@@ -1,16 +1,14 @@
+We tried to create a service with five replicas but it is not working. 
+We cannot reach the reconciliation phase because we get the following error: 1/1: no suitable node (scheduling constraints not satisfied on 5 nodes). 
+What could be wrong?
 
-Which constraint role you use if you want to restrict a service to be scheduled in a manager in the Swarm cluster?
+a) The service's image does not exist.
 
-a) swarm.role != worker
-​
-b) node.role == manager
+b) We were using a private image and we did not provide authentication credentials.
 
-c) swarm.role == manager
-​
-d) node.role != manager
+c) We used constraints for deploying the service's tasks on specific nodes but none of them have the required labels.
 
-
-
+d) None of the preceding options are true.
 
 
 
@@ -48,17 +46,6 @@ d) node.role != manager
 
 
 
-Answer 'b'
-
-The most common method ot separate workers and managers is make a placement constraint on node.role==worker 
-for every service you only want to run on workers vs the manager:
-
-version "3.1"
-services: 
-  foo:
-    image: hello-world
-    deploy:
-      placement:
-         - node.role: manager 
 
 
+Answer 'c' - The node labels defined in the compose file and the ones defined in the actual node are different

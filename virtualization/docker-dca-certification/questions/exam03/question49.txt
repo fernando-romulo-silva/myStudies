@@ -1,17 +1,21 @@
-Docker EE is available on multiple platforms. 
-Which of the following are not valid hardware platforms to run Docker EE?
-​
+Which command should you run to show all the nodes in a swarm?
+
 A)
-IBM Z (s390x)
+docker swarm list
 ​
 B)
-Sun/Oracle SPARC
+docker node ls
 ​
 C)
-X86_64/AMD 64
+docker node list
 ​
 D)
-IBM Power (ppc64le)
+docker swarm l
+
+
+
+
+
 
 
 
@@ -52,6 +56,14 @@ IBM Power (ppc64le)
 
 B is correct
 
-Docker Enterprise Edition (EE) is an integrated, supported and certified container platform for CentOS, 
-Red Hat Enterprise Linux (RHEL), Ubuntu, SUSE Linux Enterprise Server (SLES), Oracle Linux, and Windows Server 2016, 
-as well as for cloud providers AWS and Azure.
+Lists all the nodes that the Docker Swarm manager knows about. 
+
+You can filter using the -f or --filter flag.
+
+$ docker node ls
+
+ID                           HOSTNAME        STATUS  AVAILABILITY  MANAGER STATUS
+1bcef6utixb0l0ca7gxuivsj0    swarm-worker2   Ready   Active
+38ciaotwjuritcdtn9npbnkuz    swarm-worker1   Ready   Active
+e216jshn25ckzbvmwlnh5jr3g *  swarm-manager1  Ready   Active        Leader
+  

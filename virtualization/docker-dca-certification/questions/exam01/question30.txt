@@ -1,20 +1,17 @@
-How can we filter running containers based on a specific image?
+After creating a new service named 'http', you notice that the new service is not registering as healthy. 
+How do you view the list of historical tasks for that service by using the command line?
 
-
-a) There is no option for this. We use the Linux grep command to filter specific base images for containers.
-
-b) We will use the ancestor key to list all the running containers using a specific image.
-
-c) We will use the image key to list all the running containers using a specific image.
-
-d) None of the preceding sentences are right.
-
-
-
-
-
-
-
+A)
+'docker service inspect http'
+​
+B)
+'docker service ps http'
+​
+C)
+'docker inspect http'
+​
+D)
+'docker ps http'
 
 
 
@@ -48,8 +45,18 @@ d) None of the preceding sentences are right.
 
 
 
-Answer 'b' because of
 
-$ docker ps -q  --filter ancestor=docker-mariadb:1.0.1
 
+
+The correct answer is A
+
+Display detailed information on one or more services.
+
+& Find the number of tasks running as part of a service &
+
+The --format option can be used to obtain specific information about a service. 
+
+For example, the following command outputs the number of replicas of the “redis” service:
+
+$ docker service inspect --format='{{.Spec.Mode.Replicated.Replicas}}' redis
 

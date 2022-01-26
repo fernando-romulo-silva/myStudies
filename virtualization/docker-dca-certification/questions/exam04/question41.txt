@@ -1,16 +1,10 @@
-What is the default network driver used when one is not specified?
+Docker security scan result is available in both UCP and DTR. True or false?
 
-A)
-none
+​A)​
+TRUE
 ​
 B)
-overlay
-​
-C)
-bridge
-​
-D)
-host
+FALSE
 
 
 
@@ -53,9 +47,8 @@ host
 
 
 
-C is correct
+The correct option is 'B'
 
-bridge : The default network driver. 
-If you don't specify a driver, this is the type of network you are creating. 
-Bridge networks are usually used when your applications run in standalone containers that need to communicate.
+The docker scan command allows you to scan existing Docker images using the image name or ID, 
+but this feature requires a Docker subscription
 

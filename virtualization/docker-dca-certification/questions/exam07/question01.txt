@@ -1,15 +1,13 @@
 
-How many types of the registry is there?
+How can we limit the number of CPUs provided to a container?
 
-a) One
+a) Using --cap-add CPU.
 
-b) Two
+b) Using --cpuset-cpus.
 
-c) Three
-​
-d) Four
+c) Using --cpus.
 
-
+d) It is not possible to specify the number of CPUs; we have to use --cpu-shares and define the CPU slices.
 
 
 
@@ -48,18 +46,16 @@ d) Four
 
 
 
-Answer 'b'
 
-There are two types of the registry.
 
-1. Public
+Answer 'b' and 'c'
 
-2. Private
+This means processes in container can be executed on cpu 1 and cpu 3.
 
-Public registry's of Docker is also called a docker hub. 
+$ docker run --name test-mysql --cpuset-cpus="1,3" --env MYSQL_ROOT_PASSWORD=root --detach --publish 3306:3306 mysql:5.7
 
-Which helps in storing the images privately. 
+Number of CPUs. Number is a fractional number. 0.000 means no limit.
 
-In the docker hub, millions of images can be stored.
+$ docker run --name test-mysql --cpus 0.75  --env MYSQL_ROOT_PASSWORD=root --detach --publish 3306:3306 mysql:5.7
 
 

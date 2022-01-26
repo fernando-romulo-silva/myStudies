@@ -1,16 +1,12 @@
-What is the docker command to add or update a published port?
+Which of the following best describes the procedure for backing up the Universal Control Plane (UCP) metadata?
 
-​A)
-docker service update --publish-add
+a) Create an archive for all of the data under the /etc/docker/ucp directory.
 ​
-B)
-docker service update --publish-port
-
-C)
-docker service set --add-port
+b) Create an archive for all of the data under the /var/data/ucp directory.
 ​
-D)
-docker service modify --add-update-port
+c) Run a container from the ucp image with the backup command.
+​
+d) Run a container from the ucp image with the uninstall-ucp command.
 
 
 
@@ -48,9 +44,19 @@ docker service modify --add-update-port
 
 
 
-A is Correct
 
-You can change almost everything about an existing service using the docker service update command. 
-When you update a service, Docker stops its containers and restarts them with the new configuration.
 
-$ docker service update --publish-add
+
+
+Answer 'c'
+
+To create a UCP backup, run the command below on a single UCP manager:
+
+$ docker container run --log-driver none --rm -i \
+    --name ucp \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    docker/ucp \
+    backup [command options] > backup.tar 
+
+This command creates a tar archive with the contents of all the volumes used by UCP to persist data and streams it to stdout.
+

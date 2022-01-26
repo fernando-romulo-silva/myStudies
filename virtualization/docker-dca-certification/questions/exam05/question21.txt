@@ -1,16 +1,12 @@
-Which of the following is NOT a valid way to tag a Docker image?
+Which of the following statement is true about secrets?
 
-​A)
-Tag an image referenced by user ID
+a) ​Secrets can be created from any node in the cluster
 ​
-B)
-Tag an image referenced by Name
+b) Secrets are stored unencrypted on manager nodes
 ​
-C)
-Tag an image referenced by image ID
-​
-D)
-Tag an image referenced by Name and Tag
+c) Secrets can be modified after they are created
+
+d) Secrets can be created using standard input (STDIN) and a file
 
 
 
@@ -48,18 +44,15 @@ Tag an image referenced by Name and Tag
 
 
 
-A is Correct
-
-Docker tags convey useful information about a specific image version/variant. 
-
-Tag an image referenced by ID
-To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”:
-
-$ docker tag 0e5574283393 fedora/httpd:version1.0
 
 
-Tag an image referenced by Name
-To tag a local image with name “httpd” into the “fedora” repository with “version1.0”:
 
-$ docker tag httpd fedora/httpd:version1.0
 
+Answer 'd'
+
+Short for standard input, stdin is an input stream where data is sent to and read by a program. 
+
+Secrets are ephemeral, unchaged mounted as files that contain the information.
+
+A node only has access to (encrypted) secrets if the node is a swarm MANAGER 
+or if it is running service tasks which have been granted access to the secret. 

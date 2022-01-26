@@ -1,18 +1,16 @@
+Which of the following lvm mode should a production host using the device mapper as a storage driver use?
 
-Which of the following is true about global services?
-
-a) Global services will only run one replica of the defined service on each node.
-
-b) Global services will not provide high availability based on resilience.
-
-c) Draining a node will not remove global services.
-
-d) All of the preceding sentences are true.
-
-
-
-
-
+A)
+​Loop-lvm
+​
+B)
+ZFS
+​
+C)
+Direct-lvm
+​
+D)
+Overlay
 
 
 
@@ -48,9 +46,15 @@ d) All of the preceding sentences are true.
 
 
 
-Answer 'a'
 
-A global service is a service that runs one task on EVERY node. 
-There is no pre-specified number of tasks.
 
+The correct option is C
+
+Production hosts using the devicemapper storage driver must use direct-lvm mode. 
+
+This mode uses block devices to create the thin pool. 
+
+This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
+
+However, more setup is required than in loop-lvm mode.
 

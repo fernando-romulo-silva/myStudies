@@ -1,10 +1,16 @@
-Single sign-on (SSO) with UCP can only be configured at installation
+The docker daemon is called?
 
-A)
-TRUE
+​A)​
+docker_d
 ​
 B)
-FALSE
+dockerd
+​
+C)
+docker_engine
+​
+D)
+docker_run
 
 
 
@@ -46,15 +52,7 @@ FALSE
 
 
 
+The correct option is 'B'
 
+Docker uses different binaries for the daemon and client. To run the daemon you type dockerd.
 
-B is correct
-
-You can configure DTR to have single sign-on (SSO) with UCP, so that users only have to authenticate once.
-
-At installation time: When installing DTR, use the docker/dtr install --dtr-external-url <url> option to enable SSO. 
-
-After install: In your browser, navigate to the DTR web UI, and choose Settings. 
-In the General tab, scroll to Domain & proxies.
-
- 

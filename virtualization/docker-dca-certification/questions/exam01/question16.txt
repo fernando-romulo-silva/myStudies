@@ -1,18 +1,16 @@
+What is docker command to see container logs?
 
-Which of these sentences are true about signing images (select all correct)?
-
-a) Image signing ensures image ownership.
-
-b) Images can be signed using docker trust sign <IMAGE>.
-
-c) All images will be signed if we set the Docker client to use Docker Content Trust on every command.
-
-d) Image signing is based on the following keys: the owner key, the repository key, the snapshot key, and the timestamp.
-
-
-
-
-
+​A)
+docker dump-logs
+​
+B)
+docker logs
+​
+C)
+docker get-logs
+​
+D)
+docker fetch-logs
 
 
 
@@ -48,24 +46,19 @@ d) Image signing is based on the following keys: the owner key, the repository k
 
 
 
-Answer 'a', 'b', and 'c'
 
-a - To sign a Docker Image you will need a delegation key pair, with that Image signing ensures image ownership.
+The correct option is B
 
-// load the key
+The docker logs command shows information logged by a running container. 
+The docker service logs command shows information logged by all containers participating in a service. 
+The information that is logged and the format of the log depends almost entirely on the container’s endpoint command.
 
-$ docker trust key load key.pem --name jeff
+docker logs [CONTAINER]
 
+$ docker logs jmodular-java-tests-1
 
-b - Trust the image
-
-$ docker trust sign example/trust-demo:v2
-
-
-c - Since the commands execute only in trust way
-
-
-
-
+13:37:15.464 [main] INFO  modular.java.test.App - hello, the application has started
+13:37:15.466 [main] ERROR modular.java.test.App - Hello World!
+13:37:15.466 [main] INFO  modular.java.test.App - the application is now complete
 
 

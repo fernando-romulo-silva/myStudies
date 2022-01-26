@@ -1,17 +1,16 @@
-How do you configure Docker engine to use a registry 
-that is not configured with TLS certificates from a trusted CA?
+Which of the following is supported by control groups?
 
-A)
-Set and export the IGNORE_TLS environment variable on the command line.
+​A)​
+Collect net
 ​
 B)
-Pass the '--insecure-registry' flag to the daemon at run time.
+Isolate processes in a container
 ​
 C)
-Set INSECURE_REGISTRY in the '/etc/docker/default' configuration file.
+Mange certificates
 ​
 D)
-Set IGNORE_TLS in the 'daemon.json' configuration file.
+Limit CPU usage within a container
 
 
 
@@ -49,24 +48,15 @@ Set IGNORE_TLS in the 'daemon.json' configuration file.
 
 
 
+D is Correct
 
+Cgroups provide resource limitation and reporting capability within the container space. 
+They allow granular control over what host resources are allocated to the containers and when they are allocated.
+Common control groups:
 
-
-
-
-B is Correct
-
-To use a registry that is not configured with TLS certificates 
-
-$ docker -d --insecure-registry registry:8443
-
-or 
-
-use the platform-independent daemon.json file, which is located in /etc/docker/ on Linux by default.
-
-Set the following flag in the daemon.json file:
-
-{
-    "insecure-registries": ["registry:8443"]
-}
+* CPU
+* Memory
+* Network Bandwidth
+* Disk
+* Priority
 

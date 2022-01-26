@@ -1,17 +1,17 @@
-Which of the following option is used to specify a repository and a 
-tag for saving the image after the build is done?
-​
-A)
--f
+What Dockerfile option EXPOSE does?
+
+​A)
+Expose defaults for an executing container
 ​
 B)
--m
+Adds metadata to an image
 ​
 C)
--t
+Label a container that will run as an executable
 ​
 D)
--p
+Informs Docker that the container listens on the specified network ports at runtime
+​
 
 
 
@@ -48,14 +48,40 @@ D)
 
 
 
-C is correct
 
-$ docker tag <Image-ID> <desired Name:Tag>
 
-To specify a value for repository and tag of the image, we use the --tag or -t flag with the $ docker build command. 
 
-$ docker build -t my-docker-image .
 
-The format of the value for this flag is <repository>:<tag>. 
-If we leave the :<tag> part out, Docker will use the latest value for the <tag> part implicitly.
+
+
+
+
+
+D is correct
+
+The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. 
+
+You can specify whether the port listens on TCP or UDP, and the default is TCP if the protocol is not specified.
+
+The EXPOSE instruction does not actually publish the port. 
+
+It functions as a type of documentation between the person who builds the image and 
+the person who runs the container, about which ports are intended to be published. 
+
+To actually publish the port when running the container, use the -p flag on docker run to publish and map one or more ports, 
+or the -P flag to publish all exposed ports and map them to high-order ports.
+
+
+Basically, you have three options:
+
+Neither specify EXPOSE nor -p
+Only specify EXPOSE
+Specify EXPOSE and -p
+
+1) If you specify neither EXPOSE nor -p, the service in the container will only be accessible from inside the container itself.
+
+2) If you EXPOSE a port, the service in the container is NOT accessible from outside Docker, but from inside other Docker containers. 
+So this is good for inter-container communication.
+
+3) If you EXPOSE and -p (publish) a port, the service in the container is accessible from anywhere, even outside Docker.
 
