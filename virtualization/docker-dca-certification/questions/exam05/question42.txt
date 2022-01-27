@@ -47,6 +47,7 @@ b) FALSE
 
 
 
+
 'B'
 
 The docker build command builds Docker images from a Dockerfile and a “context”. 

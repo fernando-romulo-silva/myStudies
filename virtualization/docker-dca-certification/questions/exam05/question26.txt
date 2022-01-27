@@ -54,3 +54,13 @@ Docker inspect provides detailed information on constructs controlled by Docker.
 
 $ docker container inspect nginx 
 
+Or
+
+$ docker inspect -f '{{ .Volumes }}' nginx
+
+Or
+
+$ docker volume inspect nginx-volume
+
+
+

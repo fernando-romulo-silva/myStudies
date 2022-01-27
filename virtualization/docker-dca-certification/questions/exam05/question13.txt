@@ -52,8 +52,8 @@ Answer 'a'
 
 To backup Docker Enterprise Edition you need to create individual backups for each of the following components:
 
-* Docker Swarm. Backup Swarm resources like service and network definitions.
-* Universal Control Plane (UCP). Backup UCP configurations.
-* Docker Trusted Registry (DTR). Backup DTR configurations and images.
+* Docker Swarm: Backup Swarm resources like service and network definitions.
 
+* Universal Control Plane (UCP): Backup UCP configurations.
 
+* Docker Trusted Registry (DTR): Backup DTR configurations and images.

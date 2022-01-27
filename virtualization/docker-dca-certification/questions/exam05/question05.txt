@@ -57,5 +57,6 @@ The ucp-agent accomplishes this by deploying several containers on the node.
 By promoting a node to manager, UCP automatically becomes highly available and fault tolerant.
 
 Worker: on worker nodes, the ucp-agent service starts serving a proxy service that ensures only authorized users and other UCP services
-can run Docker commands in that node. The ucp-agent deploys a subset of containers on worker nodes.
+can run Docker commands in that node. 
+The ucp-agent deploys a subset of containers on worker nodes.
 
