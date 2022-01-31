@@ -50,7 +50,20 @@ d) docker image layers
 
 Answer 'a'
 
-Docker inspect provides detailed information on constructs controlled by Docker.
+Docker inspect provides detailed information on constructs controlled by Docker, like LOCATED layer system:
+
+$ docker image inspect eced642d4f5c
+  ...
+  "GraphDriver": {
+    "Data": {
+      "LowerDir": "/var/lib/docker/overlay2/655be8bea8e54c31ebb7e3adf05db227d194a49c1e2f95552d593d623e024b92/diff:/var/lib/docker/overlay2/993f77b91a487e19b3696836efee23c8a17791d71096d348c54c38fba3dc8478/diff:/var/lib/docker/overlay2/d62d6ca8ce1960d057e11d163d458563628e5a337de06455e714900f72005589/diff:/var/lib/docker/overlay2/cabdf4de81557a8047e3670bd2eecb5449de7de8fe9dfd4ad0c81d7dd2c61e9d/diff:/var/lib/docker/overlay2/062bf99d6a563ee2ef7824ec02ff5cd09fb8721cb23f6a55f8927edc2607f9c1/diff:/var/lib/docker/overlay2/ba024c24b20771dbf409f501423273e13225cf675f30896720cadace1c7be000/diff:/var/lib/docker/overlay2/d15f4477b53508127bebd1224c9ea09cd767f7db7429ffb1e8aa79b01ab77506/diff:/var/lib/docker/overlay2/ea434348d6625bc49875d0aba886b24ff0e1e204a350099981dcfc4029bc688d/diff:/var/lib/docker/overlay2/05e003c0522c7049110aa3ce09814ff2167da1e53ec83481fef03324011ce6e6/diff",
+      "MergedDir": "/var/lib/docker/overlay2/205b55ee2f0e06394b6d17067338845410609887ccd18f53bf0646ff60452ffb/merged",
+      "UpperDir": "/var/lib/docker/overlay2/205b55ee2f0e06394b6d17067338845410609887ccd18f53bf0646ff60452ffb/diff",
+      "WorkDir": "/var/lib/docker/overlay2/205b55ee2f0e06394b6d17067338845410609887ccd18f53bf0646ff60452ffb/work"
+    },
+    "Name": "overlay2"
+  },
+
 
 By default, docker inspect will render results in a JSON array.
 

@@ -50,6 +50,9 @@ d) Docker Marketplace
 
 Answer 'a'
 
+Docker Hub is the world's easiest way to create, manage, and deliver your teams' container applications.
+
+
 'b' is wrong because Docker Enterprise Hub don't exits
 ​
 'c' is wrong because Docker Trusted Registry it's a tool
