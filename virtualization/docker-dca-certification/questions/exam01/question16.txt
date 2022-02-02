@@ -47,6 +47,7 @@ docker fetch-logs
 
 
 
+
 The correct option is B
 
 The docker logs command shows information logged by a running container. 

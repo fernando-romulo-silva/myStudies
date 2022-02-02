@@ -56,7 +56,7 @@ The correct option is A
 Service Constraints
 
 node.id	-> Node ID
-node.hostname -> Node hostname
+*node.hostname -> Node hostname
 node.role -> Node role (manager/worker)
 node.platform.os -> Node operating system	node.platform.os==windows
 node.platform.arch -> Node architecture	node.platform.arch==x86_64
