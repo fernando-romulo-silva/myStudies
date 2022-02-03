@@ -1,5 +1,6 @@
 You are running UCP service on a swarm with 3 managers and 2 workers. 
-You need to schedule a backup policy for your UCP service. How many nodes you need to fully back up this service?
+You need to schedule a backup policy for your UCP service. 
+How many nodes you need to fully back up this service?
 
 A)
 1
