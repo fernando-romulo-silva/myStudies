@@ -58,7 +58,7 @@ B is Correct
 
 To use a registry that is not configured with TLS certificates 
 
-$ docker -d --insecure-registry registry:8443
+$ docker --detach --insecure-registry registry:8443
 
 or 
 
