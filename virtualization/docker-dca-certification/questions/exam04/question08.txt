@@ -9,8 +9,7 @@ Docker CLI bundles and Docker web Ui bundles.
 C)
 Docker UCP Client bundles and DTR client bundles.
 
-​
-D)
+​D)
 Ops client bundels and dev client bundles.
 
 

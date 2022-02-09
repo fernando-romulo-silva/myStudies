@@ -50,42 +50,67 @@ $ docker system prune
 
 B is Correct
 
-$ docker system prune is used for is used removing all the stock containers. 
+The 'docker system prune' is used for is used removing all the stock containers. 
 
-$ docker login is used for promoting user name or password inserting those and finally, you are logged in. 
+The 'docker login' is used for promoting user name or password inserting those and finally, you are logged in. 
 
-$ docker info is used for getting the data information about the docker that is installed in your system
+For checking the docker client and docker server version the command used is 'docker version'. 
  
-for checking the docker slide and docker server version the command used is $ docker version. 
+The 'docker info' is used for getting the DATA INFORMATION about the docker that is installed in your system
 
-$ docker version
+$docker info
 Client:
- Version:           20.10.7
- API version:       1.41
- Go version:        go1.13.8
- Git commit:        20.10.7-0ubuntu5~20.04.2
- Built:             Mon Nov  1 00:34:17 2021
- OS/Arch:           linux/amd64
- Context:           default
- Experimental:      true
+ Context:    default
+ Debug Mode: false
 
 Server:
- Engine:
-  Version:          20.10.7
-  API version:      1.41 (minimum version 1.12)
-  Go version:       go1.13.8
-  Git commit:       20.10.7-0ubuntu5~20.04.2
-  Built:            Fri Oct 22 00:45:53 2021
-  OS/Arch:          linux/amd64
-  Experimental:     false
- containerd:
-  Version:          1.5.5-0ubuntu3~20.04.1
-  GitCommit:        
- runc:
-  Version:          1.0.1-0ubuntu2~20.04.1
-  GitCommit:        
- docker-init:
-  Version:          0.19.0
-  GitCommit:        
+ Containers: 8
+  Running: 0
+  Paused: 0
+  Stopped: 8
+ Images: 384
+ Server Version: 20.10.7
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 1
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 io.containerd.runtime.v1.linux runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 
+ runc version: 
+ init version: 
+ Security Options:
+  apparmor
+  seccomp
+   Profile: default
+ Kernel Version: 5.4.0-99-generic
+ Operating System: Ubuntu 20.04.3 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 24
+ Total Memory: 62.82GiB
+ Name: pc02
+ ID: TWEW:67BH:XQTU:YS4Z:7AN4:RUS3:WLSI:ZAA3:SGEJ:NO26:ZX3W:4GSN
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Username: fernandoromulosilva
+ Registry: https://index.docker.io/v1/
+ Labels:
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+WARNING: No swap limit support
 
 
