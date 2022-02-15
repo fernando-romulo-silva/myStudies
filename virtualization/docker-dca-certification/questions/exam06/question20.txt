@@ -51,6 +51,6 @@ d) Docker registry TLS verification and encryption
 Answer 'a'
 
 Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
-These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
+These signatures allow client-side or runtime verification of the integrity and publisher of specific IMAGE TAGS.
 
 
