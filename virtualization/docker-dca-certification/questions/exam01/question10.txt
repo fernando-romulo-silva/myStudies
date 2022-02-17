@@ -1,5 +1,6 @@
 Paul have some containerized software that needs to have a reference to the hostname of the node that the software is running on. 
-Which of the following commands Paul will pass the node hostname as an environment variable into each task in a service?
+Which of the following commands Paul will pass the node hostname 
+as an environment variable into each task in a service?
 
 ​
 A)

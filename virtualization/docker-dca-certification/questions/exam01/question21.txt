@@ -51,7 +51,7 @@ Overlay networks are only created on the manager nodes.
 The correct option is A
 
 The overlay network driver creates a distributed network among multiple Docker daemon hosts.
-Overlay networks are first created on the manager nodes. 
+Overlay networks are FIRST created on the MANAGER NODES. 
 Then they are created on the worker nodes once a task is scheduled on the specific worker node.
 
 

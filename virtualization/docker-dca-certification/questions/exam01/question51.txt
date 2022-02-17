@@ -54,4 +54,6 @@ docker service create command works with the Swarm orchestrator.
 
 --replicas = Number of tasks
 
+$ docker service create --name redis --replicas=5 redis:3.0.6
+
  
