@@ -48,3 +48,9 @@ FALSE
 
 
 
+
+
+A is Correct
+
+Docker Universal Control Plane (UCP) is a containerized web application (UI-based) 
+that runs on Docker Enterprise Edition and makes it easier to deploy, configure, and monitor your applications at scale.

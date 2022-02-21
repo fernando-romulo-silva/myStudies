@@ -1,6 +1,6 @@
 Where do we specify that DevOps users can run a container using only images signed by the admin group from our Docker Enterprise registry?
 
-a) On Universal Control Plane's (UCP's) RBAC, we allow DevOps users to run their images.
+a) On Universal Control Plane's (UCP's) RBAC (Role-based access control), we allow DevOps users to run their images.
 
 b) On DTR's image repository, we add image pulling access to DevOps.
 

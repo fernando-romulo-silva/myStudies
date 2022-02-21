@@ -50,8 +50,9 @@ All of the above
 
 A is Correct
 
-all the other states except A, are included in the advantages of the docker container. 
+All the other states except A, are included in the advantages of the docker container. 
 
 But the first statement is incorrect because the docker container provides an easy set-up which is quite efficient initially. 
 
 Hence it is the correct answer.
+

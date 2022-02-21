@@ -18,7 +18,7 @@
 
 * Describing and demonstrating how to enable Docker Content Trust
 
-* Describing and demonstrating how to configure RBAC with UCP
+* Describing and demonstrating how to configure RBAC (Role-based access control) with UCP
 
 * Describing and demonstrating how to integrate UCP with LDAP/AD
 

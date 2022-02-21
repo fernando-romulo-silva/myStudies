@@ -50,7 +50,7 @@ Subject
 
 The correct answers are A, B and D
 
-RBAC is based on declarative permissions definitions and cluster API objects. 
+RBAC (Role-based access control) is based on declarative permissions definitions and cluster API objects. 
 The RBAC mechanism enables us to configure fine-grained and specific sets of permissions that define 
 how a given user, or group of users, can interact with any Kubernetes object in our cluster, 
 or in a specific namespace of our cluster.
