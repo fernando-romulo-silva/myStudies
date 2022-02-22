@@ -57,5 +57,6 @@ A replicated service, the scheduler places one task on each available that meets
 
 D is Correct
 
- If you don’t specify a mode, the service defaults to replicated
+If you don’t specify a mode, the service defaults to replicated
+
 For a replicated service, you specify the number of identical tasks you want to run. 
