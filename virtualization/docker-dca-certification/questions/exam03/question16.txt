@@ -60,3 +60,7 @@ D is Correct
 If you don’t specify a mode, the service defaults to replicated
 
 For a replicated service, you specify the number of identical tasks you want to run. 
+
+For replicated services, it is possible that all services run on the same node, or each node only runs one replica, 
+or that some nodes don’t run any replicas. 
+
