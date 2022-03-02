@@ -54,6 +54,7 @@ All the statements mentioned above, Docker image is used for creating a docker c
 
 The command used for creating a docker image is built command. 
 
-By using the build command a container is created which helps in starting when it begins, the docker images are stored in the registry of docker are true about docker image.
+By using the build command a container is created which helps in starting when it begins, 
+the docker images are stored in the registry of docker are true about docker image.
 
-Hence the correct option is D.
+Hence the correct option is D
