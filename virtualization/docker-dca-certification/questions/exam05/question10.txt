@@ -48,7 +48,7 @@ d) The ADD directive can transfer files over to a specific location inside the i
 
 
 
-Answers 'c' and 'd'
+Answers 'B' and 'C'
 
 COPY takes in a src and destination. 
 It only lets you copy in a local file or directory from your HOST (the machine building the Docker image) into the Docker image itself.

@@ -59,5 +59,8 @@ The following example runs nginx as a service on each node in your swarm and exp
 
 $ docker service create -p mode=host,published=8082,target=80 nginx
 ​
+or
+
+$ docker service create --name registry --publish published=5000,target=5000 registry:2
 
 

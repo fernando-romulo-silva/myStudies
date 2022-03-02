@@ -51,7 +51,7 @@ ADD support remote URL handling while COPY does not.
 
 
 
-A e C are correct
+A e D are correct
 
 COPY takes in a src and destination. 
 It only lets you copy in a local file or directory from your host (the machine building the Docker image) into the Docker image itself.
