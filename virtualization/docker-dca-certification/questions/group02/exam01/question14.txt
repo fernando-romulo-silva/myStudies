@@ -1,0 +1,57 @@
+Which availability mode needs to be set on a node when you need to perform maintenance on a node?
+
+A)
+OFFLINE
+
+B)
+MAINTENANCE
+
+C)
+DRAIN
+
+D)
+EVACUATE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Sometimes, such as planned maintenance times, you need to set a node to DRAIN availability.
+
+DRAIN availability prevents a node from receiving new tasks from the swarm manager.
+
+It also means the manager stops tasks running on the node and launches replica tasks on a node with ACTIVE availability.

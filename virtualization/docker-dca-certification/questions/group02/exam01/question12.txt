@@ -1,0 +1,65 @@
+Which of the following commands will ensure that a container uses a maximum of 1 GB of active memory?
+
+A)
+docker run --memory-swap 2G --memory-reservation 1G
+
+B)
+docker run --memory-reservation 1G nginx
+
+C)
+docker run --memory-swap 1G nginx
+
+D)
+docker run --memory 1G nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+To set the maximum amount of memory the container can use one of the following flags
+-m or –memory= or –memory
+
+Possible values can take a positive integer, followed by a suffix of b, k, m, g to indicate bytes, kilobytes, megabytes, or gigabytes.
+
+
+
+
+
+
+
+
+ 

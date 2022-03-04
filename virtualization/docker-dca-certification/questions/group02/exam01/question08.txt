@@ -1,0 +1,61 @@
+You want to take a node down for maintenance. 
+Which command will drain a node that has tasks assigned to it?
+
+A)
+docker task update drain
+
+B)
+docker node update --availability maintenance
+
+C)
+docker node update --availability drain
+
+D)
+docker service update --availability drain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+You can change node availability.
+For example, to change a manager node to Drain availability use:
+
+$ docker node update –availability drain node-1
+
+
+This is useful when you want to:
+· drain a manager node so that only performs swarm management tasks and is unavailable for task assignment.
+· drain a node so you can take it down for maintenance.

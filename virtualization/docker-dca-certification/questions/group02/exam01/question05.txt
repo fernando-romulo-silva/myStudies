@@ -1,0 +1,59 @@
+Bob has an application that consists of multiple different services that interact with one another. 
+What should he use to manage his services in a Docker Swarm?
+
+A)
+Bob should use a service with multiple tasks.
+
+B)
+Bob should use a task.
+
+C)
+Bob should use a stack.
+
+D)
+Bob should use docker-compose.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Swarm never creates individual containers. 
+Instead, all Swarm workloads are scheduled as services, which are scalable groups of containers. 
+Each of the services has a certain number of replicas or tasks.
+
+A stack is used to describe a collection of swarm services that are related, most probably because they are part of the same application.
+In that sense, we could also say that a stack describes an application that consists of one to many services that we want to run on the swarm.
+ 

@@ -1,0 +1,60 @@
+What kind of resource should you use when creating Pods that are expected to terminate, such as batch computations?
+
+A)
+Deployment
+
+B)
+Job
+
+C)
+DaemonSet
+
+D)
+StatefulSet 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+There are different kinds of resources for creating Pods:
+
+· Use a Deployment, ReplicaSet or StatefulSet for Pods that are not expected to terminate, for example, web servers.
+
+· Use a Job for Pods that are expected to terminate once their work is complete; for example, batch computations. 
+  Jobs are appropriate only for Pods with restartPolicy equal to OnFailure or Never.
+  
+· Use a DaemonSet for Pods that need to run one per eligible node.

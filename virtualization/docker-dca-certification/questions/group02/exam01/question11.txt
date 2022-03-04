@@ -1,0 +1,62 @@
+Which of the following mechanisms can you use to place services evenly on appropriate nodes in a swarm cluster?
+
+A)
+Replicated Mode
+
+B)
+Placement Constraint
+
+C)
+Placement Preference
+
+D)
+Routing Mesh 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+While placement constraints limit the nodes a service can run on, placement preferences try to place tasks on appropriate 
+nodes in an algorithmic way (currently, only spread evenly). 
+
+For instance, if you assign each node a rack label, you can set a placement preference to spread the service evenly 
+across nodes with the rack label, by value. 
+
+This way, if you lose a rack, the service is still running on nodes on other racks.
+
+Placement preferences are not strictly enforced. 
+If no node has the label you specify in your preference, the service is deployed as though the preference was not set.

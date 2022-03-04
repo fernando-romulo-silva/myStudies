@@ -1,0 +1,67 @@
+Which of the following flags is used to publish containers port(s) on an existing service in the swarm?
+
+A)
+ -p
+ 
+B)
+--publish-add
+
+C)
+--publish
+
+D)
+--publish-all
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+You can change almost everything about an existing service using the docker service update command.
+When creating a service, use the -p or –publish flag.
+When updating an existing service, use the flag is –publish-add. There is also a –publish-rm flag to remove a port that was previously published. 
+
+$ docker service update \
+  --publish-add published=8080,target=80 \
+  myservice
+  
+$ docker service create \
+  --name my_web \
+  --replicas 3 \
+  --publish 8080:80 nginx  

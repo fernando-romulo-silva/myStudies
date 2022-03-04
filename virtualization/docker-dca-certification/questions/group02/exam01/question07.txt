@@ -1,0 +1,70 @@
+Which of the following are valid fields to instruct the kube-scheduler
+on how to place each incoming Pod across your cluster? (Select all that apply)
+
+A)
+topologyKey
+
+B)
+maxSkew
+
+C)
+whenUnsatisfiable
+
+D)
+global 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers A, B and C
+
+You can define one or multiple topologySpreadConstraint to instruct the kube-scheduler 
+on how to place each incoming Pod in relation to the existing Pods across your cluster. 
+The fields are:
+
+· "maxSkew" describes the degree to which Pods may be unevenly distributed. 
+  It’s the maximum permitted difference between the number of matching Pods in any two topology domains of a given topology type. 
+  It must be greater than zero.
+  
+· "topologyKey" is the key of node labels. 
+  If two Nodes are labelled with this key and have identical values for that label, the scheduler treats both Nodes as being in the same topology. 
+  The scheduler tries to place a balanced number of Pods into each topology domain.
+  
+· "whenUnsatisfiable" indicates how to deal with a Pod if it doesn’t satisfy the spread constraint: 
+  DoNotSchedule (default) tells the scheduler not to schedule it. 
+  ScheduleAnyway tells the scheduler to still schedule it while prioritizing nodes that minimize the skew.
+  
+· "labelSelector" is used to find matching Pods. 
+  Pods that match this label selector are counted to determine the number of Pods in their corresponding topology domain. 
