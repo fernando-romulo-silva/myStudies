@@ -1,0 +1,67 @@
+What is the recommended mechanism to deploy containerized applications in Kubernetes?
+
+A)
+Pods
+
+B)
+None of the answers.
+
+C)
+ReplicaSets
+
+D)
+Deployments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Don’t use naked Pods (that is, Pods not bound to a ReplicaSet or Deployment) if you can avoid it. 
+
+Naked Pods will not be rescheduled in the event of a node failure.
+
+A Deployment, which both creates a ReplicaSet to ensure that the desired number of Pods is always available
+and specifies a strategy to replace Pods (such as RollingUpdate), is almost always preferable to creating Pods directly, 
+except for some explicit restartPolicy: Never scenarios. 
+
+A Job may also be appropriate.
+
+A ReplicaSet ensures that a specified number of pod replicas are running at any given time. 
+However, a Deployment is a higher-level concept that manages ReplicaSets and provides declarative updates to Pods along with a lot of other useful features. 
+
+Therefore, we recommend using Deployments instead of directly using ReplicaSets, unless you require custom update orchestration or don’t require updates at all.
+This actually means that you may never need to manipulate ReplicaSet objects: use a Deployment instead, and define your application in the spec section.

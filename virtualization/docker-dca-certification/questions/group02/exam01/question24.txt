@@ -1,0 +1,54 @@
+What is the default format of the output of the docker inspect command?
+
+A)
+json
+
+B)
+xml
+
+C)
+html
+
+D)
+yaml 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Docker inspect provides detailed information on constructs controlled by Docker.
+By default, docker inspect will render results in a JSON array.

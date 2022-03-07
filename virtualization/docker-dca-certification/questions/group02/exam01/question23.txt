@@ -1,0 +1,93 @@
+Paul has some containerized software that needs to reference the hostname of the node that the software is running on.
+Which of the following commands can Paul use to pass the hostname, as an environment variable, into each task in a service?
+
+A)
+docker service create -e NODE_HOSTNAME nginx
+
+B)
+docker service create --env NODE_HOSTNAME="{?{.Node.Hostname}}" nginx
+
+C)
+docker service create --pass-node-hostname=true nginx
+
+D)
+docker service create --env NODE_HOSTNAME="{?{Hostname}}" nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+To set environment variables use -e or –env flags:
+For example, this sets an environment variable for all tasks in a service:
+
+$ docker service create \
+  –name redis_2 \
+  –replicas 5 \
+  –env MYVAR=foo \
+  redis:3.0.6
+  
+  
+
+Alternatively, you can use templates for some flags of service create, using the syntax provided by the Go’s text/template package.
+The supported flags are the following:
+
+–hostname
+–mount
+–env  
+
+
+Valid placeholders for the Go template are listed below:
+Placeholder                Description
+.Service.ID                  Service ID
+.Service.Name           Service name
+.Service.Labels          Service labels
+.Node.ID                     Node ID
+.Node.Hostname       Node Hostname
+.Task.ID                       Task ID
+.Task.Name                 Task name
+.Task.Slot                    Task slot
+
+
+For example, we are going to set the template of the created containers based on the service’s name, 
+the node’s ID, and the hostname where it sits:
+
+$ docker service create \
+    –name hosttempl \
+    –env=”{{.Node.ID}}”\
+    –hostname=”{{.Node.Hostname}}-{{.Service.Name}}”\
+    busybox top
+    
+    
