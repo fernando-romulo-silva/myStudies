@@ -1,0 +1,67 @@
+When there are seven managers in a swarm cluster, how would they be distributed across three datacenters or availability zones?
+
+A)
+3/2/2
+
+B)
+5/1/1
+
+C)
+4/2/1
+
+D)
+3/3/1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A 
+
+Distribute manager nodes
+In addition to maintaining an odd number of manager nodes, pay attention to datacenter topology when placing managers.
+
+For optimal fault-tolerance, distribute manager nodes across a minimum of 3 availability-zones 
+to support failures of an entire set of machines or common maintenance scenarios.
+
+If you suffer a failure in any of those zones, the swarm should maintain the quorum of manager 
+nodes available to process requests and rebalance workloads.
+
+
+Swarm manager nodes         Repartition (on 3 Availability zones)
+3                                              1-1-1
+5                                              2-2-1
+7                                              3-2-2
+9                                              3-3-3

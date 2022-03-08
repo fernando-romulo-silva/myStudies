@@ -1,0 +1,55 @@
+What kind of format is used for the output when the –pretty flag 
+is not specified for the docker service inspect command?
+
+A)
+json
+
+B)
+yaml
+
+C)
+txt
+
+D)
+xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+You can print the inspect output in a human-readable format instead of the default JSON output, by using the –pretty option:
+
+$ docker service inspect –pretty serviceName

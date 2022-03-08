@@ -1,0 +1,54 @@
+Which of the following commands can you use to list the tasks of one or more services in swarm?
+
+A)
+docker service ls
+
+B)
+docker ps
+
+C)
+docker services
+
+D)
+docker service ps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+To list the tasks that are running as part of the specified services use:
+docker service ps [OPTIONS] SERVICE [SERVICE…]

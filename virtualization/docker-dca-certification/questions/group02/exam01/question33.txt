@@ -1,0 +1,53 @@
+Which of the following is the correct order of steps taken when creating a service process in swarm mode?
+
+A)
+docker API > orchestrator > allocator > dispatcher > scheduler
+    
+B)    
+docker API > allocator > scheduler > dispatcher > orchestrator
+
+C)
+docker API > scheduler > allocator > dispatcher > orchestrator
+
+D)
+docker API > orchestrator > dispatcher > allocator > orchestrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Tasks and scheduling
