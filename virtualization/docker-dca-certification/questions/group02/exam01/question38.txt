@@ -1,0 +1,55 @@
+Which of the following commands can you use to view detailed metadata about a container? (select two)
+
+A)
+docker metadata
+
+B)
+docker query
+
+C)
+docker container inspect
+
+D)
+docker inspect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers C and D
+
+To display detailed information on one or more containers, use:
+
+$ docker container inspect [OPTIONS] CONTAINER [CONTAINER…]

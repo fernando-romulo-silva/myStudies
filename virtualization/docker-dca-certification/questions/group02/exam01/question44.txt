@@ -1,0 +1,65 @@
+Which of the following commands can you use to restart a docker container automatically, 
+if the container exits due to an error, which manifests as a non-zero exit code?
+
+A)
+docker run --restart no nginx
+
+B)
+docker run --restart failure-only nginx
+
+C)
+docker run --restart unless-stopped nginx
+
+D)
+docker run --restart on-failure nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+To configure the restart policy for a container, use the –restart flag when using the docker run command. 
+The value of the –restart flag can be any of the following:
+
+· no – Do not automatically restart the container. (the default)
+
+· on-failure – Restart the container if it exits due to an error, which manifests as a non-zero exit code.
+
+· always – Always restart the container if it stops. 
+  If it is manually stopped, it is restarted only when Docker daemon restarts or the container itself is manually restarted.
+  
+· unless-stopped – Similar to always, except that when the container is stopped (manually or otherwise), 
+  it is not restarted even after Docker daemon restarts.
+  

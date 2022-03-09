@@ -1,0 +1,53 @@
+What is the purpose of docker inspect command?
+
+A)
+To display system-wide information
+
+B)
+To return low-level information on Docker objects
+
+C)
+To manage Docker configs
+
+D)
+To inspect changes to files or directories on a container's filesystem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+docker inspect command returns low-level information on Docker objects.

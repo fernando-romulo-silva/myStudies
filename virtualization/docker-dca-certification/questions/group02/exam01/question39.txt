@@ -1,0 +1,62 @@
+
+When Docker is running in swarm mode, you can still run standalone containers 
+on any of the Docker hosts participating in the swarm.
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+When Docker is running in swarm mode, you can still run standalone containers on any of the Docker hosts participating in the swarm, as well as swarm services.
+
+A key difference between standalone containers and swarm services is that only swarm managers can manage a swarm, while standalone containers can be started on any daemon. 
+
+Docker daemons can participate in a swarm as managers, workers, or both.
+
+One of the key advantages of swarm services over standalone containers is that you can modify a service’s configuration, 
+including the networks and volumes it is connected to, without the need to manually restart the service. 
+
+Docker will update the configuration, stop the service tasks with the out of date configuration, and create new ones matching the desired configuration.

@@ -1,0 +1,71 @@
+Which docker command can you use to set up a swarm?
+
+A)
+docker swarm init
+
+B)
+docker init swarm
+
+D)
+docker swarm create
+
+C)
+docker create swarm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A 
+
+The command to initialize a swarm is:
+docker swarm init [OPTIONS]
+
+When you run the docker swarm init command to create a swarm, the Docker Engine starts running in swarm mode and it creates a single-node swarm on the current node.
+
+The Engine sets up the swarm as follows:
+· switches the current node into swarm mode.
+· creates a swarm named default.
+· designates the current node as a leader manager node for the swarm.
+· names the node with the machine hostname.
+· configures the manager to listen on an active network interface on port 2377.
+· sets the current node to Active availability, meaning it can receive tasks from the scheduler.
+· starts an internal distributed data store for Engines participating in the swarm to maintain a consistent view of the swarm and all services running on it.
+· by default, generates a self-signed root CA for the swarm.
+· by default, generates tokens for worker and manager nodes to join the swarm.
+· creates an overlay network named ingress for publishing service ports external to the swarm.
+· creates an overlay default IP addresses and subnet mask for your networks
+
+The output for docker swarm init provides the connection command to use when you join new worker nodes to the swarm

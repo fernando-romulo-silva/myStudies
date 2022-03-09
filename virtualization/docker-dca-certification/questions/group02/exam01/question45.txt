@@ -1,0 +1,60 @@
+
+Which of the following mechanisms can you use to configure services to run only on nodes with a specific metadata set?
+
+A)
+Control groups
+
+B)
+Placement Preference
+
+C)
+Placement Constraints
+
+D)
+Routing Mesh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+While placement constraints limit the nodes a service can run on, placement preferences try to 
+place tasks on appropriate nodes in an algorithmic way (currently, only spread evenly). 
+
+For instance, if you assign each node a rack label, you can set a placement preference 
+to spread the service evenly across nodes with the rack label, by value.
+
+Placement constraints let you configure the service to run only on nodes with specific (arbitrary) metadata set, 
+and cause the deployment to fail if appropriate nodes do not exist.

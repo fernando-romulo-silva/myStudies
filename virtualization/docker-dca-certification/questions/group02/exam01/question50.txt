@@ -1,0 +1,60 @@
+What service mode should you use to deploy a single task of a service to each and every node?
+
+A)
+Replicated
+
+B)
+Spread
+
+C)
+Global
+
+D)
+Distributed
+
+E)
+Universal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+REPLICATED OR GLOBAL SERVICES
+Swarm mode has two types of services: replicated and global.
+
+For replicated services, you specify the number of replica tasks 
+for the swarm manager to schedule onto available nodes.
+
+For global services, the scheduler places one task on each available 
+node that meets the service’s placement constraints and resource requirements.

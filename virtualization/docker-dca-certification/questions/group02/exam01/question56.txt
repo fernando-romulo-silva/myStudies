@@ -1,0 +1,80 @@
+When a container starts, it can be connected to multiple networks using –network. 
+True or false?
+
+A) 
+FALSE
+
+B)
+TRUE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Containers can join multiple networks that allow you to provide fine-grained network policy for connectivity and isolation.
+
+By default, a container will be created with one network attached. 
+If no network is specified then this will be the default docker0 network.
+
+After the container has been created more networks can be attached to a container using the docker network connect command.
+
+Docker only allows a single network to be specified with the docker run command (when a container starts). 
+To connect multiple networks docker network connect is used to connect additional networks.
+
+
+STEP 1:
+## Create Networks ##
+docker network create bluenet
+docker network create rednet`
+
+STEP 2a: (automatically running)
+## Create (1) Container in background called "c1" running busybox image ##
+docker run -itd --net bluenet --name c1 busybox sh
+
+STEP 2b: (created only to run later)
+## Create (1) Container (notice no run flag - it is only created) ##
+docker create -it --net bluenet --name c1 busybox sh
+
+STEP 3:
+## Attach remaining Network ##
+docker network connect rednet c1
+docker start c1
