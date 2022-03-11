@@ -1,0 +1,54 @@
+Which of the following version of "docker-compose.yml" files can you use with "docker stack" command?
+
+A)
+version 1 and above
+
+B)
+version 2 and above
+
+C)
+version 3 and above
+
+D)
+Any version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+docker compose version 3 and above files can be used directly with docker stack. 
+However porting version 2 files to version 3 is also not a big problem.

@@ -1,0 +1,20 @@
+Which of the following commands will show a list of volumes for a specific container?
+
+A)
+docker volume logs nginx --containers
+
+B)
+docker container inspect nginx
+
+C)
+docker container logs nginx --volumes
+
+D)
+docker volume inspect nginx
+
+
+Answer B
+
+To display detailed information on one or more containers including the list of volume use:
+
+$ docker container inspect [OPTIONS] CONTAINER [CONTAINER…]

@@ -1,0 +1,63 @@
+What is the limitation of docker service scale command in swarm mode?
+
+A)
+All answers are true.
+
+B)
+It can only scale one service at a time.
+
+C)
+It can only be applied on replicated services.
+
+D)
+It can only scale UP the service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The scale command enables you to scale one or more replicated services either up or down to the desired number of replicas.
+
+This command cannot be applied to services which are global services.
+
+$ docker service create –mode global –name backend backend:latest
+b4g08uwuairexjub6ome6usqh
+
+The following command tries to scale a global service to 10 tasks and returns an error. Ex:
+
+$ docker service scale backend=10
+backend: scale can only be used with replicated mode

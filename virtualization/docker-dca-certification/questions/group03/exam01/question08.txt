@@ -1,0 +1,68 @@
+Your company needs to run a custom monitoring application published in Docker Hub called "examplecorp/stats-collector". 
+You must ensure this would run in all swarm nodes, regardless how many nodes you currently have or if a new one would join the swarm eventually. 
+This monitoring system requires an environment variable called ENDPOINT_ADDRESS that sends the metrics to an external service hosted at 'service.example.com'. 
+Which of the following commands would accomplish these requirements?
+
+A)
+docker service create --name stats-collector --replicas=1 --entrypoint ADDRESS="service.example.com" examplecorp/stats-collector
+
+B)
+docker service create --name stats-collector --replicas=auto --entrypoint ADDRESS="service.example.com" examplecorp/stats-collector
+
+C)
+docker service create --name stats-collector --mode=global -e ENDPOINT_ADDRESS="service.example.com" examplecorp/stats-collector
+
+D)
+docker service create --name stats-collector --mode=replicated -e ENDPOINT_ADDRESS="service.example.com" examplecorp/stats-collector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The C is correct. 
+The service must run as 'global', because it will create one task in each swarm node, even if a new node joins the swarm. 
+The -e is the correct option to specify a custom environment variable to the container.
+
+A is incorrect because this would only bring one task (container) up in one random node in the swarm. 
+Another issue is that --entrypoint option would make the container to exec ADDRESS="service.example.com", 
+which would make the service creation fails in the end.
+
+B is incorrect because you cannot specify 'auto' as a number of replicas. 
+It must be a number always. Another issue is that --entrypoint option would make the container to exec ADDRESS="service.example.com", 
+which would make the service creation fails in the end.
+
+D is wrong. 
+Not only this is the default mode, but eventually will create just only one container in the entire swarm. 
+The questions asks that we need to run this in all nodes. 
+The -e is the correct option to specify a custom environment variable to the container.

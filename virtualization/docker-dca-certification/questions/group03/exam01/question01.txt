@@ -1,0 +1,70 @@
+You created a docker swarm cluster using “docker swarm init” command. 
+After creating the swarm cluster you got a command using which you could add a worker to your cluster. 
+But you  have lost that command and now you want to add new workers to your cluster. 
+How would you do that?
+
+A)
+docker swarm init-token worker
+
+B)
+docker swarm init-token manager
+
+C)
+docker swarm join-token manager
+
+D)
+docker swarm join-token worker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Option A is incorrect because there is no such subcommand “init-token”
+
+Option B is incorrect because there is no such subcommand “init-token”
+
+Option C is incorrect because we need join-token for worker
+
+Option D is correct because of
+
+1) Get the token
+ 
+$ docker swarm join-token worker
+
+
+2) Join the cluster 
+    
+$ docker swarm join \
+    --token SWMTKN-1-3pu6hszjas19xyp7ghgosyx9k8atbfcr8p2is99znpy26u2lkl-7p73s1dx5in4tatdymyhg9hu2 \
+    172.17.0.2:2377

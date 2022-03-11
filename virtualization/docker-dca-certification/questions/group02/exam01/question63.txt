@@ -1,0 +1,70 @@
+Which of the following commands can you use to exclude the manager node from running the tasks of a service?
+
+A)
+docker node stop manager
+
+B)
+docker node update --availability drain manager
+
+C)
+docker update node --availability drain manager
+
+D)
+docker node update drain manager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+To prevent the scheduler from placing tasks on a manager node in a multi-node swarm, 
+set the availability for the manager node to Drain.
+
+The scheduler gracefully stops tasks on nodes in Drain mode and schedules the tasks on an Active node. 
+
+The scheduler does not assign new tasks to nodes with Drain availability.
+
+You can change node availability.
+For example, to change a manager node to Drain availability use:
+
+$ docker node update –availability drain node-1
+
+This is useful when you want to:
+
+· drain a manager node so that only performs swarm management tasks and is unavailable for task assignment.
+
+· drain a node so you can take it down for maintenance.
+

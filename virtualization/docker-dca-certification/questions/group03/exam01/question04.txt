@@ -1,0 +1,67 @@
+Which of the following statements is NOT TRUE about replicated service in docker?
+
+A)
+A service running in a replicated mode may not run in all nodes.
+
+B)
+For replicated services, the scheduler places one task on each available node that meets 
+the service’s placement constraints and resource requirements.
+
+C)
+If you don’t specify a mode, the service defaults to replicated
+
+D)
+For replicated services you can specify number of replica tasks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Option B is correct because its a false statement. 
+This statement is true for global services not replicated services.
+
+For “global services”, the scheduler places one task on each available node that meets the service’s placement constraints and resource requirements. 
+For replicated services the scheduler can place multiple tasks on same host and it might not even place a single task on a node which meets the constraints, 
+it’s all up to the scheduler. Finally, you can have more nodes than the number of specified replicas for a service. 
+For example, let's supposed you have 5 nodes in your swarm. You decided to scale your service to run 3 replicas. 
+Because of that, not all nodes will run your task.
+
+Option A is incorrect because its a true statement
+
+Option C is incorrect because it is a true statement. 
+The default service mode is replicated.
+
+Option D is incorrect because its a true statement.

@@ -1,0 +1,61 @@
+Which of the following is NOT TRUE about running a stack of services?
+
+A)
+The docker-compose.yaml file can be used both on docker stack and docker-compose
+
+B)
+The docker-compose.yaml file must be version 3.0 or higher in order to use it in a stack
+
+C)
+Docker stack can run without docker swarm
+
+D)
+A stack would run across all nodes on a Swarm, while running on docker-compose would run in a single node, 
+even if it is a swarm node.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer: C
+
+Option C is wrong. A stack is a collection of services that runs on swarm.Option C is wrong. 
+A stack is a collection of services that runs on swarm.
+
+Option A is right. You use the same file for docker-compose and for docker stack.
+
+Option B is right. You must use API Version 3.0 or higher in order to use it in a swarm.
+
+Option D is right. Docker would raise a warning when you bring the service up using the docker-compose command in a swarm-enabled node. 
+However, the service will run only on that lone instance.

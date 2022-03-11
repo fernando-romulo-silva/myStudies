@@ -57,7 +57,7 @@ If no network is specified then this will be the default docker0 network.
 
 After the container has been created more networks can be attached to a container using the docker network connect command.
 
-Docker only allows a single network to be specified with the docker run command (when a container starts). 
+Docker only allows a single network to be specified with the docker RUN command (when a container starts). 
 To connect multiple networks docker network connect is used to connect additional networks.
 
 

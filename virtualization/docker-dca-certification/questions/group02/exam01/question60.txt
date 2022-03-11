@@ -1,0 +1,60 @@
+Which of the following is not a supported orchestrator in Docker EE?
+
+A)
+Swarmkit
+
+B)
+Minikube
+
+C)
+Kubernetes
+
+D)
+Docker Swarm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker Enterprise provides access to the full API sets of three popular orchestrators:
+
+· Kubernetes: full YAML object support
+· SwarmKit: Service-centric, Compose file version 3
+· “Classic” Swarm: Container-centric, Compose file version 2
+
+Docker Enterprise proxies the underlying API of each orchestrator, giving you access to all of the capabilities of each orchestrator, 
+along with the benefits of Docker Enterprise, like role-based access control and Docker Content Trust.
