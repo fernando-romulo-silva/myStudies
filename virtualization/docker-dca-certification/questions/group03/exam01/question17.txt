@@ -1,0 +1,57 @@
+Which of the following flags can be used with “docker build” command 
+so that it never uses cached layer during the build steps?
+
+A)
+-f
+
+B)
+--rm
+
+C)
+--no-cache
+
+D)
+--compress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+-f: Specifies a Dockerfile (it defaults to Dockerfile)
+--rm: Remove intermediate containers after a successful build
+--no-cache: Do not use cache when building the image
+--compress: Compress the build context using gzip

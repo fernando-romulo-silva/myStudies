@@ -1,0 +1,53 @@
+Given the following Dockerfile below:
+
+FROM alpine
+ENTRYPOINT  ["exec_entry", "p1_entry"]
+CMD ["exec_cmd", "p1_cmd"]
+
+What is the command that gets executed when someone runs this image built using this Dockerfile?
+
+A)
+exec_entry p1_entry exec_cmd p1_cmd
+
+B)
+/bin/sh -c "exec_entry p1_entry"
+
+C)
+exec_cmd p1_cmd
+
+D)
+/bin/sh -c "exec_entry p1_entry exec_cmd p1_cmd"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Please be aware that at this time both ENTRYPOINT and CMD are a list and because of that they act differently.

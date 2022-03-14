@@ -1,0 +1,55 @@
+Which of the following patterns would exclude all Python byte-code 
+files from being copied during the Docker image creation process?
+
+A)
+**.pyc
+
+B)
+**/*.pyc
+
+C)
+*.pyc
+
+D)
+/*.pyc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct answer is Option B
+
+Beyond Go’s filepath.Match rules, Docker also supports a special wildcard string ** that matches any number of directories (including zero). 
+
+For example, **/*.go will exclude all files that end with .go that are found in all directories, including the root of the build context.

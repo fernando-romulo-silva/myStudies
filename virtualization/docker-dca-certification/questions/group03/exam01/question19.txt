@@ -1,0 +1,56 @@
+You have the following values in your Dockerfile
+
+ENV abc=hello
+ENV abc=bye def=$abc
+ENV ghi=$abc
+
+What is the correct output of command “echo $abc $def $ghi” run inside the container?
+
+A)
+hello bye hello
+
+B)
+bye bye hello
+
+C)
+bye hello bye
+
+D)
+hello hello bye
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Environment variable substitution will use the same value for each variable throughout the entire instruction. 
+
+However, ghi will have a value of bye because it is not part of the same instruction that set abc to bye.
+

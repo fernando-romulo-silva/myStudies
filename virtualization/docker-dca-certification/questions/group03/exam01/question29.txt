@@ -1,0 +1,53 @@
+Bob wants to debug some issues happening with his docker daemon running on a linux system, 
+he made some changes to his docker daemon using daemon.json file, 
+now he wants docker to reload those changes but he can’t restart docker because he has something critical running on it, 
+which of the following might help him achieve that?
+
+A)
+sudo kill -9 $(pid of dockerd)
+
+B)
+sudo kill -1 $(pid of dockerd)
+
+C)
+sudo systemctl restart $(pid of dockerd)
+
+D)
+sudo kill -SIGHUP $(pidof dockerd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+sudo kill -SIGHUP $(pidof dockerd) makes the dockerd reload it’s configuration without killing the docker daemon.

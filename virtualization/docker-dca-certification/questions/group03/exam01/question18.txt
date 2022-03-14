@@ -1,0 +1,55 @@
+Which of the following is a valid flag to not use cache while doing a docker build?
+
+A)
+--no-cache
+
+B)
+--cache=false
+
+C)
+--no-cache=true
+
+D)
+You cannot disable caching with docker build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A and C
+
+--no-cache flag is used to specify docker for disabling caching.
+
+--no-cache and --no-cahe=true both are valid because if we specify --no-cache then "--no-cache=true" is implicit.

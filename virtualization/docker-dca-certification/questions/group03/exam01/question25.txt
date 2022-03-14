@@ -1,0 +1,53 @@
+You are in a directory containing a file named Dockerfile-app. 
+You want to build a docker image using this “Dockerfile-app” file without renaming it to “Dockerfile”. 
+Which of the following answers is correct?
+
+A)
+docker build -d Dockerfile-app
+
+B)
+docker build -f Dockerfile-app
+
+C)
+docker build --dockerfile Dockerfile-app
+
+D)
+docker build --from-file Dockerfile-app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker provides argument "-f" or "--file" to use Dockerfile to build the image.
