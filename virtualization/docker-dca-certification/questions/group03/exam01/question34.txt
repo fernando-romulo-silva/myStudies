@@ -1,0 +1,54 @@
+On Linux, Docker manipulates _______ rules to provide network isolation.
+
+A)
+iptables
+
+B)
+bpfilter
+
+C)
+nftables
+
+D)
+ufw
+
+E)
+conntrack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+On Linux, Docker manipulates iptables rules to provide network isolation. 
+This is an implementation detail, and you should not modify the rules Docker inserts into your iptables policies.

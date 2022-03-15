@@ -1,0 +1,61 @@
+Which of the following gives a web dashboard to manage docker cluster?
+
+A)
+Docker swarm mode
+
+B)
+Docker UCP
+
+C)
+Docker-compose
+
+D)
+DTR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker UCP is the a docker enterprise software which comes bundled with a web dashboard and cli for managing docker swarm effectively.
+UCP provides us with a single web based dashboard to manage/maintain docker cluster.
+
+docker swarm mode is used for creating docker cluster
+
+docker-compose is used for running/managing docker services in single docker host.
+
+Docker Trusted Registry (DTR) is the enterprise-grade image storage solution from Docker.
+

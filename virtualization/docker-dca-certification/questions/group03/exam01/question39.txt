@@ -1,0 +1,59 @@
+Which of the following commands can be used to see IPv4 subnet of a network
+
+A)
+docker network ls
+
+B)
+docker info network
+
+C)
+docker network info
+
+D)
+docker network inspect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+“docker network inspect” is a valid command to inspect a given network
+
+$ docker network inspect -f '{{json .Containers}}' c6b0cccfd892 | jq '.[] | .Name + ":" + .IPv4Address'
+
+“docker network ls” is a command to list all the available networks
+“docker info network” is not a valid command
+“docker network info” is not a valid command

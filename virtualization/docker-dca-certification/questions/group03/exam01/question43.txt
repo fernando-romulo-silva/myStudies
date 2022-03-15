@@ -1,0 +1,54 @@
+Which of the following is NOT true about a feature provided by namespace?
+
+A)
+processes running within a container cannot see processes running in another container
+
+B)
+processes running within a container cannot see processes running on host system
+
+C)
+Namespaces let different sets of processes see different set of resources
+
+D)
+It can help in limiting the memory used by a container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Namespaces give us feature to have resource isolation. 
+For limiting access to resources docker uses cgroups.

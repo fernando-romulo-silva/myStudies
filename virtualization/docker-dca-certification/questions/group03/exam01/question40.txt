@@ -1,0 +1,58 @@
+You created a docker swarm with default address pool as this: 10.0.0.0/16
+
+Now when you run the following command to create an overlay network - what IP subnet will be allocated to this overlay network?
+
+NOTE: X can be any value starting from 0 to 255
+
+COMMAND: docker network create -d overlay --attachable my-attachable-overlay
+
+A)
+10.0.X.0/24
+
+B)
+10.1.X.0/24
+
+C)
+10.2.X.0/24
+
+D)
+10.3.X.0/24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Docker allocates subnet addresses from the address ranges specified by the --default-addr-pool option. 
+
+For example, a command line option --default-addr-pool 10.10.0.0/16 indicates that Docker will allocate subnets from that /16 address range.
+ 
+If --default-addr-pool-mask-len were unspecified or set explicitly to 24, this would result in 256 /24 networks of the form 10.10.X.0/24.
+

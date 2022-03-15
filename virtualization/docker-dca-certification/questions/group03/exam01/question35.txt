@@ -1,0 +1,53 @@
+Network isolation by docker is provided by which one of the following linux kernel features?
+
+A)
+cgroups
+
+B)
+namespace
+
+C)
+ulimits
+
+D)
+file descriptors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker uses network namespaces + iptables (for routing and NATing) to isolate multiple networks on the same host.
