@@ -1,0 +1,64 @@
+Which of the following is NOT true?
+
+A)
+Volumes can be more safely shared among multiple containers
+
+B)
+Volume drivers let you store volumes on remote hosts or cloud providers, to encrypt the contents of volumes, or to add other functionality
+
+C)
+While bind mounts are dependent on the directory structure of the host machine, volumes are completely managed by Docker
+
+D)
+Bind mount can only be mounted inside container in read only mode so as to prevent file corruption
+
+E)
+Volumes are easier to back up or migrate than bind mounts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Option D is correct because it’s a false statement. 
+Bind mount can be mounted in both read only and read write mode.
+
+Option A is incorrect because its a true statement. 
+A volume can be shared by multiple containers
+
+Option B is incorrect because it’s a true statement. 
+There are multiple plugins to provide these features
+
+Option C is incorrect because it’s a true statement.
+
+Option E is incorrect because it’s a true statement.

@@ -1,0 +1,58 @@
+Which of the following is NOT TRUE regarding to Docker config and Docker secrets?
+
+A)
+Default location of configs inside of a container is / whereas the default location of secrets inside of a container is /run/secrets/
+
+B)
+Secrets and configs are encrypted during transit and at rest in a Docker swarm
+
+C)
+Secrets uses ramdisk to mount the volume and configs does not
+
+D)
+Both config and secret are encrypted in transit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+B is wrong. Secrets needs to be encrypted at rest because it contains sensitive data, while config must not contain sensitive data.
+
+C is right.
+
+D is right. Althought config is not considered a sentitive data, it is transmitted encrypted to the manager.
+

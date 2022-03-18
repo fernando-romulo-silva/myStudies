@@ -1,0 +1,57 @@
+What docker command can you use to remove a published port?
+
+A)
+docker service modify --publish-port-rm
+
+B)
+docker service update --rm-port
+
+C)
+docker service update --publish-rm
+
+D)
+docker service update --publish-port-rm 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+You can change almost everything about an existing service using the docker service update command.
+When creating a service, use the -p or –publish flag.
+When updating an existing service, use the flag is –publish-add. There is also a –publish-rm flag to remove a port that was previously published.
+Assuming that the my_web service exists, use the following command to remove the published port 80.
+$ docker service update –publish-rm 80 my_web

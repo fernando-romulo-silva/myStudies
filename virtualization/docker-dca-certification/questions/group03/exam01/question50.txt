@@ -1,0 +1,59 @@
+Bob wants to update the secret being used by one of his service.
+What is the correct sequence of actions to be performed by him?
+
+
+A)
+Update the existing secret using docker secret update
+
+B)
+Update the existing secret , restart all the services using this secret
+
+C)
+Create a new secret, update the service to use this new secret , delete the old secret
+
+D)
+Create a new secret, create a new service with this new secret, delete old secret and old service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Secrets are immutable in docker swarm. 
+This means they cannot be modified. 
+So if you want to make any modification to a secret then you have to create a new secret file.
+
+Having said that, the current sequence for updating a secret is - to first create a new secret (because we can’t update an existing one), 
+attach the new secret to the service by updating the service - (this would require the service to restart - docker swarm would take care of that) 
+and then delete the old secret.

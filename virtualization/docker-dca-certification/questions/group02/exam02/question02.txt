@@ -1,0 +1,68 @@
+Which of the following docker commands can you use to add or update a placement constraint?
+
+A)
+docker service update --placement-pref-add
+
+B)
+docker service update --placement-constraint-add
+
+C)
+docker service update --pref-add
+
+D)
+docker service update --constraint-add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Use placement constraints to control the nodes a service can be assigned to.
+In the following example, the service only runs on nodes with the label region set to east. 
+If no appropriately-labeled nodes are available, tasks will wait in Pending until they become available.
+
+$ docker service create \
+	--name my-nginx \
+	--replicas 5 \
+	--constraint node.labels.region==east \
+	nginx
+
+And
+
+$ docker service update \
+	--constraint-add node.labels.region==west \
+	my-nginx
+	

@@ -1,0 +1,56 @@
+Setting a node to DRAIN also removes standalone containers from that node, and thus freeing it up completely.
+
+A)
+True
+
+B)
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Setting a node to DRAIN does not remove standalone containers from that node, 
+such as those created with docker run, docker-compose up, or the Docker Engine API.
+
+A node’s status, including DRAIN, only affects the node’s ability to schedule swarm service workloads.

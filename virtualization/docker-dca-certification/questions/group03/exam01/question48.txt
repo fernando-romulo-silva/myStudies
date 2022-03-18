@@ -1,0 +1,53 @@
+You want to ensure that a container doesn’t exceed memory usage than a specified amount. 
+Which of the following will be used by default by docker to achieve that?
+
+A)
+namespaces
+
+B)
+selinux
+
+C)
+cgroups
+
+D)
+seccomp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Option A is incorrect because namespaces are used for resource isolation not resource limiting

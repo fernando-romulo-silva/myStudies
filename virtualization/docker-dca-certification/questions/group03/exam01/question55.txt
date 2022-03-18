@@ -1,0 +1,63 @@
+Which of the following lvm mode should a production host using the devicemapper as a storage driver use?
+
+A)
+loop-lvm
+
+B)
+overlay
+
+C)
+direct-lvm
+
+D)
+zfs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Option B and D are incorrect because they are not an lvm mode. 
+Overlay is a storage driver in docker whereas zfs is a filesystem.
+
+Option A is incorrect because loop-lvm is used for testing. 
+It allows files on local disk to be read form and written to as if they were an actual physical disk or block device.
+
+This means that the IO operations can be slow and resource intensive, it can also introduce race conditions.
+
+However, it can be used for rapid-testing and identifying basic setup issues with the devicemapper driver.
+
+Option C is correct since direct-lvm mode is meant to be used in production.

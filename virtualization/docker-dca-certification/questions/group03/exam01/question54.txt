@@ -1,0 +1,53 @@
+Which of the following is NOT true about tmpfs_mounts?
+
+A)
+tmpfs mount increase the container’s performance by avoiding writing into the container’s writable layer
+
+B)
+tmpfs mounts are available for both windows and linux
+
+C)
+As opposed to volumes and bind mounts, a tmpfs mount is temporary, and only persisted in the host memory
+
+D)
+When the container stops, the tmpfs mount is removed, and files written there won’t be persisted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Tmpfs mounts are only available for linux.

@@ -1,0 +1,54 @@
+Which of the following is NOT true about docker volumes?
+
+A)
+Volumes are easier to back up or migrate than bind mounts
+
+B)
+You can manage volumes using Docker CLI commands but not with Docker API
+
+C)
+Volumes work on both Linux and Windows containers
+
+D)
+New volumes can have their content pre-populated by a container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Option B is correct because it’s a false statement. 
+Volumes can be managed with both CLI and API

@@ -1,0 +1,59 @@
+The processes spawned by a container are run as what user by default?
+
+A)
+any non root user
+
+B)
+root
+
+C)
+guest-user
+
+D)
+user who executes docker run command
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+By default all processes executed inside docker container run as root user on the host. 
+
+But this root user has very limited privileges and hence is relatively safe.
+
+But to decrease security risks - it’s safer to  use --user flag to execute the process as a non root user.
+
+$ docker run --user=demo_user -ti custom_image bash

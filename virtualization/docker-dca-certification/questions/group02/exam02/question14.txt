@@ -1,0 +1,61 @@
+One of the nodes in your existing cluster is logging errors related to the storage subsystem and it needs to be taken offline. 
+Which command will allow you to gracefully remove the node when executed on the node itself?
+
+A)
+docker swarm leave --gracefully
+
+B)
+docker swarm unregister
+
+C)
+docker swarm leave
+
+D)
+docker swarm rm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To remove a node from the swarm use the following on the node itself:
+
+$ docker swarm leave [OPTIONS]
+
+When you run this command on a worker, that worker leaves the swarm.
+You can use the –force option on a manager to remove it from the swarm. 
+However, this does not reconfigure the swarm to ensure that there are enough managers to maintain a quorum in the swarm.
+
+The safe way to remove a manager from a swarm is to demote it to a worker and then direct it to leave the quorum without using –force.

@@ -1,0 +1,64 @@
+You have deployed a service to swarm. 
+Using the Docker CLI how can you set the number of tasks of this services to 5? 
+(Choose 2)
+
+A)
+docker replica update =5
+
+B)
+docker service scale = 5
+
+C)
+docker update service =5
+
+D)
+docker service update --replicas=5
+
+E)
+docker service replicas =5 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers B and C
+
+To scale one or multiple replicated services use:
+docker service scale SERVICE=REPLICAS [SERVICE=REPLICAS…]
+
+The following command scales the “web” service to 5 tasks:
+
+$ docker service scale web=5
+
+Alternatively, you can use:
+
+$ docker service update –replicas=5 web
+
+This example also updates the number of replicas for the service to 5.

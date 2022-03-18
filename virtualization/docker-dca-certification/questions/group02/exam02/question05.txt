@@ -1,0 +1,71 @@
+You need to host your organization’s event blog using WordPress and a MySQL database on a 25 swarm nodes cluster. 
+You need to make sure that only one task of MySQL database service is deployed on each active node in the swarm cluster. 
+Which of the following commands will achieve your goal?
+
+A)
+docker service create --name mySQL --global mysql
+
+B)
+docker service create --name mySQL --replicas=25 mysql
+
+C)
+docker service create --name mySQL --mode global mysql
+
+D)
+docker service create --name mySQL --config global mysql
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+You control the type of service using the –mode flag.
+If you don’t specify a mode, the service defaults to replicated.
+For replicated services, you specify the number of replica tasks you want to start using the –replicas flag. 
+For example, to start a replicated nginx service with 3 replica tasks:
+
+$ docker service create \
+	–name my_web \
+	–replicas 3 \
+	nginx
+
+To start a global service on each available node, pass –mode global to docker service create. 
+Every time a new node becomes available, the scheduler places a task for the global service on the new node. 
+For example to start a service that runs alpine on every node in the swarm:
+
+$ docker service create \
+	–name myservice \
+	–mode global \
+	alpine top
