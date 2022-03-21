@@ -1,0 +1,53 @@
+DCT stands for?
+
+A)
+Docker Content Transmission
+
+B)
+Docker Container Transmission
+
+C)
+Docker Certificate Trust
+
+D)
+Docker Content Trust
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  D
+
+Points regarding locking docker swarm

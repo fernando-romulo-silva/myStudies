@@ -1,0 +1,62 @@
+You are running a fleet of swarm nodes on AWS. 
+Your nodes are part of an Autoscaling group, 
+where instances are automatically created and/or destroyed.
+
+You have a 3rd party solution that collects metrics from your host and it will run in your swarm as a service. 
+You must ensure that this task is being run on every node and must not consume more than 512 Mb of RAM. 
+Which of the following commands below meet this criteria?
+
+A)
+docker service create --mode=global --name node-exporter --constraint 'node.max-memory==512M' prom/node-exporter:latest
+
+B)
+docker service create --mode=replicated --name node-exporter --constraint 'node.max-memory==512M' --replicas=1 prom/node-exporter:latest
+
+C)
+docker service create --mode=global --name node-exporter --limit-memory=512m prom/node-exporter:latest
+
+D)
+docker service create --mode=replicated --name node-exporter --limit-memory=512m --replicas=1 prom/node-exporter:latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  C
+
+--mode=global ensures that one task is placed on each node which meets the first condition.
+
+--limit-memory=512m ensures that your task has a memory restriction and it would kill the container if it goes above that. Eventually it will be recreated, since the mode was set as global.
+
+Using --mode=replicated with replicas=1 will result that your service will be created in one random node in your swarm.
+
+--constraint 'node.max-memory==512M' is considered a valid command. However, this will look 
+for a node that has a label called "max-memory==512m" and if you didn't set this flag, your service will be in a peding state.
+ 
+Therefore, this is not the correct command to limit the memory usage of a container.

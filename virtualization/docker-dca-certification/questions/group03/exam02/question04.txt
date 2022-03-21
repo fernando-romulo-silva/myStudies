@@ -1,0 +1,63 @@
+Bob is running a docker swarm cluster with multiple manager nodes. 
+Bob needs to remove one the manager nodes from the cluster permanently. 
+Bob has access to this manager node. What is the safest way for him to remove a manager node from the cluster?
+
+A)
+Simply shut down the server and let the Raft quorum decides to remove it permanently from the swarm
+
+B)
+Run "docker swarm leave" on the specific node
+
+C)
+Firstly demote the manager node to a worker and then remove it using "docker swarm leave"
+
+D)
+Stop the docker service on this specific manager node. 
+Wait until its status change to 'Unreachable' by checking the status on another manager node. 
+Once it disappears from the list of manager nodes, you can safely shut down this node.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+C is correct because this is the correct and safest way to remove a manager from a swarm.
+
+A is incorrect because the purpose of a raft quorum is to decide which manager node is a leader. 
+The manager will still show as 'active' in the swarm, but the manager status will be 'Unreachable'
+
+B is incorrect because only a worker node can leave a swarm with no restriction. 
+If a manager node tries to leave a swarm, the command will fail because it will state you are a manager. 
+Therefore you must demote this node to a worker so the swarm and them you can leave the swarm as a worker. 
+If the current manager is the leader, it will successfully auto-demote itself and the raft quorum will decide which manager node will be the new leader.  
+
+D is incorrect because the manager will still show as 'active' in the swarm, but the manager status will be 'Unreachable'.

@@ -1,0 +1,64 @@
+Which of the following options are available to run a single container?
+
+A)
+published port, user, log driver, restart policy
+
+B)
+published port, user, log driver, placement constraints
+
+C)
+published port, volume, secrets, log driver
+
+D)
+volume, secrets, log driver, memory limit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  A
+
+Option A is correct
+
+Option B is incorrect because we can't specify placement constraints while running a single container. 
+Placement constraints can be specified while running a service.
+
+Option C is incorrect because we can't specify secrets while running a single container
+
+Option D is incorrect because we can't specify secrets while running a container.
+
+Regarding to secrets, it is only available on the Docker Swarm and you cannot create a secret on a lone docker execution, 
+only if it part of a service.
+

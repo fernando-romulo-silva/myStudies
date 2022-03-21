@@ -1,0 +1,60 @@
+Which of the following options is NOT backed up when you backup UCP?
+
+A)
+Configurations
+
+B)
+Configs and Secrets
+
+C)
+Metrics from monitoring data
+
+D)
+Named volumes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Data not included in the backup
+
+* ucp-metrics-data: holds the metrics server’s data.
+
+* ucp-node-certs : holds certs used to lock down UCP system components
+
+* Routing mesh settings. Interlock L7 ingress configuration information is not captured in UCP backups. 
+  A manual backup and restore process is possible and should be performed.

@@ -1,0 +1,86 @@
+Which of the following is a good distribution of 7 managers across 3 availability zones?
+
+A)
+2 - 2 - 3
+
+B)
+3 - 1 - 3
+
+C)
+1 - 1 - 5
+
+D)
+1 - 2 - 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  A
+
+We have 7 manager nodes here, so to attain quorum (majority) number is 4. 
+Since we have to distribute these 7 manager nodes across 3 availability zones we have to consider network partition and distribute 
+the nodes in such a way that even in case if an availability zone is unreachable then also the manager nodes can attain a quorum.
+
+Let's assume we have 3 availability zones A-B-C, Unavailability of an availability zone means - that it is down due to some reason - 
+maintenance of network issues.
+
+Option D We distribute here as A-1 B-2 C-4, if C becomes unavailable then A-B cannot attain quorum at all. 
+So this is a bad distribution because in the worst case it cannot tolerate the loss of 1 availability zone too.
+
+Option C we distribute as A-1 B-1 C-5, if C becomes unavailable then A-B cannot attain quorum at all. 
+So this is a bad distribution because in the worst case it cannot tolerate the loss of 1 availability zone too.
+
+Option B We distribute as A-3 B-1 C-3, If C or A becomes unavailable then we have 4 nodes and can attain quorum with the fault tolerance of 0, 
+if B becomes unavailable then we have a quorum with the fault tolerance of 2
+
+Option A We distribute as A-2 B-2 C-3, If A or B becomes unavailable we have quorum and fault tolerance of 1. 
+If we C becomes unavailable then we have a quorum with the fault tolerance of 0.
+
+So we can see that in the worst case.
+
+    Option D can tolerate the loss of 0 zones
+    Option C can tolerate the loss of 0 zones
+    Option B can tolerate the loss of 1 zone
+    Option A can tolerate the loss of 1 zone
+
+If we have to pick between A and B,
+
+then In Option A if either A or B goes down we have a quorum with the fault tolerance of 1.
+
+In Option D if either A or C goes down we have a quorum with the fault tolerance of 0.
+
+So even though both Option B and A can tolerate the loss of 1 availability zone in worst case but Option A provides us better fault tolerance 
+in most cases and hence it's the best option here

@@ -1,0 +1,59 @@
+Which of the following is NOT backed up while backing up DTR?
+
+A)
+User, orgs, teams
+
+B)
+Configurations
+
+C)
+Repository metadata
+
+D)
+Certificate and keys
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  A
+
+Option A is correct because User, orgs and teams are not backed up with DTR backup
+
+Option B is incorrect because Configurations are backed up with DTR Backup
+
+Option C is incorrect because Repository metadata is backed up with DTR backup
+
+OPtion D is incorrect because Certificate and keys are backed up with DTR backup
