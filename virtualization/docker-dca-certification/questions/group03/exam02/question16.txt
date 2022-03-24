@@ -1,0 +1,55 @@
+Docker image consists of _____ layers each of which represents a Dockerfile instruction. 
+The layers are stacked and each one is a delta of the changes from the previous layer.
+
+A)
+read and write
+
+B)
+write only
+
+C)
+read only
+
+D)
+movable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Option C is correct because all the layers involved in making an image are read only
+
+Option D is incorrect because there is no such thing as “movable” layers

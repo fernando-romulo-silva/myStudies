@@ -1,0 +1,60 @@
+Which of the following commands will deploy nginx only on 
+worker nodes of the swarm so that it is accessible externally on port 8000
+
+NOTE: By external connectivity means the nginx can be accessed on http://WORKER_IP:8000
+
+A)
+docker service create -p 8000 --constraint node.role=worker nginx
+
+B)
+docker service create -p 8000 --placement-pref node.role=worker nginx
+
+C)
+docker service create -p 8000:80 --constraint node.role=worker nginx
+
+D)
+docker service create -p 8000:80 --placement-pref node.role=worker nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+External port 8000 has to be mapped to internal port 80 because nginx web server runs on port 80 inside the container. 
+Also --constraint flag will ensure that the services get deployed only on worker nodes.
+
+Option A is incorrect because “-p 8000” will expose port 8000 inside the container on a random port in the swarm. 
+Also even if we hit that external port we would not get any webpage back because we are exposing port 8000 and not port 80.
+
+Option B is incorrect because “--placement-pref” will give a preference for deploying the service on worker nodes but we don’t want preference here, 
+we want to ensure that it “must” be deployed only on worker nodes. Also “-p 8000” is incorrect

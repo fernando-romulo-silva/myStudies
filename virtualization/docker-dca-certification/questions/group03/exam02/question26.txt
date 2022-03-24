@@ -1,0 +1,63 @@
+You have a Docker host that is used to build images and tests them. 
+You create Docker images using the multi-stage build feature. 
+Because of that, there are a large number of dangling images in this host. 
+Which of the following commands you could run to only remove the dangling images?
+
+A)
+docker rmi --filter dangling=true
+
+B)
+docker prune --filter dangling=true
+
+C)
+docker system prune
+
+D)
+docker image prune --filter dangling=true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  D
+
+This command is used to clean all the dangling images:
+
+$ docker image prune --filter dangling=true
+
+
+Option A is incorrect because "--filter" flag is not avaiable on "rmi" sub-command.
+
+Option B is incorrect because  "prune" is not a valid sub-command
+
+Option C is incorrect because "docker system prune" not only removes the dangling images, as well as unused networks, 
+stopped containers, and build caches. The question asks to ONLY remove the dangling images and nothing else.

@@ -1,0 +1,63 @@
+Pick ALL storage drivers from the list below which operate at block level?
+
+overlay2, aufs, btrfs, zfs, devicemapper
+
+A)
+overlay, aufs, zfs
+
+B)
+aufs, btrfs, zfs
+
+C)
+devicemapper, btrfs, zfs
+
+D)
+aufs, btrfs, zfs, overlay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  C
+
+* overlay2, aufs, and overlay all operate at the file level rather than the block level. 
+  This uses memory more efficiently, but the container’s writable layer may grow quite large in write-heavy workloads.
+  
+* Block-level storage drivers such as devicemapper, btrfs, and zfs perform better for write-heavy workloads (though not as well as Docker volumes).
+    
+* For lots of small writes or containers with many layers or deep filesystems,overlay may perform better than overlay2, 
+  but consumes more inodes, which can lead to inode exhaustion.
+
+* btrfs and zfs require a lot of memory.
+
+* zfs is a good choice for high-density workloads such as PaaS.

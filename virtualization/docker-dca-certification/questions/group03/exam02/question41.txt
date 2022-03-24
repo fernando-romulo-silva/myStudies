@@ -1,0 +1,64 @@
+Which of the following networks are created by default after initialising a docker swarm? “docker swarm init”
+
+A)
+docker_gwbridge and ingress
+
+B)
+docker_bridge and overlay
+
+C)
+bridge and ingress
+
+D)
+only docker_gwbridge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  A
+
+B) There is no such auto created network as docker_bridge or overlay
+
+C) "bridge" is the default network created by docker-ce for communication between containers within the host. 
+    It is a private network which is created by default. 
+    There is no such network named “overlay” created by default
+        
+D) "bridge" is the default network created by docker-ce for communication between containers within the host. 
+   "Ingress" is the default overlay network created by docker swarm for communication between containers deployed across different docker hosts
+   
+By default docker creates docker_gwbridge and ingress network
+Docker uses docker_gwbridge network to help in provisioning overlay networks whereas it uses ingress networks for publishing/load balancing application ports.
+

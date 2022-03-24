@@ -1,0 +1,59 @@
+Which is the default location of a config file when using Docker config?
+
+A)
+/run/config/
+
+B)
+/var/run/
+
+C)
+/
+
+D)
+/config/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+When you grant a newly-created or running service access to a config, the config is mounted as a file in the container. 
+The location of the mount point within the container defaults to / in Linux containers. 
+
+In Windows containers, configs are all mounted into C:\ProgramData\Docker\configs and symbolic 
+links are created to the desired location, which defaults to C:\.
+
+Configs can be used only with docker swarm

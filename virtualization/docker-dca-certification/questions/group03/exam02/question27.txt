@@ -1,0 +1,60 @@
+Which one of the following is the preferred storage driver, for all currently supported Linux distributions?
+
+A)
+aufs
+
+B)
+overlay2
+
+C)
+btrfs
+
+D)
+devicemapper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  B
+
+Option B is correct. Overlay2 is the the default and preferred storage driver in most modern Linux operating systems.
+ 
+Option A is incorrect. Aufs is generally preferred storage driver in cases where overlay2 is not supported, e.g. in ubuntu 18.04
+
+Option C is incorrect. btrfs and zfs storage drivers are used if they are the backing filesystem (the filesystem of the host on which Docker is installed). 
+These filesystems allow for advanced options, such as creating “snapshots”, but require more maintenance and setup.
+
+Option D is incorrect. device-mapper is generally preferred when we want to take advantage of LVM.

@@ -1,0 +1,66 @@
+You have an image which has
+
+ENTRYPOINT [“/bin/bash”, “-c”,  “ping”]
+
+CMD [“localhost”]
+
+Image name is myimage. How would you run this image to ping google.com
+
+A)
+docker run -it myimage ping google.com
+
+B)
+docker run -it myimage google.com
+
+C)
+docker run -it myimage /bin/bash -c ping google.com
+
+D)
+None of these or All of these
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  B
+
+Entrypoint is /bin/bash -c ping , default CMD is localhost.
+
+So if we just run:
+
+$ docker run -it myimage
+
+It will execute : /bin/bash -c ping localhost
+
+
+We can override the default CMD by providing our own cmd after “myimage” :
+
+$ docker run -it myimage google.com
+
+It will execute: /bin/bash -c ping google.com

@@ -1,0 +1,53 @@
+Who is the owner of the docker.sock file created while running docker and what are the default permissions on it?
+
+A)
+root, 660
+
+B)
+root, 770
+
+C)
+admin, 660
+
+D)
+admin, 770
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  A
+
+The owner of docker.sock file is root and default permissions are 660 ( rw-rw----).

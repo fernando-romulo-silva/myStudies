@@ -1,0 +1,60 @@
+What are the constraints of running the "docker stack deploy" command?
+
+A)
+If you have multiple nodes in your swarm, this command must be run from a manager node
+
+B)
+If you have multiple nodes in your swarm, this command can be run from any node in the swarm
+
+C)
+This command cannot create networks and must be done separately
+
+D)
+This command is only available on the Docker Enterprise edition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  A
+
+Docker swarm allows managing docker stack from manager nodes only.
+
+If we try deploying a docker stack from non manager node we get the following error:
+
+$ docker stack deploy -c docker-compose.yml newapp
+
+This node is not a swarm manager. 
+Use "docker swarm init" or "docker swarm join" to connect this node to swarm and try again

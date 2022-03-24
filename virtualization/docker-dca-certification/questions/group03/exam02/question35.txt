@@ -1,0 +1,60 @@
+You are setting up a new Docker Swarm on AWS. You must ensure that the traffic between hosts are not 
+block either by the Security Group Rules nor by Network Access Control List. 
+Which of the following answers covers all ports that must be allowed between Docker hosts?
+
+A)
+TCP/2377 and UDP/2377
+
+B)
+TCP/7946 and UDP/2377
+
+C)
+TCP/2377, TCP/7946, and UDP/4789
+
+D)
+TCP/2377 and TCP/4789
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  C
+
+The following ports must be available. 
+On some systems, these ports are open by default.
+
+* TCP port 2377 for cluster management communications
+* TCP and UDP port 7946 for communication among nodes
+* UDP port 4789 for overlay network traffic
+
+

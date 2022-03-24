@@ -1,0 +1,65 @@
+Which of the following commands can be used to get the disk space used by a running container?
+
+A)
+docker ps -s
+
+B)
+docker ls -s
+
+C)
+docker image ls
+
+D)
+docker stats
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  A
+
+Option A is correct. "-s" flag is used for this purpose.
+
+$ docker ps -s
+CONTAINER ID   IMAGE                         COMMAND                  CREATED       STATUS              PORTS                                                           NAMES                       SIZE
+866ac42175df   image-converter-service-iso   "dumb-init java --en…"   13 days ago   Up About a minute   5000/tcp, 5090/tcp, 0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   image-converter-service-1   6.45MB (virtual 502MB)
+
+
+Option B is incorrect. "-s" flag is not valid in this scope.
+
+Option C is incorrect. This will return the size of the container image. 
+The question is about of a running container.
+
+Option D is incorrect. This does not show the disk usage by container.

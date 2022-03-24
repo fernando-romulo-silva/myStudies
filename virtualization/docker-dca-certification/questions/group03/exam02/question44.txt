@@ -1,0 +1,62 @@
+Bob wants to test an untrusted docker image which has a bug due to which it starts consuming memory 
+rapidly which causes other programs on the system to run out of memory and crash. 
+
+Bob wants to run the container and limit the max memory it can to be 512MB
+
+Which of the following can bob use while running a container to deal with this problem?
+
+A)
+docker run --limit 512m
+
+B)
+docker run --limit 512
+
+C)
+docker run -m 512m
+
+D)
+docker run -m 512
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  C
+
+To limit the maximum amount of memory usage for a container, add the --memory option to the docker run command. 
+Alternatively, you can use the shortcut -m.
+
+$ docker run -it --memory="1g" ubuntu
+
+Option A is incorrect because --limit is not a valid flag
+
+Option B is incorrect because --limit is not a valid flag
+
+Option D is incorrect because -m 512 only assigns 512 bytes but bob wants to assign 512MB

@@ -1,0 +1,54 @@
+What is the default location of secrets inside a Docker container?
+
+A)
+/run/secrets/
+
+B)
+/secrets/
+
+C)
+/var/run/
+
+D)
+/var/secrets/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The location of the mount point within the container defaults to /run/secrets/<secret_name> in Linux containers, 
+or C:\ProgramData\Docker\secrets in Windows containers, but you can also specify a custom location.

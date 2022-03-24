@@ -1,0 +1,76 @@
+How do you setup the default logging driver on Docker daemon to be the syslog driver?
+
+A)
+On /etc/docker/daemon.yaml
+or C:\ProgramData\docker\config\daemon.yaml
+
+just add:
+
+log-driver: "syslog"
+
+
+
+B)
+On /etc/docker/daemon.json
+or C:\ProgramData\docker\config\daemon.json
+
+just add:
+
+{
+  "log-driver": "syslog"
+}
+
+
+C)
+On /etc/docker/daemon.cfg
+or C:\ProgramData\docker\config\daemon.cfg
+ 
+just add:
+{
+  "log-driver": "syslog"
+}
+
+
+D)
+On /etc/docker/daemon.conf
+or C:\ProgramData\docker\config\daemon.conf
+
+just add:
+log-driver: "syslog"
+
+
+E)
+On /etc/docker/daemon.conf
+or C:\ProgramData\docker\config\daemon.conf 
+
+just add:
+log-driver: "syslog"
+
+
+F)
+On /etc/docker/daemon.conf
+or C:\ProgramData\docker\config\daemon.conf 
+
+just add:
+{
+  "log-driver": "syslog"
+}
+
+
+
+
+
+
+
+
+
+
+Answer  B
+
+To configure the Docker daemon to default to a specific logging driver, 
+set the value of log-driver to the name of the logging driver in the daemon.json configuration file:
+
+{
+  "log-driver": "syslog"
+}
+

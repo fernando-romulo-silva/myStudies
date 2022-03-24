@@ -1,0 +1,60 @@
+Which of the follow is true about MTLS?
+
+A)
+MTLS ensures that client can authenticate the identity of the server
+
+B)
+MTLS ensures that both client and server authenticate each other’s identities
+
+C)
+MTLS ensures that server can authenticate the identity of the client
+
+D)
+MTLS is used by Docker registry for safe transmission of images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  B
+
+MTLS stands for mutual TLS. 
+
+Normal TLS just ensures that the client can verify authenticity of the server but in MTLS both the 
+sender and receiver verify each other’s identities using the same model as TLS.
+ 
+MTLS is used in docker swarm to safely transmit data between nodes.
+
+Option D is incorrect, Docker registry uses simple TLS for transmission of images.

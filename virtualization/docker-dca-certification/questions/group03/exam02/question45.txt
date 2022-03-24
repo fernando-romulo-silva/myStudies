@@ -1,0 +1,66 @@
+Which of the following is NOT a good security practice?
+
+A)
+Pull image by hash in order to uniquely identify an image and to ensure it’s integrity
+
+B)
+Use a stripped down base image
+
+C)
+Execute the process as a user with limited privileges
+
+D)
+Use --privileged flag while running containers to ensure more security
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  D
+
+By using the  – – privileged flag you basically enable all kernel capabilities, 
+which enables a process running within a Docker container to bypass most of the controls such as kernel namespaces and cgroups limitations. 
+In other words, by adding this flag you give an attacker an easy path to break out of the container and to compromise the whole host.
+
+Option A is incorrect because it’s a true statement 
+Docker uses latest tag is default while pulling an image. 
+Pulling images by hash ensure that you are pulling the exact image that you intend do so in case of a security breach someone might 
+have uploaded a malformed latest tag but if you pull image by hash you will get the image you intend to.
+
+Option B is incorrect because it’s a true statement 
+Using a slim base image decreases the possible attack surface
+
+Option C is incorrect because it’s a true statement
+It’s a good process to execute process as user with limited privileges

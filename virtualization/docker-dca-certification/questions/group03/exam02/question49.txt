@@ -1,0 +1,56 @@
+A client bundle is a group of ______ downloadable directly from the Docker Universal Control Plane (UCP) user interface. 
+It allows you to authorize a remote Docker engine to a specific user account managed in Docker EE
+
+A)
+containers
+
+B)
+images
+
+C)
+binaries
+
+D)
+certificates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  D
+
+A client bundle is a group of certificates downloadable directly from the Docker Universal Control Plane (UCP) 
+user interface within the admin section for “My Profile”. 
+This allows you to authorize a remote Docker engine to a specific user account managed in Docker EE, absorbing all associated RBAC controls in the process. 
+You can now execute docker swarm commands from your remote machine that take effect on the remote cluster.
