@@ -1,0 +1,60 @@
+The higher the number of managers in a swarm cluster, the better performance, and scalability. 
+True or false?
+
+A) 
+True
+
+B)
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+There is no limit on the number of manager nodes.
+
+The decision about how many manager nodes to implement is a trade-off between performance and fault-tolerance.
+
+Adding manager nodes to a swarm makes the swarm more fault-tolerant. However, additional manager nodes 
+reduce write performance because more nodes must acknowledge proposals to update the swarm state. 
+
+This means more network round-trip traffic.

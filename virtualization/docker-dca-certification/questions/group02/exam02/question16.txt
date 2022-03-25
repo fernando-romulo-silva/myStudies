@@ -1,0 +1,58 @@
+You can apply restart policies using the –restart flag only to containers and not swarm services.
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Restart policies only apply to containers. 
+Restart policies for swarm services are configured differently using other flags related to service restart.
+
+Docker provides restart policies to control whether your containers start automatically when they exit, or when Docker restarts. 
+Restart policies ensure that linked containers are started in the correct order. 
+Docker recommends that you use restart policies, and avoid using process managers to start containers.
