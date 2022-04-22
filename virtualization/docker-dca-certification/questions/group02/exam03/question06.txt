@@ -1,0 +1,65 @@
+Describe what the following instruction does when added to a Dockerfile.
+HEALTCHECK CMD curl localhost:8080
+
+A)
+It adds a health status in addition to its normal status to detect cases such as a web server that is stuck in an infinite loop, 
+even though the server process is still running.
+
+B)
+Defines the health check endpoint on the local host interface for containers to monitor the health of the docker engine.
+
+C)
+It adds a status to detect if a containerized application is running.
+
+D)
+Defines the health check endpoint on the localhost interface for external monitoring tools to monitor the health of the docker engine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Every shell command returns a status code
+
+The HEALTHCHECK instruction tells Docker how to test a container to check that it is still working.
+
+The HEALTHCHECK instruction has two forms:
+
+· HEALTHCHECK [OPTIONS] CMD command (check container health by running a command inside the container)
+· HEALTHCHECK NONE (disable any healthcheck inherited from the base image)
+
+When a container has a healthcheck specified, it has a health status in addition to its normal status.
+
+The command after the CMD keyword can be either a shell command (e.g. HEALTHCHECK CMD /bin/check-running) 
+or an exec array (as with other Dockerfile commands; see e.g. ENTRYPOINT for details).

@@ -1,0 +1,60 @@
+How can you find untagged images?
+
+A)
+docker images --filter "tagged=false"
+
+B)
+docker images --format "tagged=false"
+
+C)
+docker images --filter "dangling=true"
+
+D)
+docker images --format "dangling=true" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To show untagged images, or dangling, use:
+
+$ docker images –filter “dangling=true”
+
+This will display untagged images that are the leaves of the images tree (not intermediary layers). 
+These images occur when a new build of an image takes the repo:tag away from the image ID, leaving it as : or untagged. 
+A warning will be issued if trying to remove an image when a container is presently using it. 
+By having this flag it allows for batch cleanup.

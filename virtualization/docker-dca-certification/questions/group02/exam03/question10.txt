@@ -1,0 +1,59 @@
+Which of the following directive can primarily be used for defining default arguments for an executing container?
+
+A)
+CMD
+
+B)
+LABEL
+
+C)
+ENTRYPOINT
+
+D)
+RUN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The main purpose of a CMD is to provide defaults for an executing container. 
+
+These defaults can include an executable, or they can omit the executable, in which case you must specify an ENTRYPOINT instruction as well.
+
+If CMD is used to provide default arguments for the ENTRYPOINT instruction, 
+both the CMD and ENTRYPOINT instructions should be specified with the JSON array format.
+ 

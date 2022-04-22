@@ -1,0 +1,61 @@
+How can you configure the Docker daemon to start as the system boots up? 
+(select two)
+
+A)
+Use crond for Ubuntu 14.10 and below
+
+B)
+Use upstart for Ubuntu 14.10 and below
+
+C)
+Use systemd for most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 16.04 and higher)
+
+D)
+Use startup for most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 16.04 and higher)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers B and C
+
+Most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 16.04 and higher) 
+use systemd to manage which services start when the system boots. 
+Ubuntu 14.10 and below use upstart.
+
+$ sudo systemctl enable docker
+
+To disable this behavior, use disable instead.
+
+$ sudo systemctl disable docker

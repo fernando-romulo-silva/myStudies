@@ -1,0 +1,50 @@
+What represents a build context that should be considered when building an image?
+
+A)
+The configuration of the daemon
+
+B)
+Dockerfile found in a specific path or URL
+
+C)
+All the files found in a specific path or URL
+
+D)
+All dependencies already installed on docker-machine
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The docker build command builds an image from a Dockerfile and a context.
+The build’s context is the set of files at a specified location PATH or URL. 
+The PATH is a directory on your local filesystem. 
+The URL is a Git repository location.
+
+A context is processed recursively. 
+So, a PATH includes any subdirectories and the URL includes the repository and its submodules.
+
+This example shows a build command that uses the current directory as context:
+
+$ docker build .
+Sending build context to Docker daemon  6.51 MB
+…
+
+You use the -f flag with docker build to point to a Dockerfile anywhere in your file system.
+
+$ docker build -f /path/to/a/Dockerfile .
+
+The build is run by the Docker daemon. 
+The first thing a build process does is send the entire context (recursively) to the daemon.
+
+In most cases, it’s best to start with an empty directory as context and keep your Dockerfile in that directory. 
+Add only the files needed for building the Dockerfile.

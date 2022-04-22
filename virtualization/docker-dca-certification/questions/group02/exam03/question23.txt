@@ -1,0 +1,56 @@
+Can you save a Docker image in multiple repositories after the build?
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+To tag the image into multiple repositories after the build, 
+add multiple -t parameters when you run the build command:
+
+$ docker build -t myrepo/myapp:1.0.2 -t myrepo/myapp:latest .

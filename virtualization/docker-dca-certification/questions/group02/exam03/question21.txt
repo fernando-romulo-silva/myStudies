@@ -1,0 +1,72 @@
+What is the purpose of the docker image prune command?
+
+A)
+Remove one or more images
+
+B)
+Show the history of an image
+
+C)
+Display detailed information on one or more images
+
+D)
+Remove unused images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Prune unused Docker objects
+
+Docker takes a conservative approach to cleaning up unused objects, 
+such as images, containers, volumes, and networks: these objects are generally not removed unless you explicitly ask Docker to do so.
+
+This can cause Docker to use extra disk space. For each type of object, Docker provides a prune command. 
+In addition, you can use docker system prune to clean up multiple types of objects at once.
+
+
+Prune images
+
+The docker image prune command allows you to clean up unused images. 
+By default, docker image prune only cleans up dangling images. 
+A dangling image is one that is not tagged and is not referenced by any container. 
+To remove dangling images:
+
+$ docker image prune
+
+To remove all images which are not used by existing containers, use the -a flag:
+$ docker image prune -a

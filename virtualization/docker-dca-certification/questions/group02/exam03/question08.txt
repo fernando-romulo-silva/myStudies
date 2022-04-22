@@ -1,0 +1,58 @@
+FROM keyword can only appear multiple times within the Dockerfile?
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+FROM can appear multiple times within a single Dockerfile to create multiple images or use one build stage as a dependency for another.
+Each FROM instruction clears any state created by previous instructions.
+
+You use multiple FROM statements in your Dockerfile for multi-stage builds. 
+Each FROM instruction can use a different base, and each of them begins a new stage of the build. 
+You can selectively copy artifacts from one stage to another, leaving behind everything you don’t want in the final image. 
