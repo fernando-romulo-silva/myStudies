@@ -1,0 +1,62 @@
+Which of the following components needs to be considered when making a backup for Docker EE? 
+(select all that apply)
+
+A)
+DTR
+
+B)
+UCP
+
+C)
+Swarm
+
+D)
+RBAC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers  A, B and D
+
+To back up Docker Enterprise, you must create individual backups for each of the following components:
+  1. Back up Docker Swarm. Back up Swarm resources like service and network definitions.
+  
+  2. Back up Universal Control Plane (UCP). Back up UCP configurations such as Access control, 
+     Certificates and keys, volumes = All UCP named volumes, which include all UCP component certs and data, Monitoring data gathered by UCP
+     
+  3. Back up Docker Trusted Registry (DTR). Back up DTR configurations, images, and metadata, Repository metadata, Access control to repos and images, Notary data, Scan results.
+  
+If you do not create backups for all components, you cannot restore your deployment to its previous state.
+Role-Based Access Control (RBAC) is part of UCP.

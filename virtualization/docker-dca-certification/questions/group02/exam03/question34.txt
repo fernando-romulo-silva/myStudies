@@ -1,0 +1,61 @@
+To decrease the time to pull images for geographically dispersed users you can configure which DTR option?
+
+A)
+DTR CDN
+
+B)
+DTR cache
+
+C)
+DTR Edge
+
+D)
+DTR Local Registry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Cache deployment strategy
+The main reason to use a DTR cache is so that users can pull images from a service that’s geographically closer to them.
+
+In this example, a company has developers spread across three locations: United States, Asia, and Europe. 
+
+Developers working in the US office can pull their images from DTR without problem, but developers in the Asia and Europe offices complain 
+that it takes them a long time to pulls images.
+
+To address that, you can deploy DTR caches in the Asia and Europe offices, so that developers working from there can pull images much faster.

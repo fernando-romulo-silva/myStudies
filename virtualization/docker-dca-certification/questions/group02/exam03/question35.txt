@@ -1,0 +1,59 @@
+Which of the following technologies make up container format? 
+(select three)
+
+A)
+Control Groups
+
+B)
+Docker Daemon
+
+C)
+UnionFS
+
+D)
+Namespaces
+
+E)
+Docker control plane 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers A, C and D
+
+Docker Engine combines the namespaces, control groups, and UnionFS into a wrapper called a container format. 
+
+The default container format is libcontainer.
+
+In the future, Docker may support other container formats by integrating with technologies such as BSD Jails or Solaris Zones.
