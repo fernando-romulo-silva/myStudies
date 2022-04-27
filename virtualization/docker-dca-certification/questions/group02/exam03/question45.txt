@@ -1,0 +1,58 @@
+Which of the following commands can you use to display system-wide Docker configuration on a host?
+
+A)
+docker status
+
+B)
+docker info
+
+C)
+docker inspect
+
+D)
+docker system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+To display system-wide information use:
+
+$ docker info [OPTIONS]
+
+This command displays system-wide information regarding the Docker installation. 
+Information displayed includes the kernel version, number of containers and images.

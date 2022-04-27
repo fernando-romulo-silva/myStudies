@@ -1,0 +1,55 @@
+Which docker command can you use to add a node to a swarm?
+
+A)
+docker join swarm
+
+B)
+docker swarm add-node
+
+C)
+docker swarm join
+
+D)
+docker swarm create-node 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To join a node to a swarm use the following command:
+
+$ docker swarm join [OPTIONS] HOST:PORT

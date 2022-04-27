@@ -1,0 +1,55 @@
+Which modes does Docker provide for delivering messages from the container to the log driver? 
+(select two)
+
+A)
+syncrhonous
+
+B)
+non-blocking
+
+C)
+blocking
+
+D)
+asynchronous
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers B and C
+
+Docker provides two modes for delivering messages from the container to the log driver:
+· (default) direct, blocking delivery from container to driver
+· non-blocking delivery that stores log messages in an intermediate per-container ring buffer for consumption by driver

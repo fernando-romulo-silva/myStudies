@@ -1,0 +1,69 @@
+Which of the following products are included with a Docker EE software subscription? 
+(select three)
+
+A)
+Docker Universal Control Plane
+
+B)
+Docker Swarm
+
+C)
+Docker Trusted Registry
+
+D)
+Docker Hub
+
+E)
+Docker Engine with enterprise-grade support
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers A, C and E
+
+Docker Enterprise has three major components, which together enable a full software supply chain, 
+from image creation, to secure image storage, to secure image deployment.
+
+* Docker Engine – Enterprise: 
+The commercially supported Docker engine for creating images and running them in Docker containers.
+
+* Docker Trusted Registry (DTR): 
+The production-grade image storage solution from Docker.
+DTR is designed to scale horizontally as your usage increases. 
+You can add more replicas to make DTR scale to your demand and for high availability.
+All DTR replicas run the same set of services, and changes to their configuration are propagated automatically to other replicas.
+
+* Universal Control Plane (UCP): 
+Deploys applications from images, by managing orchestrators, like Kubernetes and Swarm.
+UCP is designed for high availability (HA). You can join multiple UCP manager nodes to the cluster, 
+and if one manager node fails, another takes its place automatically without impact to the cluster.
+Changes to the configuration of one UCP manager node are propagated automatically to other nodes.
