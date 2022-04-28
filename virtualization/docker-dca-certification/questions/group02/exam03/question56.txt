@@ -1,0 +1,58 @@
+Which of the following features is supported by control groups?
+
+A)
+Isolate processes in a container
+
+B)
+Manage certificates
+
+C)
+Limit CPU usage within a container
+
+D)
+Collect logs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Control groups
+
+Docker Engine on Linux also relies on another technology called control groups (cgroups).
+A cgroup limits an application to a specific set of resources. 
+Control groups allow Docker Engine to share available hardware resources to containers and optionally enforce limits and constraints.
+For example, you can limit the memory or CPU available to a specific container.

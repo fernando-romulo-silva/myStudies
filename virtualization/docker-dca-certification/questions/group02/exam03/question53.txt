@@ -1,0 +1,59 @@
+What is used by the kernel to provide isolation for resources when running Docker containers?
+
+A)
+Volumes
+
+B)
+Overlay networks
+
+C)
+Control groups
+
+D)
+Namespaces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Linux namespaces provide isolation for running processes, 
+limiting their access to system resources without the running process being aware of the limitations.
+
+Docker uses a this technology to provide the isolated workspace called the container. 
+When you run a container, Docker creates a set of namespaces for that container.
+These namespaces provide a layer of isolation. 
+Each aspect of a container runs in a separate namespace and its access is limited to that namespace.

@@ -1,0 +1,65 @@
+Which command can you use to start a docker daemon manually?
+
+A)
+sudo docker daemon start
+
+B)
+dockerd
+
+C)
+docker start --daemon
+
+D)
+docker daemon start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+If you don’t want to use a system utility to manage the Docker daemon, or just want to test things out, 
+you can manually run it using the dockerd command. 
+
+You may need to use sudo, depending on your operating system configuration.
+When you start Docker this way, it runs in the foreground and sends its logs directly to your terminal.
+
+$ dockerd
+
+INFO[0000] +job init_networkdriver()
+INFO[0000] +job serveapi(unix:///var/run/docker.sock)
+INFO[0000] Listening for HTTP on unix (/var/run/docker.sock)
+
+To stop Docker when you have started it manually, issue a Ctrl+C in your terminal. 

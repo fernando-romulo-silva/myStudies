@@ -1,0 +1,84 @@
+A user is having problems running Docker. 
+How can you start Docker in debug mode?
+
+A)
+Set the debug key to true in the 'daemon.json' file.
+
+B)
+Start the 'dockerd' process manually with the '--raw-logs' flag set to debug
+
+C)
+Start the 'dockerd' process manually with the '--logging' flag set to debug
+
+D)
+Set the logging key to debug in the 'daemon.json' file. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+There are two ways to enable debugging. 
+The recommended approach is to set the debug key to true in the daemon.json file. 
+This method works for every Docker platform.
+
+Find the daemon.json file, which is usually located in /etc/docker/. 
+You may need to create this file, if it does not yet exist.
+
+If the file is empty, add the following:
+{
+  “debug”: true
+}
+
+After the daemon.json file is modified, you should send a HUP signal to the daemon to cause it to reload its configuration. 
+On Linux hosts, use the following command.
+
+$ sudo kill -SIGHUP $(pidof dockerd)
+
+Instead of following this procedure, you can also stop the Docker daemon and restart it manually with the debug flag -D. 
+
+However, this may result in Docker restarting with a different environment than the one the hosts’ startup scripts create, 
+and this may make debugging more difficult.

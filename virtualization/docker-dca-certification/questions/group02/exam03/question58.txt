@@ -1,0 +1,55 @@
+Which of the following commands will set the Docker engine into debug mode?
+
+A)
+echo '{"debug": true}' > /var/lib/docker/daemon.json ; sudo kill -HUP
+
+B)
+echo '{"debug": true}' > /etc/docker/config.json ; sudo kill -HUP
+
+C)
+echo '{"debug": true}' > /var/lib/docker/config.json ; sudo kill -HUP
+
+D)
+echo '{"debug": true}' > /etc/docker/daemon.json ; sudo kill -HUP 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+To make the modifications and send the HUP signal in one-line use:
+
+$ echo ‘{“debug”: true}’ > /etc/docker/daemon.json ; sudo kill -HUP

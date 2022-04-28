@@ -1,0 +1,57 @@
+With which flag should you run docker swarm init, after restoring a swarm backup, 
+to ensure that the node does not attempt to connect to nodes that were part of the old swarm?
+
+A)
+-force-init
+
+B)
+--restore
+
+C)
+--force
+
+D)
+--force-new-cluster 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+–force-new-cluster
+
+This flag forces an existing node that was part of a quorum that was lost to restart as a single node Manager without losing its data.
+
+https://docs.docker.com/engine/reference/commandline/swarm_init/#–force-new-cluster

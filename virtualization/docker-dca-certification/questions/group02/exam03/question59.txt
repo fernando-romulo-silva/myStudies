@@ -1,0 +1,63 @@
+Single sign-on (SSO) with UCP can only be configured at installation time?
+
+A)
+FALSE
+
+B)
+TRUE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+To only authenticate once, you can configure DTR to have single sign-on (SSO) with UCP.
+Users are shared between UCP and DTR by default, but the applications have separate browser-based interfaces which require authentication.
+
+When installing DTR, pass –dtr-external-url to enable SSO.
+You can also enable single sign-on from the command line by reconfiguring your DTR.
+
+To do so, run the following:
+
+$ docker run –rm -it \
+  docker/dtr:2.7.6 reconfigure \
+  –dtr-external-url dtr.example.com \
