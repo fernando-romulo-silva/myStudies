@@ -1,0 +1,55 @@
+Which is the recommended approach to set the storage driver?
+
+A)
+Use --storage-driver flag when running dockerd
+
+B)
+Set the "storage-driver" option in the daemon.json file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+There are a number of ways to configure the daemon flags and environment variables for your Docker daemon. 
+The recommended way is to use the platform-independent daemon.json file, 
+which is located in /etc/docker/ on Linux by default. 
