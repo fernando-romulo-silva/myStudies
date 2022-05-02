@@ -1,0 +1,57 @@
+Which of the following docker command can you use to connect a running container to an existing user-defined bridge?
+
+A)
+docker network attach
+
+B)
+docker network connect
+
+C)
+docker connect network
+
+D)
+docker network join
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+To connect a running container to an existing user-defined bridge, use the docker network connect command.
+
+The following command connects an already-running my-nginx container to an already-existing my-net network:
+
+$ docker network connect my-net my-nginx 

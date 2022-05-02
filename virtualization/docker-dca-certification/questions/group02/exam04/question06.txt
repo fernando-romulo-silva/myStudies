@@ -1,0 +1,59 @@
+What is the endpoint that we can use to check the health of a single UCP manager node?
+
+A)
+https: :///_health
+
+B)
+https:///_ heartbeat
+
+C)
+https:///_ping
+
+D)
+https:///_status 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+You can use the https:///_ping endpoint to check the health of a single UCP manager node.
+
+When you access this endpoint, the UCP manager validates that all its internal components are working, 
+and returns one of the following HTTP error codes:
+
+· 200, if all components are healthy
+· 500, if one or more components are not healthy

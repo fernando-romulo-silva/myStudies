@@ -1,0 +1,56 @@
+Which command can you use to interactively monitor all container activity in the Docker engine?
+
+A)
+docker system events
+
+B)
+docker container logs
+
+C)
+docker container events
+
+D)
+docker system logs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Use docker system events to get real-time events from the server.
+These events differ per Docker object type such as containers, images, plugins, volumes and daemons.
+
+$ docker system events
