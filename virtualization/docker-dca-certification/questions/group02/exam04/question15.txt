@@ -1,0 +1,56 @@
+When running network in ‘host’ mode, what option of ‘docker run’ can you use to override the hostname of the container?
+
+A)
+ -n
+
+B)
+--hostname
+
+C)
+--name
+
+D)
+-host
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+With the network set to host a container will share the host’s network stack and all interfaces from the host will be available to the container.
+The container’s hostname will match the hostname on the host system.
+Even in host network mode a container has its own UTS namespace by default.
+As such –hostname and –domainname are allowed in host network mode and will only change the hostname and domain name inside the container.

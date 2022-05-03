@@ -1,0 +1,54 @@
+Docker containers connect by default to which of the following network drivers?
+
+A)
+host
+
+B)
+bridge
+
+C)
+docker_gwbridge
+
+D)
+overlay 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+If you do not specify a network using the –network flag, and you do specify a network driver, 
+your container is connected to the default bridge network by default.

@@ -1,0 +1,59 @@
+Which type of network driver is best when you are migrating from a VM setup or 
+need your containers to look like physical hosts on your network, each with a unique MAC address?
+
+A)
+Macvlan networks
+
+B)
+User-defined bridge networks
+
+C)
+Host networks
+
+D)
+Overlay networks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+macvlan: Macvlan networks allow you to assign a MAC address to a container, making it appear as a physical device on your network. 
+The Docker daemon routes traffic to containers by their MAC addresses. 
+
+Using the macvlan driver is sometimes the best choice when dealing with legacy applications that expect to be directly connected to the physical network, 
+rather than routed through the Docker host’s network stack. 
+
+See Macvlan networks: https://docs.docker.com/network/#network-drivers 

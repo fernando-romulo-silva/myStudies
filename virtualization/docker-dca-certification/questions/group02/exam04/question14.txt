@@ -1,0 +1,59 @@
+Which of the following statement is false about Virtual IP (VIP)?
+
+A)
+Traffic to the VIP is automatically sent to all healthy tasks of that service across the overlay network.
+
+B)
+When resolving the service's name, a VIP is returned.
+
+C)
+There are multiple VIP for a service, one for each task.
+
+D)
+When services are created in a Docker swarm cluster, 
+they are automatically assigned a VIP that is part of the service's network. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Internal Load Balancing
+
+When services are created in a Docker swarm cluster, they are automatically assigned a Virtual IP (VIP) that is part of the service’s network. 
+The VIP is returned when resolving the service’s name.
+Traffic to the VIP is automatically sent to all healthy tasks of that service across the overlay network. 
+This approach avoids any client-side load balancing because only a single IP is returned to the client. 
+Docker takes care of routing and equally distributes the traffic across the healthy service tasks.

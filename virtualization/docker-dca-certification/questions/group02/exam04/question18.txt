@@ -1,0 +1,59 @@
+Which is the docker command to display detailed information on one or more networks?
+
+A)
+docker network display
+
+B)
+docker network status
+
+C)
+docker inspect network
+
+D)
+docker network inspect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+To manage networks, you can use:
+
+$ docker network COMMAND
+
+To display detailed information on one or more networks you can use:
+
+$ docker network inspect [OPTIONS] NETWORK [NETWORK…] 
