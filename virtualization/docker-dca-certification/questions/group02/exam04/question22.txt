@@ -1,0 +1,72 @@
+Which of the following differences between user-defined bridge networks and the default bridge network is FALSE?
+
+A)
+Linked containers on the default bridge network share environment variables.
+
+B)
+User-defined bridges provide better isolation and interoperability between containerized applications.
+
+C)
+Containers can be attached and detached from the default bridge network on the fly.
+
+D)
+User-defined bridges provide automatic DNS resolution between containers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Bridge networks apply to containers running on the same Docker daemon host.
+
+When you start Docker, a default bridge network (also called bridge) 
+is created automatically, and newly-started containers connect to it unless otherwise specified.
+
+You can also create user-defined custom bridge networks.
+ 
+User-defined bridge networks are superior to the default bridge network for the following reasons:
+
+· User-defined bridges provide automatic DNS resolution between containers.
+
+· User-defined bridges provide better isolation.
+
+· Containers can be attached and detached from user-defined networks on the fly.
+
+· Each user-defined network creates a configurable bridge.
+
+· Linked containers on the default bridge network share environment variables.
+
+https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge

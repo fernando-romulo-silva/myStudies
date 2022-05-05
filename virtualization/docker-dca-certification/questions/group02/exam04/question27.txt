@@ -1,0 +1,78 @@
+Which of the following statements is false?
+
+A)
+Linked containers on the user-defined networks can share environment variables
+
+B)
+User-defined bridges provide better isolation and interoperability between containerized applications
+
+C)
+Containers can be attached and detached from user-defined networks on the fly
+
+D)
+Each user-defined network creates a configurable bridge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Linked containers on the default bridge network share environment variables.
+First, –link option, which is considered legacy.
+
+Originally, the only way to share environment variables between two containers was to link them using the –link flag. 
+This type of variable sharing is not possible with user-defined networks. However, there are superior ways to share environment variables. 
+
+A few ideas:
+
+* are file or directory mounting, use docker-compose, secrets and configmaps.
+
+* User-defined bridges provide better isolation.
+
+* All containers without a –network specified, are attached to the default bridge network. 
+  This can be a risk, as unrelated stacks/services/containers are then able to communicate.
+
+* Using a user-defined network provides a scoped network in which only containers attached to that network are able to communicate.
+
+* Containers can be attached and detached from user-defined networks on the fly.
+
+* Each user-defined network creates a configurable bridge
+
+* User-defined bridge networks are created and configured using docker network create. 
+  If different groups of applications have different network requirements, you can configure each user-defined bridge separately, as you create it.
+  
+https://docs.docker.com/network/bridge/

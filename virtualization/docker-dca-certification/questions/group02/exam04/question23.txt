@@ -1,0 +1,64 @@
+Which of the following network drivers uses VXLAN data plane to decouple docker network from the underlay physical network?
+
+A)
+host
+
+B)
+overlay
+
+C)
+bridge
+
+D)
+macvlan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Linux bridges only operate locally and cannot span across nodes.
+So, for multi-host networking we need another mechanism. 
+
+Linux VXLAN comes to the rescue.
+
+When a container sends a data packet, the bridge realizes that the target of the packet is not on this host.
+
+Now, each node participating in an overlay network gets a so-called VXLAN Tunnel Endpoint (VTEP) object, 
+which intercepts the packet (the packet at that moment is an OSI layer 2 data packet), wraps it with a header containing 
+the target IP address of the host that runs the target container (this makes it now an OSI layer 3 data packet), and sends it over the VXLAN tunnel.
+
+The VTEP on the other side of the tunnel unpacks the data packet and forwards it to the local bridge, which in turn forwards it to the target container.

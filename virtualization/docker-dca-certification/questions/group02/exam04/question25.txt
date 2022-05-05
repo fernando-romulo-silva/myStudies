@@ -1,0 +1,64 @@
+Which of the following network construct aim to provide isolation for a container?
+
+A)
+IPAM Driver
+
+B)
+Endpoint
+
+C)
+Routing mesh
+
+D)
+Sandbox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The sandbox perfectly isolates a container from the outside world. 
+No inbound network connection is allowed into the sandboxed container. 
+
+Yet, it is very unlikely that a container will be of any value in a system if absolutely no communication with it is possible. 
+To work around this, we have element number two, which is the endpoint.
+An endpoint is a controlled gateway from the outside world into the network’s sandbox that shields the container. 
+
+The endpoint connects the network sandbox, but not the container, to the third element of the model, which is the network. 
+Also, the Endpoint construct exists so the actual connection to the network can be abstracted away from the application. 
+This helps maintain portability so that a service can use different types of network drivers without being concerned with how it’s connected to that network.
+
+https://success.docker.com/article/networking#networkscope

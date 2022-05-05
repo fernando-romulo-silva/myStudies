@@ -1,0 +1,54 @@
+Which of the following networks is used as the default network for Kubernetes by Universal Control Plane?
+
+A)
+Weave net
+
+B)
+Calico
+
+C)
+Flannel
+
+D)
+Romana 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker Universal Control Plane (UCP) uses Calico as the default Kubernetes networking solution. 
+Calico is configured to create a Border Gateway Protocol (BGP) mesh between all nodes in the cluster.

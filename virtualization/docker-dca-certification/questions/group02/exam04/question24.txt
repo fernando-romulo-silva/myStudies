@@ -1,0 +1,76 @@
+When you publish a port of a service in swarm mode it is published on every node in the cluster by default? 
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+When you create a swarm service, you can publish that service’s ports to hosts outside the swarm in two ways:
+
+· You can rely on the routing mesh. When you publish a service port, the swarm makes the service accessible at the target port on every node, 
+  regardless of whether there is a task for the service running on that node or not. 
+  This is less complex and is the right choice for many types of services.
+
+· You can publish a service task’s port directly on the swarm node where that service is running. 
+  This feature is available in Docker 1.13 and higher. 
+  This bypasses the routing mesh and provides the maximum flexibility, including the ability for you to develop your own routing framework. 
+  However, you are responsible for keeping track of where each task is running and routing requests to the tasks, and load-balancing across the nodes.
+
+By default, services are using the routing mesh which makes the service accessible at the published port on every swarm node. 
+When a user or process connects to a service, any worker node running a service task may respond.
+To publish a service’s port directly on the node where it is running, use the mode=host option to the –publish flag.
+
+For example:
+
+$ docker service create \
+  –mode global \
+  –publish mode=host,target=80,published=8080 \
+  –name=nginx \
+  nginx:latest
+
+https://docs.docker.com/engine/swarm/services/#publish-ports
