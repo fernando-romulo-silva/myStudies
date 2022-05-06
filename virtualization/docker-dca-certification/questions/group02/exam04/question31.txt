@@ -1,0 +1,55 @@
+Which of the following is the default network for swarm services?
+
+A)
+host
+
+B)
+ingress
+
+C)
+none
+
+D)
+bridge 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0Answer B
+
+When you create a swarm service and do not connect it to a user-defined overlay network, 
+it connects to the ingress network by default.

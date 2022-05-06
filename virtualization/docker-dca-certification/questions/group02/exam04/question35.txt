@@ -1,0 +1,67 @@
+What network port is used on Docker host to allow overlay network traffic in swarm mode?
+
+A)
+UDP port 7946
+
+B)
+TCP port 443
+
+C)
+TCP port 2377
+
+D)
+UDP port 4789
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+When creating overlay networks, the are some prerequisites:
+
+· Setup the firewall rules
+  You need the following ports open to traffic to and from each Docker host participating on an overlay network:
+  TCP port 2377 for cluster management communications
+  TCP and UDP port 7946 for communication among nodes
+  UDP port 4789 for overlay network traffic
+
+· Before you can create an overlay network, you need to either initialize your Docker daemon as a swarm 
+  manager using docker swarm init or join it to an existing swarm using docker swarm join. 
+  Either of these creates the default ingress overlay network which is used by swarm services by default. 
+  You need to do this even if you never plan to use swarm services. 
+  Afterward, you can create additional user-defined overlay networks.
+  
+https://docs.docker.com/network/overlay/#operations-for-all-overlay-networks

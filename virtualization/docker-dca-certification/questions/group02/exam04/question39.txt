@@ -1,0 +1,54 @@
+Ingress network is a type of _____ network?
+
+A)
+bridge network
+
+B)
+macvlan network
+
+C)
+host network
+
+D)
+overlay network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Ingress is one of the types of overlay networks, which sits on top of (overlays) 
+the host-specific networks and handles control and data traffic related to swarm services.

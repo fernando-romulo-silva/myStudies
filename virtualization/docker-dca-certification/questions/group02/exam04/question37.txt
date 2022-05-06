@@ -1,0 +1,66 @@
+What is the scope of the overlay network driver in Docker?
+
+A)
+global
+
+B)
+swarm
+
+C)
+local
+
+D)
+service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker network drivers have a concept of scope. 
+The network scope is the domain of the driver which can be the local or swarm scope.
+
+* Local scope drivers provide connectivity and network services (such as DNS or IPAM) within the scope of the host.
+
+* Swarm scope drivers provide connectivity and network services across a swarm cluster. 
+  Swarm scope networks have the same network ID across the entire cluster while local scope networks have a unique network ID on each host.
+
+Link:  
+https://success.docker.com/article/networking#networkscope
+
+You can check this by running:
+
+$ docker network ls

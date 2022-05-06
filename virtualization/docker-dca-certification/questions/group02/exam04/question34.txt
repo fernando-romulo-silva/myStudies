@@ -1,0 +1,58 @@
+Which of the following is incorrect about overlay networks?
+
+A)
+Overlay networks are only created on the manager nodes.
+
+B)
+Overlay networks use VXLAN data plane to decouples the container network from the underlying physical network (the underlay).
+
+C)
+Service management traffic is encrypted by default, but application data traffic can be encrypted as well
+
+D)
+Docker transparently handles routing of each packet to and from the correct Docker daemon host and the correct destination container.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The overlay network driver creates a distributed network among multiple Docker daemon hosts.
+
+This network sits on top of (overlays) the host-specific networks, allowing containers connected to it (including swarm service containers) 
+to communicate securely when encryption is enabled.
+
+Docker transparently handles routing of each packet to and from the correct Docker daemon host and the correct destination container. 
