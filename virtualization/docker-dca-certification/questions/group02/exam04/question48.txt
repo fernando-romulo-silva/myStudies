@@ -1,0 +1,58 @@
+Which option is true about using the -P flag when creating a new container?
+
+A)
+Docker binds each exposed container port to a random port on all the host's interface.
+
+B)
+Docker gives extended privileges to the container.
+
+C)
+Docker binds each exposed container port to a random port on a specified host interface.
+
+D)
+Docker binds each exposed container port with the same port on the host.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+To publish all ports, use the -P flag. 
+
+For example, the following command starts a container (in detached mode) and the -P flag publishes 
+all exposed ports of the container to random ports on the host interfaces.
+
+$ docker run -d -P –name webserver nginx

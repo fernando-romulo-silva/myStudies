@@ -1,0 +1,60 @@
+Which of the following network drivers connects the network stack of the container directly to Docker Host?
+
+A)
+bridge
+
+B)
+overlay
+
+C)
+macvlan
+
+D)
+host
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+If you use the host network mode for a container, that container’s network stack is not isolated from the Docker host 
+(the container shares the host’s networking namespace), and the container does not get its own IP-address allocated.
+
+https://docs.docker.com/network/host/
+
+Host networks are best when the network stack should not be isolated from the Docker host, but you want other aspects of the container to be isolated.
+
+https://docs.docker.com/network/#network-driver-summary 

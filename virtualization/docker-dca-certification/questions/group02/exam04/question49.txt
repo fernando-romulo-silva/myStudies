@@ -1,0 +1,62 @@
+Which of the following commands can you use to create a bridge network?
+
+A)
+docker network deploy
+
+B)
+docker create network
+
+C)
+docker network create
+
+D)
+docker network add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To create a new network use:
+$ docker network create [OPTIONS] NETWORK
+
+For example:
+
+$ docker network create -d bridge my-bridge-network
+
+The DRIVER accepts bridge or overlay which are the built-in network drivers. 
+If you have installed a third party or your own custom network driver you can specify that DRIVER here also. 
+If you don’t specify the –driver option, the command automatically creates a bridge network for you.

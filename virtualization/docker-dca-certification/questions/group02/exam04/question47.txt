@@ -1,0 +1,55 @@
+Which option for exposing a service is best if your service is normally accessed via HTTP/HTTPS?
+
+A)
+NodePort
+
+B)
+LoadBalancer
+
+C)
+Ingress
+
+D)
+ClusterIP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+NodePort service type is well suited for application services that require direct TCP/UDP access, like RabbitMQ for example.
+If your service can be accessed using HTTP/HTTPs then Ingress is recommended.
+Ingress is a Kubernetes API object that manages external access to the services in a cluster, typically HTTP/HTTPS. 

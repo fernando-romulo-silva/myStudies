@@ -1,0 +1,23 @@
+Containers on user-defined bridge network can communicate only via IP addresses. 
+True or False?
+
+A)
+FALSE
+
+B)
+TRUE
+
+Answer A
+
+Using a user-defined network provides a scoped network in which only containers attached to that network are able to communicate.
+
+Furthermore, on user-defined networks, containers can not only communicate by IP address, 
+but can also resolve a container name to an IP address. 
+
+This capability is called automatic service discovery. 
+
+However, containers connected to the default bridge network can communicate, but only by IP address, 
+unless they are linked using the legacy –link flag.
+
+Obs. If you do not specify a network using the –network flag, and you do specify a network driver, 
+your container is connected to the default bridge network by default.
