@@ -1,0 +1,62 @@
+Which of the following are the two types of UCP client bundles?
+
+A)
+Ops client bundels and dev client bundles.
+
+B)
+Docker CLI bundles and Docker web UI bundles.
+
+C)
+Docker UCP Client bundles and DTR client bundles.
+
+D)
+Admin user certificate bundles and user certificate bundles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+A client bundle contains a private and public key pair that authorizes your requests in UCP. 
+In order to authenticate your requests, you can download client certificate bundle to your local computer.
+
+UCP issues different types of certificates depending on the user:
+
+· User certificate bundles: only allow running docker commands through a UCP manager node.
+
+· Admin user certificate bundles: allow running docker commands on the Docker Engine of any node.
+
+https://github.com/docker/docker.github.io 

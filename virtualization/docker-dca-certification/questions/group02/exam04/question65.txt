@@ -1,0 +1,56 @@
+In what form can UCP provide authorized client certificates?
+
+A)
+As a QR code
+
+B)
+As pop-up dialog box with a token
+
+C)
+As a token
+
+D)
+As a Client Bundle (zip file) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+To use the Docker CLI with UCP, download a client certificate bundle(zip) 
+by using the UCP web UI.
+
+https://github.com/docker/docker.github.io

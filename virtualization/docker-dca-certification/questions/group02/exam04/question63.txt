@@ -1,0 +1,68 @@
+Which of the following components can you use to create users and teams?
+
+A)
+Docker Trusted Registry
+
+B)
+Docker Machine
+
+C)
+Universal Control Plane
+
+D)
+Docker Compose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+UCP has role-based access control (RBAC), so that you can control who can access and make changes to your cluster and applications.
+
+Using the UI for Docker Enterprise of Docker Universal Control Plane (UCP), you authorize users to view, edit, 
+and use cluster resources by granting role-based permissions against resource sets.
+
+To authorize access to cluster resources across your organization, UCP administrators might take the following high-level steps:
+
+· Add and configure subjects (users, teams, and service accounts).
+
+· Define custom roles (or use defaults) by adding permitted operations per type of resource.
+
+· Group cluster resources into resource sets of Swarm collections or Kubernetes namespaces.
+
+· Create grants by combining subject + role + resource set.
+
+https://github.com/docker/docker.github.io

@@ -1,0 +1,60 @@
+What does the following error indicate?
+x509: certificate signed by unknown authority
+
+A)
+User is running a docker command on UCP node without client certificate.
+
+B)
+User is running a docker swarm command on manager without client certificate.
+
+C)
+User is not registered on docker hub.
+
+D)
+User have entered incorrect captcha. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+When you are running a docker command, Docker attempts to verify that the certificate in 
+use is signed by UCP’s certificate authority and that the domain name or IP used to connect to UCP 
+is listed as a subject alternative name (SAN) in the UCP certificate.
+
+If you see the following error “x509: certificate signed by unknown authority”, then Docker has not been provided with the ca certificate. 
+To resolve this issue, use a UCP client bundle to connect to UCP from the CLI.
+
+https://success.docker.com/article/docker-login-to-dtr-fails-with-x509-certificate-error

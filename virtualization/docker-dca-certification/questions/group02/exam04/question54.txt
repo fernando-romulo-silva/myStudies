@@ -1,0 +1,64 @@
+Which of the following statement is false about ingress networks?
+
+A)
+Default ingress overlay network is used by swarm services by default.
+
+B)
+It transports mesh routing traffic from external clients to cluster services.
+
+C)
+It is automatically created when you initialize a swarm or join a Docker host to an existing swarm
+
+D)
+You cannot connect standalone containers to ingress networks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The ingress network is created without the –attachable flag, which means that only swarm services can use it, and not standalone containers.
+You can connect standalone containers to user-defined overlay networks which are created with the –attachable flag.
+
+https://docs.docker.com/network/overlay/#attach-a-standalone-container-to-an-overlay-network
+
+The routing mesh allows all the swarm nodes to accept connections on the services published ports. 
+When any swarm node receives traffic destined to the published TCP/UDP port of a running service, 
+it forwards the traffic to the service’s VIP using a pre-defined overlay network called ingress. 
+
+The ingress network behaves similarly to other overlay networks, but its sole purpose is to transport mesh routing traffic 
+from external clients to cluster services. 
+It uses the same VIP-based internal load balancing as described in the previous section.

@@ -1,0 +1,66 @@
+What is the main difference between UCP workers and managers?
+
+A)
+Ucp-agent service automatically starts serving UCP components and proxy service only on maneger node.
+
+B)
+Ucp-agent service automatically starts serving UCP components and proxy service only on worker node.
+
+C)
+Ucp-agent service automatically starts serving all UCP components in manager node and only proxy service in worker node.
+
+D)
+Ucp-agent service automatically starts serving UCP components in worker node, and only a proxy service in manager node.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+When you deploy UCP, it starts running a globally scheduled service called ucp-agent. 
+
+This service monitors the node where it’s running and starts and stops UCP services, 
+based on whether the node is a manager or a worker node.
+
+If the node is a:
+
+· Manager: the ucp-agent service automatically starts serving all UCP components, including the UCP web UI and data stores used by UCP. 
+  The ucp-agent accomplishes this by deploying several containers on the node.
+  
+· Worker: on worker nodes, the ucp-agent service starts serving a proxy service that ensures only authorized users and other UCP services 
+  can run Docker commands in that node.
+
+https://docs.docker.com/ee/ucp/ucp-architecture/#ucp-internal-components 
