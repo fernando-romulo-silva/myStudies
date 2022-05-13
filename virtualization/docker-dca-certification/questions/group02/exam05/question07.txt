@@ -1,0 +1,64 @@
+A team of developers needs root access to a node. 
+What’s the proper way to handle the situation?
+
+A)
+Give root access only to users from an existing LDAP/AD infrastructure
+
+B)
+Give root access only for a short period of time
+
+C)
+Use RBAC Labels to give access to objects like images and running containers
+
+D)
+None of the answers is correct 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Limit Root Access to Node
+
+Docker Enterprise uses a completely separate authentication backend from the host, providing a clear separation of duties. 
+
+Docker Enterprise can leverage an existing LDAP/AD infrastructure for authentication. 
+
+It even utilizes RBAC Labels to control access to objects like images and running containers, 
+meaning teams of users can be given full access to running containers. 
+
+With this access, users can watch the logs and execute a shell inside the running container without needing to ever log into the host. 
+
+Limiting the number of users that have access to the host reduces the attack surface.

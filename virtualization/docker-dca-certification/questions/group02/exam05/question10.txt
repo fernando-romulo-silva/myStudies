@@ -1,0 +1,67 @@
+Which of the following commands can be used to reduce the surface of attack from a container?
+
+A)
+--cap-add=ALL
+ 
+B) 
+--cap-add
+
+C)
+None of the answers is correct.
+
+D)
+--cap-drop 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Linux capabilities are an even more granular way of reducing surface area. 
+
+Docker Engine has a default list of capabilities that are kept for newly-created containers, and by using the –cap-drop option for docker run, 
+users can exclude additional capabilities from being used by processes inside the container on a capability-by-capability basis. 
+
+All privileges can be dropped with the –user option.
+
+Likewise, capabilities that are, by default, not granted to new containers can be added with the –cap-add option. 
+
+This is discouraged unless absolutely necessary, and using –cap-add=ALL is highly discouraged.
+
+Limiting the capabilities of a container reduces the attack surface.
+
+https://success.docker.com/article/security-best-practices
+https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities

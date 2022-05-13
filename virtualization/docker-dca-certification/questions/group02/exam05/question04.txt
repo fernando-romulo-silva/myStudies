@@ -1,0 +1,64 @@
+You can have a hybrid composition of users backed by an LDAP/AD group plus users set-up manually. 
+True or False?
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Subjects are individual users or teams within an organization. 
+
+Teams are typically backed by an LDAP/AD group or search filter. 
+
+It is also possible to add users manually. 
+
+But it is not possible to have a hybrid composition of users. 
+
+In other words, the list of users within a team should be derived from a directory server 
+(e.g. AD) or should be added manually, not both.
+
+https://success.docker.com/article/docker-enterprise-best-practices

@@ -1,0 +1,54 @@
+Where can you configure the option to integrate Docker with LDAP?
+
+A)
+Docker Machine
+
+B)
+Docker Trusted Registry
+
+C)
+Universal Control Plane
+
+D)
+Docker Compose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Docker UCP integrates with LDAP directory services, so that you can manage users and groups from your organization’s 
+directory and it will automatically propagate that information to UCP and DTR.

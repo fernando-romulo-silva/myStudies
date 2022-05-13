@@ -1,0 +1,67 @@
+Which of the following could not represent a subject in the RBAC (Role-based access control) model?
+
+A)
+user
+
+B)
+root
+
+C)
+team
+
+D)
+organization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+A subject represents a user, team, or organization. 
+A subject is granted a role for a collection of resources. 
+These groups of users are the same across UCP and DTR making RBAC management across the entire software pipeline uniform.
+
+* User – A single user or system account that an authentication backend (AD/LDAP) has validated.
+
+* Team – A group of users that share a set of permissions defined in the team itself. 
+A team exists only as part of an organization, and all team members are members of the organization. 
+A team can exist in one organization only. 
+Assign users to one or more teams and one or more organizations.
+
+* Organization – The largest organizational unit in Docker Enterprise. 
+Organizations group together teams to provide broader scope to apply access policy against.
+
+https://success.docker.com/article/security-best-practices#dtrsecurity

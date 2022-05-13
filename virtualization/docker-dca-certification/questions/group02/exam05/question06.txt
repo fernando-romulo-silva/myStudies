@@ -1,0 +1,60 @@
+What Docker feature allows you to restrict the syscalls available to a given process?
+
+A)
+Seccomp
+
+B)
+Cgroups
+
+C)
+UnionFS
+
+D)
+mnt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Seccomp (short for Secure Computing Mode) is a security feature of the Linux kernel, used to restrict the syscalls available to a given process. 
+
+This facility has been in the kernel in various forms since 2.6.12 and has been available in Docker Engine since 1.10. 
+
+The current implementation in Docker Engine provides a default set of restricted syscalls and also allows syscalls to be filtered via either 
+a whitelist or a blacklist on a per-container basis (i.e. different filters can be applied to different containers running in the same Engine).
+ 
+Seccomp profiles are applied at container creation time and cannot be altered for running containers.
