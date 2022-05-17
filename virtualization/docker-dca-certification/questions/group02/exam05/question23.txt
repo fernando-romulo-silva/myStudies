@@ -1,0 +1,66 @@
+What happens if you create a Dockerfile and you don’t specify a USER directive?
+
+A)
+None of the answers is correct.
+
+B)
+By default, the user inside the container created from this Dockerfile is root.
+
+C)
+Docker daemon will create a user with the minimum privileadge required to run the container
+
+D)
+You will get an error at build time. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+By default the user inside the container is root. 
+
+Using a defense in depth model, it is recommended that not all containers run as root. 
+
+An easy way to mitigate this is to use the –user declaration at run time. 
+
+The container runs as the specified user, essentially removing root access.
+
+Developers should use root as little as possible inside the container. 
+
+Developers should create their app containers with the USER declaration in their Dockerfiles.
+
+https://success.docker.com/article/security-best-practices
+https://docs.docker.com/engine/reference/builder/#user

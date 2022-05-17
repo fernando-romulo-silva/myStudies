@@ -1,0 +1,81 @@
+A service ‘wordpress’ is running using a password string to connect to a non-dockerized database service. 
+The password string is passed into the ‘wordpress’ service as a docker secret. 
+Per security policy, the password on the database was changed. 
+Identify the correct sequence of steps to rotate the secret from the old password to the new password.
+
+A)
+Create a new docker secret with the new password. 
+Trigger a rolling update of the "wordpress" service, by using "-- secret-rm" & "--secret-add" to remove the old secret and add the updated secret.
+
+B)
+Trigger an update to the service by using 'docker service update --secret='
+
+C)
+Create a new docker secret with the new password. 
+Remove the existing service using 'docker service rm'. 
+Start a new service with the new secret using "--secret="
+
+D)
+Create a new docker secret with the new password. 
+Trigger a rolling secret update by using the 'docker secret update' command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+In terms of Docker Swarm services, a secret is a blob of data, such as a password, SSH private key, SSL certificate, 
+or another piece of data that should not be transmitted over a network or stored unencrypted in a Dockerfile or in your application’s source code.
+
+https://docs.docker.com/engine/swarm/secrets/#about-secrets
+
+Note: After you create a secret, you cannot update it. You can only remove and re-create it, and you cannot remove a secret that a service is using.
+
+https://docs.docker.com/engine/swarm/secrets/#advanced-example-use-secrets-with-a-wordpress-service
+
+Add or remove secrets
+
+Use the –secret-add or –secret-rm options add or remove a service’s secrets.
+
+For example:
+
+$ docker service update \
+     –secret-rm mysql_password \
+     –secret-add source=mysql_password_v2,target=wp_db_password,mode=0400 \
+     wordpress  
+
+This triggers a rolling restart of the WordPress service and the new secret is used.
+The following example adds a secret named ssh-2 and removes ssh-1:
+
+$ docker service update \
+    –secret-add source=ssh-2,target=ssh-2 \
+    –secret-rm ssh-1 \
+    Myservice
+
+https://docs.docker.com/engine/reference/commandline/service_update/#add-or-remove-secrets

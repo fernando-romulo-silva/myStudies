@@ -1,0 +1,59 @@
+Which of the following options can you use for publishing and managing trusted collections of content?
+
+A)
+DISA
+
+B)
+Notary tool
+
+C)
+docker secure command
+
+D)
+docker trust command
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+As of Docker Engine 18.06 there is a docker trust command that will streamline the image signing process.
+
+The old is Notary. Notary is a tool for publishing and managing trusted collections of content.
+
+ Publishers can digitally sign collections and consumers can verify integrity and origin of content. 
+ 
+ This ability is built on a straightforward key management and signing interface to create signed collections and configure trusted publishers.

@@ -1,0 +1,59 @@
+Are scan results of Docker security available in both UCP and DTR?
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker Trusted Registry can scan images in your repositories to verify that they are free from known 
+security vulnerabilities or exposures, using Docker Security Scanning.
+
+Docker Security Scanning is available as an add-on to Docker Trusted Registry, 
+and an administrator configures it for your DTR instance.
+
+https://github.com/docker/docker.github.io

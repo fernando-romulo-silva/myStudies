@@ -1,0 +1,61 @@
+What is the purpose of Docker Content Trust?
+
+A)
+Docker registry TLS verification and encryption
+
+B)
+Enabling mutual TLS between the Docker client and server
+
+C)
+Indicating an image on Docker Hub is an official image
+
+D)
+Signing and verification of image tags
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+When communicating over an untrusted medium such as the internet, it is critical to ensure the integrity and the publisher of all the data a system operates on. 
+
+You use the Docker Engine to push and pull images (data) to a public or private registry. 
+
+Content trust gives you the ability to verify both the integrity and the publisher of all the data received from a registry over any channel.
+
+Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
+
+These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.

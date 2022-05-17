@@ -1,0 +1,65 @@
+What is the purpose of client bundles in the Universal Control Plane?
+
+A)
+Authenticate a user using client certificates to the Universal Control Plane
+
+B)
+Provide a new user instructions for how to login to the Universal Control Plane
+
+C)
+Group multiple users in a team in the Universal Control Plane
+
+D)
+Provide a user with a Docker client binary compatible with the Universal Control Plane
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+A client bundle contains a private and public key pair that authorizes your requests in UCP.
+
+Using client certificate bundle on your local computer, you can use it to authenticate your requests.
+
+What is a client bundle?
+
+A client bundle is a group of certificates downloadable directly from the Docker Universal Control Plane (UCP) 
+user interface within the admin section for “My Profile”.
+
+This allows you to authorize a remote Docker engine to a specific user account managed in Docker EE, absorbing all associated RBAC controls in the process. 
+You can now execute docker swarm commands from your remote machine that take effect on the remote cluster.
+
+https://www.docker.com/blog/get-familiar-docker-enterprise-edition-client-bundles/ 

@@ -1,0 +1,59 @@
+What is the default period after which a node certificate expires in UCP?
+
+A)
+None of the answers is correct
+
+B)
+1 year
+
+C)
+90 days
+
+D)
+24 hours 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Universal Control Plane’s management plane uses a private CA and certificates for all internal communication. 
+
+The client certificates are automatically rotated on a schedule, providing a strong method for reducing the effect of a compromised node. 
+
+There is an option to reduce the default time interval of 90 days to a shorter interval, however shorter intervals do add stress to the UCP cluster. 
+
+To adjust the certificate rotation schedule, go to Admin -> Admin Settings -> Swarm and scroll down.

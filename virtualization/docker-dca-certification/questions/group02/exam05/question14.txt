@@ -1,0 +1,35 @@
+Which of the following should be stored in a Secret file instead of Dockerfile or application’s source code?
+(select all that apply)
+
+
+A)
+Generic strings or binary content (up to 500 kb in size)
+
+B)
+Application metadata
+
+C)
+Other important data such as the name of a database or internal server
+
+D)
+Tags
+
+E)
+Usernames and passwords 
+
+
+Answers A, C and D
+
+A Docker secret is a blob of sensitive data that should not be transmitted over a network, such as:
+
+· Usernames and passwords
+
+· TLS certificates and keys
+
+· SSH keys
+
+· Other important data such as the name of a database or internal server
+
+· Generic strings or binary content (up to 500 kb in size)
+
+https://success.docker.com/article/security-best-practices

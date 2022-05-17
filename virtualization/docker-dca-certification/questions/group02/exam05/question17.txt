@@ -1,0 +1,58 @@
+You want to enable The Docker Security Scan process. 
+But you are unable to do so. 
+What could be the reason?
+
+A)
+All answers are valid.
+
+B)
+You are using Docker Community Edition.
+
+C)
+You do not have the authority to download the security scanning licence for DTR.
+
+D)
+Security Scanning in not enabled in DTR.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Image scan is a feature of Docker trusted Repository DTR, which is part of Docker Entreprise Edition.
+
+To use the image scanning feature, make sure that you or your organization has purchased a DTR license that includes Docker Security Scanning, 
+and that your Docker ID can access and download this license from the Docker Hub.
+
+After you get the license, you’ll need to Enable DTR security scanning. 

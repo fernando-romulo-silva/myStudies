@@ -1,0 +1,58 @@
+What security needs does mutual Transport Layer Security (MTLS) satisfy in a swarm? 
+(select all that apply)
+
+A)
+auditing
+
+B)
+encrypt communication within the cluster
+
+C)
+authentication
+
+D)
+authorization 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers B, C and D
+
+The swarm mode public key infrastructure (PKI) system built into Docker makes it simple to securely deploy a container orchestration system. 
+
+The nodes in a swarm use mutual Transport Layer Security (TLS) to authenticate, authorize, and encrypt the communications with other nodes in the swarm.
+
+https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/

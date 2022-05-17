@@ -1,0 +1,65 @@
+To get UCP traffic secured in Docker Swarm mode you need to generate certs externally or set up any CAs manually. 
+True or False?
+
+A)
+FALSE
+
+B)
+TRUE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Control Plane Security
+
+Docker Swarm comes with integrated PKI. 
+
+All managers and nodes in the Swarm have a cryptographically signed identity in the form of a signed certificate. 
+
+All manager-to-manager and manager-to-node control communication is secured out of the box with TLS. 
+
+There is no need to generate certs externally or set up any CAs manually to get end-to-end control plane traffic secured in Docker Swarm mode. 
+
+Certificates are periodically and automatically rotated.
+
+https://success.docker.com/article/networking#dockernetworksecurityandencryption
