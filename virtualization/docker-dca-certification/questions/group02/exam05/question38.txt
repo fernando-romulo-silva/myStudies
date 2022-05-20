@@ -1,0 +1,56 @@
+Which of the following is not an available feature after scanning a Docker image?
+
+A)
+A link to CVE database
+
+B)
+Remove Vulnerability
+
+C)
+Layers affected
+
+D)
+Severity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+From the Components view, the CVE number, a link to CVE database, file path, 
+layers affected, severity, and description of severity are available.
+
+https://success.docker.com/article/security-best-practices

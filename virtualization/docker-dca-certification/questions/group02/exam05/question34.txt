@@ -1,0 +1,101 @@
+Which of the following are available security features of Docker Engine? 
+(select all that apply)
+
+A)
+You can configure Docker`s trust features so that your users can push and pull trusted images
+
+B)
+You can use certificate-based client-server authentication to verify a Docker daemon has the rights to access images on a registry
+
+C)
+You can configure secure computing mode (Seccomp) policies to secure system calls in a container
+
+D)
+You can protect the Docker daemon socket and ensure only trusted Docker client connections 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers A, B, C and D
+
+By default, Docker runs through a non-networked UNIX socket.
+It can also optionally communicate using an HTTP socket. 
+
+If you need Docker to be reachable through the network in a safe manner, you can enable TLS by specifying the tlsverify flag
+and pointing Docker’s tlscacert flag to a trusted CA certificate.
+
+TLS must be enabled in order to have the Docker client and the daemon communicate securely over HTTPS.
+
+Additionally, TLS ensures authenticity of the registry endpoint and that traffic to/from registry is encrypted.
+To ensure the traffic between the Docker registry server and the Docker daemon (a client of the registry server) is encrypted 
+and properly authenticated use certificate-based client-server authentication.
+
+https://docs.docker.com/engine/security/certificates/
+
+In the daemon mode, it only allows connections from clients authenticated by a certificate signed by that CA.
+In the client mode, it only connects to servers with a certificate signed by that CA.
+
+https://docs.docker.com/engine/security/https/
+
+Docker Content Trust (DCT) provides the ability to use digital signatures for data sent to and received from remote Docker registries. 
+These signatures allow client-side or runtime verification of the integrity and publisher of specific image tags.
+
+https://docs.docker.com/engine/security/trust/content_trust/#about-docker-content-trust-dct
+
+
+* Docker Content Trust Signature Verification *
+
+The Docker Engine can be configured to only run signed images. 
+
+The Docker Content Trust signature verification feature is built directly into the dockerd binary.
+
+This is configured in the Dockerd configuration file.
+
+To enable this feature, trustpinning can be configured in daemon.json, 
+whereby only repositories signed with a user-specified root key can be pulled and run.
+
+https://docs.docker.com/engine/security/security/#docker-content-trust-signature-verification
+
+
+* seccomp *
+
+Secure computing mode (seccomp) is a Linux kernel feature. 
+
+You can use it to restrict the actions available within the container. 
+The seccomp() system call operates on the seccomp state of the calling process. 
+You can use this feature to restrict your application’s access.
+
+https://docs.docker.com/engine/security/seccomp/
+

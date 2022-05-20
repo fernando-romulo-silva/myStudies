@@ -1,0 +1,56 @@
+Docker security scan process can be started by all users including those with read-only access. 
+True or false?
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Only users with write access to a repository can manually start a scan. 
+Users with read-only access can view the scan results, but cannot start a new scan.
+
+https://github.com/docker/docker.github.io

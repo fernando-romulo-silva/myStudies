@@ -1,0 +1,57 @@
+Following the principle of least privilege, 
+which of the following methods can you use to securely grant access to a specific user to communicate to a Docker engine?
+
+A)
+Utilize openssl to create TLS client and server certificates, configuring the Docker engine to use with mutual TLS over TCP.
+
+B)
+Utilize the '--host 0.0.0.0:2375' option to the Docker daemon to listen on port 2375 over TCP on all interfaces.
+
+C)
+Utilize the '--host 127.0.0.1:2375' option to the Docker daemon to listen on port 2375 over TCP on localhost
+
+D)
+Give the user root access to the server to allow them to run Docker commands as root.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+You don’t need to run the docker client with sudo or the docker group when you use certificate authentication. 
+That means anyone with the keys can give any instructions to your Docker daemon, giving them root access to the machine hosting the daemon. 
+However, guard these keys as you would a root password!
+
+https://docs.docker.com/engine/security/https/ 

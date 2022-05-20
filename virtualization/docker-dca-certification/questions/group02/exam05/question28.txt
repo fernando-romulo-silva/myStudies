@@ -1,0 +1,74 @@
+You need control of a sound device on the host server from a container. 
+What command should you use?
+
+A)
+docker run --device=/dev/snd:/dev/snd
+
+B)
+None of the answers is correct.
+
+C)
+docker run --privileged
+
+D)
+docker run --cap-add=/dev/snd 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+By default, Docker containers are “unprivileged” and cannot, for example, run a Docker daemon inside a Docker container. 
+
+This is because by default a container is not allowed to access any devices, but a “privileged” container is given access to all devices 
+(see the documentation on cgroups devices).
+
+When the operator executes docker run –privileged, Docker will enable access to all devices on the host 
+as well as set some configuration in AppArmor or SELinux to allow the container nearly all the same access 
+to the host as processes running outside containers on the host. 
+
+Additional information about running with –privileged is available on the Docker Blog.
+
+If you want to limit access to a specific device or devices you can use the –device flag. 
+It allows you to specify one or more devices that will be accessible within the container:
+
+$ docker run –device=/dev/snd:/dev/snd …
+
+
+Following the least privileged principle, you should use –device instead of –priviledged.
+
+https://docs.docker.com/engine/reference/run/#/runtime-privilege-and-linux-capabilities
+
+Docker Engine has a default list of capabilities for all newly created containers.

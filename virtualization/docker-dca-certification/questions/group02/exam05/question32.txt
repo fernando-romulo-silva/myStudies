@@ -1,0 +1,60 @@
+When initializing a swarm, what command can you use to specify your own externally-generated root Certificate Authority?
+
+A)
+docker int swarm --external-cert
+
+B)
+docker int swarm --external-ca
+
+C)
+docker swarm init --external-ca
+
+D)
+docker swarm init --external-cert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+When you create a swarm by running docker swarm init, Docker designates itself as a manager node. 
+
+By default, the manager node generates a new root Certificate Authority (CA) along with a key pair, 
+which are used to secure communications with other nodes that join the swarm.
+
+If you prefer, you can specify your own externally-generated root CA, using the –external-ca flag of the docker swarm init command.
+
+https://docs.docker.com/engine/swarm/how-swarm-mode-works/pki/
