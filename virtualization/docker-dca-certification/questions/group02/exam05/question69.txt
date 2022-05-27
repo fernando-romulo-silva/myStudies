@@ -1,0 +1,59 @@
+What happened when a PersistentVolumeClaim can’t be satisfied?
+
+A)
+None of the above.
+
+B)
+Claim will remain unbound indefinitely
+
+C)
+Claim will throw an error when defined
+
+D)
+Clain will get as much resources as possible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Claims will remain unbound indefinitely if a matching volume does not exist. 
+Claims will be bound as matching volumes become available. 
+For example, a cluster provisioned with many 50Gi PVs would not match a PVC requesting 100Gi. 
+The PVC can be bound when a 100Gi PV is added to the cluster.
+
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#binding
+ 

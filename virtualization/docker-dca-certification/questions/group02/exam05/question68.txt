@@ -1,0 +1,70 @@
+Where does the docker daemon persist all docker related data on the host machine?
+
+A)
+/etc/docker
+
+B)
+none
+
+C)
+/var/lib/docker
+
+D)
+/var/lib/docker-ce 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The Docker daemon persists all data in a single directory. 
+This tracks everything related to Docker, including containers, images, volumes, service definition, and secrets.
+
+By default this directory is:
+
+· /var/lib/docker on Linux.
+
+· C:\ProgramData\docker on Windows.
+
+https://docs.docker.com/config/daemon/#docker-daemon-directory
+
+Usually, on Linux distributions:
+"/etc" is used for configurations (.conf files etc). here you find all the configs and settings for your system.
+
+"/var" is usually used for log files, ‘temporary’ files (like mail spool, printer spool, etc), databases, and all other data not tied to a specific user. 
+Logs are usually in “/var/log”, databases in “/var/lib” (mysql – “/var/lib/mysql”), etc.
+
+https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard

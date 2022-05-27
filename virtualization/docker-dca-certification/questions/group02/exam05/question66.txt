@@ -1,0 +1,54 @@
+Each storage driver has its own implementation, but all drivers use stackable image layers and the copy-on-write (CoW) strategy.
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Docker uses storage drivers to manage the contents of the image layers and the writable container layer. 
+Each storage driver handles the implementation differently, but all drivers use stackable image layers and the copy-on-write (CoW) strategy 

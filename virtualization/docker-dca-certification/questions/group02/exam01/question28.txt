@@ -13,6 +13,41 @@ D)
 swarm.role != manager 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer A
 
 By default, swarm services can run on any node in the cluster. 

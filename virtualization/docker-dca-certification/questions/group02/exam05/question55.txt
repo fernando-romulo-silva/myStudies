@@ -1,0 +1,86 @@
+Which of the following commands can you use to create a bind mount?
+(select two)
+
+A)
+docker run -d --name test --mount type=bind,source="$(pwd)"/testvol,target=/testvol ubuntu:latest
+
+B)
+docker volume make testvol -ro
+
+C)
+docker bind_mount create testvol
+
+D)
+docker run -d --name test -v "$(pwd)"/testvol:/testvol ubuntu:latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers A and D
+
+Bind mounts have been around since the early days of Docker. 
+Bind mounts have limited functionality compared to volumes. 
+
+When you use a bind mount, a file or directory on the host machine is mounted into a container.
+The file or directory is referenced by its full or relative path on the host machine. 
+
+By contrast, when you use a volume, a new directory is created within Docker’s storage directory on the host machine, 
+and Docker manages that directory’s contents.
+
+Use the following command to bind-mount the target/ directory into your container at /app/. 
+Run the command from within the source directory. 
+
+The $(pwd) sub-command expands to the current working directory on Linux or macOS hosts.
+
+The –mount and -v examples below produce the same result. 
+
+You can’t run them both unless you remove the devtest container after running the first one.
+
+
+$ docker run -d \
+  -it \
+  –name devtest \
+  –mount type=bind,source=”$(pwd)”/target,target=/app \
+  nginx:latest
+
+
+$ docker run -d \
+  -it \
+  –name devtest \
+  -v “$(pwd)”/target:/app \
+  nginx:latest
+
+
+https://docs.docker.com/storage/bind-mounts/#differences-between–v-and—mount-behavior

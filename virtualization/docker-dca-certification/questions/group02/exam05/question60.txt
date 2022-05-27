@@ -1,0 +1,74 @@
+Which of the following commands does not associate with docker volumes?
+
+A)
+docker volume create
+
+B)
+docker volume prune
+
+C)
+docker volume backup
+
+D)
+docker volume inspect 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To manage volume, you could use:
+
+$ docker volume COMMAND NAME
+
+You can use subcommands to create, inspect, list, remove, or prune volumes.
+
+1 - Create a volume:
+$ docker volume create
+
+2 - Display detailed information on one or more volumes:
+$ docker volume inspect
+
+3 - List volumes:
+$ docker volume ls
+
+4 - Remove all unused local volumes:
+$ docker volume prune
+
+5 - Remove one or more volumes:
+$ docker volume rm
+
+https://docs.docker.com/engine/reference/commandline/volume/

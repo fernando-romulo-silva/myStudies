@@ -1,0 +1,59 @@
+What docker command can you use to remove unused volumes?
+
+A)
+docker delete volume
+
+B)
+docker prune volume
+
+C)
+docker remove volume
+
+D)
+docker volume prune
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+To remove all unused local volumes use:
+
+$ docker volume prune [OPTIONS]
+
+Unused local volumes are those which are not referenced by any containers
+
+https://docs.docker.com/engine/reference/commandline/volume_prune/

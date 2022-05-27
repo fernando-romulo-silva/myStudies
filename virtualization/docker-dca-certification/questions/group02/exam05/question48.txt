@@ -1,0 +1,65 @@
+You have a running Ubuntu Container with bash as its default command.
+Copy a file called “services.txt” to the tmp directory of the container.
+Navigate inside the container and delete the /tmp directory.
+Exit from the container and run docker diff command.
+Which of the following would be the output of it (docker diff command)?
+
+A)
+A /root/.bash_history C /root D /tmp
+
+B)
+C /tmp A /tmp/service.txt D /tmp
+
+C)
+C /root A /root/.bash_history D /tmp
+
+D)
+None of the answers is correct 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To inspect changes to files or directories on a container’s filesystem use:
+
+$ docker diff CONTAINER
+
+This lists the changed files and directories in a container's filesystem since the container was created.
+
+Three different types of change are tracked with different symbols:
+
+A A file or directory was added
+D A file or directory was deleted
+C A file or directory was changed
+
+https://docs.docker.com/engine/reference/commandline/diff/#description

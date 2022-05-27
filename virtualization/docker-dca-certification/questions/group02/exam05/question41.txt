@@ -1,0 +1,67 @@
+Which kind of devicemapper should you configure when installing Docker with the intent to run production workloads?
+
+A)
+loop-lvm
+
+B)
+direct-lvm
+
+C)
+aufs-lvm
+
+D)
+overlay-lvm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Device Mapper is a kernel-based framework that underpins many advanced volume management technologies on Linux.
+
+Docker’s devicemapper storage driver leverages the thin provisioning and snapshotting capabilities 
+of this Device Mapper framework for image and container management.
+
+Device Mapper configuration modes:
+· loop-lvm mode – is only appropriate for testing. 
+  The loop-lvm mode makes use of a ‘loopback’ mechanism that allows files on the local disk 
+  to be read from and written to as if they were an actual physical disk or block device.
+  
+· direct-lvm mode – Production hosts using the devicemapper storage driver must use direct-lvm 
+  mode. This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
+  However, more setup is required than in loop-lvm mode.
+  
+https://docs.docker.com/storage/storagedriver/device-mapper-driver/#configure-loop-lvm-mode-for-testing 

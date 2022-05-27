@@ -1,0 +1,80 @@
+If you want to create a container named ‘myweb’ with a volume inside at ‘/my/data/volume’, which command should you use?
+
+A)
+docker run -d --name myweb -V /my/data/volume httpd:latest
+
+B)
+docker run -d --name myweb -v myvol:/my/data/volume httpd:latest
+
+D)
+docker run -d --name myweb --volumes myvol:/my/data/volume httpd:latest
+
+C)
+None of the above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+-V and –volumes are incorrect flags.
+
+Output message:
+unknown shorthand flag: ‘V’ in -V
+unknown flag: –volumes
+
+To mount a volume use -v or –volume.
+
+These flags consist of three fields, separated by colon characters (:). 
+
+The fields must be in the correct order, and the meaning of each field is not immediately obvious:
+
+· In the case of named volumes, the first field is the name of the volume, and is unique on a given host machine. 
+  For anonymous volumes, the first field is omitted.
+
+· The second field is the path where the file or directory are mounted in the container.
+
+· The third field is optional, and is a comma-separated list of options, such as ro. These options are discussed below.
+
+If you start a container with a volume that does not yet exist, Docker creates the volume for you. 
+The following example mounts the volume myvol2 into /app/ in the container.
+
+$ docker run -d \
+  –name devtest \
+  -v myvol2:/app \
+  nginx:latest
+
+https://docs.docker.com/storage/volumes/

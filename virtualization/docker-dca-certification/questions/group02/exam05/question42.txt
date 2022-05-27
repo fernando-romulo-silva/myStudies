@@ -1,0 +1,59 @@
+The devicemapper driver can only use a single block device?
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The devicemapper driver uses block devices dedicated to Docker and operates at the block level, rather than the file level.
+
+With Docker 17.06 and higher, Docker can manage the block device for you, simplifying configuration of direct-lvm mode. 
+This is appropriate for fresh Docker setups only.
+
+You can only use a single block device. 
+If you need to use multiple block devices, configure direct-lvm mode manually instead.

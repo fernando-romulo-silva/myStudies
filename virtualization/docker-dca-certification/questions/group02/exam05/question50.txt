@@ -1,0 +1,56 @@
+Each container shares the writeable container layer. 
+True or false?
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+A Docker image is built up from a series of layers. Each layer represents an instruction in the image’s Dockerfile. 
+Each layer except the very last one is read-only.
+Each container has its own writable container layer, and all changes are stored in this container layer.
+However, multiple containers can share access to the same underlying image and yet have their own data state. 
