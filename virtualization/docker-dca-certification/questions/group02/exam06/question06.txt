@@ -1,0 +1,57 @@
+Which of the following flags is used to publish container’s port(s) on an existing service in swarm?
+
+A)
+--publish
+
+B) 
+--publish-add
+
+C) 
+--publish-all
+
+D)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+“–publish-add” flag is used to add a published port on a running service. 
+
+Whereas, “–publish” flag is used to publish a port while a service is being created. 
+
+For more information, please follow the link: https://docs.docker.com/engine/reference/commandline/service_update/

@@ -1,0 +1,57 @@
+Which of the following mechanisms is used to configure services to run only on nodes with specific metadata set?
+
+A)
+Placement Preference
+
+B)
+Placement Constraints
+
+C)
+Routing Mesh
+
+D)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Placement Constraints are used to control the nodes on which a service can be deployed on. 
+
+Unlike placement preference, in placement constraints, service deployment can fail if the appropriate node does not exist. 
+
+For more information, please follow the link: https://docs.docker.com/engine/swarm/services/

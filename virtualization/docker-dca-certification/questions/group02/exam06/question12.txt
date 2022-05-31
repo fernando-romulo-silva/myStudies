@@ -1,0 +1,57 @@
+Which of the following tools is used to provision and manage Docker Engine on one or more virtual hosts?
+
+A)
+docker toolbox
+
+B) 
+docker client
+
+C)
+docker-machine
+
+D)
+None of the above 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Docker Machine is a tool that lets you install Docker Engine on virtual hosts, 
+and manage the hosts with docker-machine commands. 
+
+You can use Machine to create Docker hosts on your local Mac or Windows box, on your company network, 
+in your data center, or on cloud providers like Azure, AWS, or DigitalOcean.

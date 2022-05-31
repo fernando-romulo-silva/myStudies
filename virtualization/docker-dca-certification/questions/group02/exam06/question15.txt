@@ -1,0 +1,53 @@
+Which of the following is the scope of uniqueness for auto-generated anonymous volume name?
+
+A)
+docker hub
+
+B) 
+docker host
+
+C)
+docker swarm cluster
+
+D)
+none of the above 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Any Volume name is unique across the docker host.

@@ -1,0 +1,55 @@
+Which of the following paths on docker Host is used by manager nodes to store swarm state and manager logs?
+
+A)
+/var/log/docker/swarm
+
+B)
+/var/lib/docker/swarm
+
+C)
+/etc/docker/swarm
+
+D)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The '/var/lib/' folder holds state information pertaining to an application or the system, 
+so the '/var/lib/docker/swarm' has the swarm state and logs. 

@@ -1,0 +1,56 @@
+What is the limitation of docker service scale command in swarm mode?
+
+A)
+It can only scale UP the service.
+
+B)
+It can only be applied on replicated services.
+
+C)
+It can only scale one service at a time.
+
+D)
+All of the above 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Only replicated services can be scaled UP or DOWN to the desired number of replicas. 
+For more information, please follow the link: https://docs.docker.com/engine/reference/commandline/service_scale/
+ 

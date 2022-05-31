@@ -1,0 +1,56 @@
+Which of the following commands is used to revoke cluster management and orchestrating privileges from manager node?
+
+A)
+docker node down
+
+B)
+docker node rm
+
+C)
+docker node demote
+
+D)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  C
+
+When you drain a node, the scheduler reassigns any tasks running on the node to other available worker nodes in the swarm. 
+It also prevents the scheduler from assigning tasks to the node.
+
+$ docker node update --availability drain <NODE>

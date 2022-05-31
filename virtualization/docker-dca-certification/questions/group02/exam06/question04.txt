@@ -1,0 +1,60 @@
+Which of the following ports on Docker Host is used to allow overlay network traffic in swarm mode?
+
+A)
+TCP port 443
+
+B) 
+UDP port 7946
+
+C) 
+TCP port 2377
+
+D) 
+UDP port 4789
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+You need the following ports open to traffic to and from each Docker host participating on an overlay network:
+
+TCP port 2377 for cluster management communications
+
+TCP and UDP port 7946 for communication among nodes
+
+UDP port 4789 for overlay network traffic
+  

@@ -1,0 +1,58 @@
+You have been assigned a task to host your organization’s event blog using WordPress and MySQL database on a 25 active nodes swarm cluster. 
+Make sure that one task of MySQL database service is deployed on each active node in swarm cluster. 
+Which of the following commands will achieve your purpose? 
+
+A)
+docker service create --name mySQL --global mysql docker service create --name wordpress --replicas=25 wordpress ?
+
+B)
+docker service create --name mySQL --mode global mysql docker service create --name wordpress --replicas=25 wordpress
+
+C)
+docker service create --name mySQL --config global mysql docker service create --name wordpress --replicas=25 wordpress
+
+D)
+None of the above  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+For replicated services, user need to specify the number of replica tasks for the swarm manager to schedule onto active nodes in cluster. 
+
+Whereas, in case of global service, scheduler places one task of service on each active node of the cluster. 
+
+As asked in this question, to deploy one task of MySQL service on each active node, 
+we need to deploy mysql service as “global service” by setting the service mode to “–mode global”.

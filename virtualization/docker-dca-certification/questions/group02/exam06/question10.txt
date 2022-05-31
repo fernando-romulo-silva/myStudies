@@ -1,0 +1,55 @@
+You have a 35 nodes swarm cluster. 
+Out of which, 11 nodes are manager nodes. 
+In order to avoid failure of set of machines or to perform periodic maintenance tasks, 
+Which one of the following is the optimal distribution of manager nodes?
+
+A)
+6/4/1
+
+B)
+5/5/1
+
+C)
+5/2/4
+
+D)
+4/4/3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Manager nodes are distributed across a minimum of 3 availability-zones to support failures of machines and to support periodic maintenance tasks. 
+Start distributing one manager node at a time in each zone until you are left with 0 manager nodes. 
+For more information, please follow the link: https://docs.docker.com/engine/swarm/admin_guide/
