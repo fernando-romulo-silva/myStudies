@@ -1,0 +1,59 @@
+Is there any difference between the ADD and COPY instructions? 
+(Choose two)
+
+A)
+The ADD directive will remove the file from the source and add it to the destination.
+
+B)
+The ADD directive can extract an archive into the image.
+
+C)
+The ADD directive can pull a file from an external URL.
+
+D)
+The ADD directive can transfer a specific file between build stages. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers B and C
+
+The ADD instruction operates similarly to the COPY instruction with two important differences.
+
+The ADD instruction will additionally support:
+
+· Fetch remote source files if a URL is specified
+
+· Auto-extraction of archive files. Extract the files of any source that are determined to be of archive file type.

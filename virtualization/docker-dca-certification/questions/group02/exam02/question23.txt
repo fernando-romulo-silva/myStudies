@@ -1,0 +1,60 @@
+Which docker command can be used to pull an image or a repository from a registry?
+
+A)
+docker build
+
+B)
+docker pull
+
+C)
+docker checkout
+
+D)
+docker deploy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Pull an image or a repository from a registry
+
+$ docker image pull     
+
+Or
+
+$ docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+ 

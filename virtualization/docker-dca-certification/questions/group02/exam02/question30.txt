@@ -1,0 +1,57 @@
+Which statement is true about building docker images?
+
+A)
+Only layers that have changed since the last build (and any following layers) are built.
+
+B)
+An image has state and it can change.
+
+C)
+Every Dockerfile can have only one FROM directive.
+
+D)
+Every layer of the image is re-built every time docker build is executed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+When an image is updated or rebuilt, only layers that change need to be updated, and unchanged layers are cached locally. 
+This is part of why Docker images are so fast and lightweight. 
+The sizes of each layer add up to equal the size of the final image.
+An image does not have state and it never changes.
+FROM can appear multiple times within a single Dockerfile to create multiple images or use one build stage as a dependency for another.

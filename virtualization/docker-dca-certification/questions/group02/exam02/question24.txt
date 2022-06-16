@@ -1,0 +1,56 @@
+What happens when the RUN instruction is executed?
+
+A)
+The RUN directive sets the default command for the image.
+
+B)
+The RUN directive automatically runs a command when a new container gets created.
+
+C)
+The RUN directive executes a command and commits the resulting changed files as a new layer in the image.
+
+D)
+The RUN directive executes a command on the host when building an image.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Answer C
+
+In the Dockerfile context, The RUN instruction will execute any commands in a new layer on top of the current image and commit the results.
+
+Layering RUN instructions and generating commits conforms to the core concepts of Docker where commits are cheap and containers can be created 
+from any point in an image’s history, much like source control.

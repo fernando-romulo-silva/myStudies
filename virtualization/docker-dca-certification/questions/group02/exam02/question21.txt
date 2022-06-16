@@ -1,0 +1,56 @@
+A docker image is built up from a series of layers and each layer represents an instruction in the image’s Dockerfile.
+
+A) 
+False
+
+B)
+True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker builds images automatically by reading the instructions from a Dockerfile text file that contains all commands, 
+in order, needed to build a given image.
+
+A Docker image consists of read-only layers each of which represents a Dockerfile instruction.

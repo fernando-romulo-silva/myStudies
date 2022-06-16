@@ -1,0 +1,61 @@
+Which command needs to be executed to sign an image before pushing it to a repository?
+
+A)
+export SIGN_DOCKER_IMAGE=1
+
+B)
+export TRUST_DOCKER_IMAGE=1
+
+C)
+export TRUST_DOCKER_CONTENT=1
+
+D)
+export DOCKER_CONTENT_TRUST=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Docker Content Trust (DCT) allows you to verify the authenticity, integrity, and publication date of Docker images 
+that are made available on the Docker Hub Registry.
+
+By default, Content Trust is disabled. 
+To enable Content Trust for signing and verifying Docker images that you build, push to, or pull from the Docker Hub, 
+set the DOCKER_CONTENT_TRUST environment variable, for example:
+
+$ export DOCKER_CONTENT_TRUST=1
+

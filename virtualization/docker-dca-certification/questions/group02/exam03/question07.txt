@@ -23,6 +23,31 @@ All dependencies already installed on docker-machine
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer C
 
 The docker build command builds an image from a Dockerfile and a context.

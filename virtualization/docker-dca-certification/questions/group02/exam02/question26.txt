@@ -1,0 +1,57 @@
+Environment variables set in a Dockerfile using ENV are persisted when a container is run from the resulting image. 
+
+A)
+False
+
+B)
+True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The ENV instruction sets the environment variable to the value. 
+This value will be in the environment for all subsequent instructions in the build stage.
+
+Also, the environment variables set using ENV will persist when a container is run from the resulting image. 
+You can view the values using docker inspect, and change them using docker run –env =.
