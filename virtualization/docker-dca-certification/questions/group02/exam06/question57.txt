@@ -1,0 +1,57 @@
+Which of the following orders is recommended to backup the components of Docker EE?
+
+A)
+docker swarm > DTR > UCP
+
+B)
+DTR > docker swarm >UCP
+
+C)
+UCP > DTR > docker swarm
+
+D)
+docker swarm > UCP > DTR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Back up your Docker EE components in the following order:
+
+Back up your swarm
+Back up UCP
+Back up DTR

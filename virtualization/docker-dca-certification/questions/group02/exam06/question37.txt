@@ -1,0 +1,59 @@
+Which of the following Dockerfile instructions is used to provide defaults for an executing container?
+
+A)
+CMD
+
+B)
+ENTRYPOINT
+
+C)
+ENV
+
+D)
+FROM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The main purpose of a CMD is to provide defaults for an executing container. 
+These defaults can include an executable, or they can omit the executable, in which case you must specify an ENTRYPOINT instruction as well.
+
+If CMD is used to provide default arguments for the ENTRYPOINT instruction, 
+both the CMD and ENTRYPOINT instructions should be specified with the JSON array format.
+
+An ENTRYPOINT allows you to configure a container that will run as an executable.

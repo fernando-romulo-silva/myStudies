@@ -1,0 +1,54 @@
+What is the default extension of Dockerfile ?
+
+A)
+.txt
+
+B)
+.dockerfile
+
+C)
+.yaml
+
+D)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+A Dockerfile must be created with no extension. 
+To do this in Windows, create the file with your editor of choice, then save it with the notation "Dockerfile" (including the quotes).

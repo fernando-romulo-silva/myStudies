@@ -1,0 +1,57 @@
+Which of the following commands is used to create a MySQL version 5.4 database container?
+
+A)
+docker run --name database --image mysql:5.4
+
+B)
+docker create --name database --image mysql:5.4
+
+C)
+docker create --name database mysql:5.4
+
+D)
+docker run --name database mysql:5.4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The docker create command creates a writable container layer over the specified image and prepares it for running the specified command. 
+
+For more information, please follow the link: https://docs.docker.com/engine/reference/commandline/create/
+
+  

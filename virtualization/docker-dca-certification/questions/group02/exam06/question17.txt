@@ -1,0 +1,55 @@
+You want to run a multi-container application with MySQL and WordPress containers running side-by-side. 
+WordPress is dependent on MySQL database container. 
+Which of the following mounts can be used to save the WordPress login credentials to MySQL database?
+
+
+A)
+volume
+
+B)
+bind mount
+
+C) 
+tmpfs
+
+D)
+all of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+tmpfs is ephemeral and bind mount is less secure compared to volume 
+so if the data to be stored is sensitive such as passwords or credentials, 
+volumes are the ideal choice among the provided options.

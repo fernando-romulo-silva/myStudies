@@ -1,0 +1,55 @@
+If you are using a Linux distribution to run Docker, 
+which of the following storage drivers can NOT be used?
+
+A)
+devicemapper
+
+B)
+vfs
+
+C) 
+ext4
+
+D)
+overlay2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+ext4 is a supported backing filesystem for overlay, overlay2, and aufs storage drivers. 
+
+For more information, please follow the link: https://docs.docker.com/storage/storagedriver/select-storage-driver/

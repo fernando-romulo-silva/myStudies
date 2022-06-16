@@ -1,0 +1,60 @@
+Which of the following instructions sets the base image for subsequent instructions in Dockerfile?
+
+A)
+CMD
+
+B)
+FROM
+
+C)
+ARG
+
+D)
+RUN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The FROM instruction specifies the Parent Image from which you are building. 
+
+FROM may only be preceded by one or more ARG instructions, which declare arguments that are used in FROM lines in the Dockerfile.
+
+Dockerfile example:
+
+FROM eclipse-temurin:17.0.1_12-jre-alpine
+WORKDIR /application

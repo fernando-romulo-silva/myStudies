@@ -1,0 +1,54 @@
+Which of the following is not an update channel type in Docker CE?
+
+A)
+Stable
+
+B)
+Scratch
+
+C)
+Test
+
+D)
+Nightly 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker CE has three types of update channels: stable, test, and nightly. 
+For more information, please follow the link: https://docs.docker.com/install/

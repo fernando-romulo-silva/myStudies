@@ -1,0 +1,57 @@
+Which of the following commands will you use to log a forced stack trace to troubleshoot an unresponsive docker daemon?
+
+A)
+$ sudo kill -SIGKILL $(pidof dockerd)
+
+B)
+$ sudo kill -SIGTERM $(pidof dockerd)
+
+C)
+$ sudo kill -SIGSTP $(pidof dockerd)
+
+D)
+$ sudo kill -SIGUSR1 $(pidof dockerd) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+If docker daemon is unresponsive, user can send SIGUSR1 signal to docker daemon to force stack trace on daemon 
+to list out all the logs of docker daemon till the point when stack trace was logged in. 
+
+Stack trace will list out all threads running in docker daemon and helps to find the location of the potential error without terminating daemon process. 
+For more information, please follow the link: https://docs.docker.com/config/daemon/

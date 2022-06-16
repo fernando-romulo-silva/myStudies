@@ -1,0 +1,54 @@
+Containers on user-defined bridge network can communicate only via IP addresses.
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Containers connected to default bridge network can only communicate with each other by IP addresses, unless user uses the –link option (legacy). 
+Whereas, on user-defined bridge network, containers can communicate with each other by name or alias. 

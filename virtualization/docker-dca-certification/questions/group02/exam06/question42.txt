@@ -1,0 +1,67 @@
+Which of the following commands is used to list out all the layers of a Docker Image? 
+
+A)
+docker images
+
+B)
+docker list
+
+C)
+docker history
+
+D)
+docker inspect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  C
+
+Build-time variable values are visible to any user of the image with the docker history command.
+
+$ docker history mysql:5.7
+
+IMAGE          CREATED        CREATED BY                                      SIZE      COMMENT
+09361feeb475   5 months ago   /bin/sh -c #(nop)  CMD ["mysqld"]               0B        
+<missing>      5 months ago   /bin/sh -c #(nop)  EXPOSE 3306 33060            0B        
+<missing>      5 months ago   /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B        
+<missing>      5 months ago   /bin/sh -c ln -s usr/local/bin/docker-entryp…   34B       
+<missing>      5 months ago   /bin/sh -c #(nop) COPY file:345a22fe55d3e678…   14.5kB    
+<missing>      5 months ago   /bin/sh -c #(nop)  VOLUME [/var/lib/mysql]      0B        
+<missing>      5 months ago   /bin/sh -c {   echo mysql-community-server m…   312MB     
+<missing>      5 months ago   /bin/sh -c echo 'deb http://repo.mysql.com/a…   55B       
+<missing>      5 months ago   /bin/sh -c #(nop)  ENV MYSQL_VERSION=5.7.34-…   0B        
+<missing>      5 months ago   /bin/sh -c #(nop)  ENV MYSQL_MAJOR=5.7          0B 

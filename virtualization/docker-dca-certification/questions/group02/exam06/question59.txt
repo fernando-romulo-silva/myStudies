@@ -1,0 +1,51 @@
+What does following error indicate?
+x509: certificate signed by unknown authority
+
+A)
+user is running a docker swarm command on manager without client certificate.
+
+B)
+user is not registered on docker hub.
+
+C)
+user have entered incorrect captcha.
+
+D)
+user is running a docker command on UCP node without client certificate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D

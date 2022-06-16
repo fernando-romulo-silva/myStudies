@@ -1,0 +1,58 @@
+How do ADD and COPY Dockerfile instructions differ from each other?
+
+A)
+ADD only adds files to image file system, whereas COPY adds files as well as directories to image file-system.
+
+B)
+ADD is used by single docker host whereas COPY is used by docker swarm clusters  .
+
+C)
+ADD supports local-tar extractions and remote URL downloads, whereas COPY supports only local file transfer.
+
+D) 
+All of the above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+COPY takes in a src and destination. 
+It only lets you copy in a local file or directory from your host (the machine building the Docker image) into the Docker image itself.
+
+ADD lets you do that too, but it also supports 2 other sources. 
+First, you can use a URL instead of a local file / directory. 
+Secondly, you can extract a tar file from the source directly into the destination.

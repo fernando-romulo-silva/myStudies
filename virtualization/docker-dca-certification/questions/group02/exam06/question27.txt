@@ -1,0 +1,53 @@
+You have a running busybox container in the development environment, which is connected to the default bridge network. 
+The testing team connected the busybox container to a user-defined bridge network called “test-bridge”. 
+Now, how many endpoints will busybox container have?
+
+A)
+1
+
+B)
+2
+
+C)
+3
+
+D)
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+One endpoint for default bridge network and one endpoint for user defined bridge network, “test-bridge”.

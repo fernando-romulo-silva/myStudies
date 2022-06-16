@@ -1,0 +1,63 @@
+What will be the output of the following docker command?
+
+$ docker exec -it test-ubuntu "sudo apt-get update -y"
+
+A) 
+It will execute the update command in a running container.
+
+B)
+It will overwrite the default CMD command with “sudo apt-get update”  command in running container.
+
+C)
+The command format is not supported.
+
+D)
+None of the above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The docker exec command runs a new command in a running container.
+
+docker exec command does not support a chained or a quoted command. 
+For more information, please follow the link: https://docs.docker.com/engine/reference/commandline/exec/
+
+Example 
+
+$ docker exec -d ubuntu_bash touch /tmp/execWorks
+
+$ docker exec -it -w /root ubuntu_bash pwd
+

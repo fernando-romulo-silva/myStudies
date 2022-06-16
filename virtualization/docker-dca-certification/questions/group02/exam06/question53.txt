@@ -1,0 +1,54 @@
+Which of the following components of the swarm allocates IP addresses to all running tasks? 
+
+A)
+Dispatcher
+
+B) 
+Allocator
+
+C) 
+Orchestrator
+
+D) 
+Scheduler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Allocator allocates resources for tasks. 
+It will notice a brand new service (created by the API) and a new task (created by the orchestrator) and will allocate IP addresses for both.    

@@ -1,0 +1,56 @@
+What is the present working directory of the container based on the given Dockerfile?
+
+FROM ubuntu:latest
+WORKDIR /tmp
+RUN apt-get update -y
+WORKDIR hello-docker
+WORKDIR messages
+RUN echo “hello” > test.txt
+CMD [“bash”]
+
+A)
+/hello-docker/messages
+
+B) 
+/tmp/hello-docker/messages
+
+C) 
+/messages
+
+D) 
+/home/tmp/hello-docker/messages   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The WORKDIR instruction can be used multiple times in a Dockerfile. 
+If a relative path is provided, it will be relative to the path of the previous WORKDIR instruction.
+ 
+For more information, please follow the link: https://docs.docker.com/engine/reference/builder/#workdir
