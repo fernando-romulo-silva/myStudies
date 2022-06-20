@@ -1,0 +1,66 @@
+Which statement is true?
+
+A)
+ENTRYPOINT should be defined when using the container as an executable.
+
+B)
+ENTRYPOINT cannot be used in conjuction with CMD
+
+C)
+CMD cannot be overriden in the "docker container run" command
+
+D)
+ENTRYPOINT cannot be overriden in the "docker container run" command 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+An ENTRYPOINT allows you to configure a container that will run as an executable.
+You can override the ENTRYPOINT instruction using the docker run –entrypoint flag.
+
+The main purpose of a CMD is to provide defaults for an executing container. 
+These defaults can include an executable, or they can omit the executable, in which case you must specify an ENTRYPOINT instruction as well.
+
+If CMD is used to provide default arguments for the ENTRYPOINT instruction, 
+both the CMD and ENTRYPOINT instructions should be specified with the JSON array format.
+
+The CMD instruction has three forms:
+
+· CMD [“executable”,”param1″,”param2″] (exec form, this is the preferred form)
+· CMD [“param1″,”param2”] (as default parameters to ENTRYPOINT)
+· CMD command param1 param2 (shell form)

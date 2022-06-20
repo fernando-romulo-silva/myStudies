@@ -1,0 +1,58 @@
+Which of the following is true about docker image rm command?
+
+A)
+Remove dangling images.
+
+B)
+Remove unused images.
+
+C)
+Show the history of an image.
+
+D)
+Remove one or more images. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To remove one or more images, use the following command:
+
+$ docker image rm [OPTIONS] IMAGE [IMAGE…]
+
+https://docs.docker.com/engine/reference/commandline/image_rm/
+ 

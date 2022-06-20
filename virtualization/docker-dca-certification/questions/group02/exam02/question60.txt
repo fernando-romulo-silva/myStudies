@@ -1,0 +1,55 @@
+What is the purpose of the FROM directive?
+
+A)
+It pulls a file from an external source into the image.
+
+B)
+It sets the working directory of containers ran using the image.
+
+C)
+It indicates the build context.
+
+D)
+It sets a base image that can be used for subsequent instructions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. 
+As such, a valid Dockerfile must start with a FROM instruction.
+ 

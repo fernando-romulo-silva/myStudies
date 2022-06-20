@@ -1,0 +1,58 @@
+A docker file must always be named Dockerfile?
+
+A)
+FALSE
+
+B)
+TRUE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The default filename is Dockerfile (without an extension), and using the default can make various tasks easier while working with containers.
+However, you can name it whatever you like.
+For example, check the following output:
+
+$ docker build -f Myfile .
+ 

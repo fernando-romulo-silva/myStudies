@@ -1,0 +1,55 @@
+It is good practice to have more than one CMD instruction in the Docker file. 
+True or false?
+
+A) 
+True
+
+B) 
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+There can only be one CMD instruction in a Dockerfile. 
+If you list more than one CMD then only the last CMD will take effect.
+The main purpose of a CMD is to provide defaults for an executing container.

@@ -1,0 +1,58 @@
+What is the Dockerfile LABEL option used for?
+
+A)
+Tells Docker how to test a container to check that it is still working.
+
+B)
+Provide defaults for an executing container
+
+C)
+Label a container that will run as an executable
+
+D)
+Adds metadata to an image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The LABEL instruction adds metadata to an image. 
+A LABEL is a key-value pair. Example:
+
+LABEL version=”1.0″
+
+https://docs.docker.com/engine/reference/builder/#label

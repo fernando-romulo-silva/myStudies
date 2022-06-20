@@ -1,0 +1,57 @@
+Which docker command will display all top-level images available for containers to be instantiated from?
+
+A)
+docker list
+
+B)
+docker list all
+
+C)
+docker ps
+
+D)
+docker images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The default docker images will show all top-level images, their repository and tags, and their size.
+
+You can use –all, -a to show all images (default hides intermediate images)
+
+$ docker images [OPTIONS] [REPOSITORY[:TAG]]

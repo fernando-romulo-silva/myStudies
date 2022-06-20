@@ -1,0 +1,57 @@
+ARG variables are persisted into the built image the same as the ENV variables.
+
+A)
+FALSE
+
+B)
+TRUE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the –build-arg = flag.
+
+Unlike an ARG instruction, ENV values are always persisted in the built image.
+The variable expansion technique in this example allows you to pass arguments from the command line 
+and persist them in the final image by leveraging the ENV instruction.

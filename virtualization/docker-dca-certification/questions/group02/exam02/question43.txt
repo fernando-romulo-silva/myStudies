@@ -1,0 +1,64 @@
+Which of the below statements is false about WORKDIR instruction?
+
+A)
+It affects only the build and does not impact containers that run from the image.
+
+B)
+The WORKDIR instruction can resolve environment variables previously set using ENV.
+
+C)
+It can use both absolute and relative paths.
+
+D)
+The WORKDIR instruction can be used multiple times in a Dockerfile. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The WORKDIR instruction can be used multiple times in a Dockerfile.
+· If a relative path is provided, it will be relative to the path of the previous WORKDIR instruction.
+· If the WORKDIR doesn’t exist, it will be created even if it’s not used in any subsequent Dockerfile instruction.
+
+The WORKDIR instruction can resolve environment variables previously set using ENV. 
+You can only use environment variables explicitly set in the Dockerfile. 
+
+For example:
+
+ENV DIRPATH /path
+WORKDIR $DIRPATH/$DIRNAME
+RUN pwd

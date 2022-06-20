@@ -1,0 +1,54 @@
+Who is responsible to run the docker build command?
+
+A)
+docker cli
+
+B)
+docker engine
+
+C)
+docker daemon
+
+D)
+docker-machine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The build is run by the Docker daemon, not by the CLI.
+The first thing a build process does is send the entire context (recursively) to the daemon.

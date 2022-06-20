@@ -1,0 +1,54 @@
+It is good practice to use the root directory, /, as the PATH for building the docker image. 
+True or False?
+
+A)
+FALSE
+
+B)
+TRUE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+When building an image, do not use your root directory, /, 
+as the PATH as it causes the build to transfer the entire contents of your hard drive to the Docker daemon.

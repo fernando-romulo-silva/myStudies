@@ -1,0 +1,55 @@
+Which command can be used to upload an image to a registry?
+
+A)
+docker commit [OPTIONS] NAME[:TAG]
+
+B)
+docker upload [OPTIONS] NAME[:TAG]
+
+C)
+docker push [OPTIONS] NAME[:TAG]
+
+D)
+docker store [OPTIONS] NAME[:TAG] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To push an image or a repository to a registry use:
+
+$ docker image push [OPTIONS] NAME[:TAG]

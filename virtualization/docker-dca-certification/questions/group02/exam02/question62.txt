@@ -1,0 +1,57 @@
+Which of the Dockerfile directive executes any command in a new layer on top of the current image and commits the results?
+
+A)
+FROM
+
+B)
+CMD
+
+C)
+RUN
+
+D)
+ONBUILD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+In the Dockerfile context, The RUN instruction will execute any commands in a new layer on top of the current image and commit the results.
+
+Layering RUN instructions and generating commits conforms to the core concepts of Docker where commits are cheap and containers can be created 
+from any point in an image’s history, much like source control.
+ 

@@ -1,0 +1,55 @@
+Which of the following instructions can be used to specify variables that are available to the RUN instruction?
+
+A)
+ENV
+
+B)
+ARG
+
+C)
+Both ARG and ENV are valid 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+You can use an ARG or an ENV instruction to specify variables that are available to the RUN instruction.
+
+Environment variables defined using the ENV instruction always override an ARG instruction of the same name.

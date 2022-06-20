@@ -1,0 +1,57 @@
+Which of the following Dockerfile directive is used to add metadata to a docker image?
+
+A)
+ADD
+
+B)
+METADATA
+
+C)
+ARG
+
+D)
+LABEL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The LABEL instruction adds metadata to an image. 
+A LABEL is a key-value pair.
+Example:
+
+LABEL version=”1.0″

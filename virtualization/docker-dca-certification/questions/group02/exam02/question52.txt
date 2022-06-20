@@ -1,0 +1,63 @@
+What would be the output of the final pwd command of a container built from the following Dockerfile?
+
+FROM alpine:latest
+WORKDIR /a
+WORKDIR b
+WORKDIR c
+CMD [ ‘/bin/bash’, ‘pwd’ ]
+
+A)
+c
+
+B)
+b
+
+C)
+/a/b/c
+
+D)
+/a 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The WORKDIR instruction can be used multiple times in a Dockerfile.
+
+If a relative path is provided, it will be relative to the path of the previous WORKDIR instruction. 
+For example:
+
+WORKDIR /a
+WORKDIR b
+WORKDIR c
+RUN pwd
+
+The output of the final pwd command in this Dockerfile would be /a/b/c.

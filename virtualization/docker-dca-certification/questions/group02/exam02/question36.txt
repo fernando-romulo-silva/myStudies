@@ -1,0 +1,13 @@
+Which of the following docker command can remove an image, even if that image is used by a running container?
+
+A)
+docker remove [image name]
+
+B)
+docker rm [image name] --force
+
+C)
+docker rmi [image name] --force
+
+D)
+None of the answers is correct. 

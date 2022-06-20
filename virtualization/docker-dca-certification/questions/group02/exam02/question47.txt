@@ -1,0 +1,66 @@
+From a DevOps perspective, it is good practice to keep changes of an application in a version control system. 
+Which of the following will allow changes to a docker image to be maintained in a version control system?
+
+A)
+docker save
+
+B)
+A docker-compose.yaml file
+
+C)
+A docker file
+
+D)
+docker commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+It is better to use Dockerfiles to manage your images in a documented and maintainable way. 
+The Version Control can be used mainly for text-based files such as Dockerfiles, docker-compose.yml, and configuration files. 
+
+Small binaries can also be kept in the same version control. 
+
+Examples of version control are git, svn, Team Foundation Server, Azure DevOps, and Clear Case.
+
+----------------------
+
+To create a new image from a container’s changes use:
+$ docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+It can be useful to commit a container’s file changes or settings into a new image.
+This allows you to export a working dataset to another server.

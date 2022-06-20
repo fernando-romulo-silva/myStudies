@@ -1,0 +1,63 @@
+Which of the following is not how you create an efficient image via a Dockerfile?
+
+A)
+Sort multi-line arguments
+
+B)
+Avoid installing unnecessary packages
+
+C)
+Use multi-stage builds
+
+D)
+Combine multiple applications into a single container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+ 
+Best practices for writing Dockerfiles:
+· Create ephemeral containers
+· Understand build context
+· Pipe Dockerfile through stdin
+· Exclude with .dockerignore
+· Use multi-stage builds
+· Don’t install unnecessary packages
+· Decouple applications
+· Minimize the number of layers
+· Sort multi-line arguments
+· Leverage build cache

@@ -1,0 +1,59 @@
+Which command can you use to display the layers of a docker image?
+
+A)
+docker image history
+
+B)
+docker layers
+
+C)
+docker image layers
+
+D)
+docker image info
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+You can examine all the layers in an image by using the docker image history command. 
+It will display the following:
+
+· Abbreviated layer ID
+· Age of the layer
+· Initial command of the creating container
+· Total file size of that layer

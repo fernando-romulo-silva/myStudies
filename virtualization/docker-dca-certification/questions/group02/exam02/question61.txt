@@ -1,0 +1,68 @@
+Which of the following commands can be used to find the architecture and operating system an image is compatible with?
+
+A)
+docker image ls
+
+B)
+docker image inspect --format '{?{.Architecture}} {?{.Os}}'
+
+C)
+docker image inspect --filter '{?{.Architecture}} {?{.Os}}'
+
+D)
+docker image info
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker inspect provides detailed information on constructs controlled by Docker.
+By default, docker inspect will render results in a JSON array.
+
+To display detailed information on one or more images use:
+$ docker image inspect [OPTIONS] IMAGE [IMAGE…]
+
+The options are:
+–format , -f
+
+Format the output using the given Go template
+
+For the most part, you can pick out any field from the JSON in a fairly straightforward manner using the –format parameter.
+
+$ docker inspect –format='{{.LogPath}}’ $INSTANCE_ID
+
+$ docker image inspect --format '{{.Architecture}} {{.Os}}' nginx
