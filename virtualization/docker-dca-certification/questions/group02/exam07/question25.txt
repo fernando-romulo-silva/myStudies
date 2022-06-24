@@ -1,0 +1,56 @@
+Which of the following provisions of Docker supports host networking?
+
+A)
+Docker Desktop for Mac
+
+B) 
+Docker EE for Windows Server 
+
+C)
+Docker for Linux Distributions 
+
+D)
+Docker Desktop for Windows   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The host networking driver only works on Linux hosts, and is not supported on Docker Desktop for Mac, 
+Docker Desktop for Windows, or Docker EE for Windows Server. 
+
+You can also use a host network for a swarm service, by passing --network host to the docker service create command.

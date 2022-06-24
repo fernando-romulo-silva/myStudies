@@ -1,0 +1,55 @@
+Which of the following Dockerfile instructions confirms Docker’s core concepts of source control and cheap commits?
+
+A)
+RUN
+
+B) 
+CMD
+
+C) 
+ARG
+
+D) 
+FROM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Layering RUN instructions and generating commits conforms to the core concepts 
+of Docker where commits are cheap and containers can be created from any point 
+in an image’s history, much like source control.

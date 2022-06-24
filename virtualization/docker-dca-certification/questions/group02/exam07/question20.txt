@@ -1,0 +1,58 @@
+Which of the following Dockerfile instructions informs Docker about the port on which container is listening? 
+
+A)
+EXPOSE
+
+B) 
+ENV
+
+C) 
+PORT
+
+D) 
+LABEL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A  
+
+The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. 
+You can specify whether the port listens on TCP or UDP, and the default is TCP if the protocol is not specified.
+
+The EXPOSE instruction does not actually publish the port. 
+It functions as a type of documentation between the person who builds the image and the person who runs the container, 
+about which ports are intended to be published. 

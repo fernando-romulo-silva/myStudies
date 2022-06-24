@@ -1,0 +1,55 @@
+Which of the following units of the swarm determines on which node a task will be scheduled?
+
+A)
+Scheduler
+
+B)   
+Dispatcher
+
+C) 
+Allocator
+
+D) 
+Orchestrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+To deploy your application to a swarm, you submit a service definition to a manager node. 
+
+The manager node dispatches units of work called tasks to worker nodes.  

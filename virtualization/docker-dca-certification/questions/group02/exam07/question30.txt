@@ -1,0 +1,55 @@
+The more number of managers in a swarm cluster, The more chances of better performance and scalability
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Adding more manager nodes in a swarm cluster can increase the updation time for the swarm cluster, 
+which can lead to a compromise in write performance of swarm.
+  

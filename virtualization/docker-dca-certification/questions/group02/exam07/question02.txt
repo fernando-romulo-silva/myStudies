@@ -1,0 +1,63 @@
+What is the final outcome of a container created from the following Dockerfile? 
+
+FROM ubutu:trusty
+RUN apt-get update -y
+ENTRYPOINT [“/bin/ping”,”-c”,”6″] 
+CMD [“localhost”]
+
+A)
+Container will ping localhost for 6 times and will return to its shell.
+
+B)
+Container will remain in created state.
+
+C)
+Container will ping the localhost for 6 times and will stop running.
+
+D)
+Container will get stuck in infinite pinging loop.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Here, the container should run as executable to ping the localhost exactly 6 times. 
+
+For that, ENTRYPOINT instruction is defined in exec form with “/bin/ping” path as an executable. 
+
+We have two parameters for this executable: -c flag and decimal count 6. 
+
+It means the ping operation will be performed exactly 6 times by the container. 
+
+CMD will provide the default arguments (in this case “localhost”) for the executable in ENTRYPOINT instruction. 
+
+After pinging the localhost for 6 times, the container will gracefully stop as the CMD and ENTRYPOINT instructions have been successfully performed.

@@ -1,0 +1,59 @@
+Which of the following commands is used by worker nodes to leave swarm cluster gracefully?
+
+A)
+docker swarm exit
+
+B)
+docker swarm leave
+
+C)
+docker node rm worker
+
+D)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+To remove a node from the swarm use the following on the node itself:
+
+$ docker swarm leave [OPTIONS]
+
+When you run this command on a worker itself, that worker leaves the swarm. 
+
+   

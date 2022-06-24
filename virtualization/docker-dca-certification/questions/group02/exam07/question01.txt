@@ -1,0 +1,57 @@
+Which of the following commands is used to remove dangling docker images?
+
+A)
+docker rmi
+
+B)
+docker image prune
+
+C)
+docker rm
+
+D)
+docker image remove 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The docker image prune command allows you to clean up unused images. 
+By default, docker image prune only cleans up dangling images. 
+
+A dangling image is one that is not tagged and is not referenced by any container

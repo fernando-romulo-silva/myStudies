@@ -51,4 +51,5 @@ docker service ps
 Answer D
 
 To list the tasks that are running as part of the specified services use:
-docker service ps [OPTIONS] SERVICE [SERVICE…]
+
+$ docker service ps [OPTIONS] SERVICE [SERVICE…]

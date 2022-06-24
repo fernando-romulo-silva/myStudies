@@ -1,0 +1,56 @@
+Which of the following commands is used by nodes to join the swarm cluster as worker node?
+
+A)
+docker swarm --join --token
+
+B) 
+None of the above
+
+C) 
+docker swarm join --token
+
+D)
+docker swarm join worker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The node joins as a manager node or worker node based upon the token you pass with the –token flag. 
+If you pass a manager token, the node joins as a manager. 
+If you pass a worker token, the node joins as a worker.
+ 

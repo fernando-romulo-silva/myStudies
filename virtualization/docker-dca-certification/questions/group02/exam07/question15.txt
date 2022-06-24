@@ -1,0 +1,60 @@
+Which of the following units of the swarm instructs worker to run a task?
+
+A)
+Allocator
+
+B) 
+Orchestrator
+
+C) 
+Dispatcher
+
+D) 
+Scheduler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+A task is the atomic unit of scheduling within a swarm. 
+When you declare a desired service state by creating or updating a service, 
+the orchestrator realizes the desired state by scheduling tasks.
+
+For instance, you define a service that instructs the orchestrator to keep three instances of an HTTP listener running at all times. 
+The orchestrator responds by creating three tasks. 
+Each task is a slot that the SCHEDULER fills by spawning a container.
+    

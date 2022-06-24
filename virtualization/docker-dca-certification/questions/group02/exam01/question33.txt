@@ -50,4 +50,24 @@ docker API > orchestrator > dispatcher > allocator > orchestrator
 
 Answer A
 
-Tasks and scheduling
+docker API: Accepts command and creates service object
+   
+   |
+   V
+   
+orchestrator: Reconciliation loop that creates task for services objects
+
+   |
+   V
+
+allocator: allocates ip addresses to tasks.
+
+   |
+   V
+
+dispacher: assigns task to nodes.
+
+   |
+   V
+
+scheduler: introducts a worker to run a task. 

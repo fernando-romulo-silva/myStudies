@@ -51,5 +51,7 @@ docker node rm worker
 Answer B
 
 To remove a node from the swarm use the following on the node itself:
-docker swarm leave [OPTIONS]
+
+$ docker swarm leave [OPTIONS]
+
 When you run this command on a worker itself, that worker leaves the swarm. 

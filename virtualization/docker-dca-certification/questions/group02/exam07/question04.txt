@@ -1,0 +1,55 @@
+Which of the following is the default network driver for docker containers? 
+
+A)
+host
+
+B)
+docker_gwbridge
+
+C)
+bridge
+
+D)
+overlay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The default network driver is bridge. 
+If you don’t specify a driver, this is the type of network you are creating. 
+Bridge networks are usually used when your applications run in standalone containers that need to communicate.
