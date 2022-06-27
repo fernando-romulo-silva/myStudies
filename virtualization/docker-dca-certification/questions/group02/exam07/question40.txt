@@ -1,0 +1,60 @@
+Where does the docker daemon persist all docker related data on host machine?
+
+A)
+/etc/docker
+
+B)
+none
+
+C)
+/var/lib/docker-ce
+
+D)
+/var/lib/docker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The Docker daemon persists all data in a single directory. 
+This tracks everything related to Docker, including containers, images, volumes, service definition, and secrets.
+
+By default this directory is:
+
+/var/lib/docker on Linux.
+
+C:\ProgramData\docker on Windows 

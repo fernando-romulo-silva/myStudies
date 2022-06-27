@@ -1,0 +1,53 @@
+Which of the following is NOT Docker Certified Infrastructure?
+
+A)
+VMware
+
+B)
+DigitalOcean
+
+C)
+Amazon Web Services
+
+D) 
+Microsoft Azure
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker's certified infrastructure includes: AWS, Azure, CentOS, Oracle Linux, Red Hat Enterprise Linux (RHEL), SUSE, Ubuntu and Windows. 

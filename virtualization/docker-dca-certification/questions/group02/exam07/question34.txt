@@ -1,0 +1,54 @@
+Which of the following are the supported team permission levels in Docker Trusted Registry?
+(select two)
+
+A)
+Read only
+
+B)
+none of the above
+
+C)
+Manager
+
+D)
+Read & Write
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A and D
+ 
+Three permission levels are available in DTR: read, read-write, and admin
+ 

@@ -1,0 +1,21 @@
+Which of the following Dockerfile instructions is used to add metadata to the docker image?
+
+A)
+LABEL
+
+B) 
+ADD
+
+C) 
+ARG
+
+D) 
+METADATA
+
+Answer A
+
+The LABEL instruction adds metadata to an image. 
+A LABEL is a key-value pair.
+Example:
+
+LABEL version=”1.0″

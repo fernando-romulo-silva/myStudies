@@ -1,0 +1,56 @@
+Which docker network is used to connect one or more docker daemons of participating nodes in swarm cluster?
+
+A)
+bridge
+
+B)
+ingress
+
+C)
+docker_gwbridge
+
+D) 
+overlay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The docker_gwbridge is a virtual bridge that connects the overlay networks (including the ingress network) 
+to an individual Docker daemon’s physical network. Docker creates it automatically when you initialize a swarm or join a Docker host to a swarm, 
+but it is not a Docker device. 
+  

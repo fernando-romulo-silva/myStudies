@@ -62,10 +62,10 @@ The currently supported filters are:
 * is-official (boolean – true or false) – is the image official or not
 
 $ docker search --filter is-official=true --filter stars=30 ubuntu
-NAME                 DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+NAME                 DESCRIPTION                                     STARS     OFFICIAL
 ubuntu               Ubuntu is a Debian-based Linux operating sys…   14461     [OK]       
 websphere-liberty    WebSphere Liberty multi-architecture images …   286       [OK]       
 ubuntu-upstart       DEPRECATED, as is Upstart (find other proces…   112       [OK]       
 neurodebian          NeuroDebian provides neuroscience research s…   91        [OK]       
 open-liberty         Open Liberty multi-architecture images based…   53        [OK]       
-ubuntu-debootstrap   DEPRECATED; use "ubuntu" instead                46        [OK
+ubuntu-debootstrap   DEPRECATED; use "ubuntu" instead                46        [OK]

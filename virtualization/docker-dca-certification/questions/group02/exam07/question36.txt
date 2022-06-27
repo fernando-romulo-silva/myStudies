@@ -1,0 +1,71 @@
+You want to search for a BusyBox official Docker Image with minimum rating of 30 stars. 
+Which of the following commands will provide you the correct results?
+
+A)
+docker search --filter “is-official” --filer “stars=30” busybox
+
+B)
+docker search --filter “is-official=true, stars=30” busybox
+
+C)
+docker search --filter “is-official=true” --filter “stars=30” busybox
+
+D)
+docker search --filter “is-official=True” --filter “stars=30” busybox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+To search the Docker Hub for images use:
+$ docker search [OPTIONS] TERM
+
+The filtering flag (-f or –filter) format is a key=value pair. 
+If there is more than one filter, then pass multiple flags (e.g. –filter is-automated=true –filter stars=3)
+
+The currently supported filters are:
+* stars (int – number of stars the image has)
+* is-automated (boolean – true or false) – is the image automated or not
+* is-official (boolean – true or false) – is the image official or not
+
+$ docker search --filter is-official=true --filter stars=30 ubuntu
+NAME                 DESCRIPTION                                     STARS     OFFICIAL
+ubuntu               Ubuntu is a Debian-based Linux operating sys…   14461     [OK]       
+websphere-liberty    WebSphere Liberty multi-architecture images …   286       [OK]       
+ubuntu-upstart       DEPRECATED, as is Upstart (find other proces…   112       [OK]       
+neurodebian          NeuroDebian provides neuroscience research s…   91        [OK]       
+open-liberty         Open Liberty multi-architecture images based…   53        [OK]       
+ubuntu-debootstrap   DEPRECATED; use "ubuntu" instead                46        [OK]
