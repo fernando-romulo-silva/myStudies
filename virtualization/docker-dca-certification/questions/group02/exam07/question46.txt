@@ -1,0 +1,58 @@
+Which of the following network drivers connects the container's network stack directly to Docker Host?
+
+A)
+overlay
+
+B)
+bridge
+
+C) 
+host
+
+D)
+macvlan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+If you use the host network mode for a container, that container’s network stack is not isolated from the Docker host 
+(the container shares the host’s networking namespace), and the container does not get its own IP-address allocated. 
+
+For instance, if you run a container which binds to port 80 and you use host networking, 
+the container’s application is available on port 80 on the host’s IP address.
+  

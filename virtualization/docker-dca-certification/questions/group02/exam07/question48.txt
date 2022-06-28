@@ -1,0 +1,58 @@
+Task is a unidirectional mechanism. 
+True or False?
+
+A)
+TRUE
+
+B)
+FALSE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+A task is a one-directional mechanism.
+
+This means that it progresses monotonically through a series of states: assigned, prepared, running, etc. 
+
+If the task fails the orchestrator removes the task and its container and then creates a new task to replace 
+it according to the desired state specified by the service. 

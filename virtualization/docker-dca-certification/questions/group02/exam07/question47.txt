@@ -1,0 +1,58 @@
+You have a running Ubuntu Container with bash as its default command. 
+Copy a file called “services.txt” to the tmp directory of the container. 
+Navigate inside the container and delete the /tmp directory. 
+Exit from the container and run docker diff command. 
+Which of the following would be the output of it (docker diff command)?
+
+A)
+?A /root/.bash_history C /root D /tmp
+
+B)
+C /tmp A /tmp/service.txt D /tmp
+
+C)
+C /root A /root/.bash_history D /tmp
+
+D)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+“A” symbol is used when a file or directory was ADDED. 
+
+“C” symbol is used when a file or directory was CHANGED. 
+
+“D” symbol is used when a file or directory was DELETED.
+ 

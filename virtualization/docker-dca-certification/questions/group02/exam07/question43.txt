@@ -1,0 +1,56 @@
+You want to run an nginx web-server container as a background process. 
+Make sure that the container’s port 80 is mapped to port 8080 on local host machine. 
+As the final output, you should be able to access the default landing page of nginx web-server. 
+Which of the following is the correct command for it?
+
+A)
+docker run -itd --name web-server -p 8080:80 nginx:latest
+
+B)
+docker run -itd --name web-server -P nginx:latest
+
+C) 
+docker run --name web-server -p 8080:80 nginx:latest
+
+D)
+docker run -itd --name web-server -p 80:8080 nginx:latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The container named “web-server” will run as a background process (-d), with its STDIN open (-i), and will have a pseudo-TTY (-t). 
+The “-p” flag will make sure that localhost’s port 8080 is mapped with container’s port 80. 
+And at last, mention the name of the official nginx web-server Docker Image and run the command.
+  
