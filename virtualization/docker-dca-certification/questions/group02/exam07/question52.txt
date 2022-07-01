@@ -1,0 +1,57 @@
+Containers connected to a default bridge network do not forward their network traffic to the outside world.
+
+A)
+TRUE
+
+B)
+FALSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+By default, traffic from containers connected to the default bridge network is not forwarded to the outside world. 
+To enable forwarding, you need to change two settings. 
+ 
+
+ 

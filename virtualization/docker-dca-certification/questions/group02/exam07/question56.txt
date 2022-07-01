@@ -1,0 +1,61 @@
+The output of the following docker run command returned non-zero exit code. 
+What could be the possible reason?
+
+$ docker run –foo alpine echo $?
+# flag provided but not defined: –foo
+See ‘docker run –help’.
+125
+
+A)
+The container is Out-of-memory.
+
+B)
+The container’s process has been terminated by CTRL+C.
+
+C)
+The default command of the container could not be invoked.
+
+D)
+There is an error with docker daemon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Exit Status
+The exit code from docker run gives information about why the container failed to run or why it exited. 
+When docker run exits with a non-zero code, the exit codes follow the chroot standard, see below:
+
+125 if the error is with Docker daemon itself
+
+126 if the contained command cannot be invoked
+
+127 if the contained command cannot be found

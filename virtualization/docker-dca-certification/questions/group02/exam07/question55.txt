@@ -1,0 +1,58 @@
+Which of the following ways is not used for container identification?
+
+A)
+Container name
+
+B)
+UUID long identifier
+
+C)
+UUID short identifier
+
+D)
+Uniform Resource Identifier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Container identification
+ 
+Identifier type 	    Example value
+UUID long identifier 	“f78375b1c487e03c9438c729345e54db9d20cfa2ac1fc3494b6eb60872e74778”
+UUID short identifier 	“f78375b1c487”
+Name                 	“evil_ptolemy”

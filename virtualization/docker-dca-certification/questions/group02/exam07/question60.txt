@@ -1,0 +1,55 @@
+Which of the following commands is used to display the total disk space used by docker daemon?
+
+A)
+docker stats
+
+B)
+dockerd info
+
+C)
+docker disk use
+
+D)
+docker system df
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The docker system df command displays information regarding the amount of disk space used by the docker daemon.
+
+
