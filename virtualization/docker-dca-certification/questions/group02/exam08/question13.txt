@@ -1,0 +1,54 @@
+The overlay storage driver only works with 2 layers: lowerdir and upperdir.
+
+A)
+True
+
+B)
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+OverlayFS refers to the lower directory as lowerdir and the upper directory a upperdir. 
+The unified view is exposed through its own directory called merged.

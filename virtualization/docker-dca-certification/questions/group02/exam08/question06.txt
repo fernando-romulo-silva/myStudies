@@ -50,7 +50,6 @@ docker image prune --all
 
 Answer B
 
-If an image has one or more tags referencing it, you must remove all of them before the image is removed or you can use the -f flag 
-and specify the image’s short or long ID, then this command untags and removes all images that match the specified ID.
-
-$ docker rmi -f fd484f19954f
+If an image has one or more tags referencing it, 
+you must remove all of them before the image is removed or you can use the -f flag and specify the image’s short or long ID, 
+then this command untags and removes all images that match the specified ID.

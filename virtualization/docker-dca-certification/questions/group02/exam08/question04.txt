@@ -1,5 +1,4 @@
 Which of the following sockets are used by docker daemon to listen to Docker Engine API requests?
-(select three)
 
 A)
 tcp
@@ -11,7 +10,8 @@ C)
 unix
 
 D)
-http 
+http
+
 
 
 
@@ -50,6 +50,5 @@ http
 
 Answers A, B and C
 
-Daemon socket option
-
 The Docker daemon can listen for Docker Engine API requests via three different types of Socket: unix, tcp, and fd.
+ 

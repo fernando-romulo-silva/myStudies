@@ -1,0 +1,54 @@
+Docker configs are encrypted and stored inside the container’s RAM.
+
+A)
+True
+
+B)
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Configs operate in a similar way to secrets, except that they are not encrypted at rest 
+and are mounted directly into the container’s filesystem without the use of RAM disks.

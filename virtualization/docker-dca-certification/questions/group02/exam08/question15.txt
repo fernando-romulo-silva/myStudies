@@ -1,0 +1,56 @@
+Which of the following is the default AppArmor security profile for containers in Docker?
+
+
+A)
+docker-app
+
+B)
+docker-secure
+
+C)
+docker-default
+
+D)
+docker/apparmor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+AppArmor (Application Armor) is a Linux security module that protects an operating system and its applications from security threats. 
+Docker automatically generates and loads a default profile for containers named docker-default.
+The docker-default profile is the default for running containers. 
+ 

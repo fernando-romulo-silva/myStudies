@@ -1,0 +1,62 @@
+Which of the following commands is used to update the container’s configuration dynamically?
+
+A)
+docker update
+
+B)
+docker container upgrade
+
+C)
+docker config --update
+
+D)
+docker settings update
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The docker update command dynamically updates container configuration. 
+You can use this command to prevent containers from consuming too many resources from their Docker host. 
+
+$ docker update [OPTIONS] CONTAINER [CONTAINER...]
+
+Ex:
+
+$ docker update --cpu-shares 512 abebf7571666
+
+$ docker update --cpu-shares 512 -m 300M abebf7571666 hopeful_morse
