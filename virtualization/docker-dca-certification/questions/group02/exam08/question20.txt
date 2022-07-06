@@ -1,0 +1,55 @@
+Which of the following commands is used to schedule swarm workloads on a node?
+
+A)
+docker node update \ --label-add com.docker.orchestrator.swarm=true
+
+B)
+docker node update \ --label-add com.docker.ucp.orchestrator.swarm=true
+
+C)
+docker node update \ --label-add com.docker.orchestrator.ucp.swarm=true
+
+D)
+docker node update \ --add-label com.docker.orchestrator.ucp.swarm=true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+ 
+To schedule Swarm workloads on a node:
+
+docker node update --label-add com.docker.ucp.orchestrator.swarm=true <node-id>

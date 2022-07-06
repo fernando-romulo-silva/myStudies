@@ -1,0 +1,53 @@
+By default, how much time does a node take to renew its certificate in a swarm cluster?
+
+A)
+12 days
+
+B)
+20 days
+
+C)
+60 days
+
+D)
+90 days
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+By default, each node in the swarm renews its certificate every three months (90). 

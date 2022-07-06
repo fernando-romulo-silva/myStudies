@@ -1,0 +1,59 @@
+Which of the following commands is used to force a worker-1 node to leave the swarm cluster?
+
+A)
+docker swarm leave --force
+
+B)
+docker swarm leave --force worker-1
+
+C)
+docker swarm exit --force
+
+D)
+docker swarm exit --force worker-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+When you run this command on a worker, that worker leaves the swarm.
+
+$ docker swarm leave
+
+You can use the --force option on a manager to remove it from the swarm. 
+ 
+$ docker swarm leave --force
