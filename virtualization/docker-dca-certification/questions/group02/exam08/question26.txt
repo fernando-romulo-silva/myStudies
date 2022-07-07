@@ -1,0 +1,66 @@
+Which of the following endpoints exposed by DTR is used to monitor the health of DTR replicas?
+
+A)
+/_ping
+
+B)
+/_connect
+
+C)
+/_staus
+
+D)
+/_healthcheck
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+ 
+So, you can use HEALTCHECK CMD curl --fail http://localhost/health || exit 1 to check the health
+
+Docker Trusted Registry is a Dockerized application. 
+To monitor it, you can use the same tools and techniques you’re already using to monitor other containerized applications running on your cluster. 
+One way to monitor DTR is using the monitoring capabilities of Docker Universal Control Plane.
+
+DTR also exposes several endpoints you can use to assess if a DTR replica is healthy or not:
+
+/_ping: Checks if the DTR replica is healthy, and returns a simple json response. 
+This is useful for load balancing or other automated health check tasks.
+
+/nginx_status: Returns the number of connections being handled by the NGINX front-end used by DTR.
+
+/api/v0/meta/cluster_status: Returns extensive information about all DTR replicas.

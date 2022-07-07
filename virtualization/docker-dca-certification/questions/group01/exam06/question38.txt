@@ -52,7 +52,7 @@ d) /nginx/health
 
 
 
-Answer 'a'
+Answer 'A'
 
 So, you can use HEALTCHECK CMD curl --fail http://localhost/health || exit 1 to check the health
 
@@ -62,7 +62,8 @@ One way to monitor DTR is using the monitoring capabilities of Docker Universal 
 
 DTR also exposes several endpoints you can use to assess if a DTR replica is healthy or not:
 
-/_ping: Checks if the DTR replica is healthy, and returns a simple json response. This is useful for load balancing or other automated health check tasks.
+/_ping: Checks if the DTR replica is healthy, and returns a simple json response. 
+This is useful for load balancing or other automated health check tasks.
 
 /nginx_status: Returns the number of connections being handled by the NGINX front-end used by DTR.
 

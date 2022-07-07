@@ -1,0 +1,53 @@
+What is a Pause Container?
+
+A)
+An emergency backup container used to backup pod’s state while pod approaches an error state.
+
+B)
+A monitor container used to monitor and log the container’s boot process inside a pod.
+
+C)
+An empty container which holds cgroups, reservations, namespaces of a pod before its individual container is created.
+
+D)
+A container state between container creation state and before the container running state.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+ 
+The 'pause' container is a container which holds the network namespace for the pod.

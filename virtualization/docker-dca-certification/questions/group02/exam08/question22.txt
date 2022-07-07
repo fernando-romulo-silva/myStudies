@@ -1,0 +1,54 @@
+The repository’s name should be ________ to ________ characters long.
+
+A)
+1 to 255 characters
+
+B)
+2 to 255 characters
+
+C)
+3 to 255 characters
+
+D)
+4 to 255 characters 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The repository name needs to be unique in that namespace, can be two to 255 characters, 
+and can only contain lowercase letters, numbers, hyphens (-), and underscores (_).

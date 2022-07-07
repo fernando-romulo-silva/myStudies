@@ -1,0 +1,54 @@
+Which of the following licences is followed by the official distribution of Docker?
+
+A)
+MIT software licence
+
+B)
+Creative Commons
+
+C)
+BSD
+
+D)
+Apache 2.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Copyright 2013-2017 Docker, Inc. Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License.
