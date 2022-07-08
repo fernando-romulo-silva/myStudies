@@ -1,0 +1,55 @@
+By default, Docker runs through a non-networked UNIX socket.
+
+A)
+True
+
+B)
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+By default, Docker runs through a non-networked UNIX socket. 
+It can also optionally communicate using SSH or a TLS (HTTPS) socket.
+

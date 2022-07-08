@@ -1,0 +1,57 @@
+Is it possible to join a new node to a swarm cluster after removing Universal Control Plane from the cluster?
+
+A)
+Yes, you can go to swarm manager terminal and use docker swarm join command.
+
+B)
+No, because UCP’s removal blocks any other access to swarm cluster.
+
+C)
+Yes, you can reinstall UCP on the cluster and then join the node.
+
+D)
+No, because the cluster will be unstable for any new process initialization.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Once the uninstall command finishes, UCP is completely removed from all the nodes in the cluster. 
+You don't need to run the command again from other nodes.
+
+If you wish to remove a single node from the UCP cluster, you should instead Remove that node from the cluster. 
+ 

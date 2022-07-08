@@ -1,0 +1,61 @@
+Which of the following keys is not a Docker Trusted Content key?
+
+A)
+tagging keys
+
+B)
+offline keys
+
+C)
+server-managed keys
+
+D)
+CA keys
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Trust for an image tag is managed through the use of signing keys. 
+A key set is created when an operation using DCT is first invoked. 
+A key set consists of the following classes of keys:
+
+* an offline key that is the root of DCT for an image tag
+
+* repository or tagging keys that sign tags
+
+* server-managed keys such as the timestamp key, which provides freshness security guarantees for your repository 

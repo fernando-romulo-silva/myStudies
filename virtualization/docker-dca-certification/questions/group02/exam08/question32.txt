@@ -1,0 +1,54 @@
+Which of the following is the core component of the Universal Control Plane?
+
+A)
+ucp-controller
+
+B)
+ucp-manager
+
+C)
+ucp-worker
+
+D)
+ucp-agent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+When you deploy UCP, it starts running a globally scheduled service called ucp-agent. 
+This service monitors the node where it’s running and starts and stops UCP services, based on whether the node is a manager or a worker node.
