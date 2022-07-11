@@ -1,0 +1,53 @@
+Services using the routing mesh are running in the ___________.
+
+A)
+Swarm mode
+
+B)
+Virtual IP mode
+
+C)
+Global mode
+
+D)
+DNSRR mode 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The service mesth use load balancer with the routing mesh, vip (virtual IP Mode) 

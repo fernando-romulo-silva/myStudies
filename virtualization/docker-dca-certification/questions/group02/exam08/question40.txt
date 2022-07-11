@@ -1,0 +1,61 @@
+Which of the following commands is used to create an overlay network for standalone containers?
+
+A)
+docker network create -d overlay test-overlay
+
+B)
+docker network create -d overlay --attachable test-overlay
+
+C)
+docker network create --ingress test-overlay
+
+D)
+docker swarm create -d overlay test-service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Creates a new network. The DRIVER accepts bridge or overlay which are the built-in network drivers.
+
+$ docker network create [OPTIONS] NETWORK
+
+The --attachable parameter enable manual container attachment, that permits swarm services or 
+standalone containers to communicate with other standalone containers running on other Docker daemons
+
+$ docker network create --driver=overlay --attachable core-infra
+ 

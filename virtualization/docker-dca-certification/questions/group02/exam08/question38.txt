@@ -1,0 +1,61 @@
+Which of the following flags is used to change the container’s default hostname?
+
+
+A)
+--name
+
+B)
+--ip
+
+C)
+--hostname
+
+D)
+--rename
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The --hostname flag only changes the hostname inside your container.
+
+This may be needed if your application expects a specific value for the hostname.
+ 
+It does not change DNS outside of docker, nor does it change the networking isolation, 
+so it will not allow others to connect to the container with that name.
+
+$ docker run --hostname test --ip 10.1.2.3 ubuntu:14.04  
+ 
