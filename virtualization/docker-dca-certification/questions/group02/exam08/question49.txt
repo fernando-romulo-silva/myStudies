@@ -1,0 +1,55 @@
+There is a DTR cluster running 6 DTR replicas. 
+Out of which, 1 replica is behaving a bit odd than its desired state. 
+You have been assigned the task to determine whether this cluster is healthy or not. 
+Out of the following options, what will be your verdict?
+
+A)
+Cluster is unhealthy because the majority of replicas are not working properly.
+
+B)
+Cluster is healthy but it has lost its quorum.
+
+C)
+Cluster is healthy because the majority of replicas are working fine.
+
+D)
+Cluster is unhealthy because one replica is not working properly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+When one or more DTR replicas are unhealthy but the overall majority (n/2 + 1) is healthy and able to communicate with one another, 
+your DTR cluster is still functional and healthy.
+ 

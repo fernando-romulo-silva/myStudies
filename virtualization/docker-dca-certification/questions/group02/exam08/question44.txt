@@ -1,0 +1,58 @@
+Which of the following is the default mount point for a decrypted secret in a Windows container?
+
+A)
+C:\ProgramData\Docker\secrets
+
+B)
+C:\Users\Docker\secrets
+
+C)
+C:\Docker\secrets
+
+D)
+C:\Users\internal\Docker\secrets 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Since Windows does not support non-directory file bind-mounts. 
+Instead, secrets for a container are all mounted in C:\ProgramData\Docker\internal\secrets within the container. 
+Symbolic links are used to point from there to the desired target of the secret within the container

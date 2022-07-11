@@ -1,0 +1,57 @@
+Which of the following networks is responsible for communication between DTR components running on different nodes?
+
+A)
+dtr-br
+
+B)
+dtr-macvlan
+
+C)
+dtr-ol
+
+D)
+dtr-host
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+dtr-ol 
+
+Allows containers running on different nodes to communicate. 
+This network is used in high-availability installations, to allow Etcd and RethinkDB containers to replicate their data.
+Allows containers running on different nodes to communicate. 

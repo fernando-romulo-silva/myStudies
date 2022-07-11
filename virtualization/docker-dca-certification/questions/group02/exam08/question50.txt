@@ -1,0 +1,58 @@
+Which of the following security frameworks is used as the underlying framework in Notary to create, 
+manage, and distribute the metadata to ensure the integrity and origin of the content?
+
+A)
+The Operator Framework (TOF)
+
+B)
+The Update Framework (TUF)
+
+C)
+Flux
+
+D)
+Packer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The Update Framework (TUF) helps developers maintain the security of software update systems, 
+providing protection even against attackers that compromise the repository or signing keys.
+
+TUF is hosted by the Linux Foundation as part of the Cloud Native Computing Foundation (CNCF) 
+and is used in production by various tech companies and open source organizations.
+ 
