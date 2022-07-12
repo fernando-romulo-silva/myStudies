@@ -1,0 +1,64 @@
+Which of the following commands is used to target a specific build stage out of multi-stage builds?
+
+A)
+docker build --target -t
+
+B)
+docker build --source -t
+
+C)
+docker build --build-stage -t
+
+D)
+docker build --tag -t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+hen building a Dockerfile with multiple build stages, 
+--target can be used to specify an intermediate build stage by name as a final stage for the resulting image. 
+Ex:
+
+FROM debian AS build-env
+# ...
+
+FROM alpine AS production-env
+# ...
+
+
+$ docker build -t mybuildimage --target build-env .

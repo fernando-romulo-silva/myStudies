@@ -1,0 +1,53 @@
+Which of the following ports is generally used for Kubernetes Networking in UCP?
+
+
+A)
+TCP 443
+
+B)
+TCP 179
+
+C)
+TCP 4789
+
+D)
+TCP 6444 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+TCP 6444 ManagementPort for Kubernetes API reverse proxy managers, workers
