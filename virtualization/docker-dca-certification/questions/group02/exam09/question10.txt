@@ -1,0 +1,54 @@
+What will be the outcome of docker cp command, if the SRC_PATH is a directory and the DEST_PATH is a file?
+
+A)
+The contents in DEST_PATH will be overwritten by the source file’s content.
+
+B)
+The contents of each file of SRC_PATH will be copied into separate files into the DEST_PATH.
+
+C)
+DEST_PATH will be created as a directory and all the contents of the SRC_PATH will be copied into this directory.
+
+D)
+An error will occur that it cannot copy a directory to a file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+ 
+Error condition: cannot copy a directory to a file
+ 

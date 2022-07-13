@@ -1,0 +1,55 @@
+In which of the following networks does port mapping not take effect?
+
+A)
+macvlan
+
+B)
+overlay
+
+C)
+bridge
+
+D)
+host
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Given that the container does not have its own IP-address when using host mode networking, 
+port-mapping does not take effect, and the -p, --publish, -P, and --publish-all option are ignored, producing a warning instead:
+ 

@@ -1,0 +1,55 @@
+The container is assigned a single IP address for every Docker network it connects to.
+
+A)
+True
+
+B)
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+The container is assigned a separate IP address for every Docker network it connects to. 
+The IP address is assigned from the pool assigned to the network, so the Docker daemon effectively acts as a DHCP server for each container.
+

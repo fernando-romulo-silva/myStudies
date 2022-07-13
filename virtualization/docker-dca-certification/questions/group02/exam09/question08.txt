@@ -1,0 +1,54 @@
+What is the default value of the delay between two reset occurrences of a container?
+
+A)
+300 ms
+
+B)
+400 ms
+
+C)
+100 ms
+
+D)
+1000 ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+If a container is successfully restarted (the container is started and runs for at least 10 seconds), the delay is reset to its default value of 100 ms.
+ 

@@ -1,0 +1,55 @@
+By default, How many IP addresses can be allocated to a single overlay network?
+
+A)
+256
+
+B)
+512
+
+C)
+64
+
+D)
+128
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+You should create overlay networks with /24 blocks (the default), which limits you to 256 IP addresses, 
+when you create networks using the default VIP-based endpoint-mode. 
+ 

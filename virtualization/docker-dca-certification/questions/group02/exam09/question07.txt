@@ -1,0 +1,56 @@
+Which of the following JSON encoding properties specifies the default format for the output of docker ps command?
+
+A)
+pstatesFormat
+
+B)
+statsFormat
+
+C)
+pslistFormat
+
+D)
+psFormat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+These fields allow you to customize the default output format for some commands if no --format flag is provided.
+ 
+psFormat: Custom default format for docker ps / docker container ps output. 
+Refer to the formatting section in the docker ps documentation for a list of supported formatting directives.

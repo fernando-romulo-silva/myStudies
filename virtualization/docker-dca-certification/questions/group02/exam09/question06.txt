@@ -1,0 +1,56 @@
+Which of the following docker daemon flags can be used as an equivalent of 
+com.docker.network.bridge.host_binding_ipv4 option while creating a custom bridge network?
+
+A)
+--name
+
+B)
+--IPB4
+
+C)
+--ip
+
+D)
+--network 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+When creating a custom network, the default network driver (i.e. bridge) has additional options that can be passed. 
+The following are those options and the equivalent docker daemon flags used for docker0 bridge:
+
+com.docker.network.bridge.host_binding_ipv4	--ip	Default IP when binding container ports
