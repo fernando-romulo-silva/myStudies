@@ -1,0 +1,54 @@
+Which of the following image layer storage drivers is used for Windows Images?
+
+A)
+overlay2
+
+B)
+aufs
+
+C)
+windowsfilter
+
+D)
+zfs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+On Windows, the Docker daemon supports a single image layer storage driver depending on the image platform: 
+windowsfilter for Windows images, and lcow for Linux containers on Windows.

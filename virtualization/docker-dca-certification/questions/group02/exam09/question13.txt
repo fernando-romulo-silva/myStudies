@@ -1,0 +1,54 @@
+Docker secrets are available for standalone containers as well as for swarm services.
+
+A)
+TRUE
+
+B)
+FALSE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker secrets are only available to swarm services, not to standalone containers. 
+To use this feature, consider adapting your container to run as a service.

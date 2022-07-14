@@ -1,0 +1,59 @@
+While updating a swarm service, which of the following flags is used to configure the maximum number of service tasks that a scheduler can update simultaneously?
+
+
+A)
+--update-order
+
+B)
+--update-parallelism
+
+C)
+--update-max
+
+D)
+--update-max-failure-ratio 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Normally, updating a service will only cause the service’s tasks to be replaced with new ones 
+if a change to the service requires recreating the tasks for it to take effect. 
+
+For example, only changing the --update-parallelism setting will not recreate the tasks, because the individual tasks are not affected by this setting. 
+However, the --force flag will cause the tasks to be recreated anyway. 
+
+This can be used to perform a rolling restart without any changes to the service parameters.

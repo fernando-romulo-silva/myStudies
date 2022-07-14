@@ -1,0 +1,59 @@
+A container named app-env-db is serving the application environment for your upcoming app and it is ready to be deployed. 
+You need to commit the container and push the resulting docker image to the organization’s registry—dbstore, serving on port 32033. 
+Which of the following commands will help you to fulfil this task?
+(Note: All the prerequisites to push the docker image to docker hub have already been fulfilled.)
+
+A)
+docker commit app-env-db test-env docker tag dbstore:32033/test-env:latest test-env docker push dbstore:32033/test-env:latest
+
+B)
+docker commit app-env-db test-ENV docker tag test-ENV dbstore:32033/test-ENV:latest docker push dbstore:32033/test-ENV:latest
+
+C)
+docker commit app-env-db test-env docker tag test-env dbstore:32033/test-env:latest docker push dbstore:32033/test-env:latest
+
+D)
+docker commit app-env-db test-env docker tag test-env dbstore/test-env:latest docker push dbstore/img-env-db:latest 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Use docker image push to share your images to the Docker Hub registry or to a self-hosted one.
+
+$ docker container commit c16378f943fe rhel-httpd:latest
+ 
+$ docker image tag myimage registry-host:5000/myname/myimage:latest
+
+$ docker image push registry-host:5000/myadmin/rhel-httpd:latest

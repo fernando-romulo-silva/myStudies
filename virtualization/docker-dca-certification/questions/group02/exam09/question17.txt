@@ -1,0 +1,54 @@
+By default, how many layers of docker image does docker daemon pull from the docker registry at a time?
+
+A)
+1
+
+B)
+2
+
+C)
+3
+
+D)
+4 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+By default the Docker daemon will pull three layers of an image at a time. 
+If you are on a low bandwidth connection this may cause timeout issues and you may want to lower this via the --max-concurrent-downloads daemon option. 

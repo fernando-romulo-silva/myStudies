@@ -1,0 +1,57 @@
+Which of the following commands is used to create config from a file or STDIN?
+
+A)
+docker create --config
+
+B)
+docker config create
+
+C)
+docker config run
+
+D)
+docker run --config 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Creates a config using standard input or from a file for the config content.
+Ex:
+
+$ printf <config> | docker config create my_config -
+
