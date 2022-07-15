@@ -1,0 +1,54 @@
+Which of the following options can compose a Kubernetes grant?
+(select three)
+
+A)
+role
+
+B)
+subject
+
+C)
+resource
+
+D)
+namespace 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers A, B and D
+
+It holds a list of subjects (users, groups, or service accounts), namespace, and a reference to the role being granted. 
+A RoleBinding grants permissions within a specific namespace whereas a ClusterRoleBinding grants that access cluster-wide.

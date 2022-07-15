@@ -1,0 +1,56 @@
+How many lower OverlayFS layers does overlay2 natively support?
+
+A)
+8
+
+B)
+32
+
+C)
+64
+
+D)
+128
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+The overlay2 driver natively supports up to 128 lower OverlayFS layers. 
+This capability provides better performance for layer-related Docker commands such as docker build and docker commit,
+and consumes fewer inodes on the backing filesystem.
+

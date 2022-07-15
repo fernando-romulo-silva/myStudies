@@ -1,0 +1,55 @@
+Which of the following commands is used to generate a new root CA certificate and root CA key for the swarm cluster?
+
+A)
+docker swarm ca
+
+B)
+docker swarm ca --ca-generate
+
+C)
+docker swarm ca --rotate
+
+D)
+docker swarm ca --ca-generate --rotate 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Anser C
+
+Display and rotate the root CA
+
+$ docker swarm ca [OPTIONS]
