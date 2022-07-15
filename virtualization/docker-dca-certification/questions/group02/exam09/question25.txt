@@ -1,0 +1,53 @@
+Which of the following are the supported backing filesystems of overlay2 storage driver?
+(select two)
+
+A)
+ext4
+
+B)
+xfs with ftype=1
+
+C)
+zfs
+
+D)
+direct-lvm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers A and B
+
+overlay2, overlay supports	xfs with ftype=1 and ext4

@@ -1,0 +1,59 @@
+What is “live restore” in containers?
+
+A)
+A configuration to backup and restore the live containers’ states in a named volume on the Docker host.
+
+B)
+A configuration to keep containers alive while docker daemon is unavailable.
+
+C)
+A configuration to backup and restore the swarm cluster’s current state on the docker host.
+
+D)
+A configuration to revive deleted containers on the Docker host.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+By default, when the Docker daemon terminates, it shuts down running containers. 
+You can configure the daemon so that containers remain running if the daemon becomes unavailable. 
+This functionality is called live restore. 
+The live restore option helps reduce container downtime due to daemon crashes, planned outages, or upgrades.
+
+
+ 
