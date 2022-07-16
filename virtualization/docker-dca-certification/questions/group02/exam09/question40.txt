@@ -1,0 +1,56 @@
+What is the command that need to be executed to sign an image before pushing it to repository?
+
+A)
+export TRUST_DOCKER_CONTENT=1
+
+B)
+export TRUST_DOCKER_IMAGE=1
+
+C)
+export SIGN_DOCKER_IMAGE=1
+
+D)
+export DOCKER_CONTENT_TRUST=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+For the Docker client to know to use this server, you will need to set an environment variable pointing to it:
+
+$ export DOCKER_CONTENT_TRUST=1
+ 

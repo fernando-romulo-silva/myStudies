@@ -1,0 +1,55 @@
+What will happen if you use –mount flag to bind-mount container’s directory to a directory on Docker host which does not exist yet?
+
+A)
+Docker will create a new directory on Docker host and backup all the data of mounted container directory.
+
+B)
+Docker will create a directory with a warning of security vulnerabilities on Docker host.
+
+C)
+Docker won't create any directory on Docker host and generate an error message.
+
+D)
+Docker daemon will generate a warning and suggest to use --mount-to flag with directory location on Docker host to create that particular directory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+If you use --mount to bind-mount a file or directory that does not yet exist on the Docker host, 
+Docker does not automatically create it for you, but generates an error.
+ 

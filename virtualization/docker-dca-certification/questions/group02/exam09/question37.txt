@@ -1,0 +1,54 @@
+Bind mounts can be managed directly by Docker CLI commands.
+
+A)
+True
+
+B)
+False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+If you are developing new Docker applications, consider using named volumes instead. 
+You can’t use Docker CLI commands to directly manage bind mounts.

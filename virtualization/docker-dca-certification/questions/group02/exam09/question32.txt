@@ -1,0 +1,54 @@
+What will be the orchestrator type of a newly promoted worker node?
+
+A)
+Swarm
+
+B)
+Kubernetes
+
+C)
+Mixed
+
+D)
+It does not change.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+It is possible to manually change the orchestrator type for a node. 
+When you do this, existing workloads are evicted and they are not migrated automatically to the new orchestrator. 
