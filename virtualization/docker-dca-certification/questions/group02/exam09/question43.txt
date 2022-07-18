@@ -1,0 +1,58 @@
+What are the requirements to install Docker Trusted Registry (DTR)? 
+(Select all that apply)
+
+A)
+All nodes must be a worker node managed by Universal Control Plan
+
+B)
+Make sure the port 8080 and 8443 are open on the node
+
+C)
+All nodes must have a fixed hostname
+
+D)
+DTR can be installed on-premises or on a cloud provider
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers  A, C and D
+
+You can install UCP on-premises or on a cloud provider. Common requirements:
+
+Docker EE Engine version 18.09
+Linux kernel version 3.10 or higher
+A static IP address for each node in the cluster
+

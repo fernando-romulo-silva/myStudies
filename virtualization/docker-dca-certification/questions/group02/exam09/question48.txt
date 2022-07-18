@@ -1,0 +1,53 @@
+Where is the option to integrate Docker Enterprise with LDAP?
+
+A)
+Universal Control Plane
+
+B)
+Docker Trusted Registry
+
+C)
+Docker Compose
+
+D)
+Docker Machine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The correct option is 'A'
+
+Docker UCP integrates with LDAP services, so that you can manage users from a single place.
