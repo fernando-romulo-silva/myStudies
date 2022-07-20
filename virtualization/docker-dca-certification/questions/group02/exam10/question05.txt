@@ -1,0 +1,37 @@
+What is the docker command to add or update a mount on a service?
+
+A)
+docker service --add-update-mount
+
+B)
+docker service update --mount-add
+
+C)
+docker service set --add-update-mount
+
+D)
+docker service --mount-volume
+
+
+Answer B
+
+Use the --mount-add or --mount-rm options add or remove a service’s bind mounts or volumes.
+
+To create a mount on CREATING service:
+
+$ docker service create \
+    --name=myservice \
+    --mount type=volume,source=test-data,target=/somewhere \
+    nginx:alpine
+
+    
+To add a mount on UPDATING service:
+
+$ docker service update \
+    --mount-add type=volume,source=other-volume,target=/somewhere-else \
+    myservice 
+
+
+To remove a mount on UPDATING service:    
+    
+$  docker service update --mount-rm /somewhere myservice    

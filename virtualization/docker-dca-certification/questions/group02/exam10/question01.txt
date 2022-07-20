@@ -1,0 +1,62 @@
+What is the docker command to add or update a node label?
+
+A)
+docker node modify --set-label
+
+B)
+docker node add --label
+
+C)
+docker node update --set-label
+
+D)
+docker node update --label-add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Node labels provide a flexible method of node organization. 
+You can also use node labels in service constraints. 
+Apply constraints when you create a service to limit the nodes where the scheduler assigns tasks for the service.
+
+Run docker node update --label-add on a manager node to add label metadata to a node. 
+The --label-add flag supports either a <key> or a <key>=<value> pair.
+
+Pass the --label-add flag once for each node label you want to add:
+
+$ docker node update --label-add foo --label-add bar=baz node-1

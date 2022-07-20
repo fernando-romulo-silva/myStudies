@@ -1,0 +1,61 @@
+What is the docker command to increase number of replicas?
+
+A)
+docker service scale
+
+B)
+docker service build
+
+C)
+docker service replica
+
+D)
+docker service increase 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The command 'scale' Scale one or multiple replicated services.
+
+$ docker service scale frontend=50
+
+You can also scale a service using the docker service update command. 
+The following commands are equivalent:
+
+$ docker service update --replicas=50 frontend
+
