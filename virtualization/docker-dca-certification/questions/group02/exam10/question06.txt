@@ -1,0 +1,60 @@
+What is the docker command to roll back to the previous version of a service?
+
+A) 
+docker service --rollback-version
+
+B) 
+docker service update --rollback-version
+
+C)
+docker service update --rollback
+
+D)
+docker service --rollback
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Use the docker service rollback command to roll back to the previous version of a service.
+After executing this command, the service is reverted to the configuration that was in place before the most recent docker service update command.
+
+$ docker service update --rollback my-service
+
+// or
+
+$ docker service rollback my-service

@@ -55,7 +55,8 @@ docker service update --placement-constraint-add
 
 The correct option is A
 
-Updates a service as described by the specified parameters. The parameters are the same as docker service create.
+Updates a service as described by the specified parameters. 
+The parameters are the same as docker service create.
 
 $ docker service update --constraint-add
 

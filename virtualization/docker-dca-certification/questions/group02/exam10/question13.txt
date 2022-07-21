@@ -1,0 +1,69 @@
+What is the docker command to add or update a placement constraint?
+
+A)
+docker service update --placement-constraint-add
+
+B)
+docker service update --placement-pref-add
+
+C)
+docker service update --constraint-add
+
+D)
+docker service update --pref-add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+Updates a service as described by the specified parameters. 
+The parameters are the same as docker service create.
+
+$ docker service update --constraint-add
+
+--constraint-add : Add or update a placement constraint
+
+
+To create a service with constraint:
+
+$ docker service create \
+ 	 --name my-nginx \
+  	 --replicas 5 \
+  	 --constraint node.labels.region==east \
+     nginx
+
+ 

@@ -56,9 +56,13 @@ docker service modify --add-network
 
 The correct option is 'B'
 
-Update the service to use this network:
+You can change almost everything about an existing service using the docker service update command.
 
-$ docker service update --network-add
+Use the –network-add or –network-rm flags to add or remove a network for a service.
+
+Assuming that the my_web service from the previous section still exists, use the following command to add a network:
+
+$ docker service update –network-add 
 
 
  

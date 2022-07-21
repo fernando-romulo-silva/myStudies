@@ -1,0 +1,65 @@
+What is the docker command to add a placement preference?
+
+A)
+docker service update --constraint-add
+
+B)
+docker service update --pref-add
+
+C)
+docker service update --placement-constraint-add
+
+D)
+docker service update --placement-pref-add 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer  D
+
+While placement constraints limit the nodes a service can run on, 
+placement preferences try to place tasks on appropriate nodes in an algorithmic way (currently, only spread evenly). 
+
+$ docker service update --placement-pref-add 'spread=node.labels.Vote' myapp_vote
+
+
+To create a service with placement:
+
+$ docker service create \
+    --replicas 9 \
+    --name redis_2 \
+    --placement-pref 'spread=node.labels.datacenter' \
+    redis:3.0.6

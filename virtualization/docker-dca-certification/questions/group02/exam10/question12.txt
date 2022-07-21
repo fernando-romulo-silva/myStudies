@@ -1,0 +1,61 @@
+Which of the following is NOT true about Raft (docker consensus algorithm)?
+
+A)
+If a quorum is not reached, the system will not process any more requests to schedule additional tasks
+
+B)
+Raft requires a majority or quorum of (N/2) + 1 members
+
+C)
+Raft tolerates up to (N-2)/2 failures
+
+D)
+If a quorum is not reached, the existing tasks will keep running
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+When the Docker Engine runs in swarm mode, manager nodes implement the Raft Consensus Algorithm to manage the global cluster state.
+
+Raft requires a majority of managers, also called the quorum, to agree on proposed updates to the swarm, such as node additions or removals. 
+
+If the swarm loses the quorum of managers, the swarm cannot perform administrative tasks such as scaling or updating services and joining or removing nodes from the swarm.
+
+Nevertheless, tasks on existing worker nodes continue to run.
+
+Raft tolerates UP TO (N – 1)/2 failures and requires a majority or quorum of (N/2) + 1 members to agree on values proposed to the cluster.  
