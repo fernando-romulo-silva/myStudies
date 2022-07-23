@@ -1,0 +1,72 @@
+What is the recommended approach to set storage driver?
+
+A)
+Use --storage-driver flag when running dockerd
+
+B)
+Set the "storage-driver" option in the daemon.json file 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Docker supports several storage drivers, using a pluggable architecture. 
+
+The storage driver controls how images and containers are stored and managed on your Docker host.
+
+1 - Stop Docker.
+
+$ sudo systemctl stop docker
+
+2 - Copy the contents of /var/lib/docker to a temporary location.
+
+$ cp -au /var/lib/docker /var/lib/docker.bk
+
+3 - If you want to use a separate backing filesystem from the one used by /var/lib/, format the filesystem and mount it into /var/lib/docker. 
+Make sure add this mount to /etc/fstab to make it permanent.
+
+4 - Edit /etc/docker/daemon.json. If it does not yet exist, create it. Assuming that the file was empty, add the following contents.
+
+{
+  "storage-driver": "overlay2"
+}
