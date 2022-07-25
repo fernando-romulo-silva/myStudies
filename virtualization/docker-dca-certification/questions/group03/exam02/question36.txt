@@ -51,7 +51,7 @@ docker connect network net1 net2 container1
 Answer  B
 
 container1 is currently part of network 'net2'. 
-To connect it to 'net1' we simply have to connect/attach it with network 'net1'
+To connect it to 'container1' we simply have to connect/attach it with network 'net1'
 
 $ docker network connect net1 container1
 
