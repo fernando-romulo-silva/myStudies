@@ -1,7 +1,6 @@
 What is the docker command to add a node to a swarm?
 
-​
-A)
+​A)
 docker swarm join
 ​
 B)

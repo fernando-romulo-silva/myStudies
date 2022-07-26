@@ -1,0 +1,59 @@
+Which of the following commands is used to display system-wide Docker configuration on a host?
+
+A)
+docker inspect
+
+B)
+docker system
+
+C)
+docker info
+
+D)
+docker status 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Asnwer C
+
+To display system-wide information use:
+
+$ docker info [OPTIONS]
+
+This command displays system wide information regarding the Docker installation. 
+Information displayed includes the kernel version, number of containers and images. 
+The number of images shown is the number of unique images. 
