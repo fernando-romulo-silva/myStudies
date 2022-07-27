@@ -1,0 +1,21 @@
+A server is running low on disk space. 
+What command can be used to check the disk usage of images, containers, and volumes for Docker engine?
+
+A)
+'docker system ps'
+
+B)
+'docker system prune'
+
+C)
+'docker system df'
+
+D)
+'docker system free'
+
+
+Answer C
+ 
+The docker system df command displays information regarding the amount of disk space used by the docker daemon.
+
+$ docker system df  

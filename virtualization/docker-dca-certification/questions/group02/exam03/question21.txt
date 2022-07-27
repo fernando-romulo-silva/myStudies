@@ -69,4 +69,5 @@ To remove dangling images:
 $ docker image prune
 
 To remove all images which are not used by existing containers, use the -a flag:
+
 $ docker image prune -a

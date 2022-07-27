@@ -1,0 +1,60 @@
+Which of the following commands will automatically create a volume when a container is started?
+
+A)
+docker container run --name nginxtest --volumes=/app nginx'
+
+B)
+'docker container run --name nginxtest --volumes myvol:/app:new nginx'
+
+C)
+docker container run --name nginxtest -v myvol:/app nginx'
+
+D)
+'docker container run --name nginxtest -v /app:mount nginx'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The folder /app must be create before...
+
+The -v (or --volume) argument to docker run is for creating storage space inside a container that is separate from the rest of the container filesystem.
+
+* When given a single argument, like -v /var/lib/mysql, this allocates space from Docker and mounts it at the given location. 
+ 
+* When given two arguments (host_path:container_path), like -v /data/mysql:/var/lib/mysql, this mounts the specified directory 
+  on the host inside the container at the specified path
