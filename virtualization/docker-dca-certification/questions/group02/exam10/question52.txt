@@ -1,0 +1,60 @@
+Which of the following are types of namespaces used by Docker to provide isolation? (Choose 2.)
+
+A)
+Network
+
+B)
+Process ID
+
+C)
+Storage
+
+D)
+Authentication
+
+E)
+Host
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers A and B
+
+Docker Engine uses the following namespaces on Linux:
+
+PID namespace for process isolation.
+NET namespace for managing network interfaces.
+IPC namespace for managing access to IPC resources.
+MNT namespace for managing filesystem mount points.
+UTS namespace for isolating kernel and version identifiers.
+ 

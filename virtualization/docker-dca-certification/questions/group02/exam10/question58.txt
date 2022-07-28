@@ -1,0 +1,57 @@
+What is the difference between a resource limit and a resource reservation when scheduling services?
+
+A) 
+A resource limit and a resource reservation can be used interchangeably.
+
+B)
+A resource limit is used to find a host with adequate resources for scheduling a hard limit for your service, ,
+while a reservation is hard limit for your service.
+
+C)
+A resource limit is hard limit for your service, 
+while a reservation is used to find a host with adequate resources for scheduling.
+
+D)
+A resource limit is a soft limit for your service, while a reservation is hard limit and the docker engine 
+will do its best to keep your service at the limit. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C is Correct
+
+Reserve holds those resources on the host so they are always available for the container. 
+Think dedicated resources.
+
+Limit prevents the binary inside the container from using more than that. 
+Think of controlling runaway processes in container.
