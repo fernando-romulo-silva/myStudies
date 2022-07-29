@@ -1,0 +1,61 @@
+Which of the following is supported by control groups?
+
+A)
+Limit CPU usage within a container
+
+B)
+Manage certificates
+
+C) 
+Collect net
+
+D)
+Isolate processes in a container 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Cgroups provide resource limitation and reporting capability within the container space. 
+They allow granular control over what host resources are allocated to the containers and when they are allocated.
+Common control groups:
+
+* CPU
+* Memory
+* Network Bandwidth
+* Disk
+* Priority

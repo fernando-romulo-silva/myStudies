@@ -1,0 +1,78 @@
+What is the function of docker inspect command?
+
+A)
+To return low-level information on Docker objects
+
+B)
+To display system-wide information
+
+C)
+To inspect changes to files or directories on a container's filesystem
+
+D)
+To manage Docker configs 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Asnwer A
+
+Return low-level information on Docker objects in JSON format
+
+$ docker inspect murachs-mysql
+
+[
+    {
+        "Id": "7a38e315e8703cbcce1a994e889554edd48a76668f695628355954f3b2f25cc9",
+        "Created": "2021-07-09T22:06:06.307095179Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "mysqld"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2022-01-06T00:58:44.173400116Z",
+            "FinishedAt": "2022-01-06T00:58:52.471913412Z"
+        },
+....

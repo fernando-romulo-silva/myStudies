@@ -1,0 +1,52 @@
+Following the principle of least privilege, which of the following methods can be used to 
+securely grant access to the specific user to communicate to a Docker engine? (Choose two.)
+
+A)
+Utilize the '--host 127.0.0.1:2375' option to the Docker daemon to listen on port 2375 over TCP on localhost
+
+B)
+Give the user root access to the server to allow them to run Docker commands as root.
+
+C)
+Add the user to the 'docker' group on the server or specify the group with the '--group' Docker daemon option.
+
+D)
+Utilize openssl to create TLS client and server certificates, configuring the Docker engine to use with mutual TLS over TCP.
+
+E)
+Utilize the '--host 0.0.0.0:2375' option to the Docker daemon to listen on port 2375 over TCP on all interfaces 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers C and D 
+

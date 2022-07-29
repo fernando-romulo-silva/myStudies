@@ -1,0 +1,61 @@
+Which of these swarm manager configurations will cause the cluster to be in a lost quorum state?
+
+A)
+5 managers of which 3 are healthy
+
+B)
+1 manager of which 1 is healthy
+
+C)
+4 managers of which 2 are healthy
+
+D)
+3 managers of which 2 are healthy 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+In a swarm of N managers, a quorum (a majority) of manager nodes must always be available. 
+For example, in a swarm with five managers, a minimum of three must be operational and in communication with each other. 
+
+In other words, the swarm can tolerate up to (N-1)/2 permanent failures beyond which requests involving swarm management cannot be processed.
+An odd number of managers is recommended because the next even number does not make the quorum easier to keep.
+ 
+For instance, whether you have 3 or 4 managers, you can still only lose 1 manager and maintain the quorum. 
+If you have 5 or 6 managers, you can still only lose two.
+

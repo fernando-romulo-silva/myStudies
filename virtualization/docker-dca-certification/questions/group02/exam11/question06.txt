@@ -1,0 +1,69 @@
+Which of the following constitutes a production-ready devicemapper configuration for the Docker engine?
+
+A)
+Utilize the '--storage-opt dm.directlvm_device' Docker daemon option, specifying a block device
+
+B)
+Nothing, devicemapper comes ready for production usage out of the box
+
+C)
+Create a volume group in devicemapper and utilize the '--dm.thinpooldev' Docker daemon option, specifying the volume group
+
+D)
+Format a partition with xfs and mount it at '/var/lib/docker'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Asnwer A
+
+Particular storage-driver can be configured with options specified with –storage-opt flags. 
+Options for devicemapper are prefixed with dm.
+
+https://docs.docker.com/engine/reference/commandline/dockerd/#options-per-storage-driver
+
+Device Mapper configuration modes:
+
+· loop-lvm mode – is only appropriate for testing. The loop-lvm mode makes use of a ‘loopback’ mechanism that allows files on the local disk 
+  to be read from and written to as if they were an actual physical disk or block device.
+  
+· direct-lvm mode – Production hosts using the devicemapper storage driver must use direct-lvm mode. 
+  This is faster than using loopback devices, uses system resources more efficiently, and block devices can grow as needed. 
+  However, more setup is required than in loop-lvm mode.
+
+
+https://docs.docker.com/storage/storagedriver/device-mapper-driver/#configure-loop-lvm-mode-for-testing
+

@@ -1,0 +1,57 @@
+A container named “analytics” that stores results in a volume called “data” was created. 
+
+$ docker run -d –name=analytics -v data:/data app1 
+
+How are the results accessed in “data” with another container called “app2”?
+
+A)
+docker run -d --name=reports --volumes-from=analytics app2
+
+B)
+docker run -d --name=reports --volume=data app2
+
+C)
+docker run -d --name=reports --mount=app1 app2
+
+D
+docker run -d --name=reports --volume=app1 app2 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+The docker run command provides a flag, –volumes-from, that will copy the mount definitions from one or more containers to the new container.
+
+By combining this flag and volumes, you can build shared-state relationships in a host-independent way.
+
+https://docs.docker.com/engine/reference/commandline/run/#mount-volumes-from-container—volumes-from
