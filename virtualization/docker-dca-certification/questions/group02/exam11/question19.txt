@@ -1,0 +1,56 @@
+The following health check exists in a
+Dockerfile: ‘HEALTCHECK CMD curl –fail http://localhost/health || exit 1′
+Which of the following describes its purpose?
+
+A)
+Defines the health check endpoint on the localhost interface 
+for external monitoring tools to monitor the health of the docker engine.
+
+B)
+Defines the health check for the containerized application so that 
+the application health can be monitored by the Docker engine
+
+C)
+Defines the action taken when container health fails, 
+which in this case will kill the container with exit status 1
+
+D)
+Defines the health check endpoint on the local host interface 
+for containers to monitor the health of the docker engine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+The curl command checks whether the application is running or not making a request to localhost:3000. 
+If the request returns a 200, it will return exit code 0; if the application crashes, it will return exit code 1. 
+These exit codes are how Docker's HEALTHCHECK determines the health of the container.
+ 

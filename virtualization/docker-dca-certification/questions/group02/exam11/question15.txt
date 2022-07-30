@@ -1,0 +1,53 @@
+What behavior is expected when a service is created with the following command: 
+‘docker service create –publish 8080:80 nginx’
+
+A)
+Only a single node in the cluster will listen on port 80 and forward to port 8080 in the container.
+
+B)
+All nodes in the cluster will listen on port 8080 and forward to port 80 in the container.
+
+C)
+All nodes in the cluster will listen on port 80 and forward to port 8080 in the container.
+
+D)
+Only a single node in the cluster will listen on port 8080 and forward to port 80 in the container. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B is Correct
+
+Publish a port as a node port, if you running it on more node, all nodes are publishing this port

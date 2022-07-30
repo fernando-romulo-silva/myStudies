@@ -1,0 +1,57 @@
+Which one of the following commands will result in the volume being removed automatically once the container has exited?
+
+
+A)
+'docker run --del -v /foo busybox'
+
+B)
+'docker run --read-only -v /foo busybox'
+
+C)
+'docker run --remove -v /foo busybox'
+
+D)
+'docker run --rm -v /foo busybox' 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer D
+
+Anonymous volumes can be cleaned up in two ways. 
+First, anonymous volumes are automatically deleted when the container they were created for are automatically cleaned up. 
+This happens when containers are deleted via the docker run –rm or docker rm -v flags:
+
+$ docker run --rm -v /foo -v awesome:/bar busybox top

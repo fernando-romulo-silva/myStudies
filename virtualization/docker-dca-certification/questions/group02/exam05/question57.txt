@@ -52,11 +52,6 @@ Answer C
 
 Anonymous volumes can be cleaned up in two ways. 
 First, anonymous volumes are automatically deleted when the container they were created for are automatically cleaned up. 
-This happens when containers are deleted via the docker run –rm or docker rm -v flags.
-Remove one or more containers:
+This happens when containers are deleted via the docker run –rm or docker rm -v flags:
 
-$ docker rm [OPTIONS] CONTAINER [CONTAINER…]
-
-Second, they can be manually deleted by issuing a docker volume remove command:
-
-$ docker volume rm [OPTIONS] VOLUME [VOLUME…]
+$ docker run --rm -v /foo -v awesome:/bar busybox top
