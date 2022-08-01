@@ -1,0 +1,61 @@
+Which of the following is the correct command to tag an image?
+
+A)
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+B)
+docker tag image SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+C)
+docker tag TARGET_IMAGE[:TAG] SOURCE_IMAGE[:TAG]
+
+D)
+docker build tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+To create a tag TARGET_IMAGE that refers to SOURCE_IMAGE use:
+
+$ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+Example:
+
+To tag a local image with name “myimage” into the “myrepositroy” repository with “version1.0”:
+
+$ docker tag myimage myrepositroy/myimage:version1.0 

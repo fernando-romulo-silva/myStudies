@@ -1,0 +1,63 @@
+A docker service ‘web’ is running with a scale factor of 1 (replicas = 1). 
+Bob intends to use the command ‘docker service update –replicas=3 web’. 
+Alice intends to use the command ‘docker service scale web=3’. 
+How do the outcomes oft these two commands differ?
+
+A)
+Both Bob's and Alice's commands result in exactly the same outcome, which is 3 instances of the 'web' service.
+
+B)
+Bob's command updates the number of replicas of the 'web' service to 3. 
+Alice's command results in an error.
+
+C)
+Bob's command only updates the service definition, but no new replicas are started. 
+Alice's command results in the actual scaling up of the 'web' service.
+
+D)
+Bob's command results in an error. 
+Alice's command updates the number of replicas of the 'web' service to 3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Containers running in a service are called “tasks” or “replicas”.
+To scale the number of containers in the service you can use one of the following commands.
+
+$ docker service scale=
+$ docker service update –replicas=
+
+For example, these commands are equivalent:
+
+$ docker service scale web=5
+$ docker service update –replicas=5 web 
+ 
