@@ -1,0 +1,54 @@
+What is the recommended way to configure the daemon flags and 
+environment variables for your Docker daemon in a platform independent way?
+
+A)
+Set the configuration DOCKER_OPTS in '/etc/default/docker'
+
+B)
+Set the configuration options in '/etc/docker/daemon.json'
+
+C)
+Using 'docker config' to set the configuration options.
+
+D)
+Set the configuration options using the ENV variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answe B 
+
+Use a JSON configuration file(/etc/docker/daemon.json). 
+This is the preferred option, since it keeps all configurations in a single place.

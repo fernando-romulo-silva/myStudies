@@ -1,0 +1,33 @@
+Which of the following is NOT a valid way to tag a Docker image?
+
+A)
+Tag an image referenced by image ID
+
+B)
+Tag an image referenced by Name
+
+C)
+Tag an image referenced by Name and Tag
+
+D)
+Tag an image referenced by user ID
+
+Answer D
+
+Docker tags convey useful information about a specific image version/variant. 
+
+Tag an image referenced by ID
+To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”:
+
+$ docker tag 0e5574283393 fedora/httpd:version1.0
+
+
+Tag an image referenced by Name
+To tag a local image with name “httpd” into the “fedora” repository with “version1.0”:
+
+$ docker tag httpd fedora/httpd:version1.0
+
+Tag an image for a private repository
+To push an image to a private registry and not the central Docker registry you must tag it with the registry hostname and port (if needed).
+
+$ docker tag 0e5574283393 myregistryhost:5000/fedora/httpd:version1.0
