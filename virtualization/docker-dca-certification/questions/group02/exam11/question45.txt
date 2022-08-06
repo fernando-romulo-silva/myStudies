@@ -1,0 +1,64 @@
+What is used by the kernel to Isolate resources when running Docker containers?
+
+A)
+Namespaces
+
+B)
+Overlay networks
+
+C)
+Volumes
+
+D)
+Control groups (also know as cgroups)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Docker uses a technology called namespaces to provide the isolated workspace called the container. 
+When you run a container, Docker creates a set of namespaces for that container.
+These namespaces provide a layer of isolation. 
+Each aspect of a container runs in a separate namespace and its access is limited to that namespace.
+
+Docker Engine uses the following namespaces on Linux:
+
+PID namespace for process isolation.
+NET namespace for managing network interfaces.
+IPC namespace for managing access to IPC resources.
+MNT namespace for managing filesystem mount points.
+UTS namespace for isolating kernel and version identifiers.

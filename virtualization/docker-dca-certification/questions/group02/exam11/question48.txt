@@ -1,0 +1,67 @@
+What is the docker command to pull an image or a repository from a registry?
+
+​A)​
+docker deploy
+​
+B)
+docker build
+
+​C)
+docker checkout
+​
+D)
+docker pull
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D is Correct
+
+docker pull download an image or a repository from a registry
+
+$ docker pull debian
+
+Using default tag: latest
+latest: Pulling from library/debian
+0e29546d541c: Pull complete 
+Digest: sha256:2906804d2a64e8a13a434a1a127fe3f6a28bf7cf3696be4223b06276f32f1f2d
+Status: Downloaded newer image for debian:latest
+docker.io/library/debian:latest

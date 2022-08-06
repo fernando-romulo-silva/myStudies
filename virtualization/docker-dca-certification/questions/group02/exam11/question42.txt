@@ -1,0 +1,63 @@
+What is the docker command to remove one or more images?
+
+A)
+docker image rm
+
+B)
+docker image delete
+
+C)
+docker delete
+
+D)
+docker remove 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+docker image rm: Remove one or more images.  
+
+$ docker image rm mysql
+
+Untagged: mysql:latest
+Untagged: mysql@sha256:feada149cb8ff54eade1336da7c1d080c4a1c7ed82b5e320efb5beebed85ae8c
+
+Options:
+
+--force , -f    Force removal of the image
+--no-prune		Do not delete untagged parents
