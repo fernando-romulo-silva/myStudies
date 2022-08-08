@@ -48,9 +48,9 @@ Set the log-driver option in the deamon.json file
 
 
 
-Answer C
+Answer D
 
-ach Docker daemon has a default logging driver, which each container uses unless you configure it to use a different logging driver.
+Each Docker daemon has a default logging driver, which each container uses unless you configure it to use a different logging driver.
 
 To configure the Docker daemon to default to a specific logging driver, set the value of log-driver to the name of the logging driver in the daemon.json file,
 which is located in /etc/docker/ on Linux hosts or C:\ProgramData\docker\config\ on Windows server hosts.

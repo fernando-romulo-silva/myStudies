@@ -48,7 +48,7 @@ RBAC
 
 
 
-Answers  A, B and D
+Answers  A, B and C
 
 To back up Docker Enterprise, you must create individual backups for each of the following components:
   1. Back up Docker Swarm. Back up Swarm resources like service and network definitions.

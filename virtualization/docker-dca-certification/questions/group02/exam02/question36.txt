@@ -11,3 +11,47 @@ docker rmi [image name] --force
 
 D)
 None of the answers is correct. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+You cannot remove an image of a running container unless you use the -f option. 
+
+Docker rmi specifies that docker rmi is an alias for docker image rm
+
+$ docker rmi -f fd484f19954f

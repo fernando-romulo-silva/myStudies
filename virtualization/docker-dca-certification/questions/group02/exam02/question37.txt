@@ -48,7 +48,7 @@ Remove one or more images.
 
 
 
-Answer C
+Answer D
 
 To remove one or more images, use the following command:
 

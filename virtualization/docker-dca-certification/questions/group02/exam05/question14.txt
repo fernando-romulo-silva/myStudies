@@ -48,7 +48,7 @@ Usernames and passwords
 
 
 
-Answers A, C and D
+Answers A, C and E
 
 A Docker secret is a blob of sensitive data that should not be transmitted over a network, such as:
 

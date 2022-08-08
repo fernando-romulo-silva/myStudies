@@ -7,6 +7,47 @@ FALSE
 B)
 TRUE
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer A
 
 Using a user-defined network provides a scoped network in which only containers attached to that network are able to communicate.

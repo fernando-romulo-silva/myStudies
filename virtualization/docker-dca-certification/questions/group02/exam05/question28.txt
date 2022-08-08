@@ -48,7 +48,7 @@ docker run --cap-add=/dev/snd
 
 
 
-Answer C
+Answer A
 
 By default, Docker containers are “unprivileged” and cannot, for example, run a Docker daemon inside a Docker container. 
 

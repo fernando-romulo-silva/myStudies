@@ -50,7 +50,6 @@ d) Repository URL obtained from Docker Store
 
 Answer 'd'
 
-
 Install with a package:
 
 1 - Go to the Docker EE repository URL associated with your trial or subscription in your browser.

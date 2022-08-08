@@ -48,7 +48,7 @@ Process ID
 
 
 
-Answers A and D
+Answers A and E
 
 Docker namespaces provide a layer of isolation. 
 Each aspect of a container runs in a separate namespace and its access is limited to that namespace.

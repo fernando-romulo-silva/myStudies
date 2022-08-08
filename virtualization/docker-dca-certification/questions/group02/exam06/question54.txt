@@ -50,3 +50,4 @@ no action will be taken.
 
 Answer A  
 
+ If the manager in a single-manager swarm fails, your services continue to run, but you need to create a new cluster to recover.

@@ -12,6 +12,42 @@ ARG
 D) 
 METADATA
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer A
 
 The LABEL instruction adds metadata to an image. 

@@ -51,11 +51,12 @@ Each user-defined network creates a configurable bridge
 
 Answer A
 
-Linked containers on the default bridge network share environment variables.
+Linked containers on the DEFAULT bridge network share environment variables.
 First, –link option, which is considered legacy.
 
 Originally, the only way to share environment variables between two containers was to link them using the –link flag. 
-This type of variable sharing is not possible with user-defined networks. However, there are superior ways to share environment variables. 
+This type of variable sharing is not possible with user-defined networks. 
+However, there are superior ways to share environment variables. 
 
 A few ideas:
 

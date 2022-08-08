@@ -13,6 +13,41 @@ Use EXPOSE together with --publish-all
 D)
 Use network attach
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer C
 
 The following run command options work with container networking:
