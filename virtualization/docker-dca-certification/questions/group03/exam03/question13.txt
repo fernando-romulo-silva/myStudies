@@ -1,0 +1,58 @@
+There a new internal admin tool needs to be deployed on Kubernetes which should be accessible only to services 
+in Kubernetes & not from outside the Kubernetes cluster. 
+Which of the following would be the appropriate method to expose it?
+
+A)
+Ingress
+
+B)
+NodePort
+
+C)
+ClusterIP
+
+D)
+Load Balancer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+clusterIP is the default Kubernetes service & provides connectivity within the cluster & can't be accessed from outside.
+Option C is correct as provides connectivity within the cluster & can't be accessed from outside, hence appropriate for the use case.
+
+Option A is incorrect as it’s a totally different service & used to provide HTTP routing configurations.
+Option B is incorrect as NodePort publicly exposes a service on a static port, hence not suitable for the mentioned use case.
+Option D is incorrect as a load balancer is used to map external IP addresses to services inside the cluster.

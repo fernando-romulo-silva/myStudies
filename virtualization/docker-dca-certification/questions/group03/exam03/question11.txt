@@ -1,0 +1,61 @@
+Your company recently closed a mega deal with an upcoming cloud provider to use their state-of-the-art storage technology for your applications. 
+Since it's an upcoming cloud provider, its provisioner is not shipped by default in Kubernetes. 
+Which of the following would most appropriate way to use their storage in Kubernetes?
+
+A)
+Build the storage provisioner by yourself
+
+B)
+Since their provisioner is not shipped with Kubernetes, a new storage type cannot be used
+
+C)
+Use the 3rd party storage provisioner provided by the upcoming cloud provider
+
+D)
+Pay Kubernetes team to build the provisioner for your company
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C
+
+If your required provisioner is not shipped with Kubernetes, external/ 3rd party provisioners following specifications defined by Kubernetes can be used.
+Option C is correct as the cloud provider provides their 3rd party storage provisioner to access their storage via Kubernetes, 
+this would be the most appropriate choice.
+
+Option A is incorrect as it is not recommended since 3rd party provisioner is already provided by the cloud provider.
+
+Option B is incorrect as in this case the required provisioner is not shipped by default & external 3rd party provisioners are available that can be used to access the new storage type.
+
+Option D is incorrect maybe or may not be feasible & not recommended since 3rd party provisioner is already provided by the cloud provider.

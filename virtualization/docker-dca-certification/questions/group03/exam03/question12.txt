@@ -1,0 +1,63 @@
+There's a requirement to set up a production Kubernetes cluster because the cluster being available is very critical. 
+Which of the following options accomplishes that?
+
+A)
+Cluster spans across multiple zones/data centers
+
+B)
+Load balancing traffic to cluster's API server
+
+C)
+Auto scaling worker nodes
+
+D)
+Set namespace limits
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+Option A is correct as spreading the cluster across multiple data centers/zones/regions makes it resilient against physical outages.
+If keeping a cluster available always is critical, consider creating a cluster that runs across multiple data centers/zones. 
+By spreading a cluster across multiple zones in the same/different region, it can improve the chances that your cluster will continue to function 
+even if one zone becomes unavailable.
+
+
+Option B is incorrect as it is related to distributing traffic rather than making it resilient to outages.
+
+Option C is incorrect as auto-scaling worker nodes are related to managing individual instances of worker nodes rather than the cluster as a whole.
+
+Option D is incorrect as it is related to setting resources limit on namespaces rather than the availability of clusters.

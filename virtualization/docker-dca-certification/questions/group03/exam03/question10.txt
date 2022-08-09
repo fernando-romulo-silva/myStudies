@@ -1,0 +1,60 @@
+There is a new compliance requirement from the company’s CISO that a pod’s associated persistent volume (including the associated storage asset) 
+should be deleted as soon as it’s been released of its claim. 
+Which of the following reclaim policy accomplishes this?
+
+
+A)
+AutoDelete
+
+B)
+Recycle
+
+C)
+Delete
+
+D)
+Prune
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Correct Answer: C
+
+Delete is used for deleting the associated storage asset such as OpenStack, Cinder volume, Azure Disk, GCE Persistent Disk, 
+or AWS Elastic Block Storage when a persistent volume has been released of its claim.
+
+Option A is incorrect as there’s no such policy exists as AutoDelete.
+
+Option B is incorrect as Recycle does a basic scrub (rm -rf /thevolume/*) & only NFS & HostPath supports recycling, whereas deletion is required.
+
+Option D is incorrect as there’s no such policy exists as Prune.

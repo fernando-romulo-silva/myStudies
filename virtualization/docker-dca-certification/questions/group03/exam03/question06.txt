@@ -1,0 +1,61 @@
+Your company is running an 11-manager docker swarm cluster. 
+What is the maximum number of manager losses can your cluster tolerate?
+
+A)
+4
+
+B)
+5
+
+C)
+6
+
+D)
+7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Correct Answer: B
+
+Your cluster can tolerate a maximum loss of 5 managers. 
+An N manager cluster can tolerate the loss of utmost (N-1)/2 managers, ie. (11-1)/2 = 5 in the above question.
+An odd number of manager nodes are recommended for high availability.
+
+Option A is incorrect As it is not the maximum number of managers loss the cluster can tolerate.
+
+Option C is incorrect As it's more than the maximum number of managers loss the cluster can tolerate.
+
+Option D is incorrect As it's more than the maximum number of managers loss the cluster can tolerate.

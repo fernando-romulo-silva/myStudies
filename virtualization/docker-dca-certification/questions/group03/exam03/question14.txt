@@ -1,0 +1,60 @@
+When pods are running in the host network (e.g. Linux), & q43 is attached to the host network of a node, 
+can they still communicate with all pods on all nodes without a NAT device?
+
+A)
+Yes they can communicate
+
+B)
+No, they can’t as NAT is required
+
+C)
+No since pods running on the host network don’t get an IP
+
+D)
+Yes since pods running on the host network needs global IP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer A
+
+When pods are attached to the host network of a node they can still communicate with all pods on all nodes without NAT 
+as it’s a fundamental requirement for any networking implementation.
+
+Option B is incorrect as NAT is not required.
+
+Option C is incorrect as every pod running in Kubernetes gets a unique IP.
+
+Option D is incorrect as running pods by default get private IPs assigned, not global IP.

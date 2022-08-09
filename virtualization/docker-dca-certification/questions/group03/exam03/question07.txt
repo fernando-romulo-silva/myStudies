@@ -1,0 +1,62 @@
+Which of the following file does the docker daemon look to exclude files & directories to avoid them being added to the docker image?
+
+A)
+.gitignore
+
+B)
+.dockerignore
+
+C)
+.ignore
+
+D)
+.exclude
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Option B is correct as .dockerignore is the file that contains files & directories to be excluded from being added to the docker image.
+Before the docker, CLI sends the context to the docker daemon, 
+it looks for a file named .dockerignore in the root directory of the context & modifies the context to exclude files and directories that match patterns in it. 
+This helps to avoid unnecessarily sending large or sensitive files and directories to the daemon and potentially adding them to images.
+
+Option A is incorrect as .gitignore is used to tell git version control to ignore files & directories from the version control system.
+
+Option C is incorrect as the docker daemon looks for a file named .dockerignore. There is no such .ignore file.
+
+Option D is incorrect as the docker daemon looks for a file named .dockerignore. There is no such .exclude file.

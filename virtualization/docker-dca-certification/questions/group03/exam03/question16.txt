@@ -1,0 +1,58 @@
+On machines when systemd is not present, 
+which of the following directory does the kublet & container runtime write logs to?
+
+A)
+/var/logs
+
+B)
+/usr/logs
+
+C)
+/sys/logs
+
+D)
+journald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Asnwer A
+
+On machines with systemd not present, the kubelet and container runtime write to journald. 
+If systemd is not present, the kubelet and container runtime write to .log files in the /var/log directory.
+
+Option B is incorrect as it’s not the directory where logs are written.
+Option C is incorrect as it’s not the directory where logs are written.
+Option D is incorrect as on machines with systemd, logs are written to journald.

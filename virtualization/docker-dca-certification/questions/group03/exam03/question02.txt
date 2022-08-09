@@ -1,0 +1,62 @@
+Which of the following port must be open & available on the system for the docker swarm’s overlay network traffic?
+
+A)
+TCP port 2377
+
+B)
+UDP port 4789
+
+C)
+TCP & UDP port 7946
+
+D)
+IP Protocol 50 (ESP)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+As UDP port 4789 is used for overlay network traffic.
+DP Port 4789 must be open & available for overlay network traffic.
+
+
+Option A is incorrect As TCP port 2377 is used for cluster management communications in a docker swarm.
+
+Option C is incorrect As TCP & UDP port 7946 is used for communication among nodes in a docker swarm.
+
+Option D is incorrect As IP Protocol 50 (ESP) is used for creating an overlay network with encryption.
+

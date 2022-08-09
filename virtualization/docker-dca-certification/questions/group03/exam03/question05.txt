@@ -1,0 +1,64 @@
+Your company has to deploy a backend API named “web” in the docker swarm with a single replica & it needs to be available to resources outside the swarm. 
+Backend API runs on port 80 (TCP) & needs to be available at port 8080 (TCP) to resources outside swarm. 
+Which of the following command accomplishes that?
+
+A)
+docker service create –name web –publish published=80,target=8080 web
+
+B)
+docker service create –name web p 8080:80 web
+
+C)
+docker service create –name web p 80:8080 web
+
+D)
+docker service create –name web p: 8080:80/udp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+Option B is correct As it publishes port 8080 for resources outside the swarm & port 80 as the target port to which the service “web” listens.
+It is a short syntax version that publishes port 8080 for resources outside the swarm & port 80 as the target port.
+Long syntax version is as follows.
+
+$ docker service create –name web –publish published=8080,target=80 web
+
+Option A is incorrect As the published & target port is reversed.
+
+Option C is incorrect As it is just the short syntax version of option A.
+
+Option D is incorrect As it publishes the correct port, but the wrong port type ie. UDP whereas TCP is required.

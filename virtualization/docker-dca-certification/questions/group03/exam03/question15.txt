@@ -1,0 +1,60 @@
+Which of the following file format is supported by Kubernetes to specify deployments?
+
+A)
+TOML
+
+B)
+Jsonnet
+
+C)
+YAML
+
+D)
+XML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer C 
+
+YAML is used to specify deployments & configuration in Kubernetes & supported.
+Kubernetes deployments are specified in .yaml files.
+
+Option A is incorrect as TOML is intended as a configuration file format & not supported by Kubernetes.
+
+Option B is incorrect as Jsonnet is a data templating language & not supported by Kubernetes.
+
+Option D is incorrect as XML is a markup language much like HTML. It stands for extensible markup language & not supported by Kubernetes.

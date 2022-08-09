@@ -1,0 +1,62 @@
+Which of the following docker command allows you to display the details 
+about a running service in docker swarm in json format?
+
+A)
+docker service inspect –pretty <SERVICEID>
+
+B)
+docker service inspect <SERVICEID>
+
+C)
+docker service inspect –json <SERVICEID>
+
+D)
+docker service ps <SERVICEID>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answer B
+
+As it returns details about a running service in JSON format.
+
+docker service inspects <SERVICE-ID> returns details about a running service in JSON format.
+
+
+Option A is incorrect As it returns details about a running service in an easily readable format.
+
+Option C is incorrect As –json is not a valid parameter to inspect sub-command.
+
+Option D is incorrect As it is used to see which nodes in the swarm are running the service.
