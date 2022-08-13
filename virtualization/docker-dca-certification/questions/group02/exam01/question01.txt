@@ -53,13 +53,14 @@ D)
 
 Answer B
 
-You can change almost everything about an existing service using the docker service update command.
-When creating a service, use the -p or –publish flag.
+You can change almost everything about an EXISTING service using the docker service update command.
 When updating an existing service, use the flag is –publish-add. There is also a –publish-rm flag to remove a port that was previously published. 
 
 $ docker service update \
   --publish-add published=8080,target=80 \
   myservice
+
+When CREATING a service, use the -p or –publish flag.
   
 $ docker service create \
   --name my_web \

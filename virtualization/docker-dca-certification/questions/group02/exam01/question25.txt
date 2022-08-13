@@ -1,4 +1,4 @@
-In which of the following cases you need to define a readiness probe on a Kubernetes Pod template definition?
+In which of the following cases you need to define a readiness probe on a Kubernetes Pod template definition? (select three)
 
 A)
 If you want your Container to be able to take itself down for maintenance.

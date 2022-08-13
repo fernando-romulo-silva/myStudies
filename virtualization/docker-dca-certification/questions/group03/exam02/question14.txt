@@ -50,7 +50,7 @@ Certificate and keys
 
 Answer  A
 
-Option A is correct because User, orgs and teams are not backed up with DTR backup
+Option A is correct because User, orgs and teams are not backed up with DTR backup, but for UCP
 
 Option B is incorrect because Configurations are backed up with DTR Backup
 

@@ -60,4 +60,5 @@ Option A is incorrect because "--filter" flag is not avaiable on "rmi" sub-comma
 Option B is incorrect because  "prune" is not a valid sub-command
 
 Option C is incorrect because "docker system prune" not only removes the dangling images, as well as unused networks, 
-stopped containers, and build caches. The question asks to ONLY remove the dangling images and nothing else.
+stopped containers, and build caches. 
+The question asks to ONLY remove the dangling images and nothing else.

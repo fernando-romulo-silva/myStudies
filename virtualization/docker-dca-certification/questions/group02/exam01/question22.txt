@@ -72,4 +72,5 @@ When updating a service with docker service update, –placement-pref-add append
 
 –placement-pref-rm removes an existing placement preference that matches the argument.
 
-In this diagram the containers are first placed by datacenters and then by the rack.	 
+In this diagram the containers are first placed by datacenters and then by the rack.	
+ 

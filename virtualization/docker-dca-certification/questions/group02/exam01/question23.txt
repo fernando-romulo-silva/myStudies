@@ -59,8 +59,6 @@ $ docker service create \
   –env MYVAR=foo \
   redis:3.0.6
   
-  
-
 Alternatively, you can use templates for some flags of service create, using the syntax provided by the Go’s text/template package.
 The supported flags are the following:
 

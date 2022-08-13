@@ -55,11 +55,4 @@ To set the maximum amount of memory the container can use one of the following f
 
 Possible values can take a positive integer, followed by a suffix of b, k, m, g to indicate bytes, kilobytes, megabytes, or gigabytes.
 
-
-
-
-
-
-
-
  
