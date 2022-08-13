@@ -1,4 +1,5 @@
 What behavior is expected when a service is created with the following command: 
+
 $ docker service create –publish 8080:80 nginx ?
 
 A)

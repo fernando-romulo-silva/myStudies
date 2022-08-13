@@ -1,5 +1,5 @@
 
-By default, a container has no resource constraints and can use as much of a given resource as the host`s kernel scheduler allows.
+By default, a container has no resource constraints and can use as much of a given resource as the host's kernel scheduler allows.
 
 A)
 FALSE

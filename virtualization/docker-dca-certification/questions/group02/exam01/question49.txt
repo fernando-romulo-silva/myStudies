@@ -62,3 +62,4 @@ The value of the –restart flag can be any of the following:
   
 · unless-stopped – Similar to always, except that when the container is stopped (manually or otherwise), 
   it is not restarted even after Docker daemon restarts.
+  

@@ -13,6 +13,41 @@ D)
 docker volume inspect nginx
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer B
 
 To display detailed information on one or more containers including the list of volume use:

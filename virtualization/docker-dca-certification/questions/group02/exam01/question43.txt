@@ -14,6 +14,40 @@ D)
 A 4-node cluster with 2 nodes down.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answers A and B
 
 If the swarm loses the quorum of managers, the swarm cannot perform administrative tasks such

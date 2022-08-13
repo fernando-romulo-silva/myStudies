@@ -51,4 +51,5 @@ docker service change
 Answer C
 
 To update a service use:
-docker service update [OPTIONS] SERVICE
+
+$ docker service update [OPTIONS] SERVICE

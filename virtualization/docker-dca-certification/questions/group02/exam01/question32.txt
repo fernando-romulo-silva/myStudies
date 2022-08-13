@@ -50,7 +50,6 @@ D)
 
 Answer A 
 
-Distribute manager nodes
 In addition to maintaining an odd number of manager nodes, pay attention to datacenter topology when placing managers.
 
 For optimal fault-tolerance, distribute manager nodes across a minimum of 3 availability-zones 
