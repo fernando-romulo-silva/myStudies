@@ -14,6 +14,40 @@ docker service --replicas=5 webserver
 D)
 docker swarm --replicas=5 webserver
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer B
 
 The scale command enables you to scale one or more replicated services either up or down to the desired number of replicas.
