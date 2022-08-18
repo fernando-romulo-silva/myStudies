@@ -51,3 +51,4 @@ docker swarm init --address-range 172.16.2.0/24
 Answer  B
 
 As per docker documentation “--default-addr-pool” is the the flag used to specify address pool while creating docker swarm.
+

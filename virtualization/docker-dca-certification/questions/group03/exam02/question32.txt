@@ -65,6 +65,16 @@ just add:
 
 
 
+
+
+
+
+
+
+
+
+
+
 Answer  B
 
 To configure the Docker daemon to default to a specific logging driver, 

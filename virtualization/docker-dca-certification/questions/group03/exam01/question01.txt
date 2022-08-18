@@ -54,7 +54,7 @@ Option A is incorrect because there is no such subcommand “init-token”
 
 Option B is incorrect because there is no such subcommand “init-token”
 
-Option C is incorrect because we need join-token for worker
+Option C is incorrect because we need join-token for WORKER
 
 Option D is correct because of
 

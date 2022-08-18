@@ -50,6 +50,9 @@ This service will only run from a worker.
 
 Answer  D
 
+Services can run on both works and managers.
+
+
 A Is true because we can create a service from manager node only.
 
 B No inbound connection will be served because no published port was specified. You have to expose it.
