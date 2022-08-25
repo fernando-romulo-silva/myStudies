@@ -49,7 +49,7 @@ bridge
 
 
 
-0Answer B
+Answer B
 
 When you create a swarm service and do not connect it to a user-defined overlay network, 
 it connects to the ingress network by default.

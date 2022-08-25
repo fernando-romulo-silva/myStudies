@@ -13,6 +13,41 @@ D)
 docker service --mount-volume
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Answer B
 
 Use the --mount-add or --mount-rm options add or remove a service’s bind mounts or volumes.
