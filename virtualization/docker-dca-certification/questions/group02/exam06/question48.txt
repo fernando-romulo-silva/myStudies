@@ -51,7 +51,19 @@ docker run --name database mysql:5.4
 Answer C
 
 The docker create command creates a writable container layer over the specified image and prepares it for running the specified command. 
+Example (It's not run!)
 
+$ docker container create -i -t --name mycontainer alpine
+
+Now it's start:
+
+$ docker container start --attach -i mycontainer
+
+
+The above is the equivalent of a docker run:
+
+$ docker run -it --name mycontainer2 alpine
+ 
 For more information, please follow the link: https://docs.docker.com/engine/reference/commandline/create/
 
   

@@ -53,4 +53,8 @@ Answer C
 docker save command saves one or more images to a tar archive which contains all the parent layers, all tags and versions, 
 and all the specified repo:tag of image(s).
  
+$ docker save busybox > busybox.tar
+
 For more information, please follow the link: https://docs.docker.com/engine/reference/commandline/save/
+
+

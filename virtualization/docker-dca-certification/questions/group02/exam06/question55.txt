@@ -52,7 +52,7 @@ Answer B
 
 The fault tolerance equation is (N-1)/2 and quorum equation is (N/2)+1 where N = total number of manager nodes in swarm cluster
 
-(9-1)/2 = 4
+Tolerance Equation: (9-1)/2 = 4
 
-(9/2) + 1 = 5
+Quorum Equation: (9/2) + 1 = 5
 
