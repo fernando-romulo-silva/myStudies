@@ -59,7 +59,7 @@ separated by a colon (:) for all running containers.
 
 Use “\t” for extra space between columns.
 
-$ docker ps --format "table {{.ID}}\t {{.Names}}\t {{.Status}}"
+$ docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
 
 CONTAINER ID    NAMES                        STATUS
 866ac42175df    image-converter-service-1    Up 25 seconds

@@ -53,6 +53,22 @@ Answer D
 Container identification
  
 Identifier type 	    Example value
+
 UUID long identifier 	“f78375b1c487e03c9438c729345e54db9d20cfa2ac1fc3494b6eb60872e74778”
 UUID short identifier 	“f78375b1c487”
 Name                 	“evil_ptolemy”
+
+Uniform Resource Identifier (URI) 
+
+URI = scheme ":" ["//" authority] path ["?" query] ["#" fragment]
+
+Example: 
+
+http://www.example.com/questions/3456/my-document
+
+ldap://[2001:db8::7]/c=GB?objectClass?one
+
+mailto:John.Doe@example.com
+
+
+

@@ -52,11 +52,11 @@ Answer B
    
 The Container Network Model (CNM) is a specification proposed by Docker.
 
-Network Sandbox: Essentially the networking stack within a container, it is an isolated environment to contain a container’s network configuration.
+*Network Sandbox: Essentially the networking stack within a container, it is an isolated environment to contain a container’s network configuration.
 
-Endpoint: A network interface that typically comes in pairs. 
+*Endpoint: A network interface that typically comes in pairs. 
 One end of the pair sits in the network sandbox, while the other sits in a designated network. 
 Endpoints join exactly one network, and multiple endpoints can exist within a single network sandbox.
 
-Network: A group of endpoints. A network is a uniquely identifiable group of endpoints that can communicate with each other.
+*Network: A group of endpoints. A network is a uniquely identifiable group of endpoints that can communicate with each other.
  

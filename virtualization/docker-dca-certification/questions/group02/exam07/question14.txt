@@ -53,4 +53,18 @@ Answer D
 To list the tasks that are running as part of the specified services use:
 
 $ docker service ps [OPTIONS] SERVICE [SERVICE…]
+
+$ docker service ps redis
+
+ID            NAME         IMAGE        NODE      DESIRED STATE  CURRENT STATE                   ERROR  PORTS
+50qe8lfnxaxk  redis.1      redis:3.0.6  manager1  Running        Running 6 seconds ago
+ky2re9oz86r9   \_ redis.1  redis:3.0.5  manager1  Shutdown       Shutdown 8 seconds ago
+3s46te2nzl4i  redis.2      redis:3.0.6  worker2   Running        Running less than a second ago
+nvjljf7rmor4   \_ redis.2  redis:3.0.6  worker2   Shutdown       Rejected 23 seconds ago        "No such image: redis@sha256:6…"
+vtiuz2fpc0yb   \_ redis.2  redis:3.0.5  worker2   Shutdown       Shutdown 1 second ago
+jnarweeha8x4  redis.3      redis:3.0.6  worker1   Running        Running 3 seconds ago
+vs448yca2nz4   \_ redis.3  redis:3.0.5  worker1   Shutdown       Shutdown 4 seconds ago
+jf1i992619ir  redis.4      redis:3.0.6  worker1   Running        Running 10 seconds ago
+blkttv7zs8ee   \_ redis.4  redis:3.0.5  worker1   Shutdown       Shutdown 11 seconds ago
+
  
