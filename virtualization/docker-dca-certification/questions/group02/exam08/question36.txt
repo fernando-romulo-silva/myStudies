@@ -50,4 +50,6 @@ It is a design pattern used to maintain 2 individual Dockerfiles for app develop
 
 Answer D
 
-Before multi-stage builds, This has been referred to as the “builder pattern”. Maintaining two Dockerfiles is not ideal.
+Before multi-stage builds, This has been referred to as the “builder pattern”. 
+Maintaining two Dockerfiles is not ideal.
+

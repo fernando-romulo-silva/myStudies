@@ -50,9 +50,21 @@ D)
 
 Answer B
 
-When you create a macvlan network, it can either be in bridge mode or 802.1q trunk bridge mode.
+When you create a macvlan network, it can either be in bridge mode or 802.1q trunk bridge mode (is not 802.3q!!!) .
 
 -> In bridge mode, macvlan traffic goes through a physical device on the host.
 
+$ docker network create -d macvlan \
+  --subnet=172.16.86.0/24 \
+  --gateway=172.16.86.1 \
+  -o parent=eth0 pub_net
+
+
 -> In 802.1q trunk bridge mode, traffic goes through an 802.1q sub-interface which Docker creates on the fly. 
    This allows you to control routing and filtering at a more granular level.
+
+$ docker network create -d macvlan \
+    --subnet=192.168.50.0/24 \
+    --gateway=192.168.50.1 \
+    -o parent=eth0.50 macvlan50
+    

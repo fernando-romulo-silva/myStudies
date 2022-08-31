@@ -50,4 +50,4 @@ FALSE
 
 Answer B 
  
-ocker UCP leverages the clustering and orchestration functionality provided by Docker.
+Docker UCP leverages the clustering and orchestration functionality provided by Docker.

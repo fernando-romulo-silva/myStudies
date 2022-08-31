@@ -62,3 +62,4 @@ FROM alpine AS production-env
 
 
 $ docker build -t mybuildimage --target build-env .
+

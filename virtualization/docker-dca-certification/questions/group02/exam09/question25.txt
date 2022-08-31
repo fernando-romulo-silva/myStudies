@@ -50,4 +50,4 @@ direct-lvm
 
 Answers A and B
 
-overlay2, overlay supports	xfs with ftype=1 and ext4
+overlay2, overlay supports xfs with ftype=1 and ext4
