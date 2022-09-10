@@ -63,3 +63,4 @@ $ docker service create \
     --name redis_2 \
     --placement-pref 'spread=node.labels.datacenter' \
     redis:3.0.6
+    

@@ -52,7 +52,7 @@ Answer C
 
 To show untagged images, or dangling, use:
 
-$ docker images –filter “dangling=true”
+$ docker images --filter "dangling=true"
 
 This will display untagged images that are the leaves of the images tree (not intermediary layers). 
 These images occur when a new build of an image takes the repo:tag away from the image ID, leaving it as : or untagged. 

@@ -50,8 +50,10 @@ D)
 
 Answer D
 
-–force-new-cluster
+--force-new-cluster
 
 This flag forces an existing node that was part of a quorum that was lost to restart as a single node Manager without losing its data.
+
+$ docker swarm init --force-new-cluster 
 
 https://docs.docker.com/engine/reference/commandline/swarm_init/#–force-new-cluster

@@ -52,3 +52,7 @@ The correct answer is A, True
 
 Since DTR requires Docker Universal Control Plane (UCP) to run, 
 you need to install UCP on all the nodes where you plan to install DTR.
+
+1) Swarm
+2) UCP
+3) DTR

@@ -68,3 +68,4 @@ The fields are:
   
 · "labelSelector" is used to find matching Pods. 
   Pods that match this label selector are counted to determine the number of Pods in their corresponding topology domain. 
+  

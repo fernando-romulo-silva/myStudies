@@ -53,3 +53,4 @@ The correct answer is Option B.
 $  docker run \
       --log-driver json-file --log-opt max-size=10m \
       alpine echo hello world
+      

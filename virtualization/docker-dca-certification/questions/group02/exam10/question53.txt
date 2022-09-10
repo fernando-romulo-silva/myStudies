@@ -55,78 +55,16 @@ The output defaults to JSON format, but you can pass the –pretty flag to print
 
 $ docker node inspect self –pretty
 
-
 In this case we don't have this option, so the correct answer is B
 
 $ docker node status
 
-C is wrong because this is a cluster management command and must be executed on a swarm manager node. 
+---
+
+D is wrong because this is a cluster management command and must be executed on a swarm manager node. 
 To learn about managers and workers, refer to the Swarm mode section in the documentation.
 
 $ docker node ls [OPTIONS]
 You have just executed ‘docker swarm leave’ on a node. 
 What command can be run on the same node to confirm it has left the cluster?
 
-A)
-docker node status
-
-B)
-docker system info
-
-C)
-docker system status
-
-D)
-docker node ls 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Answer B
-
-You can run docker node inspect  on a manager node to view the details for an individual node. 
-The output defaults to JSON format, but you can pass the –pretty flag to print the results in human-readable format.
-
-$ docker node inspect self –pretty
-
-
-In this case we don't have this option, so the correct answer is B
-
-$ docker node status
-
-C is wrong because this is a cluster management command and must be executed on a swarm manager node. 
-To learn about managers and workers, refer to the Swarm mode section in the documentation.
-
-$ docker node ls [OPTIONS]

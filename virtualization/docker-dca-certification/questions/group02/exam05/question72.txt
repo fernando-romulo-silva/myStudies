@@ -48,7 +48,7 @@ All the layers of a Docker Image are delta of the previous layer.
 
 
 
-Answer D
+Answer C
 
 A Docker image is built up from a series of layers. 
 Each layer represents an instruction in the image’s Dockerfile.

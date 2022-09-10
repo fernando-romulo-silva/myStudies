@@ -54,3 +54,21 @@ Each Docker daemon has a default logging driver, which each container uses unles
 
 To configure the Docker daemon to default to a specific logging driver, set the value of log-driver to the name of the logging driver in the daemon.json file,
 which is located in /etc/docker/ on Linux hosts or C:\ProgramData\docker\config\ on Windows server hosts.
+
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3",
+    "labels": "production_status",
+    "env": "os,customer"
+  }
+}
+
+For a specific container (not containers):
+
+$  docker run \
+      --log-driver json-file --log-opt max-size=10m \
+      alpine echo hello world
+      
+

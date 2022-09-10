@@ -55,6 +55,10 @@ The output defaults to JSON format, but you can pass the –pretty flag to print
 
 $ docker node inspect self –pretty
 
+In this case we don't have this option, so the correct answer is B
+
+$ docker node status
+
 C is wrong because this is a cluster management command and must be executed on a swarm manager node. 
 To learn about managers and workers, refer to the Swarm mode section in the documentation.
 

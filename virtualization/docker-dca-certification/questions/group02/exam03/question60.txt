@@ -60,4 +60,13 @@ Any –ulimit options passed to docker run will overwrite these defaults.
 Be careful setting nproc with the ulimit flag as nproc is designed by Linux to set the maximum number of processes available to a user, not to a container. 
 For details please check the run reference.
 
+$ docker run --ulimit memlock=819200000:819200000 \ 
+             -h <docker_host_name> \ 
+             --name=current \ 
+             -v /home/user_home:/user_home \
+             -i -d -t docker_user_name/image_name
+             
+             
+             
+
 https://docs.docker.com/engine/reference/commandline/dockerd/#default-ulimit-settings
