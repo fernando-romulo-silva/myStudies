@@ -1,0 +1,36 @@
+-------------------------------------------------------
+
+$ npm install --global serve
+
+$ serve
+-------------------------------------------------------
+
+$ npm  init 
+
+-------------------------------------------------------
+
+$ npm install --save-dev eslint
+
+-------------------------------------------------------
+
+$ eslint --init
+
+-------------------------------------------------------
+
+$ npm install --save-dev webpack webpack-cli
+
+$ npm run build
+
+-------------------------------------------------------
+
+$ npm install --save-dev webpack-dev-server
+
+-------------------------------------------------------
+
+npm install --save-dev clean-webpack-plugin
+
+npm install --save-dev html-webpack-plugin
+
+-------------------------------------------------------
+
+npm i --save lodash
