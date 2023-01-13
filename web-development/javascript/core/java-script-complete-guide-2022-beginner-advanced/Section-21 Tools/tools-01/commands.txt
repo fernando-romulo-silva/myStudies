@@ -25,6 +25,8 @@ $ npm run build
 
 $ npm install --save-dev webpack-dev-server
 
+$ npm install webpack-dev-server -g
+
 -------------------------------------------------------
 
 npm install --save-dev clean-webpack-plugin
@@ -34,3 +36,6 @@ npm install --save-dev html-webpack-plugin
 -------------------------------------------------------
 
 npm i --save lodash
+
+
+export NODE_OPTIONS=--openssl-legacy-provider
