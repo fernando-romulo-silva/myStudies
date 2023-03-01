@@ -1,0 +1,28 @@
+$ npm install --global yarn
+
+$ npm install express || npm install --save express
+
+$ yarn init -y
+
+$ yarn add -D typescript
+
+$ yarn add @types/express -D
+
+$ node src/index.ts
+
+$ yarn tsc src/index.ts
+
+$ node src/index.js 
+
+$ yarn tsc --init
+
+$ yarn tsc
+
+$ yarn add ts-node-dev
+
+
+$ yarn add @types/cors -D
+
+======================================================================
+
+$ yarn create react-app frontend --template=typescript
