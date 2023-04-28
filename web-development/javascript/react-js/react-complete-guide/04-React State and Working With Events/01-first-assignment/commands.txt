@@ -1,0 +1,8 @@
+
+$ npx create-react-app 01-setup-application
+
+$ cd 01-setup-application
+
+$ npm install
+
+$ npm start
