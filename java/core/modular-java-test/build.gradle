@@ -1,0 +1,74 @@
+/*
+ * Create image:
+ * $ docker build -f src/main/docker/Dockerfile --tag modular-java-tests-iso .
+ * 
+ * Run: 
+ * $ docker run --name jmodular-java-tests-1 modular-java-tests-iso
+ *  
+ */
+
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+    id 'java-library'
+}
+
+sourceCompatibility = '17'
+
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    
+    implementation 'com.google.guava:guava:29.0-jre'    
+    implementation 'org.slf4j:slf4j-api:1.7.30'
+    implementation 'org.apache.logging.log4j:log4j-api:2.11.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.11.1'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.1'    
+    
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'modular.java.test.App'
+}
+
+tasks.named('test') {
+    // Use junit platform for unit tests.
+    useJUnitPlatform()
+}
+
+
+// copies all the jar dependencies your app needs to the lib folder
+task copyDependencies(type: Copy) {
+    from configurations.runtimeClasspath
+    into "$buildDir/lib"
+}
+
+// creates your manifest file within the JAR
+jar {
+    manifest {
+        attributes["Main-Class"] = "modular.java.test.App"
+        attributes["Class-Path"] = configurations.runtimeClasspath.collect { 'lib/' + it.getName() }.join(' ')
+    }
+}
+
+
+// builds the docker image, tagging it with the same group id, name, and version as the JAR
+task buildDocker(type: Exec) {
+    dependsOn copyDependencies, build
+    workingDir "$projectDir"
+    commandLine 'docker', 'build', '--rm', '.', '-t', "$project.group/$project.name:$project.version", "-f", "$projectDir/src/main/docker/Dockerfile"
+}
+// runs the docker image
+task runDocker(type: Exec) {
+    dependsOn buildDocker
+    workingDir "$projectDir"
+    commandLine 'docker', 'run', "$project.group/$project.name:$project.version"
+}
