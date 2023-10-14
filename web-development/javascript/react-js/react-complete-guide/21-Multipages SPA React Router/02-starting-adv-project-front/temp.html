@@ -1,0 +1,423 @@
+<ul>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#abstractclasswithoutabstractmethod">
+      AbstractClassWithoutAbstractMethod
+    </a>
+    : The abstract class does not contain any abstract methods. An abstract class suggests an
+    incomplet…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#accessorclassgeneration">
+      AccessorClassGeneration
+    </a>
+    : Instantiation by way of private constructors from outside the constructor’s class often causes
+    th…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#accessormethodgeneration">
+      AccessorMethodGeneration
+    </a>
+    : When accessing private fields / methods from another class, the Java compiler will generate
+    acces…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#arrayisstoreddirectly"> ArrayIsStoredDirectly </a>
+    : Constructors and methods receiving arrays should clone objects and store the copy. This
+    prevents …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#avoidmessagedigestfield">
+      AvoidMessageDigestField
+    </a>
+    : Declaring a MessageDigest instance as a field make this instance directly available to
+    multiple t…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#avoidprintstacktrace"> AvoidPrintStackTrace </a>
+    : Avoid printStackTrace(); use a logger call instead.
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#avoidreassigningcatchvariables">
+      AvoidReassigningCatchVariables
+    </a>
+    : Reassigning exception variables caught in a catch statement should be avoided because of: 1)
+    If i…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#avoidreassigningloopvariables">
+      AvoidReassigningLoopVariables
+    </a>
+    : Reassigning loop variables can lead to hard-to-find bugs. Prevent or limit how these variables
+    ca…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#avoidreassigningparameters">
+      AvoidReassigningParameters
+    </a>
+    : Reassigning values to incoming parameters of a method or constructor is not recommended, as
+    this …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#avoidstringbufferfield"> AvoidStringBufferField </a>
+    : StringBuffers/StringBuilders can grow considerably, and so may become a source of memory leaks
+    if…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#avoidusinghardcodedip"> AvoidUsingHardCodedIP </a>
+    : Application with hard-coded IP addresses can become impossible to deploy in some cases.
+    Externali…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#checkresultset"> CheckResultSet </a>
+    : Always check the return values of navigation methods (next, previous, first, last) of a
+    ResultSet…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#constantsininterface"> ConstantsInInterface </a>
+    : Avoid constants in interfaces. Interfaces should define types, constants are implementation
+    detai…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#defaultlabelnotlastinswitchstmt">
+      DefaultLabelNotLastInSwitchStmt
+    </a>
+    : By convention, the default label should be the last label in a switch statement.
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#doublebraceinitialization">
+      DoubleBraceInitialization
+    </a>
+    : Double brace initialisation is a pattern to initialise eg collections concisely. But it
+    implicitl…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#forloopcanbeforeach"> ForLoopCanBeForeach </a>
+    : Reports loops that can be safely replaced with the foreach syntax. The rule considers loops
+    over …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#forloopvariablecount"> ForLoopVariableCount </a>
+    : Having a lot of control variables in a ‘for’ loop makes it harder to see what range of values
+    the…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#guardlogstatement"> GuardLogStatement </a>
+    : Whenever using a log level, one should check if the loglevel is actually enabled, or otherwise
+    sk…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junit4suitesshouldusesuiteannotation">
+      JUnit4SuitesShouldUseSuiteAnnotation
+    </a>
+    : In JUnit 3, test suites are indicated by the suite() method. In JUnit 4, suites are indicated
+    thr…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junit4testshoulduseafterannotation">
+      JUnit4TestShouldUseAfterAnnotation
+    </a>
+    : In JUnit 3, the tearDown method was used to clean up all data entities required in running
+    tests….
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junit4testshouldusebeforeannotation">
+      JUnit4TestShouldUseBeforeAnnotation
+    </a>
+    : In JUnit 3, the setUp method was used to set up all data entities required in running tests.
+    JUni…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junit4testshouldusetestannotation">
+      JUnit4TestShouldUseTestAnnotation
+    </a>
+    : In JUnit 3, the framework executed all methods which started with the word test as a unit
+    test. I…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate">
+      JUnit5TestShouldBePackagePrivate
+    </a>
+    : Reports JUnit 5 test classes and methods that are not package-private. Contrary to JUnit 4
+    tests,…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage">
+      JUnitAssertionsShouldIncludeMessage
+    </a>
+    : JUnit assertions should include an informative message - i.e., use the three-argument version
+    of …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts">
+      JUnitTestContainsTooManyAsserts
+    </a>
+    : Unit tests should not contain too many asserts. Many asserts are indicative of a complex test,
+    fo…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junittestsshouldincludeassert">
+      JUnitTestsShouldIncludeAssert
+    </a>
+    : JUnit tests should include at least one assertion. This makes the tests more robust, and using
+    a…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#junituseexpected"> JUnitUseExpected </a>
+    : In JUnit4, use the @Test(expected) annotation to denote tests that should throw exceptions.
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#literalsfirstincomparisons">
+      LiteralsFirstInComparisons
+    </a>
+    : Position literals first in all String comparisons, if the second argument is null then
+    NullPointe…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#loosecoupling"> LooseCoupling </a>
+    : The use of implementation types (i.e., HashSet) as object references limits your ability to
+    use a…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#methodreturnsinternalarray">
+      MethodReturnsInternalArray
+    </a>
+    : Exposing internal arrays to the caller violates object encapsulation since elements can be
+    remove…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#missingoverride"> MissingOverride </a>
+    : Annotating overridden methods with @Override ensures at compile time that the method …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#onedeclarationperline"> OneDeclarationPerLine </a>
+    : Java allows the use of several variables declaration of the same type on one line. However, it
+    ca…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#positionliteralsfirstincaseinsensitivecomparisons">
+      PositionLiteralsFirstInCaseInsensitiveComparisons
+    </a>
+    :
+    <span
+      style="
+        border-radius: 0.25em;
+        color: #fff;
+        padding: 0.2em 0.6em 0.3em;
+        display: inline;
+        background-color: #d9534f;
+        font-size: 75%;
+      ">
+      Deprecated
+    </span>
+    Position literals first in comparisons, if the second argument is null then
+    NullPointerExceptions…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#positionliteralsfirstincomparisons">
+      PositionLiteralsFirstInComparisons
+    </a>
+    :
+    <span
+      style="
+        border-radius: 0.25em;
+        color: #fff;
+        padding: 0.2em 0.6em 0.3em;
+        display: inline;
+        background-color: #d9534f;
+        font-size: 75%;
+      ">
+      Deprecated
+    </span>
+    Position literals first in comparisons, if the second argument is null then
+    NullPointerExceptions…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#preservestacktrace"> PreserveStackTrace </a>
+    : Throwing a new exception from a catch block without passing the original exception into the
+    new e…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#primitivewrapperinstantiation">
+      PrimitiveWrapperInstantiation
+    </a>
+    : Reports usages of primitive wrapper constructors. They are deprecated since Java 9 an…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#replaceenumerationwithiterator">
+      ReplaceEnumerationWithIterator
+    </a>
+    : Consider replacing Enumeration usages with the newer java.util.Iterator
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#replacehashtablewithmap">
+      ReplaceHashtableWithMap
+    </a>
+    : Consider replacing Hashtable usage with the newer java.util.Map if thread safety is not
+    required.
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#replacevectorwithlist"> ReplaceVectorWithList </a>
+    : Consider replacing Vector usages with the newer java.util.ArrayList if expensive thread-safe
+    oper…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#simplifiabletestassertion">
+      SimplifiableTestAssertion
+    </a>
+    : Reports test assertions that may be simplified using a more specific assertion method…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#switchstmtsshouldhavedefault">
+      SwitchStmtsShouldHaveDefault
+    </a>
+    : Switch statements should be exhaustive, to make their control flow easier to follow. …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#systemprintln"> SystemPrintln </a>
+    : References to System.(out|err).print are usually intended for debugging purposes and can
+    remain …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#unusedassignment"> UnusedAssignment </a>
+    : Reports assignments to variables that are never used before the variable is overwritten, …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#unusedformalparameter"> UnusedFormalParameter </a>
+    : Reports parameters of methods and constructors that are not referenced them in the method
+    body. P…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#unusedimports"> UnusedImports </a>
+    :
+    <span
+      style="
+        border-radius: 0.25em;
+        color: #fff;
+        padding: 0.2em 0.6em 0.3em;
+        display: inline;
+        background-color: #d9534f;
+        font-size: 75%;
+      ">
+      Deprecated
+    </span>
+    Reports import statements that are not used within the file. This also reports duplicate
+    imports,…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#unusedlocalvariable"> UnusedLocalVariable </a>
+    : Detects when a local variable is declared and/or assigned, but not used. Variables whose name
+    sta…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#unusedprivatefield"> UnusedPrivateField </a>
+    : Detects when a private field is declared and/or assigned a value, but not used. Since PMD
+    6.50.0 …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#unusedprivatemethod"> UnusedPrivateMethod </a>
+    : Unused Private Method detects when a private method is declared but is unused.
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#useassertequalsinsteadofasserttrue">
+      UseAssertEqualsInsteadOfAssertTrue
+    </a>
+    :
+    <span
+      style="
+        border-radius: 0.25em;
+        color: #fff;
+        padding: 0.2em 0.6em 0.3em;
+        display: inline;
+        background-color: #d9534f;
+        font-size: 75%;
+      ">
+      Deprecated
+    </span>
+    This rule detects JUnit assertions in object equality. These assertions should be made by more
+    sp…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#useassertnullinsteadofasserttrue">
+      UseAssertNullInsteadOfAssertTrue
+    </a>
+    :
+    <span
+      style="
+        border-radius: 0.25em;
+        color: #fff;
+        padding: 0.2em 0.6em 0.3em;
+        display: inline;
+        background-color: #d9534f;
+        font-size: 75%;
+      ">
+      Deprecated
+    </span>
+    This rule detects JUnit assertions in object references equality. These assertions should be
+    made…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#useassertsameinsteadofasserttrue">
+      UseAssertSameInsteadOfAssertTrue
+    </a>
+    :
+    <span
+      style="
+        border-radius: 0.25em;
+        color: #fff;
+        padding: 0.2em 0.6em 0.3em;
+        display: inline;
+        background-color: #d9534f;
+        font-size: 75%;
+      ">
+      Deprecated
+    </span>
+    This rule detects JUnit assertions in object references equality. These assertions should be
+    made…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#useasserttrueinsteadofassertequals">
+      UseAssertTrueInsteadOfAssertEquals
+    </a>
+    :
+    <span
+      style="
+        border-radius: 0.25em;
+        color: #fff;
+        padding: 0.2em 0.6em 0.3em;
+        display: inline;
+        background-color: #d9534f;
+        font-size: 75%;
+      ">
+      Deprecated
+    </span>
+    When asserting a value is the same as a literal or Boxed boolean, use assertTrue/assertFalse,
+    ins…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#usecollectionisempty"> UseCollectionIsEmpty </a>
+    : The isEmpty() method on java.util.Collection is provided to determine if a collection has any
+    ele…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#usestandardcharsets"> UseStandardCharsets </a>
+    : Starting with Java 7, StandardCharsets provides constants for common Charset objects, such as
+    UTF…
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#usetrywithresources"> UseTryWithResources </a>
+    : Java 7 introduced the try-with-resources statement. This statement ensures that each resource
+    is …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#usevarargs"> UseVarargs </a>
+    : Java 5 introduced the varargs parameter declaration for methods and constructors. This
+    syntactic …
+  </li>
+  <li>
+    <a href="pmd_rules_java_bestpractices.html#whileloopwithliteralboolean">
+      WhileLoopWithLiteralBoolean
+    </a>
+    : ‘do {} while (true);’ requires reading the end of the statement before it is apparent that it
+    loo…
+  </li>
+</ul>
