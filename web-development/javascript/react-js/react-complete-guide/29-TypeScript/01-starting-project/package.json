@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "typescript": "^5.2.2"
+  },
+  "name": "01-starting-project",
+  "version": "1.0.0",
+  "main": "no-typescript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
