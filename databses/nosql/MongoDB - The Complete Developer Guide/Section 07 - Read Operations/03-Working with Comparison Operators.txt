@@ -1,0 +1,90 @@
+db.movies.find({runtime: {$eq: 60}})
+
+db.movies.find({runtime: {$ne: 60}})
+
+------------------------------------------------------------
+
+db.movies.find({runtime: {$lt: 40}}).itcount()
+
+db.movies.find({runtime: {$lte: 40}}).itcount()
+
+------------------------------------------------------------
+
+db.movies.find({runtime: {$gt: 40}}).itcount()
+
+db.movies.find({runtime: {$gte: 40}}).itcount()
+
+// ------------------------------------
+
+IN
+
+db.movies.find({runtime: {$in: [30, 42]}})
+
+db.movies.find({runtime: {$nin: [30, 42]}})
+
+// ------------------------------------
+
+GREATER THEN
+
+db.movies.find({"rating.average": { $lt: 5}}).count()
+
+db.movies.find({"rating.average": { $gt: 9.3}}).count()
+
+// ------------------------------------
+
+OR
+
+db.movies.find({ $or: [{"rating.average": {$lt: 5}}, {"rating.average": {$gt: 9.3}}] }).count()
+
+db.movies.find({ $nor: [{"rating.average": {$lt: 5}}, {"rating.average": {$gt: 9.3}}] }).count()
+
+// ------------------------------------
+
+AND
+
+db.movies.find({ $and: [{"rating.average": {$gt: 9}}, {genres: "Drama"}] }).count()
+
+db.movies.find({ "rating.average": {$gt: 9}, genres: "Drama" }).count()
+
+// ------------------------------------
+
+NOT
+
+db.movies.find({ runtime: { $not: { $eq: 60} } }).count()
+
+db.movies.find({ runtime: { $ne: 60 } }).count()
+
+// ------------------------------------
+
+EXISTS
+
+db.movies.find({ runtime: { $exists: true } }).count()
+
+db.movies.find({ runtime: { $exists: true, $gt:  80 } }).count()
+
+db.movies.find({ runtime: { $exists: true, $ne: null } }).count()
+
+
+// ------------------------------------
+
+TYPE
+
+db.movies.find({ runtime: { $type: ["number", "string" ]} }).count()
+
+// ------------------------------------
+
+REGEX
+
+db.movies.find({ summary: "musical" }).count()
+
+db.movies.find({ summary: { $regex: /musical/ } }).count()
+
+// ------------------------------------
+
+EXPR
+
+db.movies.find({ $expr: { $gt: ["$runtime", "$rating.average"] } }).count()
+
+db.movies.find({ $expr: { $gt: [ { $cond: { if: { $gte: [ "$runtime", 190 ] }, then: { $subtract: [ "$rating.average", 10 ] }, else: "$rating.average" } }, "$target" ] } }).count()
+
+

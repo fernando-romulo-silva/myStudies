@@ -1,0 +1,53 @@
+---------------------------------
+
+COUNT
+
+db.movies.find().count()
+
+---------------------------------
+
+PRETTY
+
+db.movies.find().pretty()
+
+---------------------------------
+
+NEXT(
+
+db.movies.find().next()
+
+const dataCursor = db.movies.find().next()
+ 
+dataCursor.next()
+ 
+dataCursor.hasNext()
+ 
+---------------------------------
+
+FOR EACH
+
+db.movies.find().forEach(doc => { printjson(doc) })
+
+---------------------------------
+
+SORT
+
+db.movies.find().sort()
+
+db.movies.find().sort( { "rating.average": -1 } ).pretty()
+
+db.movies.find().sort( { "rating.average": 1, runtime: -1 } ).pretty()
+
+---------------------------------
+
+SKIP
+
+db.movies.find().skip(10).pretty()
+
+---------------------------------
+
+LIMIT
+
+db.movies.find().limit(10).pretty()
+
+

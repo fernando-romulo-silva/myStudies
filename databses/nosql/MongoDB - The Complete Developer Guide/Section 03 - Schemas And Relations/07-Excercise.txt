@@ -1,0 +1,91 @@
+db.users.insertMany( [
+
+     { name: "Max Schwarzmuller",
+       age: 29,
+       email: "max@test.com"
+     },
+     
+     { name: "Manuel Lorenz",
+       age: 30,
+       email: manu@test.com       
+     }       
+])
+
+db.users.find().pretty()
+{
+     { _id: ObjectId("123"),
+       name: "Max Schwarzmuller",
+       age: 29,
+       email: "max@test.com"
+     },
+     
+     { _id: ObjectId("456"),
+       name: "Manuel Lorenz",
+       age: 30,
+       email: manu@test.com       
+     }
+}
+
+==========================================
+
+db.post.insertMany( [
+
+     { title: "My first Post!",
+       text: "This is my first post, bla bla bla",
+       tags: [ "new", "tech"],
+       creator:  ObjectId("123"),
+       comments: [
+                   {
+                     text: "I like this post",
+                     author: ObjectId("456")
+                   }
+       ]
+       
+     },
+     
+     { name: "Manuel Lorenz",
+       age: 30,
+       email: manu@test.com       
+     }       
+])
+
+db.createCollection('posts', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['title', 'text', 'creator', 'comments'],
+      properties: {
+        title: {
+          bsonType: 'string',
+          description: 'must be a string and is required'
+        },
+        text: {
+          bsonType: 'string',
+          description: 'must be a string and is required'
+        },
+        creator: {
+          bsonType: 'objectId',
+          description: 'must be an objectid and is required'
+        },
+        comments: {
+          bsonType: 'array',
+          description: 'must be an array and is required',
+          items: {
+            bsonType: 'object',
+            required: ['text', 'author'],
+            properties: {
+              text: {
+                bsonType: 'string',
+                description: 'must be a string and is required'
+              },
+              author: {
+                bsonType: 'objectId',
+                description: 'must be an objectid and is required'
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+});

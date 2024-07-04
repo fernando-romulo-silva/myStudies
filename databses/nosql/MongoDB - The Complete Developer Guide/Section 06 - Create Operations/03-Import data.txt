@@ -1,0 +1,1 @@
+$ mongoimport tv-shows.json -d movieData -c movies --jsonArray --drop

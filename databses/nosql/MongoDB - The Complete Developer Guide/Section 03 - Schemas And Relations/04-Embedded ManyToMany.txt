@@ -1,0 +1,24 @@
+
+// Product
+{
+	_id: ObjectId("123"),
+	title: "A book",
+	price: 12.99
+}
+
+// Customer
+{
+	_id: ObjectId("ddd"),
+	name: "Paul",
+	age: 29,
+	orders : [
+		{
+			productId: ObjectId("123),
+			quantity: 2
+		}
+	
+	]
+}	
+
+
+// update the data

@@ -1,0 +1,38 @@
+---------------------------------------------------------
+
+db.products.insertMany( [ {title: "A book", description: "This is an awesome book about a young artist!"}, {title: "Red T-Shirt", description: "This T-Shirt is read an it's pretty awesome!"} ] )
+
+db.products.find().pretty()
+
+db.products.createIndex( { description: "text" } )
+
+--------------------
+
+db.products.find({ $text: { $search: "awesome" } }) 2 elements
+
+db.products.find({ $text: { $search: "book" } }) 1 element
+
+db.products.find({ $text: { $search: "\"red book\"" } }) 0 element
+
+db.products.find({ $text: { $search: "\"awesome book\"" } }) 1 element
+
+--------------------
+
+db.products.find({ $text: { $search: "awesome t-shirt" } }, { score: { $meta: "textScore" }}).pretty()
+
+db.products.find({ $text: { $search: "awesome t-shirt" } }, { score: { $meta: "textScore" }}).sort({score: { $meta: "textScore" }}).pretty()
+
+--------------------
+
+db.products.getIndexes()
+
+db.products.dropIndex("description_text")
+
+description_text_desription_text
+
+db.products.createIndex( { title: "text", description: "text" } )
+
+db.products.insertOne({title: "A ship", description: "Floats perfectly!"})
+
+
+db.products.find({ $text: { $search: "ship" } })

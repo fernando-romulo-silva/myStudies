@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "666af3b254bd81e72e0c8c10"
+  },
+  "name": "Max",
+  "age": 29,
+  "location": {
+    "type": "Point",
+    "cordinates": [56.12, 43.09]
+  }
+  
+}
+
+
+https://docs.mongodb.com/compass/master/install/
