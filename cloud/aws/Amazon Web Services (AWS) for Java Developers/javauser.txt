@@ -1,0 +1,2 @@
+account id: 368719219994
+arn:aws:iam::368719219994:user/javauser

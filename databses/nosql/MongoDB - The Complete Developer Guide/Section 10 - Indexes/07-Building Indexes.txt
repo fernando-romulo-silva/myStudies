@@ -1,0 +1,15 @@
+
+db.ratings.findOne()
+
+db.ratings.createIndex({ age: 1 })
+
+==========================
+
+db.ratings.explain("executionStats").find( { age: {$gt: 80} } )
+
+===========================
+
+
+db.ratings.getIndexes()
+
+db.ratings.dropIndex("age_1")

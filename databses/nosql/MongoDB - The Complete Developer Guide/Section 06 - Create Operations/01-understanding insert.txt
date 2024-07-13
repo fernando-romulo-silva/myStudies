@@ -1,0 +1,39 @@
+db.persons.insertOne({
+
+	name: "Max",
+	age: 30,
+	hobbies: ["Sports", "Cooking"]
+	
+});
+
+
+db.persons.insertMany([
+
+	{
+		name: "Max",
+		age: 30,
+		hobbies: ["Sports", "Cooking"]
+	},
+	
+	{
+		name: "Anna",
+		age: 27,
+		hobbies: ["Sports", "Yoga"]
+	}	
+	
+]);
+
+
+db.hobbies.insertMany([
+
+	{
+		 _id: "yoga",
+		name: "yoga"
+	},
+	
+	{  
+	     _id: "cooking",
+		name: "cooking"
+	}	
+	
+], {ordered: false});

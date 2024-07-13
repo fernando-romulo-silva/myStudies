@@ -1,0 +1,115 @@
+---------------------------------------------------------
+
+db.products.insertMany( [ {title: "A book", description: "This is an awesome book about a young artist!"}, {title: "Red T-Shirt", description: "This T-Shirt is read an it's pretty awesome!"} ] )
+
+db.products.find().pretty()
+
+db.products.createIndex( { description: "text" } )
+
+--------------------
+
+db.products.find({ $text: { $search: "awesome" } }) 2 elements
+
+db.products.find({ $text: { $search: "book" } }) 1 element
+
+db.products.find({ $text: { $search: "\"red book\"" } }) 0 element
+
+db.products.find({ $text: { $search: "\"awesome book\"" } }) 1 element
+
+--------------------
+
+db.products.find({ $text: { $search: "awesome t-shirt" } }, { score: { $meta: "textScore" }}).pretty()
+
+db.products.find({ $text: { $search: "awesome t-shirt" } }, { score: { $meta: "textScore" }}).sort({score: { $meta: "textScore" }}).pretty()
+
+--------------------
+
+COMBINED TEXT INDEXES
+
+
+db.products.getIndexes()
+
+db.products.dropIndex("description_text")
+
+description_text_desription_text
+
+db.products.createIndex( { title: "text", description: "text" } )
+
+db.products.insertOne({title: "A ship", description: "Floats perfectly!"})
+
+
+db.products.find({ $text: { $search: "ship" } })
+
+
+--------------------
+
+- MINUS OPERATOR
+
+db.products.find( { $text: { $search: "awesome" } } )
+
+{
+  _id: ObjectId('66841217cce2a0326e493b5c'),
+  title: 'A book',
+  description: 'This is an awesome book about a young artist!'
+}
+
+{
+  _id: ObjectId('66841217cce2a0326e493b5d'),
+  title: 'Red T-Shirt',
+  description: "This T-Shirt is read an it's pretty awesome!"
+}
+
+------
+
+db.products.find( { $text: { $search: "awesome -t-shirt" } } )
+
+{
+  _id: ObjectId('66841217cce2a0326e493b5c'),
+  title: 'A book',
+  description: 'This is an awesome book about a young artist!'
+}
+
+--------------------
+
+WEIGHTs
+
+db.products.getIndexes()
+
+db.products.dropIndex("title_text_description_text")
+
+db.products.createIndex( { title: "text", description: "text" }, { default_language: "english",  weights: { title: 1, description: 10 } } )
+
+
+----------------------
+
+db.products.find( { $text: { $search: "red" }, language: "english", caseSensitive: true })
+
+db.products.find({ $text: { $search: "red" } }, { score: { $meta: "textScore" }}).pretty()
+{
+  _id: ObjectId('66841217cce2a0326e493b5d'),
+  title: 'Red T-Shirt',
+  description: "This T-Shirt is red an it's pretty awesome!",
+  score: 6.666666666666667
+}
+
+-----------------------
+
+db.products.getIndexes()
+
+db.products.dropIndex("title_text_description_text")
+
+// NO WEIGHT
+db.products.createIndex( { title: "text", description: "text" }, { default_language: "english" } )
+
+db.products.find({ $text: { $search: "red" } }, { score: { $meta: "textScore" }}).pretty()
+
+{
+  _id: ObjectId('66841217cce2a0326e493b5d'),
+  title: 'Red T-Shirt',
+  description: "This T-Shirt is red an it's pretty awesome!",
+  score: 1.2666666666666666
+}
+
+
+
+

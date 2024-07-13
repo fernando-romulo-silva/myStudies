@@ -1,0 +1,13 @@
+
+insertOne(data, options)
+insertMany(data, options)
+
+find(filter, options)
+findOne(filter, options)
+
+updateOne(filter, data, options)
+updateMany(filter, data, options)
+replaceOne(filter, data, options)
+
+deleteOne(filter, options)
+deleteMany(filter, options)

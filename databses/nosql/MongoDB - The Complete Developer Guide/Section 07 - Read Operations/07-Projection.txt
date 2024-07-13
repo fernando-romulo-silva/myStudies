@@ -1,0 +1,25 @@
+---------------------------------
+
+db.movies.find( {}, { name: 1, genres: 1, runtime: 1, rating: 1, _id: 0 } ).pretty()
+
+
+db.movies.find( {}, { name: 1, genres: 1, runtime: 1, "rating.average": 1, _id: 0 } ).pretty()
+
+
+db.movies.find( {}, { name: 1, genres: 1, runtime: 1, "rating.average": 1, _id: 0 } ).pretty()
+
+db.movies.find( { genres: { $all: ["Drama", "Horror"] } }, { "rating.average": 1, "genres.$": 1 } ).pretty()
+
+
+db.movies.find( { genres: "Drama" }, { "rating.average": 1, "genres.$": 1 } ).pretty()
+
+db.movies.find( { genres: "Drama" }, { "rating.average": 1, "genres": { $elemMatch: { $eq: "Horror"} } } ).pretty()
+
+
+---------------------------------
+
+SLICE
+
+db.movies.find( { "rating.average": { $gt: 9 } }, { "rating.average": 1, "genres": { $slice: 2 } } ).pretty()
+
+db.movies.find( { "rating.average": { $gt: 9 } }, { "rating.average": 1, "genres": { $slice: [1, 2] } } ).pretty()

@@ -1,0 +1,91 @@
+---------------------------------------------------------
+
+db.persons.drop()
+
+db.persons.insertOne( { name: "Max", hobbies: [ "Cooking", "Sports" ], addresses: [ {street: "Main Street"}, { street: "Second Street" } ] } )
+
+db.persons.find().pretty()
+
+------------
+
+db.persons.createIndex( { hobbies: 1 } )
+
+db.persons.explain("executionStats").find( { hobbies: "Sports" } ).pretty()
+
+winningPlan: {
+    stage: 'FETCH',
+    inputStage: {
+      stage: 'IXSCAN',
+      keyPattern: {
+        hobbies: 1
+      },
+      indexName: 'hobbies_1',
+      isMultiKey: true,
+}
+
+------------
+
+db.persons.createIndex( { addresses: 1 } )
+
+db.persons.explain("executionStats").find( { "addresses.street": "Main Street" } ).pretty()
+
+winningPlan: {
+      stage: 'COLLSCAN',
+      filter: {
+        'addresses.street': {
+          '$eq': 'Main Street'
+        }
+      },
+      direction: 'forward'
+    },
+    rejectedPlans: []
+},
+
+------------
+
+// the index hold all document
+
+db.persons.explain("executionStats").find( { addresses: { street: "Main Street" } } ).pretty()
+
+winningPlan: {
+      stage: 'FETCH',
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: {
+          addresses: 1
+        },
+        indexName: 'addresses_1',
+        isMultiKey: true,
+        multiKeyPaths: {
+          addresses: [
+            'addresses'
+          ]
+        },
+}
+
+------------
+
+db.persons.createIndex( { "addresses.street": 1 } )
+
+db.persons.explain("executionStats").find( { "addresses.street": "Main Street" } ).pretty()
+
+winningPlan: {
+      stage: 'FETCH',
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: {
+          'addresses.street': 1
+        },
+        indexName: 'addresses.street_1',
+        isMultiKey: true,
+        multiKeyPaths: {
+          'addresses.street': [
+            'addresses'
+          ]
+        },
+}
+        
+------------
+
+db.persons.createIndex( { addresses: 1, hobbies: 1 } )
+

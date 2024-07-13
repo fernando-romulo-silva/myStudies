@@ -1,0 +1,10 @@
+
+
+// ------------------------------------
+
+EMBEDDED
+
+db.movies.find({genres: "Drama"})
+
+db.movies.find({genres: ["Drama"]})
+

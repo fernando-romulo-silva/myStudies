@@ -1,0 +1,92 @@
+---------------------------------------------------------
+
+db.persons.find( { "dob.age" : { $gt: 60 } } ).pretty()
+
+db.persons.find( { "dob.age" : { $gt: 60 } } ).count()
+
+---------------------------------------------------------
+
+Explain
+
+db.persons.explain().find( { "dob.age" : { $gt: 60 } } ).pretty()
+
+
+    queryHash: '58E3979C',
+    planCacheKey: '58E3979C',
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    winningPlan: {
+      stage: 'COLLSCAN',
+      filter: {
+        'dob.age': {
+          '$gt': 60
+        }
+      },
+      direction: 'forward'
+    },
+    rejectedPlans: []
+  },
+  
+------------
+  
+db.persons.explain("executionStats").find( { "dob.age" : { $gt: 60 } } ).pretty()
+
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 1222,
+    executionTimeMillis: 1,
+    totalKeysExamined: 0,
+    totalDocsExamined: 5000,
+    
+    
+---------------------------------------------------------
+
+db.persons.createIndex( { "dob.age": 1 } )
+
+-------     
+
+db.persons.explain("executionStats").find( { "dob.age" : { $gt: 60 } } ).pretty()
+
+winningPlan: {
+      stage: 'FETCH',
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: {
+          'dob.age': 1
+        },
+        indexName: 'dob.age_1',
+        isMultiKey: false,
+        multiKeyPaths: {
+          'dob.age': []
+        },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: {
+          'dob.age': [
+            '(60, inf.0]'
+          ]
+        }
+      }
+    },
+    
+executionStats: {
+    executionSuccess: true,
+    nReturned: 1222,
+    executionTimeMillis: 1,
+    totalKeysExamined: 1222,
+    totalDocsExamined: 1222,    
+    
+    
+    
+---------------------------------------------------------
+
+db.persons.dropIndex( { "dob.age": 1 } )    
+
+db.persons.explain("executionStats").find( { "dob.age" : { $gt: 20 } } ).pretty() // lower with index
+
+
+    

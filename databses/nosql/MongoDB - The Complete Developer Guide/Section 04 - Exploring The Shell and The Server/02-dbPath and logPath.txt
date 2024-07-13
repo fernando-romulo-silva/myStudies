@@ -1,0 +1,6 @@
+
+sudo mongod --dbpath /home/fernando/myMongoDb
+
+sudo mongod --logpath /home/fernando/myMongoDb/path
+
+sudo mongod --config mongo.cfg

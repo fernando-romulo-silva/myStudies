@@ -1,0 +1,21 @@
+---------------------------------
+
+UNSET
+
+db.users.updateMany({ isSporty: true }, { $set: { phone: null } })
+
+db.users.updateMany({ isSporty: true }, { $unset: { phone: "" } })
+
+---------------------------------
+
+RENAME
+
+db.users.updateMany({ }, { $rename: { age: "totalAge" } })
+
+---------------------------------
+
+UPSERT
+
+db.users.updateMany({ name: "Maria" }, { $set: { age: 29, hobbies: [ { title: "Good food", frequency: 3 } ], isSporty: true } }, {upsert: true})
+
+

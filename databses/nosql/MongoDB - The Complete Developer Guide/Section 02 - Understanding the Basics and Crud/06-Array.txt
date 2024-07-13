@@ -1,0 +1,14 @@
+{ 
+  userid: 1001,
+  name: "Reza Tayebi", 
+  group: {
+  		  id: 10,
+          name: "Developer"
+  },
+  hobbies: ["sports", "cooking"]
+}
+
+db.users.find({"hobbies": "sports"}).pretty()
+
+
+db.users.find({"group.name": "Developer"}).pretty()
