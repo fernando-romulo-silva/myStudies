@@ -62,7 +62,11 @@ bla123@Zumba
 ==================================================================
 EC2 access
 
+<<<<<<< HEAD
 WebAccess
 
 Access key: []
 Secret access key: []
+=======
+WebAccess
+>>>>>>> 293ba8b491004f920bc29762e085f49a73d1fa17

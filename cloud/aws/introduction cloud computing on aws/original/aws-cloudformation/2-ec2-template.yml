@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 AWSTemplateFormatVersion: "2010-09-09"
+=======
+AWSTemplateFormatVersion: '2010-09-09'
+>>>>>>> 293ba8b491004f920bc29762e085f49a73d1fa17
 Description: Attach an EBS volume to the EC2 instance, retaining original resources
 Resources:
   InstanceSecurityGroup:
@@ -13,7 +17,11 @@ Resources:
   MyInstance:
     Type: AWS::EC2::Instance
     Properties:
+<<<<<<< HEAD
       ImageId: ami-04eeb630f180cea95
+=======
+      ImageId: ami-0440d3b780d96b29d
+>>>>>>> 293ba8b491004f920bc29762e085f49a73d1fa17
       InstanceType: t2.micro
       SecurityGroups:
         - !Ref InstanceSecurityGroup
@@ -27,4 +35,8 @@ Resources:
     Properties:
       InstanceId: !Ref MyInstance
       VolumeId: !Ref MyVolume
+<<<<<<< HEAD
       Device: /dev/sdf
+=======
+      Device: /dev/sdf
+>>>>>>> 293ba8b491004f920bc29762e085f49a73d1fa17

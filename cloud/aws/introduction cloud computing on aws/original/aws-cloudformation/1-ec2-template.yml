@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 AWSTemplateFormatVersion: "2010-09-09"
+=======
+AWSTemplateFormatVersion: '2010-09-09'
+>>>>>>> 293ba8b491004f920bc29762e085f49a73d1fa17
 Description: Create an EC2 instance with a security group for SSH access
 Resources:
   InstanceSecurityGroup:
@@ -13,7 +17,14 @@ Resources:
   MyInstance:
     Type: AWS::EC2::Instance
     Properties:
+<<<<<<< HEAD
       ImageId: ami-04eeb630f180cea95
       InstanceType: t2.micro
       SecurityGroups:
         - !Ref InstanceSecurityGroup
+=======
+      ImageId: ami-0440d3b780d96b29d
+      InstanceType: t2.micro
+      SecurityGroups:
+        - !Ref InstanceSecurityGroup
+>>>>>>> 293ba8b491004f920bc29762e085f49a73d1fa17

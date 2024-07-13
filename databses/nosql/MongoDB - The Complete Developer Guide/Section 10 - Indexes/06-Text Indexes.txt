@@ -24,9 +24,12 @@ db.products.find({ $text: { $search: "awesome t-shirt" } }, { score: { $meta: "t
 
 --------------------
 
+<<<<<<< HEAD
 COMBINED TEXT INDEXES
 
 
+=======
+>>>>>>> 293ba8b491004f920bc29762e085f49a73d1fa17
 db.products.getIndexes()
 
 db.products.dropIndex("description_text")
@@ -38,6 +41,7 @@ db.products.createIndex( { title: "text", description: "text" } )
 db.products.insertOne({title: "A ship", description: "Floats perfectly!"})
 
 
+<<<<<<< HEAD
 db.products.find({ $text: { $search: "ship" } })
 
 
@@ -113,3 +117,6 @@ db.products.find({ $text: { $search: "red" } }, { score: { $meta: "textScore" }}
 
 
 
+=======
+db.products.find({ $text: { $search: "ship" } })
+>>>>>>> 293ba8b491004f920bc29762e085f49a73d1fa17
