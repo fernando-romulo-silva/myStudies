@@ -1,0 +1,6 @@
+
+$ use awesomeplaces
+
+$ db.places.insertOne({name: "California Academy of Sciences", location: {type: "Point", coordinates: [-122.4680152, 37.7700172]}})
+
+$ db.places.findOne()
