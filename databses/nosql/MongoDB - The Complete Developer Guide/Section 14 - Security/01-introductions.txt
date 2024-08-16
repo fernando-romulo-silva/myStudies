@@ -1,0 +1,48 @@
+Authentication and Authorization
+Transport Encryption
+Encryption at Rest
+
+
+===========================================================
+
+Authentication
+
+* identifies valid users of the database
+* Analogy: You are employed and therefore may access the office
+
+Authorization
+
+* Identifies waht theses users may actually
+* Analogy: You are employed as an account and therefore access the office and process orders
+
+===========================================================
+
+Role Based Access Control
+
+Privileges (grouped in Roles)
+
+* Resources: shop => products
+* Actions: insert
+
+===========================================================
+
+$ sudo mongod --auth 
+
+$ mongo -u fer -p fakepassword
+
+$ db.createUser({user: "fernando", pws: "fakepassword", roles: ["userAdminAnyDatabase"]})
+
+$ db.auth('fernando', 'fakepassword')
+
+==============================================================
+
+You can also add -nodes (short for "no DES") if you don't want to protect your private key with a passphrase. Otherwise it will prompt you for "at least a 4 character" password.
+The days parameter (365) you can replace with any number to affect the expiration date. It will then prompt you for things like "Country Name", but you can just hit Enter and accept the defaults.
+Add -subj '/CN=localhost' to suppress questions about the contents of the certificate (replace localhost with your desired domain).
+Self-signed certificates are not validated with any third party unless you import them to the browsers previously. If you need more security, you should use a certificate signed by a certificate authority (CA).
+
+# interactive
+$ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365
+
+# non-interactive and 10 years expiration
+$ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"

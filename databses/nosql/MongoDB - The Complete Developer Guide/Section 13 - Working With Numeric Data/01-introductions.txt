@@ -1,0 +1,19 @@
+$ db.persons.insertOne({name: "Fer", age: 29}) // int 25
+
+$ db.persons.findOne()
+
+$ db.persons.stats()
+
+$ db.persons.deleteMany({})
+
+$ db.persons.insertOne({name: "Fer", age: NumberInt("29")}) // int 32
+
+=================================
+
+$ db.companies.insertOne({valuation: NumberLong("5000000000")})
+
+$ db.companies.updateOne({}, {$inc: {valuation: 1}})
+
+$ db.companies.updateOne({}, {$inc: {valuation: NumberLong(10000)}})
+
+=================================
