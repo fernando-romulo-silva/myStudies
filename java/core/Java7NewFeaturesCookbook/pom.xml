@@ -14,7 +14,7 @@
 		<java.source.version>1.7</java.source.version>
 		<java.target.version>1.7</java.target.version>
 		<!-- Derby Version -->
-		<derby.version>10.11.1.1</derby.version>
+		<derby.version>10.14.2.0</derby.version>
 	</properties>
 
 	<build>
