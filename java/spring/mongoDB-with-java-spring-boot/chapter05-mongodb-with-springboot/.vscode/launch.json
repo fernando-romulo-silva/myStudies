@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-MongoDbApplication<chapter05-mongodb-with-springboot>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.demo.MongoDbApplication",
+      "projectName": "chapter05-mongodb-with-springboot",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

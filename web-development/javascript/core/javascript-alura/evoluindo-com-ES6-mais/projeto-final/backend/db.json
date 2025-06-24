@@ -1,0 +1,99 @@
+{
+  "pensamentos": [
+    {
+      "id": "2a56",
+      "favorito": true,
+      "conteudo": "Vc faz TI? Conserta meu celular!",
+      "autoria": "Grupo da família",
+      "data": "2024-03-06T12:00:00.123Z"
+    },
+    {
+      "id": "4c7d",
+      "favorito": true,
+      "conteudo": "Da vida reclama, mas sem ela não vive!",
+      "autoria": "Mestre Yoda",
+      "data": "2024-03-05T14:30:00.456Z"
+    },
+    {
+      "id": "68uy",
+      "conteudo": "Esse é de laranja que parece de limão, mas tem gosto de tamarindo!",
+      "autoria": "Chaves",
+      "data": "2024-03-05"
+    },
+    {
+      "id": "b807",
+      "favorito": false,
+      "conteudo": "Melhor professor, o fracasso é!",
+      "autoria": "Mestre Yoda",
+      "data": "2024-03-03T10:15:00.321Z"
+    },
+    {
+      "id": "9f3c",
+      "favorito": false,
+      "conteudo": "Você não é todo mundo!",
+      "autoria": "Mãe",
+      "data": "2024-03-02T09:00:00.654Z"
+    },
+    {
+      "id": "6a2b",
+      "favorito": false,
+      "conteudo": "Foi sem querer querendo!",
+      "autoria": "Chaves",
+      "data": "2024-03-01T18:20:00.987Z"
+    },
+    {
+      "id": "7e2a",
+      "favorito": false,
+      "conteudo": "Que a força esteja com você!",
+      "autoria": "Mestre Yoda",
+      "data": "2024-02-29T22:10:00.159Z"
+    },
+    {
+      "id": "5c8f",
+      "favorito": false,
+      "conteudo": "Resolver o bug não consegue? Esfriar a cabeça vc deve.",
+      "autoria": "Mestre Yoda",
+      "data": "2024-02-28T07:50:00.753Z"
+    },
+    {
+      "id": "2d6e",
+      "favorito": false,
+      "conteudo": "Não faça drama, faça café! :)",
+      "autoria": "Dev",
+      "data": "2024-02-27T12:40:00.852Z"
+    },
+    {
+      "id": "3f1a",
+      "favorito": false,
+      "conteudo": "Conserta minha impressora?",
+      "autoria": "Grupo da família",
+      "data": "2024-02-26T15:30:00.963Z"
+    },
+    {
+      "id": "8b4c",
+      "favorito": false,
+      "conteudo": "A vingança nunca é plena... mata a alma e a envenena...",
+      "autoria": "Seu Madruga",
+      "data": "2024-02-25T20:00:00.147Z"
+    },
+    {
+      "id": "584a",
+      "favorito": false,
+      "conteudo": "Na minha máquina funciona!",
+      "autoria": "Dev",
+      "data": "2024-02-24T08:15:00.258Z"
+    },
+    {
+      "id": "7dde",
+      "conteudo": "Testando pensamento",
+      "autoria": "Fernando",
+      "data": "2025-04-06T00:00:00.000Z"
+    },
+    {
+      "id": "ff05",
+      "conteudo": "Hello World",
+      "autoria": "Dev",
+      "data": "2025-03-10T00:00:00.000Z"
+    }
+  ]
+}

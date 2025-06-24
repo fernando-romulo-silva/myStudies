@@ -1,0 +1,9 @@
+$ docker run --name test-mongo --detach \
+		--env MONGO_INITDB_ROOT_USERNAME=root \
+		--env MONGO_INITDB_ROOT_PASSWORD=root \
+		--env MONGO_INITDB_DATABASE=admin \
+		--env MONGO_NON_ROOT_USERNAME=user \
+		--env MONGO_NON_ROOT_PASSWORD=secret \
+		--publish 27017:27017 \
+		--publish 28017:28017 \
+		mongo:latest

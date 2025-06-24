@@ -1,0 +1,11 @@
+{
+    "name" : "John"
+},
+
+{
+  "name" : "John",
+  "mail" : "john@gmail.com",
+  "department" : {
+			"name" : "Computer Science"
+	}
+}

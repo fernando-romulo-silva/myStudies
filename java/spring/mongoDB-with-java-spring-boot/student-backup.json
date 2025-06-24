@@ -1,0 +1,249 @@
+[
+  {
+    "_id": {
+      "$oid": "5e5145381996fb065563a5bc"
+    },
+    "name": "Steve",
+    "mail": "steve@gmail.com",
+    "subjects": [
+      {
+        "subject_name": "Java",
+        "marks_obtained": 70.0
+      },
+      {
+        "subject_name": "MongoDB",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5143ee1996fb065563a5ba"
+    },
+    "name": "John-1",
+    "mail": "peter_1@gmail.com",
+    "department": {
+      "department_name": "ComputerScience",
+      "location": "INDIA"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e5142fa1996fb065563a5b6"
+    },
+    "name": "John",
+    "mail": "john@gmail.com"
+  },
+  {
+    "_id": {
+      "$oid": "5e5beb972be5c534715840ff"
+    },
+    "name": "JohnSon",
+    "mail": "johnson@gmail.com",
+    "subjects": [
+      {
+        "subject_name": "Java",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "C++",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bebb72be5c53471584103"
+    },
+    "name": "Smith",
+    "mail": "smith@yahoo.com",
+    "subjects": [
+      {
+        "subject_name": "RDBMS",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "C++",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bebc32be5c53471584104"
+    },
+    "name": "Raj",
+    "mail": "raj@gmail.com",
+    "subjects": [
+      {
+        "subject_name": "Java",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "C++",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bebd32be5c53471584105"
+    },
+    "name": "Shyam",
+    "mail": "shyam@gmail.com",
+    "subjects": [
+      {
+        "subject_name": "RDBMS",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "C++",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bebeb2be5c53471584106"
+    },
+    "name": "Sara",
+    "mail": "sara@yahoo.com",
+    "subjects": [
+      {
+        "subject_name": "C",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "Networking",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bebf32be5c53471584107"
+    },
+    "name": "Mona",
+    "mail": "mona@gmail.com",
+    "subjects": [
+      {
+        "subject_name": "C",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "Networking",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bec0d2be5c5347158410b"
+    },
+    "name": "Virat",
+    "mail": "virat@gmail.com",
+    "subjects": [
+      {
+        "subject_name": "C",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "Networking",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bec1e2be5c5347158410d"
+    },
+    "name": "Rohit",
+    "mail": "rohit@yahoo.com",
+    "subjects": [
+      {
+        "subject_name": "C",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "Networking",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bec292be5c5347158410e"
+    },
+    "name": "Pooja",
+    "mail": "pooja@gmail.com",
+    "subjects": [
+      {
+        "subject_name": "C",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "Networking",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bec3a2be5c5347158410f"
+    },
+    "name": "Jiya",
+    "mail": "jiya@gmail.com",
+    "subjects": [
+      {
+        "subject_name": "C",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "Networking",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bebaf2be5c53471584102"
+    },
+    "name": "PeterSon",
+    "mail": "peterson@gmail.com",
+    "department": {
+      "department_name": "ComputerScience",
+      "location": "INDIA"
+    },
+    "subjects": [
+      {
+        "subject_name": "RDBMS",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "Java",
+        "marks_obtained": 80.0
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "5e5bec142be5c5347158410c"
+    },
+    "name": "Sachin",
+    "mail": "sachin@gmail.com",
+    "department": {
+      "department_name": "ComputerScience",
+      "location": "INDIA"
+    },
+    "subjects": [
+      {
+        "subject_name": "C",
+        "marks_obtained": 50.0
+      },
+      {
+        "subject_name": "Networking",
+        "marks_obtained": 80.0
+      }
+    ]
+  }
+]

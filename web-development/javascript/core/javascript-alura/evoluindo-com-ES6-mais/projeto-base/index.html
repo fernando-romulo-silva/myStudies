@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD de Pensamentos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="conteudo-cabecalho">
+        <div class="logo">
+          <img src="assets/imagens/logo.png" alt="">
+          <h1>Trechos de músicas,<br> citações de livros e
+            <br> <strong>suas melhores ideias
+            <br> num só lugar!</strong>
+          </h1>
+        </div>
+        <div class="imagem-cabecalho">
+          <img 
+            src="assets/imagens/computador-cabecalho.png" 
+            alt="">
+        </div>
+      </div>
+    </header>
+    <main class="background-overlay">
+      <div class="overlay"></div>
+      <div class="overlay overlay-color"></div>
+      <h2>Adicione um pensamento novo:</h2>
+      <section id="form-container">
+        <form id="pensamento-form">
+          <input type="hidden" id="pensamento-id" />
+          <label for="pensamento-conteudo">Pensamento</label>
+          <textarea id="pensamento-conteudo" placeholder="Digite seu pensamento" required></textarea>
+          <label for="pensamento-autoria">Autoria ou Fonte</label>
+          <input 
+            type="text" 
+            id="pensamento-autoria" 
+            placeholder="Insira a autoria ou fonte" 
+            required /> 
+            <div class="form-botoes">
+              <button 
+                type="submit" 
+                id="botao-salvar">
+                Salvar
+              </button>
+              <button 
+                type="button" 
+                id="botao-cancelar">
+                Cancelar
+              </button>
+            </div>
+        </form>
+      </section>
+      <span></span>
+      <section id="lista-pensamentos-container">
+        <h3>Meu Mural</h3>
+        <div id="mensagem-vazia" class="mensagem-vazia">
+          <img src="assets/imagens/lista-vazia.png" alt="Nenhum pensamento disponível">
+          <p>Nada por aqui ainda, que tal compartilhar alguma ideia?</p>
+        </div>
+        <ul id="lista-pensamentos"></ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 
+        2024 Desenvolvido por Alura. 
+        Projeto fictício sem fins comerciais.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/ui.js"></script>
+  </body>
+</html>

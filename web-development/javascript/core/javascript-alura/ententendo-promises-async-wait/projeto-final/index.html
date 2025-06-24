@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CodeConnect</title>
+  </head>
+
+  <body>
+    <aside>
+      <img src="./img/Logo.svg" alt="logo do codeconnect" />
+      <nav>
+        <ul class="lista-links">
+          <li>
+            <a href="#" class="link-destaque">Publicar</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/feed.svg" />
+              Feed
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/account_circle.svg" />
+              Perfil
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/info.svg" />
+              Sobre nós
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/logout.svg" />
+              Sair
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <div class="container-upload-imagem">
+        <div class="container-imagem">
+          <img src="./img/imagem1.png" alt="" class="main-imagem" />
+        </div>
+        <button id="upload-btn">Carregar imagem</button>
+        <input
+          type="file"
+          id="image-upload"
+          accept="image/"
+          style="display: none"
+        />
+        <div class="container-imagem-nome">
+          <p>image_projeto.png</p>
+          <img src="./img/close.svg" />
+        </div>
+      </div>
+      <div class="container-descricao">
+        <h2>Novo projeto</h2>
+        <form>
+          <div>
+            <label for="nome">Nome do projeto</label>
+            <input type="text" id="nome" name="nome" />
+          </div>
+          <div>
+            <label for="descricao">Descricao</label>
+            <textarea id="descricao" name="descricao"></textarea>
+          </div>
+          <div>
+            <label for="categoria">Tags</label>
+            <input type="text" name="categoria" id="input-tags" />
+          </div>
+          <ul class="lista-tags" id="lista-tags"></ul>
+          <div class="container-botoes">
+            <button class="botao-descartar">Descartar</button>
+            <button class="botao-publicar">Publicar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
