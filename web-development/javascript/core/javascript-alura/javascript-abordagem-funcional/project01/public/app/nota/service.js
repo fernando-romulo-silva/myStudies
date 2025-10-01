@@ -1,21 +1,17 @@
 import { handleStatus } from "../utils/promisse-helper.js";
 import { partialize, pipe } from "../utils/operator.js";
+import { Maybe } from "../utils/maybe.js";
 
 const API = "http://localhost:3000/notas";
 
-const getItemsFromNotas = (notas) => notas.$flatMap((notas) => notas.itens);
+const getItemsFromNotas = (notasM) =>
+  notasM.map((notas) => notas.$flatMap((nota) => nota.itens));
 
-const filterItemsByCode = (code, items) =>
-  items.filter((item) => item.codigo == code);
+const filterItemsByCode = (code, itemsM) =>
+  itemsM.map((items) => items.filter((item) => item.codigo == code));
 
-const sumItemsValue = (items) =>
-  items.reduce((total, item) => total + item.valor, 0);
-
-const ehDivisivel = (divisor, numero) => !(numero % divisor);
-const ehDivisivelPorDois = ehDivisivel.bind(null, 2);
-
-console.log(ehDivisivel(2, 10));
-console.log(ehDivisivelPorDois(10));
+const sumItemsValue = (itemsM) =>
+  itemsM.map((items) => items.reduce((total, item) => total + item.valor, 0));
 
 /*
 const sumItems01 = (code) => (notas) =>
@@ -29,6 +25,7 @@ export const notasService = {
   listaAll() {
     return fetch(API)
       .then(handleStatus)
+      .then((notas) => Maybe.of(notas))
       .catch((err) => {
         console.log(err);
         return Promise.reject("Não foi possivel obter as notas fiscais");
@@ -45,6 +42,7 @@ export const notasService = {
         // .then(sumItems01(code))
         // .then((notas) => sumItemsValue(filterItems(getItemsFromNotas(notas))))
         .then(sumItems)
+        .then((result) => result.getOrElse(0))
     );
   },
 };
