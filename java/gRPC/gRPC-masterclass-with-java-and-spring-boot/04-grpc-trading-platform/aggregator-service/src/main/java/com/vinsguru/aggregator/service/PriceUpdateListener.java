@@ -26,7 +26,7 @@ public class PriceUpdateListener implements StreamObserver<PriceUpdate> {
         this.sseTimeout = sseTimeout;
     }
 
-    public SseEmitter createEmitter(){
+    public SseEmitter createEmitter() {
         var emitter = new SseEmitter(this.sseTimeout);
         this.emitters.add(emitter);
         emitter.onTimeout(() -> this.emitters.remove(emitter));
@@ -53,7 +53,7 @@ public class PriceUpdateListener implements StreamObserver<PriceUpdate> {
         this.emitters.clear();
     }
 
-    private boolean send(SseEmitter emitter, Object o){
+    private boolean send(SseEmitter emitter, Object o) {
         try {
             emitter.send(o);
             return true;

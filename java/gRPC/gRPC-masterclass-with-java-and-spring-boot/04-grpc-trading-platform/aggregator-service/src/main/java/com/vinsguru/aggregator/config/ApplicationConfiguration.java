@@ -16,7 +16,7 @@ public class ApplicationConfiguration {
     private static final Logger log = LoggerFactory.getLogger(ApplicationConfiguration.class);
 
     @Bean
-    public GrpcChannelConfigurer channelConfigurer(){
+    public GrpcChannelConfigurer channelConfigurer() {
         return (channelBuilder, name) -> {
             log.info("channel builder {}", name);
             channelBuilder.executor(Executors.newVirtualThreadPerTaskExecutor()); // just for demo
@@ -24,11 +24,10 @@ public class ApplicationConfiguration {
     }
 
     @Bean
-    public ProtobufJsonFormatHttpMessageConverter protobufJsonFormatHttpMessageConverter(){
+    public ProtobufJsonFormatHttpMessageConverter protobufJsonFormatHttpMessageConverter() {
         return new ProtobufJsonFormatHttpMessageConverter(
                 JsonFormat.parser().ignoringUnknownFields(),
-                JsonFormat.printer().omittingInsignificantWhitespace().includingDefaultValueFields()
-        );
+                JsonFormat.printer().omittingInsignificantWhitespace().includingDefaultValueFields());
     }
 
 }

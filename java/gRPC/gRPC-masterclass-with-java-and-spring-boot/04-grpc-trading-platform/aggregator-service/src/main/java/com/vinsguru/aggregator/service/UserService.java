@@ -14,9 +14,8 @@ public class UserService {
 
     public UserInformation getUserInformation(int userId) {
         var request = UserInformationRequest.newBuilder()
-                                            .setUserId(userId)
-                                            .build();
+                .setUserId(userId)
+                .build();
         return this.userClient.getUserInformation(request);
     }
-
 }

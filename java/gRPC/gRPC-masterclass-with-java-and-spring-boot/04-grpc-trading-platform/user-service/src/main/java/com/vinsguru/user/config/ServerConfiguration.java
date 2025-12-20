@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 public class ServerConfiguration {
 
     @Bean
-    public GrpcServerConfigurer serverConfigurer(){
+    public GrpcServerConfigurer serverConfigurer() {
         return serverBuilder -> serverBuilder.executor(Executors.newVirtualThreadPerTaskExecutor());
     }
 

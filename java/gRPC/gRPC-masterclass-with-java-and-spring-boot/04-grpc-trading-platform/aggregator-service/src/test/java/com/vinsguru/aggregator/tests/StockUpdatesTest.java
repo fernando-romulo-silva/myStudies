@@ -30,7 +30,7 @@ import java.util.Objects;
         "grpc.server.in-process-name=integration-test",
         "grpc.client.stock-service.address=in-process:integration-test"
 }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class StockUpdatesTest {
+class StockUpdatesTest {
 
     private static final Logger log = LoggerFactory.getLogger(StockUpdatesTest.class);
     private static final String STOCK_UPDATES_ENDPOINT = "http://localhost:%d/stock/updates";
@@ -45,30 +45,30 @@ public class StockUpdatesTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void stockUpdatesTest(){
+    void stockUpdatesTest() {
         var list = this.restTemplate.execute(
                 STOCK_UPDATES_ENDPOINT.formatted(port),
                 HttpMethod.GET,
                 null,
-                this::getResponse
-        );
+                this::getResponse);
         Assertions.assertEquals(5, list.size());
         Assertions.assertEquals(Ticker.AMAZON.toString(), list.getFirst().ticker());
         Assertions.assertEquals(1, list.getFirst().price());
     }
 
-    private List<PriceUpdateDto> getResponse(ClientHttpResponse clientHttpResponse){
+    private List<PriceUpdateDto> getResponse(ClientHttpResponse clientHttpResponse) {
         var list = new ArrayList<PriceUpdateDto>();
-        try(var reader = new BufferedReader(new InputStreamReader(clientHttpResponse.getBody()))){
+        try (var in = new InputStreamReader(clientHttpResponse.getBody());
+                var reader = new BufferedReader(in)) {
             String line;
-            while(Objects.nonNull(line = reader.readLine())){
-                if(!line.isEmpty()){
+            while (Objects.nonNull(line = reader.readLine())) {
+                if (!line.isEmpty()) {
                     log.info(line);
                     var dto = mapper.readValue(line.substring("data:".length()), PriceUpdateDto.class);
                     list.add(dto);
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error("streaming error", e);
         }
         return list;
@@ -78,7 +78,7 @@ public class StockUpdatesTest {
     static class TestConfig {
 
         @GrpcService
-        public StockMockService stockMockService(){
+        public StockMockService stockMockService() {
             return new StockMockService();
         }
 

@@ -24,7 +24,7 @@ import org.springframework.test.annotation.DirtiesContext;
         "grpc.client.user-service.address=in-process:integration-test",
         "grpc.client.stock-service.address=in-process:integration-test"
 }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class UserTradeTest {
+class UserTradeTest {
 
     private static final String USER_INFORMATION_ENDPOINT = "http://localhost:%d/user/%d";
     private static final String TRADE_ENDPOINT = "http://localhost:%d/trade";
@@ -36,7 +36,7 @@ public class UserTradeTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void userInformationTest(){
+    void userInformationTest() {
         var url = USER_INFORMATION_ENDPOINT.formatted(port, 1);
         var response = this.restTemplate.getForEntity(url, UserInformation.class);
         Assertions.assertEquals(200, response.getStatusCode().value());
@@ -48,7 +48,7 @@ public class UserTradeTest {
     }
 
     @Test
-    public void unknownUserTest(){
+    void unknownUserTest() {
         var url = USER_INFORMATION_ENDPOINT.formatted(port, 2);
         var response = this.restTemplate.getForEntity(url, UserInformation.class);
         Assertions.assertEquals(404, response.getStatusCode().value());
@@ -57,7 +57,7 @@ public class UserTradeTest {
     }
 
     @Test
-    public void tradeTest(){
+    void tradeTest() {
         var tradeRequest = StockTradeRequest.newBuilder()
                 .setUserId(1)
                 .setPrice(10)
@@ -81,12 +81,12 @@ public class UserTradeTest {
     static class TestConfig {
 
         @GrpcService
-        public StockMockService stockMockService(){
+        public StockMockService stockMockService() {
             return new StockMockService();
         }
 
         @GrpcService
-        public UserMockService userMockService(){
+        public UserMockService userMockService() {
             return new UserMockService();
         }
 

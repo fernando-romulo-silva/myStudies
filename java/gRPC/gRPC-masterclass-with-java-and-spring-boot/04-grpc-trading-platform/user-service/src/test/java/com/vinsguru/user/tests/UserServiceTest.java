@@ -17,16 +17,17 @@ import org.springframework.boot.test.context.SpringBootTest;
         "grpc.server.in-process-name=integration-test",
         "grpc.client.user-service.address=in-process:integration-test"
 })
-public class UserServiceTest {
+class UserServiceTest {
 
     @GrpcClient("user-service")
     private UserServiceGrpc.UserServiceBlockingStub stub;
 
     @Test
-    public void userInformationTest() {
+    void userInformationTest() {
         var request = UserInformationRequest.newBuilder()
-                                            .setUserId(1)
-                                            .build();
+                .setUserId(1)
+                .build();
+
         var response = this.stub.getUserInformation(request);
         Assertions.assertEquals(10_000, response.getBalance());
         Assertions.assertEquals("Sam", response.getName());
@@ -34,84 +35,83 @@ public class UserServiceTest {
     }
 
     @Test
-    public void unknownUserTest() {
+    void unknownUserTest() {
         var ex = Assertions.assertThrows(StatusRuntimeException.class, () -> {
             var request = UserInformationRequest.newBuilder()
-                                                .setUserId(10)
-                                                .build();
+                    .setUserId(10)
+                    .build();
             var response = this.stub.getUserInformation(request);
         });
         Assertions.assertEquals(Status.Code.NOT_FOUND, ex.getStatus().getCode());
     }
 
     @Test
-    public void unknownTickerBuyTest() {
+    void unknownTickerBuyTest() {
         var ex = Assertions.assertThrows(StatusRuntimeException.class, () -> {
             var request = StockTradeRequest.newBuilder()
-                                           .setUserId(1)
-                                           .setPrice(1)
-                                           .setQuantity(1)
-                                           .setAction(TradeAction.BUY)
-                                           .build();
+                    .setUserId(1)
+                    .setPrice(1)
+                    .setQuantity(1)
+                    .setAction(TradeAction.BUY)
+                    .build();
             this.stub.tradeStock(request);
         });
         Assertions.assertEquals(Status.Code.INVALID_ARGUMENT, ex.getStatus().getCode());
     }
 
     @Test
-    public void insufficientSharesTest() {
+    void insufficientSharesTest() {
+        var ex = Assertions.assertThrows(StatusRuntimeException.class,
+                () -> this.stub.tradeStock(StockTradeRequest.newBuilder()
+                        .setUserId(1)
+                        .setPrice(1)
+                        .setQuantity(1000)
+                        .setTicker(Ticker.AMAZON)
+                        .setAction(TradeAction.SELL)
+                        .build()));
+
+        Assertions.assertEquals(Status.Code.FAILED_PRECONDITION, ex.getStatus().getCode());
+    }
+
+    @Test
+    void insufficientBalanceTest() {
         var ex = Assertions.assertThrows(StatusRuntimeException.class, () -> {
             var request = StockTradeRequest.newBuilder()
-                                           .setUserId(1)
-                                           .setPrice(1)
-                                           .setQuantity(1000)
-                                           .setTicker(Ticker.AMAZON)
-                                           .setAction(TradeAction.SELL)
-                                           .build();
+                    .setUserId(1)
+                    .setPrice(1)
+                    .setQuantity(10001)
+                    .setTicker(Ticker.AMAZON)
+                    .setAction(TradeAction.BUY)
+                    .build();
             this.stub.tradeStock(request);
         });
         Assertions.assertEquals(Status.Code.FAILED_PRECONDITION, ex.getStatus().getCode());
     }
 
     @Test
-    public void insufficientBalanceTest() {
-        var ex = Assertions.assertThrows(StatusRuntimeException.class, () -> {
-            var request = StockTradeRequest.newBuilder()
-                                           .setUserId(1)
-                                           .setPrice(1)
-                                           .setQuantity(10001)
-                                           .setTicker(Ticker.AMAZON)
-                                           .setAction(TradeAction.BUY)
-                                           .build();
-            this.stub.tradeStock(request);
-        });
-        Assertions.assertEquals(Status.Code.FAILED_PRECONDITION, ex.getStatus().getCode());
-    }
-
-    @Test
-    public void buySellTest(){
+    void buySellTest() {
         // buy
-        var buyRequest = StockTradeRequest.newBuilder()
-                                       .setUserId(2)
-                                       .setPrice(100)
-                                       .setQuantity(5)
-                                       .setTicker(Ticker.AMAZON)
-                                       .setAction(TradeAction.BUY)
-                                       .build();
-        var buyResponse = this.stub.tradeStock(buyRequest);
+        final var buyRequest = StockTradeRequest.newBuilder()
+                .setUserId(2)
+                .setPrice(100)
+                .setQuantity(5)
+                .setTicker(Ticker.AMAZON)
+                .setAction(TradeAction.BUY)
+                .build();
+        final var buyResponse = this.stub.tradeStock(buyRequest);
 
         // validate balance
         Assertions.assertEquals(9500, buyResponse.getBalance());
 
         // check holding
-        var userRequest = UserInformationRequest.newBuilder().setUserId(2).build();
-        var userResponse = this.stub.getUserInformation(userRequest);
+        final var userRequest = UserInformationRequest.newBuilder().setUserId(2).build();
+        final var userResponse = this.stub.getUserInformation(userRequest);
         Assertions.assertEquals(1, userResponse.getHoldingsCount());
         Assertions.assertEquals(Ticker.AMAZON, userResponse.getHoldingsList().getFirst().getTicker());
 
         // sell
-        var sellRequest = buyRequest.toBuilder().setAction(TradeAction.SELL).setPrice(102).build();
-        var sellResponse = this.stub.tradeStock(sellRequest);
+        final var sellRequest = buyRequest.toBuilder().setAction(TradeAction.SELL).setPrice(102).build();
+        final var sellResponse = this.stub.tradeStock(sellRequest);
 
         // validate balance
         Assertions.assertEquals(10010, sellResponse.getBalance());

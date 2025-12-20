@@ -1,3 +1,0 @@
-db.movies.find({name: "The Last Ship"})
-
-db.movies.find({runtime: 70})

@@ -1,6 +1,0 @@
-db.persons.insertOne({
-
- 	name: "Michael",
- 	age: 51
-
-}, {writeConcern: {w: 1, j: true}});

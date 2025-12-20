@@ -1,6 +1,0 @@
-$ mongo --help
-
-
-$ db.help()
-
-$ db.myCollection().help()
