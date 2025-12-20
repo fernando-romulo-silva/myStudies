@@ -1,0 +1,19 @@
+---------------------------------------------------------
+
+db.users.find( { name: "Chris" } ).pretty()
+
+db.users.deleteOne( { name: "Chris" } )
+
+db.users.deleteMany( { totalAge: { $gt: 30 }, isSporty: true } )
+
+---------------------------------------------------------
+
+DROP - DELETE ALL
+
+db.users.deleteMany( {} )
+
+db.users.drop()
+
+---------------------------------------------------------
+
+db.dropDatabase()

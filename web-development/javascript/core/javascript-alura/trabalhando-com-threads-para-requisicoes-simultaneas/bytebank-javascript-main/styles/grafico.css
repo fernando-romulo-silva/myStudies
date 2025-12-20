@@ -1,0 +1,49 @@
+.dadosDolar,
+.dadosIene {
+    margin: 3em auto;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 24px;
+    width: 65%;
+    color: var(--cinza);
+}
+
+.grafico {
+    width: 30vw;
+}
+
+.grafico__titulo {
+    display: flex;
+    align-items: center;
+}
+
+.grafico__titulo span {
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 40px;
+}
+
+.grafico__ilustracao-dolar {
+    background-image: url('../imagens/cifrao.png');
+}
+
+.grafico__ilustracao-iene {
+    background-image: url('../imagens/iene.png');
+}
+
+.grafico__titulo h2 {
+    color: var(--cinza);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.investimentos__lista {
+    margin: 2em;
+    color: var(--cinza);
+}
+
+.investimentos__lista li {
+    margin: 1em 0;
+}

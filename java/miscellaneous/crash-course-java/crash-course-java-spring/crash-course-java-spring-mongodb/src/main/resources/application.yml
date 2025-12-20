@@ -1,0 +1,20 @@
+#============== Server ==============================================================================
+server:
+  error.include-message: always
+  http2:
+    enabled: true
+  compression:
+    enabled: true
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      force-response: true
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/development

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ByteBank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="container">
+  <aside class="sidebar">
+    <img src="./imagens/logo.png" alt="Logo do bytebank" />
+    <img src="./imagens/avatar.png" alt="Avatar do usuário" class="sidebar__avatar" />
+    <h2>Moni Hillman</h2>
+    <hr class="sidebar__linha" />
+    <nav class="sidebar__links">
+      <a href="#"><span class="links__icone dashboard"></span>Dashboard</a>
+      <a href="#"><span class="links__icone cofre">Investimentos</a>
+      <a href="#"><span class="links__icone configuracao">Minha Conta</a>
+      <a href="#"><span class="links__icone duvida">Dúvidas Frequentes</a>
+    </nav>
+  </aside>
+
+  <main class="dados">
+    <header class="cabecalho">
+      <h2>Olá, Moni! Estes são os detalhes da sua cotação:</h2>
+    </header>
+
+    <article class="dadosDolar">
+      <div class="grafico">
+        <div class="grafico__titulo">
+          <span class="grafico__ilustracao-dolar"></span>
+          <h2>Variação da moeda desde o login</h2>
+        </div>
+
+        <canvas id="graficoDolar"></canvas>
+
+      </div>
+
+      <div class="investimentos">
+        <h2>Valores da moeda</h2>
+        <ul class="investimentos__lista" id="dolar" data-lista>
+        </ul>
+      </div>
+    </article>
+
+    <article class="dadosIene">
+      <div class="grafico">
+        <div class="grafico__titulo">
+          <span class="grafico__ilustracao-iene"></span>
+          <h2>Variação da moeda desde o login</h2>
+        </div>
+
+        <canvas id="graficoIene"></canvas>
+
+      </div>
+
+      <div class="investimentos">
+        <h2>Valores da moeda</h2>
+        <ul class="investimentos__lista" id="iene" data-lista>
+        </ul>
+      </div>
+    </article>    
+
+    <footer class="rodape">
+      <p>Dashboard - Desenvolvido por Alura</p>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./script/script.js" type="module"></script>
+  <script src="./script/imprimeCotacao.js" type="module"></script>
+</body>
+
+</html>

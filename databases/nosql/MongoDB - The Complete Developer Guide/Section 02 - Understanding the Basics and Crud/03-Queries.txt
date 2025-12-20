@@ -1,0 +1,18 @@
+
+
+db.flightData.find({name: "Paul"}).pretty();
+
+db.flightData.find({distance: 12000}).pretty();
+
+
+db.flightData.find({distance: {$gt: 1000}}).pretty();
+
+
+------------------------------------------------------------------
+
+#Projections
+
+db.passengers.find({}, {name: 1, id: 0}).pretty();
+
+{"name" : "Max"}
+{"name" : "Manu Lorenz"}

@@ -1,0 +1,27 @@
+@import url("./styles/grafico.css");
+@import url("./styles/cabecalho.css");
+@import url("./styles/rodape.css");
+@import url("./styles/sidebar.css");
+
+:root {
+    --lilas: #E4E9F6;
+    --roxo: #783EFD;
+    --verde-claro: #CCF8ED;
+    --verde-escuro: #00DEA3;
+    --cinza: #444444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 29px;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20% auto;
+    background-color: var(--lilas);
+}

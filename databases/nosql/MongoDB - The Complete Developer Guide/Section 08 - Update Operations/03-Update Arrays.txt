@@ -1,0 +1,71 @@
+---------------------------------
+
+ARRAYS
+
+db.users.find( { $and: [ {"hobbies.title": "Sports"}, { "hobbies.frequency": { $gte: 3 } } ] } ).pretty()
+
+db.users.find( { hobbies: { $elemMatch: { title: "Sports", frequency: { $gte: 3 } }  } } ).count()
+
+db.users.updateMany( { hobbies: { $elemMatch: { title: "Sports", frequency: { $gte: 3 } }  } }, { $set: { "hobbies.$.highFrequency": true } } )
+
+
+---------------------------------
+
+[] OPERATOR
+
+db.users.find( { "hobbies.frequency" : { $gt: 2 } } ).pretty()
+
+db.users.updateMany( { "hobbies.frequency" : { $gt: 2 } }, { $set: { "hobbies.$.goodFrequency": true } })
+
+
+db.users.find( { totalAge : { $gt: 30 } } ).pretty()
+
+db.users.updateMany( { totalAge : { $gt: 30 } }, { $inc: { "hobbies.$[].frequency": -1 } })
+
+
+---------------------------------
+
+EL
+
+db.users.find( {"hobbies.frequency": { $gt: 2 } } ).count()
+
+db.users.updateMany( {"hobbies.frequency": { $gt: 2 } }, { $set: {"hobbies.$[el].goodFrequency": true } }, { arrayFilters: [ { "el.frequency": {$gt: 2} } ]} )
+
+
+---------------------------------
+
+PUSH
+
+db.users.find( { name: "Maria" }).pretty()
+
+db.users.updateOne( { name: "Maria" }, { $push: { hobbies: { title: "Sports", frequency: 2} } } )
+
+
+db.users.updateOne( { name: "Maria" }, { $push: { hobbies: { $each: [ {title: "Good Wine", frequency: 1}, {title: "Hiking", frequency: 2 } ], $sort: { frequency: -1 } } } } )
+
+
+---------------------------------
+
+PULL
+
+db.users.find( { name: "Maria" }).pretty()
+
+db.users.updateOne( { name: "Maria" }, { $pull: {hobbies: { title: "Good Wine" } } } )
+
+
+---------------------------------
+
+POP
+
+db.users.find( { name: "Chris" }).pretty()
+
+db.users.updateOne( { name: "Chris" }, { $pop: { hobbies: 1 } } )
+
+---------------------------------
+
+ADD SET (UNIQUE)
+
+db.users.find( { name: "Maria" }).pretty()
+
+db.users.updateOne( { name: "Maria" }, { $addToSet: { hobbies: { title: "Hiking", frequency: 2} } } )
+

@@ -1,0 +1,50 @@
+http://localhost:8080/graphiql?path=/graphql
+---------------------------------------------
+query getAllTodo {
+  getAllTodo {
+       id
+       title
+    	 items {
+    	   id
+           notes
+    	 }
+    
+  }
+}
+
+---------------------------------------------
+
+{
+  getById (todoId: 1) {
+  	id
+    title
+ 
+  }
+}
+
+
+---------------------------------------------
+
+mutation CreateTodo {
+  createTodo(todo:{
+    title: "Mutation test 1"
+    markAsComplete: false
+    items:[ 
+      			{
+      				notes:"will refer to mutation 1"
+      				dueDate:"14-Jul-2023"
+    			  } 
+    ]
+  }) {
+    id
+  }
+}
+
+---------------------------------------------
+
+subscription todoStatusChanged {
+    todoStatusChanged(todoId:1) {
+        id,
+        title
+    }
+} 

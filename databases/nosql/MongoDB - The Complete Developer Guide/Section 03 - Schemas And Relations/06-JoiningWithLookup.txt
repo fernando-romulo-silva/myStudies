@@ -1,0 +1,70 @@
+// Customers
+{
+  userName: 'max',
+  favBooks: [ ObjectId('123'), ObjectId('456') ]
+}
+
+// Books
+{
+  _id: ObjectId('123'),
+  name: 'Lord of the Rings',
+  authors: [
+  	ObjectId("bbbb"),
+  	ObjectId("cccc")
+  ]
+}
+
+// Authors
+{
+	_id: ObjectId("bbbb"),
+	name: "Max Shwarz",
+	age: 29,
+	address: {
+		street: "Main"
+	}
+}
+
+db.customers.aggregate([
+  { $lookup: {
+       from: "books",
+       localField: "favBooks",
+       foreingField: "_id", 
+       as "favBookData"    
+    }     
+  }
+])
+
+db.books.aggregate([
+	{  $lookup: {
+		 from: "authors",
+		 localField: "authors",
+		 foreignId: "_id",
+		 as "creators"
+	   }
+	}  
+])
+
+========
+
+{
+  _id: ObjectId('123'),
+  name: 'Lord of the Rings',
+  authors: [
+  	ObjectId("bbbb"),
+  	ObjectId("cccc")
+  ],
+  creators : [
+				{
+					_id: ObjectId("bbbb"),
+					name: "Max Shwarz",
+					age: 29,
+					address: {
+						street: "Main"
+					}
+				}  
+  ]	
+
+}
+
+
+  

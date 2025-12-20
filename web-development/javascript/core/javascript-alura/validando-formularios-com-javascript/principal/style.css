@@ -1,0 +1,67 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.container {
+    max-width: 500px;
+    background: #FFF;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.titulo {
+    font-size: 24px;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.campo-formulario {
+    border: none;
+}
+
+.campo-formulario input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #6BD1FF;
+    border-radius: 24px;
+}
+
+.cadastro-form button {
+    width: 50%;
+    padding: 1rem;
+    background-color: #6BD1FF;
+    border: none;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.cadastro-form button:hover {
+    transform: scale(1.05);
+}
+
+.invalid {
+    border: 2px solid #f7717d !important;
+}

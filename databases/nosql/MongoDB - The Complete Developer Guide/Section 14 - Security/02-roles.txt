@@ -1,0 +1,11 @@
+Database User (read, readWrite)
+
+Database Admin (dbAdmin, userAdmin, dbOwner)
+
+All Database Roles (readAnyDatabase, readWriteAnyDatabase, dbAdminAnyDatabase)
+
+Cluster Admin (clusterManager, clusterMonitor, hostManager, clusterAdmin)
+
+Backup/Restore (backup and restore)
+
+Superuser (dbOwner, userAdmin, userAdminAnyDatabase, root)

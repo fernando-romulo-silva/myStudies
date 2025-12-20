@@ -1,0 +1,41 @@
+---------------------------------
+
+SET
+
+db.users.find().pretty()
+
+db.users.updateOne( { _id: ObjectId("667acc15a4b73228530f844d") }, { $set: {hobbies: [{title: "Sports", frequency: 5 }, {title: "Cooking", frequency: 3}, {title: "Hiking", frequency: 1} ] } } )
+
+db.users.find().pretty()
+
+db.users.updateMany( { "hobbies.title": "Sports" }, { $set: { isSporty: true } } )
+
+db.users.find().pretty()
+
+db.users.updateOne( { _id: ObjectId("667acc15a4b73228530f844d") }, { $set: {age: 40, phone: 5465432103 }  } )
+
+---------------------------------
+
+INC
+
+db.users.updateOne( { name: "Manuel" }, { $inc: { age: 2 } } )
+
+db.users.updateOne( { name: "Manuel" }, { $inc: { age: 1 }, $set: { isSporty: false } } )
+
+---------------------------------
+
+MIN
+
+db.users.updateOne( { name: "Chris" }, { $min: {age: 35 } } )
+
+---------------------------------
+
+MAX
+
+db.users.updateOne( { name: "Chris" }, { $max: {age: 38 } } )
+
+---------------------------------
+
+MUL
+
+db.users.updateOne( { name: "Chris" }, { $mul: {age: 1.1 } } )

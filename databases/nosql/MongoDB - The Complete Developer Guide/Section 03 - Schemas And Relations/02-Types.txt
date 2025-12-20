@@ -1,0 +1,17 @@
+
+// Very Different ------------------------------------------
+
+{
+    "_id": ObjectId("sadfdf..."),
+	"title": "Book",
+	"price": 12.99,
+	"qty": 3,
+	"dt" : ISODate("2013-10-01T00:00:00.000Z"),
+	"details": {
+		"name": "this a name"
+		"isdb": 32434
+	 },
+	"tags": [ "big", "colorful", "super"] 
+	
+}
+

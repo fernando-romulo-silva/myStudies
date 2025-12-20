@@ -1,0 +1,43 @@
+
+// ---- Nested/Embedded Documents ---------------------------------------
+
+Customers
+{
+	userName: 'Paul',
+	age: 28,
+	address: {
+		street: 'Second Street',
+		city: 'New York'
+	}
+}
+
+// ---- Logical Reference ------------------------------------------------
+
+Customers
+{
+	userName: 'Paul',
+	favBooks: ['id1', 'id2']
+}
+
+Books
+{
+	_id: 'id1',
+	name: 'Lord of the Rings 1'
+}
+
+// ---- Reference --------------------------------------------------------
+
+Person
+{
+    _id: ObjectId("123"),
+	name: 'Paul',
+	age: 29,
+	salary: 3500.99
+}
+
+Car
+{
+	model: "BMW",
+	price: 40000,
+	owner: ObjectId("123")
+}

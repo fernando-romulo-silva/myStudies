@@ -1,0 +1,42 @@
+
+# create kafka node
+
+$ docker run --detach \
+			--env KRAFT_CONTAINER_HOST_NAME=kafka \
+			--env KRAFT_CREATE_TOPICS=process-topic \
+			--env KRAFT_PARTITIONS_PER_TOPIC=3 \
+			--env KRAFT_AUTO_CREATE_TOPICS=true \
+			--publish 9093:9093 \
+			moeenz/docker-kafka-kraft
+
+
+-----------------------------------------------------------
+# send a process
+
+$ sh kafka-console-producer.sh --topic process-topic --bootstrap-server localhost:9093 --property "parse.headers=true" --property "headers.key.separator=:" --property "headers.delimiter=;"
+
+kafka-console-consumer --bootstrap-server localhost:9093 --topic process-topic --property "print.headers=true" --property "print.key=true" --property "print.timestamp=true"
+
+
+__TypeId__:process;{"bankSlipCode":"123456789", "receiptCode":"12345667"}
+
+-----------------------------------------------------------
+# build the image
+$ docker build --file src/main/docker/Dockerfile --tag kafka-example .
+             
+# run the image
+
+$ docker run --publish 8080:8080 \
+           --publish 8000:8000 \
+           --detach \
+           --memory 1Gb \
+           --memory-reservation 256Mb \
+           --name kafka-example-1 \
+           --log-opt mode=non-blocking \
+           --log-opt max-buffer-size=16m \
+           kafka-example
+
+# ------------------------------------------------------
+
+$ docker-compose -f src/main/docker-compose/docker-compose.yml -p kafka-example up
+           

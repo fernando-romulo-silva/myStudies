@@ -1,0 +1,33 @@
+#============== Server ==============================================================================
+server:
+    error.include-message: always 
+    http2:
+        enabled: true
+    compression:
+        enabled: true        
+    port: 8080
+    servlet:
+        context-path: /
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+            force-response: true
+
+#============== Spring ==============================================================================
+spring:
+    graphql:
+      websocket.path: /graphql
+      cors:
+        allowed-methods: GET,POST
+        max-age: 1800s
+      graphiql:
+        enabled: true
+        path: /graphiql
+
+#============== Messages =============================================================================
+    messages:
+      always-use-message-format: true
+      encoding: UTF-8
+      fallback-to-system-locale: true
+      use-code-as-default-message: false # Recommended during development only

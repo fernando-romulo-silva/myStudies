@@ -1,0 +1,29 @@
+# Mongo DB
+# uri: mongodb://root:root@127.0.0.1:27017/mydatabase?authSource=admin&authMechanism=SCRAM-SHA-1
+# or
+# uri: mongodb://user:secret@127.0.0.1:27017/mydatabase?authSource=admin&authMechanism=SCRAM-SHA-1
+# 
+$ docker run --name test-mongo --detach \
+		--env MONGO_INITDB_ROOT_USERNAME=root \
+		--env MONGO_INITDB_ROOT_PASSWORD=root \
+		--env MONGO_INITDB_DATABASE=admin \
+		--env MONGO_NON_ROOT_USERNAME=user \
+		--env MONGO_NON_ROOT_PASSWORD=secret \
+		--publish 27017:27017 \
+		--publish 28017:28017 \
+		mongo:latest
+
+# uri mongodb://root:root@127.0.0.1:27017/mydatabase?authSource=admin&authMechanism=SCRAM-SHA-1		
+$ docker run --name test-mongo --detach \
+		--env MONGODB_ROOT_USER=root \
+		--env MONGODB_ROOT_PASSWORD=root \
+		--env MONGODB_REPLICA_SET_MODE=primary \
+		--env MONGODB_REPLICA_SET_NAME=rs0 \
+		--env MONGODB_REPLICA_SET_KEY=123456 \
+		--env MONGODB_ADVERTISED_HOSTNAME=localhost \
+		--env MONGODB_USERNAME=user \
+		--env MONGODB_PASSWORD=user \
+		--env MONGODB_DATABASE=mydatabase \
+		--publish 27017:27017 \
+		bitnami/mongodb:latest
+

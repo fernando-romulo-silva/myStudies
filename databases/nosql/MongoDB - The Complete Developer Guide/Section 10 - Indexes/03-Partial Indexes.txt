@@ -1,0 +1,49 @@
+---------------------------------------------------------
+
+db.persons.find( { "dob.age" : { $gt: 60 } } ).pretty()
+
+db.persons.find( { "dob.age" : { $gt: 60 } } ).count()
+
+---------------------------------------------------------
+
+PARTIAL FILTER EXPRESSION 
+
+
+db.persons.createIndex( { "dob.age": 1 }, { partialFilterExpression: { gender: "male" } } ) 
+
+db.persons.createIndex( { "dob.age": 1 }, { partialFilterExpression: { "dob.age": { $gt: 60 } } } ) 
+
+-----------
+
+db.persons.explain().find( { "dob.age" : { $lq: 30 } } )
+
+-----------
+
+db.persons.explain().find( { "dob.age" : { $gt: 60 } } )
+
+winningPlan: {
+      stage: 'FETCH',
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: {
+          'dob.age': 1,
+          gender: 1
+        },
+        
+---------------------------------------------------------
+
+db.sessions.insertOne({ data:  "sflsdjflsdjfl", createdAt: new Date()})
+
+db.sessions.find().pretty()
+
+db.sessions.createIndex( {createdAt: 1} )
+
+db.sessions.dropIndex( {createdAt: 1} )
+
+-----------------
+
+ExpireAfterSeconds: delete records automatically
+
+db.sessions.createIndex( {createdAt: 1}, { expireAfterSeconds: 10 } )
+
+db.sessions.insertOne({ data:  "blablablabla", createdAt: new Date()})

@@ -1,0 +1,40 @@
+// =======================================================
+// near
+
+$ db.places.createIndex({location: "2dsphere"})
+
+$ db.places.find( {location: {$near: {$geometry: {type: "Point", coordinates: [-122.466754, 37.771946] }}}} ).pretty()
+
+$ db.places.find( {location: {$near: {$geometry: {type: "Point", coordinates: [-122.469790, 37.771946] }, $maxDistance: 400, $minDistance: 10 }}} ).pretty()
+
+// =======================================================
+// geoWithin
+
+$ db.places.insertOne({name: "Conservatory of Flowers", location: {type: "Point", coordinates: [-122.4649076, 37.7714577]}})
+
+$ db.places.insertOne({name: "Golden Gate Park Tennis Courts", location: {type: "Point", coordinates: [-122.4610773, 37.7696217]}})
+
+$ db.places.insertOne({name: "Nopa Restaurant", location: {type: "Point", coordinates: [-122.4392035, 37.7745516]}})
+
+$ const p1 = [-122.45476093283949, 37.77467771226704];
+$ const p2 = [-122.45315942473944, 37.76647151353303];
+$ const p3 = [-122.51024525538787, 37.76423119719055];
+$ const p4 = [-122.51077453611909, 37.77134332856897];
+
+$ db.places.find({location: {$geoWithin: {$geometry: {type: "Polygon", coordinates: [[p1, p2, p3, p4, p1]] }}}})
+
+// =======================================================
+// geoIntersects
+
+$ db.areas.insertOne({name: "Golden Gate Park", area: {type: "Polygon", coordinates: [[p1, p2, p3, p4, p1]] } });
+
+$ db.areas.createIndex({area: "2dsphere"})
+
+$ db.areas.find( { area: {$geoIntersects: {$geometry: {type: "Point", coordinates: [-122.47471713652357, 37.770355894554335] }} } } )
+
+// =======================================================
+// centerSphere
+
+$ db.places.find().prety()
+
+$ db.places.find({location: {$geoWithin: { $centerSphere: [[-122.47008826292931, 37.771374482074926], 1/6378.1 ]} } })

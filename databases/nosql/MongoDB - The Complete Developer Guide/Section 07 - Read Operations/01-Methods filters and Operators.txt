@@ -1,0 +1,10 @@
+db.myCollection.find({
+   age: 32
+})
+
+
+// --------- operators
+
+db.myCollection.find({
+   age: {$gt : 30}
+})

@@ -1,0 +1,38 @@
+
+// Very Different ------------------------------------------
+
+{
+	"title": "Book",
+	"price": 12.99
+}
+
+{
+	"name": Bottle",
+	"available": true
+}
+
+
+// Extra Data ------------------------------------------		
+
+{
+	"title": "Book",
+	"price": 12.99
+}
+
+{
+	"title": Bottle",
+	"price": 5.99,
+	"available": true
+}
+
+// Full equality ------------------------------------------
+
+{
+	"title": "Book",
+	"price": 12.99
+}
+
+{
+	"title": Bottle",
+	"price": 5.99
+}

@@ -1,0 +1,38 @@
+---------------------------------------------------------
+
+db.customers.insertMany( [{ name: "Max", age: 29, salary: 3000 }, { name: "Manu", age: 30, salary: 4000 }] )
+
+db.customers.createIndex({ name: 1})
+
+
+------------
+
+db.customers.explain("executionStats").find({name: "Max"})
+
+executionStats: {
+    executionSuccess: true,
+    nReturned: 1,
+    executionTimeMillis: 0,
+    totalKeysExamined: 1,
+    totalDocsExamined: 1, *
+}
+
+-----------
+
+db.customers.explain("executionStats").find({name: "Max"}, {_id: 0, name: 1})
+
+executionStats: {
+    executionSuccess: true,
+    nReturned: 1,
+    executionTimeMillis: 0,
+    totalKeysExamined: 1,
+    totalDocsExamined: 0, *
+}
+
+---------------------------------------------------------
+
+db.customers.getIndexes()
+
+db.customers.createIndex( { age: 1, name: 1 } )
+
+db.customers.explain().find( { name: "Max", age: 30 } )

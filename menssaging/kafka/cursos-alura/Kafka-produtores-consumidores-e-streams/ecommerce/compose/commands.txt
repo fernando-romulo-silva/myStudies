@@ -1,0 +1,14 @@
+
+docker-compose up -d
+docker-compose down
+docker compose down --rmi all
+
+
+kafka-topics --bootstrap-server kafka-1:19092 --create --topic ECOMMERCE_NEW_ORDER --partitions 3 --replication-factor 3
+kafka-topics --bootstrap-server kafka-1:19092 --create --topic ECOMMERCE_ORDER_REJECTED --partitions 3 --replication-factor 3
+kafka-topics --bootstrap-server kafka-1:19092 --create --topic ECOMMERCE_ORDER_APPROVED --partitions 3 --replication-factor 3
+kafka-topics --bootstrap-server kafka-1:19092 --create --topic ECOMMERCE_SEND_MESSAGE_TO_ALL_USERS --partitions 3 --replication-factor 3
+kafka-topics --bootstrap-server kafka-1:19092 --create --topic ECOMMERCE_USER_GENERATE_READING_REPORT --partitions 3 --replication-factor 3
+kafka-topics --bootstrap-server kafka-1:19092 --create --topic ECOMMERCE_SEND_EMAIL --partitions 3 --replication-factor 3
+
+

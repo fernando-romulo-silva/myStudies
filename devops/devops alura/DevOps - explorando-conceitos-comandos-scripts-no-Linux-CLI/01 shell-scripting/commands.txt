@@ -1,0 +1,7 @@
+# In shell, $(commands) means internal executions
+Ex: $(date +%Y%m%d_%H%M%S).tar.gz
+
+# In shell, $var means accessing vars
+Ex: $file_name
+
+$ chmod +x backup.sh

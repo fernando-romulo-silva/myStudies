@@ -1,0 +1,78 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "EmailNewOrderService",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.EmailNewOrderService",
+      "projectName": "service-email-new-order"
+    },
+    {
+      "type": "java",
+      "name": "BatchSendMessageService",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.BatchSendMessageService",
+      "projectName": "service-users"
+    },
+    {
+      "type": "java",
+      "name": "ReadingReportService",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.ReadingReportService",
+      "projectName": "service-reading-report"
+    },
+    {
+      "type": "java",
+      "name": "HttpEcommerceService",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.HttpEcommerceService",
+      "projectName": "service-http-ecommerce"
+    },
+    {
+      "type": "java",
+      "name": "CreateUserService",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.CreateUserService",
+      "projectName": "service-users"
+    },
+    {
+      "type": "java",
+      "name": "FraudDetectorService01",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.FraudDetectorService",
+      "projectName": "service-fraud-detector"
+    },
+    {
+      "type": "java",
+      "name": "FraudDetectorService02",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.FraudDetectorService",
+      "projectName": "service-fraud-detector"
+    },
+    {
+      "type": "java",
+      "name": "EmailService",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.EmailService",
+      "projectName": "service-email"
+    },
+    {
+      "type": "java",
+      "name": "LogService",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.LogService",
+      "projectName": "service-log"
+    },
+    {
+      "type": "java",
+      "name": "NewOrderMain",
+      "request": "launch",
+      "mainClass": "br.com.alura.ecommerce.NewOrderMain",
+      "projectName": "service-new-order"
+    }
+  ]
+}

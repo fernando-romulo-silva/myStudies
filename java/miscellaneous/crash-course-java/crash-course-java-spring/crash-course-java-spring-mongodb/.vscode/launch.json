@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-HotelApplication<crash-course-java-spring-mongodb>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.crashcourse.HotelApplication",
+      "projectName": "crash-course-java-spring-mongodb",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

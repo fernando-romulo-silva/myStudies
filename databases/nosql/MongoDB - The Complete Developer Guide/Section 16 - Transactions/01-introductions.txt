@@ -1,0 +1,40 @@
+//------------------------------------------------------
+$ db.users.insertOne({name: "Max"})
+
+{
+  acknowledged: true,
+  insertedId: ObjectId('66b5e5a2f5e6ea70460c1350')
+}
+
+//------------------------------------------------------
+$ db.post.insertMany([
+    {title: "First Post", userId: ObjectId('66b5e5a2f5e6ea70460c1350')},
+    {title: "Second Post", userId: ObjectId('66b5e5a2f5e6ea70460c1350')},
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('66b5e5dff5e6ea70460c1351'),
+    '1': ObjectId('66b5e5dff5e6ea70460c1352')
+  }
+}
+
+//------------------------------------------------------
+
+const session = db.getMongo().startSession();
+
+session.startTransaction();
+
+const usersCol = session.getDatabase("analytics").users
+const postsCol = session.getDatabase("analytics").post
+
+$ usersCol.deleteOne({_id: ObjectId('66b5e5a2f5e6ea70460c1350')})
+
+$ postsCol.deleteMany({userId: ObjectId('66b5e5a2f5e6ea70460c1350')})
+
+$ session.commitTransaction() | $ session.abortTransaction()
+
+
+$ db.users.find().pretty()
+$ db.post.find().pretty()

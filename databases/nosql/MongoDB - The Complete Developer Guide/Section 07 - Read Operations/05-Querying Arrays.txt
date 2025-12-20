@@ -1,0 +1,25 @@
+db.movies.find( { externals : { tvrage: 30715 }  } )
+
+db.movies.find( { "externals.tvrage" : 30715 } )
+
+---------------------------------
+
+SIZE
+
+db.movies.find( { genres : { $size: 3 } } ).count()
+
+
+---------------------------------
+
+ALL
+
+db.movies.find( { genres : { $all: ["Action", "Drama"] } } ).count()
+
+
+---------------------------------
+
+ELEMENT MATCH
+
+db.movies.find( { externals: { $elemMatch: { tvrage: {$eq: 30715}} } } ).count()
+
+db.movies.find( { genres: { $elemMatch: { $in: ["Drama"] } } } ).count()
