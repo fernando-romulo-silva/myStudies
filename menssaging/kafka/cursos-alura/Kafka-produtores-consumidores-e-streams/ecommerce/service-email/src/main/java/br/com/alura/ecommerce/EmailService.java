@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.common.serialization.StringDeserializer;
 
 import br.com.alura.ecommerce.consumer.ConsumerService;
 import br.com.alura.ecommerce.consumer.ServiceRunner;
@@ -16,7 +15,7 @@ public class EmailService implements ConsumerService<String> {
     }
 
     public String getConsumerGroup() {
-        return StringDeserializer.class.getName();
+        return EmailService.class.getSimpleName();
     }
 
     @Override

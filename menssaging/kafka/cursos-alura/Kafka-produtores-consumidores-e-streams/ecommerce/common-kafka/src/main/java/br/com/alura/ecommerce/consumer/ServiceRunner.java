@@ -12,7 +12,7 @@ public class ServiceRunner<T> {
 
     public void starts(int threads) {
         final var pool = Executors.newFixedThreadPool(threads);
-        for (var i = 0; i <= threads; i++) {
+        for (var i = 0; i < threads; i++) {
             pool.submit(serviceProvider);
         }
     }

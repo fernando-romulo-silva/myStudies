@@ -1,0 +1,12 @@
+{"namespace": "com.alura.pix.avro",
+ "type": "record",
+ "name": "Pix",
+ "fields": [
+     {"name": "chaveOrigem", "type": "string"},
+     {"name": "chaveDestino",  "type": "string"},
+     {"name": "valor", "type": "double"},
+     {"name": "dataTransferencia", "type": "string"},
+     {"name": "status", "type": "string"}
+ ]
+}
+

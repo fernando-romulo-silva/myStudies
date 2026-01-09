@@ -11,6 +11,7 @@ public class ServiceProvider<T> implements Callable<Void> {
         this.factory = factory;
     }
 
+    @Override
     public Void call() throws Exception {
 
         final var consumerService = factory.create();
@@ -20,7 +21,10 @@ public class ServiceProvider<T> implements Callable<Void> {
                 consumerService::parse,
                 consumerService.getConsumerGroup(),
                 Map.of())) {
+            System.out.println("Starts to run");
             service.run();
+        } catch (Exception ex) {
+            System.out.println("Error " + ex.getMessage());
         }
 
         return null;
