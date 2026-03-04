@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "outDir": "./dist/js/",
+    "noEmitOnError": true,
+    "experimentalDecorators": true
+  },
+  "include": ["./src/**/*"]
+}

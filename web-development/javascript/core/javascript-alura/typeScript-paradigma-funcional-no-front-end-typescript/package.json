@@ -1,0 +1,23 @@
+{
+  "name": "fokus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script-crud-old.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciosneves/fokus-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciosneves/fokus-ts/issues"
+  },
+  "homepage": "https://github.com/viniciosneves/fokus-ts#readme",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
