@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "d296dd70-d881-47fd-babb-c1a7747c732a",
+		"name": "CRUD Médicos",
+		"description": "HAR To Postman Generated Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27707434",
+		"_collection_link": "https://www.postman.com/material-cosmonaut-76577237/workspace/api-voll-med/collection/27707434-d296dd70-d881-47fd-babb-c1a7747c732a?action=share&creator=27707434&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Cadastrar médico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Médico 1\",\n    \"email\": \"medico1@voll.med\",\n    \"telefone\": \"61999999999\",\n    \"crm\": \"999888\",\n    \"especialidade\": \"CARDIOLOGIA\",\n    \"endereco\": {\n        \"logradouro\": \"Rua\",\n        \"bairro\": \"Bairro\",\n        \"cep\": \"12345678\",\n        \"cidade\": \"Cidade\",\n        \"uf\": \"UF\",\n        \"numero\": \"1\",\n        \"complemento\": \"Complemento\"\n    }\n}"
+				},
+				"url": "http://localhost:8080/medicos"
+			},
+			"response": [
+				{
+					"name": "created / 201",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseURL1}}/medicos"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Location",
+							"value": "http://localhost:8080/medicos/5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 14:59:25 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"id\": 5,\n \"ativo\": true,\n \"nome\": \"Caio Medeiros\",\n \"email\": \"caio.medeiros@voll.med\",\n \"crm\": \"999111\",\n \"telefone\": \"61999998888\",\n \"especialidade\": \"CARDIOLOGIA\",\n \"endereco\": {\n  \"logradouro\": \"rua 1\",\n  \"bairro\": \"bairro\",\n  \"cep\": \"12345678\",\n  \"numero\": null,\n  \"complemento\": null,\n  \"cidade\": \"Brasilia\",\n  \"uf\": \"DF\"\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Listar médicos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuYmVhdHJpekB2b2xsLm1lZCIsImlzcyI6IkFwaSBWb2xsLm1lZCIsImV4cCI6MTY4NDg5MjQ5NH0.J8_wRd1YqgB2RIlBM4ME4z2c6qO1U6OLjb1V31873n8"
+					}
+				],
+				"url": "http://localhost:8080/medicos"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuYmVhdHJpekB2b2xsLm1lZCIsImlzcyI6IkFwaSBWb2xsLm1lZCIsImV4cCI6MTY4NDg5MjQ5NH0.J8_wRd1YqgB2RIlBM4ME4z2c6qO1U6OLjb1V31873n8"
+							}
+						],
+						"url": "{{baseURL1}}/medicos"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 20:25:06 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"content\": [\n  {\n   \"id\": 3,\n   \"ativo\": true,\n   \"nome\": \"Ana Melo\",\n   \"email\": \"ana.melo@voll.med\",\n   \"crm\": \"133412\",\n   \"especialidade\": \"ORTOPEDIA\"\n  },\n  {\n   \"id\": 4,\n   \"ativo\": true,\n   \"nome\": \"Bianca Assis\",\n   \"email\": \"bianca.assis@voll.med\",\n   \"crm\": \"888777\",\n   \"especialidade\": \"ORTOPEDIA\"\n  },\n  {\n   \"id\": 5,\n   \"ativo\": true,\n   \"nome\": \"Caio Medeiros\",\n   \"email\": \"caio.medeiros@voll.med\",\n   \"crm\": \"999111\",\n   \"especialidade\": \"CARDIOLOGIA\"\n  },\n  {\n   \"id\": 2,\n   \"ativo\": false,\n   \"nome\": \"Vaneesa Siqueira Amaral\",\n   \"email\": \"vanessa2.siqueira444@voll.med\",\n   \"crm\": \"189101\",\n   \"especialidade\": \"ORTOPEDIA\"\n  },\n  {\n   \"id\": 1,\n   \"ativo\": false,\n   \"nome\": \"Vaneesa Siqueira da Silva\",\n   \"email\": \"vanessa.siqueira444@voll.med\",\n   \"crm\": \"189109\",\n   \"especialidade\": \"ORTOPEDIA\"\n  }\n ],\n \"pageable\": {\n  \"sort\": {\n   \"empty\": false,\n   \"sorted\": true,\n   \"unsorted\": false\n  },\n  \"offset\": 0,\n  \"pageNumber\": 0,\n  \"pageSize\": 10,\n  \"paged\": true,\n  \"unpaged\": false\n },\n \"totalPages\": 1,\n \"totalElements\": 5,\n \"last\": true,\n \"size\": 10,\n \"number\": 0,\n \"sort\": {\n  \"empty\": false,\n  \"sorted\": true,\n  \"unsorted\": false\n },\n \"first\": true,\n \"numberOfElements\": 5,\n \"empty\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Detalhar médico",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2NzA5NzA2NzF9.e_CA5DOWIF4aiXecxkDg6clCi_gMPvXRVA-9zLEyr6s"
+					}
+				],
+				"url": "http://localhost:8080/medicos/1"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2NzA5NzA2NzF9.e_CA5DOWIF4aiXecxkDg6clCi_gMPvXRVA-9zLEyr6s"
+							}
+						],
+						"url": "{{baseURL1}}/medicos/2"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 14:53:10 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"id\": 2,\n \"ativo\": true,\n \"nome\": \"Vanessa Siqueira 333\",\n \"email\": \"vanessa2.siqueira444@voll.med\",\n \"crm\": \"189101\",\n \"telefone\": \"61999998888\",\n \"especialidade\": \"ORTOPEDIA\",\n \"endereco\": {\n  \"logradouro\": \"rua 1\",\n  \"bairro\": \"bairro\",\n  \"cep\": \"12345678\",\n  \"numero\": null,\n  \"complemento\": null,\n  \"cidade\": \"Brasilia\",\n  \"uf\": \"DF\"\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Atualizar médico",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 1,\n\t\"telefone\" : \"1100000000\",\n\t\"nome\" : \"Médico alterado\"\n}"
+				},
+				"url": "http://localhost:8080/medicos"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseURL1}}/medicos"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 14:54:11 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"id\": 2,\n \"ativo\": true,\n \"nome\": \"Vaneesa Siqueira Amaral\",\n \"email\": \"vanessa2.siqueira444@voll.med\",\n \"crm\": \"189101\",\n \"telefone\": \"12999998888\",\n \"especialidade\": \"ORTOPEDIA\",\n \"endereco\": {\n  \"logradouro\": \"rua 1\",\n  \"bairro\": \"bairro\",\n  \"cep\": \"12345678\",\n  \"numero\": null,\n  \"complemento\": null,\n  \"cidade\": \"Brasilia\",\n  \"uf\": \"DF\"\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Excluir médico",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2Nzg5OTUwMzN9.LGxAm3Qgyc9-BB4hW4BiImK-Pdd8h9VtBrh467Rb9h8"
+					}
+				],
+				"url": "http://localhost:8080/medicos/1"
+			},
+			"response": [
+				{
+					"name": "no-content / 204",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2Nzg5OTUwMzN9.LGxAm3Qgyc9-BB4hW4BiImK-Pdd8h9VtBrh467Rb9h8"
+							}
+						],
+						"url": "{{baseURL1}}/medicos/2"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 14:54:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080",
+			"type": "any"
+		}
+	]
+}

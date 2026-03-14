@@ -1,0 +1,13 @@
+$ npm install -g @angular/cli
+
+$ ng new modern-angular
+
+$ ng version
+
+$ ng new modern-angular
+
+$ npm run start
+
+$ ng generate component hello 
+
+$ ng g c hello

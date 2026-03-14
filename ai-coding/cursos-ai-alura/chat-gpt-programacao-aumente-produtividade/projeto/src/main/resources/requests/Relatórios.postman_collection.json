@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "b8fb8780-e4c9-4b3e-9907-37c8882a6d2e",
+		"name": "Relatórios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27707434",
+		"_collection_link": "https://www.postman.com/material-cosmonaut-76577237/workspace/api-voll-med/collection/27707434-b8fb8780-e4c9-4b3e-9907-37c8882a6d2e?action=share&creator=27707434&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Consultas por médico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/consultas/relatorio-mensal/2025-11"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL1}}/consultas/relatorio-mensal/2023-07"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 20:27:25 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		}
+	]
+}

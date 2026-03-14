@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "65b3460a-eb6f-47bd-9dd5-82948e824d67",
+		"name": "Agenda Consultas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27707434",
+		"_collection_link": "https://www.postman.com/material-cosmonaut-76577237/workspace/api-voll-med/collection/27707434-65b3460a-eb6f-47bd-9dd5-82948e824d67?action=share&creator=27707434&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Listar próximas consultas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/consultas"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL1}}/consultas"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 20:26:34 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"content\": [\n  {\n   \"id\": 2,\n   \"data\": \"2023-06-03T11:00:00\",\n   \"especialidade\": \"ORTOPEDIA\",\n   \"medico\": \"Ana Melo\",\n   \"paciente\": \"Leticia Oliveira\"\n  },\n  {\n   \"id\": 3,\n   \"data\": \"2023-06-06T11:00:00\",\n   \"especialidade\": \"ORTOPEDIA\",\n   \"medico\": \"Ana Melo\",\n   \"paciente\": \"Leticia Oliveira\"\n  },\n  {\n   \"id\": 4,\n   \"data\": \"2023-06-07T11:00:00\",\n   \"especialidade\": \"ORTOPEDIA\",\n   \"medico\": \"Ana Melo\",\n   \"paciente\": \"Leticia Oliveira\"\n  },\n  {\n   \"id\": 5,\n   \"data\": \"2023-06-08T11:00:00\",\n   \"especialidade\": \"CARDIOLOGIA\",\n   \"medico\": \"Caio Medeiros\",\n   \"paciente\": \"Leticia Oliveira\"\n  }\n ],\n \"pageable\": {\n  \"sort\": {\n   \"empty\": false,\n   \"sorted\": true,\n   \"unsorted\": false\n  },\n  \"offset\": 0,\n  \"pageNumber\": 0,\n  \"pageSize\": 10,\n  \"paged\": true,\n  \"unpaged\": false\n },\n \"totalPages\": 1,\n \"totalElements\": 4,\n \"last\": true,\n \"size\": 10,\n \"number\": 0,\n \"sort\": {\n  \"empty\": false,\n  \"sorted\": true,\n  \"unsorted\": false\n },\n \"first\": true,\n \"numberOfElements\": 4,\n \"empty\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Marcar consulta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2ODQ0NDk3ODB9.X1YT9nk94dLmHo-TdsF1EvVjTpd-xOe-j61-ch91Yrk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idPaciente\": 1,\n    \"idMedico\": 1,\n\t\"data\": \"2025-10-11T10:00\"\n}"
+				},
+				"url": "http://localhost:8080/consultas"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2ODQ0NDk3ODB9.X1YT9nk94dLmHo-TdsF1EvVjTpd-xOe-j61-ch91Yrk"
+							}
+						],
+						"url": "{{baseURL1}}/consultas"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 20:27:10 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"id\": 6,\n \"idMedico\": 4,\n \"idPaciente\": 5,\n \"data\": \"2023-06-13T11:00:00\"\n}"
+				}
+			]
+		}
+	]
+}

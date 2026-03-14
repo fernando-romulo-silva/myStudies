@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "5b7a9c10-1ac2-431c-957e-3dff8f8193ca",
+		"name": "CRUD Pacientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27707434",
+		"_collection_link": "https://www.postman.com/material-cosmonaut-76577237/workspace/api-voll-med/collection/27707434-5b7a9c10-1ac2-431c-957e-3dff8f8193ca?action=share&creator=27707434&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Cadastrar paciente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Paciente 1\",\n    \"email\": \"paciente1@email.com\",\n    \"cpf\": \"111.111.111-11\",\n    \"telefone\": \"61999999999\",\n    \"endereco\": {\n        \"logradouro\": \"Rua\",\n        \"bairro\": \"Bairro\",\n        \"cep\": \"12345678\",\n        \"cidade\": \"Cidade\",\n        \"uf\": \"UF\",\n        \"numero\": \"1\",\n        \"complemeto\": \"Complemento\"\n    }\n}"
+				},
+				"url": "http://localhost:8080/pacientes"
+			},
+			"response": [
+				{
+					"name": "created / 201",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseURL1}}/pacientes"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Location",
+							"value": "http://localhost:8080/pacientes/6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 18:33:25 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"id\": 6,\n \"ativo\": true,\n \"nome\": \"Marta Vargas\",\n \"email\": \"marta.vargas@email.com\",\n \"cpf\": \"222.222.222-01\",\n \"telefone\": \"61999998888\",\n \"endereco\": {\n  \"logradouro\": \"rua 1\",\n  \"bairro\": \"bairro\",\n  \"cep\": \"12345678\",\n  \"numero\": null,\n  \"complemento\": null,\n  \"cidade\": \"Brasilia\",\n  \"uf\": \"DF\"\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Listar pacientes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2NzA0NzEyNzB9.RVWnhgNW0ai4ZgLbj4298Ac47cqp7z_rN6nAof9r8Gg"
+					}
+				],
+				"url": "http://localhost:8080/pacientes"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2NzA0NzEyNzB9.RVWnhgNW0ai4ZgLbj4298Ac47cqp7z_rN6nAof9r8Gg"
+							}
+						],
+						"url": "{{baseURL1}}/pacientes"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 15:00:42 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"content\": [\n  {\n   \"id\": 4,\n   \"ativo\": true,\n   \"nome\": \"Andre Mendonça\",\n   \"email\": \"andre.mendonca@email.com\",\n   \"cpf\": \"111.222.333-01\"\n  },\n  {\n   \"id\": 5,\n   \"ativo\": true,\n   \"nome\": \"Leticia Oliveira\",\n   \"email\": \"leticia.oliveira@email.com\",\n   \"cpf\": \"444.444.444-01\"\n  },\n  {\n   \"id\": 3,\n   \"ativo\": false,\n   \"nome\": \"Maria Paula Silva\",\n   \"email\": \"maria2.paula@email.com\",\n   \"cpf\": \"777.888.999-01\"\n  },\n  {\n   \"id\": 1,\n   \"ativo\": false,\n   \"nome\": \"Maria Paula Souza\",\n   \"email\": \"maria.paula@email.com\",\n   \"cpf\": \"777.888.999-00\"\n  }\n ],\n \"pageable\": {\n  \"sort\": {\n   \"empty\": false,\n   \"sorted\": true,\n   \"unsorted\": false\n  },\n  \"offset\": 0,\n  \"pageNumber\": 0,\n  \"pageSize\": 10,\n  \"paged\": true,\n  \"unpaged\": false\n },\n \"totalPages\": 1,\n \"totalElements\": 4,\n \"last\": true,\n \"size\": 10,\n \"number\": 0,\n \"sort\": {\n  \"empty\": false,\n  \"sorted\": true,\n  \"unsorted\": false\n },\n \"first\": true,\n \"numberOfElements\": 4,\n \"empty\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Detalhar paciente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2NjY5MDEwODd9.3ELwYvHvQsHhnHmYPFLj06oT1v3f0YR_03Sxlf9rRWg"
+					}
+				],
+				"url": "http://localhost:8080/pacientes/1"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2NjY5MDEwODd9.3ELwYvHvQsHhnHmYPFLj06oT1v3f0YR_03Sxlf9rRWg"
+							}
+						],
+						"url": "{{baseURL1}}/pacientes/6"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 18:33:44 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"id\": 6,\n \"ativo\": true,\n \"nome\": \"Marta Vargas\",\n \"email\": \"marta.vargas@email.com\",\n \"cpf\": \"222.222.222-01\",\n \"telefone\": \"61999998888\",\n \"endereco\": {\n  \"logradouro\": \"rua 1\",\n  \"bairro\": \"bairro\",\n  \"cep\": \"12345678\",\n  \"numero\": null,\n  \"complemento\": null,\n  \"cidade\": \"Brasilia\",\n  \"uf\": \"DF\"\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Atualizar paciente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer a.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2Nzg5OTUwMzN9.LGxAm3Qgyc9-BB4hW4BiImK-Pdd8h9VtBrh467Rb9h8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nome\": \"Paciente alterado\"\n}"
+				},
+				"url": "http://localhost:8080/pacientes"
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer a.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2Nzg5OTUwMzN9.LGxAm3Qgyc9-BB4hW4BiImK-Pdd8h9VtBrh467Rb9h8"
+							}
+						],
+						"url": "{{baseURL1}}/pacientes"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 14:47:29 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"id\": 3,\n \"ativo\": true,\n \"nome\": \"Maria Paula Silva\",\n \"email\": \"maria2.paula@email.com\",\n \"cpf\": \"777.888.999-01\",\n \"telefone\": \"61999998888\",\n \"endereco\": {\n  \"logradouro\": \"rua 1\",\n  \"bairro\": \"bairro\",\n  \"cep\": \"12345678\",\n  \"numero\": null,\n  \"complemento\": null,\n  \"cidade\": \"Brasilia\",\n  \"uf\": \"DF\"\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Excluir paciente",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2Nzg5OTg3NDN9.xOvbhPN6-A_lyFWZjdseeeDXj3IUO9tEw_bqdawVg2o"
+					}
+				],
+				"url": "http://localhost:8080/pacientes/1"
+			},
+			"response": [
+				{
+					"name": "no-content / 204",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2Nzg5OTg3NDN9.xOvbhPN6-A_lyFWZjdseeeDXj3IUO9tEw_bqdawVg2o"
+							}
+						],
+						"url": "{{baseURL1}}/pacientes/3"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 29 May 2023 14:47:45 GMT"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}
